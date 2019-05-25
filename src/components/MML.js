@@ -4,7 +4,6 @@ import ReactPlayer from "react-player";
 import React from "react";
 import { sanitizeUrl } from "@braintree/sanitize-url";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { Carousel } from "./Carousel";
 
 export class MML extends React.PureComponent {

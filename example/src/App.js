@@ -4,6 +4,8 @@ import { examples } from "./examples";
 import { ExampleSelector } from "./components/ExampleSelector";
 
 import "stream-chat-react/dist/css/index.css";
+import "mml-react/dist/css/index.css";
+
 import "./index.css";
 
 function App() {

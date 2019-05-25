@@ -5,6 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import resolve from "rollup-plugin-node-resolve";
 import url from "rollup-plugin-url";
 import svgr from "@svgr/rollup";
+import scss from "rollup-plugin-scss";
 
 import pkg from "./package.json";
 import json from "rollup-plugin-json";
@@ -53,6 +54,10 @@ export default {
     babel({
       exclude: "node_modules/**",
       externalHelpers: true
+    }),
+    scss({
+      output: pkg.style,
+      failOnError: true
     }),
     resolve(),
     commonjs()
