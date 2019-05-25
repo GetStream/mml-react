@@ -5,16 +5,23 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "mml-react": "link:..",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "mml-react": "link:.."
+    "react-syntax-highlighter": "^10.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "npx prettier \"src/**/*.js\" --write"
+  },
+  "devDependencies": {
+    "husky": "^2.3.0",
+    "prettier": "1.17.1",
+    "pretty-quick": "^1.11.0"
   }
 }

@@ -1,31 +1,16 @@
 # mml-react
 
-> MML (Message Markup Language) for React implementation.
+/\*
+TODO:
 
-[![NPM](https://img.shields.io/npm/v/mml-react.svg)](https://www.npmjs.com/package/mml-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+- figure out how we will route from UI/Message -> To Stream -> To (1. Stream in-house extensions like giphy, 2. Pluggable extensions on Stream's platform. 3. The customer's own action handler).
+  -- perhaps we set an action:scope. for our customers this would be at the organization level. ie. <mml action_scope="organization:123"> or <mml action_scope="giphy">
+- first pass at cleaning up code
+- button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
+- CSS around the message that looks nice (With help of Jaap)
+- check how well schema validation for xml works
+- try mobile layouts to see what works
+- create react library
+- available times/dates for datetimepicker
 
-## Install
-
-```bash
-npm install --save mml-react
-```
-
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'mml-react'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
-
-## License
-
-MIT © [tschellenbach](https://github.com/tschellenbach)
+\*/
