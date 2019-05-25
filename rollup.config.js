@@ -1,17 +1,34 @@
+// @flow
 import babel from "rollup-plugin-babel";
-import commonjs from "rollup-plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
-import postcss from "rollup-plugin-postcss";
-import resolve from "rollup-plugin-node-resolve";
-import url from "rollup-plugin-url";
-import svgr from "@svgr/rollup";
+import commonjs from "rollup-plugin-commonjs";
 import scss from "rollup-plugin-scss";
+import json from "rollup-plugin-json";
+import url from "rollup-plugin-url";
+import copy from "rollup-plugin-copy-glob";
+import resolve from "rollup-plugin-node-resolve";
+import builtins from "@stream-io/rollup-plugin-node-builtins";
+import globals from "rollup-plugin-node-globals";
+// eslint-disable-next-line
+import { terser } from "rollup-plugin-terser";
+
+import replace from "rollup-plugin-replace";
 
 import pkg from "./package.json";
-import json from "rollup-plugin-json";
 
-export default {
+import process from "process";
+process.env.NODE_ENV = "production";
+
+const baseConfig = {
   input: "src/index.js",
+  cache: false,
+  watch: {
+    chokidar: false
+  }
+};
+
+const normalBundle = {
+  ...baseConfig,
   output: [
     {
       file: pkg.main,
@@ -24,42 +41,131 @@ export default {
       sourcemap: true
     }
   ],
+  external: [
+    "anchorme",
+    "moment",
+    "stream-chat-client",
+    "react-images",
+    "lodash/debounce",
+    "lodash/throttle",
+    "lodash/truncate",
+    "lodash/uniq",
+    "emoji-mart",
+    "emoji-mart/data/all.json",
+    "emoji-regex",
+    "seamless-immutable",
+    "isomorphic-ws",
+    "visibilityjs",
+    "custom-event",
+    "textarea-caret",
+    "@braintree/sanitize-url",
+    "@webscopeio/react-textarea-autocomplete",
+    "@webscopeio/react-textarea-autocomplete/style.css",
+    "emoji-mart/css/emoji-mart.css",
+    "react-dropzone",
+    "react-markdown",
+    "deep-equal",
+    "shallow-diff",
+    "immutable",
+    "url-parse",
+    "stream-chat",
+    "pretty-bytes",
+    "stream-analytics",
+    "react-textarea-autosize",
+    "prop-types",
+    "react-player",
+    "react-markdown/with-html",
+    "react-file-utils",
+    "react-file-utils/dist/index.css",
+    "uuid/v4",
+    "@fortawesome/react-fontawesome",
+    "@fortawesome/free-regular-svg-icons",
+    "@babel/runtime/regenerator",
+    "@babel/runtime/helpers/asyncToGenerator",
+    "@babel/runtime/helpers/objectWithoutProperties",
+    "@babel/runtime/helpers/toConsumableArray",
+    "@babel/runtime/helpers/objectSpread",
+    "@babel/runtime/helpers/extends",
+    "@babel/runtime/helpers/defineProperty",
+    "@babel/runtime/helpers/assertThisInitialized",
+    "@babel/runtime/helpers/inherits",
+    "@babel/runtime/helpers/getPrototypeOf",
+    "@babel/runtime/helpers/possibleConstructorReturn",
+    "@babel/runtime/helpers/createClass",
+    "@babel/runtime/helpers/classCallCheck",
+    "@babel/runtime/helpers/slicedToArray",
+    "@babel/runtime/helpers/typeof"
+  ],
   plugins: [
+    replace({
+      "process.env.NODE_ENV": JSON.stringify("production")
+    }),
     external(),
-    postcss({
-      modules: true
-    }),
-    json({
-      // All JSON files will be parsed by default,
-      // but you can also specifically include/exclude files
-      include: "node_modules/**",
-      exclude: ["node_modules/foo/**", "node_modules/bar/**"],
-
-      // for tree-shaking, properties will be declared as
-      // variables, using either `var` or `const`
-      preferConst: true, // Default: false
-
-      // specify indentation for the generated default export —
-      // defaults to '\t'
-      indent: "  ",
-
-      // ignores indent and generates the smallest code
-      compact: true, // Default: false
-
-      // generate a named export for every property of the JSON object
-      namedExports: true // Default: true
-    }),
-    url(),
-    svgr(),
     babel({
-      exclude: "node_modules/**",
-      externalHelpers: true
+      runtimeHelpers: true,
+      exclude: "node_modules/**"
     }),
     scss({
       output: pkg.style,
       failOnError: true
     }),
-    resolve(),
-    commonjs()
+    copy([{ files: "src/assets/*", dest: "dist/assets" }], {
+      verbose: true,
+      watch: process.env.ROLLUP_WATCH
+    }),
+    url(),
+    commonjs(),
+    json()
   ]
 };
+
+const fullBrowserBundle = {
+  ...baseConfig,
+  output: [
+    {
+      file: pkg.jsdelivr,
+      format: "iife",
+      sourcemap: true,
+      name: "window", // write all exported values to window
+      extend: true, // extend window, not overwrite it
+      browser: true,
+      globals: {
+        react: "React",
+        "react-dom": "ReactDOM"
+      }
+    }
+  ],
+  plugins: [
+    replace({
+      "process.env.NODE_ENV": JSON.stringify("production")
+    }),
+    external(),
+    babel({
+      runtimeHelpers: true,
+      exclude: "node_modules/**"
+    }),
+    {
+      name: "ignore-css-and-scss",
+      resolveId: importee => (importee.match(/.s?css$/) ? importee : null),
+      load: id => (id.match(/.s?css$/) ? "" : null)
+    },
+    builtins(),
+    resolve({
+      browser: true
+    }),
+    url(),
+    commonjs(),
+    json(),
+    globals({
+      process: true,
+      globals: false,
+      buffer: false,
+      dirname: false,
+      filename: false
+    })
+    // terser(),
+  ]
+};
+
+export default () =>
+  process.env.ROLLUP_WATCH ? [normalBundle] : [normalBundle, fullBrowserBundle];

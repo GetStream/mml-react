@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import "./styles/vendor/react-datepicker.scss";
+import "./styles/vendor/slick-theme.scss";
+import "./styles/vendor/slick.scss";
+import "./styles/index.scss";
 
 export { MML } from "./components/MML";
 export { Carousel } from "./components/Carousel";
