@@ -1,4 +1,22 @@
-# mml-react TODO
+# mml-react 
+
+## Install
+
+```bash
+git clone https://github.com/GetStream/mml-react.git
+cd mml-react
+yarn; yarn start
+```
+
+and in a new terminal do:
+
+```bash
+cd example
+yarn; yarn start
+```
+
+
+## TODO
 
 - check how well schema validation for xml works
 - make parsing code more robust
