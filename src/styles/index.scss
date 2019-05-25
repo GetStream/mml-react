@@ -29,18 +29,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5px;
 }
 
 /* content */
 .mml-row div {
   background-color: #ef5350;
-  padding: 3%;
-  border: 1px solid white;
-  border-radius: 5px;
-  text-align: right;
-  color: white;
-  transition: background-color 1s;
 }
 
 .mml-row div:nth-child(2n):hover {
@@ -68,7 +61,7 @@
 
 /* 4/12 */
 .mml-col-4 {
-  width: 33.33%;
+  width: 33%;
 }
 
 /* 5/12 */

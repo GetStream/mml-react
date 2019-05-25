@@ -1,4 +1,4 @@
-# mml-react 
+# mml-react
 
 ## Install
 
@@ -15,9 +15,11 @@ cd example
 yarn; yarn start
 ```
 
-
 ## TODO
 
+- fix grid system css
+- think about a card container element that reduces text size..
+- more generic form handling with setState etc. for datepicker
 - check how well schema validation for xml works
 - make parsing code more robust
 - figure out rollup crazy large file size..
@@ -27,4 +29,3 @@ yarn; yarn start
 - CSS around the message that looks nice (With help of Jaap)
 - try mobile layouts to see what works
 - available times/dates for datetimepicker
-
