@@ -17,31 +17,21 @@
 }
 
 .mml-container {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
-  font-size: 1.1em;
+
   width: 100%;
+}
+
+.mml-card {
+  border-style: solid;
+  border-color: red;
+  border-width: 3px;
 }
 
 .mml-row {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-}
-
-/* content */
-.mml-row div {
-  background-color: #ef5350;
-}
-
-.mml-row div:nth-child(2n):hover {
-  background-color: #42a5f5;
-}
-
-.mml-row div:nth-child(2n + 1):hover {
-  background-color: #66bb6a;
 }
 
 /* 1/12 */

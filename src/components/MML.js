@@ -5,6 +5,7 @@ import React from "react";
 import { sanitizeUrl } from "@braintree/sanitize-url";
 import DatePicker from "react-datepicker";
 import { Carousel } from "./Carousel";
+import { getFormData } from "../utils";
 
 export class MML extends React.PureComponent {
   static defaultProps = {
@@ -17,7 +18,7 @@ export class MML extends React.PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
-    const data = getFormData(event.currentTarget);
+    const data = [];
     const pairs = Object.keys(this.state).map((key, index) => {
       return { name: key, value: this.state[key] };
     });
@@ -25,14 +26,15 @@ export class MML extends React.PureComponent {
     this.props.onAction(data);
   };
 
-  handleAction = attr => {
-    console.log("handling action", attr);
+  handleAction = (attr, event) => {
+    console.log("handling action", attr, event);
 
     if (attr.url && attr.url.length) {
       window.location.href = sanitizeUrl(attr.url);
     } else {
       const data = {};
-      data[attr.name] = attr.value;
+      data[attr.name] = attr.value || event.target.value;
+      console.log("setting state", data);
       this.setState(data);
     }
   };
@@ -40,8 +42,30 @@ export class MML extends React.PureComponent {
   render() {
     const that = this;
 
+    /*
+     * anything that changes state has a name attribute (select, text input etc.)
+     */
+
+    const allowed = [
+      "html",
+      "root",
+      "text",
+      "break",
+      "paragraph",
+      "emphasis",
+      "strong",
+      "link",
+      "list",
+      "listItem",
+      "code",
+      "inlineCode",
+      "blockquote"
+    ];
+    let mmlName = "";
+
     function mmlToHTML(nodes) {
       const html = [];
+
       for (let n of nodes) {
         let children = "";
         if (n.children) {
@@ -54,6 +78,8 @@ export class MML extends React.PureComponent {
           html.push(<div className={`mml-col-${width}`}>{children}</div>);
         } else if (n.name === "icon") {
           html.push(<i class="material-icons">{n.attributes.name}</i>);
+        } else if (n.name === "card") {
+          html.push(<div class="mml-card">{children}</div>);
         } else if (n.name === "row") {
           html.push(<div className="mml-row">{children}</div>);
         } else if (n.name === "overflow") {
@@ -75,6 +101,8 @@ export class MML extends React.PureComponent {
             </div>
           );
         } else if (n.name === "mml") {
+          console.log("n.attributes.name", n.attributes.name);
+          mmlName = n.attributes.name;
           html.push(
             <div className={`mml-container mml-${that.props.layout}`}>
               <form onSubmit={that.handleSubmit}>{children}</form>
@@ -89,13 +117,25 @@ export class MML extends React.PureComponent {
             html.push(<p>{n.text}</p>);
           }
         } else if (n.name === "input") {
-          html.push(<input {...n.attributes} />);
+          html.push(
+            <input
+              {...n.attributes}
+              onChange={that.handleAction.bind(that, n.attributes)}
+            />
+          );
         } else if (n.name === "separator") {
           html.push(<hr />);
         } else if (n.name === "image") {
           html.push(<img {...n.attributes} />);
         } else if (n.name === "select") {
-          html.push(<select>{children}</select>);
+          html.push(
+            <select
+              {...n.attributes}
+              onChange={that.handleAction.bind(that, n.attributes)}
+            >
+              {children}
+            </select>
+          );
         } else if (n.name === "option") {
           html.push(
             <option value={n.attributes.value}>{n.children[0].text}</option>
@@ -154,8 +194,12 @@ export class MML extends React.PureComponent {
 
       return html;
     }
+    console.log("mmlName", mmlName);
 
     const html = mmlToHTML([parseXml(this.props.source)]);
+    if (mmlName) {
+      this.setState({ mml_name: mmlName });
+    }
     console.log("html", html);
     return html;
   }

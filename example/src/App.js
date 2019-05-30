@@ -3,10 +3,7 @@ import React from "react";
 import { examples } from "./examples";
 import { ExampleSelector } from "./components/ExampleSelector";
 
-import "stream-chat-react/dist/css/index.css";
 import "mml-react/dist/css/index.css";
-
-import "./index.css";
 
 function App() {
   return (
@@ -66,29 +63,40 @@ function App() {
         </ol>
         <div />
         <h3>The Spec</h3>
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenu2"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Dropdown
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item" type="button">
-              Action
-            </button>
-            <button class="dropdown-item" type="button">
-              Another action
-            </button>
-            <button class="dropdown-item" type="button">
-              Something else here
-            </button>
-          </div>
+
+        <h4>Content</h4>
+
+        <div>text: Simple text content</div>
+        <div>md: Markdown formatted content</div>
+        <div>image: An image</div>
+        <div>video: A video element</div>
+        <div>icon: An icon </div>
+
+        <h4>Layout</h4>
+
+        <div>row: A row that must contain columns</div>
+        <div>column: A column, you can specify the width</div>
+        <div>divider: A simple divider between content</div>
+        <div>
+          card: A container around your content that's visually differentiated
         </div>
+        <div>
+          carousel: A horizontally scrolling carousel, useful for showing a list
+          of options. item is a child element.
+        </div>
+
+        <h4>Input</h4>
+
+        <div>button: A button</div>
+        <div>link: Similar to a button, but opens a link</div>
+        <div>
+          select: A select, if expanded is true renders all the options
+          immediately. option is a child element of select
+        </div>
+        <div>datepicker: A simple divider between content</div>
+        <div>timepicker: A simple divider between content</div>
+        <div>input: A text input element</div>
+        <div>overflow: A overflow element. button is a child element..</div>
       </header>
     </div>
   );

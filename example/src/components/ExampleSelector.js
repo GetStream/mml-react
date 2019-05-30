@@ -8,9 +8,8 @@ export class ExampleSelector extends React.Component {
     super(props);
 
     this.state = {
-      selected: "flight info"
+      selected: "flight"
     };
-    //
   }
 
   selectExample(exampleName) {
@@ -24,8 +23,10 @@ export class ExampleSelector extends React.Component {
   };
 
   render() {
-    console.log("this.props.examples", this.props.examples);
     const mml = this.props.examples[this.state.selected];
+    if (!mml) {
+      return <div>No MLL Selected</div>;
+    }
     return (
       <div class="container-fluid">
         <div class="row">

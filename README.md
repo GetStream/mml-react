@@ -17,15 +17,22 @@ yarn; yarn start
 
 ## TODO
 
-- fix grid system css
-- think about a card container element that reduces text size..
+- available times/dates for date/time picker (it's not useful if you can't restrict to available times)
+
+- decide on how wide/narrow mobile/desktop layouts work
 - more generic form handling with setState etc. for datepicker
-- check how well schema validation for xml works
-- make parsing code more robust
-- figure out rollup crazy large file size..
-- figure out how we will route from UI/Message -> To Stream -> To (1. Stream in-house extensions like giphy, 2. Pluggable extensions on Stream's platform. 3. The customer's own action handler).
-  -- perhaps we set an action:scope. for our customers this would be at the organization level. ie. <mml action_scope="organization:123"> or <mml action_scope="giphy">
+
+- grid system (perhaps responsive) that supports column width & column offset
+  -- CSS bootstrap style or css grid style
+  -- Android: https://www.mkyong.com/android/android-tablelayout-example/
+  -- iOS: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/CreateATableView.html
+- copy more markdown parsing from utils/render text
+
+- figure out how to reduce rollup crazy large file size..
 - button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
-- CSS around the message that looks nice (With help of Jaap)
-- try mobile layouts to see what works
-- available times/dates for datetimepicker
+
+## Landing page TODO
+
+- designs Josh for rich messaging
+- Thierry, content for landing page
+- Josh landing page design

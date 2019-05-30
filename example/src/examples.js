@@ -1,4 +1,15 @@
 export var examples = {
+  food: `
+  <mml name="food">
+    <md>What's your **favorite** meal of the day?</md>
+    <select name="favorite">
+      <option value="breakfast">Breakfast rocks</option>
+      <option value="lunch">Lunch is the best</option>
+      <option value="dinner">Dinner!</option>
+    </select>
+    <button name="action" value="submit">Submit</button>
+  </mml>
+  `,
   commerce: `
 <mml>
 	<md>Which red dress do you prefer?</md>
@@ -10,8 +21,8 @@ export var examples = {
 			It's getting hot in here. This dress features an off-the-shoulder, mini silhouette, ruffled edges, puff sleeves, and lace-up detailing at front.
 			</text>
 			<md>**$50**</md>
-			<button style="primary" url="https://www.nastygal.com/hot-damn-off-the-shoulder-lace-up-dress/AGG70544.html">View</button>
-			<button style="secondary" name="action" value="add_to_cart">Add to Cart</button>
+			<button url="https://www.nastygal.com/hot-damn-off-the-shoulder-lace-up-dress/AGG70544.html">View</button>
+			<button name="action" value="add_to_cart">Add to Cart</button>
 		</item>
 		<item>
 			<image src="https://i1.adis.ws/i/boohooamplience/agg70544_red_xl?$product_image_main_thumbnail$" />
@@ -70,26 +81,29 @@ export var examples = {
 	</overflow>
 </mml>
 	`,
-  "flight info": `
+  flight: `
 <mml>
-	<row>
-		<column width="4">San Francisco</column>
-		<column width="4"></column>
-		<column width="4">New York</column>
-	</row>
-	<row>
-		<column width="4"><md>## SFO</md></column>
-		<column width="4"><icon name="flight" /></column>
-		<column width="4"><md>## JFK</md></column>
-	</row>
-	<row>
-		<column width="12">
-			<button value="view" text="View Boarding Pass" />
-		</column>
-	</row>
+  <text>Here is your flight info:</text>
+  <card>
+  	<row>
+  		<column width="4">San Francisco</column>
+  		<column width="4"></column>
+  		<column width="4">New York</column>
+  	</row>
+  	<row>
+  		<column width="4"><md>## SFO</md></column>
+  		<column width="4"><icon name="flight" /></column>
+  		<column width="4"><md>## JFK</md></column>
+  	</row>
+  	<row>
+  		<column width="12">
+  			<button value="view" text="View Boarding Pass" />
+  		</column>
+  	</row>
+  </card>
 </mml>
 	`,
-  "email input": `
+  email: `
 <mml>
 	<text>What's your email?</text>
 	<input type="text" name="email" />
