@@ -17,22 +17,15 @@ yarn; yarn start
 
 ## TODO
 
-- available times/dates for date/time picker (it's not useful if you can't restrict to available times)
-
-- decide on how wide/narrow mobile/desktop layouts work
-- more generic form handling with setState etc. for datepicker
-
-- grid system (perhaps responsive) that supports column width & column offset
+- grid system (perhaps responsive) that supports column width & column offset. let's skip it for now...
   -- CSS bootstrap style or css grid style
   -- Android: https://www.mkyong.com/android/android-tablelayout-example/
   -- iOS: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/CreateATableView.html
-- copy more markdown parsing from utils/render text
+
+- available times/dates for date/time picker (it's not useful for scheduling if you can't restrict to available times)
+  -- https://github.com/peterbraden/ical.js/blob/master/example_rrule.js
 
 - figure out how to reduce rollup crazy large file size..
 - button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
 
-## Landing page TODO
-
-- designs Josh for rich messaging
-- Thierry, content for landing page
-- Josh landing page design
+- cleanup parser code

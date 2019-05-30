@@ -10,6 +10,16 @@ export var examples = {
     <button name="action" value="submit">Submit</button>
   </mml>
   `,
+  food2: `
+  <mml name="food">
+    <md>What's your **favorite** meal of the day?</md>
+    <buttonlist name="favorite">
+      <button value="breakfast">Breakfast rocks</button>
+      <button value="lunch">Lunch is the best</button>
+      <button value="dinner">Dinner!</button>
+    </buttonlist>
+  </mml>
+  `,
   commerce: `
 <mml>
 	<md>Which red dress do you prefer?</md>
@@ -68,6 +78,7 @@ export var examples = {
 	<text>When would you like to schedule your massage?</text>
 	<datepicker initial_date="2019-05-25" name="massage_appointment" />
 	<timepicker name="massage_appointment_time" />
+  <button style="primary" name="action" value="reserve">Reserve</button>
 </mml>
 	`,
   paging: `

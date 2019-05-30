@@ -27,6 +27,11 @@ export class ExampleSelector extends React.Component {
     if (!mml) {
       return <div>No MLL Selected</div>;
     }
+
+    function onAction(data) {
+      console.log("do a request to your server here", data);
+      return new Promise(resolve => setTimeout(() => resolve(), 3000));
+    }
     return (
       <div class="container-fluid">
         <div class="row">
@@ -37,13 +42,6 @@ export class ExampleSelector extends React.Component {
               </li>
             ))}
           </ul>
-          Layout
-          <select value={this.state.layout} onChange={this.handleLayoutChange}>
-            <option selected value="narrow">
-              Narrow
-            </option>
-            <option value="wide">Wide</option>
-          </select>
         </div>
         <div class="row">
           <div class="col syntax-mml">
@@ -52,13 +50,7 @@ export class ExampleSelector extends React.Component {
             </SyntaxHighlighter>
           </div>
           <div class="col">
-            <MML
-              source={mml}
-              layout={this.state.layout}
-              onAction={data =>
-                console.log("do a request to your server here", data)
-              }
-            />
+            <MML source={mml} onAction={onAction} />
           </div>
         </div>
       </div>

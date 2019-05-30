@@ -1,29 +1,46 @@
 import parseXml from "@rgrove/parse-xml";
-import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 import React from "react";
 import { sanitizeUrl } from "@braintree/sanitize-url";
+import { MMLMarkdown } from "./MMLMarkdown";
 import DatePicker from "react-datepicker";
 import { Carousel } from "./Carousel";
-import { getFormData } from "../utils";
+import { Loader } from "./Loader";
+import { Error } from "./Error";
+import { Success } from "./Success";
 
 export class MML extends React.PureComponent {
   static defaultProps = {
-    layout: "narrow"
+    loaderComponent: Loader,
+    errorComponent: Error,
+    successComponent: Success
   };
 
   constructor(props) {
     super(props);
+
+    this.state = { error: "", loading: false, success: "" };
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
     const data = [];
     const pairs = Object.keys(this.state).map((key, index) => {
       return { name: key, value: this.state[key] };
     });
     data.push(...pairs);
-    this.props.onAction(data);
+
+    console.log("loading...");
+    this.setState({ loading: true, error: "", success: "" });
+    try {
+      await this.props.onAction(data);
+      console.log("done");
+      this.setState({ loading: false, error: "", success: "submitted" });
+    } catch (e) {
+      console.log("error");
+      this.setState({ loading: false, error: "something is broken" });
+      console.log("e", e);
+    }
   };
 
   handleAction = (attr, event) => {
@@ -39,29 +56,23 @@ export class MML extends React.PureComponent {
     }
   };
 
+  handleDateChange = (attr, selectedDate) => {
+    const data = {};
+    data[attr.name] = selectedDate;
+    this.setState(data);
+  };
+
   render() {
     const that = this;
 
     /*
      * anything that changes state has a name attribute (select, text input etc.)
      */
-
-    const allowed = [
-      "html",
-      "root",
-      "text",
-      "break",
-      "paragraph",
-      "emphasis",
-      "strong",
-      "link",
-      "list",
-      "listItem",
-      "code",
-      "inlineCode",
-      "blockquote"
-    ];
     let mmlName = "";
+
+    function filterDate(date) {
+      return date;
+    }
 
     function mmlToHTML(nodes) {
       const html = [];
@@ -80,6 +91,8 @@ export class MML extends React.PureComponent {
           html.push(<i class="material-icons">{n.attributes.name}</i>);
         } else if (n.name === "card") {
           html.push(<div class="mml-card">{children}</div>);
+        } else if (n.name === "buttonlist") {
+          html.push(<div class="mml-selectlist">{children}</div>);
         } else if (n.name === "row") {
           html.push(<div className="mml-row">{children}</div>);
         } else if (n.name === "overflow") {
@@ -105,11 +118,16 @@ export class MML extends React.PureComponent {
           mmlName = n.attributes.name;
           html.push(
             <div className={`mml-container mml-${that.props.layout}`}>
-              <form onSubmit={that.handleSubmit}>{children}</form>
+              <form onSubmit={that.handleSubmit}>
+                {children}
+                <Loader loading={that.state.loading} />
+                <Success success={that.state.success} />
+                <Error error={that.state.error} />
+              </form>
             </div>
           );
         } else if (n.name === "md") {
-          html.push(<ReactMarkdown source={n.children[0].text} />);
+          html.push(<MMLMarkdown source={n.children[0].text} />);
         } else if (n.name === "text") {
           html.push(<p>{n.children[0].text}</p>);
         } else if (n.type === "text") {
@@ -145,23 +163,24 @@ export class MML extends React.PureComponent {
         } else if (n.name === "item") {
           html.push(<div className="mml-carousel-item">{children}</div>);
         } else if (n.name === "datepicker") {
-          const initialDate = new Date(n.attributes.initial_date);
           html.push(
             <DatePicker
-              selected={initialDate}
-              onChange={that.handleAction.bind(that, n.attributes)}
+              selected={that.state[n.attributes.name]}
+              onChange={that.handleDateChange.bind(that, n.attributes)}
+              filterDate={filterDate}
             />
           );
         } else if (n.name === "timepicker") {
           const initialDate = new Date(n.attributes.initial_date);
           html.push(
             <DatePicker
+              selected={that.state[n.attributes.name]}
               showTimeSelect
               showTimeSelectOnly
               timeIntervals={15}
               dateFormat="h:mm aa"
               timeCaption="Time"
-              onChange={that.handleAction.bind(that, n.attributes)}
+              onChange={that.handleDateChange.bind(that, n.attributes)}
             />
           );
         } else if (n.name === "video") {
