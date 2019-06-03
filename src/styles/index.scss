@@ -23,9 +23,32 @@
 }
 
 .mml-card {
-  border-style: solid;
-  border-color: red;
-  border-width: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.mml-container button {
+  color: black;
+  border: 2px solid #e7e7e7;
+  background-color: white;
+  padding: 7px 20px;
+  margin: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mml-container button:hover {
+  background: #e7e7e7;
+}
+
+.mml-container input {
+  margin: 10px;
+}
+
+.mml-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .mml-error {
@@ -96,4 +119,59 @@
 /* 12/12 */
 .mml-col-12 {
   width: 100%;
+}
+
+/* 1/12 */
+.mml-offset-1 {
+  margin-left: 8.33%;
+}
+
+/* 2/12 */
+.mml-offset-2 {
+  margin-left: 16.66%;
+}
+
+/* 3/12 */
+.mml-offset-3 {
+  margin-left: 25%;
+}
+
+/* 4/12 */
+.mml-offset-4 {
+  margin-left: 33%;
+}
+
+/* 5/12 */
+.mml-offset-5 {
+  margin-left: 41.66%;
+}
+
+/* 6/12 */
+.mml-offset-6 {
+  margin-left: 50%;
+}
+
+/* 7/12 */
+.mml-offset-7 {
+  offset: 58.33%;
+}
+
+/* 8/12 */
+.mml-offset-8 {
+  margin-left: 66.66%;
+}
+
+/* 9/12 */
+.mml-offset-9 {
+  margin-left: 75%;
+}
+
+/* 10/12 */
+.mml-offset-10 {
+  margin-left: 83.33%;
+}
+
+/* 11/12 */
+.mml-offset-11 {
+  margin-left: 91.66%;
 }

@@ -85,8 +85,13 @@ export class MML extends React.PureComponent {
 
         if (n.name === "column") {
           const width = n.attributes.width ? n.attributes.width : 12;
+          const offset = n.attributes.offset ? n.attributes.offset : 0;
+          let classNames = `mml-col-${width}`;
+          if (offset) {
+            classNames = classNames + ` mml-offset-${offset}`;
+          }
 
-          html.push(<div className={`mml-col-${width}`}>{children}</div>);
+          html.push(<div className={classNames}>{children}</div>);
         } else if (n.name === "icon") {
           html.push(<i class="material-icons">{n.attributes.name}</i>);
         } else if (n.name === "card") {

@@ -107,7 +107,7 @@ export var examples = {
   		<column width="4"><md>## JFK</md></column>
   	</row>
   	<row>
-  		<column width="12">
+  		<column width="4" offset="4">
   			<button value="view" text="View Boarding Pass" />
   		</column>
   	</row>

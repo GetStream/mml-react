@@ -17,6 +17,8 @@ yarn; yarn start
 
 ## TODO
 
+- simple CSS to make everything look nice by default...
+
 - grid system (perhaps responsive) that supports column width & column offset. let's skip it for now...
   -- CSS bootstrap style or css grid style
   -- Android: https://www.mkyong.com/android/android-tablelayout-example/
