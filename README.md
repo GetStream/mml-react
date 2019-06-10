@@ -17,7 +17,7 @@ yarn; yarn start
 
 ## TODO
 
-- alignment
+- fix overflow menu
 - simple CSS to make everything look nice by default...
 
 - grid system (perhaps responsive) that supports column width & column offset and alignment. let's skip it for now...

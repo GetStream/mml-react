@@ -83,13 +83,19 @@ export var examples = {
 	`,
   paging: `
 <mml>
-	<text>Alert: The server is on fire!!</text>
-	<overflow>
-		<button style="secondary" name="action" value="Ignore">Ignore</button>
-		<button style="secondary" name="action" value="ReRoute Ticket">ReRoute Ticket</button>
-		<button style="secondary" name="action" value="Turn off the server">Turn off the server</button>
-		<button style="primary" name="action" value="Book a vacation">Book a vacation</button>
-	</overflow>
+  <row>
+    <column width="10">
+      <text>Alert: The server is on fire!!</text>
+    </column>
+    <column width="2">
+      <overflow>
+        <button style="secondary" name="action" value="Ignore">Ignore</button>
+        <button style="secondary" name="action" value="ReRoute Ticket">ReRoute Ticket</button>
+        <button style="secondary" name="action" value="Turn off the server">Turn off the server</button>
+        <button style="primary" name="action" value="Book a vacation">Book a vacation</button>
+      </overflow>
+    </column>
+  </row>
 </mml>
 	`,
   flight: `

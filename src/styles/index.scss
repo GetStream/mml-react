@@ -46,12 +46,12 @@
   text-align: right;
 }
 
-.mml-selectlist button {
+.mml-selectlist button.mml-btn {
   display: block;
   width: 100%;
 }
 
-.mml-container button {
+.mml-container button.mml-btn {
   color: black;
   border: 2px solid #e7e7e7;
   background-color: white;
@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 
-.mml-container button:hover {
+.mml-container button.mml-btn:hover {
   background: #e7e7e7;
 }
 

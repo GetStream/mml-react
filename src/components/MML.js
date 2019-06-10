@@ -205,7 +205,7 @@ export class MML extends React.PureComponent {
           // TODO: fix this
           html.push(
             <button
-              className={`btn btn-${n.attributes.style}`}
+              className={`mml-btn`}
               type="submit"
               onClick={() => that.handleAction(n.attributes)}
             >
