@@ -97,17 +97,17 @@ export var examples = {
   <text>Here is your flight info:</text>
   <card>
   	<row>
-  		<column width="4">San Francisco</column>
+  		<column width="4" align="left">San Francisco</column>
   		<column width="4"></column>
-  		<column width="4">New York</column>
+  		<column width="4" align="right">New York</column>
   	</row>
   	<row>
-  		<column width="4"><md>## SFO</md></column>
-  		<column width="4"><icon name="flight" /></column>
-  		<column width="4"><md>## JFK</md></column>
+  		<column width="4" align="left"><md>## SFO</md></column>
+  		<column width="4" align="center"><icon name="flight" /></column>
+  		<column width="4" align="right"><md>## JFK</md></column>
   	</row>
   	<row>
-  		<column width="4" offset="4">
+  		<column width="4" offset="4" align="center">
   			<button value="view" text="View Boarding Pass" />
   		</column>
   	</row>

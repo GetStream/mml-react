@@ -23,6 +23,7 @@ export class MMLMarkdown extends React.PureComponent {
       "root",
       "text",
       "break",
+      "heading",
       "paragraph",
       "emphasis",
       "strong",

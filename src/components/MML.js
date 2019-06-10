@@ -91,6 +91,9 @@ export class MML extends React.PureComponent {
             classNames = classNames + ` mml-offset-${offset}`;
           }
 
+          const align = n.attributes.align ? n.attributes.align : "left";
+          classNames = classNames + ` mml-align-${align}`;
+
           html.push(<div className={classNames}>{children}</div>);
         } else if (n.name === "icon") {
           html.push(<i class="material-icons">{n.attributes.name}</i>);

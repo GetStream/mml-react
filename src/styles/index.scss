@@ -27,6 +27,28 @@
   transition: 0.3s;
   padding: 10px;
   border-radius: 5px;
+  width: 500px;
+}
+
+.mml-selectlist {
+  width: 200px;
+}
+
+.mml-align-left {
+  text-align: left;
+}
+
+.mml-align-center {
+  text-align: center;
+}
+
+.mml-align-right {
+  text-align: right;
+}
+
+.mml-selectlist button {
+  display: block;
+  width: 100%;
 }
 
 .mml-container button {
