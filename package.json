@@ -26,7 +26,6 @@
     }
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
     "@rgrove/parse-xml": "^2.0.1",
     "react-datepicker": "^2.5.0",
     "react-markdown": "^4.0.8",

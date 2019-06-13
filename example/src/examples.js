@@ -41,8 +41,8 @@ export var examples = {
 			It's getting hot in here. This dress features an off-the-shoulder, mini silhouette, ruffled edges, puff sleeves, and lace-up detailing at front.
 			</text>
 			<md>**$50**</md>
-			<button style="primary" name="action" value="view">View</button>
-			<button style="secondary" name="action" value="add_to_cart">Add to Cart</button>
+			<button name="action" value="view">View</button>
+			<button name="action" value="add_to_cart">Add to Cart</button>
 		</item>
 		<item>
 			<image src="https://i1.adis.ws/i/boohooamplience/agg70544_red_xl?$product_image_main_thumbnail$" />
@@ -51,8 +51,8 @@ export var examples = {
 			It's getting hot in here. This dress features an off-the-shoulder, mini silhouette, ruffled edges, puff sleeves, and lace-up detailing at front.
 			</text>
 			<md>**$50**</md>
-			<button style="primary" name="action" value="view">View</button>
-			<button style="secondary" name="action" value="add_to_cart">Add to Cart</button>
+			<button name="action" value="view">View</button>
+			<button name="action" value="add_to_cart">Add to Cart</button>
 		</item>
 		<item>
 			<image src="https://i1.adis.ws/i/boohooamplience/agg70544_red_xl?$product_image_main_thumbnail$" />
@@ -61,16 +61,16 @@ export var examples = {
 			It's getting hot in here. This dress features an off-the-shoulder, mini silhouette, ruffled edges, puff sleeves, and lace-up detailing at front.
 			</text>
 			<md>**$50**</md>
-			<button style="primary" name="action" value="view">View Item</button>
-			<button style="secondary" name="action" value="add_to_cart">Add to Cart</button>
+			<button name="action" value="view">View Item</button>
+			<button name="action" value="add_to_cart">Add to Cart</button>
 		</item>
 	</carousel>
 </mml>`,
   scheduling: `
 <mml>
 	<text>Are you available to work Thursday the 9th?</text>
-	<button style="primary" name="available" value="yes">Yes</button>
-	<button style="secondary" name="available" value="no">No</button>
+	<button name="available" value="yes">Yes</button>
+	<button name="available" value="no">No</button>
 </mml>
 	`,
   massage: `
@@ -78,7 +78,7 @@ export var examples = {
 	<text>When would you like to schedule your massage?</text>
 	<datepicker initial_date="2019-05-25" name="massage_appointment" />
 	<timepicker name="massage_appointment_time" />
-  <button style="primary" name="action" value="reserve">Reserve</button>
+  <button name="action" value="reserve">Reserve</button>
 </mml>
 	`,
   paging: `
@@ -89,10 +89,10 @@ export var examples = {
     </column>
     <column width="2">
       <overflow>
-        <button style="secondary" name="action" value="Ignore">Ignore</button>
-        <button style="secondary" name="action" value="ReRoute Ticket">ReRoute Ticket</button>
-        <button style="secondary" name="action" value="Turn off the server">Turn off the server</button>
-        <button style="primary" name="action" value="Book a vacation">Book a vacation</button>
+        <button name="action" value="Ignore">Ignore</button>
+        <button name="action" value="ReRoute Ticket">ReRoute Ticket</button>
+        <button name="action" value="Turn off the server">Turn off the server</button>
+        <button name="action" value="Book a vacation">Book a vacation</button>
       </overflow>
     </column>
   </row>
@@ -124,7 +124,7 @@ export var examples = {
 <mml>
 	<text>What's your email?</text>
 	<input type="text" name="email" />
-	<button style="primary" name="send" value="submit">Submit</button>
+	<button name="send" value="submit">Submit</button>
 </mml>
 	`
 };

@@ -17,6 +17,12 @@ yarn; yarn start
 
 ## TODO
 
+- figure out webpack/study webpack for mode==development
+- refine use cases
+- setup documentation for components
+- consider naming for components
+- design for the landing page
+
 - fix overflow menu
 - simple CSS to make everything look nice by default...
 

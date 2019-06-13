@@ -9,14 +9,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>MML 1.0</h1>
+        <h1>MML 1.0: Rich Messaging</h1>
         <p>
           Message Markup Language (MML) enables cross platform interactive
           messaging and chat. User have grown accustomed to powerful messaging
           capabilities from tools such as Slack. MML gives developers the power
           to quickly build cross platform rich messaging experiences. It works
-          particularly well if you combine it with chat bots. Here are some
-          examples of what you can build:
+          particularly well if you combine it with chat bots and AI. Here are
+          some examples of what you can build:
         </p>
 
         <h3>What you can build</h3>
@@ -31,16 +31,30 @@ function App() {
           building custom components for specific message types.
         </p>
 
+        <h3>Alternatives</h3>
+
+        <p>
+          Slack uses a JSON based layout language called{" "}
+          <a href="https://api.slack.com/block-kit">Block Kit</a>. Microsoft
+          uses a similar approach for their{" "}
+          <a href="https://adaptivecards.io/samples/FlightItinerary.html">
+            Adaptive Cards
+          </a>
+          . The approach that Facebook takes is more template based and less
+          generic. It's called{" "}
+          <a href="https://developers.facebook.com/docs/messenger-platform/send-messages/templates">
+            Message Templates
+          </a>
+          . Google's RCS also has a rich messaging feature.
+        </p>
+
         <h3>The Syntax</h3>
 
         <p>
-          MML uses XML and implements a 12 column grid system for layouts. It
-          implements a basic form system for rich message interactions. Markdown
-          is used for message formatting. MML is inspired by Slack's JSON based{" "}
-          <a href="https://api.slack.com/block-kit">Block Kit</a>
+          MML implements a basic form system for rich message interactions. For
+          the message layout it combines Markdown, a grid system and a few
+          built-in layouts that are common for chat messages.
         </p>
-
-        <h3>Client Libraries</h3>
 
         <h3>Who created MML?</h3>
         <p>
@@ -54,29 +68,39 @@ function App() {
           <li>Thierry Schellenbach @tschellenbach</li>
           <li>Tommaso Barbugli</li>
           <li>Joshua Tilton @uijudo</li>
+          <li>Jaap Bakker</li>
         </ol>
 
-        <h3>Special thanks to</h3>
+        <h3>MML - The Spec</h3>
 
-        <ol>
-          <li>List of library authors</li>
-        </ol>
-        <div />
-        <h3>The Spec</h3>
+        <h4>Input Tags</h4>
 
-        <h4>Content</h4>
+        <div>
+          Input tags are used to build small forms and workflows right into your
+          messaging experience. Each of the input tags accepts the `name`
+          attribute which is used for submission of the data.
+        </div>
 
-        <div>text: Simple text content</div>
-        <div>md: Markdown formatted content</div>
-        <div>image: An image</div>
-        <div>video: A video element</div>
-        <div>icon: An icon </div>
+        <div>
+          input: A text input element. Valid Child Tags: None. Attributes: name:
+          The name of the input element. `value`: The value of the button.
+          Examples: ...
+        </div>
+        <div>button: A button</div>
+        <div>select: A select element</div>
+        <div>buttonlist: A list of buttons</div>
+        <div>
+          datepicker: The datepicker allows you to pick a date. You can specify
+          available time/dates using an ical calendar.
+        </div>
+        <div>
+          timepicker: The timepicker allows you to pick a time. You can specify
+          available time/dates using an ical calendar.
+        </div>
+        <div>overflow: A overflow element. button is a child element..</div>
 
-        <h4>Layout</h4>
+        <h4>Layout Tags</h4>
 
-        <div>row: A row that must contain columns</div>
-        <div>column: A column, you can specify the width</div>
-        <div>divider: A simple divider between content</div>
         <div>
           card: A container around your content that's visually differentiated
         </div>
@@ -84,19 +108,17 @@ function App() {
           carousel: A horizontally scrolling carousel, useful for showing a list
           of options. item is a child element.
         </div>
+        <div>row: A row that must contain columns</div>
+        <div>column: A column, you can specify the width</div>
+        <div>divider: A simple divider between content</div>
 
-        <h4>Input</h4>
+        <h4>Content Tags</h4>
 
-        <div>button: A button</div>
-        <div>link: Similar to a button, but opens a link</div>
-        <div>
-          select: A select, if expanded is true renders all the options
-          immediately. option is a child element of select
-        </div>
-        <div>datepicker: A simple divider between content</div>
-        <div>timepicker: A simple divider between content</div>
-        <div>input: A text input element</div>
-        <div>overflow: A overflow element. button is a child element..</div>
+        <div>md: Markdown formatted content</div>
+        <div>text: Simple text content without any formatting</div>
+        <div>icon: An icon, specified by name using Material UI icon set</div>
+        <div>image: An image</div>
+        <div>video: A video element</div>
       </header>
     </div>
   );
