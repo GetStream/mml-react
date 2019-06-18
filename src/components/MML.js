@@ -10,7 +10,6 @@ import { Success } from "./Success";
 import { Scheduler } from "./Scheduler";
 
 import AddToCalendar from "react-add-to-calendar";
-import IcalExpander from "ical-expander";
 
 export class MML extends React.PureComponent {
   static defaultProps = {
