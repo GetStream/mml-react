@@ -3,11 +3,14 @@ import ReactPlayer from "react-player";
 import React from "react";
 import { sanitizeUrl } from "@braintree/sanitize-url";
 import { MMLMarkdown } from "./MMLMarkdown";
-import DatePicker from "react-datepicker";
 import { Carousel } from "./Carousel";
 import { Loader } from "./Loader";
 import { Error } from "./Error";
 import { Success } from "./Success";
+import { Scheduler } from "./Scheduler";
+
+import AddToCalendar from "react-add-to-calendar";
+import IcalExpander from "ical-expander";
 
 export class MML extends React.PureComponent {
   static defaultProps = {
@@ -97,6 +100,35 @@ export class MML extends React.PureComponent {
           html.push(<div className={classNames}>{children}</div>);
         } else if (n.name === "icon") {
           html.push(<i class="material-icons">{n.attributes.name}</i>);
+        } else if (n.name === "add_to_calendar") {
+          // required fields
+          const { title, start, end } = n.attributes;
+          // optional
+          const { location, description } = n.attributes;
+
+          // remove yahoo
+          const items = [
+            { google: "Google" },
+            { apple: "Apple Calendar" },
+            { outlook: "Outlook" },
+            { outlookcom: "Outlook.com" }
+          ];
+
+          const event = {
+            startTime: start,
+            endTime: end,
+            title,
+            location,
+            description
+          };
+
+          // begin time, endtime (means we always need to have duration...)
+          // title
+          // (optional: Description, Location)
+          // react: https://jasonsalzman.github.io/react-add-to-calendar/
+          // iOS: https://stackoverflow.com/questions/246249/programmatically-add-custom-event-in-the-iphone-calendar
+          // Android: https://stackoverflow.com/questions/3721963/how-to-add-calendar-events-in-android
+          html.push(<AddToCalendar event={event} listItems={items} />);
         } else if (n.name === "card") {
           html.push(<div class="mml-card">{children}</div>);
         } else if (n.name === "buttonlist") {
@@ -170,24 +202,18 @@ export class MML extends React.PureComponent {
           html.push(<Carousel items={children} />);
         } else if (n.name === "item") {
           html.push(<div className="mml-carousel-item">{children}</div>);
-        } else if (n.name === "datepicker") {
+        } else if (n.name === "scheduler") {
+          const initialDate = new Date(n.attributes.value);
+
+          // TODO: how do we set the initial state......
+
           html.push(
-            <DatePicker
+            <Scheduler
               selected={that.state[n.attributes.name]}
-              onChange={that.handleDateChange.bind(that, n.attributes)}
-              filterDate={filterDate}
-            />
-          );
-        } else if (n.name === "timepicker") {
-          const initialDate = new Date(n.attributes.initial_date);
-          html.push(
-            <DatePicker
-              selected={that.state[n.attributes.name]}
-              showTimeSelect
-              showTimeSelectOnly
-              timeIntervals={15}
-              dateFormat="h:mm aa"
-              timeCaption="Time"
+              interval={n.attributes.interval}
+              duration={n.attributes.duration}
+              full_day={n.attributes.full_day}
+              ical_availability={n.attributes.ical_availability}
               onChange={that.handleDateChange.bind(that, n.attributes)}
             />
           );
@@ -195,7 +221,7 @@ export class MML extends React.PureComponent {
           html.push(
             <ReactPlayer
               className="react-player"
-              url={n.attributes.url}
+              url={n.attributes.src}
               width="100%"
               controls
             />
@@ -209,7 +235,7 @@ export class MML extends React.PureComponent {
               type="submit"
               onClick={() => that.handleAction(n.attributes)}
             >
-              {n.attributes.value}
+              {n.children[0].text}
             </button>
           );
         } else if (n.type === "document") {
@@ -223,7 +249,14 @@ export class MML extends React.PureComponent {
     }
     console.log("mmlName", mmlName);
 
-    const html = mmlToHTML([parseXml(this.props.source)]);
+    let source = this.props.source;
+    if (!~source.indexOf("<mml>")) {
+      source = `<mml>${source}</mml>`;
+    }
+
+    console.log("rendinering source", source);
+
+    const html = mmlToHTML([parseXml(source)]);
     if (mmlName) {
       this.setState({ mml_name: mmlName });
     }

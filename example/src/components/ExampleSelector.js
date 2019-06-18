@@ -8,7 +8,7 @@ export class ExampleSelector extends React.Component {
     super(props);
 
     this.state = {
-      selected: "commerce"
+      selected: "massage"
     };
   }
 

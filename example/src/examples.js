@@ -76,9 +76,9 @@ export var examples = {
   massage: `
 <mml>
 	<text>When would you like to schedule your massage?</text>
-	<datepicker initial_date="2019-05-25" name="massage_appointment" />
-	<timepicker name="massage_appointment_time" />
+	<scheduler name="massage_appointment"  value="2019-06-17T19:00:00.000Z" duration="60" ical_availability="https://gist.githubusercontent.com/tschellenbach/3d66618fa0abfa3344a2596c873bdcfd/raw/83271784b58bbd5554709cda38b1a668522b7d32/test.ical" />
   <button name="action" value="reserve">Reserve</button>
+  <add_to_calendar title="Massage at Elements by Jessica" start="2019-06-17T19:00:00.000Z" end="2019-06-17T19:30:00.000Z" description="Please arrive 10 min early" location="Boulder" />
 </mml>
 	`,
   paging: `
