@@ -17,24 +17,19 @@ yarn; yarn start
 
 ## TODO
 
-- figure out webpack/study webpack for mode==development
-- refine use cases
-- setup documentation for components
-- consider naming for components
-- design for the landing page
+- cleanup parser code
+  -- setup a map for all components
+  -- init the component with tagname, node object, children
+  -- specify allowed attributes and allowed children for each tag
+  -- potentially use XML validation as an alternative
 
-- fix overflow menu
-- simple CSS to make everything look nice by default...
+* consider naming for components
+* design for the landing page
 
-- grid system (perhaps responsive) that supports column width & column offset and alignment. let's skip it for now...
-  -- CSS bootstrap style or css grid style
-  -- Android: https://www.mkyong.com/android/android-tablelayout-example/
-  -- iOS: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/CreateATableView.html
+* fix overflow menu
+* simple CSS to make everything look nice by default...
 
-- available times/dates for date/time picker (it's not useful for scheduling if you can't restrict to available times)
+* available times/dates for date/time picker (it's not useful for scheduling if you can't restrict to available times)
   -- https://github.com/peterbraden/ical.js/blob/master/example_rrule.js
 
-- figure out how to reduce rollup crazy large file size..
-- button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
-
-- cleanup parser code
+* button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
