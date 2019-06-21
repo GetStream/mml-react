@@ -7,7 +7,26 @@ test("mml name and simple text field", () => {
   const mml = '<mml name="john">hi</mml>';
   const nodes = ParseMMLSource(mml);
   const tree = XMLtoMMLTree(nodes);
-  console.log(tree.children);
+  expect(tree.name).toEqual("john");
+  expect(tree.children.length).toBe(1);
+  const rTree = renderer.create(<MML source={mml} />).toJSON();
+  expect(rTree).toMatchSnapshot();
+});
+
+test("simple carousel", () => {
+  const mml = "<carousel><item>a</item><item>b</item></carousel>";
+  const nodes = ParseMMLSource(mml);
+  const tree = XMLtoMMLTree(nodes);
+  expect(tree.name).toEqual("john");
+  expect(tree.children.length).toBe(1);
+  const rTree = renderer.create(<MML source={mml} />).toJSON();
+  expect(rTree).toMatchSnapshot();
+});
+
+test("only supported attributes are allowed", () => {
+  const mml = '<mml name="john">hi</mml>';
+  const nodes = ParseMMLSource(mml);
+  const tree = XMLtoMMLTree(nodes);
   expect(tree.name).toEqual("john");
   expect(tree.children.length).toBe(1);
   const rTree = renderer.create(<MML source={mml} />).toJSON();

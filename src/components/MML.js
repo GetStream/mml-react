@@ -45,7 +45,19 @@ export class MML extends React.PureComponent {
     }
 
     const reactNodes = this.tree.toReact(this);
-    return reactNodes;
+
+    console.log("found react nodes", reactNodes);
+
+    return (
+      <div className="mml-container">
+        <form onSubmit={this.handleSubmit}>
+          {reactNodes}
+          <Loader loading={this.state.loading} />
+          <Success success={this.state.success} />
+          <Error error={this.state.error} />
+        </form>
+      </div>
+    );
   }
 
   handleSubmit = async event => {

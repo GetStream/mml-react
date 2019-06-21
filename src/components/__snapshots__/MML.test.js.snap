@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mml name and simple text field 1`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      hi
+    </p>
+  </form>
+</div>
+`;

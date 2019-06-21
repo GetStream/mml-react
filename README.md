@@ -18,10 +18,10 @@ yarn; yarn start
 ## TODO
 
 - cleanup parser code
-  -- setup a map for all components
-  -- init the component with tagname, node object, children
+  -- verify that elements with children work
+  -- verify that input/data elements work
   -- specify allowed attributes and allowed children for each tag
-  -- potentially use XML validation as an alternative
+  -- only generate a form if an input tag is present
 
 * consider naming for components
 * design for the landing page

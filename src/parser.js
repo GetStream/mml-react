@@ -53,7 +53,6 @@ export function XMLtoMMLTree(XMLNodes) {
         return children;
       }
       if (n.type === "text") {
-        console.log("n", n, n.text);
         if (n.text.trim().length > 0) {
           tagName = "text";
         } else {
@@ -64,8 +63,7 @@ export function XMLtoMMLTree(XMLNodes) {
 
       const tagMeta = tags[tagName];
       if (tagMeta) {
-        console.log("found tag with name", tagName);
-        const reactNode = tagMeta.constructor(tagName, n, children);
+        const reactNode = new tagMeta.constructor(tagName, n, children);
         MMLNodes.push(reactNode);
       } else {
         console.log("unrecognized element", tagName);
