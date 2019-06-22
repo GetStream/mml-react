@@ -11,6 +11,7 @@ export class MMLTag {
   constructor(tagName, node, children) {
     this.tagName = tagName;
     this.node = node;
+    this.attr = this.node.attributes;
     this.children = children;
   }
 
