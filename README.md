@@ -18,18 +18,10 @@ yarn; yarn start
 ## TODO
 
 - cleanup parser code
-  -- verify that elements with children work
-  -- verify that input/data elements work
-  -- specify allowed attributes and allowed children for each tag
-  -- only generate a form if an input tag is present
+  -- test how invalid XML is handled
+  -- figure out if there is an easier way to reuse stuff between react & react native.
+  -- complete the cleanup for all components
 
-* consider naming for components
 * design for the landing page
-
-* fix overflow menu
-* simple CSS to make everything look nice by default...
-
-* available times/dates for date/time picker (it's not useful for scheduling if you can't restrict to available times)
-  -- https://github.com/peterbraden/ical.js/blob/master/example_rrule.js
-
+* Design for time picker, make sure we parse ICal correctly
 * button, select and input are used in HTML, we should use different names (since we can't support the full feature set)

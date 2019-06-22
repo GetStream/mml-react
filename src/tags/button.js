@@ -1,43 +1,5 @@
 import React from "react";
 
-export function Text(tagName, node, children) {
-  return <p>{node.children[0].text}</p>;
-}
-
-class MMLTag {
-  constructor(tagName, node, children) {
-    this.tagName = tagName;
-    this.node = node;
-  }
-
-  initialState() {
-    return {};
-  }
-
-  // return a react node for this mml tag
-  toReact() {}
-}
-class InputTag extends MMLTag {
-  constructor(name, xmlNode, children) {
-    super(name); // call the super class constructor and pass in the name parameter
-  }
-
-  toReact(rc) {
-    return (
-      <input
-        {...node.attributes}
-        onChange={that.handleActionode.bind(that, node.attributes)}
-      />
-    );
-  }
-}
-
-class InputTagBase extends MMLTag {
-  constructor(name) {
-    super(name); // call the super class constructor and pass in the name parameter
-  }
-}
-
 /*
 Issues
 - initial state for input elements..
@@ -168,14 +130,6 @@ export function Input(tagName, node, children) {
       onChange={that.handleActionode.bind(that, node.attributes)}
     />
   );
-}
-
-export function Carousel(tagName, node, children) {
-  return <Carousel items={children} />;
-}
-
-export function Item(tagName, node, children) {
-  return <div className="mml-carousel-item">{children}</div>;
 }
 
 export function Scheduler(tagName, node, children) {

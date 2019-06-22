@@ -1,5 +1,9 @@
 import { Button } from "./button";
 import { Text } from "./text";
+import { CarouselTag } from "./carousel";
+import { Input } from "./input";
+
+import { Item } from "./item";
 
 var tags = {
   button: {
@@ -12,6 +16,24 @@ var tags = {
     name: "text",
     constructor: Text,
     children: [],
+    attributes: []
+  },
+  carousel: {
+    name: "carousel",
+    constructor: CarouselTag,
+    children: ["item"],
+    attributes: []
+  },
+  item: {
+    name: "item",
+    constructor: Item,
+    children: ["all-except-self"],
+    attributes: []
+  },
+  input: {
+    name: "input",
+    constructor: Input,
+    children: ["all-except-self"],
     attributes: []
   }
 };
