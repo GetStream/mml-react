@@ -16,6 +16,12 @@ export function ParseMMLSource(source) {
     source = `<mml>${source}</mml>`;
   }
 
+  // emulate HTML handling of & escaping
+  const unescapedAmps = /&(?!amp;|lt;|gt;)/g;
+  source = source.replace(unescapedAmps, "&amp;");
+
+  console.log("source", source);
+
   // convert the string to XML nodes
   // this library is relatively lightweight and doesn't do a ton of validation
   const XMLNodes = [parseXml(source)];

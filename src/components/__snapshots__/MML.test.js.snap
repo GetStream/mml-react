@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`invalid MML 2 1`] = `
+<div
+  className="mml-container"
+/>
+`;
+
 exports[`mml name and simple text field 1`] = `
 <div
   className="mml-container"

@@ -61,12 +61,11 @@ test("invalid MML", () => {
   expect(tree.hasData()).toBe(false);
 });
 
-test.only("invalid MML 2", () => {
+test("invalid MML 2", () => {
   const mml =
-    '<image src="https://turn5.scene7.com/is/image/Turn5/J20850?wid=810&hei=608&op_usm=0.8,1,10,0" />';
-  const nodes = ParseMMLSource(mml);
-  const tree = XMLtoMMLTree(nodes);
-  expect(tree.hasData()).toBe(false);
+    '<image src="https://turn5.scene7.com/is/image/Turn5/J20850?wid=810&hei=608&op_usm=0.8,1,10,0&amp;test=test" />';
+  const rTree = renderer.create(<MML source={mml} />).toJSON();
+  expect(rTree).toMatchSnapshot();
 });
 
 test("only supported attributes are allowed", () => {
