@@ -54,11 +54,10 @@ test("text tags should not have data", () => {
   expect(tree.hasData()).toBe(false);
 });
 
-test("invalid MML", () => {
+test.only("invalid MML 1", () => {
   const mml = '<input name="test" value=1 />';
-  const nodes = ParseMMLSource(mml);
-  const tree = XMLtoMMLTree(nodes);
-  expect(tree.hasData()).toBe(false);
+  const rTree = renderer.create(<MML source={mml} />).toJSON();
+  expect(rTree).toMatchSnapshot();
 });
 
 test("invalid MML 2", () => {

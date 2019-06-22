@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`invalid MML 1 1`] = `
+<div
+  className="mml-container"
+>
+  This chat message has invalid formatting and can't be shown
+</div>
+`;
+
 exports[`invalid MML 2 1`] = `
 <div
   className="mml-container"
@@ -36,7 +44,7 @@ exports[`simple carousel 1`] = `
     <div
       className="slick-slider slick-initialized"
     >
-      
+
       <div
         className="slick-list"
       >
@@ -118,8 +126,8 @@ exports[`simple carousel 1`] = `
           </div>
         </div>
       </div>
-      
-      
+
+
     </div>
   </div>
 </div>
