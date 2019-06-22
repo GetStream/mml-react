@@ -54,6 +54,21 @@ test("text tags should not have data", () => {
   expect(tree.hasData()).toBe(false);
 });
 
+test("invalid MML", () => {
+  const mml = '<input name="test" value=1 />';
+  const nodes = ParseMMLSource(mml);
+  const tree = XMLtoMMLTree(nodes);
+  expect(tree.hasData()).toBe(false);
+});
+
+test.only("invalid MML 2", () => {
+  const mml =
+    '<image src="https://turn5.scene7.com/is/image/Turn5/J20850?wid=810&hei=608&op_usm=0.8,1,10,0" />';
+  const nodes = ParseMMLSource(mml);
+  const tree = XMLtoMMLTree(nodes);
+  expect(tree.hasData()).toBe(false);
+});
+
 test("only supported attributes are allowed", () => {
   const mml = '<mml name="john">hi</mml>';
   const nodes = ParseMMLSource(mml);

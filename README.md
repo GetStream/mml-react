@@ -22,6 +22,4 @@ yarn; yarn start
   -- figure out if there is an easier way to reuse stuff between react & react native.
   -- complete the cleanup for all components
 
-* design for the landing page
-* Design for time picker, make sure we parse ICal correctly
-* button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
+- button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
