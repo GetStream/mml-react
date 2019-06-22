@@ -1,5 +1,5 @@
 import React from "react";
-import { MMLTag } from "./base";
+import { MMLTag } from "../base";
 
 export class SchedulerTag extends MMLTag {
   toReact(rc) {

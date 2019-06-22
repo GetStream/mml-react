@@ -54,7 +54,7 @@ test("text tags should not have data", () => {
   expect(tree.hasData()).toBe(false);
 });
 
-test.only("invalid MML 1", () => {
+test("invalid MML 1", () => {
   const mml = '<input name="test" value=1 />';
   const rTree = renderer.create(<MML source={mml} />).toJSON();
   expect(rTree).toMatchSnapshot();

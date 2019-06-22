@@ -1,7 +1,7 @@
 import React from "react";
-import { MMLTag } from "./base";
+import { MMLTag } from "../base";
 
-import { getNodeText } from "../utils";
+import { getNodeText } from "../../utils";
 
 export class Button extends MMLTag {
   toReact(rc) {

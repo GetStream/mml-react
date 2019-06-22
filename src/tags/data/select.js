@@ -1,5 +1,5 @@
 import React from "react";
-import { MMLTag } from "./base";
+import { MMLTag } from "../base";
 
 export class Select extends MMLTag {
   toReact(rc) {

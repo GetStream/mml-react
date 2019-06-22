@@ -1,5 +1,5 @@
 import React from "react";
-import { MMLDataTag } from "./base";
+import { MMLDataTag } from "../base";
 
 export class Input extends MMLDataTag {
   static validChildren = null;

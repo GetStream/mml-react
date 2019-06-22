@@ -20,8 +20,6 @@ export function ParseMMLSource(source) {
   const unescapedAmps = /&(?!amp;|lt;|gt;)/g;
   source = source.replace(unescapedAmps, "&amp;");
 
-  console.log("source", source);
-
   // convert the string to XML nodes
   // this library is relatively lightweight and doesn't do a ton of validation
   const XMLNodes = [parseXml(source)];
@@ -67,10 +65,10 @@ export function XMLtoMMLTree(XMLNodes) {
         }
       }
 
-      const tagMeta = tags[tagName];
-      if (tagMeta) {
-        const reactNode = new tagMeta.constructor(tagName, n, children);
-        MMLNodes.push(reactNode);
+      const tagClass = tags[tagName];
+      if (tagClass) {
+        const tag = new tagClass(tagName, n, children);
+        MMLNodes.push(tag);
       } else {
         console.log("unrecognized element", tagName);
       }
