@@ -1,5 +1,6 @@
 import React from "react";
 import { MMLDataTag } from "../base";
+import AddToCalendarComponent from "react-add-to-calendar";
 
 export class AddToCalendar extends MMLDataTag {
   toReact(rc) {
@@ -30,6 +31,6 @@ export class AddToCalendar extends MMLDataTag {
     // react: https://jasonsalzmanode.github.io/react-add-to-calendar/
     // iOS: https://stackoverflow.com/questions/246249/programmatically-add-custom-event-in-the-iphone-calendar
     // Android: https://stackoverflow.com/questions/3721963/how-to-add-calendar-events-in-android
-    return <AddToCalendar event={event} listItems={items} />;
+    return <AddToCalendarComponent event={event} listItems={items} />;
   }
 }

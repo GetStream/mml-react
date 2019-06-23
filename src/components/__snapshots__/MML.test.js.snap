@@ -31,6 +31,64 @@ exports[`examples should work 2`] = `
     <p>
       Did you authorize these last 3 transactions on your account?
     </p>
+    <div
+      class="mml-card"
+    >
+      <div
+        className="mml-row"
+      >
+        <div
+          className="mml-col-4 mml-align-left"
+        >
+          <p>
+            $15
+          </p>
+        </div>
+        <div
+          className="mml-col-8 mml-align-left"
+        >
+          <p>
+            Oren's Hummus
+          </p>
+        </div>
+      </div>
+      <div
+        className="mml-row"
+      >
+        <div
+          className="mml-col-4 mml-align-left"
+        >
+          <p>
+            $1000
+          </p>
+        </div>
+        <div
+          className="mml-col-8 mml-align-left"
+        >
+          <p>
+            Apple monitor stand
+          </p>
+        </div>
+      </div>
+      <div
+        className="mml-row"
+      >
+        <div
+          className="mml-col-4 mml-align-left"
+        >
+          <p>
+            $60
+          </p>
+        </div>
+        <div
+          className="mml-col-8 mml-align-left"
+        >
+          <p>
+            Epic Games Skins
+          </p>
+        </div>
+      </div>
+    </div>
     <button
       className="mml-btn"
       onClick={[Function]}
@@ -56,6 +114,13 @@ exports[`examples should work 3`] = `
   <form
     onSubmit={[Function]}
   >
+    <p>
+      Happy to setup your new credit card application, what's your 
+      <strong>
+        yearly
+      </strong>
+       family income?
+    </p>
     <input
       name="email"
       onChange={[Function]}
@@ -82,6 +147,38 @@ exports[`examples should work 4`] = `
     <p>
       Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?
     </p>
+    <div
+      class="mml-selectlist"
+    >
+      <button
+        className="mml-btn"
+        onClick={[Function]}
+        type="submit"
+      >
+        9:30
+      </button>
+      <button
+        className="mml-btn"
+        onClick={[Function]}
+        type="submit"
+      >
+        10:00
+      </button>
+      <button
+        className="mml-btn"
+        onClick={[Function]}
+        type="submit"
+      >
+        11:30
+      </button>
+      <button
+        className="mml-btn"
+        onClick={[Function]}
+        type="submit"
+      >
+        Nope
+      </button>
+    </div>
   </form>
 </div>
 `;
@@ -96,6 +193,30 @@ exports[`examples should work 5`] = `
     <p>
       When would you like to schedule your massage?
     </p>
+    <div
+      className="mml-scheduler"
+    >
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            className=""
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            readOnly={false}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
     <button
       className="mml-btn"
       onClick={[Function]}
@@ -114,6 +235,9 @@ exports[`examples should work 6`] = `
   <form
     onSubmit={[Function]}
   >
+    <p>
+      Here are some front bumpers that will fit your 2018-2019 JL!
+    </p>
     <div
       className="mml-carousel"
     >
@@ -189,8 +313,17 @@ exports[`examples should work 6`] = `
                   }
                   tabIndex={-1}
                 >
+                  <img
+                    className="mml-image"
+                    src="https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
+                  />
                   <p>
                     Barricade Adventure HD Front Bumper
+                  </p>
+                  <p>
+                    <strong>
+                      $404.99
+                    </strong>
                   </p>
                   <button
                     className="mml-btn"
@@ -226,8 +359,17 @@ exports[`examples should work 6`] = `
                   }
                   tabIndex={-1}
                 >
+                  <img
+                    className="mml-image"
+                    src="https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0"
+                  />
                   <p>
                     Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar
+                  </p>
+                  <p>
+                    <strong>
+                      $529.99
+                    </strong>
                   </p>
                   <button
                     className="mml-btn"
@@ -263,8 +405,17 @@ exports[`examples should work 6`] = `
                   }
                   tabIndex={-1}
                 >
+                  <img
+                    className="mml-image"
+                    src="https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
+                  />
                   <p>
                     Barricade HD Front Bumper w/ 20 in. Light Bar
+                  </p>
+                  <p>
+                    <strong>
+                      $549.99
+                    </strong>
                   </p>
                   <button
                     className="mml-btn"
@@ -300,8 +451,17 @@ exports[`examples should work 6`] = `
                   }
                   tabIndex={-1}
                 >
+                  <img
+                    className="mml-image"
+                    src="https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0"
+                  />
                   <p>
                     RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate
+                  </p>
+                  <p>
+                    <strong>
+                      $729.99
+                    </strong>
                   </p>
                   <button
                     className="mml-btn"

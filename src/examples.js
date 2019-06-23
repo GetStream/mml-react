@@ -94,5 +94,48 @@ export var examples = [
         </item>
     </carousel>
 </mml>`
+  },
+  {
+    name: "OverflowMenu",
+    description: "A simple overflowmenu demo",
+    mml: `<mml name="paging">
+  <row>
+    <column width="10">
+      <text>Alert: The server is on fire!!</text>
+    </column>
+    <column width="2">
+      <overflow>
+        <button name="action" value="Ignore">Ignore</button>
+        <button name="action" value="ReRoute Ticket">ReRoute Ticket</button>
+        <button name="action" value="Turn off the server">Turn off the server</button>
+        <button name="action" value="Book a vacation">Book a vacation</button>
+      </overflow>
+    </column>
+  </row>
+  </mml>`
+  },
+  {
+    name: "Flight info",
+    description: "Demo of grid system capabilities",
+    mml: `<mml>
+  <text>Here is your flight info:</text>
+  <card>
+    <row>
+      <column width="4" align="left">San Francisco</column>
+      <column width="4"></column>
+      <column width="4" align="right">New York</column>
+    </row>
+    <row>
+      <column width="4" align="left"><md>## SFO</md></column>
+      <column width="4" align="center"><icon name="flight" /></column>
+      <column width="4" align="right"><md>## JFK</md></column>
+    </row>
+    <row>
+      <column width="4" offset="4" align="center">
+        <button value="view" text="View Boarding Pass" />
+      </column>
+    </row>
+  </card>
+  </mml>`
   }
 ];

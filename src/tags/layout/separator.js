@@ -3,6 +3,6 @@ import { MMLTag } from "../base";
 
 export class Separator extends MMLTag {
   toReact(rc) {
-    <hr className="mml-separator" />;
+    return <hr className="mml-separator" />;
   }
 }

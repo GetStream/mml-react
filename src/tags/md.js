@@ -6,6 +6,6 @@ import { MMLMarkdown } from "../components/MMLMarkdown";
 export class MD extends MMLTag {
   toReact(rc) {
     const text = getNodeText(this.node);
-    <MMLMarkdown source={text} />;
+    return <MMLMarkdown source={text} />;
   }
 }

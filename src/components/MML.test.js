@@ -70,7 +70,6 @@ test("invalid MML 2", () => {
 
 test.only("examples should work", () => {
   for (let example of examples) {
-    console.log(example.name);
     let rTree = renderer.create(<MML source={example.mml} />).toJSON();
     expect(rTree).toMatchSnapshot();
   }

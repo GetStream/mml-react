@@ -3,7 +3,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { MML } from "mml-react";
 
-export class ExampleSelector extends React.Component {
+export class ExampleEditor extends React.Component {
   constructor(props) {
     super(props);
 

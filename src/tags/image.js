@@ -3,6 +3,6 @@ import { MMLTag } from "./base";
 
 export class Image extends MMLTag {
   toReact(rc) {
-    <img className="mml-image" {...this.attr} />;
+    return <img className="mml-image" {...this.attr} />;
   }
 }
