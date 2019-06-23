@@ -4,7 +4,6 @@ import Slider from "react-slick";
 
 export class Carousel extends React.Component {
   render() {
-    console.log("this.props.items", this.props.items);
     const settings = {
       dots: true,
       infinite: false,

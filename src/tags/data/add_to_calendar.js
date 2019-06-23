@@ -1,7 +1,7 @@
 import React from "react";
-import { MMLTag } from "../base";
+import { MMLDataTag } from "../base";
 
-export class AddToCalendar extends MMLTag {
+export class AddToCalendar extends MMLDataTag {
   toReact(rc) {
     // required fields
     const { title, start, end } = this.attr;

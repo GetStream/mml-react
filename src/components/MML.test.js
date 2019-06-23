@@ -2,6 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { ParseMMLSource, XMLtoMMLTree } from "../parser";
 import { MML } from "./MML";
+import { examples } from "../examples";
 
 test("mml name and simple text field", () => {
   const mml = '<mml name="john">hi</mml>';
@@ -65,6 +66,14 @@ test("invalid MML 2", () => {
     '<image src="https://turn5.scene7.com/is/image/Turn5/J20850?wid=810&hei=608&op_usm=0.8,1,10,0&amp;test=test" />';
   const rTree = renderer.create(<MML source={mml} />).toJSON();
   expect(rTree).toMatchSnapshot();
+});
+
+test.only("examples should work", () => {
+  for (let example of examples) {
+    console.log(example.name);
+    let rTree = renderer.create(<MML source={example.mml} />).toJSON();
+    expect(rTree).toMatchSnapshot();
+  }
 });
 
 test("only supported attributes are allowed", () => {

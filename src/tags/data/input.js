@@ -8,7 +8,6 @@ export class Input extends MMLDataTag {
 
   initialState() {
     const data = {};
-    console.log("called", this.node.attributes);
     data[this.node.attributes.name] = this.node.attributes.value;
     return data;
   }

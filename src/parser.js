@@ -66,11 +66,12 @@ export function XMLtoMMLTree(XMLNodes) {
       }
 
       const tagClass = tags[tagName];
+
       if (tagClass) {
         const tag = new tagClass(tagName, n, children);
         MMLNodes.push(tag);
       } else {
-        console.log("unrecognized element", tagName);
+        console.log("unrecognized element", tagName, Object.keys(tags));
       }
     }
     return MMLNodes;

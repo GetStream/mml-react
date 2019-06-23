@@ -1,5 +1,370 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`examples should work 1`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      It looks like your credit card isn't activated yet, activate it now:
+    </p>
+    <button
+      className="mml-btn"
+      onClick={[Function]}
+      type="submit"
+    >
+      Activate Card
+    </button>
+  </form>
+</div>
+`;
+
+exports[`examples should work 2`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      Did you authorize these last 3 transactions on your account?
+    </p>
+    <button
+      className="mml-btn"
+      onClick={[Function]}
+      type="submit"
+    >
+      Yes
+    </button>
+    <button
+      className="mml-btn"
+      onClick={[Function]}
+      type="submit"
+    >
+      No
+    </button>
+  </form>
+</div>
+`;
+
+exports[`examples should work 3`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="email"
+      onChange={[Function]}
+      type="text"
+    />
+    <button
+      className="mml-btn"
+      onClick={[Function]}
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;
+
+exports[`examples should work 4`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?
+    </p>
+  </form>
+</div>
+`;
+
+exports[`examples should work 5`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      When would you like to schedule your massage?
+    </p>
+    <button
+      className="mml-btn"
+      onClick={[Function]}
+      type="submit"
+    >
+      Reserve
+    </button>
+  </form>
+</div>
+`;
+
+exports[`examples should work 6`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="mml-carousel"
+    >
+      <div
+        className="slick-slider slick-initialized"
+        dir="ltr"
+      >
+        <button
+          className="slick-arrow slick-prev slick-disabled"
+          data-role="none"
+          onClick={null}
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="button"
+        >
+           
+          Previous
+        </button>
+        <div
+          className="slick-list"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={null}
+          onMouseMove={null}
+          onMouseUp={[Function]}
+          onTouchCancel={null}
+          onTouchEnd={[Function]}
+          onTouchMove={null}
+          onTouchStart={[Function]}
+          style={Object {}}
+        >
+          <div
+            className="slick-track"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            style={
+              Object {
+                "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                "WebkitTransition": "",
+                "msTransform": "translateX(0px)",
+                "opacity": 1,
+                "transform": "translate3d(0px, 0px, 0px)",
+                "transition": "",
+              }
+            }
+          >
+            <div
+              aria-hidden={false}
+              className="slick-slide slick-active slick-current"
+              data-index={0}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  className="mml-carousel-item"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <p>
+                    Barricade Adventure HD Front Bumper
+                  </p>
+                  <button
+                    className="mml-btn"
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    View Product
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={false}
+              className="slick-slide slick-active"
+              data-index={1}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  className="mml-carousel-item"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <p>
+                    Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar
+                  </p>
+                  <button
+                    className="mml-btn"
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    View Product
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={false}
+              className="slick-slide slick-active"
+              data-index={2}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  className="mml-carousel-item"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <p>
+                    Barricade HD Front Bumper w/ 20 in. Light Bar
+                  </p>
+                  <button
+                    className="mml-btn"
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    View Product
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide"
+              data-index={3}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  className="mml-carousel-item"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <p>
+                    RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate
+                  </p>
+                  <button
+                    className="mml-btn"
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    View Product
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          className="slick-arrow slick-next"
+          data-role="none"
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="button"
+        >
+           
+          Next
+        </button>
+        <ul
+          className="slick-dots"
+          onMouseEnter={null}
+          onMouseLeave={null}
+          onMouseOver={null}
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <li
+            className="slick-active"
+          >
+            <button
+              onClick={[Function]}
+            >
+              1
+            </button>
+          </li>
+          <li
+            className=""
+          >
+            <button
+              onClick={[Function]}
+            >
+              2
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
 exports[`invalid MML 1 1`] = `
 <div
   className="mml-container"

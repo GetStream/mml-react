@@ -1,7 +1,7 @@
 import React from "react";
-import { MMLTag } from "../base";
+import { MMLDataTag } from "../base";
 
-export class ButtonList extends MMLTag {
+export class ButtonList extends MMLDataTag {
   toReact(rc) {
     <div class="mml-selectlist">{this.childrenToReact(rc)}</div>;
   }

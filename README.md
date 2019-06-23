@@ -17,9 +17,4 @@ yarn; yarn start
 
 ## TODO
 
-- cleanup parser code
-  -- complete the cleanup for all components (currently in button.js)
-  -- figure out if there is an easier way to reuse stuff between react & react native. (no clean way to do that..)
-  -- add js docs to everything
-
-- button, select and input are used in HTML, we should use different names (since we can't support the full feature set)
+- review & test validation on all components

@@ -1,7 +1,7 @@
 import React from "react";
-import { MMLTag } from "../base";
+import { MMLDataTag } from "../base";
 
-export class Overflow extends MMLTag {
+export class Overflow extends MMLDataTag {
   toReact(rc) {
     <div class="dropdown">
       <button

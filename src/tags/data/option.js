@@ -1,8 +1,8 @@
 import React from "react";
-import { MMLTag } from "../base";
+import { MMLDataTag } from "../base";
 import { getNodeText } from "../../utils";
 
-export class Option extends MMLTag {
+export class Option extends MMLDataTag {
   toReact(rc) {
     const text = getNodeText(this.node);
     <option value={this.attr.value}>{text}</option>;

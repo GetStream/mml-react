@@ -1,9 +1,9 @@
 import React from "react";
-import { MMLTag } from "../base";
+import { MMLDataTag } from "../base";
 
 import { getNodeText } from "../../utils";
 
-export class Button extends MMLTag {
+export class Button extends MMLDataTag {
   toReact(rc) {
     const text = getNodeText(this.node);
 

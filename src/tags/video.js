@@ -1,5 +1,6 @@
 import React from "react";
 import { MMLTag } from "./base";
+import ReactPlayer from "react-player";
 
 export class Video extends MMLTag {
   toReact(rc) {
