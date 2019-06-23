@@ -1,6 +1,6 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { MML } from "mml-react";
 
 export class ExampleEditor extends React.Component {
@@ -8,7 +8,7 @@ export class ExampleEditor extends React.Component {
     super(props);
 
     this.state = {
-      selected: "massage"
+      selected: 0
     };
   }
 
@@ -23,34 +23,36 @@ export class ExampleEditor extends React.Component {
   };
 
   render() {
-    const mml = this.props.examples[this.state.selected];
-    if (!mml) {
-      return <div>No MLL Selected</div>;
+    const example = this.props.examples[this.state.selected];
+    if (!example) {
+      return <div>No Example Selected</div>;
     }
 
     function onAction(data) {
-      console.log("do a request to your server here", data);
       return new Promise(resolve => setTimeout(() => resolve(), 3000));
     }
     return (
-      <div class="container-fluid">
-        <div class="row">
+      <div className="container-fluid">
+        <div className="row">
           <ul>
             {Object.keys(this.props.examples).map(key => (
               <li key={key} onClick={() => this.selectExample(key)}>
-                {key}
+                {this.props.examples[key].name}
               </li>
             ))}
           </ul>
         </div>
-        <div class="row">
-          <div class="col syntax-mml">
-            <SyntaxHighlighter language="xml" style={docco}>
-              {mml}
+        <div className="row">
+          <div>
+            <p>{example.description}</p>
+          </div>
+          <div className="col syntax-mml">
+            <SyntaxHighlighter language="xml" style={atomDark}>
+              {example.mml}
             </SyntaxHighlighter>
           </div>
-          <div class="col">
-            <MML source={mml} onAction={onAction} />
+          <div className="col">
+            <MML source={example.mml} onAction={onAction} key={example.name} />
           </div>
         </div>
       </div>

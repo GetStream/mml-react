@@ -17,6 +17,6 @@ yarn; yarn start
 
 ## TODO
 
-- react component lifecycle issue with state...
 - review & test validation on all components
 - preview app as example project
+- clean history

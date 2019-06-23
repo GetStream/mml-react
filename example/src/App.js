@@ -1,6 +1,6 @@
 import React from "react";
 
-import { examples } from "./examples";
+import { examples } from "mml-react";
 import { ExampleEditor } from "./components/ExampleEditor";
 
 import "mml-react/dist/css/index.css";
