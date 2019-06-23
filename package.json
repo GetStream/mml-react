@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "MML (Message Markup Language) for React implementation.",
   "author": "tschellenbach",
-  "license": "MIT",
+  "license": "commercial",
   "repository": "tschellenbach/mml-react",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
