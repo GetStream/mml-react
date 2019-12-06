@@ -1,27 +1,26 @@
 {
-  "name": "mml-react-example",
-  "homepage": "https://tschellenbach.github.io/mml-react",
-  "version": "0.0.0",
+  "name": "example2",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "mml-react": "link:..",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^3.0.1",
-    "react-syntax-highlighter": "^10.3.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0",
+    "react-syntax-highlighter": "^11.0.2",
+    "stream-chat-react": "^0.7.13"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "prettier": "npx prettier \"src/**/*.js\" --write"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "husky": "^2.3.0",
-    "prettier": "1.17.1",
-    "pretty-quick": "^1.11.0"
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [

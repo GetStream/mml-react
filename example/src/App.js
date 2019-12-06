@@ -2,6 +2,7 @@ import React from "react";
 
 import { examples } from "mml-react";
 import { ExampleEditor } from "./components/ExampleEditor";
+import "stream-chat-react/dist/css/index.css";
 
 import "mml-react/dist/css/index.css";
 

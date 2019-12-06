@@ -2,6 +2,14 @@ import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { MML } from "mml-react";
+import * as data from "../data";
+import {
+  Message,
+  MessageSimple,
+  Chat,
+  Channel,
+  MessageList
+} from "stream-chat-react";
 
 export class ExampleEditor extends React.Component {
   constructor(props) {
@@ -31,6 +39,13 @@ export class ExampleEditor extends React.Component {
     function onAction(data) {
       return new Promise(resolve => setTimeout(() => resolve(), 3000));
     }
+
+    data.message.mml = example.mml;
+    let messages = data.messages.concat([data.message]);
+    console.log(messages);
+    console.log(data.client);
+    //<MML source={example.mml} onAction={onAction} key={example.name} />
+
     return (
       <div className="container-fluid">
         <div className="row">
@@ -52,7 +67,17 @@ export class ExampleEditor extends React.Component {
             </SyntaxHighlighter>
           </div>
           <div className="col">
-            <MML source={example.mml} onAction={onAction} key={example.name} />
+            <div className="str-chat" style={{ height: "unset" }}>
+              <Chat
+                client={data.client}
+                key={example.name}
+                theme={"messaging light"}
+              >
+                <Channel channel={data.channel}>
+                  <MessageList messages={messages} />
+                </Channel>
+              </Chat>
+            </div>
           </div>
         </div>
       </div>
