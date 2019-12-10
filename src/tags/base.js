@@ -25,9 +25,7 @@ export class MMLTag {
       for (let c of this.children) {
         if (!(c.tagName in this.validChildren)) {
           errors.push(
-            `Tag ${this.tagName} doesn't support child tags of type ${
-              c.tagName
-            }`
+            `Tag ${this.tagName} doesn't support child tags of type ${c.tagName}`
           );
         }
       }
