@@ -2,7 +2,6 @@ import React from "react";
 
 import { examples } from "mml-react";
 import { ExampleEditor } from "./components/ExampleEditor";
-import "stream-chat-react/dist/css/index.css";
 
 import "mml-react/dist/css/index.css";
 
@@ -17,8 +16,8 @@ function App() {
           capabilities from tools such as Slack. MML gives developers the power
           to quickly build cross platform rich messaging experiences. It works
           particularly well if you combine it with chat bots and AI. Here are
-          some examples of what you can build. For more information visit
-          <a href="https://getstream.io/chat/rich_messaging_mml/">
+          some examples of what you can build. For more information visit{" "}
+          <a href="https://getstream.io/chat/mml/">
             the MML Homepage for Rich messaging Chat
           </a>
         </p>

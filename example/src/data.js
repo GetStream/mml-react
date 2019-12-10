@@ -113,7 +113,7 @@ export const message = {
   updated_at: "2019-01-25T16:24:00.181Z",
   user: {
     created_at: "2019-01-22T16:35:18.417456Z",
-    id: "john",
+    id: "thierry",
     last_active: "2019-01-25T09:23:47.108127-07:00",
     online: true,
     role: "user",
@@ -192,7 +192,7 @@ export const threadMessages = [
   {
     attachments: [],
     command: "",
-    created_at: new Date("2019-01-25T21:26:11.863Z"),
+    created_at: new Date("2018-01-25T21:26:11.863Z"),
     html: "<p>it’s soo green, amazing</p>\n",
     own_reactions: [],
     parent_id: "6312fb0b-0c94-4107-a036-376ac5ab650b",
@@ -205,7 +205,7 @@ export const threadMessages = [
     updated_at: "2019-01-25T21:26:11.863Z",
     user: {
       created_at: "2019-01-22T16:35:18.417456Z",
-      id: "thierry",
+      id: "john",
       invisible: false,
       last_active: "0001-01-01T00:00:00Z",
       mutes: [],

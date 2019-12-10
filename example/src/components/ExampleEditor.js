@@ -20,11 +20,12 @@ export class ExampleEditor extends React.Component {
     };
   }
 
-  selectExample(exampleName) {
+  selectExample = exampleName => {
     this.setState((state, props) => {
       return { selected: exampleName };
     });
-  }
+    return false;
+  };
 
   handleLayoutChange = event => {
     this.setState({ layout: event.target.value });
@@ -40,6 +41,7 @@ export class ExampleEditor extends React.Component {
       return new Promise(resolve => setTimeout(() => resolve(), 3000));
     }
 
+    //data.message.attachments = [{type: 'mml', mml: example.mml}]
     data.message.mml = example.mml;
     let messages = data.messages.concat([data.message]);
     console.log(messages);
@@ -49,10 +51,15 @@ export class ExampleEditor extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <ul>
+          <ul className="navigation">
             {Object.keys(this.props.examples).map(key => (
-              <li key={key} onClick={() => this.selectExample(key)}>
-                {this.props.examples[key].name}
+              <li
+                className={key === this.state.selected ? "active" : "inactive"}
+                key={key}
+              >
+                <a onClick={() => this.selectExample(key)}>
+                  {this.props.examples[key].name}
+                </a>
               </li>
             ))}
           </ul>
