@@ -525,6 +525,160 @@ exports[`examples should work 6`] = `
 </div>
 `;
 
+exports[`examples should work 7`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="mml-row"
+    >
+      <div
+        className="mml-col-10 mml-align-left"
+      >
+        <p>
+          Alert: The server is on fire!!
+        </p>
+      </div>
+      <div
+        className="mml-col-2 mml-align-left"
+      >
+        <div
+          class="dropdown"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="btn btn-secondary dropdown-toggle"
+            data-toggle="dropdown"
+            id="dropdownMenu2"
+            type="button"
+          >
+            ...
+          </button>
+          <div
+            aria-labelledby="dropdownMenu2"
+            class="dropdown-menu"
+          >
+            <button
+              className="mml-btn"
+              onClick={[Function]}
+              type="submit"
+            >
+              Ignore
+            </button>
+            <button
+              className="mml-btn"
+              onClick={[Function]}
+              type="submit"
+            >
+              ReRoute Ticket
+            </button>
+            <button
+              className="mml-btn"
+              onClick={[Function]}
+              type="submit"
+            >
+              Turn off the server
+            </button>
+            <button
+              className="mml-btn"
+              onClick={[Function]}
+              type="submit"
+            >
+              Book a vacation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`examples should work 8`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      Here is your flight info:
+    </p>
+    <div
+      class="mml-card"
+    >
+      <div
+        className="mml-row"
+      >
+        <div
+          className="mml-col-4 mml-align-left"
+        >
+          <p>
+            San Francisco
+          </p>
+        </div>
+        <div
+          className="mml-col-4 mml-align-left"
+        />
+        <div
+          className="mml-col-4 mml-align-right"
+        >
+          <p>
+            New York
+          </p>
+        </div>
+      </div>
+      <div
+        className="mml-row"
+      >
+        <div
+          className="mml-col-4 mml-align-left"
+        >
+          <h2>
+            SFO
+          </h2>
+        </div>
+        <div
+          className="mml-col-4 mml-align-center"
+        >
+          <i
+            class="material-icons"
+          >
+            flight
+          </i>
+        </div>
+        <div
+          className="mml-col-4 mml-align-right"
+        >
+          <h2>
+            JFK
+          </h2>
+        </div>
+      </div>
+      <div
+        className="mml-row"
+      >
+        <div
+          className="mml-col-4 mml-offset-4 mml-align-center"
+        >
+          <button
+            className="mml-btn"
+            onClick={[Function]}
+            type="submit"
+          >
+            
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
 exports[`invalid MML 1 1`] = `
 <div
   className="mml-container"
