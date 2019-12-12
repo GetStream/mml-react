@@ -1,9 +1,9 @@
 import React from "react";
 
 /**
- * MMLTree - The tree object for MML tags
+ * Tree - The tree object for MML tags
  */
-export class MMLTree {
+export class Tree {
   constructor(node, children) {
     this.node = node;
     this.name = node.attributes.name;

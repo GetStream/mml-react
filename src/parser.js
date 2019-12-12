@@ -1,16 +1,29 @@
 import React from "react";
 import parseXml from "@rgrove/parse-xml";
 import { getMMLTags } from "./tags";
-import { MMLTree } from "./tree";
+import { Tree } from "./tree";
 
 /**
- * ParseMMLSource - Takes an MML string and converts it to XML nodes
+ * Takes an MML string and returns an MML Tree
  *
- * @param {type} source MML tag string
+ * @param {string} source MML tag string
+ *
+ *  @returns {Tree} An MML Tree
+ */
+export function Parse(source) {
+  const XMLNodes = SourceToXML(source);
+  const tree = XMLtoMMLTree(XMLNodes);
+  return tree;
+}
+
+/**
+ * SourceToXML - Takes an MML string and converts it to XML nodes
+ *
+ * @param {string} source MML tag string
  *
  * @returns {array} an Array of XML nodes
  */
-export function ParseMMLSource(source) {
+export function SourceToXML(source) {
   // the wrapping MML tags are optional, for parsing simplicity we automatically add them if they are not already there
   if (!~source.indexOf("<mml")) {
     source = `<mml>${source}</mml>`;
@@ -49,7 +62,7 @@ export function XMLtoMMLTree(XMLNodes) {
       // structured way of looking up mml tags...
       let tagName = n.name;
       if (n.name === "mml") {
-        tree = new MMLTree(n, children);
+        tree = new Tree(n, children);
         continue;
       }
       // skip the document level element...

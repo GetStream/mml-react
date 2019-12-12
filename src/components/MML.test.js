@@ -1,12 +1,12 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { ParseMMLSource, XMLtoMMLTree } from "../parser";
+import { SourceToXML, XMLtoMMLTree } from "../parser";
 import { MML } from "./MML";
 import { examples } from "../examples";
 
-test("mml name and simple text field", () => {
+test.only("mml name and simple text field", () => {
   const mml = '<mml name="john">hi</mml>';
-  const nodes = ParseMMLSource(mml);
+  const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
   expect(tree.name).toEqual("john");
   expect(tree.children.length).toBe(1);
@@ -22,7 +22,7 @@ test("simple carousel", () => {
 
 test("simple input", () => {
   const mml = '<input name="name" value="John" />';
-  const nodes = ParseMMLSource(mml);
+  const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
   const state = tree.initialState();
   console.log("state", state);
@@ -34,7 +34,7 @@ test("simple input", () => {
 test("invalid input tag", () => {
   // note how name is missing
   const mml = '<input value="John" />';
-  const nodes = ParseMMLSource(mml);
+  const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
   const errors = tree.validateTree();
   expect(errors.length).toBe(1);
@@ -43,14 +43,14 @@ test("invalid input tag", () => {
 
 test("input tags should have data", () => {
   const mml = '<input name="myinput" value="1" />';
-  const nodes = ParseMMLSource(mml);
+  const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
   expect(tree.hasData()).toBe(true);
 });
 
 test("text tags should not have data", () => {
   const mml = "<text>hi</text>";
-  const nodes = ParseMMLSource(mml);
+  const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
   expect(tree.hasData()).toBe(false);
 });
@@ -68,7 +68,7 @@ test("invalid MML 2", () => {
   expect(rTree).toMatchSnapshot();
 });
 
-test.only("examples should work", () => {
+test("examples should work", () => {
   for (let example of examples) {
     let rTree = renderer.create(<MML source={example.mml} />).toJSON();
     expect(rTree).toMatchSnapshot();
@@ -77,7 +77,7 @@ test.only("examples should work", () => {
 
 test("only supported attributes are allowed", () => {
   const mml = '<mml name="john">hi</mml>';
-  const nodes = ParseMMLSource(mml);
+  const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
   expect(tree.name).toEqual("john");
   expect(tree.children.length).toBe(1);
