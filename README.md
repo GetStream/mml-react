@@ -48,6 +48,8 @@ The tree knows:
 ## TODO
 
 - functional components with hooks
+- enable you to overwrite the MML components
+- make mml in chat react a singelton type of pattern
 - validation:
   -- XSD seems like the nicest way to validate the MML (but libs dont support it well)
   -- some elements are only allowed as children of other elements
