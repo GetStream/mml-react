@@ -1,7 +1,7 @@
 import React from "react";
 import { MMLDataTag } from "../base";
 
-export class Input extends MMLDataTag {
+export class Number extends MMLDataTag {
   static validChildren = null;
   static validAttributes = { name: true, value: true };
   static requiredAttributes = ["name"];

@@ -9,11 +9,20 @@ export var examples = [
 </mml>`
   },
   {
+    name: "Simple Counts",
+    description: "Counts with a mobile friendly input",
+    mml: `<mml name="counts">
+  <text>How many donuts do you want for lunch?</text>
+  <image src="https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80" />
+  <number name="donuts" value="3" />
+  <button name="confirm" value="Confirm">Confirm</button>
+</mml>`
+  },
+  {
     name: "Support and Rich Data",
     description: "common tasks",
     mml: `<mml name="support">
 <text>Did you authorize these last 3 transactions on your account?</text>
-<card>
   <row>
     <column width="4">$15</column>
     <column width="8">Oren's Hummus</column>
@@ -26,7 +35,6 @@ export var examples = [
     <column width="4">$60</column>
     <column width="8">Epic Games Skins</column>
   </row>
-</card>
 <button name="authorized" value="yes">Yes</button>
 <button name="authorized" value="yes">No</button>
 </mml>`
@@ -66,7 +74,7 @@ export var examples = [
     name: "E-commerce",
     description: "Carousel style layout for intuitive selection on mobile",
     mml: `<mml>
-    <md>Here are some front bumpers that will fit your 2018-2019 JL!</md>
+    <md>Here are some front bumpers! that will fit your **2018-2019 JL**!</md>
     <carousel>
         <item>
             <image src="https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&amp;hei=187&amp;op_usm=0.8,1,10,0" />

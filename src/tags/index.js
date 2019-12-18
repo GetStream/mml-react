@@ -3,10 +3,9 @@ import {
   ButtonList,
   Button,
   Input,
-  Option,
   Overflow,
   Scheduler,
-  Select
+  Number
 } from "./data";
 
 import { Card, Carousel, Column, Item, Row, Separator } from "./layout";
@@ -22,9 +21,7 @@ var tags = {
   buttonlist: ButtonList,
   button: Button,
   input: Input,
-  option: Option,
   scheduler: Scheduler,
-  select: Select,
   carousel: Carousel,
   column: Column,
   item: Item,
@@ -32,7 +29,8 @@ var tags = {
   icon: Icon,
   image: Image,
   md: MD,
-  text: Text
+  text: Text,
+  number: Number
 };
 
 export function getMMLTags() {

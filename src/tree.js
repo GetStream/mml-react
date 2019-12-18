@@ -7,6 +7,13 @@ import { Calendar } from "./components/Calendar";
 import { Scheduler } from "./components/Scheduler";
 import { Text } from "./components/Text";
 import { MD } from "./components/MD";
+import { Row } from "./components/Row";
+import { Column } from "./components/Column";
+import { Image } from "./components/Image";
+import { Icon } from "./components/Icon";
+import { Carousel } from "./components/Carousel";
+import { CarouselItem } from "./components/CarouselItem";
+import { Number } from "./components/Number";
 
 /**
  * Tree - The tree object for MML tags
@@ -31,12 +38,28 @@ export class Tree {
       input: tag => {
         return <Input attributes={tag.node.attributes} />;
       },
-      // TODO:
       add_to_calendar: tag => {
         return <Calendar attributes={tag.node.attributes} />;
       },
-      option: tag => {
-        return <div>missing</div>;
+      column: tag => {
+        const children = this.childrenToReact(tag);
+        return <Column attributes={tag.node.attributes} children={children} />;
+      },
+      row: tag => {
+        const children = this.childrenToReact(tag);
+        return <Row attributes={tag.node.attributes} children={children} />;
+      },
+      icon: tag => {
+        return <Icon attributes={tag.node.attributes} />;
+      },
+      image: tag => {
+        return <Image attributes={tag.node.attributes} />;
+      },
+      md: tag => {
+        return <MD text={tag.getText()} attributes={tag.node.attributes} />;
+      },
+      text: tag => {
+        return <Text text={tag.getText()} attributes={tag.node.attributes} />;
       },
       scheduler: tag => {
         const initialDate = new Date(tag.attr.value);
@@ -51,32 +74,16 @@ export class Tree {
           />
         );
       },
-      select: tag => {
-        return <div>missing</div>;
-      },
       carousel: tag => {
-        return <div>missing</div>;
-      },
-      column: tag => {
-        return <div>missing</div>;
+        const children = this.childrenToReact(tag);
+        return <Carousel children={children} />;
       },
       item: tag => {
-        return <div>missing</div>;
+        const children = this.childrenToReact(tag);
+        return <CarouselItem children={children} />;
       },
-      row: tag => {
-        return <div>missing</div>;
-      },
-      icon: tag => {
-        return <div>missing</div>;
-      },
-      image: tag => {
-        return <div>missing</div>;
-      },
-      md: tag => {
-        return <MD text={tag.getText()} attributes={tag.node.attributes} />;
-      },
-      text: tag => {
-        return <Text text={tag.getText()} attributes={tag.node.attributes} />;
+      number: tag => {
+        return <Number attributes={tag.node.attributes} />;
       }
     };
   }
