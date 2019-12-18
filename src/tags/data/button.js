@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MMLDataTag } from "../base";
+import { MMLContext } from "../../";
 
 import { getNodeText } from "../../utils";
 
-export class Button extends MMLDataTag {
-  toReact(rc) {
-    const text = getNodeText(this.node);
+export class Button extends MMLDataTag {}
 
-    return (
-      <button
-        className={`mml-btn`}
-        type="submit"
-        onClick={() => rc.handleAction(this.node.attributes)}
-      >
-        {text}
-      </button>
-    );
-  }
+export function ButtonInner({ text, attributes, ...props }) {
+  const mmlContext = useContext(MMLContext);
+  console.log("MMLContext", mmlContext, MMLContext);
+
+  return (
+    <button
+      className={`mml-btn`}
+      type="submit"
+      onClick={() => mmlContext.handleAction(attributes)}
+    >
+      {text}
+    </button>
+  );
 }

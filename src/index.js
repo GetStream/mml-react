@@ -8,3 +8,4 @@ import "./styles/index.scss";
 export { MML } from "./components/MML";
 export { Carousel } from "./components/Carousel";
 export { examples } from "./examples";
+export { MMLContext } from "./context";

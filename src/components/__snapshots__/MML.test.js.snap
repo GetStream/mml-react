@@ -703,6 +703,27 @@ exports[`mml name and simple text field 1`] = `
 </div>
 `;
 
+exports[`mml with button 1`] = `
+<div
+  className="mml-container"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      It looks like your credit card isn't activated yet, activate it now:
+    </p>
+    <button
+      className="mml-btn"
+      onClick={[Function]}
+      type="submit"
+    >
+      Activate Card
+    </button>
+  </form>
+</div>
+`;
+
 exports[`only supported attributes are allowed 1`] = `
 <div
   className="mml-container"

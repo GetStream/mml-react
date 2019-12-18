@@ -1,24 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import PropTypes from "prop-types";
 
 import { Parse } from "../parser";
 import { Loader as LoaderComponent } from "./Loader";
 import { Error as ErrorComponent } from "./Error";
 import { Success as SuccessComponent } from "./Success";
+import { MMLContext } from "../";
 
 export function MML({
   source,
+  converterConfig,
   Loader = LoaderComponent,
   Error = ErrorComponent,
   Success = SuccessComponent,
   ...props
 }) {
-  let tree;
-  const [state, setState] = useState(() => {
+  const [state, setState] = useState({});
+
+  function computeTreeState(source, converterConfig) {
+    const tree = Parse(source);
+    if (converterConfig) {
+      tree.converterConfig = converterConfig;
+    }
     // computing the initial state is expensive, so we do it here
     let initialState;
     try {
-      tree = Parse(source);
       // get initial state for all input elements in MML
       const treeState = tree.initialState();
       initialState = {
@@ -29,7 +35,6 @@ export function MML({
         mml_error: ""
       };
     } catch (e) {
-      console.warn(e);
       initialState = {
         mml_error:
           "This chat message has invalid formatting and can't be shown",
@@ -37,19 +42,28 @@ export function MML({
         success: ""
       };
     }
-  });
+    setState(initialState);
+    return tree;
+  }
+  // compute the tree, changes when the source changes
+  const tree = useMemo(() => computeTreeState(source, converterConfig), [
+    source,
+    converterConfig
+  ]);
+  // get the initial state from the tree
 
   async function handleSubmit(event) {
     event.preventDefault();
     const data = [];
-    const pairs = Object.keys(this.state).map((key, index) => {
-      return { name: key, value: this.state[key] };
+    const pairs = Object.keys(state).map((key, index) => {
+      return { name: key, value: state[key] };
     });
     data.push(...pairs);
 
     setState({ loading: true, error: "", success: "" });
     try {
       await props.onAction(data);
+      // TODO: always merge existing state...
       setState({ loading: false, error: "", success: "submitted" });
     } catch (e) {
       setState({ loading: false, error: "something is broken" });
@@ -75,21 +89,25 @@ export function MML({
     return <div className="mml-container">{state.mml_error}</div>;
   }
 
-  const reactNodes = tree.toReact(tree);
-
   if (tree.hasData()) {
     return (
-      <div className="mml-container">
-        <form onSubmit={this.handleSubmit}>
-          {reactNodes}
-          <Loader loading={this.state.loading} />
-          <Success success={this.state.success} />
-          <Error error={this.state.error} />
-        </form>
-      </div>
+      <MMLContext.Provider handleAction={handleAction}>
+        <div className="mml-container">
+          <form onSubmit={handleSubmit}>
+            {tree.toReact(tree)}
+            <Loader loading={state.loading} />
+            <Success success={state.success} />
+            <Error error={state.error} />
+          </form>
+        </div>
+      </MMLContext.Provider>
     );
   } else {
-    return <div className="mml-container">{reactNodes}</div>;
+    return (
+      <MMLContext.Provider handleAction={handleAction}>
+        <div className="mml-container">{tree.toReact(tree)}</div>
+      </MMLContext.Provider>
+    );
   }
 }
 

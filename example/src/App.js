@@ -4,6 +4,7 @@ import { examples } from "mml-react";
 import { ExampleEditor } from "./components/ExampleEditor";
 
 import "mml-react/dist/css/index.css";
+import "stream-chat-react/dist/css/index.css";
 
 function App() {
   return (

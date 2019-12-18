@@ -41,8 +41,8 @@ export class ExampleEditor extends React.Component {
       return new Promise(resolve => setTimeout(() => resolve(), 3000));
     }
 
-    //data.message.attachments = [{type: 'mml', mml: example.mml}]
-    data.message.mml = example.mml;
+    data.message.attachments = [{ type: "mml", mml: example.mml }];
+    //data.message.mml = example.mml;
     let messages = data.messages.concat([data.message]);
     console.log(messages);
     console.log(data.client);
@@ -74,7 +74,10 @@ export class ExampleEditor extends React.Component {
             </SyntaxHighlighter>
           </div>
           <div className="col">
-            <div className="str-chat" style={{ height: "unset" }}>
+            <div
+              className="str-chat"
+              style={{ height: "unset", width: "700px" }}
+            >
               <Chat
                 client={data.client}
                 key={example.name}

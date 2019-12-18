@@ -4,12 +4,25 @@ import { SourceToXML, XMLtoMMLTree } from "../parser";
 import { MML } from "./MML";
 import { examples } from "../examples";
 
-test.only("mml name and simple text field", () => {
+test("mml name and simple text field", () => {
   const mml = '<mml name="john">hi</mml>';
   const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
   expect(tree.name).toEqual("john");
   expect(tree.children.length).toBe(1);
+  const rTree = renderer.create(<MML source={mml} />).toJSON();
+  expect(rTree).toMatchSnapshot();
+});
+
+test.only("mml with button", () => {
+  const mml = `<mml name="support">
+<text>It looks like your credit card isn't activated yet, activate it now:</text>
+<button name="action" value="Activate">Activate Card</button>
+</mml>`;
+  const nodes = SourceToXML(mml);
+  const tree = XMLtoMMLTree(nodes);
+  expect(tree.name).toEqual("support");
+  expect(tree.children.length).toBe(2);
   const rTree = renderer.create(<MML source={mml} />).toJSON();
   expect(rTree).toMatchSnapshot();
 });

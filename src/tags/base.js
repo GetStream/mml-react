@@ -1,3 +1,4 @@
+import { getNodeText } from "../utils";
 /**
  * MMLTag - The base MML Tag
  */
@@ -13,6 +14,10 @@ export class MMLTag {
     this.node = node;
     this.attr = this.node.attributes;
     this.children = children;
+  }
+
+  getText() {
+    return getNodeText(this.node);
   }
 
   initialState() {

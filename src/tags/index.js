@@ -23,20 +23,16 @@ var tags = {
   button: Button,
   input: Input,
   option: Option,
-  overflow: Overflow,
   scheduler: Scheduler,
   select: Select,
-  card: Card,
   carousel: Carousel,
   column: Column,
   item: Item,
   row: Row,
-  separator: Separator,
   icon: Icon,
   image: Image,
   md: MD,
-  text: Text,
-  video: Video
+  text: Text
 };
 
 export function getMMLTags() {

@@ -45,11 +45,24 @@ The tree knows:
 - If there are data tags
 - The initial state for the data tags
 
+## Naming:
+
+- Tree: The tree of MML tags
+- Tag: Intermediate class used for validating MML tags
+- ConverterConfig: Mapping from MML tag to React Component (React Native coming later)
+
 ## TODO
 
-- functional components with hooks
-- enable you to overwrite the MML components
-- make mml in chat react a singelton type of pattern
+- fix stream-chat-react build issues (done)
+- functional components with hooks (done)
+- use a context to share stuff to lower level components (done)
+- toReact should be defined at the tree level and allow you to overwrite the mappings (1 day left)
+- make mml in stream chat react a singleton type of pattern (done)
+- move the converterConfig for react into it's own file
+- move all tags into it's own file
+- styleguidist for all react tags
+- prop types for all react tags
+- Fix CSS of stream-chat-react
 - validation:
   -- XSD seems like the nicest way to validate the MML (but libs dont support it well)
   -- some elements are only allowed as children of other elements
@@ -62,3 +75,4 @@ The tree knows:
 - Review MML syntax after design feedback is done
 - clean Git history
 - tests & coverage reporting
+- Write Docs
