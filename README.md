@@ -58,6 +58,7 @@ The tree knows:
 - use a context to share stuff to lower level components (done)
 - toReact should be defined at the tree level and allow you to overwrite the mappings (1 day left)
 - make mml in stream chat react a singleton type of pattern (done)
+- refactor how state is handled for date picker element and number element
 - move the converterConfig for react into it's own file
 - move all tags into it's own file
 - styleguidist for all react tags
@@ -73,6 +74,7 @@ The tree knows:
 - CSS for the components that we do need
 - ICAL integration
 - Review MML syntax after design feedback is done
+- Document how to create a new tag
 - clean Git history
 - tests & coverage reporting
 - Write Docs
