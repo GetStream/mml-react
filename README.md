@@ -30,6 +30,10 @@ We are intentionally keeping the scope of MML limited.
 It should solve 80% of your needs for interactive messages.
 We can't support every scenario though, if you need something more complex you can always implement your own attachment type.
 
+- `yarn lint` to run linting
+- `yarn prettier` to prettify things
+- `yarn test` to run tests
+
 ## Understanding the Parser
 
 1. SourceToXML turns an MML string into a XML node structure
@@ -56,13 +60,14 @@ The tree knows:
 - fix stream-chat-react build issues (done)
 - functional components with hooks (done)
 - use a context to share stuff to lower level components (done)
-- toReact should be defined at the tree level and allow you to overwrite the mappings (1 day left)
+- toReact should be defined at the tree level and allow you to overwrite the mappings (done)
 - make mml in stream chat react a singleton type of pattern (done)
-- refactor how state is handled for date picker element and number element
+- refactor how state is handled for date picker element and number element (in progress)
 - move the converterConfig for react into it's own file
 - move all tags into it's own file
 - styleguidist for all react tags
 - prop types for all react tags
+- cleanup all linting errors
 - Fix CSS of stream-chat-react
 - validation:
   -- XSD seems like the nicest way to validate the MML (but libs dont support it well)

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-export function Error({ error = "", ...props }) {
+export function Error({ error = '', ...props }) {
   if (error) {
-    return <span className="mml-error">{error}</span>;
+    return <span className="mml-error">{error}</span>
   }
-  return null;
+  return null
 }

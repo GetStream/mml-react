@@ -1,6 +1,6 @@
-import React from "react";
-import { MMLTag } from "./base";
-import ReactPlayer from "react-player";
+import React from 'react'
+import { MMLTag } from './base'
+import ReactPlayer from 'react-player'
 
 export class Video extends MMLTag {
   toReact(rc) {
@@ -11,6 +11,6 @@ export class Video extends MMLTag {
         width="100%"
         controls
       />
-    );
+    )
   }
 }

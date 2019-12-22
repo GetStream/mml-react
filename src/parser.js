@@ -1,7 +1,7 @@
-import React from "react";
-import parseXml from "@rgrove/parse-xml";
-import { getMMLTags } from "./tags";
-import { Tree } from "./tree";
+import React from 'react'
+import parseXml from '@rgrove/parse-xml'
+import { getMMLTags } from './tags'
+import { Tree } from './tree'
 
 /**
  * Takes an MML string and returns an MML Tree
@@ -11,9 +11,9 @@ import { Tree } from "./tree";
  *  @returns {Tree} An MML Tree
  */
 export function Parse(source) {
-  const XMLNodes = SourceToXML(source);
-  const tree = XMLtoMMLTree(XMLNodes);
-  return tree;
+  const XMLNodes = SourceToXML(source)
+  const tree = XMLtoMMLTree(XMLNodes)
+  return tree
 }
 
 /**
@@ -25,18 +25,18 @@ export function Parse(source) {
  */
 export function SourceToXML(source) {
   // the wrapping MML tags are optional, for parsing simplicity we automatically add them if they are not already there
-  if (!~source.indexOf("<mml")) {
-    source = `<mml>${source}</mml>`;
+  if (!~source.indexOf('<mml')) {
+    source = `<mml>${source}</mml>`
   }
 
   // emulate HTML handling of & escaping
-  const unescapedAmps = /&(?!amp;|lt;|gt;)/g;
-  source = source.replace(unescapedAmps, "&amp;");
+  const unescapedAmps = /&(?!amp;|lt;|gt;)/g
+  source = source.replace(unescapedAmps, '&amp;')
 
   // convert the string to XML nodes
   // this library is relatively lightweight and doesn't do a ton of validation
-  const XMLNodes = [parseXml(source)];
-  return XMLNodes;
+  const XMLNodes = [parseXml(source)]
+  return XMLNodes
 }
 
 /**
@@ -47,49 +47,49 @@ export function SourceToXML(source) {
  * @returns {MMLTree} The MML tree
  */
 export function XMLtoMMLTree(XMLNodes) {
-  const tags = getMMLTags();
+  const tags = getMMLTags()
 
-  let tree;
+  let tree
 
   function convertNodes(nodes) {
-    const MMLNodes = [];
-    for (let n of nodes) {
-      let children;
+    const MMLNodes = []
+    for (const n of nodes) {
+      let children
       if (n.children) {
-        children = convertNodes(n.children);
+        children = convertNodes(n.children)
       }
 
       // structured way of looking up mml tags...
-      let tagName = n.name;
-      if (n.name === "mml") {
-        tree = new Tree(n, children);
-        continue;
+      let tagName = n.name
+      if (n.name === 'mml') {
+        tree = new Tree(n, children)
+        continue
       }
       // skip the document level element...
-      if (n.type === "document") {
-        return children;
+      if (n.type === 'document') {
+        return children
       }
-      if (n.type === "text") {
+      if (n.type === 'text') {
         if (n.text.trim().length > 0) {
-          tagName = "text";
+          tagName = 'text'
         } else {
           // skip empty text nodes
-          continue;
+          continue
         }
       }
 
-      const tagClass = tags[tagName];
+      const tagClass = tags[tagName]
 
       if (tagClass) {
-        const tag = new tagClass(tagName, n, children);
-        MMLNodes.push(tag);
+        const tag = new tagClass(tagName, n, children)
+        MMLNodes.push(tag)
       } else {
-        console.log("unrecognized element", tagName, Object.keys(tags));
+        console.log('unrecognized element', tagName, Object.keys(tags))
       }
     }
-    return MMLNodes;
+    return MMLNodes
   }
-  convertNodes(XMLNodes);
+  convertNodes(XMLNodes)
 
-  return tree;
+  return tree
 }

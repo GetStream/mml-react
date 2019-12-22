@@ -1,16 +1,16 @@
 export var examples = [
   {
-    name: "Simple Support",
+    name: 'Simple Support',
     description:
-      "The most basic example is adding simple buttons to your message that help automate common tasks",
+      'The most basic example is adding simple buttons to your message that help automate common tasks',
     mml: `<mml name="support">
   <text>It looks like your credit card isn't activated yet, activate it now:</text>
   <button name="action" value="Activate">Activate Card</button>
 </mml>`
   },
   {
-    name: "Simple Counts",
-    description: "Counts with a mobile friendly input",
+    name: 'Simple Counts',
+    description: 'Counts with a mobile friendly input',
     mml: `<mml name="counts">
   <text>How many donuts do you want for lunch?</text>
   <image src="https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80" />
@@ -19,8 +19,8 @@ export var examples = [
 </mml>`
   },
   {
-    name: "Support and Rich Data",
-    description: "common tasks",
+    name: 'Support and Rich Data',
+    description: 'common tasks',
     mml: `<mml name="support">
 <text>Did you authorize these last 3 transactions on your account?</text>
   <row>
@@ -40,8 +40,8 @@ export var examples = [
 </mml>`
   },
   {
-    name: "Support Data Input",
-    description: "Structured data input without leaving the chat UI",
+    name: 'Support Data Input',
+    description: 'Structured data input without leaving the chat UI',
     mml: `<mml>
 	<md>Happy to setup your new credit card application, what's your **yearly** family income?</md>
   <input type="text" name="email" />
@@ -49,8 +49,8 @@ export var examples = [
 </mml>`
   },
   {
-    name: "Gigs",
-    description: "A simple gig scheduling workflow for referals",
+    name: 'Gigs',
+    description: 'A simple gig scheduling workflow for referals',
     mml: `<mml name="gigs">
 <text>Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?</text>
 <buttonlist name="times">
@@ -62,8 +62,8 @@ export var examples = [
 </mml>`
   },
   {
-    name: "Advanced Scheduling",
-    description: "Datetime picker with availability using ical",
+    name: 'Advanced Scheduling',
+    description: 'Datetime picker with availability using ical',
     mml: `<mml>
 	<text>When would you like to schedule your massage?</text>
 	<scheduler name="massage_appointment" duration="30" interval="30" />
@@ -71,8 +71,8 @@ export var examples = [
 </mml>`
   },
   {
-    name: "E-commerce",
-    description: "Carousel style layout for intuitive selection on mobile",
+    name: 'E-commerce',
+    description: 'Carousel style layout for intuitive selection on mobile',
     mml: `<mml>
     <md>Here are some front bumpers! that will fit your **2018-2019 JL**!</md>
     <carousel>
@@ -103,4 +103,4 @@ export var examples = [
     </carousel>
 </mml>`
   }
-];
+]

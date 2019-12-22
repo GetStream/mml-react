@@ -1,12 +1,12 @@
-import React from "react";
-import { MMLDataTag } from "../base";
+import React from 'react'
+import { MMLDataTag } from '../base'
 
 export class Overflow extends MMLDataTag {
   toReact(rc) {
     return (
-      <div class="dropdown">
+      <div className="dropdown">
         <button
-          class="btn btn-secondary dropdown-toggle"
+          className="btn btn-secondary dropdown-toggle"
           type="button"
           id="dropdownMenu2"
           data-toggle="dropdown"
@@ -15,10 +15,10 @@ export class Overflow extends MMLDataTag {
         >
           ...
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
           {this.childrenToReact(rc)}
         </div>
       </div>
-    );
+    )
   }
 }

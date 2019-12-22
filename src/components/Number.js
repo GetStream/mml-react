@@ -1,27 +1,27 @@
-import React, { useContext } from "react";
-import { MMLContext } from "../";
-import { useMML } from "./MML";
+import React, { useContext } from 'react'
+import { MMLContext } from '../'
+import { useMML } from './MML'
 
 export function Number({ attributes, ...props }) {
-  const mmlContext = useContext(MMLContext);
-  const [state, setState] = useMML();
+  const mmlContext = useContext(MMLContext)
+  const [state, setState] = useMML()
 
-  console.log("Number attributes", attributes, state);
+  console.log('Number attributes', attributes, state)
 
   function changeScore(delta) {
-    const newState = { ...state };
-    const currentCount = newState[attributes.name] || 0;
-    newState[attributes.name] = currentCount + delta;
-    setState(newState);
+    const newState = { ...state }
+    const currentCount = newState[attributes.name] || 0
+    newState[attributes.name] = currentCount + delta
+    setState(newState)
   }
 
-  const count = state[attributes.name];
+  const count = state[attributes.name]
 
   return (
     <div className="mml-number">
       <span
         onClick={() => {
-          changeScore(-1);
+          changeScore(-1)
         }}
       >
         -
@@ -29,11 +29,11 @@ export function Number({ attributes, ...props }) {
       {count}
       <span
         onClick={() => {
-          changeScore(+1);
+          changeScore(+1)
         }}
       >
         +
       </span>
     </div>
-  );
+  )
 }

@@ -5,5 +5,5 @@ window.matchMedia =
       matches: false,
       addListener: function() {},
       removeListener: function() {}
-    };
-  };
+    }
+  }

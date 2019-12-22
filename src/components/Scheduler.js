@@ -1,71 +1,71 @@
-import React from "react";
+import React from 'react'
 
-import DatePicker from "react-datepicker";
-import IcalExpander from "ical-expander";
+import DatePicker from 'react-datepicker'
+import IcalExpander from 'ical-expander'
 
 export class Scheduler extends React.Component {
   // TODO: document props
   constructor(props) {
-    super(props);
-    this.state = { loading: true, error: "" };
+    super(props)
+    this.state = { loading: true, error: '' }
   }
 
   setupIcalFilter = async (ical_url, duration) => {
-    let icalExpander = null;
+    let icalExpander = null
 
     if (!ical_url) {
-      this.setState({ loading: false });
+      this.setState({ loading: false })
     } else {
-      this.setState({ loading: true });
+      this.setState({ loading: true })
       const response = await fetch(ical_url, {
-        method: "GET",
-        redirect: "follow"
-      });
-      const bodyText = await response.text();
+        method: 'GET',
+        redirect: 'follow'
+      })
+      const bodyText = await response.text()
       if (response.ok) {
-        const options = { ics: bodyText, maxIterations: 10 };
-        icalExpander = new IcalExpander(options);
-        console.log("all events", icalExpander.all());
+        const options = { ics: bodyText, maxIterations: 10 }
+        icalExpander = new IcalExpander(options)
+        console.log('all events', icalExpander.all())
       } else {
-        this.setState({ error: "failed to load availability" });
+        this.setState({ error: 'failed to load availability' })
       }
-      this.setState({ loading: false });
+      this.setState({ loading: false })
     }
 
     function icalFilter(start) {
       if (icalExpander) {
-        const stop = new Date(start.getTime() + duration * 60000);
-        const events = icalExpander.between(start, stop);
+        const stop = new Date(start.getTime() + duration * 60000)
+        const events = icalExpander.between(start, stop)
 
-        console.log("events", start, events);
+        console.log('events', start, events)
 
-        const booked = events && events.length >= 1;
-        return !booked;
+        const booked = events && events.length >= 1
+        return !booked
       } else {
-        return true;
+        return true
       }
     }
-    this.icalFilter = icalFilter;
-  };
+    this.icalFilter = icalFilter
+  }
 
   componentDidMount() {
     // runs in the background...
     const duration = this.props.duration
       ? 1 * parseInt(this.props.duration, 10)
-      : 30;
-    this.setupIcalFilter(this.props.ical_availability, duration);
+      : 30
+    this.setupIcalFilter(this.props.ical_availability, duration)
   }
 
   render() {
-    const dateOnly = !!this.props.full_day;
-    const interval = this.props.interval ? 1 * this.props.interval : 30;
-    const showTime = !dateOnly;
-    const format = showTime ? "MMMM d, yyyy h:mm aa" : "h:mm aa";
+    const dateOnly = !!this.props.full_day
+    const interval = this.props.interval ? 1 * this.props.interval : 30
+    const showTime = !dateOnly
+    const format = showTime ? 'MMMM d, yyyy h:mm aa' : 'h:mm aa'
 
     if (this.state.error) {
-      <div className="mml-scheduler">
+      ;<div className="mml-scheduler">
         Failed to load availability, error: {this.state.error}
-      </div>;
+      </div>
     }
 
     return (
@@ -84,6 +84,6 @@ export class Scheduler extends React.Component {
           />
         )}
       </div>
-    );
+    )
   }
 }

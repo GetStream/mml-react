@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import Slider from "react-slick";
+import Slider from 'react-slick'
 
 export function Carousel({ children, attributes, ...props }) {
   const settings = {
@@ -9,7 +9,7 @@ export function Carousel({ children, attributes, ...props }) {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3
-  };
+  }
 
   return (
     <div className="mml-carousel">
@@ -17,5 +17,5 @@ export function Carousel({ children, attributes, ...props }) {
         {children}
       </Slider>
     </div>
-  );
+  )
 }
