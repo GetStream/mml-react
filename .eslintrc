@@ -9,7 +9,8 @@
     "es6": true
   },
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "parserOptions": {
     "sourceType": "module"
@@ -19,6 +20,9 @@
     "space-before-function-paren": 0,
 
     // allow specifying true explicitly for boolean props
-    "react/jsx-boolean-value": 0
+    "react/jsx-boolean-value": 0,
+
+        "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

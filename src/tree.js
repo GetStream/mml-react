@@ -108,7 +108,6 @@ export class Tree {
   toReact(rc) {
     const reactChildren = []
     for (const c of this.children) {
-      console.log(c.tagName)
       const converter = this.converterConfig[c.tagName]
       let reactNode
       if (converter) {
