@@ -7,6 +7,12 @@ import { Error as ErrorComponent } from "./Error";
 import { Success as SuccessComponent } from "./Success";
 import { MMLContext } from "../";
 
+export function useMML() {
+  const [state, setState] = useState({});
+
+  return [state, setState];
+}
+
 export function MML({
   source,
   converterConfig,
@@ -15,7 +21,7 @@ export function MML({
   Success = SuccessComponent,
   ...props
 }) {
-  const [state, setState] = useState({});
+  const [state, setState] = useMML();
 
   function computeTreeState(source, converterConfig) {
     const tree = Parse(source);
@@ -27,6 +33,7 @@ export function MML({
     try {
       // get initial state for all input elements in MML
       const treeState = tree.initialState();
+      console.log("treeState", treeState);
       initialState = {
         ...treeState,
         error: "",
@@ -42,7 +49,8 @@ export function MML({
         success: ""
       };
     }
-    setState(initialState);
+    console.log("writing state", { ...state, ...initialState });
+    setState({ ...state, ...initialState });
     return tree;
   }
   // compute the tree, changes when the source changes
@@ -60,13 +68,15 @@ export function MML({
     });
     data.push(...pairs);
 
-    setState({ loading: true, error: "", success: "" });
+    console.log("submitting state", state);
+
+    setState({ ...state, loading: true, error: "", success: "" });
     try {
       await props.onAction(data);
       // TODO: always merge existing state...
-      setState({ loading: false, error: "", success: "submitted" });
+      setState({ ...state, loading: false, error: "", success: "submitted" });
     } catch (e) {
-      setState({ loading: false, error: "something is broken" });
+      setState({ ...state, loading: false, error: "something is broken" });
     }
   }
 
@@ -75,13 +85,13 @@ export function MML({
       // this is the datepicker...
       const data = {};
       data[attr.name] = selectedDate;
-      setState(data);
+      setState(...state, data);
     } else if (attr.url && attr.url.length) {
       window.location.href = sanitizeUrl(attr.url);
     } else {
       const data = {};
       data[attr.name] = attr.value || event.target.value;
-      setState(data);
+      setState(...state, data);
     }
   }
 
