@@ -14,13 +14,13 @@
 - styleguidist for all react tags (done)
 - move all tags into shared files (done)
 - Document how to create a new tag (done)
+- Write Docs in stream CMS
 - consider renaming column tag...
 - styleguidist publish flow
 - implement hard failure on invalid MML
 - Review MML syntax after design feedback is done
 - clean Git history
 - tests & coverage reporting
-- Write Docs
 - CSS for all components
 - Scheduler Component
 
