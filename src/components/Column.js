@@ -1,18 +1,35 @@
-import React, { useContext } from 'react'
-import { MMLContext } from './context'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export function Column({ children, attributes, ...props }) {
-  const mmlContext = useContext(MMLContext)
-
-  const width = attributes.width ? attributes.width : 12
-  const offset = attributes.offset ? attributes.offset : 0
+/**
+ * A table Column
+ * TODO: Consider renaming this element
+ */
+export function Column({
+  children,
+  width = 12,
+  offset = 0,
+  align = 'left',
+  ...props
+}) {
   let classNames = `mml-col-${width}`
   if (offset) {
     classNames = classNames + ` mml-offset-${offset}`
   }
 
-  const align = attributes.align ? attributes.align : 'left'
   classNames = classNames + ` mml-align-${align}`
 
   return <div className={classNames}>{children}</div>
+}
+
+Column.propTypes = {
+  /** The column children can be anything */
+  children: PropTypes.node,
+  /** The width of the column */
+  width: PropTypes.number,
+  /** The offset for the column */
+  offset: PropTypes.number,
+
+  /** Align either left or right */
+  align: PropTypes.oneOf(['left', 'center', 'right'])
 }

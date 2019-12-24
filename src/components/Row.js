@@ -1,9 +1,16 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export function Row({ children, attributes, ...props }) {
-  return (
-    <div className="mml-row" {...attributes}>
-      {children}
-    </div>
-  )
+import { Column } from './Column'
+
+export function Row({ children, ...props }) {
+  return <div className="mml-row">{children}</div>
+}
+
+Row.propTypes = {
+  /** The children of a row must be columns */
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(Column),
+    PropTypes.objectOf(Column)
+  ])
 }

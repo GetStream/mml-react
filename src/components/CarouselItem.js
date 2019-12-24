@@ -1,10 +1,15 @@
-import React, { useContext } from 'react'
-import { MMLContext } from './context'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export function CarouselItem({ children, attributes, ...props }) {
-  return (
-    <div className="mml-carousel-item" {...attributes}>
-      {children}
-    </div>
-  )
+/**
+ * The only children of the Carousel are the carousel item.
+ * A carousel item can contain any type of nodes, such as buttons, images etc.
+ */
+export function CarouselItem({ children, ...props }) {
+  return <div className="mml-carousel-item">{children}</div>
+}
+
+CarouselItem.propTypes = {
+  /** The children of this carousel item */
+  children: PropTypes.node
 }

@@ -11,45 +11,29 @@ export class Tree {
     this.converterConfig = converterConfig || ReactConverterConfig
   }
 
-  // TODO: Merge with toReact
-  childrenToReact(tag) {
-    const reactChildren = []
-    for (const c of tag.children) {
-      const converter = this.converterConfig[c.tagName]
-      let reactNode
-      if (converter) {
-        reactNode = converter(c)
-      } else {
+  /**
+   * Recursively convert nodes to react
+   */
+  toReact(parentTag) {
+    const reactNodes = []
+
+    const childTags = parentTag.children || []
+    for (const childTag of childTags) {
+      const converter = this.converterConfig[childTag.tagName]
+      if (!converter) {
         throw Error(
           `Converter not found for tag ${
-            c.tagName
+            childTag.tagName
           }, Available converters are ${Object.keys(this.converterConfig)}`
         )
       }
-      reactChildren.push(reactNode)
+      const children = this.toReact(childTag)
+      const reactNode = converter(childTag, children)
+
+      reactNodes.push(reactNode)
     }
 
-    return reactChildren
-  }
-
-  toReact(rc) {
-    const reactChildren = []
-    for (const c of this.children) {
-      const converter = this.converterConfig[c.tagName]
-      let reactNode
-      if (converter) {
-        reactNode = converter(c)
-      } else {
-        throw Error(
-          `Converter not found for tag ${
-            c.tagName
-          }, Available converters are ${Object.keys(this.converterConfig)}`
-        )
-      }
-      reactChildren.push(reactNode)
-    }
-
-    return reactChildren
+    return reactNodes
   }
 
   hasData() {

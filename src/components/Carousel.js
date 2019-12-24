@@ -1,8 +1,14 @@
 import React from 'react'
-
 import Slider from 'react-slick'
+import PropTypes from 'prop-types'
 
-export function Carousel({ children, attributes, ...props }) {
+import { CarouselItem } from './CarouselItem'
+
+/**
+ * A carousel is a nice mobile friendly way of letting a user select
+ * something
+ */
+export function Carousel({ children, ...props }) {
   const settings = {
     dots: true,
     infinite: false,
@@ -13,9 +19,15 @@ export function Carousel({ children, attributes, ...props }) {
 
   return (
     <div className="mml-carousel">
-      <Slider {...settings} {...attributes}>
-        {children}
-      </Slider>
+      <Slider {...settings}>{children}</Slider>
     </div>
   )
+}
+
+Carousel.propTypes = {
+  /** A list of carousel items */
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(CarouselItem),
+    PropTypes.objectOf(CarouselItem)
+  ])
 }

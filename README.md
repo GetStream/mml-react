@@ -64,10 +64,11 @@ The tree knows:
 - make mml in stream chat react a singleton type of pattern (done)
 - refactor how state is handled for date picker element and number element (done)
 - move the converterConfig for react into it's own file (done)
-- prop types for all react tags
-- cleanup all linting errors
+- prop types for all react tags (done)
+- cleanup all linting errors (done)
+- styleguidist for all react tags (done)
+- consider renaming column tag...
 - move all tags into shared files
-- styleguidist for all react tags
 - styleguidist publish flow
 - decide what we do about invalid MML (always fail if it's invalid)
 - disable components that we don't need

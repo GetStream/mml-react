@@ -3,7 +3,7 @@ import React from 'react'
 import { Input } from './Input'
 import { Button } from './Button'
 import { ButtonList } from './ButtonList'
-import { Calendar } from './Calendar'
+import { AddToCalendar } from './AddToCalendar'
 import { Scheduler } from './Scheduler'
 import { Text } from './Text'
 import { MD } from './MD'
@@ -15,27 +15,28 @@ import { Carousel } from './Carousel'
 import { CarouselItem } from './CarouselItem'
 import { Number } from './Number'
 
+/**
+ * The converterConfig maps MML tags to react nodes
+ * Every converter is passed the MML tag as well as the children (as React nodes)
+ */
 export const converterConfig = {
   button: tag => {
     return <Button text={tag.getText()} {...tag.node.attributes} />
   },
-  buttonlist: tag => {
-    const children = this.childrenToReact(tag)
+  buttonlist: (tag, children) => {
     return <ButtonList {...tag.node.attributes}>{children}</ButtonList>
   },
   input: tag => {
-    return <Input attributes={tag.node.attributes} />
+    return <Input {...tag.node.attributes} />
   },
   add_to_calendar: tag => {
-    return <Calendar attributes={tag.node.attributes} />
+    return <AddToCalendar {...tag.node.attributes} />
   },
-  column: tag => {
-    const children = this.childrenToReact(tag)
-    return <Column attributes={tag.node.attributes} children={children} />
+  column: (tag, children) => {
+    return <Column {...tag.node.attributes}>{children}</Column>
   },
-  row: tag => {
-    const children = this.childrenToReact(tag)
-    return <Row attributes={tag.node.attributes} children={children} />
+  row: (tag, children) => {
+    return <Row {...tag.node.attributes}>{children}</Row>
   },
   icon: tag => {
     return <Icon {...tag.node.attributes} />
@@ -44,10 +45,10 @@ export const converterConfig = {
     return <Image {...tag.node.attributes} />
   },
   md: tag => {
-    return <MD text={tag.getText()} attributes={tag.node.attributes} />
+    return <MD text={tag.getText()} {...tag.node.attributes} />
   },
   text: tag => {
-    return <Text text={tag.getText()} attributes={tag.node.attributes} />
+    return <Text text={tag.getText()} {...tag.node.attributes} />
   },
   scheduler: tag => {
     return (
@@ -59,15 +60,13 @@ export const converterConfig = {
       />
     )
   },
-  carousel: tag => {
-    const children = this.childrenToReact(tag)
-    return <Carousel children={children} />
+  carousel: (tag, children) => {
+    return <Carousel>{children}</Carousel>
   },
-  item: tag => {
-    const children = this.childrenToReact(tag)
-    return <CarouselItem children={children} />
+  item: (tag, children) => {
+    return <CarouselItem>{children}</CarouselItem>
   },
   number: tag => {
-    return <Number attributes={tag.node.attributes} />
+    return <Number {...tag.node.attributes} />
   }
 }
