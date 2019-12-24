@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import { MMLContext } from './context'
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import anchorme from 'anchorme'
+import PropTypes from 'prop-types'
 
 function truncate(str, length, ending) {
   if (length == null) {
@@ -17,7 +17,10 @@ function truncate(str, length, ending) {
   }
 }
 
-export function MD({ text, attributes, ...props }) {
+/**
+ * MD renders a given text as markdown
+ */
+export function MD({ text, ...props }) {
   const allowed = [
     'html',
     'root',
@@ -48,12 +51,10 @@ export function MD({ text, attributes, ...props }) {
     text = text.replace(urlInfo.raw, mkdown)
   }
   let newText = text
-  const mentioned_users = []
-  // TODO: support user mentions
-
-  if (mentioned_users && mentioned_users.length) {
-    for (let i = 0; i < mentioned_users.length; i++) {
-      const username = mentioned_users[i].name || mentioned_users[i].id
+  const mentionedUsers = []
+  if (mentionedUsers && mentionedUsers.length) {
+    for (let i = 0; i < mentionedUsers.length; i++) {
+      const username = mentionedUsers[i].name || mentionedUsers[i].id
       const mkdown = `**@${username}**`
       const re = new RegExp(`@${username}`, 'g')
       newText = newText.replace(re, mkdown)
@@ -70,4 +71,9 @@ export function MD({ text, attributes, ...props }) {
       skipHtml={false}
     />
   )
+}
+
+MD.propTypes = {
+  /** The markdown text */
+  text: PropTypes.string.isRequired
 }

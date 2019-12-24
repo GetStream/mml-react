@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
 import { MMLContext } from './context'
+import PropTypes from 'prop-types'
 
-export function Number({ attributes, ...props }) {
+/**
+ * Mobile friendly number input
+ */
+export function Number({ name, ...props }) {
   const mmlContext = useContext(MMLContext)
 
-  const name = attributes.name
   const count = mmlContext[name]
 
   return (
@@ -26,4 +29,9 @@ export function Number({ attributes, ...props }) {
       </span>
     </div>
   )
+}
+
+Number.propTypes = {
+  /** The name of the button */
+  name: PropTypes.string.isRequired
 }

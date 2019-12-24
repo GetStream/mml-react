@@ -1,6 +1,14 @@
-import React, { useContext } from 'react'
-import { MMLContext } from './context'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export function Text({ text, attributes, ...props }) {
-  return <p {...attributes}>{text}</p>
+/**
+ * Simple paragraph text element
+ */
+export function Text({ text, ...props }) {
+  return <p className="mml-text">{text}</p>
+}
+
+Text.propTypes = {
+  /** The text to render */
+  text: PropTypes.string.isRequired
 }

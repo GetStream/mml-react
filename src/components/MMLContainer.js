@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 
 import { Loader as LoaderComponent } from './Loader'
 import { Error as ErrorComponent } from './Error'
