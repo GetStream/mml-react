@@ -17,12 +17,17 @@
 - consider renaming column tag...
 - styleguidist publish flow
 - implement hard failure on invalid MML
-- CSS for the components that we do need
-- Scheduler Component
 - Review MML syntax after design feedback is done
 - clean Git history
 - tests & coverage reporting
 - Write Docs
+- CSS for all components
+- Scheduler Component
+
+## Design:
+
+- Add to Calendar element is missing
+- Loading, Success and Error states
 
 ## Install
 

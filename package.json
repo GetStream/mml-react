@@ -20,7 +20,9 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "prettier": "npx prettier \"src/**/*.js\" --write",
-    "lint": "npx eslint src/**/*.js --fix"
+    "lint": "npx eslint src/**/*.js --fix",
+    "docs": "npx styleguidist build",
+    "docs-server": "npx styleguidist server"
   },
   "husky": {
     "hooks": {
