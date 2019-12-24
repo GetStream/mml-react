@@ -1,19 +1,4 @@
-import React from 'react'
-import { ButtonInner } from './tags/data/button'
-
-import { Input } from './components/Input'
-import { ButtonList } from './components/ButtonList'
-import { Calendar } from './components/Calendar'
-import { Scheduler } from './components/Scheduler'
-import { Text } from './components/Text'
-import { MD } from './components/MD'
-import { Row } from './components/Row'
-import { Column } from './components/Column'
-import { Image } from './components/Image'
-import { Icon } from './components/Icon'
-import { Carousel } from './components/Carousel'
-import { CarouselItem } from './components/CarouselItem'
-import { Number } from './components/Number'
+import { converterConfig as ReactConverterConfig } from './components/converterConfig'
 
 /**
  * Tree - The tree object for MML tags
@@ -23,69 +8,7 @@ export class Tree {
     this.node = node
     this.name = node.attributes.name
     this.children = children
-    this.converterConfig = {
-      button: tag => {
-        return (
-          <ButtonInner text={tag.getText()} attributes={tag.node.attributes} />
-        )
-      },
-      buttonlist: tag => {
-        const children = this.childrenToReact(tag)
-        return (
-          <ButtonList attributes={tag.node.attributes} children={children} />
-        )
-      },
-      input: tag => {
-        return <Input attributes={tag.node.attributes} />
-      },
-      add_to_calendar: tag => {
-        return <Calendar attributes={tag.node.attributes} />
-      },
-      column: tag => {
-        const children = this.childrenToReact(tag)
-        return <Column attributes={tag.node.attributes} children={children} />
-      },
-      row: tag => {
-        const children = this.childrenToReact(tag)
-        return <Row attributes={tag.node.attributes} children={children} />
-      },
-      icon: tag => {
-        return <Icon attributes={tag.node.attributes} />
-      },
-      image: tag => {
-        return <Image attributes={tag.node.attributes} />
-      },
-      md: tag => {
-        return <MD text={tag.getText()} attributes={tag.node.attributes} />
-      },
-      text: tag => {
-        return <Text text={tag.getText()} attributes={tag.node.attributes} />
-      },
-      scheduler: tag => {
-        const initialDate = new Date(tag.attr.value)
-        return (
-          <Scheduler
-            selected={rc.state[this.attr.name]}
-            interval={this.attr.interval}
-            duration={this.attr.duration}
-            full_day={this.attr.full_day}
-            ical_availability={this.attr.ical_availability}
-            onChange={rc.handleAction.bind(rc, this.attr)}
-          />
-        )
-      },
-      carousel: tag => {
-        const children = this.childrenToReact(tag)
-        return <Carousel children={children} />
-      },
-      item: tag => {
-        const children = this.childrenToReact(tag)
-        return <CarouselItem children={children} />
-      },
-      number: tag => {
-        return <Number attributes={tag.node.attributes} />
-      }
-    }
+    this.converterConfig = converterConfig || ReactConverterConfig
   }
 
   // TODO: Merge with toReact
@@ -97,7 +20,11 @@ export class Tree {
       if (converter) {
         reactNode = converter(c)
       } else {
-        reactNode = c.toReact(rc)
+        throw Error(
+          `Converter not found for tag ${
+            c.tagName
+          }, Available converters are ${Object.keys(this.converterConfig)}`
+        )
       }
       reactChildren.push(reactNode)
     }
@@ -113,7 +40,11 @@ export class Tree {
       if (converter) {
         reactNode = converter(c)
       } else {
-        reactNode = c.toReact(rc)
+        throw Error(
+          `Converter not found for tag ${
+            c.tagName
+          }, Available converters are ${Object.keys(this.converterConfig)}`
+        )
       }
       reactChildren.push(reactNode)
     }

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { MMLContext } from '../'
+import { MMLContext } from './context'
 import AddToCalendarComponent from 'react-add-to-calendar'
 
 export function Calendar({ attributes, ...props }) {

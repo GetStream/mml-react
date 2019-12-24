@@ -10,14 +10,14 @@ export class Scheduler extends React.Component {
     this.state = { loading: true, error: '' }
   }
 
-  setupIcalFilter = async (ical_url, duration) => {
+  setupIcalFilter = async (icalURL, duration) => {
     let icalExpander = null
 
-    if (!ical_url) {
+    if (!icalURL) {
       this.setState({ loading: false })
     } else {
       this.setState({ loading: true })
-      const response = await fetch(ical_url, {
+      const response = await fetch(icalURL, {
         method: 'GET',
         redirect: 'follow'
       })
@@ -63,9 +63,11 @@ export class Scheduler extends React.Component {
     const format = showTime ? 'MMMM d, yyyy h:mm aa' : 'h:mm aa'
 
     if (this.state.error) {
-      ;<div className="mml-scheduler">
-        Failed to load availability, error: {this.state.error}
-      </div>
+      return (
+        <div className="mml-scheduler">
+          Failed to load availability, error: {this.state.error}
+        </div>
+      )
     }
 
     return (

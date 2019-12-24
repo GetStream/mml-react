@@ -1,6 +1,11 @@
-import React, { useContext } from 'react'
-import { MMLContext } from '../'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export function Image({ attributes, ...props }) {
-  return <img className="mml-image" {...attributes} />
+export function Image({ src, ...props }) {
+  return <img className="mml-image" src={src} />
+}
+
+Image.propTypes = {
+  /** The url to load the image from */
+  src: PropTypes.string.isRequired
 }

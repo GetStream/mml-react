@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { MMLContext } from '../'
+import { MMLContext } from './context'
 
 export function Number({ attributes, ...props }) {
   const mmlContext = useContext(MMLContext)

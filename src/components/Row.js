@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { MMLContext } from '../'
 
 export function Row({ children, attributes, ...props }) {
   return (

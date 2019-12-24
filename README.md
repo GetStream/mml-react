@@ -62,19 +62,14 @@ The tree knows:
 - use a context to share stuff to lower level components (done)
 - toReact should be defined at the tree level and allow you to overwrite the mappings (done)
 - make mml in stream chat react a singleton type of pattern (done)
-- refactor how state is handled for date picker element and number element (in progress)
-- move the converterConfig for react into it's own file
-- move all tags into it's own file
-- styleguidist for all react tags
+- refactor how state is handled for date picker element and number element (done)
+- move the converterConfig for react into it's own file (done)
 - prop types for all react tags
 - cleanup all linting errors
-- Fix CSS of stream-chat-react
-- validation:
-  -- XSD seems like the nicest way to validate the MML (but libs dont support it well)
-  -- some elements are only allowed as children of other elements
-  -- properties need to be validated
-  -- some elements require certain children elements
-- decide what we do about invalid MML (raise an error, show that the message can't be rendered)
+- move all tags into shared files
+- styleguidist for all react tags
+- styleguidist publish flow
+- decide what we do about invalid MML (always fail if it's invalid)
 - disable components that we don't need
 - CSS for the components that we do need
 - ICAL integration
