@@ -1,4 +1,3 @@
-import React from 'react'
 import parseXml from '@rgrove/parse-xml'
 import { getMMLTags } from './tags'
 import { Tree } from './tree'
@@ -78,10 +77,10 @@ export function XMLtoMMLTree(XMLNodes) {
         }
       }
 
-      const tagClass = tags[tagName]
+      const TagClass = tags[tagName]
 
-      if (tagClass) {
-        const tag = new tagClass(tagName, n, children)
+      if (TagClass) {
+        const tag = new TagClass(tagName, n, children)
         MMLNodes.push(tag)
       } else {
         console.log('unrecognized element', tagName, Object.keys(tags))

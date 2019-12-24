@@ -24,7 +24,9 @@ export class MMLTag {
     return {}
   }
 
+  // This moved to proptypes at the react level
   validate() {
+    /*
     const errors = []
     if (this.constructor.validChildren !== 'all' && this.children) {
       for (const c of this.children) {
@@ -49,19 +51,8 @@ export class MMLTag {
       }
     }
 
-    return errors
+    return errors */
   }
-
-  childrenToReact(rc) {
-    const reactChildren = []
-    for (const c of this.children) {
-      reactChildren.push(c.toReact(rc))
-    }
-    return reactChildren
-  }
-
-  // return a react node for this mml tag
-  toReact() {}
 }
 
 /**

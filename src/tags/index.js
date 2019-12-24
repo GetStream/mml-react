@@ -9,10 +9,7 @@ import {
 
 import { Carousel, Column, Item, Row } from './layout'
 
-import { Icon } from './icon'
-import { Image } from './image'
-import { MD } from './md'
-import { Text } from './text'
+import { Icon, Image, MD, Text } from './core'
 
 var tags = {
   add_to_calendar: AddToCalendar,

@@ -1,5 +1,29 @@
 # MML for React
 
+## TODO
+
+- fix stream-chat-react build issues (done)
+- functional components with hooks (done)
+- use a context to share stuff to lower level components (done)
+- toReact should be defined at the tree level and allow you to overwrite the mappings (done)
+- make mml in stream chat react a singleton type of pattern (done)
+- refactor how state is handled for date picker element and number element (done)
+- move the converterConfig for react into it's own file (done)
+- prop types for all react tags (done)
+- cleanup all linting errors (done)
+- styleguidist for all react tags (done)
+- move all tags into shared files (done)
+- Document how to create a new tag (done)
+- consider renaming column tag...
+- styleguidist publish flow
+- implement hard failure on invalid MML
+- CSS for the components that we do need
+- Scheduler Component
+- Review MML syntax after design feedback is done
+- clean Git history
+- tests & coverage reporting
+- Write Docs
+
 ## Install
 
 ```bash
@@ -55,27 +79,72 @@ The tree knows:
 - Tag: Intermediate class used for validating MML tags
 - ConverterConfig: Mapping from MML tag to React Component (React Native coming later)
 
-## TODO
+## How to create a new tag
 
-- fix stream-chat-react build issues (done)
-- functional components with hooks (done)
-- use a context to share stuff to lower level components (done)
-- toReact should be defined at the tree level and allow you to overwrite the mappings (done)
-- make mml in stream chat react a singleton type of pattern (done)
-- refactor how state is handled for date picker element and number element (done)
-- move the converterConfig for react into it's own file (done)
-- prop types for all react tags (done)
-- cleanup all linting errors (done)
-- styleguidist for all react tags (done)
-- consider renaming column tag...
-- move all tags into shared files
-- styleguidist publish flow
-- decide what we do about invalid MML (always fail if it's invalid)
-- disable components that we don't need
-- CSS for the components that we do need
-- ICAL integration
-- Review MML syntax after design feedback is done
-- Document how to create a new tag
-- clean Git history
-- tests & coverage reporting
-- Write Docs
+As an example let's say you want to create a new tag called `color_picker`.
+Here's how you would go about implementing it.
+
+### Step 1 - Tag
+
+Add something like this to src/tags/data.js
+
+```
+export class ColorPicker extends MMLDataTag {
+
+  initialState() {
+    const data = {}
+    data[this.node.attributes.name] = this.node.attributes.value
+    return data
+  }
+}
+```
+
+### Step 2 - Tag parser
+
+Open `src/tags/index.js` and add this to tags variable:
+
+tags = {
+...
+color_picker: ColorPicker,
+...
+}
+
+### Step 3 - React node
+
+In `src/components` create a file called ColorPicker.js and do something along these lines:
+
+```
+export function ColorPicker({ name, ...props }) {
+  const mmlContext = useContext(MMLContext)
+
+  const value = mmlContext[name]
+
+  return (
+    <input
+      value={value}
+      onChange={(event) => mmlContext.setValue(name, event.target.value)}
+    />
+  )
+}
+```
+
+Styleguidist is the easiest way to test your react component in isolation.
+The MMLContainer provides the right context so you can test it like:
+
+```
+<MMLContainer>
+  <ColorPicker />
+</MMLContainer>
+```
+
+### Step 4 - Converter
+
+Open `src/components/converterConfig.js` and add something like this:
+
+```
+color_picker: tag => {
+  return <ColorPicker {...tag.node.attributes} />
+},
+```
+
+And that's it

@@ -15,6 +15,7 @@ export function useMML() {
 
 export function MML({
   source,
+  submit,
   converterConfig,
   Loader = LoaderComponent,
   Error = ErrorComponent,
@@ -64,6 +65,16 @@ export function MML({
 }
 
 MML.propTypes = {
-  source: PropTypes.string,
-  action: PropTypes.func
+  /** The MML source to render */
+  source: PropTypes.string.isRequired,
+  /** The submit callback whenever a form is submitted */
+  submit: PropTypes.func,
+  /** The Loader component */
+  Loader: PropTypes.node,
+  /** The error component */
+  Error: PropTypes.node,
+  /** The success message component */
+  Success: PropTypes.node,
+  /** The convert config allows you to overwrite the MML to react conversion */
+  converterConfig: PropTypes.object
 }
