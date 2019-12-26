@@ -10,5 +10,5 @@ export function Error({ error = '', ...props }) {
 
 Error.propTypes = {
   /** The error message */
-  error: PropTypes.string.isRequired
+  error: PropTypes.string
 }

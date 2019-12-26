@@ -23,7 +23,7 @@ export const converterConfig = {
   button: tag => {
     return <Button text={tag.getText()} {...tag.node.attributes} />
   },
-  buttonlist: (tag, children) => {
+  button_list: (tag, children) => {
     return <ButtonList {...tag.node.attributes}>{children}</ButtonList>
   },
   input: tag => {

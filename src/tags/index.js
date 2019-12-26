@@ -13,7 +13,7 @@ import { Icon, Image, MD, Text } from './core'
 
 var tags = {
   add_to_calendar: AddToCalendar,
-  buttonlist: ButtonList,
+  button_list: ButtonList,
   button: Button,
   input: Input,
   scheduler: Scheduler,

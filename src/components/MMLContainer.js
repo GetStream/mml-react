@@ -4,17 +4,12 @@ import { Loader as LoaderComponent } from './Loader'
 import { Error as ErrorComponent } from './Error'
 import { Success as SuccessComponent } from './Success'
 import { MMLContext } from './context'
-
-export function useMML() {
-  const [state, setState] = useState({})
-
-  return [state, setState]
-}
+import PropTypes from 'prop-types'
 
 export function MMLContainer({
-  source,
-  converterConfig,
   children,
+  onSubmit,
+  data,
   hasData = false,
   error = null,
   Loader = LoaderComponent,
@@ -22,7 +17,7 @@ export function MMLContainer({
   Success = SuccessComponent,
   ...props
 }) {
-  const [state, setState] = useMML()
+  const [state, setState] = useState(data)
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -35,8 +30,7 @@ export function MMLContainer({
 
     setState({ ...state, loading: true, error: '', success: '' })
     try {
-      await props.onAction(data)
-      // TODO: always merge existing state...
+      await onSubmit(data)
       setState({
         ...state,
         loading: false,
@@ -89,4 +83,22 @@ export function MMLContainer({
       </MMLContext.Provider>
     )
   }
+}
+
+MMLContainer.propTypes = {
+  /** The submit callback whenever a form is submitted, submit is expected to return a promise */
+  onSubmit: PropTypes.func,
+  /** Render an error message if needed */
+  error: PropTypes.string,
+  /** If the child nodes contain data input elements */
+  hasData: PropTypes.bool,
+  /** The child nodes */
+  children: PropTypes.node,
+
+  /** The Loader component */
+  Loader: PropTypes.element,
+  /** The error component */
+  Error: PropTypes.element,
+  /** The success message component */
+  Success: PropTypes.element
 }

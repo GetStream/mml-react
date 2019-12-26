@@ -9,6 +9,19 @@ export var examples = [
 </mml>`
   },
   {
+    name: 'Out of stock',
+    description:
+      "Sorry we're currently out of fries, what would you like as a side?",
+    mml: `<mml name="food_order">
+  Sorry we're currently out of fries, what would you like as a side?
+  <button_list>
+    <button name="side" value="salad">Salad</button>
+    <button name="side" value="potatoes">Baked Potatoes</button>
+    <button name="side" value="fried_pickles">Fried Pickles</button>
+  </button_list>
+</mml>`
+  },
+  {
     name: 'Simple Counts',
     description: 'Counts with a mobile friendly input',
     mml: `<mml name="counts">
@@ -53,12 +66,12 @@ export var examples = [
     description: 'A simple gig scheduling workflow for referals',
     mml: `<mml name="gigs">
 <text>Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?</text>
-<buttonlist name="times">
+<button_list name="times">
   <button value="9:30">9:30</button>
   <button value="10:00">10:00</button>
   <button value="11:30">11:30</button>
   <button value="nope">Nope</button>
-</buttonlist>
+</button_list>
 </mml>`
   },
   {
@@ -68,6 +81,14 @@ export var examples = [
 	<text>When would you like to schedule your massage?</text>
 	<scheduler name="massage_appointment" duration="30" interval="30" />
   <button name="action" value="reserve">Reserve</button>
+</mml>`
+  },
+  {
+    name: 'Date Confirmation',
+    description: 'Add to calendar UI',
+    mml: `<mml>
+  <text>Your massage appointment has been confirmed!</text>
+  <add_to_calendar title="Massage with Jessica" start="2019-12-24T14:42:54.148Z" end="2019-12-24T15:42:54.148Z" />
 </mml>`
   },
   {

@@ -15,15 +15,23 @@
 - move all tags into shared files (done)
 - Document how to create a new tag (done)
 - styleguidist publish flow (done)
-
-- Write Docs in stream CMS
-- consider renaming column tag...
+- convert date string into date object for add to calendar (done)
+- Refine examples for docs and example project (done)
+- Write Docs in stream CMS (done)
+- Add alt and title support to image tags (done)
+- Review the button tag (done)
+- Fix MML & MML Container state management (done)
+- ship a 0.1 release on NPM
+- ship stream-chat-react support for MML
+- figure out proptype weirdness (getting some validation errors on valid input)
+- scheduler component
 - implement hard failure on invalid MML
-- Review MML syntax after design feedback is done
-- clean Git history
-- tests & coverage reporting
-- CSS for all components
-- Scheduler Component
+
+* clean Git history
+* tests & coverage reporting
+* CSS for all components
+* consider renaming column tag...
+* document how to overwrite 1 specific component for MML
 
 ## Design:
 
@@ -63,6 +71,8 @@ We can't support every scenario though, if you need something more complex you c
 - `yarn lint` to run linting
 - `yarn prettier` to prettify things
 - `yarn test` to run tests
+
+[StyleGuidist docs](https://getstream.github.io/mml-react/) are available
 
 ## Understanding the Parser
 

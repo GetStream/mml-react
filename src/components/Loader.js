@@ -13,5 +13,5 @@ export function Loader({ loading = false, ...props }) {
 
 Loader.propTypes = {
   /** Loading boolean */
-  loading: PropTypes.boolean
+  loading: PropTypes.bool
 }
