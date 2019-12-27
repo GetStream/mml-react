@@ -66,11 +66,11 @@ export var examples = [
     description: 'A simple gig scheduling workflow for referals',
     mml: `<mml name="gigs">
 <text>Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?</text>
-<button_list name="times">
-  <button value="9:30">9:30</button>
-  <button value="10:00">10:00</button>
-  <button value="11:30">11:30</button>
-  <button value="nope">Nope</button>
+<button_list>
+  <button name="times" value="9:30">9:30</button>
+  <button name="times" value="10:00">10:00</button>
+  <button name="times" value="11:30">11:30</button>
+  <button name="times" value="nope">Nope</button>
 </button_list>
 </mml>`
   },

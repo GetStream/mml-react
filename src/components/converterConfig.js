@@ -21,38 +21,53 @@ import { Number } from './Number'
  */
 export const converterConfig = {
   button: tag => {
-    return <Button text={tag.getText()} {...tag.node.attributes} />
+    return (
+      <Button text={tag.getText()} {...tag.node.attributes} key={tag.key} />
+    )
   },
   button_list: (tag, children) => {
-    return <ButtonList {...tag.node.attributes}>{children}</ButtonList>
+    return (
+      <ButtonList key={tag.key} {...tag.node.attributes}>
+        {children}
+      </ButtonList>
+    )
   },
   input: tag => {
-    return <Input {...tag.node.attributes} />
+    return <Input key={tag.key} {...tag.node.attributes} />
   },
   add_to_calendar: tag => {
-    return <AddToCalendar {...tag.node.attributes} />
+    return <AddToCalendar key={tag.key} {...tag.node.attributes} />
   },
   column: (tag, children) => {
-    return <Column {...tag.node.attributes}>{children}</Column>
+    return (
+      <Column key={tag.key} {...tag.node.attributes}>
+        {children}
+      </Column>
+    )
   },
   row: (tag, children) => {
-    return <Row {...tag.node.attributes}>{children}</Row>
+    return (
+      <Row key={tag.key} {...tag.node.attributes}>
+        {children}
+      </Row>
+    )
   },
   icon: tag => {
-    return <Icon {...tag.node.attributes} />
+    return <Icon key={tag.key} {...tag.node.attributes} />
   },
   image: tag => {
-    return <Image {...tag.node.attributes} />
+    return <Image key={tag.key} {...tag.node.attributes} />
   },
   md: tag => {
-    return <MD text={tag.getText()} {...tag.node.attributes} />
+    return <MD key={tag.key} text={tag.getText()} {...tag.node.attributes} />
   },
   text: tag => {
-    return <Text text={tag.getText()} {...tag.node.attributes} />
+    return <Text key={tag.key} text={tag.getText()} {...tag.node.attributes} />
   },
   scheduler: tag => {
     return (
       <Scheduler
+        key={tag.key}
         interval={this.attr.interval}
         duration={this.attr.duration}
         full_day={this.attr.full_day}
@@ -61,12 +76,12 @@ export const converterConfig = {
     )
   },
   carousel: (tag, children) => {
-    return <Carousel>{children}</Carousel>
+    return <Carousel key={tag.key}>{children}</Carousel>
   },
   item: (tag, children) => {
-    return <CarouselItem>{children}</CarouselItem>
+    return <CarouselItem key={tag.key}>{children}</CarouselItem>
   },
   number: tag => {
-    return <Number {...tag.node.attributes} />
+    return <Number key={tag.key} {...tag.node.attributes} />
   }
 }

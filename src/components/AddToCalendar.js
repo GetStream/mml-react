@@ -42,9 +42,11 @@ AddToCalendar.propTypes = {
   /** The title for the calendar entry */
   title: PropTypes.string.isRequired,
   /** The start time for the calendar entry */
-  start: PropTypes.instanceOf(Date).isRequired,
+  start: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string])
+    .isRequired,
   /** The end time for the calendar entry */
-  end: PropTypes.instanceOf(Date).isRequired,
+  end: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string])
+    .isRequired,
   /** The optional location for the calendar entry */
   location: PropTypes.string,
   /** The optional description for the calendar entry */

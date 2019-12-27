@@ -21,7 +21,6 @@ export function MMLContainer({
 
   async function handleSubmit(event) {
     event.preventDefault()
-    console.log('submit', state)
     const data = []
     const pairs = Object.keys(state).map((key, index) => {
       return { name: key, value: state[key] }
@@ -96,9 +95,9 @@ MMLContainer.propTypes = {
   children: PropTypes.node,
 
   /** The Loader component */
-  Loader: PropTypes.element,
+  Loader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   /** The error component */
-  Error: PropTypes.element,
+  Error: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   /** The success message component */
-  Success: PropTypes.element
+  Success: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
 }

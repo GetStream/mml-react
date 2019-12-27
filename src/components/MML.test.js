@@ -38,7 +38,6 @@ test('simple input', () => {
   const nodes = SourceToXML(mml)
   const tree = XMLtoMMLTree(nodes)
   const state = tree.initialState()
-  console.log('state', state)
   expect(state).toEqual({ name: 'John' })
   const rTree = renderer.create(<MML source={mml} />).toJSON()
   expect(rTree).toMatchSnapshot()

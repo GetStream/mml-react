@@ -57,9 +57,9 @@ MML.propTypes = {
   /** The submit callback whenever a form is submitted */
   onSubmit: PropTypes.func,
   /** The Loader component */
-  Loader: PropTypes.node,
+  Loader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   /** The error component */
-  Error: PropTypes.node,
+  Error: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   /** The success message component */
-  Success: PropTypes.node
+  Success: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
 }

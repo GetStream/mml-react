@@ -25,7 +25,6 @@ export class Scheduler extends React.Component {
       if (response.ok) {
         const options = { ics: bodyText, maxIterations: 10 }
         icalExpander = new IcalExpander(options)
-        console.log('all events', icalExpander.all())
       } else {
         this.setState({ error: 'failed to load availability' })
       }
@@ -36,8 +35,6 @@ export class Scheduler extends React.Component {
       if (icalExpander) {
         const stop = new Date(start.getTime() + duration * 60000)
         const events = icalExpander.between(start, stop)
-
-        console.log('events', start, events)
 
         const booked = events && events.length >= 1
         return !booked

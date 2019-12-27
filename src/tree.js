@@ -18,7 +18,9 @@ export class Tree {
     const reactNodes = []
 
     const childTags = parentTag.children || []
+    let count = 0
     for (const childTag of childTags) {
+      count += 1
       const converter = this.converterConfig[childTag.tagName]
       if (!converter) {
         throw Error(
@@ -27,6 +29,7 @@ export class Tree {
           }, Available converters are ${Object.keys(this.converterConfig)}`
         )
       }
+      childTag.key = `tag-${childTag.tagName}-position-${count}`
       const children = this.toReact(childTag)
       const reactNode = converter(childTag, children)
 

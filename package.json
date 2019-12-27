@@ -30,12 +30,12 @@
     }
   },
   "dependencies": {
+    "@braintree/sanitize-url": "^4.0.0",
     "@rgrove/parse-xml": "^2.0.1",
     "ical-expander": "^2.1.0",
     "react-add-to-calendar": "^0.1.5",
     "react-markdown": "^4.2.2",
-    "react-slick": "^0.25.2",
-    "slick-carousel": "^1.8.1"
+    "react-slick": "^0.25.2"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",

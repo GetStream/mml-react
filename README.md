@@ -21,17 +21,19 @@
 - Add alt and title support to image tags (done)
 - Review the button tag (done)
 - Fix MML & MML Container state management (done)
-- ship a 0.1 release on NPM
-- ship stream-chat-react support for MML
+- ship a 0.1 release on NPM (done)
+- ship stream-chat-react support for MML (mml2 branch, ready)
 - figure out proptype weirdness (getting some validation errors on valid input)
-- scheduler component
-- implement hard failure on invalid MML
+- document how to overwrite 1 specific component for MML (done)
+- Button/URL verify it works (done)
 
-* clean Git history
-* tests & coverage reporting
-* CSS for all components
-* consider renaming column tag...
-* document how to overwrite 1 specific component for MML
+* scheduler component
+* implement hard failure on invalid MML
+
+- clean Git history
+- tests & coverage reporting
+- CSS for all components
+- consider renaming column tag, consider if we need a table tag..?
 
 ## Design:
 
@@ -61,6 +63,23 @@ import {MML} from 'mml-react';
 // use the react component
 <MML source={mml} />
 ```
+
+## Overwriting Components
+
+Making basic changes to the components is quite easy.
+Here's an example of how to overwrite the button tag's React component:
+
+```
+import {converterConfig} from 'mml-react'
+const config = {...converterConfig}
+config['button'] = (tag, children) => {
+  return <MyCustomButton text={tag.getText()} {...tag.node.attributes} key={tag.key} />
+}
+<MML converterConfig={config} source={source} />
+```
+
+This approach is generally only recommended for small changes.
+In most cases where you need more features than MML offers we recommend writing a custom attachment type.
 
 # Development & Contributions
 
