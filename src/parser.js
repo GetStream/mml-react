@@ -45,7 +45,6 @@ export function SourceToXML(source) {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;')
-    console.log(safeErr)
     XMLNodes = [parseXml('<mml><text>' + safeErr + '</text></mml>')]
   }
   return XMLNodes
