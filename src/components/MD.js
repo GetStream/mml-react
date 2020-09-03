@@ -37,10 +37,8 @@ export function MD({ text, ...props }) {
     'inlineCode',
     'blockquote'
   ]
+  const urls = anchorme.list(text)
 
-  const urls = anchorme(text, {
-    list: true
-  })
   for (const urlInfo of urls) {
     const displayLink = truncate(
       urlInfo.encoded.replace(/^(www\.)/, ''),
