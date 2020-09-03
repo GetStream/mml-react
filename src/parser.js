@@ -34,7 +34,20 @@ export function SourceToXML(source) {
 
   // convert the string to XML nodes
   // this library is relatively lightweight and doesn't do a ton of validation
-  const XMLNodes = [parseXml(source)]
+  let XMLNodes
+  try {
+    XMLNodes = [parseXml(source)]
+  } catch (err) {
+    let safeErr = err
+      .toString()
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;')
+    console.log(safeErr)
+    XMLNodes = [parseXml('<mml><text>' + safeErr + '</text></mml>')]
+  }
   return XMLNodes
 }
 
