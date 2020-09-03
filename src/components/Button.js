@@ -10,7 +10,6 @@ export function Button({ text, name, value, url, ...props }) {
   const mmlContext = useContext(MMLContext)
 
   function onClick(event) {
-    event.preventDefault()
     if (url) {
       window.location.href = sanitizeUrl(url)
     } else {
