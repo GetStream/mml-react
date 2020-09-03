@@ -65,15 +65,7 @@ export const converterConfig = {
     return <Text key={tag.key} text={tag.getText()} {...tag.node.attributes} />
   },
   scheduler: tag => {
-    return (
-      <Scheduler
-        key={tag.key}
-        interval={this.attr.interval}
-        duration={this.attr.duration}
-        full_day={this.attr.full_day}
-        ical_availability={this.attr.ical_availability}
-      />
-    )
+    return <Scheduler key={tag.key} {...tag.node.attributes} />
   },
   carousel: (tag, children) => {
     return <Carousel key={tag.key}>{children}</Carousel>
