@@ -17,39 +17,45 @@ export function MMLContainer({
   Success = SuccessComponent,
   ...props
 }) {
-  const [state, setState] = useState(data)
+  const [contextState, setContextState] = useState(data)
 
   async function handleSubmit(event) {
     event.preventDefault()
     const data = []
-    const pairs = Object.keys(state).map((key, index) => {
-      return { name: key, value: state[key] }
+    const pairs = Object.keys(contextState).map((key, index) => {
+      return { name: key, value: contextState[key] }
     })
     data.push(...pairs)
 
-    setState({ ...state, loading: true, error: '', success: '' })
+    setContextState({ ...contextState, loading: true, error: '', success: '' })
     try {
       await onSubmit(data)
-      setState({
-        ...state,
+      setContextState({
+        ...contextState,
         loading: false,
         error: '',
         success: 'submitted'
       })
     } catch (e) {
-      setState({ ...state, loading: false, error: 'something is broken' })
+      setContextState({
+        ...contextState,
+        loading: false,
+        error: 'something is broken'
+      })
     }
   }
 
-  // expose helpers for form elements to change the state
+  // expose helpers for form elements to change the contextState
   function setValue(name, value) {
-    setState({ ...state, [name]: value })
+    setContextState(prevContextState => {
+      return { ...prevContextState, [name]: value }
+    })
   }
   function changeValue(name, delta) {
-    let currentValue = state[name] || 0
+    let currentValue = contextState[name] || 0
     currentValue = currentValue * 1
     const newValue = currentValue + delta
-    setState({ ...state, [name]: newValue })
+    setContextState({ ...contextState, [name]: newValue })
   }
 
   if (error) {
@@ -57,7 +63,7 @@ export function MMLContainer({
   }
 
   const context = {
-    ...state,
+    ...contextState,
     changeValue,
     setValue
   }
@@ -68,9 +74,9 @@ export function MMLContainer({
         <div className="mml-container">
           <form onSubmit={handleSubmit}>
             {children}
-            <Loader loading={state.loading} />
-            <Success success={state.success} />
-            <Error error={state.error} />
+            <Loader loading={contextState.loading} />
+            <Success success={contextState.success} />
+            <Error error={contextState.error} />
           </form>
         </div>
       </MMLContext.Provider>

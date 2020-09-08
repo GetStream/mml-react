@@ -69,6 +69,7 @@ export function Scheduler({ name, ...props }) {
           selected={value || new Date()}
           onChange={date => {
             mmlContext.setValue(name, date)
+            mmlContext.setValue(name + '_iso', date.toISOString())
           }}
           timeIntervals={interval}
           showTimeSelect={!dateOnly}
