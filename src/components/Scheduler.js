@@ -58,7 +58,7 @@ export function Scheduler({ name, ...props }) {
   const dateOnly = !!props.full_day
   const interval = props.interval ? 1 * props.interval : 30
   const showTime = !dateOnly
-  const format = showTime ? 'MMMM d, yyyy h:mm aa' : 'h:mm aa'
+  const format = showTime ? 'MMMM d, yyyy h:mm aa' : 'MMMM d, yyyy'
 
   return (
     <div className="mml-scheduler">
