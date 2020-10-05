@@ -3,15 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "mml-react": "link:/Users/thierry/workspace/mml-react",
-    "stream-chat-react": "link:/Users/thierry/workspace/stream-chat-react",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
-    "react-syntax-highlighter": "^12.2.1"
+    "react-syntax-highlighter": "^12.2.1",
+    "stream-chat": "^2.5.0",
+    "stream-chat-react": "^3.0.1"
   },
   "husky": {
     "hooks": {
@@ -19,8 +13,8 @@
     }
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
+    "build": "SKIP_PREFLIGHT_CHECK=true react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,6 +38,12 @@
     ]
   },
   "devDependencies": {
-    "prettier": "1.19.1"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "customize-cra": "^1.0.0",
+    "prettier": "1.19.1",
+    "react-app-rewired": "^2.1.6",
+    "react-scripts": "3.3.0"
   }
 }
