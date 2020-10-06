@@ -42,7 +42,7 @@ const normalBundle = {
     }
   ],
   external: [
-    'anchorme',
+    'linkifyjs',
     'moment',
     'stream-chat-client',
     'react-images',
@@ -155,7 +155,11 @@ const fullBrowserBundle = {
       browser: true
     }),
     url(),
-    commonjs(),
+    commonjs({
+      namedExports: {
+        'node_modules/linkifyjs/index.js': ['find']
+      }
+    }),
     json(),
     globals({
       process: true,
