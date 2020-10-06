@@ -1,15 +1,10 @@
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import { MML } from '../../../'
+import { Chat, Channel, MessageList } from 'stream-chat-react'
+
+import Attachment from './Attachment'
 import * as data from '../data'
-import {
-  Message,
-  MessageSimple,
-  Chat,
-  Channel,
-  MessageList
-} from 'stream-chat-react'
 
 export class ExampleEditor extends React.Component {
   constructor(props) {
@@ -80,7 +75,7 @@ export class ExampleEditor extends React.Component {
                 theme={'messaging light'}
               >
                 <Channel channel={data.channel}>
-                  <MessageList messages={messages} />
+                  <MessageList messages={messages} Attachment={Attachment} />
                 </Channel>
               </Chat>
             </div>
