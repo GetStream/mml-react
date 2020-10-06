@@ -4,8 +4,7 @@
   "private": true,
   "dependencies": {
     "react-syntax-highlighter": "^12.2.1",
-    "stream-chat": "^2.5.0",
-    "stream-chat-react": "^3.0.1"
+    "stream-chat": "^2.5.0"
   },
   "husky": {
     "hooks": {
