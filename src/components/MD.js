@@ -1,74 +1,81 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import anchorme from 'anchorme'
+
+import * as linkify from 'linkifyjs'
 import PropTypes from 'prop-types'
 
-function truncate(str, length, ending) {
-  if (length == null) {
-    length = 100
+const truncate = (input, length, end = '...') => {
+  if (input.length > length) {
+    return `${input.substring(0, length - end.length)}${end}`
   }
-  if (ending == null) {
-    ending = '...'
-  }
-  if (str.length > length) {
-    return str.substring(0, length - ending.length) + ending
-  } else {
-    return str
-  }
+  return input
+}
+
+const allowedMarkups = [
+  'html',
+  'root',
+  'text',
+  'break',
+  'heading',
+  'paragraph',
+  'emphasis',
+  'strong',
+  'link',
+  'list',
+  'listItem',
+  'code',
+  'inlineCode',
+  'blockquote'
+]
+
+const matchMarkdownLinks = message => {
+  const regexMdLinks = /\[([^[]+)\](\(.*\))/gm
+  const matches = message.match(regexMdLinks)
+  const singleMatch = /\[([^[]+)\]\((.*)\)/
+
+  const links = matches
+    ? matches.map(match => {
+        const i = singleMatch.exec(match)
+        return i && i[2]
+      })
+    : []
+  return links
 }
 
 /**
  * MD renders a given text as markdown
  */
 export function MD({ text, ...props }) {
-  const allowed = [
-    'html',
-    'root',
-    'text',
-    'break',
-    'heading',
-    'paragraph',
-    'emphasis',
-    'strong',
-    'link',
-    'list',
-    'listItem',
-    'code',
-    'inlineCode',
-    'blockquote'
-  ]
+  if (!text) return null
 
-  const urls = anchorme(text, {
-    list: true
-  })
-  for (const urlInfo of urls) {
-    const displayLink = truncate(
-      urlInfo.encoded.replace(/^(www\.)/, ''),
-      20,
-      '...'
-    )
-    const mkdown = `[${displayLink}](${urlInfo.protocol}${urlInfo.encoded})`
-    text = text.replace(urlInfo.raw, mkdown)
-  }
   let newText = text
-  const mentionedUsers = []
-  if (mentionedUsers && mentionedUsers.length) {
-    for (let i = 0; i < mentionedUsers.length; i++) {
-      const username = mentionedUsers[i].name || mentionedUsers[i].id
-      const mkdown = `**@${username}**`
-      const re = new RegExp(`@${username}`, 'g')
-      newText = newText.replace(re, mkdown)
-    }
-  }
+  const markdownLinks = matchMarkdownLinks(newText)
+  // extract all valid links/emails within text and replace it with proper markup
+  linkify.find(newText).forEach(({ type, href, value }) => {
+    // check if message is already  markdown
+    const noParsingNeeded =
+      markdownLinks && markdownLinks.filter(text => text?.indexOf(href) !== -1)
+    if (noParsingNeeded.length > 0) return
+
+    const displayLink =
+      type === 'email'
+        ? value
+        : truncate(value.replace(/(http(s?):\/\/)?(www\.)?/, ''), 20)
+    newText = newText.replace(value, `[${displayLink}](${encodeURI(href)})`)
+  })
 
   return (
     <ReactMarkdown
-      allowedTypes={allowed}
-      source={text}
+      allowedTypes={allowedMarkups}
+      source={newText}
       linkTarget="_blank"
       plugins={[]}
       escapeHtml={true}
       skipHtml={false}
+      unwrapDisallowed={true}
+      transformLinkUri={uri =>
+        uri.startsWith('app://') ? uri : ReactMarkdown.uriTransformer(uri)
+      }
     />
   )
 }

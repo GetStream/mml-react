@@ -32,8 +32,8 @@
   "dependencies": {
     "@braintree/sanitize-url": "^4.0.0",
     "@rgrove/parse-xml": "^2.0.1",
-    "anchorme": "^2.1.2",
     "ical-expander": "^2.1.0",
+    "linkifyjs": "^2.1.9",
     "prop-types": "^15.7.2",
     "react-add-to-calendar": "^0.1.5",
     "react-datepicker": "^3.2.2",
