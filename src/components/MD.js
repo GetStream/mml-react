@@ -54,7 +54,8 @@ export function MD({ text, ...props }) {
   linkify.find(newText).forEach(({ type, href, value }) => {
     // check if message is already  markdown
     const noParsingNeeded =
-      markdownLinks && markdownLinks.filter(text => text?.indexOf(href) !== -1)
+      markdownLinks &&
+      markdownLinks.filter(text => text && text.indexOf(href) !== -1)
     if (noParsingNeeded.length > 0) return
 
     const displayLink =
