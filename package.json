@@ -1,6 +1,6 @@
 {
   "name": "mml-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MML (Message Markup Language) for React implementation.",
   "author": "tschellenbach",
   "license": "commercial",
