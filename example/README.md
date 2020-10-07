@@ -12,6 +12,9 @@ Until `stream-chat-react` fully support `mml-react`, we are using a custom `Atta
 
 Related styling should be applied to `../src/styles/attachment.scss` file and under its current namespace to make it easier to transfer it to `stream-chat-react` in future.
 
+### Development auto-reload 
+If you run `yarn start` at the `mml-react` root and run the example app at the same time with `yarn start`, it gives you auto-reload for any changes in mml-react library or the example app.
+
 ## Available Scripts
 
 In the project directory, you can run:
