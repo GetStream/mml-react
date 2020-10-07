@@ -68,10 +68,10 @@ export const converterConfig = {
     return (
       <Scheduler
         key={tag.key}
-        interval={this.attr.interval}
-        duration={this.attr.duration}
-        full_day={this.attr.full_day}
-        ical_availability={this.attr.ical_availability}
+        interval={tag.node.attributes.interval}
+        duration={tag.node.attributes.duration}
+        full_day={tag.node.attributes.full_day}
+        ical_availability={tag.node.attributes.ical_availability}
       />
     )
   },
