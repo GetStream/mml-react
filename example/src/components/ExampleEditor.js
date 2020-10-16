@@ -1,87 +1,103 @@
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import { Chat, Channel, MessageList } from 'stream-chat-react'
+import { Chat as StreamChat, Channel, MessageList } from 'stream-chat-react'
 
 import Attachment from './Attachment'
 import * as data from '../data'
+import styled from 'styled-components'
+import { Container, Row, Col } from './Grid'
+import theme from '../theme'
+import { Nav } from './Nav'
 
-export class ExampleEditor extends React.Component {
-  constructor(props) {
-    super(props)
+const CHAT_WIDTH = 465
 
-    this.state = {
-      selected: 0
-    }
+const Wrap = styled(Container)`
+  flex: 1;
+`
+
+const Desc = styled.p`
+  background: #eee;
+  margin: 0 0 ${theme.gutter}px;
+  padding: ${theme.gutter}px;
+`
+
+const Syntax = styled.div`
+  margin-bottom: ${theme.gutter}px;
+  font-family: ${theme.fontMonospace};
+  font-size: 70%;
+
+  pre {
+    padding: ${theme.gutter}px !important;
+  }
+`
+
+const Chat = styled.div`
+  .str-chat {
+    margin: 0 auto;
+    height: 515px;
+    width: ${CHAT_WIDTH}px;
   }
 
-  selectExample = exampleName => {
-    this.setState((state, props) => {
-      return { selected: exampleName }
-    })
-    return false
+  .str-chat__list {
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
   }
 
-  handleLayoutChange = event => {
-    this.setState({ layout: event.target.value })
+  .str-chat.messaging {
+    background: transparent;
+  }
+`
+
+export function ExampleEditor({ examples }) {
+  const [current, setCurrent] = React.useState(0)
+  const example = examples[current]
+
+  if (!example) {
+    return <div>No Example Selected</div>
   }
 
-  render() {
-    const example = this.props.examples[this.state.selected]
-    if (!example) {
-      return <div>No Example Selected</div>
-    }
+  data.message.attachments = [{ type: 'mml', mml: example.mml }]
+  const messages = data.messages.concat([data.message])
 
-    function onAction(data) {
-      return new Promise(resolve => setTimeout(() => resolve(), 3000))
-    }
-
-    data.message.attachments = [{ type: 'mml', mml: example.mml }]
-    let messages = data.messages.concat([data.message])
-
-    return (
-      <div className="container-fluid">
-        <div className="row">
-          <ul className="navigation">
-            {Object.keys(this.props.examples).map(key => (
-              <li
-                className={key === this.state.selected ? 'active' : 'inactive'}
-                key={key}
-              >
-                <a onClick={() => this.selectExample(key)}>
-                  {this.props.examples[key].name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="row">
-          <div>
-            <p>{example.description}</p>
-          </div>
-          <div className="col syntax-mml">
-            <SyntaxHighlighter language="xml" style={atomDark}>
-              {example.mml}
-            </SyntaxHighlighter>
-          </div>
-          <div className="col">
-            <div
-              className="str-chat"
-              style={{ height: 'unset', width: '700px' }}
-            >
-              <Chat
-                client={data.client}
-                key={example.name}
-                theme={'messaging light'}
-              >
-                <Channel channel={data.channel}>
-                  <MessageList messages={messages} Attachment={Attachment} />
-                </Channel>
+  return (
+    <Wrap>
+      <Row>
+        <Col xs={100} xl={'300px'}>
+          <Nav items={examples} current={current} onClick={setCurrent} />
+        </Col>
+        <Col xs={100} xl={70}>
+          <Row>
+            <Col xs={100}>
+              <Desc>{example.description}</Desc>
+            </Col>
+            <Col xs={100} lg={'auto'}>
+              <Syntax>
+                <SyntaxHighlighter
+                  language="xml"
+                  style={atomDark}
+                  // lineProps={{style: {wordBreak: 'break-word', whiteSpace: 'pre-wrap'}}}
+                  // wrapLines={true}
+                >
+                  {example.mml}
+                </SyntaxHighlighter>
+              </Syntax>
+            </Col>
+            <Col xs={100} lg={CHAT_WIDTH + theme.gutter * 2 + 'px'}>
+              <Chat>
+                <StreamChat
+                  client={data.client}
+                  key={example.name}
+                  theme={'messaging light'}
+                >
+                  <Channel channel={data.channel}>
+                    <MessageList messages={messages} Attachment={Attachment} />
+                  </Channel>
+                </StreamChat>
               </Chat>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Wrap>
+  )
 }

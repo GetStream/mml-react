@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { MML } from '../../..'
 
 export const isMMLAttachment = a => {
