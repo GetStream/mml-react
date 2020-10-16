@@ -1,14 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { Chat as StreamChat, Channel, MessageList } from 'stream-chat-react'
-
+import theme from '../theme'
+import { Container, Row, Col } from './Grid'
+import { Nav } from './Nav'
 import Attachment from './Attachment'
 import * as data from '../data'
-import styled from 'styled-components'
-import { Container, Row, Col } from './Grid'
-import theme from '../theme'
-import { Nav } from './Nav'
 
 const CHAT_WIDTH = 465
 
