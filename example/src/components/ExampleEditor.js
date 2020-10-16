@@ -52,10 +52,6 @@ export function ExampleEditor({ examples }) {
   const [current, setCurrent] = React.useState(0)
   const example = examples[current]
 
-  if (!example) {
-    return <div>No Example Selected</div>
-  }
-
   data.message.attachments = [{ type: 'mml', mml: example.mml }]
   const messages = data.messages.concat([data.message])
 
