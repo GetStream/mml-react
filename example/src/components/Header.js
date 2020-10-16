@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col, ColCentered, Container } from './Grid'
+import { Row, ColCentered, Container } from './Grid'
 import theme from '../theme'
 import logo from '../assets/logo.svg'
 
