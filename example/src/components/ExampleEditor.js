@@ -72,12 +72,7 @@ export function ExampleEditor({ examples }) {
             </Col>
             <Col xs={100} lg={'auto'}>
               <Syntax>
-                <SyntaxHighlighter
-                  language="xml"
-                  style={atomDark}
-                  // lineProps={{style: {wordBreak: 'break-word', whiteSpace: 'pre-wrap'}}}
-                  // wrapLines={true}
-                >
+                <SyntaxHighlighter language="xml" style={atomDark}>
                   {example.mml}
                 </SyntaxHighlighter>
               </Syntax>
