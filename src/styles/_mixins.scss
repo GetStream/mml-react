@@ -1,0 +1,48 @@
+// MML component
+//
+// Automatically scope the class name
+//
+// -----------------------------------------------------------------------------
+@mixin mml-component($name) {
+  .#{$mml-prefix}#{to-lower-case($name)} {
+    @content;
+  }
+}
+
+// Button reset
+//
+// Resets the default browser's `<button>` element styling
+//
+// -----------------------------------------------------------------------------
+@mixin mml-button-reset() {
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  border-radius: $mml-button-border-radius;
+}
+
+//
+// Button base
+//
+// Apply a default button styling based on the `$mml-button-` SCSS variables
+// globally set.
+//
+// -----------------------------------------------------------------------------
+@mixin mml-button-base() {
+  @include mml-button-reset();
+  padding: $mml-button-padding-y $mml-button-padding-x;
+  border: $mml-button-border-thickness solid $mml-button-border-color;
+  font-family: $mml-button-font-family;
+  font-weight: $mml-button-font-weight;
+  @if $mml-button-font-size != inherit {
+    font-size: $mml-button-font-size;
+  }
+  @if $mml-button-text-transform != none {
+    text-transform: $mml-button-text-transform;
+  }
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+}

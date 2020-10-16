@@ -1,0 +1,40 @@
+$mml-prefix: 'mml-';
+
+$main-font: 'IBM Plex Sans', sans-serif;
+$second-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$mono-font: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+  'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+
+$base-font-weight: 400;
+$heavy-font-weight: 700;
+
+/* colors */
+$primary-color: magenta;
+$secondary-color: #006cff;
+$secondary-faded: #bcd8ff;
+
+$dt-bg-team: #1d1f22;
+
+$border-color: rgba(0, 0, 0, 0.08);
+
+$black: black;
+$white: white;
+$grey: #f0f0f0;
+
+/* miscellaneous */
+// $assetsPath: '../assets';
+// $border-radius: 16px;
+
+// Button:
+// -----------------------------------------------------------------------------
+$mml-button-border-radius: 16px;
+$mml-button-padding-y: 11px;
+$mml-button-padding-x: 15px;
+$mml-button-border-thickness: 1px;
+$mml-button-border-color: $secondary-color;
+$mml-button-font-family: $main-font;
+$mml-button-font-weight: bold;
+$mml-button-font-size: inherit;
+$mml-button-text-transform: none;
+$mml-button-outline-focus: none;

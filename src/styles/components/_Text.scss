@@ -1,0 +1,13 @@
+@include mml-component('text') {
+  position: relative;
+  flex: 1 1;
+  display: block;
+  min-height: 32px;
+  padding: 5px 10px;
+  font-size: 15px;
+  color: black;
+  border-radius: 16px 16px 16px 0;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-left: 0;
+}

@@ -1,0 +1,10 @@
+@include mml-component('btn') {
+  @include mml-button-base();
+  margin: 10px 0;
+  background: transparent;
+  color: $secondary-color;
+
+  &:focus {
+    outline: $mml-button-outline-focus;
+  }
+}
