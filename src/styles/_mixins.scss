@@ -1,11 +1,21 @@
+@function mml-component-sel($name) {
+  @return #{$mml-prefix}#{to-lower-case($name)};
+}
+
 // MML component
 //
 // Automatically scope the class name
 //
 // -----------------------------------------------------------------------------
-@mixin mml-component($name) {
-  .#{$mml-prefix}#{to-lower-case($name)} {
-    @content;
+@mixin mml-component($name, $variant: false) {
+  @if $variant {
+    .#{$mml-prefix}#{to-lower-case($name)}.#{$mml-prefix}-#{to-lower-case($variant)} {
+      @content;
+    }
+  } @else {
+    .#{$mml-prefix}#{to-lower-case($name)} {
+      @content;
+    }
   }
 }
 

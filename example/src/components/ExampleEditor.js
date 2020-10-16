@@ -3,13 +3,19 @@ import styled from 'styled-components'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { Chat as StreamChat, Channel, MessageList } from 'stream-chat-react'
+import { ResizableBox } from 'react-resizable'
+import 'react-resizable/css/styles.css'
+
 import theme from '../theme'
 import { Container, Row, Col } from './Grid'
 import { Nav } from './Nav'
 import Attachment from './Attachment'
 import * as data from '../data'
 
-const CHAT_WIDTH = 465
+const CHAT_NOTIFICATIONS = false
+const CHAT_HEIGHT = 580
+const CHAT_WIDTH = 465 + (CHAT_NOTIFICATIONS ? 80 : 0)
+// 80 is the notificaiton area min width
 
 const Wrap = styled(Container)`
   flex: 1;
@@ -32,19 +38,31 @@ const Syntax = styled.div`
 `
 
 const Chat = styled.div`
+  .react-resizable {
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  }
+
   .str-chat {
     margin: 0 auto;
-    height: 515px;
-    width: ${CHAT_WIDTH}px;
+    height: 100%;
+    width: 100%;
   }
 
   .str-chat__list {
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
   }
 
   .str-chat.messaging {
     background: transparent;
   }
+
+  ${CHAT_NOTIFICATIONS
+    ? ``
+    : `
+    .str-chat__list-notifications {
+      display: none;
+    }
+  `}
 `
 
 export function ExampleEditor({ examples }) {
@@ -62,10 +80,8 @@ export function ExampleEditor({ examples }) {
         </Col>
         <Col xs={100} xl={70}>
           <Row>
-            <Col xs={100}>
-              <Desc>{example.description}</Desc>
-            </Col>
             <Col xs={100} lg={'auto'}>
+              <Desc>{example.description}</Desc>
               <Syntax>
                 <SyntaxHighlighter language="xml" style={atomDark}>
                   {example.mml}
@@ -74,15 +90,25 @@ export function ExampleEditor({ examples }) {
             </Col>
             <Col xs={100} lg={CHAT_WIDTH + theme.gutter * 2 + 'px'}>
               <Chat>
-                <StreamChat
-                  client={data.client}
-                  key={example.name}
-                  theme={'messaging light'}
+                <ResizableBox
+                  width={CHAT_WIDTH}
+                  height={CHAT_HEIGHT}
+                  minConstraints={[CHAT_WIDTH, CHAT_HEIGHT]}
+                  maxConstraints={[CHAT_WIDTH * 3, CHAT_HEIGHT * 2]}
                 >
-                  <Channel channel={data.channel}>
-                    <MessageList messages={messages} Attachment={Attachment} />
-                  </Channel>
-                </StreamChat>
+                  <StreamChat
+                    client={data.client}
+                    key={example.name}
+                    theme={'messaging light'}
+                  >
+                    <Channel channel={data.channel}>
+                      <MessageList
+                        messages={messages}
+                        Attachment={Attachment}
+                      />
+                    </Channel>
+                  </StreamChat>
+                </ResizableBox>
               </Chat>
             </Col>
           </Row>

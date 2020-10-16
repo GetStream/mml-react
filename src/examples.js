@@ -1,5 +1,29 @@
 export var examples = [
   {
+    name: 'Buttons',
+    description: 'Different buttons styles',
+    mml: `<mml name="support">
+  <md>Just showing \`button\` variants:</md>
+  <button name="action" value="Activate">Regular button</button>
+  <button variant="floating" name="action" value="Activate">Floating button</button>
+</mml>`
+  },
+  {
+    name: 'ButtonList',
+    description: 'Different buttons list styles',
+    mml: `<mml name="support">
+  <md>Just showing \`button_list\` variants:</md>
+  <button_list>
+    <button name="side" value="yes">Yes!</button>
+    <button name="side" value="no">No, thanks</button>
+  </button_list>
+  <button_list variant="floating">
+    <button name="side" value="yes">Yes!</button>
+    <button name="side" value="no">Baked No, thanks</button>
+  </button_list>
+</mml>`
+  },
+  {
     name: 'Simple Support',
     description:
       'The most basic example is adding simple buttons to your message that help automate common tasks',

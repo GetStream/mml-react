@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "react-resizable": "^1.11.0",
     "react-syntax-highlighter": "^12.2.1",
     "stream-chat": "^2.5.0",
     "styled-components": "^5.2.0"

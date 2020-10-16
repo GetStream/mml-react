@@ -5,8 +5,16 @@ import { Button } from './Button'
 /**
  * A list of buttons
  */
-export function ButtonList({ children, ...props }) {
-  return <div className="mml-selectlist">{children}</div>
+export function ButtonList({ children, variant }) {
+  return (
+    <div
+      className={
+        'mml-selectlist' + variant === 'floating' ? ' mml--floating' : ''
+      }
+    >
+      {children}
+    </div>
+  )
 }
 
 ButtonList.propTypes = {
@@ -14,5 +22,7 @@ ButtonList.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(Button),
     PropTypes.objectOf(Button)
-  ])
+  ]),
+  /** Button style variant */
+  variant: PropTypes.oneOf(['floating'])
 }

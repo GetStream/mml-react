@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from './Grid'
+import { Row, Col, ColCentered, Container } from './Grid'
 import theme from '../theme'
 import logo from '../assets/logo.svg'
 
 const Wrap = styled(Container)`
   font-family: ${theme.fontMonospace};
 `
+
 const Logo = styled.a`
+  padding: 50px 0;
   display: inline-block;
-  padding: 50px 0 20px;
 `
 
 const Title = styled.h1`
+  margin: 0;
   font-weight: 100;
 `
 
@@ -33,10 +35,16 @@ const Heading = styled.h3`
 export function Header() {
   return (
     <Wrap>
-      <Logo href="https://getstream.io">
-        <img src={logo} alt="Stream logo" />
-      </Logo>
-      <Title>MML 1.0: Rich Messaging - Preview tool</Title>
+      <Row>
+        <ColCentered>
+          <Logo href="https://getstream.io">
+            <img src={logo} alt="Stream logo" />
+          </Logo>
+        </ColCentered>
+        <ColCentered>
+          <Title>MML 1.0: Rich Messaging - Preview tool</Title>
+        </ColCentered>
+      </Row>
       <Desc>
         Message Markup Language (MML) enables cross platform interactive
         messaging and chat. User have grown accustomed to powerful messaging

@@ -6,7 +6,7 @@ import { sanitizeUrl } from '@braintree/sanitize-url'
 /**
  * A simple Button
  */
-export function Button({ text, name, value, url, ...props }) {
+export function Button({ text, name, value, url, variant }) {
   const mmlContext = useContext(MMLContext)
 
   function onClick(event) {
@@ -19,7 +19,11 @@ export function Button({ text, name, value, url, ...props }) {
   }
 
   return (
-    <button className="mml-btn" type="submit" onClick={onClick}>
+    <button
+      className={'mml-btn' + (variant === 'floating' ? ' mml--floating' : '')}
+      type="submit"
+      onClick={onClick}
+    >
       {text}
     </button>
   )
@@ -33,5 +37,7 @@ Button.propTypes = {
   /** The value of the button */
   value: PropTypes.string,
   /** The url to open */
-  url: PropTypes.string
+  url: PropTypes.string,
+  /** Button style variant */
+  variant: PropTypes.oneOf(['floating'])
 }
