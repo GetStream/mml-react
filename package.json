@@ -14,8 +14,11 @@
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "cover": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "rollup -c",
+    "build": "yarn build-scripts && yarn build-styles",
     "start": "rollup -c -w",
+    "build-scripts": "rollup -c",
+    "watch-styles": "sass --watch src/styles/index.scss dist/css/index.css",
+    "build-styles": "sass src/styles/index.scss dist/css/index.css --style compressed",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
@@ -92,6 +95,7 @@
     "rollup-plugin-scss": "^1.0.2",
     "rollup-plugin-terser": "^5.1.2",
     "rollup-plugin-url": "^3.0.1",
+    "sass": "^1.27.0",
     "stream-chat-react": "^3.0.1"
   },
   "files": [
