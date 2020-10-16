@@ -9,7 +9,7 @@ export function ButtonList({ children, variant }) {
   return (
     <div
       className={
-        'mml-selectlist' + (variant === 'floating' ? ' mml--floating' : '')
+        'mml-btnlist' + (variant === 'floating' ? ' mml--floating' : '')
       }
     >
       {children}

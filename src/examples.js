@@ -18,8 +18,8 @@ export var examples = [
     <button name="side" value="no">No, thanks</button>
   </button_list>
   <button_list variant="floating">
-    <button name="side" value="yes">Yes!</button>
-    <button name="side" value="no">Baked No, thanks</button>
+    <button variant="floating" name="side" value="yes">Yes!</button>
+    <button variant="floating" name="side" value="no">No, thanks</button>
   </button_list>
 </mml>`
   },

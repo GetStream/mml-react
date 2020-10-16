@@ -1,42 +1,48 @@
-$mml-prefix: 'mml-';
+// variables to consider from stream-chat-react
 
 $main-font: 'IBM Plex Sans', sans-serif;
-$second-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$mono-font: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-  'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-  'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
-
-$base-font-weight: 400;
-$heavy-font-weight: 700;
-
-/* colors */
+// $second-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $mono-font: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+//   'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+//   'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+// $base-font-weight: 400;
+// $heavy-font-weight: 700;
 $primary-color: magenta;
 $secondary-color: #006cff;
 $secondary-faded: #bcd8ff;
-
-$dt-bg-team: #1d1f22;
-
-$border-color: rgba(0, 0, 0, 0.08);
-
+// $dt-bg-team: #1d1f22;
+// $border-color: rgba(0, 0, 0, 0.08);
 $black: black;
-$white: white;
+// $white: white;
 $grey: #f0f0f0;
-
-$mml-spacer: 10px;
-
-/* miscellaneous */
 // $assetsPath: '../assets';
 // $border-radius: 16px;
 
+// Generic variables:
+// -----------------------------------------------------------------------------
+$mml-prefix: 'mml-' !default;
+$mml-spacer: 10px !default;
+$mml-border-radius: 16px !default;
+$mml-shadow: 0 3px 6px 0 rgba(#000000, 0.05), 0 1px 0 0 rgba(#000000, 0.1),
+  0 2px 4px 0 rgba(#000000, 0.03) !default;
+
 // Button:
 // -----------------------------------------------------------------------------
-$mml-button-border-radius: 16px;
-$mml-button-padding-y: 11px;
-$mml-button-padding-x: 15px;
-$mml-button-border-thickness: 1px;
-$mml-button-border-color: $secondary-color;
-$mml-button-font-family: $main-font;
-$mml-button-font-weight: bold;
-$mml-button-font-size: inherit;
-$mml-button-text-transform: none;
-$mml-button-outline-focus: none;
+$mml-button-border-radius: $mml-border-radius !default;
+$mml-button-padding-y: 11px !default;
+$mml-button-padding-x: 15px !default;
+$mml-button-border-thickness: 1px !default;
+$mml-button-border-color: $secondary-color !default;
+$mml-button-font-family: $main-font !default;
+$mml-button-font-weight: bold !default;
+$mml-button-font-size: inherit !default;
+$mml-button-text-transform: none !default;
+$mml-button-outline-focus: none !default;
+$mml-button--floating-shadow: $mml-shadow !default;
+
+// ButtonList:
+// -----------------------------------------------------------------------------
+$mml-btnlist-border-radius: $mml-button-border-radius !default;
+$mml-btnlist-border-thickness: $mml-button-border-thickness !default;
+$mml-btnlist-border-color: $grey !default;
+$mml-btnlist-btn-border-color: $mml-btnlist-border-color !default;
