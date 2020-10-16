@@ -9,10 +9,6 @@ import { ExampleEditor } from './components/ExampleEditor'
 import '../../dist/css/index.css'
 import 'stream-chat-react/dist/css/index.css'
 
-// display: flex;
-// flex-direction: column;
-// align-items: center;
-// min-height: 100%;
 const Wrap = styled.div`
   flex: 1;
   width: 100%;
