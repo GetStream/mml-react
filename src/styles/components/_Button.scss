@@ -17,6 +17,11 @@
   // + .#{mml-component-sel('btn')} {
   //   margin-top: 0;
   // }
+
+  @include scr-theme('dark') {
+    background: $mml-button--dark-bg;
+    color: $mml-button--dark-color;
+  }
 }
 
 @include mml-component('btn', 'floating') {

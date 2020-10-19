@@ -39,6 +39,8 @@ $mml-button-font-size: inherit !default;
 $mml-button-text-transform: none !default;
 $mml-button-outline-focus: none !default;
 $mml-button--floating-shadow: $mml-shadow !default;
+$mml-button--dark-bg: rgba(255, 255, 255, 0.05) !default;
+$mml-button--dark-color: white !default;
 
 // ButtonList:
 // -----------------------------------------------------------------------------

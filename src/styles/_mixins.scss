@@ -19,6 +19,18 @@
   }
 }
 
+//
+// Stream chat react theme
+//
+// Automatically scope to the class name of a specific stream-chat-react theme
+//
+// -----------------------------------------------------------------------------
+@mixin scr-theme($theme: '') {
+  .str-chat.#{$theme} & {
+    @content;
+  }
+}
+
 // Button reset
 //
 // Resets the default browser's `<button>` element styling
