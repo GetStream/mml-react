@@ -295,3 +295,14 @@ export const MessageMock = {
   canEditMessage: () => true,
   getMessageActions: () => []
 }
+
+export const THEMES = [
+  { name: 'messaging light', value: 'messaging light' },
+  { name: 'messaging dark', value: 'messaging dark' },
+  { name: 'team light', value: 'team light' },
+  { name: 'team dark', value: 'team dark' },
+  { name: 'commerce light', value: 'commerce light' },
+  { name: 'commerce dark', value: 'commerce dark' },
+  { name: 'livestream light', value: 'livestream light' },
+  { name: 'livestream dark', value: 'livestream dark' }
+]

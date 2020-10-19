@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../theme'
+import { getQueryString } from './history'
 
 const Tabs = styled.nav`
   display: flex;
@@ -31,6 +32,13 @@ const Tab = styled.a`
   color: ${props => (props.active ? '#fff' : theme.primary)};
   cursor: ${props => (props.active ? 'default' : 'pointer')};
   font-weight: ${props => (props.active ? 'bold' : 'normal')};
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+    border-left: 2px solid ${theme.primary};
+  }
   &:hover {
     background: ${props => (props.active ? '' : theme.grey)};
   }
@@ -55,15 +63,20 @@ const Tab = styled.a`
  * @param {{ name: string }} props.items
  * @param {number} props.current
  * @param {(index: number) => any} props.onClick
+ * @param {string} [props.linkParam]
  */
-export function Nav({ items, current, onClick }) {
+export function Nav({ items, current, onClick, linkParam }) {
   return (
     <Tabs>
       {items.map((item, idx) => (
         <Tab
+          href={linkParam ? getQueryString(linkParam, idx) : ''}
           active={idx === current}
           key={idx + item.name}
-          onClick={() => onClick(idx)}
+          onClick={event => {
+            event.preventDefault()
+            onClick(idx)
+          }}
         >
           {item.name}
         </Tab>

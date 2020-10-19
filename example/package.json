@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "query-string": "^6.13.6",
     "react-resizable": "^1.11.0",
     "react-syntax-highlighter": "^12.2.1",
     "stream-chat": "^2.5.0",
