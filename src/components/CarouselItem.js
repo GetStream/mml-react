@@ -1,4 +1,5 @@
 import React from 'react'
+import { Slide } from 'pure-react-carousel'
 import PropTypes from 'prop-types'
 
 /**
@@ -6,7 +7,7 @@ import PropTypes from 'prop-types'
  * A carousel item can contain any type of nodes, such as buttons, images etc.
  */
 export function CarouselItem({ children, ...props }) {
-  return <div className="mml-carousel-item">{children}</div>
+  return <Slide className="mml-carousel-item">{children}</Slide>
 }
 
 CarouselItem.propTypes = {

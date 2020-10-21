@@ -1,6 +1,4 @@
 import React from 'react'
-
-// import DatePicker from 'react-datepicker'
 import { DatePicker } from './DatePicker'
 import { Icon } from './Icon'
 import IcalExpander from 'ical-expander'
