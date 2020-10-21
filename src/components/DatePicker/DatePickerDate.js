@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import formatDate from 'date-fns/format'
 import { isSameDay, addDays } from 'date-fns'
 import { Virtuoso } from 'react-virtuoso'
-import ScrollContainer from './ScrollContainer'
+import ScrollContainer from '../Scroller'
 import DatePickerSelect from './DatePickerSelect'
 
 /**
@@ -75,7 +75,13 @@ function DatePickerDateItem(item, selected, handleClick) {
  */
 export default function DatePickerDate(props) {
   return (
-    <DatePickerSelect {...props} Item={DatePickerDateItem} getItem={getItem} />
+    <div className="mml-datepicker__date">
+      <DatePickerSelect
+        {...props}
+        Item={DatePickerDateItem}
+        getItem={getItem}
+      />
+    </div>
   )
 }
 

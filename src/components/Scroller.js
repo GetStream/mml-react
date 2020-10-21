@@ -3,7 +3,7 @@ import React from 'react'
 /**
  * Custom scroll container to hide scrollbar with simple css
  */
-export default function ScrollContainer({
+export default function Scroller({
   className,
   style,
   reportScrollTop,
@@ -23,7 +23,7 @@ export default function ScrollContainer({
       onScroll={e => reportScrollTop(e.target.scrollTop)}
       tabIndex={0}
     >
-      <div className="mml-scrollable">{children}</div>
+      <div className="mml-scroller__inner">{children}</div>
     </div>
   )
 }

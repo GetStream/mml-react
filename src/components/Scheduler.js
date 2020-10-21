@@ -2,6 +2,7 @@ import React from 'react'
 
 // import DatePicker from 'react-datepicker'
 import { DatePicker } from './DatePicker'
+import { Icon } from './Icon'
 import IcalExpander from 'ical-expander'
 
 export class Scheduler extends React.Component {
@@ -68,20 +69,26 @@ export class Scheduler extends React.Component {
 
     return (
       <div className="mml-scheduler">
-        {this.state.loading ? (
-          <div>Loading availability</div>
-        ) : (
-          <DatePicker
-            selected={this.props.selected}
-            timeIntervals={interval}
-            showTimeSelect={!dateOnly}
-            format={this.props.format}
-            // dateFormat="ddd MMM DD"
-            // timeFormat="H:mm A"
-            filterDate={this.icalFilter}
-            onChange={this.props.onChange}
-          />
-        )}
+        <div className="mml-scheduler__head">
+          <Icon name="date_range" />
+          <span className="mml-scheduler__head-text">Scheduler</span>
+        </div>
+        <div className="mml-scheduler__body">
+          {this.state.loading ? (
+            <div>Loading availability</div>
+          ) : (
+            <DatePicker
+              selected={this.props.selected}
+              timeIntervals={interval}
+              showTimeSelect={!dateOnly}
+              format={this.props.format}
+              // dateFormat="ddd MMM DD"
+              // timeFormat="H:mm A"
+              filterDate={this.icalFilter}
+              onChange={this.props.onChange}
+            />
+          )}
+        </div>
       </div>
     )
   }

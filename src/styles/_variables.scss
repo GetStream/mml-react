@@ -8,6 +8,7 @@ $mml-colors: (
   black: black,
   grey-950: rgba(0, 0, 0, 0.08),
   grey-900: #f0f0f0,
+  grey-800: #f7f7f7,
   grey-300: rgba(255, 255, 255, 0.1),
   grey-200: rgba(255, 255, 255, 0.08),
   grey-100-full: #34373a,
@@ -75,6 +76,12 @@ $mml-grid-breakpoints: (
 $mml-grid__row-bg: $mml-bg !default;
 $mml-grid__row--dark-bg: $mml--dark-bg !default;
 
+// Datepicker:
+// -----------------------------------------------------------------------------
+$mml-datepicker__item-color-active: mml-color(primary) !default;
+// dark:
+$mml-datepicker__item--dark-color-active: mml-color(primary-faded) !default;
+
 // Image:
 // -----------------------------------------------------------------------------
 $mml-image-spacer-y: 0 !default;
@@ -136,6 +143,27 @@ $mml-number__count-font-weight: bold !default;
 $mml-number__count-color: mml-color(black) !default;
 // number__count dark:
 $mml-number__count--dark-color: mml-color(white) !default;
+
+// Scheduler:
+// -----------------------------------------------------------------------------
+// head
+$mml-scheduler__head-font-size: 13px !default;
+$mml-scheduler__head-padding-y: 13px !default;
+$mml-scheduler__head-padding-x: 13px !default;
+$mml-scheduler__head-opacity: 0.3 !default;
+$mml-scheduler__head-bg: mml-color(grey-800) !default;
+$mml-scheduler__head-color: mml-color(black) !default;
+// head dark:
+$mml-scheduler__head--dark-opacity: 0.7 !default;
+$mml-scheduler__head--dark-bg: mml-color(grey-200) !default;
+$mml-scheduler__head--dark-color: mml-color(white) !default;
+// body:
+$mml-scheduler__body-font-size: 14px !default;
+$mml-scheduler__body-bg: $mml-bg !default;
+$mml-scheduler__body-color: mml-color(black) !default;
+// body dark:
+$mml-scheduler__body--dark-bg: mml-color(grey-100-full) !default;
+$mml-scheduler__body--dark-color: mml-color(white) !default;
 
 // Text:
 // -----------------------------------------------------------------------------

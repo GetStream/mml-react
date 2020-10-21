@@ -71,7 +71,13 @@ export function DatePickerTimeItem(item, selected, handleClick) {
  */
 export default function DatePickerTime(props) {
   return (
-    <DatePickerSelect {...props} Item={DatePickerTimeItem} getItem={getItem} />
+    <div className="mml-datepicker__time">
+      <DatePickerSelect
+        {...props}
+        Item={DatePickerTimeItem}
+        getItem={getItem}
+      />
+    </div>
   )
 }
 

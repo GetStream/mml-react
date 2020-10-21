@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Virtuoso } from 'react-virtuoso'
-import ScrollContainer from './ScrollContainer'
+import Scroller from '../Scroller'
 
 /**
  * DatePicker select
@@ -44,7 +44,7 @@ export default function DatePickerSelect(props) {
 
   return (
     <Virtuoso
-      ScrollContainer={ScrollContainer}
+      ScrollContainer={Scroller}
       overscan={200}
       totalCount={total}
       item={index => Item(items.current[index], selected, handleClick)}

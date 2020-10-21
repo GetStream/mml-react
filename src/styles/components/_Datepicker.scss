@@ -1,0 +1,39 @@
+@include mml-component('datepicker') {
+  flex: 1;
+  display: flex;
+
+  // date and time columns
+  &__date,
+  &__time {
+    flex: 1;
+  }
+
+  // date column
+  &__date {
+    @include mml-component('datepicker__item') {
+      text-align: right;
+    }
+  }
+
+  // time column
+  &__time {
+    @include mml-component('datepicker__item') {
+      // text-align: left;
+    }
+  }
+
+  // each option item
+  &__item {
+    padding: 4px 5px;
+    cursor: pointer;
+
+    &--selected {
+      color: $mml-datepicker__item-color-active;
+      font-weight: bold;
+
+      @include scr-theme('dark') {
+        color: $mml-datepicker__item--dark-color-active;
+      }
+    }
+  }
+}
