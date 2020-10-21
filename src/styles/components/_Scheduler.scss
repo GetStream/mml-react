@@ -1,60 +1,10 @@
+@import 'Card';
+@import 'CardBody';
+@import 'CardHeader';
 @import 'Scroller';
 @import 'Datepicker';
 
 @include mml-component('scheduler') {
-  border: $mml-border;
-  background: $mml-scheduler-bg;
-  @include scr-theme('dark') {
-    border-color: $mml--dark-border-color;
-    background: $mml-scheduler--dark-bg;
-  }
-
-  &:not(:last-child) {
-    border-bottom: 0;
-  }
-
-  // scheduler head
-  &__head {
-    display: flex;
-    align-items: center;
-    padding: $mml-scheduler__head-padding-y $mml-scheduler__head-padding-x;
-    font-size: $mml-scheduler__head-font-size;
-    background: $mml-scheduler__head-bg;
-    border-bottom: $mml-border;
-    @include scr-theme('dark') {
-      border-color: $mml--dark-border-color;
-      background: $mml-scheduler__head--dark-bg;
-      color: $mml-scheduler__head--dark-color;
-    }
-
-    @include mml-component('icon') {
-      opacity: $mml-scheduler__head-opacity;
-
-      @include scr-theme('dark') {
-        opacity: $mml-scheduler__head--dark-opacity;
-      }
-    }
-
-    &-text {
-      font-weight: bold;
-      padding-left: $mml-scheduler__head-padding-x;
-      opacity: $mml-scheduler__head-opacity;
-
-      @include scr-theme('dark') {
-        opacity: $mml-scheduler__head--dark-opacity;
-      }
-    }
-  }
-
-  // scheduler body
-  &__body {
-    font-size: $mml-scheduler__body-font-size;
-    color: $mml-scheduler__body-color;
-    @include scr-theme('dark') {
-      color: $mml-scheduler__body--dark-color;
-    }
-  }
-
   // scroller has fading edges
   @include mml-component('scroller') {
     height: 217px;

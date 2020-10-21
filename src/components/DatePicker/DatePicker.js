@@ -44,13 +44,13 @@ export function splitDatetime(datetime) {
  */
 export function DatePicker({
   selected,
-  dateInterval = 1,
-  timeInterval = 30,
-  format = 'MMMM d, yyyy h:mm aa',
-  dateFormat = 'E LLL dd',
-  timeFormat = 'h:mm a',
-  allowPast = false,
-  showTimeSelect = true,
+  dateInterval,
+  timeInterval,
+  format,
+  dateFormat,
+  timeFormat,
+  allowPast,
+  showTimeSelect,
   startDate,
   filterDate,
   onChange
@@ -129,6 +129,16 @@ export function DatePicker({
       )}
     </div>
   )
+}
+
+DatePicker.defaultProps = {
+  dateInterval: 1,
+  timeInterval: 30,
+  format: 'MMMM d, yyyy h:mm aa',
+  dateFormat: 'E LLL dd',
+  timeFormat: 'h:mm a',
+  allowPast: false,
+  showTimeSelect: true
 }
 
 DatePicker.propTypes = {

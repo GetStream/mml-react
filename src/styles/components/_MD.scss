@@ -6,7 +6,7 @@
   padding: $mml-md-padding-y $mml-md-padding-x;
   color: $mml-md-color;
   background: $mml-md-bg;
-  border: $mml-border-width solid $mml-border-color;
+  border: $mml-border;
   @if $mml-md-font-size != inherit {
     font-size: $mml-md-font-size;
   }
@@ -23,5 +23,10 @@
     color: $mml__code-color;
     font-size: $mml__code-font-size;
     font-family: $mml-font-monospace;
+
+    @include scr-theme('dark') {
+      background: $mml__code--dark-bg;
+      color: $mml__code--dark-color;
+    }
   }
 }

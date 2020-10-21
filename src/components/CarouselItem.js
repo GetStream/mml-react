@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
  * A carousel item can contain any type of nodes, such as buttons, images etc.
  */
 export function CarouselItem({ children, ...props }) {
-  return <Slide className="mml-carousel-item">{children}</Slide>
+  return <Slide className="mml-carousel-item mml-wrap">{children}</Slide>
 }
 
 CarouselItem.propTypes = {

@@ -3,7 +3,7 @@ export var examples = [
     name: 'Buttons',
     description: 'Different buttons styles',
     mml: `<mml name="support">
-  <md>Just showing \`button\` variants:</md>
+  <md>Just showing \`button\` *variants*:</md>
   <button name="action" value="Activate">Regular button</button>
   <md>And here is variant \`floating\`:</md>
   <button variant="floating" name="action" value="Activate">Floating button</button>
@@ -13,7 +13,7 @@ export var examples = [
     name: 'ButtonFloating',
     description: 'Different buttons list style',
     mml: `<mml name="support">
-  <md>Just showing \`button_list\` \`floating\` variant:</md>
+  <md>Just showing \`button_list\` \`floating\` **variant**:</md>
   <button_list variant="floating">
     <button variant="floating" name="side" value="yes">Yes!</button>
     <button variant="floating" name="side" value="no">No, thanks</button>

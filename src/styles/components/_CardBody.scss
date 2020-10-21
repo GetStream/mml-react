@@ -1,0 +1,7 @@
+@include mml-component('card-body') {
+  font-size: $mml-card-body-font-size;
+  color: $mml-card-body-color;
+  @include scr-theme('dark') {
+    color: $mml-card-body--dark-color;
+  }
+}

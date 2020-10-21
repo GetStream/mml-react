@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   CarouselProvider,
-  Slider,
-  ButtonBack,
-  ButtonNext
+  Slider
+  // ButtonBack,
+  // ButtonNext
 } from 'pure-react-carousel'
 import { CarouselItem } from './CarouselItem'
 import 'pure-react-carousel/dist/react-carousel.es.css'
@@ -13,32 +13,61 @@ import 'pure-react-carousel/dist/react-carousel.es.css'
  * A carousel is a nice mobile friendly way of letting a user select
  * something
  */
-export function Carousel({ children, ...props }) {
+export function Carousel({
+  infinite,
+  perView,
+  perMove,
+  autoHeight,
+  slideWidth,
+  slideHeight,
+  children
+}) {
   const settings = {
-    infinite: false,
-    visibleSlides: 2.5,
-    step: 1
+    infinite,
+    visibleSlides: perView,
+    step: perMove,
+    isIntrinsicHeight: autoHeight,
+    naturalSlideWidth: slideWidth,
+    naturalSlideHeight: slideHeight
   }
 
   return (
     <div className="mml-carousel">
       <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={125}
-        totalSlides={React.Children.count(children)}
         className={'mml'}
         {...settings}
+        totalSlides={React.Children.count(children)}
       >
         <Slider>{children}</Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
+        {/* <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext> */}
       </CarouselProvider>
-      {/* <Slider {...settings}>{children}</Slider> */}
     </div>
   )
 }
 
+Carousel.defaultProps = {
+  infinite: true,
+  perView: 2.5,
+  perMove: 1,
+  autoHeight: true,
+  slideWidth: 100,
+  slideHeight: 125
+}
+
 Carousel.propTypes = {
+  /** Infinite loop */
+  infinite: PropTypes.bool,
+  /** Amount of slides per view */
+  perView: PropTypes.number,
+  /** Amount of slides per move */
+  perMove: PropTypes.number,
+  /** Auto caluclate slides' height */
+  autoHeight: PropTypes.bool,
+  /** Ideal slide width */
+  slideWidth: PropTypes.number,
+  /** Ideal slide height */
+  slideHeight: PropTypes.number,
   /** A list of carousel items */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(CarouselItem),

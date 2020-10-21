@@ -6,9 +6,9 @@ $mml-colors: (
   primary-faded: #bcd8ff,
   white: white,
   black: black,
-  grey-950: rgba(0, 0, 0, 0.08),
-  grey-900: #f0f0f0,
-  grey-800: #f7f7f7,
+  grey-900: rgba(0, 0, 0, 0.08),
+  grey-900-full: #f0f0f0,
+  grey-800-full: #f7f7f7,
   grey-300: rgba(255, 255, 255, 0.1),
   grey-200: rgba(255, 255, 255, 0.08),
   grey-100-full: #34373a,
@@ -24,7 +24,7 @@ $mml-border-radius: 16px !default;
 $mml-border-radius-base: 2px !default;
 $mml-border-style: solid !default;
 $mml-border-width: 1px !default;
-$mml-border-color: mml-color(grey-950) !default;
+$mml-border-color: mml-color(grey-900) !default;
 $mml-border: $mml-border-width $mml-border-style $mml-border-color;
 $mml--dark-border-color: mml-color(grey-100) !default;
 $mml-shadow: 0 3px 6px 0 rgba(#000000, 0.05), 0 1px 0 0 rgba(#000000, 0.1),
@@ -64,6 +64,33 @@ $mml-btn--floating-hover-bg: mml-color(grey-900) !default;
 $mml-btnlist-bg: $mml-bg !default;
 // dark:
 $mml-btnlist--dark-bg: $mml--dark-bg !default;
+
+// Card:
+// -----------------------------------------------------------------------------
+$mml-card-bg: $mml-bg !default;
+$mml-card--dark-bg: $mml--dark-bg !default;
+// head
+$mml-card-header-font-size: 13px !default;
+$mml-card-header-padding-y: 13px !default;
+$mml-card-header-padding-x: 13px !default;
+$mml-card-header-opacity: 0.3 !default;
+$mml-card-header-bg: mml-color(grey-800-full) !default;
+$mml-card-header-color: mml-color(black) !default;
+// head dark:
+$mml-card-header--dark-opacity: 0.7 !default;
+$mml-card-header--dark-bg: mml-color(grey-200) !default;
+$mml-card-header--dark-color: mml-color(white) !default;
+// body:
+$mml-card-body-font-size: 14px !default;
+$mml-card-body-color: mml-color(black) !default;
+// body dark:
+$mml-card-body--dark-color: mml-color(white) !default;
+
+// Carousel:
+// -----------------------------------------------------------------------------
+$mml-carousel-margin-y: $mml-spacer !default;
+$mml-carousel__item-gutter-x: $mml-spacer !default;
+$mml-carousel__text-font-size: 12px !default;
 
 // Grid (Col / Row):
 // -----------------------------------------------------------------------------
@@ -118,12 +145,14 @@ $mml-md-font-size: inherit !default;
 $mml-md-background: mml-color(white) !default;
 $mml-md--dark-bg: $mml--dark-bg !default;
 $mml-md--dark-color: mml-color(white) !default;
-// md `<code>`
+// md `<code>`:
 $mml__code-bg: mml-color(grey-900) !default;
 $mml__code-color: #e83e8c !default;
 $mml__code-padding: 2px 4px !default;
 $mml__code-font-size: 87.5% !default;
-$mml__code--dark-bg: rgba(255, 255, 255, 0.1) !default;
+// md `<code>` dark:
+$mml__code--dark-bg: mml-color(grey-200) !default;
+$mml__code--dark-color: lighten($mml__code-color, 10%) !default;
 
 // Number:
 // -----------------------------------------------------------------------------
@@ -154,27 +183,9 @@ $mml-number__count--dark-color: mml-color(white) !default;
 
 // Scheduler:
 // -----------------------------------------------------------------------------
-$mml-scheduler-bg: $mml-bg !default;
 $mml-scheduler-bg--full: $mml-bg--full !default;
 // dark:
-$mml-scheduler--dark-bg: $mml--dark-bg !default;
 $mml-scheduler--dark-bg--full: $mml--dark-bg--full !default;
-// head
-$mml-scheduler__head-font-size: 13px !default;
-$mml-scheduler__head-padding-y: 13px !default;
-$mml-scheduler__head-padding-x: 13px !default;
-$mml-scheduler__head-opacity: 0.3 !default;
-$mml-scheduler__head-bg: mml-color(grey-800) !default;
-$mml-scheduler__head-color: mml-color(black) !default;
-// head dark:
-$mml-scheduler__head--dark-opacity: 0.7 !default;
-$mml-scheduler__head--dark-bg: mml-color(grey-200) !default;
-$mml-scheduler__head--dark-color: mml-color(white) !default;
-// body:
-$mml-scheduler__body-font-size: 14px !default;
-$mml-scheduler__body-color: mml-color(black) !default;
-// body dark:
-$mml-scheduler__body--dark-color: mml-color(white) !default;
 
 // Text:
 // -----------------------------------------------------------------------------

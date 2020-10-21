@@ -4,7 +4,10 @@ $str-chat__list--livestream-padding-right: 10px;
 $str-chat__message--margin-right: 90px;
 
 @include mml-component('carousel') {
-  // variouse negative calculations to push the carousel to the right edge:
+  margin: $mml-carousel-margin-y 0;
+
+  // various negative calculations to push the carousel to the right edge:
+  // ---------------------------------------------------------------------------
   .str-chat__list .str-chat__message-inner &,
   .str-chat__list .str-chat__message-simple-inner & {
     margin-right: -$str-chat__message--margin-right;
@@ -32,4 +35,25 @@ $str-chat__message--margin-right: 90px;
 }
 
 @include mml-component('carousel-item') {
+  padding-right: $mml-carousel__item-gutter-x;
+
+  // react-pure-carousel elements:
+  // ---------------------------------------------------------------------------
+  .carousel__inner-slide {
+    display: flex;
+    flex-direction: column;
+    @extend %mml-bordered-area;
+
+    > *:first-child {
+      border-top-left-radius: $mml-border-radius !important;
+    }
+    > *:last-child {
+      border-bottom-left-radius: $mml-border-radius !important;
+    }
+
+    @include mml-component('text') {
+      flex: 10;
+      font-size: $mml-carousel__text-font-size;
+    }
+  }
 }

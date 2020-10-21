@@ -1,0 +1,38 @@
+//
+// MML bordered area
+//
+// Automatically manages the border of its immediate children
+//
+// -----------------------------------------------------------------------------
+%mml-bordered-area {
+  > *:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-bottom: 0;
+  }
+
+  > *:first-child:not(:last-child):not(.mml--floating) {
+    border-top-left-radius: $mml-border-radius;
+    border-top-right-radius: $mml-border-radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+  }
+
+  > *:last-child:not(:first-child):not(.mml--floating) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: $mml-border-radius;
+    border-bottom-left-radius: $mml-border-radius-base;
+  }
+
+  @include scr-theme('dark') {
+    & > *:last-child:not(:first-child) {
+      border-bottom-right-radius: $mml-border-radius;
+      border-bottom-left-radius: $mml-border-radius-base;
+    }
+  }
+
+  > .mml--floating:last-child {
+    border-width: $mml-border-width 0 0 0;
+  }
+}

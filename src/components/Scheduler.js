@@ -1,6 +1,8 @@
 import React from 'react'
 import { DatePicker } from './DatePicker'
-import { Icon } from './Icon'
+import { Card } from './Card'
+import { CardHeader } from './CardHeader'
+import { CardBody } from './CardBody'
 import IcalExpander from 'ical-expander'
 
 export class Scheduler extends React.Component {
@@ -66,12 +68,9 @@ export class Scheduler extends React.Component {
     }
 
     return (
-      <div className="mml-scheduler">
-        <div className="mml-scheduler__head">
-          <Icon name="date_range" />
-          <span className="mml-scheduler__head-text">Scheduler</span>
-        </div>
-        <div className="mml-scheduler__body">
+      <Card className="mml-scheduler">
+        <CardHeader icon="date_range" text="Scheduler" />
+        <CardBody>
           {this.state.loading ? (
             <div>Loading availability</div>
           ) : (
@@ -86,8 +85,8 @@ export class Scheduler extends React.Component {
               onChange={this.props.onChange}
             />
           )}
-        </div>
-      </div>
+        </CardBody>
+      </Card>
     )
   }
 }
