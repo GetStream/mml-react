@@ -1,0 +1,11 @@
+@include mml-component('success') {
+  display: flex;
+  justify-content: center;
+  padding: $mml-success-spacer;
+  color: $mml-success-color;
+  font-size: $mml-success-font-size;
+
+  @include scr-theme('dark') {
+    color: $mml-success--dark-color;
+  }
+}

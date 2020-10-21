@@ -1,8 +1,6 @@
-@import '../vendor/bootstrap-grid';
-
 @include mml-component('row') {
   @include mml-row();
-  background: $mml-grid__row-bg;
+  background: $mml-row-bg;
   border: $mml-border;
 
   &:last-child {
@@ -11,7 +9,7 @@
   }
 
   @include scr-theme('dark') {
-    background: $mml-grid__row--dark-bg;
+    background: $mml-row--dark-bg;
     border-color: $mml--dark-border-color;
   }
 
@@ -25,19 +23,3 @@
     }
   }
 }
-
-@include mml-component('col') {
-  // no special styles
-  // &-align-left {
-  // }
-
-  &-align-center {
-    justify-content: center;
-  }
-
-  &-align-right {
-    justify-content: flex-end;
-  }
-}
-
-@include mml-grid-columns();

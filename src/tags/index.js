@@ -7,7 +7,7 @@ import {
   Number
 } from './data'
 
-import { Carousel, Column, Item, Row } from './layout'
+import { Carousel, Item, Row, Col } from './layout'
 
 import { Icon, Image, MD, Text } from './core'
 
@@ -18,7 +18,7 @@ var tags = {
   input: Input,
   scheduler: Scheduler,
   carousel: Carousel,
-  column: Column,
+  col: Col,
   item: Item,
   row: Row,
   icon: Icon,

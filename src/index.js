@@ -1,5 +1,3 @@
-import './styles/vendor/react_add_to_calendar.scss'
-
 import './styles/index.scss'
 
 export { examples } from './examples'

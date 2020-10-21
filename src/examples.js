@@ -58,16 +58,16 @@ export var examples = [
     mml: `<mml name="support">
 <text>Did you authorize these last 3 transactions on your account?</text>
   <row>
-    <column width="4">$15</column>
-    <column width="8">Oren's Hummus</column>
+    <col width="4">$15</col>
+    <col width="8">Oren's Hummus</col>
   </row>
   <row>
-    <column width="4">$1000</column>
-    <column width="8">Apple monitor stand</column>
+    <col width="4">$1000</col>
+    <col width="8">Apple monitor stand</col>
   </row>
   <row>
-    <column width="4">$60</column>
-    <column width="8">Epic Games Skins</column>
+    <col width="4">$60</col>
+    <col width="8">Epic Games Skins</col>
   </row>
 <button name="authorized" value="yes">Yes</button>
 <button name="authorized" value="yes">No</button>

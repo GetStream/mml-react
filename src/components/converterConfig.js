@@ -8,7 +8,7 @@ import { Scheduler } from './Scheduler'
 import { Text } from './Text'
 import { MD } from './MD'
 import { Row } from './Row'
-import { Column } from './Column'
+import { Col } from './Col'
 import { Image } from './Image'
 import { Icon } from './Icon'
 import { Carousel } from './Carousel'
@@ -38,11 +38,11 @@ export const converterConfig = {
   add_to_calendar: tag => {
     return <AddToCalendar key={tag.key} {...tag.node.attributes} />
   },
-  column: (tag, children) => {
+  col: (tag, children) => {
     return (
-      <Column key={tag.key} {...tag.node.attributes}>
+      <Col key={tag.key} {...tag.node.attributes}>
         {children}
-      </Column>
+      </Col>
     )
   },
   row: (tag, children) => {

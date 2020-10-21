@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Helpers from 'react-add-to-calendar/lib/helpers'
 import { Card } from './Card'
 import { CardHeader } from './CardHeader'
-import { CardBody } from './CardBody'
-import { Icon } from './Icon'
 import { ButtonList } from './ButtonList'
 
 const helpers = new Helpers()

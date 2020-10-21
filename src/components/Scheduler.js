@@ -1,9 +1,11 @@
 import React from 'react'
+import IcalExpander from 'ical-expander'
 import { DatePicker } from './DatePicker'
 import { Card } from './Card'
 import { CardHeader } from './CardHeader'
 import { CardBody } from './CardBody'
-import IcalExpander from 'ical-expander'
+import { Error } from './Error'
+import { Loader } from './Loader'
 
 export class Scheduler extends React.Component {
   // TODO: document props
@@ -58,22 +60,19 @@ export class Scheduler extends React.Component {
   render() {
     const dateOnly = !!this.props.full_day
     const interval = this.props.interval ? 1 * this.props.interval : 30
-
-    if (this.state.error) {
-      return (
-        <div className="mml-scheduler">
-          Failed to load availability, error: {this.state.error}
-        </div>
-      )
-    }
+    const { error, loading } = this.state
 
     return (
       <Card className="mml-scheduler">
         <CardHeader icon="date_range" text="Scheduler" />
         <CardBody>
-          {this.state.loading ? (
-            <div>Loading availability</div>
-          ) : (
+          {error && !loading && (
+            <Error error={`Failed to load availability, error: ${error}`} />
+          )}
+          {!error && loading && (
+            <Loader loading={true} text="Loading availability"></Loader>
+          )}
+          {!error && !loading && (
             <DatePicker
               selected={this.props.selected}
               timeIntervals={interval}

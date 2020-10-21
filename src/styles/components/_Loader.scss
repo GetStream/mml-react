@@ -1,0 +1,10 @@
+@include mml-component('loader') {
+  display: flex;
+  justify-content: center;
+  padding: $mml-loader-spacer;
+  font-size: $mml-loader-font-size;
+
+  &__text {
+    padding-left: $mml-loader-spacer;
+  }
+}
