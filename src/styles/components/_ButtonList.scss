@@ -31,12 +31,6 @@
       border-color: $mml--dark-border-color;
     }
   }
-
-  .#{$mml-prefix}text + & {
-    // margin-top: 0;
-    // border-top-left-radius: 0;
-    // border-top-right-radius: 0;
-  }
 }
 
 @include mml-component('btnlist', 'floating') {

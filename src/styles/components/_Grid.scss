@@ -24,33 +24,6 @@
       background: none;
     }
   }
-
-  // the following covers the rounded bottom right corner of a <p class="mml-text">
-  // followed by a <div class="mml-row"> in a dark theme scenario.
-  // this to work needs the color variable of these components' background to be
-  // set as a hex value instead that as rgba value, since the opacity would
-  // create an undesired overlapping of colors
-  // .#{$mml-prefix}text + & {
-  //   @include scr-theme('dark') {
-  //     position: relative;
-  //     &:before {
-  //       content: "";
-  //       position: absolute;
-  //       right: 0;
-  //       bottom: 100%;
-  //       height: $mml-border-radius;
-  //       width: $mml-border-radius;
-  //       background: $mml-text--dark-bg;
-  //     }
-  //   }
-  // }
-
-  // another option to solve the problem, but not really correct, would be to
-  // disregard the unmatched rounded border styling of the contiguous components
-  // and just apply some distancing with:
-  // &:first-of-type {
-  //   margin-top: 2px;
-  // }
 }
 
 @include mml-component('col') {
