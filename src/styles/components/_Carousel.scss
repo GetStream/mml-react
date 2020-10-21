@@ -1,7 +1,34 @@
+$str-chat__list--messaging-padding-right: 40px;
+$str-chat__list--commerce-padding-right: 20px;
+$str-chat__list--livestream-padding-right: 10px;
+$str-chat__message--margin-right: 90px;
+
 @include mml-component('carousel') {
-  // width: 100%;
-  // max-width: 100%;
-  // overflow: hidden;
+  // variouse negative calculations to push the carousel to the right edge:
+  .str-chat__list .str-chat__message-inner &,
+  .str-chat__list .str-chat__message-simple-inner & {
+    margin-right: -$str-chat__message--margin-right;
+  }
+
+  .commerce.str-chat .str-chat__list .str-chat__message-inner &,
+  .commerce.str-chat .str-chat__list .str-chat__message-simple-inner & {
+    margin-right: -($str-chat__list--commerce-padding-right +
+          $str-chat__message--margin-right);
+  }
+
+  .livestream.str-chat .str-chat__list .str-chat__message-inner &,
+  .livestream.str-chat .str-chat__list .str-chat__message-simple-inner & {
+    margin-right: -($str-chat__list--livestream-padding-right +
+          $str-chat__message--margin-right);
+  }
+
+  @media screen and (min-width: 420px) {
+    .messaging.str-chat .str-chat__list .str-chat__message-inner &,
+    .messaging.str-chat .str-chat__list .str-chat__message-simple-inner & {
+      margin-right: -($str-chat__list--messaging-padding-right +
+            $str-chat__message--margin-right);
+    }
+  }
 }
 
 @include mml-component('carousel-item') {
