@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export function Icon({ name, ...props }) {
-  return <i className="material-icons">{name}</i>
+  return <i className="mml-icon material-icons">{name}</i>
 }
 
 Icon.propTypes = {

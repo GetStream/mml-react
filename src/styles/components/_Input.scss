@@ -1,0 +1,24 @@
+@include mml-component('input') {
+  position: relative;
+  width: 100%;
+  padding: $mml-input-padding-y $mml-input-padding-x;
+  -webkit-appearance: none;
+  border: $mml-border;
+  background: $mml-input-bg;
+  color: $mml-input-color;
+
+  &:focus {
+    outline: $mml-input-focus-outline;
+    color: $mml-input-focus-color;
+  }
+
+  @include scr-theme('dark') {
+    border-color: $mml--dark-border-color;
+    background: $mml-input--dark-bg;
+    color: $mml-input--dark-color;
+
+    &:focus {
+      color: $mml-input--dark-focus-color;
+    }
+  }
+}

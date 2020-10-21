@@ -1,13 +1,26 @@
 @include mml-component('text') {
   position: relative;
-  flex: 1 1;
+  flex: 1;
   display: block;
   min-height: 32px;
-  padding: 5px 10px;
-  font-size: 15px;
-  color: black;
-  border-radius: 16px 16px 16px 0;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  margin-left: 0;
+  padding: $mml-text-padding-y $mml-text-padding-x;
+  border-radius: $mml-border-radius $mml-border-radius $mml-border-radius 0;
+  border: $mml-border;
+  color: $mml-text-color;
+  background: $mml-text-bg;
+  @if $mml-text-font-size != inherit {
+    font-size: $mml-text-font-size;
+  }
+
+  @include scr-theme('dark') {
+    background: $mml-text--dark-bg;
+    color: $mml-text--dark-color;
+    border-color: $mml--dark-border-color;
+  }
+}
+
+// this overrides some stream-chat-react styling causing unnecessary vertical
+// distancing
+.str-chat__message-simple p.#{$mml-prefix}text {
+  white-space: normal;
 }

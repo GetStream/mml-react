@@ -1,37 +1,37 @@
 @include mml-component('btn') {
   @include mml-button-base();
-  margin: $mml-spacer 0;
-  background: transparent;
-  color: $secondary-color;
-  margin-right: $mml-spacer;
+  width: 100%;
+  margin: 0;
+  background: $mml-btn-bg;
+  color: $mml-btn-color;
 
-  &:focus {
-    outline: $mml-button-outline-focus;
+  @include scr-theme('dark') {
+    background: $mml-btn--dark-bg;
+    color: $mml-btn--dark-color;
+    border-color: $mml--dark-border-color;
   }
 
   &:hover {
-    background: $secondary-color;
-    color: white;
-  }
+    background: $mml-btn-hover-bg;
+    color: $mml-btn-hover-color;
 
-  // + .#{mml-component-sel('btn')} {
-  //   margin-top: 0;
-  // }
-
-  @include scr-theme('dark') {
-    background: $mml-button--dark-bg;
-    color: $mml-button--dark-color;
+    @include scr-theme('dark') {
+      background: $mml-btn--dark-hover-bg;
+      color: $mml-btn--dark-hover-color;
+    }
   }
 }
 
 @include mml-component('btn', 'floating') {
-  background: transparent;
-  color: $black;
+  width: auto;
+  border-radius: $mml-btn--floating-border-radius;
+  background: $mml-btn--floating-bg;
+  color: $mml-btn--floating-color;
   border: 0;
-  box-shadow: $mml-button--floating-shadow;
+  box-shadow: $mml-btn--floating-shadow;
   font-weight: normal;
 
   &:hover {
-    background: $grey;
+    background: $mml-btn--floating-hover-bg;
   }
 }

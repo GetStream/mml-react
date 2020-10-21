@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-
 // Setup
+@import 'functions';
 @import 'variables';
 @import 'mixins';
 @import 'base';
@@ -20,7 +19,7 @@
 @import 'components/Loader';
 @import 'components/MD';
 @import 'components/Number';
-@import 'components/Text';
+@import 'components/Scheduler';
 
 // .mml-carousel {
 //   width: 350px;

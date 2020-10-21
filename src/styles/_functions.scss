@@ -1,0 +1,26 @@
+@function mml-color($key: 'black') {
+  @return map-get($mml-colors, $key);
+}
+
+@function mml-component-sel($name) {
+  @return #{$mml-prefix}#{to-lower-case($name)};
+}
+
+// @function mml-str-replace($string, $search, $replace: "") {
+//   $index: str-index($string, $search);
+//   @if $index {
+//     @return str-slice($string, 1, $index - 1) + $replace + mml-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+//   }
+//   @return $string;
+// }
+
+// // See https://codepen.io/kevinweber/pen/dXWoRw
+// @function mml-escape-svg($string) {
+//   $escaped-characters: (("<", "%3c"), (">", "%3e"), ("#", "%23"));
+//   @if str-index($string, "data:image/svg+xml") {
+//     @each $char, $encoded in $escaped-characters {
+//       $string: mml-str-replace($string, $char, $encoded);
+//     }
+//   }
+//   @return $string;
+// }

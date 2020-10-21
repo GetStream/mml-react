@@ -57,11 +57,11 @@ yarn; yarn start
 
 ## Usage
 
-```
-import {MML} from 'mml-react';
+```jsx
+import { MML } from 'mml-react'
 
 // use the react component
-<MML source={mml} />
+;<MML source={mml} />
 ```
 
 ## Overwriting Components
@@ -123,9 +123,8 @@ Here's how you would go about implementing it.
 
 Add something like this to src/tags/data.js
 
-```
+```jsx
 export class ColorPicker extends MMLDataTag {
-
   initialState() {
     const data = {}
     data[this.node.attributes.name] = this.node.attributes.value
@@ -148,7 +147,7 @@ color_picker: ColorPicker,
 
 In `src/components` create a file called ColorPicker.js and do something along these lines:
 
-```
+```jsx
 export function ColorPicker({ name, ...props }) {
   const mmlContext = useContext(MMLContext)
 
@@ -157,7 +156,7 @@ export function ColorPicker({ name, ...props }) {
   return (
     <input
       value={value}
-      onChange={(event) => mmlContext.setValue(name, event.target.value)}
+      onChange={event => mmlContext.setValue(name, event.target.value)}
     />
   )
 }
@@ -166,7 +165,7 @@ export function ColorPicker({ name, ...props }) {
 Styleguidist is the easiest way to test your react component in isolation.
 The MMLContainer provides the right context so you can test it like:
 
-```
+```jsx
 <MMLContainer>
   <ColorPicker />
 </MMLContainer>
@@ -176,7 +175,7 @@ The MMLContainer provides the right context so you can test it like:
 
 Open `src/components/converterConfig.js` and add something like this:
 
-```
+```jsx
 color_picker: tag => {
   return <ColorPicker {...tag.node.attributes} />
 },

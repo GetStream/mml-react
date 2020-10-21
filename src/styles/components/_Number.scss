@@ -1,0 +1,78 @@
+@include mml-component('number') {
+  flex: 1;
+  display: flex;
+  border: $mml-border;
+  background: $mml-number-bg;
+
+  @include scr-theme('dark') {
+    background: $mml-number--dark-bg;
+    border-color: $mml--dark-border-color;
+  }
+
+  // number count value
+  &__count {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $mml-number__count-color;
+    font-weight: $mml-number__count-font-weight;
+
+    @include scr-theme('dark') {
+      color: $mml-number__count--dark-color;
+    }
+  }
+
+  // number btn control
+  &__btn {
+    @include mml-button-base();
+    position: relative;
+    width: $mml-number__btn-width;
+    height: $mml-number__btn-height;
+    margin: $mml-number__btn-margin-y $mml-number__btn-margin-x;
+    border-radius: $mml-number__btn-border-radius;
+    color: $mml-number__btn-color;
+    background: $mml-number__btn-bg;
+    // as .mml-btn.mml--floating:
+    border: 0;
+    box-shadow: $mml-btn--floating-shadow;
+    font-weight: normal;
+
+    &:hover {
+      background: $mml-number__btn-hover-bg;
+      color: $mml-number__btn-hover-color;
+    }
+
+    @include scr-theme('dark') {
+      background: $mml-number__btn--dark-bg;
+      color: $mml-number__btn--dark-color;
+
+      &:hover {
+        background: $mml-number__btn--dark-hover-bg;
+        color: $mml-number__btn--dark-hover-color;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    // &--dec {}
+
+    // &--inc {}
+
+    .mml-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: $mml-number__btn-icon-size;
+    }
+  }
+}

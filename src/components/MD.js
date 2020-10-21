@@ -66,18 +66,20 @@ export function MD({ text, ...props }) {
   })
 
   return (
-    <ReactMarkdown
-      allowedTypes={allowedMarkups}
-      source={newText}
-      linkTarget="_blank"
-      plugins={[]}
-      escapeHtml={true}
-      skipHtml={false}
-      unwrapDisallowed={true}
-      transformLinkUri={uri =>
-        uri.startsWith('app://') ? uri : ReactMarkdown.uriTransformer(uri)
-      }
-    />
+    <div className="mml-md">
+      <ReactMarkdown
+        allowedTypes={allowedMarkups}
+        source={newText}
+        linkTarget="_blank"
+        plugins={[]}
+        escapeHtml={true}
+        skipHtml={false}
+        unwrapDisallowed={true}
+        transformLinkUri={uri =>
+          uri.startsWith('app://') ? uri : ReactMarkdown.uriTransformer(uri)
+        }
+      />
+    </div>
   )
 }
 

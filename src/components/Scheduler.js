@@ -1,6 +1,7 @@
 import React from 'react'
 
-import DatePicker from 'react-datepicker'
+// import DatePicker from 'react-datepicker'
+import { DatePicker } from './DatePicker'
 import IcalExpander from 'ical-expander'
 
 export class Scheduler extends React.Component {
@@ -56,8 +57,6 @@ export class Scheduler extends React.Component {
   render() {
     const dateOnly = !!this.props.full_day
     const interval = this.props.interval ? 1 * this.props.interval : 30
-    const showTime = !dateOnly
-    const format = showTime ? 'MMMM d, yyyy h:mm aa' : 'h:mm aa'
 
     if (this.state.error) {
       return (
@@ -76,7 +75,8 @@ export class Scheduler extends React.Component {
             selected={this.props.selected}
             timeIntervals={interval}
             showTimeSelect={!dateOnly}
-            dateFormat={format}
+            // dateFormat="ddd MMM DD"
+            // timeFormat="H:mm A"
             filterDate={this.icalFilter}
             timeCaption="Time"
             onChange={this.props.onChange}

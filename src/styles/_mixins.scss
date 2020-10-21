@@ -1,7 +1,4 @@
-@function mml-component-sel($name) {
-  @return #{$mml-prefix}#{to-lower-case($name)};
-}
-
+//
 // MML component
 //
 // Automatically scope the class name
@@ -31,40 +28,68 @@
   }
 }
 
-// Button reset
 //
-// Resets the default browser's `<button>` element styling
+// Button base
+//
+// Apply a default button styling based on the `$mml-btn-` SCSS variables
+// globally set.
 //
 // -----------------------------------------------------------------------------
-@mixin mml-button-reset() {
+@mixin mml-button-base() {
   display: inline-block;
   vertical-align: middle;
   user-select: none;
   text-decoration: none;
   -webkit-appearance: none;
-  border-radius: $mml-button-border-radius;
-}
-
-//
-// Button base
-//
-// Apply a default button styling based on the `$mml-button-` SCSS variables
-// globally set.
-//
-// -----------------------------------------------------------------------------
-@mixin mml-button-base() {
-  @include mml-button-reset();
-  padding: $mml-button-padding-y $mml-button-padding-x;
-  border: $mml-button-border-thickness solid $mml-button-border-color;
-  font-family: $mml-button-font-family;
-  font-weight: $mml-button-font-weight;
-  @if $mml-button-font-size != inherit {
-    font-size: $mml-button-font-size;
+  padding: $mml-btn-padding-y $mml-btn-padding-x;
+  border-style: $mml-border-style;
+  border-color: $mml-border-color;
+  border-width: $mml-border-width;
+  border-radius: 0;
+  font-family: $mml-btn-font-family;
+  font-weight: $mml-btn-font-weight;
+  @if $mml-btn-font-size != inherit {
+    font-size: $mml-btn-font-size;
   }
-  @if $mml-button-text-transform != none {
-    text-transform: $mml-button-text-transform;
+  @if $mml-btn-text-transform != none {
+    text-transform: $mml-btn-text-transform;
   }
   &:not([disabled]) {
     cursor: pointer;
   }
+
+  &:focus {
+    outline: $mml-btn-focus-outline;
+  }
+}
+
+//
+// Icon font
+//
+// -----------------------------------------------------------------------------
+@mixin mml-icon($fontName: 'Material Icons') {
+  font-family: $fontName;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+//
+// SVG background
+//
+// Quick way to use a simple svg shape as a background
+// -----------------------------------------------------------------------------
+@mixin mml-svg-bg($content) {
+  background-image: mml-escape-svg(
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' #{$content}/></svg>")
+  );
 }

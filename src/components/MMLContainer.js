@@ -53,7 +53,7 @@ export function MMLContainer({
   }
 
   if (error) {
-    return <div className="mml-container">{error}</div>
+    return <div className="mml-container mml-wrap">{error}</div>
   }
 
   const context = {
@@ -66,7 +66,7 @@ export function MMLContainer({
     return (
       <MMLContext.Provider value={context}>
         <div className="mml-container">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="mml-wrap">
             {children}
             <Loader loading={state.loading} />
             <Success success={state.success} />
@@ -78,7 +78,7 @@ export function MMLContainer({
   } else {
     return (
       <MMLContext.Provider value={context}>
-        <div className="mml-container">{children}</div>
+        <div className="mml-container mml-wrap">{children}</div>
       </MMLContext.Provider>
     )
   }

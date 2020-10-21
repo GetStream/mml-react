@@ -12,7 +12,6 @@ export const Container = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  min-width: 100%;
   margin-left: -${gutter}px;
   margin-right: -${gutter}px;
 `

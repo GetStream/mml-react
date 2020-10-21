@@ -52,6 +52,11 @@ const Chat = styled.div`
     width: 100%;
   }
 
+  .str-chat__list {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   ${CHAT_NOTIFICATIONS
     ? ``
     : `

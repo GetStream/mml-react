@@ -12,6 +12,7 @@ export function Input({ name, ...props }) {
 
   return (
     <input
+      className="mml-input"
       value={value}
       onChange={event => mmlContext.setValue(name, event.target.value)}
     />

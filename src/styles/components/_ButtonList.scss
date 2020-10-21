@@ -1,20 +1,41 @@
 @include mml-component('btnlist') {
   display: flex;
   flex-direction: column;
-  margin: $mml-spacer 0;
-  border: $mml-btnlist-border-thickness solid $mml-btnlist-border-color;
-  border-radius: $mml-btnlist-border-radius;
-  border-bottom-left-radius: 0;
+  overflow: hidden;
+  border: $mml-border;
+  background: $mml-btnlist-bg;
+
+  @include scr-theme('dark') {
+    border-color: $mml--dark-border-color;
+    background: $mml-btnlist--dark-bg;
+  }
 
   @include mml-component('btn') {
     margin: 0;
+    border-width: 0 0 $mml-border-width 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     border-radius: 0;
-    border-width: 0 0 1px;
-    border-color: $mml-btnlist-btn-border-color;
+    background: none;
 
     &:last-child {
-      border-width: 0;
+      border-bottom: 0;
     }
+  }
+
+  @include scr-theme('dark') {
+    border-color: $mml--dark-border-color;
+
+    @include mml-component('btn') {
+      background: none;
+      border-color: $mml--dark-border-color;
+    }
+  }
+
+  .#{$mml-prefix}text + & {
+    // margin-top: 0;
+    // border-top-left-radius: 0;
+    // border-top-right-radius: 0;
   }
 }
 
@@ -22,10 +43,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  border: 0;
 
   @include mml-component('btn') {
-    border-radius: $mml-border-radius;
+    border-radius: $mml-btn--floating-border-radius;
     margin: $mml-spacer / 2;
   }
 }

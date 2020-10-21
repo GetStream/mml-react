@@ -1,22 +1,65 @@
 @import 'variables';
 
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i');
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+// @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i');
 
-.str-chat__attachment-mml {
-  // max-width: 400px;
+.str-chat .material-icons {
+  font-family: 'Material Icons';
 }
 
-// .str-chat {
-//   box-sizing: border-box;
+.str-chat__attachment-mml {
+  &:not(:last-child) {
+    margin: 1px 0 3px;
+  }
+  &:last-child {
+    margin-bottom: $mml-spacer;
+  }
 
-//   *,
-//   *::after,
-//   *::before {
-//     box-sizing: inherit;
-//     font-family: $second-font;
-//   }
-// }
+  // the attachment-mml might be followed by another message, and despite this
+  // the wrapper <li> around it would still have the class `--single`:
+  // <li class="str-chat__li str-chat__li--single">
+  // therefore we need to undo the border-radius of all the following messages
+  ~ .str-chat__message-text {
+    .str-chat__message-text-inner {
+      border-top-left-radius: $mml-border-radius-base;
+    }
+  }
+}
 
-// .clearfix {
-//   clear: both;
-// }
+.mml-wrap {
+  // TODO: fix border scoping
+  // overflow: hidden;
+  // border: $mml-border;
+  // border-radius: $mml-border-radius;
+  // border-bottom-left-radius: $mml-border-radius-base;
+  // > *:first-child {
+  //   border-top: 0;
+  // }
+  // > *:last-child {
+  //   border-bottom: 0;
+  // }
+
+  > *:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-bottom: 0;
+  }
+
+  > *:first-child:not(:last-child):not(.mml--floating) {
+    border-top-left-radius: $mml-border-radius;
+    border-top-right-radius: $mml-border-radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+  }
+
+  > *:last-child:not(:first-child):not(.mml--floating) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: $mml-border-radius;
+    border-bottom-left-radius: $mml-border-radius-base;
+  }
+
+  > .mml--floating:last-child {
+    border-width: $mml-border-width 0 0 0;
+  }
+}

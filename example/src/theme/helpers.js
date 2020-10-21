@@ -27,13 +27,13 @@ export function above(breakpoint, rules) {
 export function between(breakpointMin, breakpointMax, rules) {
   return breakpointMin === breakpointsKeys[0]
     ? `
-    @media (max-width: ${breakpoints[breakpointMax] - 1}px) {
+    @media (max-width: ${breakpoints[breakpointMax] - 0.02}px) {
       ${rules}
     }`
     : `
     @media (min-width: ${
       breakpoints[breakpointMin]
-    }px) and (max-width: ${breakpoints[breakpointMax] - 1}px) {
+    }px) and (max-width: ${breakpoints[breakpointMax] - 0.02}px) {
       ${rules}
     }`
 }
