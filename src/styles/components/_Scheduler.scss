@@ -15,9 +15,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    bottom: -20px;
-    right: -20px;
     overflow: scroll;
+    bottom: 0;
+    right: 0;
+    // compromise:
+    // bottom: -20px;
+    // right: -20px;
+    // or:
+    // IE, Edge and Firefox
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    // Chrome, Safari and Opera
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
@@ -28,5 +39,12 @@
   .mml-scroller {
     height: 217px;
     width: 50%;
+  }
+
+  &__item {
+    &--selected {
+      color: mml-color(primary);
+      font-weight: bold;
+    }
   }
 }

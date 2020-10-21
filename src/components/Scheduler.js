@@ -75,10 +75,10 @@ export class Scheduler extends React.Component {
             selected={this.props.selected}
             timeIntervals={interval}
             showTimeSelect={!dateOnly}
+            format={this.props.format}
             // dateFormat="ddd MMM DD"
             // timeFormat="H:mm A"
             filterDate={this.icalFilter}
-            timeCaption="Time"
             onChange={this.props.onChange}
           />
         )}

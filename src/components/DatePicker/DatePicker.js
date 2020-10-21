@@ -1,7 +1,39 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import DatePickerScroller from './DatePickerScroller'
-import { roundToNearestMinutes } from 'date-fns'
+import DatePickerDate from './DatePickerDate'
+import DatePickerTime from './DatePickerTime'
+import {
+  format as formatDate,
+  roundToNearestMinutes,
+  setDate,
+  setMonth,
+  setYear,
+  setHours,
+  setMinutes
+} from 'date-fns'
+
+/**
+ * Split datetime in date and time
+ *
+ * @param {Date} datetime
+ */
+export function splitDatetime(datetime) {
+  const day = datetime.getDate()
+  const month = datetime.getMonth()
+  const year = datetime.getFullYear()
+  const hours = datetime.getHours()
+  const minutes = datetime.getMinutes()
+  const seconds = datetime.getSeconds()
+
+  return {
+    day,
+    month,
+    year,
+    hours,
+    minutes,
+    seconds
+  }
+}
 
 /**
  * DatePicker
@@ -14,9 +46,12 @@ export function DatePicker({
   selected,
   dateInterval = 1,
   timeInterval = 30,
-  showTimeSelect,
+  format = 'MMMM d, yyyy h:mm aa',
   dateFormat = 'E LLL dd',
   timeFormat = 'h:mm a',
+  allowPast = false,
+  showTimeSelect = true,
+  startDate,
   filterDate,
   onChange
 }) {
@@ -26,42 +61,70 @@ export function DatePicker({
     initialDate = selected
   } else {
     initialDate = roundToNearestMinutes(new Date(), {
-      nearestTo: Math.min(30, Math.round(timeInterval / 2))
+      nearestTo: Math.min(30, Math.round(timeInterval))
     })
   }
 
   const [datetime, setDatetime] = React.useState(initialDate)
-  // const format = dateFormat + ' ' + timeFormat;
 
-  function handleChangeDate(val) {
-    setDatetime(val)
-    if (onChange) onChange(new Date(datetime))
+  /**
+   * Handle date change
+   *
+   * @param {Date} value
+   */
+  function handleChangeDate(value) {
+    const { day, month, year } = splitDatetime(value)
+    let newDatetime = datetime
+    newDatetime = setDate(newDatetime, day)
+    newDatetime = setMonth(newDatetime, month)
+    newDatetime = setYear(newDatetime, year)
+
+    setDatetime(newDatetime)
   }
 
-  function handeChangeTime(val) {
-    setDatetime(val)
-    if (onChange) onChange(new Date(datetime))
+  /**
+   * Handle date change
+   *
+   * @param {Date} value
+   */
+  function handleChangeTime(value) {
+    const { hours, minutes } = splitDatetime(value)
+    let newDatetime = datetime
+    newDatetime = setHours(newDatetime, hours)
+    newDatetime = setMinutes(newDatetime, minutes)
+
+    setDatetime(newDatetime)
+  }
+
+  // callback
+  if (onChange) {
+    React.useEffect(() => {
+      onChange(datetime)
+    }, [datetime])
   }
 
   return (
     <div className="mml-datepicker">
-      <DatePickerScroller
+      <input type="hidden" value={formatDate(datetime, format)} />
+      <DatePickerDate
         type="date"
         filter={filterDate}
         format={dateFormat}
         value={datetime}
         onChange={handleChangeDate}
-        dateInterval={dateInterval}
-        timeInterval={timeInterval}
+        interval={dateInterval}
+        allowPast={allowPast}
+        startDate={startDate}
       />
       {showTimeSelect && (
-        <DatePickerScroller
+        <DatePickerTime
           type="time"
+          filter={filterDate}
           format={timeFormat}
           value={datetime}
-          onChange={handeChangeTime}
-          dateInterval={dateInterval}
-          timeInterval={timeInterval}
+          onChange={handleChangeTime}
+          interval={timeInterval}
+          allowPast={allowPast}
         />
       )}
     </div>
@@ -69,12 +132,13 @@ export function DatePicker({
 }
 
 DatePicker.propTypes = {
-  /** The selected date time (optional) */
+  /** The selected date time */
   selected: PropTypes.string,
   /** Interval in days for time selection */
   dateInterval: PropTypes.number,
   /** Interval in minutes for time selection */
   timeInterval: PropTypes.number,
+  /** Whether to show the time picker */
   showTimeSelect: PropTypes.bool,
   /** Date format @see https://date-fns.org/v2.16.1/docs/format */
   dateFormat: PropTypes.string,
@@ -82,6 +146,10 @@ DatePicker.propTypes = {
   timeFormat: PropTypes.string,
   /** Filter dates, it should return a boolean */
   filterDate: PropTypes.func,
+  /** Start date, it defaults from 3 days behind the given date */
+  startDate: PropTypes.instanceOf(Date),
+  /** Allows to select a date in the past */
+  allowPast: PropTypes.bool,
   /** On change callback */
   onChange: PropTypes.func
 }
