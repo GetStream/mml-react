@@ -146,6 +146,10 @@ $mml-number__count--dark-color: mml-color(white) !default;
 
 // Scheduler:
 // -----------------------------------------------------------------------------
+$mml-scheduler-bg: $mml-bg !default;
+// dark:
+$mml-scheduler--dark-bg: $mml--dark-bg !default;
+$mml-scheduler--dark-bg--full: mml-color(grey-100-full) !default;
 // head
 $mml-scheduler__head-font-size: 13px !default;
 $mml-scheduler__head-padding-y: 13px !default;
@@ -159,10 +163,8 @@ $mml-scheduler__head--dark-bg: mml-color(grey-200) !default;
 $mml-scheduler__head--dark-color: mml-color(white) !default;
 // body:
 $mml-scheduler__body-font-size: 14px !default;
-$mml-scheduler__body-bg: $mml-bg !default;
 $mml-scheduler__body-color: mml-color(black) !default;
 // body dark:
-$mml-scheduler__body--dark-bg: mml-color(grey-100-full) !default;
 $mml-scheduler__body--dark-color: mml-color(white) !default;
 
 // Text:

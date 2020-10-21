@@ -3,8 +3,10 @@
 
 @include mml-component('scheduler') {
   border: $mml-border;
+  background: $mml-scheduler-bg;
   @include scr-theme('dark') {
     border-color: $mml--dark-border-color;
+    background: $mml-scheduler--dark-bg;
   }
 
   &:not(:last-child) {
@@ -47,11 +49,9 @@
   // scheduler body
   &__body {
     font-size: $mml-scheduler__body-font-size;
-    background: $mml-scheduler__body-bg;
     color: $mml-scheduler__body-color;
     @include scr-theme('dark') {
       color: $mml-scheduler__body--dark-color;
-      background: $mml-scheduler__body--dark-bg;
     }
   }
 
@@ -72,7 +72,7 @@
       top: 0;
       background-image: linear-gradient(
         to bottom,
-        $mml-scheduler__body-bg,
+        $mml-scheduler-bg,
         rgba(255, 255, 255, 0)
       );
     }
@@ -80,7 +80,7 @@
       bottom: 0;
       background-image: linear-gradient(
         to top,
-        $mml-scheduler__body-bg,
+        $mml-scheduler-bg,
         rgba(255, 255, 255, 0)
       );
     }
@@ -89,14 +89,14 @@
       &:before {
         background-image: linear-gradient(
           to bottom,
-          $mml-scheduler__body--dark-bg,
+          $mml-scheduler--dark-bg--full,
           rgba(255, 255, 255, 0)
         );
       }
       &:after {
         background-image: linear-gradient(
           to top,
-          $mml-scheduler__body--dark-bg,
+          $mml-scheduler--dark-bg--full,
           rgba(255, 255, 255, 0)
         );
       }
