@@ -1,9 +1,7 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import formatDate from 'date-fns/format'
 import { isSameDay, addDays } from 'date-fns'
-import { Virtuoso } from 'react-virtuoso'
-import ScrollContainer from '../Scroller'
 import DatePickerSelect from './DatePickerSelect'
 
 /**
