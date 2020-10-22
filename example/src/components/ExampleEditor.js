@@ -71,6 +71,7 @@ export function ExampleEditor({ examples }) {
   let [example, setExample] = useQuery(QUERYPARAM_EXAMPLE, 0)
   example = parseInt(example, 10)
   const exampleData = examples[example]
+  const ChatMsg = data.THEMES_MAP[chatTheme].Msg
 
   data.message.attachments = [{ type: 'mml', mml: exampleData.mml }]
   const messages = data.messages.concat([data.message])
@@ -119,6 +120,7 @@ export function ExampleEditor({ examples }) {
                       <MessageList
                         messages={messages}
                         Attachment={Attachment}
+                        Message={ChatMsg}
                       />
                     </Channel>
                   </StreamChat>

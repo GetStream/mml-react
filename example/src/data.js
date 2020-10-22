@@ -1,3 +1,9 @@
+import {
+  MessageSimple,
+  MessageTeam,
+  MessageCommerce,
+  MessageLivestream
+} from 'stream-chat-react'
 const StreamChat = require('stream-chat').StreamChat
 
 export const client = new StreamChat('qk4nn7rpcn75')
@@ -297,12 +303,21 @@ export const MessageMock = {
 }
 
 export const THEMES = [
-  { name: 'messaging light', value: 'messaging light' },
-  { name: 'messaging dark', value: 'messaging dark' },
-  { name: 'team light', value: 'team light' },
-  { name: 'team dark', value: 'team dark' },
-  { name: 'commerce light', value: 'commerce light' },
-  { name: 'commerce dark', value: 'commerce dark' },
-  { name: 'livestream light', value: 'livestream light' },
-  { name: 'livestream dark', value: 'livestream dark' }
+  { name: 'messaging light', value: 'messaging light', Msg: MessageSimple },
+  { name: 'messaging dark', value: 'messaging dark', Msg: MessageSimple },
+  { name: 'team light', value: 'team light', Msg: MessageTeam },
+  { name: 'team dark', value: 'team dark', Msg: MessageTeam },
+  { name: 'commerce light', value: 'commerce light', Msg: MessageCommerce },
+  { name: 'commerce dark', value: 'commerce dark', Msg: MessageCommerce },
+  {
+    name: 'livestream light',
+    value: 'livestream light',
+    Msg: MessageLivestream
+  },
+  { name: 'livestream dark', value: 'livestream dark', Msg: MessageLivestream }
 ]
+
+export const THEMES_MAP = THEMES.reduce(function(map, current, i) {
+  map[current.value] = current
+  return map
+}, {})
