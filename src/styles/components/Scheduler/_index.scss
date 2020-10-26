@@ -1,13 +1,28 @@
-@import 'Card';
-@import 'CardBody';
-@import 'CardHeader';
-@import 'Scroller';
-@import 'Datepicker';
+@import '../Card';
+@import '../CardBody';
+@import '../CardHeader';
+@import '../Scroller';
+@import '../Datepicker';
 
 @include mml-component('scheduler') {
   // scroller has fading edges
   @include mml-component('scroller') {
     height: 217px;
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left 90%,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    mask-image: gradient(
+      linear,
+      left 90%,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+
     &:before,
     &:after {
       content: '';

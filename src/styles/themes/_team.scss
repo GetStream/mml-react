@@ -1,11 +1,4 @@
-@import 'variables';
-
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 // @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i');
-
-.str-chat .material-icons {
-  font-family: 'Material Icons';
-}
 
 .str-chat__attachment-mml {
   &:not(:last-child) {

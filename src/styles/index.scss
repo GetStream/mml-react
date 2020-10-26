@@ -3,7 +3,9 @@
 @import 'variables';
 @import 'mixins';
 @import 'placeholders';
-@import 'base';
+
+// Themes
+@import 'themes';
 
 // Components
 @import 'components/AddToCalendar';

@@ -50,6 +50,11 @@ const Chat = styled.div`
     margin: 0 auto;
     height: 100%;
     width: 100%;
+
+    &.livestream {
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-1383/bg.png)
+        top left no-repeat;
+    }
   }
 
   // .str-chat__list {
@@ -65,6 +70,13 @@ const Chat = styled.div`
     }
   `}
 `
+
+// Themes:
+// Messages from the current user with are marked differently across themes:
+// - `team` uses `str-chat__message-simple--me`
+// - `commerce` uses `str-chat__message-commerce--right`
+// - `livestream` does not flag it
+// - `messaging` does not flag it
 
 export function ExampleEditor({ examples }) {
   const [chatTheme, setChatTheme] = useQuery('theme', data.THEMES[0].value)
