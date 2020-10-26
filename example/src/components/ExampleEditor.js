@@ -51,16 +51,11 @@ const Chat = styled.div`
     height: 100%;
     width: 100%;
 
-    &.livestream {
+    &.livestream.light {
       background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-1383/bg.png)
         top left no-repeat;
     }
   }
-
-  // .str-chat__list {
-  //   padding-left: 40px;
-  //   padding-right: 40px;
-  // }
 
   ${CHAT_NOTIFICATIONS
     ? ``
@@ -88,6 +83,13 @@ export function ExampleEditor({ examples }) {
   data.message.attachments = [{ type: 'mml', mml: exampleData.mml }]
   const messages = data.messages.concat([data.message])
 
+  function handleChangeTheme(event) {
+    setChatTheme(event.target.value)
+    // FIXME: otherwise the `Message` component does not get re-rendered
+    // correctly...don't know if it is an issue with stream-chat-react
+    window.location.reload()
+  }
+
   return (
     <Wrap>
       <Row>
@@ -114,7 +116,7 @@ export function ExampleEditor({ examples }) {
                 label="Choose theme:"
                 options={data.THEMES}
                 value={chatTheme}
-                onChange={event => setChatTheme(event.target.value)}
+                onChange={handleChangeTheme}
               />
               <Chat>
                 <ResizableBox

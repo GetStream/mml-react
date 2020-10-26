@@ -1,0 +1,8 @@
+@include scr-theme-root('commerce') {
+  &.str-chat .str-chat__list .str-chat__message-inner,
+  &.str-chat .str-chat__list .str-chat__message-simple-inner {
+    @include mml-component('carousel') {
+      margin-right: -(20px + $mml-str-chat__message--margin-right);
+    }
+  }
+}

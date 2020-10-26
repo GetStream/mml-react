@@ -1,0 +1,11 @@
+@import '../Card/base';
+@import '../CardBody/base';
+@import '../CardHeader/base';
+@import '../Scroller/base';
+@import '../Datepicker/base';
+
+@include mml-component('scheduler') {
+  @include mml-component('scroller') {
+    height: 217px;
+  }
+}

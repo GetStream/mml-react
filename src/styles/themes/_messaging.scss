@@ -1,7 +1,27 @@
-// @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i');
+@import '../components/AddToCalendar/themes/messaging';
+@import '../components/Button/themes/messaging';
+@import '../components/ButtonList/themes/messaging';
+@import '../components/Card/themes/messaging';
+@import '../components/CardBody/themes/messaging';
+@import '../components/CardHeader/themes/messaging';
+@import '../components/Carousel/themes/messaging';
+@import '../components/Col/themes/messaging';
+@import '../components/Datepicker/themes/messaging';
+@import '../components/Error/themes/messaging';
+@import '../components/Icon/themes/messaging';
+@import '../components/Image/themes/messaging';
+@import '../components/Input/themes/messaging';
+@import '../components/Loader/themes/messaging';
+@import '../components/MD/themes/messaging';
+@import '../components/Number/themes/messaging';
+@import '../components/Row/themes/messaging';
+@import '../components/Scheduler/themes/messaging';
+@import '../components/Scroller/themes/messaging';
+@import '../components/Success/themes/messaging';
+@import '../components/Text/themes/messaging';
 
-.str-chat__attachment-mml {
-  @include scr-theme('messaging') {
+@include scr-theme-root('messaging') {
+  .str-chat__attachment-mml {
     &:not(:last-child) {
       margin: 1px 0 3px;
     }
@@ -19,10 +39,8 @@
       }
     }
   }
-}
 
-.mml-wrap {
-  @include scr-theme('messaging') {
+  .mml-wrap {
     @extend %mml-bordered-area;
   }
 }

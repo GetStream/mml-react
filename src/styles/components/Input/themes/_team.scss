@@ -1,0 +1,5 @@
+@include scr-theme-root('team') {
+  @include mml-component('input') {
+    margin-top: $mml-theme-team-margin-y;
+  }
+}

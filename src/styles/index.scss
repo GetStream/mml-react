@@ -4,23 +4,28 @@
 @import 'mixins';
 @import 'placeholders';
 
+@import 'base';
+
 // Themes
-@import 'themes';
+@import 'themes/commerce';
+@import 'themes/livestream';
+@import 'themes/messaging';
+@import 'themes/team';
 
 // Components
-@import 'components/AddToCalendar';
-@import 'components/Button';
-@import 'components/ButtonList';
-@import 'components/Carousel';
-@import 'components/Col';
-@import 'components/Error';
-@import 'components/Icon';
-@import 'components/Image';
-@import 'components/Input';
-@import 'components/Loader';
-@import 'components/MD';
-@import 'components/Number';
-@import 'components/Row';
-@import 'components/Scheduler';
-@import 'components/Success';
-@import 'components/Text';
+@import 'components/AddToCalendar/base';
+@import 'components/Button/base';
+@import 'components/ButtonList/base';
+@import 'components/Carousel/base';
+@import 'components/Col/base';
+@import 'components/Error/base';
+@import 'components/Icon/base';
+@import 'components/Image/base';
+@import 'components/Input/base';
+@import 'components/Loader/base';
+@import 'components/MD/base';
+@import 'components/Number/base';
+@import 'components/Row/base';
+@import 'components/Scheduler/base';
+@import 'components/Success/base';
+@import 'components/Text/base';

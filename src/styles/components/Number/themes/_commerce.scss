@@ -1,0 +1,24 @@
+@include scr-theme-root('commerce') {
+  @include mml-component('number') {
+    border: $mml-border;
+    background: $mml-number-bg;
+
+    // number btn control
+    &__btn {
+      &--dec {
+        margin-left: $mml-number__btn-margin-x;
+      }
+
+      &--inc {
+        margin-right: $mml-number__btn-margin-x;
+      }
+    }
+  }
+}
+
+@include scr-theme-root('commerce.dark') {
+  @include mml-component('number') {
+    border-color: $mml--dark-border-color;
+    background: $mml-number--dark-bg;
+  }
+}

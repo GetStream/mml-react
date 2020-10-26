@@ -1,0 +1,5 @@
+@include scr-theme-root('livestream') {
+  @include mml-component('image') {
+    border-radius: $mml-theme-livestream-border-radius;
+  }
+}

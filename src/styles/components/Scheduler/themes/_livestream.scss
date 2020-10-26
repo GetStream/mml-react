@@ -1,0 +1,9 @@
+@include scr-theme-root('livestream') {
+  @include mml-component('scheduler') {
+    margin-bottom: 6px;
+
+    @include mml-component('card-header') {
+      justify-content: center;
+    }
+  }
+}

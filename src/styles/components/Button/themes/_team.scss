@@ -1,0 +1,11 @@
+@include scr-theme-root('team') {
+  @include mml-component('btn') {
+    margin: $mml-theme-team-margin-y 0;
+  }
+}
+
+@include scr-theme-root('team.dark') {
+  @include mml-component('btn') {
+    border-color: $mml-theme-team--dark-border-color;
+  }
+}

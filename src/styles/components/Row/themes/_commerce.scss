@@ -1,0 +1,28 @@
+@include scr-theme-root('commerce') {
+  @include mml-component('row') {
+    background: $mml-row-bg;
+    border: $mml-border;
+
+    &:last-child {
+      border-bottom-right-radius: $mml-border-radius;
+      border-bottom-left-radius: $mml-border-radius-base;
+    }
+
+    @include mml-component('text') {
+      border: 0;
+      background: none;
+    }
+  }
+}
+
+@include scr-theme-root('commerce.dark') {
+  @include mml-component('row') {
+    background: $mml-row--dark-bg;
+    border-color: $mml--dark-border-color;
+
+    @include mml-component('text') {
+      border: 0;
+      background: none;
+    }
+  }
+}

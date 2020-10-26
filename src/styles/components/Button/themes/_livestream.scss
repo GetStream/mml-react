@@ -1,0 +1,25 @@
+@include scr-theme-root('livestream') {
+  @include mml-component('btn') {
+    border-radius: $mml-theme-livestream-border-radius; // as .str-chat__message-livestream-actions
+    border-color: transparent;
+  }
+
+  @include mml-component('btn', 'floating') {
+    border-radius: $mml-btn--floating-border-radius;
+
+    &:hover {
+      background: $mml-btn--floating-hover-bg;
+    }
+  }
+}
+
+@include scr-theme-root('livestream.light') {
+  @include mml-component('btn') {
+    &:hover {
+      background: rgba($mml-btn-hover-bg, 5%);
+      border-color: rgba(0, 0, 0, 0.06);
+      color: $mml-btn-color;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+}

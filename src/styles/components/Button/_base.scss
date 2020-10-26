@@ -1,0 +1,33 @@
+@include mml-component('btn') {
+  @include mml-button-base();
+  width: 100%;
+  margin: 0;
+  color: $mml-btn-color;
+  background: $mml-btn-bg;
+
+  &:hover {
+    color: $mml-btn-hover-color;
+    background: $mml-btn-hover-bg;
+  }
+
+  @include scr-theme('dark') {
+    color: $mml-btn--dark-color;
+    &:hover {
+      color: $mml-btn--dark-hover-color;
+    }
+  }
+}
+
+@include mml-component('btn', 'floating') {
+  width: auto;
+  border-radius: $mml-btn--floating-border-radius;
+  background: $mml-btn--floating-bg;
+  color: $mml-btn--floating-color;
+  border: 0;
+  box-shadow: $mml-btn--floating-shadow;
+  font-weight: normal;
+
+  &:hover {
+    background: $mml-btn--floating-hover-bg;
+  }
+}

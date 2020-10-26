@@ -1,0 +1,7 @@
+@include scr-theme-root('team') {
+  @include mml-component('add-to-calendar') {
+    @include mml-component('btnlist') {
+      margin-top: 0;
+    }
+  }
+}

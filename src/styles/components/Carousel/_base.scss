@@ -1,0 +1,26 @@
+@include mml-component('carousel') {
+  margin: $mml-carousel-margin-y 0;
+
+  // negative offset to push the carousel to the right edge:
+  // ---------------------------------------------------------------------------
+  .str-chat__list .str-chat__message-inner &,
+  .str-chat__list .str-chat__message-simple-inner & {
+    margin-right: -$mml-str-chat__message--margin-right;
+  }
+}
+
+@include mml-component('carousel-item') {
+  padding-right: $mml-carousel__item-gutter-x;
+
+  // react-pure-carousel elements:
+  // ---------------------------------------------------------------------------
+  .carousel__inner-slide {
+    display: flex;
+    flex-direction: column;
+
+    @include mml-component('text') {
+      flex: 10;
+      font-size: $mml-carousel__text-font-size;
+    }
+  }
+}

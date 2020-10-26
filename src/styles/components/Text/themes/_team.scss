@@ -1,0 +1,25 @@
+@include scr-theme-root('team') {
+  @include mml-component('text') {
+    padding: 0 0 0 $mml-text-padding-x;
+  }
+}
+
+@include scr-theme-root('team.light') {
+  @include mml-component('text') {
+    border-left: $mml-border;
+    color: $mml-theme-team-border-color;
+    background: $mml-text-bg;
+  }
+
+  .str-chat__message-team:hover {
+    @include mml-component('text') {
+      background: mml-color(grey-800);
+    }
+  }
+}
+
+@include scr-theme-root('team.dark') {
+  @include mml-component('text') {
+    border-color: $mml-theme-team--dark-border-color;
+  }
+}

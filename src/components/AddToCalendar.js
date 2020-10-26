@@ -85,7 +85,7 @@ export function AddToCalendar({
   // iOS: https://stackoverflow.com/questions/246249/programmatically-add-custom-event-in-the-iphone-calendar
   // Android: https://stackoverflow.com/questions/3721963/how-to-add-calendar-events-in-android
   return (
-    <Card className="mml-scheduler">
+    <Card className="mml-add-to-calendar">
       <CardHeader icon="date_range" text="Add to My Calendar" />
       <ButtonList>
         {items.map((item, idx) => (

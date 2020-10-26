@@ -1,0 +1,36 @@
+@include mml-component('btnlist') {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: $mml-btnlist-bg;
+
+  @include mml-component('btn') {
+    background: none;
+    margin: 0;
+    border-width: 0 0 $mml-border-width 0;
+    border-radius: 0;
+
+    &:hover {
+      color: $mml-btn-hover-color;
+      background: $mml-btn-hover-bg;
+    }
+
+    @include scr-theme('dark') {
+      background: none;
+      &:not(:hover) {
+        background: none;
+      }
+    }
+  }
+}
+
+@include mml-component('btnlist', 'floating') {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mml-component('btn') {
+    border-radius: $mml-btn--floating-border-radius;
+    margin: $mml-spacer / 2;
+  }
+}

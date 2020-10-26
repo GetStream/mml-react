@@ -1,0 +1,17 @@
+@include scr-theme-root('messaging') {
+  @include mml-component('btn') {
+    &:hover {
+    }
+  }
+}
+
+@include scr-theme-root('messaging.dark') {
+  @include mml-component('btn') {
+    background: $mml-btn--dark-bg;
+    border-color: $mml--dark-border-color;
+
+    &:hover {
+      background: $mml-btn--dark-hover-bg;
+    }
+  }
+}
