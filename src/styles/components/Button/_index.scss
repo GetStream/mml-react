@@ -1,3 +1,5 @@
+@import 'messaging';
+
 @include mml-component('btn') {
   @include mml-button-base();
   width: 100%;

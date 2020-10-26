@@ -1,13 +1,11 @@
+@import 'messaging';
+
 @include mml-component('card-header') {
   display: flex;
   align-items: center;
   padding: $mml-card-header-padding-y $mml-card-header-padding-x;
   font-size: $mml-card-header-font-size;
-  background: $mml-card-header-bg;
-  border-bottom: $mml-border;
   @include scr-theme('dark') {
-    border-color: $mml--dark-border-color;
-    background: $mml-card-header--dark-bg;
     color: $mml-card-header--dark-color;
   }
 

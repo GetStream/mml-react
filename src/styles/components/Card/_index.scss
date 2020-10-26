@@ -1,19 +1,14 @@
+@import 'messaging';
+
 @include mml-component('card') {
-  border: $mml-border;
   background: $mml-card-bg;
   overflow: hidden;
 
   @include scr-theme('dark') {
-    border-color: $mml--dark-border-color;
     background: $mml-card--dark-bg;
   }
 
-  &:not(:last-child) {
-    border-bottom: 0;
-  }
-
   @include mml-component('btnlist') {
-    border: 0;
     font-size: $mml-card-body-font-size;
   }
 }

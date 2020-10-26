@@ -28,6 +28,12 @@
   }
 }
 
+@mixin scr-theme-root($theme: '') {
+  .str-chat.#{$theme} {
+    @content;
+  }
+}
+
 //
 // Button base
 //
