@@ -1,8 +1,21 @@
-// @include scr-theme-root('commerce') {
-// }
+@include scr-theme-root('commerce') {
+  @include mml-component('card') {
+    border: $mml-border;
+    background: $mml-card-bg;
 
-// @include scr-theme-root('commerce.light') {
-// }
+    &:not(:last-child) {
+      border-bottom: 0;
+    }
 
-// @include scr-theme-root('commerce.dark') {
-// }
+    @include mml-component('btnlist') {
+      border: 0;
+    }
+  }
+}
+
+@include scr-theme-root('commerce.dark') {
+  @include mml-component('card') {
+    background: $mml-card--dark-bg;
+    border-color: $mml--dark-border-color;
+  }
+}
