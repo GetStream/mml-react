@@ -303,6 +303,7 @@ export const MessageMock = {
 }
 
 export const THEMES = [
+  { name: 'no style', value: '', Msg: MessageSimple },
   { name: 'messaging light', value: 'messaging light', Msg: MessageSimple },
   { name: 'messaging dark', value: 'messaging dark', Msg: MessageSimple },
   { name: 'team light', value: 'team light', Msg: MessageTeam },
