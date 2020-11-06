@@ -13,6 +13,7 @@ import globals from 'rollup-plugin-node-globals'
 import { terser } from 'rollup-plugin-terser'
 
 import replace from 'rollup-plugin-replace'
+import PropTypes from 'prop-types'
 
 import pkg from './package.json'
 
@@ -25,6 +26,12 @@ const baseConfig = {
   watch: {
     chokidar: false
   }
+}
+
+const namedExports = {
+  'prop-types': Object.keys(PropTypes),
+  'node_modules/react-is/index.js': ['isValidElementType'],
+  'node_modules/linkifyjs/index.js': ['find']
 }
 
 const normalBundle = {
@@ -42,60 +49,17 @@ const normalBundle = {
     }
   ],
   external: [
-    'linkifyjs',
-    'moment',
-    'stream-chat-client',
-    'react-images',
-    'lodash/debounce',
-    'lodash/throttle',
-    'lodash/truncate',
-    'lodash/uniq',
-    'emoji-mart',
-    'emoji-mart/data/all.json',
-    'emoji-regex',
-    'seamless-immutable',
-    'isomorphic-ws',
-    'visibilityjs',
-    'custom-event',
-    'textarea-caret',
+    /@babel/,
     '@braintree/sanitize-url',
-    '@webscopeio/react-textarea-autocomplete',
-    '@webscopeio/react-textarea-autocomplete/style.css',
-    'emoji-mart/css/emoji-mart.css',
-    'react-dropzone',
-    'react-markdown',
-    'deep-equal',
-    'shallow-diff',
-    'immutable',
-    'url-parse',
-    'stream-chat',
-    'pretty-bytes',
-    'mml-react',
-    'stream-analytics',
-    'react-textarea-autosize',
+    '@rgrove/parse-xml',
+    'date-fns',
+    'ical-expander',
+    'linkifyjs',
     'prop-types',
-    'react-player',
-    'react-markdown/with-html',
-    'react-file-utils',
-    'react-file-utils/dist/index.css',
-    'uuid/v4',
-    '@fortawesome/react-fontawesome',
-    '@fortawesome/free-regular-svg-icons',
-    '@babel/runtime/regenerator',
-    '@babel/runtime/helpers/asyncToGenerator',
-    '@babel/runtime/helpers/objectWithoutProperties',
-    '@babel/runtime/helpers/toConsumableArray',
-    '@babel/runtime/helpers/objectSpread',
-    '@babel/runtime/helpers/extends',
-    '@babel/runtime/helpers/defineProperty',
-    '@babel/runtime/helpers/assertThisInitialized',
-    '@babel/runtime/helpers/inherits',
-    '@babel/runtime/helpers/getPrototypeOf',
-    '@babel/runtime/helpers/possibleConstructorReturn',
-    '@babel/runtime/helpers/createClass',
-    '@babel/runtime/helpers/classCallCheck',
-    '@babel/runtime/helpers/slicedToArray',
-    '@babel/runtime/helpers/typeof'
+    'pure-react-carousel',
+    'react-add-to-calendar',
+    'react-markdown',
+    'react-virtuoso'
   ],
   plugins: [
     replace({
@@ -115,7 +79,7 @@ const normalBundle = {
       watch: process.env.ROLLUP_WATCH
     }),
     url(),
-    commonjs(),
+    commonjs({ namedExports }),
     json()
   ]
 }
@@ -155,11 +119,7 @@ const fullBrowserBundle = {
       browser: true
     }),
     url(),
-    commonjs({
-      namedExports: {
-        'node_modules/linkifyjs/index.js': ['find']
-      }
-    }),
+    commonjs({ namedExports }),
     json(),
     globals({
       process: true,
