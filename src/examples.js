@@ -7,7 +7,7 @@ export var examples = [
   <button name="action" value="Activate">Regular button</button>
   <md>And here is variant \`floating\`:</md>
   <button variant="floating" name="action" value="Activate">Floating button</button>
-</mml>`
+</mml>`,
   },
   {
     name: 'ButtonFloating',
@@ -18,21 +18,19 @@ export var examples = [
     <button variant="floating" name="side" value="yes">Yes!</button>
     <button variant="floating" name="side" value="no">No, thanks</button>
   </button_list>
-</mml>`
+</mml>`,
   },
   {
     name: 'Simple Support',
-    description:
-      'The most basic example is adding simple buttons to your message that help automate common tasks',
+    description: 'The most basic example is adding simple buttons to your message that help automate common tasks',
     mml: `<mml name="support">
   <text>It looks like your credit card isn't activated yet, activate it now:</text>
   <button name="action" value="Activate">Activate Card</button>
-</mml>`
+</mml>`,
   },
   {
     name: 'Out of stock',
-    description:
-      "Sorry we're currently out of fries, what would you like as a side?",
+    description: "Sorry we're currently out of fries, what would you like as a side?",
     mml: `<mml name="food_order">
   Sorry we're currently out of fries, what would you like as a side?
   <button_list>
@@ -40,7 +38,7 @@ export var examples = [
     <button name="side" value="potatoes">Baked Potatoes</button>
     <button name="side" value="fried_pickles">Fried Pickles</button>
   </button_list>
-</mml>`
+</mml>`,
   },
   {
     name: 'Simple Counts',
@@ -50,7 +48,7 @@ export var examples = [
   <image src="https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80" />
   <number name="donuts" value="3" />
   <button name="confirm" value="Confirm">Confirm</button>
-</mml>`
+</mml>`,
   },
   {
     name: 'Support and Rich Data',
@@ -71,7 +69,7 @@ export var examples = [
   </row>
 <button name="authorized" value="yes">Yes</button>
 <button name="authorized" value="yes">No</button>
-</mml>`
+</mml>`,
   },
   {
     name: 'Support Data Input',
@@ -80,7 +78,7 @@ export var examples = [
 	<md>Happy to setup your new credit card application, what's your **yearly** family income?</md>
   <input type="text" name="email" />
 	<button name="send" value="submit">Submit</button>
-</mml>`
+</mml>`,
   },
   {
     name: 'Gigs',
@@ -93,7 +91,7 @@ export var examples = [
   <button name="times" value="11:30">11:30</button>
   <button name="times" value="nope">Nope</button>
 </button_list>
-</mml>`
+</mml>`,
   },
   {
     name: 'Advanced Scheduling',
@@ -102,7 +100,7 @@ export var examples = [
 	<text>When would you like to schedule your massage?</text>
 	<scheduler name="massage_appointment" duration="30" interval="30" />
   <button name="action" value="reserve">Reserve</button>
-</mml>`
+</mml>`,
   },
   {
     name: 'Date Confirmation',
@@ -110,7 +108,7 @@ export var examples = [
     mml: `<mml>
   <text>Your massage appointment has been confirmed!</text>
   <add_to_calendar title="Massage with Jessica" start="2019-12-24T14:42:54.148Z" end="2019-12-24T15:42:54.148Z" />
-</mml>`
+</mml>`,
   },
   {
     name: 'E-commerce',
@@ -143,6 +141,6 @@ export var examples = [
             <button url="https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html">View Product</button>
         </item>
     </carousel>
-</mml>`
-  }
-]
+</mml>`,
+  },
+];

@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export function Icon({ name, ...props }) {
-  return <i className="mml-icon material-icons">{name}</i>
+  return <i className="mml-icon material-icons">{name}</i>;
 }
 
 Icon.propTypes = {
   /** The name of the material icon, see https://material.io/resources/icons/ */
-  name: PropTypes.string.isRequired
-}
+  name: PropTypes.string.isRequired,
+};

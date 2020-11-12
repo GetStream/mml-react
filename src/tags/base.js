@@ -1,27 +1,27 @@
-import { getNodeText } from '../utils'
+import { getNodeText } from '../utils';
 /**
  * MMLTag - The base MML Tag
  */
 export class MMLTag {
-  static data = false
+  static data = false;
 
-  static validChildren = 'all'
-  static validAttributes = {}
-  static requiredAttributes = []
+  static validChildren = 'all';
+  static validAttributes = {};
+  static requiredAttributes = [];
 
   constructor(tagName, node, children) {
-    this.tagName = tagName
-    this.node = node
-    this.attr = this.node.attributes
-    this.children = children
+    this.tagName = tagName;
+    this.node = node;
+    this.attr = this.node.attributes;
+    this.children = children;
   }
 
   getText() {
-    return getNodeText(this.node)
+    return getNodeText(this.node);
   }
 
   initialState() {
-    return {}
+    return {};
   }
 
   // This moved to proptypes at the react level
@@ -60,5 +60,5 @@ export class MMLTag {
  * @extends MMLTag
  */
 export class MMLDataTag extends MMLTag {
-  static data = true
+  static data = true;
 }

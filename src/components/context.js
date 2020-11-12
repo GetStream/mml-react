@@ -1,3 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-export const MMLContext = React.createContext({})
+export const MMLContext = React.createContext({});

@@ -1,26 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * A grid column
  * TODO: Consider renaming this element
  */
 export function Col({ children, width, offset, align }) {
-  let classNames = `mml-col-${width}`
+  let classNames = `mml-col-${width}`;
   if (offset) {
-    classNames = classNames + ` mml-offset-${offset}`
+    classNames = classNames + ` mml-offset-${offset}`;
   }
 
-  classNames = classNames + ` mml-align-${align}`
+  classNames = classNames + ` mml-align-${align}`;
 
-  return <div className={classNames}>{children}</div>
+  return <div className={classNames}>{children}</div>;
 }
 
 Col.defaultProps = {
   width: 12,
   offset: 0,
-  align: 'left'
-}
+  align: 'left',
+};
 
 Col.propTypes = {
   /** The column children can be anything */
@@ -32,5 +32,5 @@ Col.propTypes = {
   /** The offset for the column */
   offset: PropTypes.number,
   /** Align horizontally */
-  align: PropTypes.oneOf(['left', 'center', 'right'])
-}
+  align: PropTypes.oneOf(['left', 'center', 'right']),
+};

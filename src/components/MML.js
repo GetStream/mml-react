@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useMemo } from 'react';
+import PropTypes from 'prop-types';
 
-import { Parse } from '../parser'
-import { Loader as LoaderComponent } from './Loader'
-import { Error as ErrorComponent } from './Error'
-import { Success as SuccessComponent } from './Success'
-import { MMLContainer } from './MMLContainer'
+import { Parse } from '../parser';
+import { Loader as LoaderComponent } from './Loader';
+import { Error as ErrorComponent } from './Error';
+import { Success as SuccessComponent } from './Success';
+import { MMLContainer } from './MMLContainer';
 
 export function MML({
   source,
@@ -16,23 +16,23 @@ export function MML({
   Success = SuccessComponent,
   ...props
 }) {
-  const [mmlError, setError] = useState('')
-  const [initialData, setInitialData] = useState({})
+  const [mmlError, setError] = useState('');
+  const [initialData, setInitialData] = useState({});
 
   const tree = useMemo(() => {
-    const tree = Parse(source)
+    const tree = Parse(source);
     if (converterConfig) {
-      tree.converterConfig = converterConfig
+      tree.converterConfig = converterConfig;
     }
     try {
       // get initial state for all input elements in MML
-      const treeState = tree.initialState()
-      setInitialData(treeState)
+      const treeState = tree.initialState();
+      setInitialData(treeState);
     } catch (e) {
-      setError("This chat message has invalid formatting and can't be shown")
+      setError("This chat message has invalid formatting and can't be shown");
     }
-    return tree
-  }, [source, converterConfig])
+    return tree;
+  }, [source, converterConfig]);
 
   return (
     <MMLContainer
@@ -46,7 +46,7 @@ export function MML({
     >
       {tree.toReact(tree)}
     </MMLContainer>
-  )
+  );
 }
 
 MML.propTypes = {
@@ -61,5 +61,5 @@ MML.propTypes = {
   /** The error component */
   Error: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   /** The success message component */
-  Success: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
-}
+  Success: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+};

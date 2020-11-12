@@ -1,32 +1,28 @@
-import React, { useContext } from 'react'
-import PropTypes from 'prop-types'
-import { MMLContext } from './context'
-import { sanitizeUrl } from '@braintree/sanitize-url'
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import { MMLContext } from './context';
+import { sanitizeUrl } from '@braintree/sanitize-url';
 
 /**
  * A simple Button
  */
 export function Button({ text, name, value, url, variant }) {
-  const mmlContext = useContext(MMLContext)
+  const mmlContext = useContext(MMLContext);
 
   function onClick(event) {
-    event.preventDefault()
+    event.preventDefault();
     if (url) {
-      window.location.href = sanitizeUrl(url)
+      window.location.href = sanitizeUrl(url);
     } else {
-      mmlContext.setValue(name, value)
+      mmlContext.setValue(name, value);
     }
   }
 
   return (
-    <button
-      className={'mml-btn' + (variant === 'floating' ? ' mml--floating' : '')}
-      type="submit"
-      onClick={onClick}
-    >
+    <button className={'mml-btn' + (variant === 'floating' ? ' mml--floating' : '')} type="submit" onClick={onClick}>
       {text}
     </button>
-  )
+  );
 }
 
 Button.propTypes = {
@@ -39,5 +35,5 @@ Button.propTypes = {
   /** The url to open */
   url: PropTypes.string,
   /** Button style variant */
-  variant: PropTypes.oneOf(['floating'])
-}
+  variant: PropTypes.oneOf(['floating']),
+};

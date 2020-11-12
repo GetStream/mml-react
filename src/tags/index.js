@@ -1,15 +1,8 @@
-import {
-  AddToCalendar,
-  ButtonList,
-  Button,
-  Input,
-  Scheduler,
-  Number
-} from './data'
+import { AddToCalendar, ButtonList, Button, Input, Scheduler, Number } from './data';
 
-import { Carousel, Item, Row, Col } from './layout'
+import { Carousel, Item, Row, Col } from './layout';
 
-import { Icon, Image, MD, Text } from './core'
+import { Icon, Image, MD, Text } from './core';
 
 var tags = {
   add_to_calendar: AddToCalendar,
@@ -25,9 +18,9 @@ var tags = {
   image: Image,
   md: MD,
   text: Text,
-  number: Number
-}
+  number: Number,
+};
 
 export function getMMLTags() {
-  return tags
+  return tags;
 }

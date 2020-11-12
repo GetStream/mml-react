@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Icon } from './Icon'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Icon } from './Icon';
 
 export function CardHeader({ text, icon, className }) {
   return (
@@ -8,7 +8,7 @@ export function CardHeader({ text, icon, className }) {
       {icon && <Icon name={icon} />}
       <span className="mml-card-header__text">{text}</span>
     </div>
-  )
+  );
 }
 
 CardHeader.propTypes = {
@@ -17,5 +17,5 @@ CardHeader.propTypes = {
   /** The name of the material icon, see https://material.io/resources/icons/ */
   icon: PropTypes.string,
   /** Additional card class name */
-  className: PropTypes.string
-}
+  className: PropTypes.string,
+};

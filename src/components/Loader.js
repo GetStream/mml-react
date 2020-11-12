@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { LoadingIndicator } from 'stream-chat-react/dist/index.es'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { LoadingIndicator } from 'stream-chat-react/dist/index.es';
 
 /**
  * Loading indicator for MML
@@ -12,18 +12,18 @@ export function Loader({ loading, text, ...props }) {
         <LoadingIndicator />
         {text && <div className="mml-loader__text">{text}</div>}
       </div>
-    )
+    );
   }
-  return null
+  return null;
 }
 
 Loader.defaultProps = {
-  loading: false
-}
+  loading: false,
+};
 
 Loader.propTypes = {
   /** Loading boolean */
   loading: PropTypes.bool,
   /** Loading text */
-  text: PropTypes.string
-}
+  text: PropTypes.string,
+};

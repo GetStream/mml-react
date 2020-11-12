@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import DatePickerDate from './DatePickerDate'
-import DatePickerTime from './DatePickerTime'
+import React from 'react';
+import PropTypes from 'prop-types';
+import DatePickerDate from './DatePickerDate';
+import DatePickerTime from './DatePickerTime';
 import {
   format as formatDate,
   roundToNearestMinutes,
@@ -9,8 +9,8 @@ import {
   setMonth,
   setYear,
   setHours,
-  setMinutes
-} from 'date-fns'
+  setMinutes,
+} from 'date-fns';
 
 /**
  * Split datetime in date and time
@@ -18,12 +18,12 @@ import {
  * @param {Date} datetime
  */
 export function splitDatetime(datetime) {
-  const day = datetime.getDate()
-  const month = datetime.getMonth()
-  const year = datetime.getFullYear()
-  const hours = datetime.getHours()
-  const minutes = datetime.getMinutes()
-  const seconds = datetime.getSeconds()
+  const day = datetime.getDate();
+  const month = datetime.getMonth();
+  const year = datetime.getFullYear();
+  const hours = datetime.getHours();
+  const minutes = datetime.getMinutes();
+  const seconds = datetime.getSeconds();
 
   return {
     day,
@@ -31,8 +31,8 @@ export function splitDatetime(datetime) {
     year,
     hours,
     minutes,
-    seconds
-  }
+    seconds,
+  };
 }
 
 /**
@@ -53,19 +53,19 @@ export function DatePicker({
   showTimeSelect,
   startDate,
   filterDate,
-  onChange
+  onChange,
 }) {
-  let initialDate
+  let initialDate;
 
   if (selected) {
-    initialDate = selected
+    initialDate = selected;
   } else {
     initialDate = roundToNearestMinutes(new Date(), {
-      nearestTo: Math.min(30, Math.round(timeInterval))
-    })
+      nearestTo: Math.min(30, Math.round(timeInterval)),
+    });
   }
 
-  const [datetime, setDatetime] = React.useState(initialDate)
+  const [datetime, setDatetime] = React.useState(initialDate);
 
   /**
    * Handle date change
@@ -73,13 +73,13 @@ export function DatePicker({
    * @param {Date} value
    */
   function handleChangeDate(value) {
-    const { day, month, year } = splitDatetime(value)
-    let newDatetime = datetime
-    newDatetime = setDate(newDatetime, day)
-    newDatetime = setMonth(newDatetime, month)
-    newDatetime = setYear(newDatetime, year)
+    const { day, month, year } = splitDatetime(value);
+    let newDatetime = datetime;
+    newDatetime = setDate(newDatetime, day);
+    newDatetime = setMonth(newDatetime, month);
+    newDatetime = setYear(newDatetime, year);
 
-    setDatetime(newDatetime)
+    setDatetime(newDatetime);
   }
 
   /**
@@ -88,19 +88,19 @@ export function DatePicker({
    * @param {Date} value
    */
   function handleChangeTime(value) {
-    const { hours, minutes } = splitDatetime(value)
-    let newDatetime = datetime
-    newDatetime = setHours(newDatetime, hours)
-    newDatetime = setMinutes(newDatetime, minutes)
+    const { hours, minutes } = splitDatetime(value);
+    let newDatetime = datetime;
+    newDatetime = setHours(newDatetime, hours);
+    newDatetime = setMinutes(newDatetime, minutes);
 
-    setDatetime(newDatetime)
+    setDatetime(newDatetime);
   }
 
   // callback
   if (onChange) {
     React.useEffect(() => {
-      onChange(datetime)
-    }, [datetime])
+      onChange(datetime);
+    }, [datetime]);
   }
 
   return (
@@ -128,7 +128,7 @@ export function DatePicker({
         />
       )}
     </div>
-  )
+  );
 }
 
 DatePicker.defaultProps = {
@@ -138,8 +138,8 @@ DatePicker.defaultProps = {
   dateFormat: 'E LLL dd',
   timeFormat: 'h:mm a',
   allowPast: false,
-  showTimeSelect: true
-}
+  showTimeSelect: true,
+};
 
 DatePicker.propTypes = {
   /** The selected date time */
@@ -161,5 +161,5 @@ DatePicker.propTypes = {
   /** Allows to select a date in the past */
   allowPast: PropTypes.bool,
   /** On change callback */
-  onChange: PropTypes.func
-}
+  onChange: PropTypes.func,
+};
