@@ -1,4 +1,4 @@
-export var examples = [
+export const examples = [
   {
     name: 'Buttons',
     description: 'Different buttons styles',
