@@ -76,15 +76,5 @@
     "hooks": {
       "pre-commit": "tsdx lint"
     }
-  },
-  "size-limit": [
-    {
-      "path": "dist/mml-react.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/mml-react.esm.js",
-      "limit": "10 KB"
-    }
-  ]
+  }
 }
