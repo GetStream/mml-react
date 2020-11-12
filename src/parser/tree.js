@@ -1,4 +1,4 @@
-import { converterConfig as ReactConverterConfig } from './components/converterConfig';
+import { converterConfig as ReactConverterConfig } from '../components/converterConfig';
 
 /**
  * Tree - The tree object for MML tags
