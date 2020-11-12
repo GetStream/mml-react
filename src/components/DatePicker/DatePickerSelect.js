@@ -5,15 +5,13 @@ import { Virtuoso } from 'react-virtuoso';
 /**
  * Custom scroll container to hide scrollbar with simple css
  */
-function Scroller({ className, style, reportScrollTop, scrollTo, children }) {
-  const elRef = React.useRef(null);
+function MMLScroll({ className, style, reportScrollTop, scrollTo, children }) {
+  const ref = React.useRef(null);
 
-  scrollTo((scrollTop) => {
-    elRef.current.scrollTo({ top: scrollTop });
-  });
+  scrollTo((scrollTop) => ref.current && ref.current.scrollTo(scrollTop));
 
   return (
-    <div className="mml-scroller" ref={elRef} onScroll={(e) => reportScrollTop(e.target.scrollTop)} tabIndex={0}>
+    <div className="mml-scroller" ref={ref} onScroll={(e) => reportScrollTop(e.currentTarget.scrollTop)} tabIndex={0}>
       <div className="mml-scroller__inner">{children}</div>
     </div>
   );
@@ -60,7 +58,7 @@ export default function DatePickerSelect(props) {
 
   return (
     <Virtuoso
-      ScrollContainer={Scroller}
+      ScrollContainer={MMLScroll} // TODO: is this really needed? we can leverage css maybe
       overscan={200}
       totalCount={total}
       item={(index) => Item(items.current[index], selected, handleClick)}
