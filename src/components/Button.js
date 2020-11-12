@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { MMLContext } from './context';
+import { MMLContext } from '../context';
 import { sanitizeUrl } from '@braintree/sanitize-url';
 
 /**

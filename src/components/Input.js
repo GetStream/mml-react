@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MMLContext } from './context';
+import { MMLContext } from '../context';
 import PropTypes from 'prop-types';
 
 /**

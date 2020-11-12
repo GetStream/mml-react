@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Loader as LoaderComponent } from './Loader';
 import { Error as ErrorComponent } from './Error';
 import { Success as SuccessComponent } from './Success';
-import { MMLContext } from './context';
+import { MMLContext } from '../context';
 import PropTypes from 'prop-types';
 
 export function MMLContainer({
