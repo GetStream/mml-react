@@ -82,6 +82,7 @@ export function AddToCalendar({ title, start, end, location = '', description = 
             onClick={handleLinkClick}
             href={helpers.buildUrl(event, item, isIE)}
             target="_blank"
+            rel="nofollow noreferrer noopener"
           >
             {/* <Icon name={item.icon} /> */}
             {item.label}

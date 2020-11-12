@@ -36,11 +36,11 @@ export default function DatePickerSelect(props) {
     }
     lastPageIdx++;
     setTotal(items.current.length);
-  }, []);
+  }, [filter, getItem, lastPageIdx, props, total]);
 
   useEffect(() => {
     loadMore();
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <Virtuoso

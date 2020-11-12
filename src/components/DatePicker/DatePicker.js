@@ -96,12 +96,9 @@ export function DatePicker({
     setDatetime(newDatetime);
   }
 
-  // callback
-  if (onChange) {
-    React.useEffect(() => {
-      onChange(datetime);
-    }, [datetime]);
-  }
+  React.useEffect(() => {
+    if (onChange) onChange(datetime);
+  }, [datetime, onChange]);
 
   return (
     <div className="mml-datepicker">
