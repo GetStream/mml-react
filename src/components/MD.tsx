@@ -1,6 +1,5 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactElement } from 'react';
 import ReactMarkdown from 'react-markdown';
-
 import * as linkify from 'linkifyjs';
 
 export const truncate = (input: string, length: number, end = '...') => {
@@ -22,9 +21,8 @@ const matchMarkdownLinks = (message: string) => {
   return links;
 };
 
-// TODO: update to v5 and remove
-const MDLinkRender: FC<{ href: string; children: ReactNode }> = (props) => {
-  // if (!props.href || !props.href.startsWith('http')) return props.children;
+const MDLinkRender: FC<{ href: string; children: ReactElement }> = (props) => {
+  if (!props.href || (!props.href.startsWith('http') && !props.href.startsWith('mailto:'))) return props.children;
   return (
     <a href={props.href} target="_blank" rel="nofollow noreferrer noopener">
       {props.children}
@@ -32,8 +30,11 @@ const MDLinkRender: FC<{ href: string; children: ReactNode }> = (props) => {
   );
 };
 
+const markDownRenderers = { link: MDLinkRender };
+
 const allowedMarkups: ReactMarkdown.NodeType[] = [
   'html',
+  // @ts-ignore
   'root',
   'text',
   'break',
@@ -75,12 +76,9 @@ export const MD: FC<MDProps> = ({ text }) => {
     <div className="mml-md">
       <ReactMarkdown
         allowedTypes={allowedMarkups}
-        renderers={{ link: MDLinkRender }}
+        renderers={markDownRenderers}
         source={newText}
-        linkTarget="_blank"
-        plugins={[]}
         escapeHtml={true}
-        skipHtml={false}
         unwrapDisallowed={true}
         transformLinkUri={(uri) => (uri.startsWith('app://') ? uri : ReactMarkdown.uriTransformer(uri))}
       />
