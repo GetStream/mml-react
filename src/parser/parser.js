@@ -1,19 +1,6 @@
 import parseXml from '@rgrove/parse-xml';
-import { getMMLTags } from './tags';
+import { tags } from './tags';
 import { Tree } from './tree';
-
-/**
- * Takes an MML string and returns an MML Tree
- *
- * @param {string} source MML tag string
- *
- *  @returns {Tree} An MML Tree
- */
-export function Parse(source) {
-  const XMLNodes = SourceToXML(source);
-  const tree = XMLtoMMLTree(XMLNodes);
-  return tree;
-}
 
 /**
  * SourceToXML - Takes an MML string and converts it to XML nodes
@@ -23,19 +10,17 @@ export function Parse(source) {
  * @returns {array} an Array of XML nodes
  */
 export function SourceToXML(source) {
+  let src = source;
   // the wrapping MML tags are optional, for parsing simplicity we automatically add them if they are not already there
-  if (!~source.indexOf('<mml')) {
-    source = `<mml>${source}</mml>`;
-  }
+  if (!src.startsWith('<mml')) src = `<mml>${source}</mml>`;
 
   // emulate HTML handling of & escaping
   const unescapedAmps = /&(?!amp;|lt;|gt;)/g;
-  source = source.replace(unescapedAmps, '&amp;');
+  src = src.replace(unescapedAmps, '&amp;');
 
   // convert the string to XML nodes
   // this library is relatively lightweight and doesn't do a ton of validation
-  const XMLNodes = [parseXml(source)];
-  return XMLNodes;
+  return [parseXml(src)];
 }
 
 /**
@@ -46,8 +31,6 @@ export function SourceToXML(source) {
  * @returns {MMLTree} The MML tree
  */
 export function XMLtoMMLTree(XMLNodes) {
-  const tags = getMMLTags();
-
   let tree;
 
   function convertNodes(nodes) {
@@ -91,4 +74,16 @@ export function XMLtoMMLTree(XMLNodes) {
   convertNodes(XMLNodes);
 
   return tree;
+}
+
+/**
+ * Takes an MML string and returns an MML Tree
+ *
+ * @param {string} source MML tag string
+ *
+ *  @returns {Tree} An MML Tree
+ */
+export function Parse(source) {
+  const XMLNodes = SourceToXML(source);
+  return XMLtoMMLTree(XMLNodes);
 }
