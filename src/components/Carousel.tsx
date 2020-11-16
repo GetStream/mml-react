@@ -2,9 +2,6 @@ import React, { FC, ReactElement } from 'react';
 import { CarouselProvider, Slider } from 'pure-react-carousel';
 import { CarouselItemProps } from './CarouselItem';
 
-// TODO: remove css and import it in scss file if necessary
-import 'pure-react-carousel/dist/react-carousel.es.css';
-
 export type CarouselProps = {
   /** Infinite loop */
   infinite?: boolean;
