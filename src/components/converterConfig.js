@@ -68,6 +68,7 @@ export const converterConfig = {
         key={tag.key}
         interval={tag.node.attributes.interval}
         duration={tag.node.attributes.duration}
+        selected={tag.node.attributes.selected}
         full_day={tag.node.attributes.full_day}
         ical_availability={tag.node.attributes.ical_availability}
       />

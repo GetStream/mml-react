@@ -37,6 +37,7 @@ Array [
               "duration": "30",
               "interval": "30",
               "name": "massage_appointment",
+              "selected": "2020-11-16T10:30:00.000Z",
             },
             "children": Array [],
             "name": "scheduler",
@@ -120,6 +121,7 @@ Tree {
         "duration": "30",
         "interval": "30",
         "name": "massage_appointment",
+        "selected": "2020-11-16T10:30:00.000Z",
       },
       "children": Array [],
       "node": Object {
@@ -127,6 +129,7 @@ Tree {
           "duration": "30",
           "interval": "30",
           "name": "massage_appointment",
+          "selected": "2020-11-16T10:30:00.000Z",
         },
         "children": Array [],
         "name": "scheduler",
@@ -221,6 +224,7 @@ Tree {
           "duration": "30",
           "interval": "30",
           "name": "massage_appointment",
+          "selected": "2020-11-16T10:30:00.000Z",
         },
         "children": Array [],
         "name": "scheduler",
@@ -271,6 +275,7 @@ Array [
   <Scheduler
     duration="30"
     interval="30"
+    selected="2020-11-16T10:30:00.000Z"
   />,
   <Unknown
     name="action"

@@ -58,7 +58,7 @@ export function DatePicker({
   let initialDate;
 
   if (selected) {
-    initialDate = selected;
+    initialDate = new Date(selected);
   } else {
     initialDate = roundToNearestMinutes(new Date(), {
       nearestTo: Math.min(30, Math.round(timeInterval)),
