@@ -1,4 +1,10 @@
 // TODO: delete this file once everything is in ts
 {
-  "presets": ["@babel/preset-react"]
+  "presets": ["@babel/preset-react"],
+  "env": {
+    "test": {
+      "presets": ["@babel/preset-typescript", "@babel/env", "@babel/react"],
+      "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-transform-runtime"]
+    }
+  }
 }

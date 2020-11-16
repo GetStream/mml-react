@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "@size-limit/preset-small-lib": "^4.7.0",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-info": "^5.3.21",
