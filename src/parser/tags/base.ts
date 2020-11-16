@@ -1,32 +1,31 @@
-export function getNodeText(node) {
-  let text = '';
-  if (node.type === 'text') {
-    text = node.text;
-  } else if (node.children && node.children.length) {
-    text = node.children[0].text;
-  }
-  return text;
-}
+import { Text, Element } from '@rgrove/parse-xml';
 
 /**
  * MMLTag - The base MML Tag
  */
 export class MMLTag {
+  tagName: string;
+  node: Element | Text;
+  children: MMLTag[];
+  attributes: Record<string, string>;
+
   static data = false;
 
   static validChildren = 'all';
   static validAttributes = {};
   static requiredAttributes = [];
 
-  constructor(tagName, node, children) {
+  constructor(tagName: string, node: Element | Text, children: MMLTag[]) {
     this.tagName = tagName;
     this.node = node;
-    this.attr = this.node.attributes;
+    this.attributes = (this.node as Element).attributes || {};
     this.children = children;
   }
 
   getText() {
-    return getNodeText(this.node);
+    if (this.node.type === 'text') return this.node.text;
+    else if (this.node.children && this.node.children.length) return (this.node.children[0] as Text).text;
+    return '';
   }
 
   initialState() {

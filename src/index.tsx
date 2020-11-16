@@ -4,5 +4,4 @@ import './styles/index.scss';
 export * from './parser/examples';
 export * from './components/MML';
 export * from './context';
-export * from './components/Carousel';
 export * from './components/converterConfig';

@@ -86,10 +86,10 @@ exports[`examples Advanced Scheduling example should work 2`] = `
 Tree {
   "children": Array [
     Text {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "When would you like to schedule your massage?",
@@ -115,7 +115,7 @@ Tree {
       "tagName": "text",
     },
     Scheduler {
-      "attr": Object {
+      "attributes": Object {
         "duration": "30",
         "interval": "30",
         "name": "massage_appointment",
@@ -137,13 +137,13 @@ Tree {
       "tagName": "scheduler",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "action",
         "value": "reserve",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Reserve",
@@ -553,10 +553,10 @@ exports[`examples ButtonFloating example should work 2`] = `
 Tree {
   "children": Array [
     MD {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Just showing \`button_list\` \`floating\` **variant**:",
@@ -582,19 +582,19 @@ Tree {
       "tagName": "md",
     },
     ButtonList {
-      "attr": Object {
+      "attributes": Object {
         "variant": "floating",
       },
       "children": Array [
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "side",
             "value": "yes",
             "variant": "floating",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Yes!",
@@ -624,14 +624,14 @@ Tree {
           "tagName": "button",
         },
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "side",
             "value": "no",
             "variant": "floating",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "No, thanks",
@@ -1027,10 +1027,10 @@ exports[`examples Buttons example should work 2`] = `
 Tree {
   "children": Array [
     MD {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Just showing \`button\` *variants*:",
@@ -1056,13 +1056,13 @@ Tree {
       "tagName": "md",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "action",
         "value": "Activate",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Regular button",
@@ -1091,10 +1091,10 @@ Tree {
       "tagName": "button",
     },
     MD {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "And here is variant \`floating\`:",
@@ -1120,14 +1120,14 @@ Tree {
       "tagName": "md",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "action",
         "value": "Activate",
         "variant": "floating",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Floating button",
@@ -1406,10 +1406,10 @@ exports[`examples Date Confirmation example should work 2`] = `
 Tree {
   "children": Array [
     Text {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Your massage appointment has been confirmed!",
@@ -1435,7 +1435,7 @@ Tree {
       "tagName": "text",
     },
     AddToCalendar {
-      "attr": Object {
+      "attributes": Object {
         "end": "2019-12-24T15:42:54.148Z",
         "start": "2019-12-24T14:42:54.148Z",
         "title": "Massage with Jessica",
@@ -2088,10 +2088,10 @@ exports[`examples E-commerce example should work 2`] = `
 Tree {
   "children": Array [
     MD {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
@@ -2117,13 +2117,13 @@ Tree {
       "tagName": "md",
     },
     Carousel {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Item {
-          "attr": Object {},
+          "attributes": Object {},
           "children": Array [
             Image {
-              "attr": Object {
+              "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
@@ -2139,10 +2139,10 @@ Tree {
               "tagName": "image",
             },
             Text {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "Barricade Adventure HD Front Bumper",
@@ -2168,10 +2168,10 @@ Tree {
               "tagName": "text",
             },
             MD {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "**$404.99**",
@@ -2197,12 +2197,12 @@ Tree {
               "tagName": "md",
             },
             Button {
-              "attr": Object {
+              "attributes": Object {
                 "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html",
               },
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "View Product",
@@ -2321,10 +2321,10 @@ Tree {
           "tagName": "item",
         },
         Item {
-          "attr": Object {},
+          "attributes": Object {},
           "children": Array [
             Image {
-              "attr": Object {
+              "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
@@ -2340,10 +2340,10 @@ Tree {
               "tagName": "image",
             },
             Text {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
@@ -2369,10 +2369,10 @@ Tree {
               "tagName": "text",
             },
             MD {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "**$529.99**",
@@ -2398,12 +2398,12 @@ Tree {
               "tagName": "md",
             },
             Button {
-              "attr": Object {
+              "attributes": Object {
                 "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html",
               },
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "View Product",
@@ -2522,10 +2522,10 @@ Tree {
           "tagName": "item",
         },
         Item {
-          "attr": Object {},
+          "attributes": Object {},
           "children": Array [
             Image {
-              "attr": Object {
+              "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
@@ -2541,10 +2541,10 @@ Tree {
               "tagName": "image",
             },
             Text {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
@@ -2570,10 +2570,10 @@ Tree {
               "tagName": "text",
             },
             MD {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "**$549.99**",
@@ -2599,12 +2599,12 @@ Tree {
               "tagName": "md",
             },
             Button {
-              "attr": Object {
+              "attributes": Object {
                 "url": "https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html",
               },
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "View Product",
@@ -2723,10 +2723,10 @@ Tree {
           "tagName": "item",
         },
         Item {
-          "attr": Object {},
+          "attributes": Object {},
           "children": Array [
             Image {
-              "attr": Object {
+              "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
@@ -2742,10 +2742,10 @@ Tree {
               "tagName": "image",
             },
             Text {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
@@ -2771,10 +2771,10 @@ Tree {
               "tagName": "text",
             },
             MD {
-              "attr": Object {},
+              "attributes": Object {},
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "**$729.99**",
@@ -2800,12 +2800,12 @@ Tree {
               "tagName": "md",
             },
             Button {
-              "attr": Object {
+              "attributes": Object {
                 "url": "https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html",
               },
               "children": Array [
                 Text {
-                  "attr": undefined,
+                  "attributes": Object {},
                   "children": undefined,
                   "node": Object {
                     "text": "View Product",
@@ -4261,10 +4261,10 @@ exports[`examples Gigs example should work 2`] = `
 Tree {
   "children": Array [
     Text {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
@@ -4290,16 +4290,16 @@ Tree {
       "tagName": "text",
     },
     ButtonList {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "times",
             "value": "9:30",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "9:30",
@@ -4328,13 +4328,13 @@ Tree {
           "tagName": "button",
         },
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "times",
             "value": "10:00",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "10:00",
@@ -4363,13 +4363,13 @@ Tree {
           "tagName": "button",
         },
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "times",
             "value": "11:30",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "11:30",
@@ -4398,13 +4398,13 @@ Tree {
           "tagName": "button",
         },
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "times",
             "value": "nope",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Nope",
@@ -4889,7 +4889,7 @@ exports[`examples Out of stock example should work 2`] = `
 Tree {
   "children": Array [
     Text {
-      "attr": undefined,
+      "attributes": Object {},
       "children": undefined,
       "node": Object {
         "text": "
@@ -4901,16 +4901,16 @@ Tree {
       "tagName": "text",
     },
     ButtonList {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "side",
             "value": "salad",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Salad",
@@ -4939,13 +4939,13 @@ Tree {
           "tagName": "button",
         },
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "side",
             "value": "potatoes",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Baked Potatoes",
@@ -4974,13 +4974,13 @@ Tree {
           "tagName": "button",
         },
         Button {
-          "attr": Object {
+          "attributes": Object {
             "name": "side",
             "value": "fried_pickles",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Fried Pickles",
@@ -5380,10 +5380,10 @@ exports[`examples Simple Counts example should work 2`] = `
 Tree {
   "children": Array [
     Text {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "How many donuts do you want for lunch?",
@@ -5409,7 +5409,7 @@ Tree {
       "tagName": "text",
     },
     Image {
-      "attr": Object {
+      "attributes": Object {
         "src": "https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80",
       },
       "children": Array [],
@@ -5425,7 +5425,7 @@ Tree {
       "tagName": "image",
     },
     Number {
-      "attr": Object {
+      "attributes": Object {
         "name": "donuts",
         "value": "3",
       },
@@ -5443,13 +5443,13 @@ Tree {
       "tagName": "number",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "confirm",
         "value": "Confirm",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Confirm",
@@ -5726,10 +5726,10 @@ exports[`examples Simple Support example should work 2`] = `
 Tree {
   "children": Array [
     Text {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
@@ -5755,13 +5755,13 @@ Tree {
       "tagName": "text",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "action",
         "value": "Activate",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Activate Card",
@@ -5981,10 +5981,10 @@ exports[`examples Support Data Input example should work 2`] = `
 Tree {
   "children": Array [
     MD {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
@@ -6010,7 +6010,7 @@ Tree {
       "tagName": "md",
     },
     Input {
-      "attr": Object {
+      "attributes": Object {
         "name": "email",
         "type": "text",
       },
@@ -6028,13 +6028,13 @@ Tree {
       "tagName": "input",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "send",
         "value": "submit",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Submit",
@@ -6476,10 +6476,10 @@ exports[`examples Support and Rich Data example should work 2`] = `
 Tree {
   "children": Array [
     Text {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Did you authorize these last 3 transactions on your account?",
@@ -6505,15 +6505,15 @@ Tree {
       "tagName": "text",
     },
     Row {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Col {
-          "attr": Object {
+          "attributes": Object {
             "width": "4",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "$15",
@@ -6541,12 +6541,12 @@ Tree {
           "tagName": "col",
         },
         Col {
-          "attr": Object {
+          "attributes": Object {
             "width": "8",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Oren's Hummus",
@@ -6633,15 +6633,15 @@ Tree {
       "tagName": "row",
     },
     Row {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Col {
-          "attr": Object {
+          "attributes": Object {
             "width": "4",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "$1000",
@@ -6669,12 +6669,12 @@ Tree {
           "tagName": "col",
         },
         Col {
-          "attr": Object {
+          "attributes": Object {
             "width": "8",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Apple monitor stand",
@@ -6761,15 +6761,15 @@ Tree {
       "tagName": "row",
     },
     Row {
-      "attr": Object {},
+      "attributes": Object {},
       "children": Array [
         Col {
-          "attr": Object {
+          "attributes": Object {
             "width": "4",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "$60",
@@ -6797,12 +6797,12 @@ Tree {
           "tagName": "col",
         },
         Col {
-          "attr": Object {
+          "attributes": Object {
             "width": "8",
           },
           "children": Array [
             Text {
-              "attr": undefined,
+              "attributes": Object {},
               "children": undefined,
               "node": Object {
                 "text": "Epic Games Skins",
@@ -6889,13 +6889,13 @@ Tree {
       "tagName": "row",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "authorized",
         "value": "yes",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "Yes",
@@ -6924,13 +6924,13 @@ Tree {
       "tagName": "button",
     },
     Button {
-      "attr": Object {
+      "attributes": Object {
         "name": "authorized",
         "value": "yes",
       },
       "children": Array [
         Text {
-          "attr": undefined,
+          "attributes": Object {},
           "children": undefined,
           "node": Object {
             "text": "No",
