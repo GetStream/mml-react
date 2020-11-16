@@ -10,10 +10,8 @@ describe('examples', () => {
 
       const tree = XMLtoMMLTree(nodes);
       expect(tree).toMatchSnapshot();
-
-      //@ts-expect-error
       expect(tree.toReact(tree)).toMatchSnapshot();
-      //@ts-expect-error
+
       expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
     });
   });

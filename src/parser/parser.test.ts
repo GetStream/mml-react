@@ -8,13 +8,10 @@ test('mml name and simple text field', () => {
 
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
-  //@ts-expect-error
   expect(tree.name).toEqual('john');
-  //@ts-expect-error
   expect(tree.children.length).toBe(1);
-  //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
-  //@ts-expect-error
+
   expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
@@ -29,13 +26,10 @@ test('mml with button', () => {
 
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
-  //@ts-expect-error
   expect(tree.name).toEqual('support');
-  //@ts-expect-error
   expect(tree.children.length).toBe(2);
-  //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
-  //@ts-expect-error
+
   expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
@@ -47,14 +41,10 @@ test('simple carousel', () => {
 
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
-
-  //@ts-expect-error
   expect(tree.children.length).toBe(1);
-  //@ts-expect-error
   expect(tree.children[0].children.length).toBe(2);
-  //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
-  //@ts-expect-error
+
   expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
@@ -66,15 +56,10 @@ test('simple input', () => {
 
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
-
-  //@ts-expect-error
   expect(tree.initialState()).toEqual({ name: 'John' });
-
-  //@ts-expect-error
   expect(tree.children.length).toBe(1);
-  //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
-  //@ts-expect-error
+
   expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
@@ -93,9 +78,7 @@ test('input tags should have data', () => {
   const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
 
-  //@ts-expect-error
   expect(tree.hasData()).toBe(true);
-  //@ts-expect-error
   expect(tree.initialState()).toEqual({ myinput: '1' });
 });
 
@@ -103,7 +86,7 @@ test('text tags should not have data', () => {
   const mml = '<text>hi</text>';
   const nodes = SourceToXML(mml);
   const tree = XMLtoMMLTree(nodes);
-  //@ts-expect-error
+
   expect(tree.hasData()).toBe(false);
 });
 
