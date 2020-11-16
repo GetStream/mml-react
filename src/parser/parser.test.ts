@@ -1,5 +1,5 @@
+import renderer from 'react-test-renderer';
 import { SourceToXML, XMLtoMMLTree } from './parser';
-import { examples } from '../examples';
 
 test('mml name and simple text field', () => {
   const mml = '<mml name="john">hi</mml>';
@@ -14,6 +14,8 @@ test('mml name and simple text field', () => {
   expect(tree.children.length).toBe(1);
   //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
+  //@ts-expect-error
+  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
 test('mml with button', () => {
@@ -33,6 +35,8 @@ test('mml with button', () => {
   expect(tree.children.length).toBe(2);
   //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
+  //@ts-expect-error
+  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
 test('simple carousel', () => {
@@ -50,6 +54,8 @@ test('simple carousel', () => {
   expect(tree.children[0].children.length).toBe(2);
   //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
+  //@ts-expect-error
+  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
 test('simple input', () => {
@@ -68,6 +74,8 @@ test('simple input', () => {
   expect(tree.children.length).toBe(1);
   //@ts-expect-error
   expect(tree.toReact(tree)).toMatchSnapshot();
+  //@ts-expect-error
+  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
 });
 
 // test('invalid input tag', () => {
@@ -110,16 +118,6 @@ test('invalid MML', () => {
 //   const rTree = renderer.create(<MML source={mml} />).toJSON();
 //   expect(rTree).toMatchSnapshot();
 // });
-
-test('examples should work', () => {
-  examples.forEach((example) => {
-    const nodes = SourceToXML(example.mml);
-    expect(nodes).toMatchSnapshot();
-
-    const tree = XMLtoMMLTree(nodes);
-    expect(tree).toMatchSnapshot();
-  });
-});
 
 // test('only supported attributes are allowed', () => {
 //   const mml = '<mml name="john">hi</mml>';
