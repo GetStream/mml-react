@@ -20,7 +20,32 @@ export function SourceToXML(source: string) {
 
   // convert the string to XML nodes
   // this library is relatively lightweight and doesn't do a ton of validation
-  return [parseXml(src)];
+  return parseXml(src);
+}
+
+function convertNodes(nodes: parseXml.NodeBase[]) {
+  return nodes.reduce((acc, node) => {
+    const element = node as parseXml.Element;
+    let children;
+    if (element.children) children = convertNodes(element.children);
+
+    let tagName = element.name;
+    if ((node as parseXml.Text).type === 'text') {
+      if ((node as parseXml.Text).text.trim().length) tagName = 'text';
+      else return acc; // skip empty text elements
+    }
+
+    //@ts-expect-error
+    const TagClass = tags[tagName];
+    if (TagClass) {
+      //@ts-expect-error
+      acc.push(new TagClass(tagName, node, children));
+    } else {
+      console.log('unrecognized element', tagName, Object.keys(tags));
+    }
+
+    return acc;
+  }, []);
 }
 
 /**
@@ -30,54 +55,13 @@ export function SourceToXML(source: string) {
  *
  * @returns {MMLTree} The MML tree
  */
-export function XMLtoMMLTree(XMLNodes: parseXml.Document[]) {
-  let tree;
+export function XMLtoMMLTree(document: parseXml.Document) {
+  if (!document || !document.children || !document.children.length) throw new Error('bad input');
 
-  function convertNodes(nodes: parseXml.Document[]): any {
-    const MMLNodes = [];
-    for (const n of nodes) {
-      let children;
-      if (n.children) {
-        //@ts-expect-error
-        children = convertNodes(n.children);
-      }
+  const mmlNode = document.children[0] as parseXml.Element;
+  if (mmlNode.name !== 'mml') throw new Error('missing mml tag');
 
-      // structured way of looking up mml tags...
-      //@ts-expect-error
-      let tagName = n.name;
-      //@ts-expect-error
-      if (n.name === 'mml') {
-        tree = new Tree(n, children);
-        continue;
-      }
-      // skip the document level element...
-      if (n.type === 'document') {
-        return children;
-      }
-      if (n.type === 'text') {
-        //@ts-expect-error
-        if (n.text.trim().length > 0) {
-          tagName = 'text';
-        } else {
-          // skip empty text nodes
-          continue;
-        }
-      }
-
-      //@ts-expect-error
-      const TagClass = tags[tagName];
-
-      if (TagClass) {
-        const tag = new TagClass(tagName, n, children);
-        MMLNodes.push(tag);
-      } else {
-        console.log('unrecognized element', tagName, Object.keys(tags));
-      }
-    }
-    return MMLNodes;
-  }
-  convertNodes(XMLNodes);
-  return tree;
+  return new Tree(mmlNode, convertNodes(mmlNode.children));
 }
 
 /**

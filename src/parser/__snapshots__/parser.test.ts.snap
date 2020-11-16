@@ -1,29 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`mml name and simple text field 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "john",
-        },
-        "children": Array [
-          Object {
-            "text": "hi",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "john",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "hi",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`mml name and simple text field 2`] = `
@@ -92,71 +90,69 @@ exports[`mml name and simple text field 4`] = `
 `;
 
 exports[`mml with button 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "support",
-        },
-        "children": Array [
-          Object {
-            "text": "
-                  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "It looks like your credit card isn't activated yet, activate it now:",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "text",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-                  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "action",
-              "value": "Activate",
-            },
-            "children": Array [
-              Object {
-                "text": "Activate Card",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-               ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "support",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "
+                  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "It looks like your credit card isn't activated yet, activate it now:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+                  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "action",
+            "value": "Activate",
+          },
+          "children": Array [
+            Object {
+              "text": "Activate Card",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+               ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`mml with button 2`] = `
@@ -335,56 +331,54 @@ Array [
 `;
 
 exports[`simple carousel 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {},
-        "children": Array [
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "text": "a",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "item",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "text": "b",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "item",
-                "toJSON": [Function],
-                "type": "element",
-              },
-            ],
-            "name": "carousel",
-            "toJSON": [Function],
-            "type": "element",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "a",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "b",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+          ],
+          "name": "carousel",
+          "toJSON": [Function],
+          "type": "element",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`simple carousel 2`] = `
@@ -675,32 +669,30 @@ exports[`simple carousel 4`] = `
 `;
 
 exports[`simple input 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {},
-        "children": Array [
-          Object {
-            "attributes": Object {
-              "name": "name",
-              "value": "John",
-            },
-            "children": Array [],
-            "name": "input",
-            "toJSON": [Function],
-            "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "attributes": Object {
+            "name": "name",
+            "value": "John",
           },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+          "children": Array [],
+          "name": "input",
+          "toJSON": [Function],
+          "type": "element",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`simple input 2`] = `

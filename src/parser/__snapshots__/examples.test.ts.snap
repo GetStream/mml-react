@@ -1,87 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`examples Advanced Scheduling example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {},
-        "children": Array [
-          Object {
-            "text": "
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "text": "
 	",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "When would you like to schedule your massage?",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "text",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-	",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "duration": "30",
-              "interval": "30",
-              "name": "massage_appointment",
-              "selected": "2020-11-16T10:30:00.000Z",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "When would you like to schedule your massage?",
+              "toJSON": [Function],
+              "type": "text",
             },
-            "children": Array [],
-            "name": "scheduler",
-            "toJSON": [Function],
-            "type": "element",
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+	",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "duration": "30",
+            "interval": "30",
+            "name": "massage_appointment",
+            "selected": "2020-11-16T10:30:00.000Z",
           },
-          Object {
-            "text": "
+          "children": Array [],
+          "name": "scheduler",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
   ",
-            "toJSON": [Function],
-            "type": "text",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "action",
+            "value": "reserve",
           },
-          Object {
-            "attributes": Object {
-              "name": "action",
-              "value": "reserve",
+          "children": Array [
+            Object {
+              "text": "Reserve",
+              "toJSON": [Function],
+              "type": "text",
             },
-            "children": Array [
-              Object {
-                "text": "Reserve",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
 ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Advanced Scheduling example should work 2`] = `
@@ -440,117 +438,115 @@ Array [
 `;
 
 exports[`examples ButtonFloating example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "support",
-        },
-        "children": Array [
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "Just showing \`button_list\` \`floating\` **variant**:",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "md",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "variant": "floating",
-            },
-            "children": Array [
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "name": "side",
-                  "value": "yes",
-                  "variant": "floating",
-                },
-                "children": Array [
-                  Object {
-                    "text": "Yes!",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "name": "side",
-                  "value": "no",
-                  "variant": "floating",
-                },
-                "children": Array [
-                  Object {
-                    "text": "No, thanks",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button_list",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "support",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Just showing \`button_list\` \`floating\` **variant**:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "md",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "variant": "floating",
+          },
+          "children": Array [
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "side",
+                "value": "yes",
+                "variant": "floating",
+              },
+              "children": Array [
+                Object {
+                  "text": "Yes!",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "side",
+                "value": "no",
+                "variant": "floating",
+              },
+              "children": Array [
+                Object {
+                  "text": "No, thanks",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button_list",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples ButtonFloating example should work 2`] = `
@@ -920,113 +916,111 @@ Array [
 `;
 
 exports[`examples Buttons example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "support",
-        },
-        "children": Array [
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "Just showing \`button\` *variants*:",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "md",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "action",
-              "value": "Activate",
-            },
-            "children": Array [
-              Object {
-                "text": "Regular button",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "And here is variant \`floating\`:",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "md",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "action",
-              "value": "Activate",
-              "variant": "floating",
-            },
-            "children": Array [
-              Object {
-                "text": "Floating button",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "support",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Just showing \`button\` *variants*:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "md",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "action",
+            "value": "Activate",
+          },
+          "children": Array [
+            Object {
+              "text": "Regular button",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "And here is variant \`floating\`:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "md",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "action",
+            "value": "Activate",
+            "variant": "floating",
+          },
+          "children": Array [
+            Object {
+              "text": "Floating button",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Buttons example should work 2`] = `
@@ -1350,64 +1344,62 @@ Array [
 `;
 
 exports[`examples Date Confirmation example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {},
-        "children": Array [
-          Object {
-            "text": "
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "text": "
   ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "Your massage appointment has been confirmed!",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "text",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "end": "2019-12-24T15:42:54.148Z",
-              "start": "2019-12-24T14:42:54.148Z",
-              "title": "Massage with Jessica",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Your massage appointment has been confirmed!",
+              "toJSON": [Function],
+              "type": "text",
             },
-            "children": Array [],
-            "name": "add_to_calendar",
-            "toJSON": [Function],
-            "type": "element",
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "end": "2019-12-24T15:42:54.148Z",
+            "start": "2019-12-24T14:42:54.148Z",
+            "title": "Massage with Jessica",
           },
-          Object {
-            "text": "
+          "children": Array [],
+          "name": "add_to_calendar",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
 ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Date Confirmation example should work 2`] = `
@@ -1655,443 +1647,441 @@ END:VCALENDAR"
 `;
 
 exports[`examples E-commerce example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {},
-        "children": Array [
-          Object {
-            "text": "
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "text": "
     ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "md",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "md",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
     ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "
         ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "text": "
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "src": "https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
                   },
-                  Object {
-                    "attributes": Object {
-                      "src": "https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
+                  "children": Array [],
+                  "name": "image",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "Barricade Adventure HD Front Bumper",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [],
-                    "name": "image",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
+                  ],
+                  "name": "text",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "Barricade Adventure HD Front Bumper",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "text",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "**$404.99**",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "md",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {
-                      "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "**$404.99**",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [
-                      Object {
-                        "text": "View Product",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "button",
-                    "toJSON": [Function],
-                    "type": "element",
+                  ],
+                  "name": "md",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html",
                   },
-                  Object {
-                    "text": "
+                  "children": Array [
+                    Object {
+                      "text": "View Product",
+                      "toJSON": [Function],
+                      "type": "text",
+                    },
+                  ],
+                  "name": "button",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
         ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "item",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
         ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "text": "
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "src": "https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0",
                   },
-                  Object {
-                    "attributes": Object {
-                      "src": "https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0",
+                  "children": Array [],
+                  "name": "image",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [],
-                    "name": "image",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
+                  ],
+                  "name": "text",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "text",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "**$529.99**",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "md",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {
-                      "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "**$529.99**",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [
-                      Object {
-                        "text": "View Product",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "button",
-                    "toJSON": [Function],
-                    "type": "element",
+                  ],
+                  "name": "md",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html",
                   },
-                  Object {
-                    "text": "
+                  "children": Array [
+                    Object {
+                      "text": "View Product",
+                      "toJSON": [Function],
+                      "type": "text",
+                    },
+                  ],
+                  "name": "button",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
         ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "item",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
         ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "text": "
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "src": "https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
                   },
-                  Object {
-                    "attributes": Object {
-                      "src": "https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
+                  "children": Array [],
+                  "name": "image",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [],
-                    "name": "image",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
+                  ],
+                  "name": "text",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "text",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "**$549.99**",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "md",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {
-                      "url": "https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "**$549.99**",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [
-                      Object {
-                        "text": "View Product",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "button",
-                    "toJSON": [Function],
-                    "type": "element",
+                  ],
+                  "name": "md",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "url": "https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html",
                   },
-                  Object {
-                    "text": "
+                  "children": Array [
+                    Object {
+                      "text": "View Product",
+                      "toJSON": [Function],
+                      "type": "text",
+                    },
+                  ],
+                  "name": "button",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
         ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "item",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
         ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {},
-                "children": Array [
-                  Object {
-                    "text": "
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "src": "https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0",
                   },
-                  Object {
-                    "attributes": Object {
-                      "src": "https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0",
+                  "children": Array [],
+                  "name": "image",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [],
-                    "name": "image",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
+                  ],
+                  "name": "text",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
             ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "text",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {},
-                    "children": Array [
-                      Object {
-                        "text": "**$729.99**",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "md",
-                    "toJSON": [Function],
-                    "type": "element",
-                  },
-                  Object {
-                    "text": "
-            ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                  Object {
-                    "attributes": Object {
-                      "url": "https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {},
+                  "children": Array [
+                    Object {
+                      "text": "**$729.99**",
+                      "toJSON": [Function],
+                      "type": "text",
                     },
-                    "children": Array [
-                      Object {
-                        "text": "View Product",
-                        "toJSON": [Function],
-                        "type": "text",
-                      },
-                    ],
-                    "name": "button",
-                    "toJSON": [Function],
-                    "type": "element",
+                  ],
+                  "name": "md",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
+            ",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+                Object {
+                  "attributes": Object {
+                    "url": "https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html",
                   },
-                  Object {
-                    "text": "
+                  "children": Array [
+                    Object {
+                      "text": "View Product",
+                      "toJSON": [Function],
+                      "type": "text",
+                    },
+                  ],
+                  "name": "button",
+                  "toJSON": [Function],
+                  "type": "element",
+                },
+                Object {
+                  "text": "
         ",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "item",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
     ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "carousel",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "carousel",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
 ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples E-commerce example should work 2`] = `
@@ -4116,157 +4106,155 @@ Array [
 `;
 
 exports[`examples Gigs example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "gigs",
-        },
-        "children": Array [
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "text",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "name": "times",
-                  "value": "9:30",
-                },
-                "children": Array [
-                  Object {
-                    "text": "9:30",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "name": "times",
-                  "value": "10:00",
-                },
-                "children": Array [
-                  Object {
-                    "text": "10:00",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "name": "times",
-                  "value": "11:30",
-                },
-                "children": Array [
-                  Object {
-                    "text": "11:30",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "name": "times",
-                  "value": "nope",
-                },
-                "children": Array [
-                  Object {
-                    "text": "Nope",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button_list",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "gigs",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "times",
+                "value": "9:30",
+              },
+              "children": Array [
+                Object {
+                  "text": "9:30",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "times",
+                "value": "10:00",
+              },
+              "children": Array [
+                Object {
+                  "text": "10:00",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "times",
+                "value": "11:30",
+              },
+              "children": Array [
+                Object {
+                  "text": "11:30",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "times",
+                "value": "nope",
+              },
+              "children": Array [
+                Object {
+                  "text": "Nope",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button_list",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Gigs example should work 2`] = `
@@ -4786,117 +4774,115 @@ Array [
 `;
 
 exports[`examples Out of stock example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "food_order",
-        },
-        "children": Array [
-          Object {
-            "text": "
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "food_order",
+      },
+      "children": Array [
+        Object {
+          "text": "
   Sorry we're currently out of fries, what would you like as a side?
   ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "
     ",
-                "toJSON": [Function],
-                "type": "text",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "side",
+                "value": "salad",
               },
-              Object {
-                "attributes": Object {
-                  "name": "side",
-                  "value": "salad",
+              "children": Array [
+                Object {
+                  "text": "Salad",
+                  "toJSON": [Function],
+                  "type": "text",
                 },
-                "children": Array [
-                  Object {
-                    "text": "Salad",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
     ",
-                "toJSON": [Function],
-                "type": "text",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "side",
+                "value": "potatoes",
               },
-              Object {
-                "attributes": Object {
-                  "name": "side",
-                  "value": "potatoes",
+              "children": Array [
+                Object {
+                  "text": "Baked Potatoes",
+                  "toJSON": [Function],
+                  "type": "text",
                 },
-                "children": Array [
-                  Object {
-                    "text": "Baked Potatoes",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
     ",
-                "toJSON": [Function],
-                "type": "text",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "name": "side",
+                "value": "fried_pickles",
               },
-              Object {
-                "attributes": Object {
-                  "name": "side",
-                  "value": "fried_pickles",
+              "children": Array [
+                Object {
+                  "text": "Fried Pickles",
+                  "toJSON": [Function],
+                  "type": "text",
                 },
-                "children": Array [
-                  Object {
-                    "text": "Fried Pickles",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "button",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
+              ],
+              "name": "button",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
   ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button_list",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button_list",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
 ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Out of stock example should work 2`] = `
@@ -5294,102 +5280,100 @@ Array [
 `;
 
 exports[`examples Simple Counts example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "counts",
-        },
-        "children": Array [
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "How many donuts do you want for lunch?",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "text",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "src": "https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80",
-            },
-            "children": Array [],
-            "name": "image",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "donuts",
-              "value": "3",
-            },
-            "children": Array [],
-            "name": "number",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "confirm",
-              "value": "Confirm",
-            },
-            "children": Array [
-              Object {
-                "text": "Confirm",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "counts",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "How many donuts do you want for lunch?",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "src": "https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80",
+          },
+          "children": Array [],
+          "name": "image",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "donuts",
+            "value": "3",
+          },
+          "children": Array [],
+          "name": "number",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "confirm",
+            "value": "Confirm",
+          },
+          "children": Array [
+            Object {
+              "text": "Confirm",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Simple Counts example should work 2`] = `
@@ -5673,71 +5657,69 @@ Array [
 `;
 
 exports[`examples Simple Support example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "support",
-        },
-        "children": Array [
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "It looks like your credit card isn't activated yet, activate it now:",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "text",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "action",
-              "value": "Activate",
-            },
-            "children": Array [
-              Object {
-                "text": "Activate Card",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "support",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "It looks like your credit card isn't activated yet, activate it now:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "action",
+            "value": "Activate",
+          },
+          "children": Array [
+            Object {
+              "text": "Activate Card",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Simple Support example should work 2`] = `
@@ -5916,85 +5898,83 @@ Array [
 `;
 
 exports[`examples Support Data Input example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {},
-        "children": Array [
-          Object {
-            "text": "
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "text": "
 	",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "md",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "email",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
+              "toJSON": [Function],
               "type": "text",
             },
-            "children": Array [],
-            "name": "input",
-            "toJSON": [Function],
-            "type": "element",
+          ],
+          "name": "md",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "email",
+            "type": "text",
           },
-          Object {
-            "text": "
+          "children": Array [],
+          "name": "input",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
 	",
-            "toJSON": [Function],
-            "type": "text",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "send",
+            "value": "submit",
           },
-          Object {
-            "attributes": Object {
-              "name": "send",
-              "value": "submit",
+          "children": Array [
+            Object {
+              "text": "Submit",
+              "toJSON": [Function],
+              "type": "text",
             },
-            "children": Array [
-              Object {
-                "text": "Submit",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
 ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Support Data Input example should work 2`] = `
@@ -6219,279 +6199,277 @@ Array [
 `;
 
 exports[`examples Support and Rich Data example should work 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "attributes": Object {
-          "name": "support",
-        },
-        "children": Array [
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "Did you authorize these last 3 transactions on your account?",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "text",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "width": "4",
-                },
-                "children": Array [
-                  Object {
-                    "text": "$15",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "col",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "width": "8",
-                },
-                "children": Array [
-                  Object {
-                    "text": "Oren's Hummus",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "col",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "row",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "width": "4",
-                },
-                "children": Array [
-                  Object {
-                    "text": "$1000",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "col",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "width": "8",
-                },
-                "children": Array [
-                  Object {
-                    "text": "Apple monitor stand",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "col",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "row",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-  ",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {},
-            "children": Array [
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "width": "4",
-                },
-                "children": Array [
-                  Object {
-                    "text": "$60",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "col",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-    ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-              Object {
-                "attributes": Object {
-                  "width": "8",
-                },
-                "children": Array [
-                  Object {
-                    "text": "Epic Games Skins",
-                    "toJSON": [Function],
-                    "type": "text",
-                  },
-                ],
-                "name": "col",
-                "toJSON": [Function],
-                "type": "element",
-              },
-              Object {
-                "text": "
-  ",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "row",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "authorized",
-              "value": "yes",
-            },
-            "children": Array [
-              Object {
-                "text": "Yes",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-          Object {
-            "attributes": Object {
-              "name": "authorized",
-              "value": "yes",
-            },
-            "children": Array [
-              Object {
-                "text": "No",
-                "toJSON": [Function],
-                "type": "text",
-              },
-            ],
-            "name": "button",
-            "toJSON": [Function],
-            "type": "element",
-          },
-          Object {
-            "text": "
-",
-            "toJSON": [Function],
-            "type": "text",
-          },
-        ],
-        "name": "mml",
-        "toJSON": [Function],
-        "type": "element",
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "support",
       },
-    ],
-    "toJSON": [Function],
-    "type": "document",
-  },
-]
+      "children": Array [
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Did you authorize these last 3 transactions on your account?",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "width": "4",
+              },
+              "children": Array [
+                Object {
+                  "text": "$15",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "col",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "width": "8",
+              },
+              "children": Array [
+                Object {
+                  "text": "Oren's Hummus",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "col",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "row",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "width": "4",
+              },
+              "children": Array [
+                Object {
+                  "text": "$1000",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "col",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "width": "8",
+              },
+              "children": Array [
+                Object {
+                  "text": "Apple monitor stand",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "col",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "row",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "width": "4",
+              },
+              "children": Array [
+                Object {
+                  "text": "$60",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "col",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+    ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+            Object {
+              "attributes": Object {
+                "width": "8",
+              },
+              "children": Array [
+                Object {
+                  "text": "Epic Games Skins",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "col",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "text": "
+  ",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "row",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "authorized",
+            "value": "yes",
+          },
+          "children": Array [
+            Object {
+              "text": "Yes",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "authorized",
+            "value": "yes",
+          },
+          "children": Array [
+            Object {
+              "text": "No",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
 `;
 
 exports[`examples Support and Rich Data example should work 2`] = `
