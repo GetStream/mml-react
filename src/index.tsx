@@ -4,4 +4,4 @@ import './styles/index.scss';
 export * from './parser/examples';
 export * from './components/MML';
 export * from './context';
-export * from './components/converterConfig';
+export * from './converters';

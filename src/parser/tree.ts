@@ -2,9 +2,7 @@ import { ReactElement } from 'react';
 import { Element as XmlElement } from '@rgrove/parse-xml';
 
 import { MMLTag } from './tags';
-import { converterConfig as ReactConverterConfig } from '../components/converterConfig';
-
-export type Convertor = (tag: MMLTag, children?: ReactElement[]) => ReactElement;
+import { converters as defaultConverters, ConvertorType } from '../converters';
 
 /**
  * Tree - The tree object for MML tags
@@ -12,13 +10,13 @@ export type Convertor = (tag: MMLTag, children?: ReactElement[]) => ReactElement
 export class Tree {
   node: XmlElement;
   children: MMLTag[];
-  converterConfig: Record<string, Convertor>;
+  converters: Record<string, ConvertorType>;
   name?: string;
 
-  constructor(node: XmlElement, children: MMLTag[], converterConfig?: Record<string, Convertor>) {
+  constructor(node: XmlElement, children: MMLTag[], customConvertors?: Record<string, ConvertorType>) {
     this.node = node;
     this.children = children;
-    this.converterConfig = converterConfig || ReactConverterConfig;
+    this.converters = { ...defaultConverters, ...customConvertors };
     this.name = node.attributes.name;
   }
 
@@ -29,10 +27,10 @@ export class Tree {
     const reactNodes: ReactElement[] = [];
 
     (parent.children || []).forEach((child, i) => {
-      const converter = this.converterConfig[child.tagName];
+      const converter = this.converters[child.tagName];
       if (!converter) {
         throw Error(
-          `Converter not found for tag ${child.tagName}, Available converters are ${Object.keys(this.converterConfig)}`,
+          `Converter not found for tag ${child.tagName}, Available converters are ${Object.keys(this.converters)}`,
         );
       }
 

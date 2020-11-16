@@ -10,7 +10,7 @@ import { MMLContainer } from './MMLContainer';
 export function MML({
   source,
   onSubmit,
-  converterConfig,
+  converters,
   Loader = LoaderComponent,
   Error = ErrorComponent,
   Success = SuccessComponent,
@@ -21,8 +21,8 @@ export function MML({
 
   const tree = useMemo(() => {
     const tree = Parse(source);
-    if (converterConfig) {
-      tree.converterConfig = converterConfig;
+    if (converters) {
+      tree.converters = converters;
     }
     try {
       // get initial state for all input elements in MML
@@ -32,7 +32,7 @@ export function MML({
       setError("This chat message has invalid formatting and can't be shown");
     }
     return tree;
-  }, [source, converterConfig]);
+  }, [source, converters]);
 
   return (
     <MMLContainer
@@ -53,7 +53,7 @@ MML.propTypes = {
   /** The MML source to render */
   source: PropTypes.string.isRequired,
   /** The convert config allows you to overwrite the MML to react conversion */
-  converterConfig: PropTypes.object,
+  converters: PropTypes.object,
   /** The submit callback whenever a form is submitted */
   onSubmit: PropTypes.func,
   /** The Loader component */

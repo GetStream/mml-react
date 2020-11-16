@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-import { MMLTag } from '../parser/tags';
+import { MMLTag } from './parser/tags';
 
-import { Input } from './Input';
-import { Button } from './Button';
-import { ButtonList } from './ButtonList';
-import { AddToCalendar } from './AddToCalendar';
-import { Scheduler } from './Scheduler';
-import { Text } from './Text';
-import { MD } from './MD';
-import { Row } from './Row';
-import { Col } from './Col';
-import { Image } from './Image';
-import { Icon } from './Icon';
-import { Carousel } from './Carousel';
-import { CarouselItem } from './CarouselItem';
-import { Number } from './Number';
+import { Input } from './components/Input';
+import { Button } from './components/Button';
+import { ButtonList } from './components/ButtonList';
+import { AddToCalendar } from './components/AddToCalendar';
+import { Scheduler } from './components/Scheduler';
+import { Text } from './components/Text';
+import { MD } from './components/MD';
+import { Row } from './components/Row';
+import { Col } from './components/Col';
+import { Image } from './components/Image';
+import { Icon } from './components/Icon';
+import { Carousel } from './components/Carousel';
+import { CarouselItem } from './components/CarouselItem';
+import { Number } from './components/Number';
+
+export type ConvertorType = (tag: MMLTag, children?: ReactElement[]) => ReactElement;
 
 /**
- * The converterConfig maps MML tags to react nodes
+ * The converters maps MML tags to react nodes
  * Every converter is passed the MML tag as well as the children (as React nodes)
  */
-export const converterConfig = {
+export const converters = {
   button: (tag: MMLTag) => {
     return <Button key={tag.key} text={tag.getText()} name={tag.attributes.name} {...tag.attributes} />;
   },

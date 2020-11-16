@@ -38,7 +38,7 @@ Tree {
       "tagName": "text",
     },
   ],
-  "converterConfig": Object {
+  "converters": Object {
     "add_to_calendar": [Function],
     "button": [Function],
     "button_list": [Function],
@@ -223,7 +223,7 @@ Tree {
       "tagName": "button",
     },
   ],
-  "converterConfig": Object {
+  "converters": Object {
     "add_to_calendar": [Function],
     "button": [Function],
     "button_list": [Function],
@@ -483,7 +483,7 @@ Tree {
       "tagName": "carousel",
     },
   ],
-  "converterConfig": Object {
+  "converters": Object {
     "add_to_calendar": [Function],
     "button": [Function],
     "button_list": [Function],
@@ -717,7 +717,7 @@ Tree {
       "tagName": "input",
     },
   ],
-  "converterConfig": Object {
+  "converters": Object {
     "add_to_calendar": [Function],
     "button": [Function],
     "button_list": [Function],
