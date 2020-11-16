@@ -9,7 +9,7 @@ import { Tree } from './tree';
  *
  * @returns {array} an Array of XML nodes
  */
-export function SourceToXML(source) {
+export function SourceToXML(source: string) {
   let src = source;
   // the wrapping MML tags are optional, for parsing simplicity we automatically add them if they are not already there
   if (!src.startsWith('<mml')) src = `<mml>${source}</mml>`;
@@ -30,19 +30,22 @@ export function SourceToXML(source) {
  *
  * @returns {MMLTree} The MML tree
  */
-export function XMLtoMMLTree(XMLNodes) {
+export function XMLtoMMLTree(XMLNodes: parseXml.Document[]) {
   let tree;
 
-  function convertNodes(nodes) {
+  function convertNodes(nodes: parseXml.Document[]): any {
     const MMLNodes = [];
     for (const n of nodes) {
       let children;
       if (n.children) {
+        //@ts-expect-error
         children = convertNodes(n.children);
       }
 
       // structured way of looking up mml tags...
+      //@ts-expect-error
       let tagName = n.name;
+      //@ts-expect-error
       if (n.name === 'mml') {
         tree = new Tree(n, children);
         continue;
@@ -52,6 +55,7 @@ export function XMLtoMMLTree(XMLNodes) {
         return children;
       }
       if (n.type === 'text') {
+        //@ts-expect-error
         if (n.text.trim().length > 0) {
           tagName = 'text';
         } else {
@@ -60,6 +64,7 @@ export function XMLtoMMLTree(XMLNodes) {
         }
       }
 
+      //@ts-expect-error
       const TagClass = tags[tagName];
 
       if (TagClass) {
@@ -72,7 +77,6 @@ export function XMLtoMMLTree(XMLNodes) {
     return MMLNodes;
   }
   convertNodes(XMLNodes);
-
   return tree;
 }
 
@@ -83,7 +87,7 @@ export function XMLtoMMLTree(XMLNodes) {
  *
  *  @returns {Tree} An MML Tree
  */
-export function Parse(source) {
+export function Parse(source: string) {
   const XMLNodes = SourceToXML(source);
   return XMLtoMMLTree(XMLNodes);
 }
