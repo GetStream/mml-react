@@ -1,5 +1,6 @@
 import parseXml from '@rgrove/parse-xml';
-import { tags } from './tags';
+
+import { MMLTag, tags } from './tags';
 import { Tree } from './tree';
 
 /**
@@ -24,7 +25,7 @@ export function SourceToXML(source: string) {
 }
 
 function convertNodes(nodes: parseXml.NodeBase[]) {
-  return nodes.reduce((acc, node) => {
+  return nodes.reduce((acc: MMLTag[], node: parseXml.NodeBase) => {
     const element = node as parseXml.Element;
     let children;
     if (element.children) children = convertNodes(element.children);
@@ -35,13 +36,11 @@ function convertNodes(nodes: parseXml.NodeBase[]) {
       else return acc; // skip empty text elements
     }
 
-    //@ts-expect-error
-    const TagClass = tags[tagName];
-    if (TagClass) {
-      //@ts-expect-error
-      acc.push(new TagClass(tagName, node, children));
+    if (tags[tagName]) {
+      const Tag = tags[tagName];
+      acc.push(new Tag(tagName, node as parseXml.Element | parseXml.Text, children));
     } else {
-      console.log('unrecognized element', tagName, Object.keys(tags));
+      console.warn('unrecognized element', tagName, Object.keys(tags));
     }
 
     return acc;

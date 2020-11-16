@@ -1,13 +1,14 @@
-import { Text, Element } from '@rgrove/parse-xml';
+import { Element as XmlElement, Text as XmlText } from '@rgrove/parse-xml';
 
 /**
  * MMLTag - The base MML Tag
  */
 export class MMLTag {
   tagName: string;
-  node: Element | Text;
-  children: MMLTag[];
+  node: XmlElement | XmlText;
+  children?: MMLTag[];
   attributes: Record<string, string>;
+  key?: string;
 
   static data = false;
 
@@ -15,16 +16,16 @@ export class MMLTag {
   static validAttributes = {};
   static requiredAttributes = [];
 
-  constructor(tagName: string, node: Element | Text, children: MMLTag[]) {
+  constructor(tagName: string, node: XmlElement | XmlText, children?: MMLTag[]) {
     this.tagName = tagName;
     this.node = node;
-    this.attributes = (this.node as Element).attributes || {};
+    this.attributes = (this.node as XmlElement).attributes || {};
     this.children = children;
   }
 
   getText() {
     if (this.node.type === 'text') return this.node.text;
-    else if (this.node.children && this.node.children.length) return (this.node.children[0] as Text).text;
+    else if (this.node.children && this.node.children.length) return (this.node.children[0] as XmlText).text;
     return '';
   }
 
@@ -34,6 +35,7 @@ export class MMLTag {
 
   // This moved to proptypes at the react level
   validate() {
+    return [];
     /*
     const errors = []
     if (this.constructor.validChildren !== 'all' && this.children) {
