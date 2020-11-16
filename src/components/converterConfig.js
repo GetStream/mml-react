@@ -20,49 +20,49 @@ import { Number } from './Number';
  * Every converter is passed the MML tag as well as the children (as React nodes)
  */
 export const converterConfig = {
-  button: (tag) => {
+  button: function Button(tag) {
     return <Button text={tag.getText()} {...tag.node.attributes} key={tag.key} />;
   },
-  button_list: (tag, children) => {
+  button_list: function ButtonList(tag, children) {
     return (
       <ButtonList key={tag.key} {...tag.node.attributes}>
         {children}
       </ButtonList>
     );
   },
-  input: (tag) => {
+  input: function Input(tag) {
     return <Input key={tag.key} {...tag.node.attributes} />;
   },
-  add_to_calendar: (tag) => {
+  add_to_calendar: function AddToCalendar(tag) {
     return <AddToCalendar key={tag.key} {...tag.node.attributes} />;
   },
-  col: (tag, children) => {
+  col: function Col(tag, children) {
     return (
       <Col key={tag.key} {...tag.node.attributes}>
         {children}
       </Col>
     );
   },
-  row: (tag, children) => {
+  row: function Row(tag, children) {
     return (
       <Row key={tag.key} {...tag.node.attributes}>
         {children}
       </Row>
     );
   },
-  icon: (tag) => {
+  icon: function Icon(tag) {
     return <Icon key={tag.key} {...tag.node.attributes} />;
   },
-  image: (tag) => {
+  image: function Image(tag) {
     return <Image key={tag.key} {...tag.node.attributes} />;
   },
-  md: (tag) => {
+  md: function MD(tag) {
     return <MD key={tag.key} text={tag.getText()} {...tag.node.attributes} />;
   },
-  text: (tag) => {
+  text: function Text(tag) {
     return <Text key={tag.key} text={tag.getText()} {...tag.node.attributes} />;
   },
-  scheduler: (tag) => {
+  scheduler: function Scheduler(tag) {
     return (
       <Scheduler
         key={tag.key}
@@ -73,13 +73,13 @@ export const converterConfig = {
       />
     );
   },
-  carousel: (tag, children) => {
+  carousel: function Carousel(tag, children) {
     return <Carousel key={tag.key}>{children}</Carousel>;
   },
-  item: (tag, children) => {
+  item: function CarouselItem(tag, children) {
     return <CarouselItem key={tag.key}>{children}</CarouselItem>;
   },
-  number: (tag) => {
+  number: function Number(tag) {
     return <Number key={tag.key} {...tag.node.attributes} />;
   },
 };

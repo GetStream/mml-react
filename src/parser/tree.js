@@ -14,7 +14,7 @@ export class Tree {
   /**
    * Recursively convert nodes to react
    */
-  toReact(parentTag) {
+  toReact(parentTag = {}) {
     const reactNodes = [];
 
     const childTags = parentTag.children || [];
