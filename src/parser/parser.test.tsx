@@ -1,3 +1,4 @@
+import React from 'react';
 import renderer from 'react-test-renderer';
 import { SourceToXML, XMLtoMMLTree } from './parser';
 
@@ -10,9 +11,9 @@ test('mml name and simple text field', () => {
   expect(tree).toMatchSnapshot();
   expect(tree.name).toEqual('john');
   expect(tree.children.length).toBe(1);
-  expect(tree.toReact(tree)).toMatchSnapshot();
+  expect(tree.toReact()).toMatchSnapshot();
 
-  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
+  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
 });
 
 test('mml with button', () => {
@@ -28,9 +29,9 @@ test('mml with button', () => {
   expect(tree).toMatchSnapshot();
   expect(tree.name).toEqual('support');
   expect(tree.children.length).toBe(2);
-  expect(tree.toReact(tree)).toMatchSnapshot();
+  expect(tree.toReact()).toMatchSnapshot();
 
-  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
+  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
 });
 
 test('simple carousel', () => {
@@ -42,10 +43,11 @@ test('simple carousel', () => {
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
   expect(tree.children.length).toBe(1);
+  //@ts-ignore
   expect(tree.children[0].children.length).toBe(2);
-  expect(tree.toReact(tree)).toMatchSnapshot();
+  expect(tree.toReact()).toMatchSnapshot();
 
-  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
+  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
 });
 
 test('simple input', () => {
@@ -58,9 +60,9 @@ test('simple input', () => {
   expect(tree).toMatchSnapshot();
   expect(tree.initialState()).toEqual({ name: 'John' });
   expect(tree.children.length).toBe(1);
-  expect(tree.toReact(tree)).toMatchSnapshot();
+  expect(tree.toReact()).toMatchSnapshot();
 
-  expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
+  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
 });
 
 // test('invalid input tag', () => {

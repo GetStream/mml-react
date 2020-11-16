@@ -1,3 +1,4 @@
+import React from 'react';
 import renderer from 'react-test-renderer';
 import { SourceToXML, XMLtoMMLTree } from './parser';
 import { examples } from './examples';
@@ -10,9 +11,9 @@ describe('examples', () => {
 
       const tree = XMLtoMMLTree(nodes);
       expect(tree).toMatchSnapshot();
-      expect(tree.toReact(tree)).toMatchSnapshot();
+      expect(tree.toReact()).toMatchSnapshot();
 
-      expect(renderer.create(tree.toReact(tree)).toJSON()).toMatchSnapshot();
+      expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
     });
   });
 });
