@@ -6,7 +6,7 @@ import theme, { GlobalStyle } from './theme'
 import { Header } from './components/Header'
 import { ExampleEditor } from './components/ExampleEditor'
 
-import '../../dist/css/index.css'
+import '../../dist/index.css'
 import 'stream-chat-react/dist/css/index.css'
 
 const Wrap = styled.div`

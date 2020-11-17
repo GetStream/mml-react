@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import formatDate from 'date-fns/format'
-import { isSameDay, addDays } from 'date-fns'
-import DatePickerSelect from './DatePickerSelect'
+import React from 'react';
+import PropTypes from 'prop-types';
+import formatDate from 'date-fns/format';
+import { isSameDay, addDays } from 'date-fns';
+import DatePickerSelect from './DatePickerSelect';
 
 /**
  * Get item data
@@ -10,15 +10,15 @@ import DatePickerSelect from './DatePickerSelect'
  * @param {typeof DatePickerDate.propTypes & { idx: number }} props
  */
 function getItem(props) {
-  const { idx, format, interval } = props
-  const value = transformIdxToValue(props)
+  const { idx, format, interval } = props;
+  const value = transformIdxToValue(props);
 
   return {
     idx,
     interval,
     value,
-    displayValue: formatDate(value, format)
-  }
+    displayValue: formatDate(value, format),
+  };
 }
 
 /**
@@ -26,9 +26,9 @@ function getItem(props) {
  * @param {typeof DatePickerDate.propTypes & { idx: number }} props
  */
 function transformIdxToValue(props) {
-  const { idx, value, interval } = props
-  let newValue = addDays(value, idx * interval)
-  return newValue
+  const { idx, value, interval } = props;
+  let newValue = addDays(value, idx * interval);
+  return newValue;
 }
 
 /**
@@ -39,19 +39,19 @@ function transformIdxToValue(props) {
  * @param {(item: ReturnType<getItem>) => any} handleClick
  */
 function DatePickerDateItem(item, selected, handleClick) {
-  const { idx, value, displayValue, interval } = item
-  let isSelected
+  const { idx, value, displayValue, interval } = item;
+  let isSelected;
 
   if (interval === 1) {
-    isSelected = isSameDay(selected, value)
+    isSelected = isSameDay(selected, value);
   } else if (interval > 1) {
-    isSelected = isSameDay(selected, addDays(value, interval))
+    isSelected = isSameDay(selected, addDays(value, interval));
   }
 
-  let className = `mml-datepicker__item mml-datepicker__item--day`
+  let className = `mml-datepicker__item mml-datepicker__item--day`;
 
   if (isSelected) {
-    className += ' mml-datepicker__item--selected'
+    className += ' mml-datepicker__item--selected';
   }
 
   return (
@@ -63,7 +63,7 @@ function DatePickerDateItem(item, selected, handleClick) {
     >
       {displayValue}
     </div>
-  )
+  );
 }
 
 /**
@@ -74,17 +74,13 @@ function DatePickerDateItem(item, selected, handleClick) {
 export default function DatePickerDate(props) {
   return (
     <div className="mml-datepicker__date">
-      <DatePickerSelect
-        {...props}
-        Item={DatePickerDateItem}
-        getItem={getItem}
-      />
+      <DatePickerSelect {...props} Item={DatePickerDateItem} getItem={getItem} />
     </div>
-  )
+  );
 }
 
 DatePickerDate.propTypes = {
   filter: PropTypes.func,
   value: PropTypes.instanceOf(Date),
-  interval: PropTypes.number
-}
+  interval: PropTypes.number,
+};

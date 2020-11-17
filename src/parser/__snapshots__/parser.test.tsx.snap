@@ -1,0 +1,772 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mml name and simple text field 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "john",
+      },
+      "children": Array [
+        Object {
+          "text": "hi",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
+`;
+
+exports[`mml name and simple text field 2`] = `
+Tree {
+  "children": Array [
+    Text {
+      "attributes": Object {},
+      "children": undefined,
+      "node": Object {
+        "text": "hi",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      "tagName": "text",
+    },
+  ],
+  "converters": Object {
+    "add_to_calendar": [Function],
+    "button": [Function],
+    "button_list": [Function],
+    "carousel": [Function],
+    "col": [Function],
+    "icon": [Function],
+    "image": [Function],
+    "input": [Function],
+    "item": [Function],
+    "md": [Function],
+    "number": [Function],
+    "row": [Function],
+    "scheduler": [Function],
+    "text": [Function],
+  },
+  "name": "john",
+  "node": Object {
+    "attributes": Object {
+      "name": "john",
+    },
+    "children": Array [
+      Object {
+        "text": "hi",
+        "toJSON": [Function],
+        "type": "text",
+      },
+    ],
+    "name": "mml",
+    "toJSON": [Function],
+    "type": "element",
+  },
+}
+`;
+
+exports[`mml name and simple text field 3`] = `
+Array [
+  <Unknown
+    text="hi"
+  />,
+]
+`;
+
+exports[`mml name and simple text field 4`] = `
+<p
+  className="mml-text"
+>
+  hi
+</p>
+`;
+
+exports[`mml with button 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "name": "support",
+      },
+      "children": Array [
+        Object {
+          "text": "
+                  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "It looks like your credit card isn't activated yet, activate it now:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "text",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+                  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "name": "action",
+            "value": "Activate",
+          },
+          "children": Array [
+            Object {
+              "text": "Activate Card",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+               ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
+`;
+
+exports[`mml with button 2`] = `
+Tree {
+  "children": Array [
+    Text {
+      "attributes": Object {},
+      "children": Array [
+        Text {
+          "attributes": Object {},
+          "children": undefined,
+          "node": Object {
+            "text": "It looks like your credit card isn't activated yet, activate it now:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+          "tagName": "text",
+        },
+      ],
+      "node": Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "text": "It looks like your credit card isn't activated yet, activate it now:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "text",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      "tagName": "text",
+    },
+    Button {
+      "attributes": Object {
+        "name": "action",
+        "value": "Activate",
+      },
+      "children": Array [
+        Text {
+          "attributes": Object {},
+          "children": undefined,
+          "node": Object {
+            "text": "Activate Card",
+            "toJSON": [Function],
+            "type": "text",
+          },
+          "tagName": "text",
+        },
+      ],
+      "node": Object {
+        "attributes": Object {
+          "name": "action",
+          "value": "Activate",
+        },
+        "children": Array [
+          Object {
+            "text": "Activate Card",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "button",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      "tagName": "button",
+    },
+  ],
+  "converters": Object {
+    "add_to_calendar": [Function],
+    "button": [Function],
+    "button_list": [Function],
+    "carousel": [Function],
+    "col": [Function],
+    "icon": [Function],
+    "image": [Function],
+    "input": [Function],
+    "item": [Function],
+    "md": [Function],
+    "number": [Function],
+    "row": [Function],
+    "scheduler": [Function],
+    "text": [Function],
+  },
+  "name": "support",
+  "node": Object {
+    "attributes": Object {
+      "name": "support",
+    },
+    "children": Array [
+      Object {
+        "text": "
+                  ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "text": "It looks like your credit card isn't activated yet, activate it now:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "text",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      Object {
+        "text": "
+                  ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      Object {
+        "attributes": Object {
+          "name": "action",
+          "value": "Activate",
+        },
+        "children": Array [
+          Object {
+            "text": "Activate Card",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "button",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      Object {
+        "text": "
+               ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+    ],
+    "name": "mml",
+    "toJSON": [Function],
+    "type": "element",
+  },
+}
+`;
+
+exports[`mml with button 3`] = `
+Array [
+  <Unknown
+    text="It looks like your credit card isn't activated yet, activate it now:"
+  />,
+  <Unknown
+    name="action"
+    text="Activate Card"
+    value="Activate"
+  />,
+]
+`;
+
+exports[`mml with button 4`] = `
+Array [
+  <p
+    className="mml-text"
+  >
+    It looks like your credit card isn't activated yet, activate it now:
+  </p>,
+  <button
+    className="mml-btn "
+    onClick={[Function]}
+    type="submit"
+  >
+    Activate Card
+  </button>,
+]
+`;
+
+exports[`simple carousel 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "a",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+            Object {
+              "attributes": Object {},
+              "children": Array [
+                Object {
+                  "text": "b",
+                  "toJSON": [Function],
+                  "type": "text",
+                },
+              ],
+              "name": "item",
+              "toJSON": [Function],
+              "type": "element",
+            },
+          ],
+          "name": "carousel",
+          "toJSON": [Function],
+          "type": "element",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
+`;
+
+exports[`simple carousel 2`] = `
+Tree {
+  "children": Array [
+    Carousel {
+      "attributes": Object {},
+      "children": Array [
+        Item {
+          "attributes": Object {},
+          "children": Array [
+            Text {
+              "attributes": Object {},
+              "children": undefined,
+              "node": Object {
+                "text": "a",
+                "toJSON": [Function],
+                "type": "text",
+              },
+              "tagName": "text",
+            },
+          ],
+          "node": Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "text": "a",
+                "toJSON": [Function],
+                "type": "text",
+              },
+            ],
+            "name": "item",
+            "toJSON": [Function],
+            "type": "element",
+          },
+          "tagName": "item",
+        },
+        Item {
+          "attributes": Object {},
+          "children": Array [
+            Text {
+              "attributes": Object {},
+              "children": undefined,
+              "node": Object {
+                "text": "b",
+                "toJSON": [Function],
+                "type": "text",
+              },
+              "tagName": "text",
+            },
+          ],
+          "node": Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "text": "b",
+                "toJSON": [Function],
+                "type": "text",
+              },
+            ],
+            "name": "item",
+            "toJSON": [Function],
+            "type": "element",
+          },
+          "tagName": "item",
+        },
+      ],
+      "node": Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "text": "a",
+                "toJSON": [Function],
+                "type": "text",
+              },
+            ],
+            "name": "item",
+            "toJSON": [Function],
+            "type": "element",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "text": "b",
+                "toJSON": [Function],
+                "type": "text",
+              },
+            ],
+            "name": "item",
+            "toJSON": [Function],
+            "type": "element",
+          },
+        ],
+        "name": "carousel",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      "tagName": "carousel",
+    },
+  ],
+  "converters": Object {
+    "add_to_calendar": [Function],
+    "button": [Function],
+    "button_list": [Function],
+    "carousel": [Function],
+    "col": [Function],
+    "icon": [Function],
+    "image": [Function],
+    "input": [Function],
+    "item": [Function],
+    "md": [Function],
+    "number": [Function],
+    "row": [Function],
+    "scheduler": [Function],
+    "text": [Function],
+  },
+  "name": undefined,
+  "node": Object {
+    "attributes": Object {},
+    "children": Array [
+      Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "text": "a",
+                "toJSON": [Function],
+                "type": "text",
+              },
+            ],
+            "name": "item",
+            "toJSON": [Function],
+            "type": "element",
+          },
+          Object {
+            "attributes": Object {},
+            "children": Array [
+              Object {
+                "text": "b",
+                "toJSON": [Function],
+                "type": "text",
+              },
+            ],
+            "name": "item",
+            "toJSON": [Function],
+            "type": "element",
+          },
+        ],
+        "name": "carousel",
+        "toJSON": [Function],
+        "type": "element",
+      },
+    ],
+    "name": "mml",
+    "toJSON": [Function],
+    "type": "element",
+  },
+}
+`;
+
+exports[`simple carousel 3`] = `
+Array [
+  <Unknown>
+    <Unknown>
+      <Unknown
+        text="a"
+      />
+    </Unknown>
+    <Unknown>
+      <Unknown
+        text="b"
+      />
+    </Unknown>
+  </Unknown>,
+]
+`;
+
+exports[`simple carousel 4`] = `
+<div
+  className="mml-carousel"
+>
+  <div
+    className="carousel mml"
+  >
+    <div
+      aria-live="polite"
+      className="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal"
+      onKeyDown={[Function]}
+      role="listbox"
+      style={Object {}}
+      tabIndex={0}
+    >
+      <div
+        className="carousel__slider-tray-wrapper carousel__slider-tray-wrap--horizontal"
+        style={Object {}}
+      >
+        <ul
+          className="sliderTray___-vHFQ sliderAnimation___300FY carousel__slider-tray carousel__slider-tray--horizontal"
+          onClickCapture={[Function]}
+          onMouseDown={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "alignItems": "stretch",
+              "display": "flex",
+              "flexDirection": "row",
+              "transform": "translateX(0%) translateX(0px)",
+              "width": "80%",
+            }
+          }
+        >
+          <li
+            aria-selected={true}
+            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            role="option"
+            style={
+              Object {
+                "height": "unset",
+                "paddingBottom": "unset",
+                "position": "unset",
+                "width": "50%",
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              className="slideInner___2mfX9 carousel__inner-slide"
+              style={
+                Object {
+                  "position": "unset",
+                }
+              }
+            >
+              <p
+                className="mml-text"
+              >
+                a
+              </p>
+            </div>
+          </li>
+          <li
+            aria-selected={true}
+            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            role="option"
+            style={
+              Object {
+                "height": "unset",
+                "paddingBottom": "unset",
+                "position": "unset",
+                "width": "50%",
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              className="slideInner___2mfX9 carousel__inner-slide"
+              style={
+                Object {
+                  "position": "unset",
+                }
+              }
+            >
+              <p
+                className="mml-text"
+              >
+                b
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`simple input 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {},
+      "children": Array [
+        Object {
+          "attributes": Object {
+            "name": "name",
+            "value": "John",
+          },
+          "children": Array [],
+          "name": "input",
+          "toJSON": [Function],
+          "type": "element",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
+`;
+
+exports[`simple input 2`] = `
+Tree {
+  "children": Array [
+    Input {
+      "attributes": Object {
+        "name": "name",
+        "value": "John",
+      },
+      "children": Array [],
+      "node": Object {
+        "attributes": Object {
+          "name": "name",
+          "value": "John",
+        },
+        "children": Array [],
+        "name": "input",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      "tagName": "input",
+    },
+  ],
+  "converters": Object {
+    "add_to_calendar": [Function],
+    "button": [Function],
+    "button_list": [Function],
+    "carousel": [Function],
+    "col": [Function],
+    "icon": [Function],
+    "image": [Function],
+    "input": [Function],
+    "item": [Function],
+    "md": [Function],
+    "number": [Function],
+    "row": [Function],
+    "scheduler": [Function],
+    "text": [Function],
+  },
+  "name": undefined,
+  "node": Object {
+    "attributes": Object {},
+    "children": Array [
+      Object {
+        "attributes": Object {
+          "name": "name",
+          "value": "John",
+        },
+        "children": Array [],
+        "name": "input",
+        "toJSON": [Function],
+        "type": "element",
+      },
+    ],
+    "name": "mml",
+    "toJSON": [Function],
+    "type": "element",
+  },
+}
+`;
+
+exports[`simple input 3`] = `
+Array [
+  <Unknown
+    name="name"
+    value="John"
+  />,
+]
+`;
+
+exports[`simple input 4`] = `
+<input
+  className="mml-input"
+  onChange={[Function]}
+/>
+`;

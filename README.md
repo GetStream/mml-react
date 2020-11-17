@@ -58,10 +58,10 @@ yarn; yarn start
 ## Usage
 
 ```jsx
-import { MML } from 'mml-react'
+import { MML } from 'mml-react';
 
 // use the react component
-;<MML source={mml} />
+<MML source={mml} />;
 ```
 
 ## Overwriting Components
@@ -70,12 +70,12 @@ Making basic changes to the components is quite easy.
 Here's an example of how to overwrite the button tag's React component:
 
 ```
-import {converterConfig} from 'mml-react'
-const config = {...converterConfig}
+import {converters} from 'mml-react'
+const config = {...converters}
 config['button'] = (tag, children) => {
   return <MyCustomButton text={tag.getText()} {...tag.node.attributes} key={tag.key} />
 }
-<MML converterConfig={config} source={source} />
+<MML converters={config} source={source} />
 ```
 
 This approach is generally only recommended for small changes.
@@ -112,7 +112,7 @@ The tree knows:
 
 - Tree: The tree of MML tags
 - Tag: Intermediate class used for validating MML tags
-- ConverterConfig: Mapping from MML tag to React Component (React Native coming later)
+- Converters: Mapping from MML tag to React Component (React Native coming later)
 
 ## How to create a new tag
 
@@ -126,9 +126,9 @@ Add something like this to src/tags/data.js
 ```jsx
 export class ColorPicker extends MMLDataTag {
   initialState() {
-    const data = {}
-    data[this.node.attributes.name] = this.node.attributes.value
-    return data
+    const data = {};
+    data[this.node.attributes.name] = this.node.attributes.value;
+    return data;
   }
 }
 ```
@@ -149,16 +149,11 @@ In `src/components` create a file called ColorPicker.js and do something along t
 
 ```jsx
 export function ColorPicker({ name, ...props }) {
-  const mmlContext = useContext(MMLContext)
+  const mmlContext = useContext(MMLContext);
 
-  const value = mmlContext[name]
+  const value = mmlContext[name];
 
-  return (
-    <input
-      value={value}
-      onChange={event => mmlContext.setValue(name, event.target.value)}
-    />
-  )
+  return <input value={value} onChange={(event) => mmlContext.setValue(name, event.target.value)} />;
 }
 ```
 
@@ -173,7 +168,7 @@ The MMLContainer provides the right context so you can test it like:
 
 ### Step 4 - Converter
 
-Open `src/components/converterConfig.js` and add something like this:
+Open `src/converters.js` and add something like this:
 
 ```jsx
 color_picker: tag => {
