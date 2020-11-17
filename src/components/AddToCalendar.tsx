@@ -136,7 +136,7 @@ function buildUrl(event: AddToCalendarEvent, { id }: typeof ADD_TO_CALENDAR_SERV
  * AddToCalendar widget that supports google, apple and outlook calendars
  */
 export const AddToCalendar: FC<AddToCalendarProps> = ({
-  className,
+  className = '',
   title,
   start,
   end,
