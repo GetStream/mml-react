@@ -15,7 +15,7 @@ export type MMLContainerProps = {
   /** If the child nodes contain data input elements */
   hasData?: boolean;
   /** The submit callback whenever a form is submitted, submit is expected to return a promise */
-  onSubmit?: Function;
+  onSubmit?: (data: Record<string, unknown>) => Promise<any>;
   /** The Loader component */
   Loader?: ComponentType<LoaderProps>;
   /** The error component */
@@ -41,10 +41,9 @@ export const MMLContainer: FC<MMLContainerProps> = ({
     event.preventDefault();
     if (!onSubmit) return console.warn('missing submit handler');
 
-    const data = Object.keys(state).map((key) => ({ name: key, value: state[key] }));
     try {
       setSubmitState({ loading: true, error: '', success: '' });
-      await onSubmit(data);
+      await onSubmit(state);
       setSubmitState({ loading: false, error: '', success: 'submitted' });
     } catch (e) {
       setSubmitState({ loading: false, error: 'something is broken', success: '' });
@@ -52,28 +51,21 @@ export const MMLContainer: FC<MMLContainerProps> = ({
   }
 
   // expose helpers for form elements to change the state
-  function setValue(name: string, value: unknown) {
+  function setValue(name: string, value: any) {
     setState((prevState) => ({ ...prevState, [name]: value }));
-  }
-
-  function changeValue(name: string, delta: number) {
-    let currentValue = (state[name] as number) || 0;
-    currentValue = currentValue * 1;
-    const newValue = currentValue + delta;
-    setState({ ...state, [name]: newValue });
   }
 
   if (error) return <div className="mml-container mml-wrap">{error}</div>;
 
   return (
-    <MMLContext.Provider value={{ ...state, submitState, changeValue, setValue }}>
+    <MMLContext.Provider value={{ ...state, submitState, setValue }}>
       <div className="mml-container mml-wrap">
         {hasData ? (
           <form onSubmit={handleSubmit}>
             {children}
-            <Loader loading={submitState.loading} />
-            <Success success={submitState.success} />
-            <Error error={submitState.error} />
+            {submitState.loading && <Loader loading={submitState.loading} />}
+            {submitState.success && <Success success={submitState.success} />}
+            {submitState.error && <Error error={submitState.error} />}
           </form>
         ) : (
           children
