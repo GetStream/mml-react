@@ -1,65 +1,63 @@
-import React, { useState, useMemo } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useMemo, FC, ComponentType } from 'react';
 
 import { Parse } from '../parser';
-import { Loader as LoaderComponent } from './Loader';
-import { Error as ErrorComponent } from './Error';
-import { Success as SuccessComponent } from './Success';
+import { ConvertorType } from '../converters';
 import { MMLContainer } from './MMLContainer';
+import { Loader as LoaderComponent, LoaderProps } from './Loader';
+import { Error as ErrorComponent, ErrorProps } from './Error';
+import { Success as SuccessComponent, SuccessProps } from './Success';
 
-export function MML({
+export type MMLProps = {
+  /** The MML source to render */
+  source: string;
+  /** The convert config allows you to overwrite the MML to react conversion */
+  converters?: Record<string, ConvertorType>;
+  /** The submit callback whenever a form is submitted, submit is expected to return a promise */
+  onSubmit?: Function;
+  /** The Loader component */
+  Loader?: ComponentType<LoaderProps>;
+  /** The error component */
+  Error?: ComponentType<ErrorProps>;
+  /** The success message component */
+  Success?: ComponentType<SuccessProps>;
+};
+
+/**
+ * MML root component
+ */
+export const MML: FC<MMLProps> = ({
   source,
   onSubmit,
   converters,
   Loader = LoaderComponent,
   Error = ErrorComponent,
   Success = SuccessComponent,
-  ...props
-}) {
-  const [mmlError, setError] = useState('');
+}) => {
+  const [error, setError] = useState('');
   const [initialData, setInitialData] = useState({});
 
   const tree = useMemo(() => {
-    const tree = Parse(source);
-    if (converters) {
-      tree.converters = converters;
-    }
     try {
-      // get initial state for all input elements in MML
-      const treeState = tree.initialState();
-      setInitialData(treeState);
+      const parsedTree = Parse(source, converters);
+      setInitialData(parsedTree.initialState()); // get initial state for all input elements in MML
+      return parsedTree;
     } catch (e) {
       setError("This chat message has invalid formatting and can't be shown");
+      return null;
     }
-    return tree;
   }, [source, converters]);
 
   return (
     <MMLContainer
       onSubmit={onSubmit}
-      hasData={tree.hasData()}
+      hasData={!!tree && tree.hasData()}
       data={initialData}
-      error={mmlError}
+      error={error}
       Loader={Loader}
       Error={Error}
       Success={Success}
     >
-      {tree.toReact(tree)}
+      {tree && tree.toReact()}
     </MMLContainer>
   );
-}
-
-MML.propTypes = {
-  /** The MML source to render */
-  source: PropTypes.string.isRequired,
-  /** The convert config allows you to overwrite the MML to react conversion */
-  converters: PropTypes.object,
-  /** The submit callback whenever a form is submitted */
-  onSubmit: PropTypes.func,
-  /** The Loader component */
-  Loader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  /** The error component */
-  Error: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  /** The success message component */
-  Success: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
