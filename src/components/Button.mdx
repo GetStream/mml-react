@@ -1,0 +1,34 @@
+import { Playground, Props } from 'docz';
+import { Button } from './Button.tsx';
+
+import '../styles/index.scss'; // TODO: Proper theme
+
+# Button
+
+Buttons make common actions more obvious and help users more easily perform them. Buttons use labels and sometimes icons to communicate the action that will occur when the user touches them.
+
+## Properties
+
+<Props of={Button} />
+
+## MML string
+
+```xml
+<mml>
+  <button name="action" value="Activate">
+    Regular button
+  </button>
+</mml>
+```
+
+## Basic usage
+
+<Playground>
+  <Button text="Send" name="send" value="green" />
+</Playground>
+
+## With different variants
+
+<Playground>
+  <Button text="Submit" name="submit" variant="floating" />
+</Playground>
