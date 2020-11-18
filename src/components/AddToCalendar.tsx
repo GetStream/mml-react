@@ -1,15 +1,13 @@
 import React, { FC, SyntheticEvent } from 'react';
+import format from 'date-fns/format';
 import isMobile from 'is-mobile';
 import { v4 as uuid } from 'uuid';
-import format from 'date-fns/format';
+
 import { Card } from './Card';
 import { CardHeader } from './CardHeader';
 import { ButtonList } from './ButtonList';
 
-export type AddToCalendarProps = AddToCalendarEvent & {
-  /** Additional card class name */
-  className?: string;
-};
+const isIE = (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) as boolean;
 
 export type AddToCalendarEvent = {
   /** The title for the calendar entry, if a string it must be parseable as Date */
@@ -24,20 +22,26 @@ export type AddToCalendarEvent = {
   description?: string;
 };
 
-// we infer this from the the const ADD_TO_CALENDAR_SERVICES, we might keep this
+export type AddToCalendarProps = AddToCalendarEvent & {
+  /** Additional card class name */
+  className?: string;
+};
+
+// we infer this from the the const CALENDAR_SERVICES, we might keep this
 // here if we want to make the calendar services configurable
 // type AddToCalendarService = {
 //   id: string;
 //   label: string;
 //   icon?: string;
 // };
+type CalendarID = 'google' | 'apple' | 'outlook' | 'outlookcom';
 
-const ADD_TO_CALENDAR_SERVICES = [
+const CALENDAR_SERVICES: Array<{ id: CalendarID; label: string; icon: string }> = [
   { id: 'google', label: 'Google', icon: 'add' },
   { id: 'apple', label: 'Apple Calendar', icon: 'add' },
   { id: 'outlook', label: 'Outlook', icon: 'add' },
   { id: 'outlookcom', label: 'Outlook.com', icon: 'add' },
-] as const;
+];
 
 /**
  * Format time
@@ -45,14 +49,9 @@ const ADD_TO_CALENDAR_SERVICES = [
  * Adapted from the `moment` way of [react-add-to-calendar](https://git.io/JkWol)
  * to the [date-fns way](https://stackoverflow.com/a/52840292)
  */
-function formatTime(date: string | Date, id: typeof ADD_TO_CALENDAR_SERVICES[number]['id']) {
-  date = date instanceof Date ? date : new Date(date);
-  switch (id) {
-    case 'outlookcom':
-      return format(date, 'yyyy-MM-dd___HH:mm:ss').replace('___', 'T') + 'Z';
-    default:
-      return format(date, 'yyyyMMdd___HHmmss').replace('___', 'T') + 'Z';
-  }
+function formatTime(date: string | Date, id: CalendarID) {
+  const dateFormat = id === 'outlookcom' ? 'yyyy-MM-dd___HH:mm:ss' : 'yyyyMMdd___HHmmss';
+  return format(date instanceof Date ? date : new Date(date), dateFormat).replace('___', 'T') + 'Z';
 }
 
 /**
@@ -60,14 +59,12 @@ function formatTime(date: string | Date, id: typeof ADD_TO_CALENDAR_SERVICES[num
  *
  * It checks that the parameter value is not falsy
  */
-function createQueryString(params: [string, string | undefined][]) {
-  let output = '';
-  for (let i = 0; i < params.length; i++) {
-    const [name, value] = params[i];
-    if (value) output += `&${name}=${encodeURIComponent(value)}`;
-  }
-
-  return output;
+function createQueryString(params: Record<string, string | undefined> = {}) {
+  return Object.keys(params).reduce((acc, key) => {
+    const value = params[key];
+    if (value) acc += `&${key}=${encodeURIComponent(value)}`;
+    return acc;
+  }, '');
 }
 
 /**
@@ -78,56 +75,42 @@ function createQueryString(params: [string, string | undefined][]) {
  * - [docs about outlook.com format](https://git.io/JkWp5)
  * - [addevent wrapper SAAS](https://www.addevent.com/)
  */
-function buildUrl(event: AddToCalendarEvent, { id }: typeof ADD_TO_CALENDAR_SERVICES[number], isIE: boolean) {
+function buildUrl(event: AddToCalendarEvent, id: CalendarID) {
   const { start, end, title, location, description } = event;
   const startFormatted = formatTime(start, id);
   const endFormatted = formatTime(end, id);
-  let url = '';
 
-  switch (id) {
-    case 'google':
-      url = 'https://calendar.google.com/calendar/render?action=TEMPLATE';
-      url += '&dates=' + startFormatted + '/' + endFormatted;
-      url += createQueryString([
-        ['location', location],
-        ['text', title],
-        ['details', description],
-      ]);
-      break;
+  if (id === 'google')
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${startFormatted}/${endFormatted}${createQueryString(
+      { location, text: title, details: description },
+    )}`;
 
-    case 'outlookcom':
-      url = 'https://outlook.live.com/owa/?rru=addevent';
-      url += createQueryString([
-        ['startdt', startFormatted],
-        ['enddt', endFormatted],
-        ['subject', title],
-        ['location', location],
-        ['body', description],
-        ['allday', 'false'], // TODO: calculate it?
-        ['uid', uuid()],
-      ]);
-      url += '&path=/calendar/view/Month';
-      break;
+  if (id === 'outlookcom')
+    return `https://outlook.live.com/owa/?rru=addevent${createQueryString({
+      startdt: startFormatted,
+      enddt: endFormatted,
+      subject: title,
+      location,
+      body: description,
+      allday: 'false', // TODO: calculate it?
+      uid: uuid(),
+    })}&path=/calendar/view/Month`;
 
-    default:
-      url = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'BEGIN:VEVENT',
-        'URL:' + document.URL,
-        'DTSTART:' + startFormatted,
-        'DTEND:' + endFormatted,
-        'SUMMARY:' + title,
-        'DESCRIPTION:' + description,
-        'LOCATION:' + location,
-        'END:VEVENT',
-        'END:VCALENDAR',
-      ].join('\n');
+  let url = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'BEGIN:VEVENT',
+    'URL:' + document.URL,
+    'DTSTART:' + startFormatted,
+    'DTEND:' + endFormatted,
+    'SUMMARY:' + title,
+    'DESCRIPTION:' + description,
+    'LOCATION:' + location,
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\n');
 
-      if (!isIE && isMobile()) {
-        url = encodeURI('data:text/calendar;charset=utf8,' + url);
-      }
-  }
+  if (!isIE && isMobile()) url = encodeURI('data:text/calendar;charset=utf8,' + url);
 
   return url;
 }
@@ -136,22 +119,14 @@ function buildUrl(event: AddToCalendarEvent, { id }: typeof ADD_TO_CALENDAR_SERV
  * AddToCalendar widget that supports google, apple and outlook calendars
  */
 export const AddToCalendar: FC<AddToCalendarProps> = ({
-  className = '',
   title,
   start,
   end,
+  className = '',
   location = '',
   description = '',
 }) => {
-  const event: AddToCalendarEvent = {
-    start: start,
-    end: end,
-    title,
-    location,
-    description,
-  };
-
-  const isIE = (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) as boolean;
+  const event = { start: start, end: end, title, location, description };
 
   function handleLinkClick(event: SyntheticEvent<HTMLAnchorElement>) {
     event.preventDefault();
@@ -183,12 +158,12 @@ export const AddToCalendar: FC<AddToCalendarProps> = ({
     <Card className={`mml-add-to-calendar ${className}`}>
       <CardHeader icon="date_range" text="Add to My Calendar" />
       <ButtonList>
-        {ADD_TO_CALENDAR_SERVICES.map((service, idx) => (
+        {CALENDAR_SERVICES.map((service) => (
           <a
-            key={service.id + idx}
+            key={service.id}
             className="mml-btn"
             onClick={handleLinkClick}
-            href={buildUrl(event, service, isIE)}
+            href={buildUrl(event, service.id)}
             target="_blank"
             rel="nofollow noreferrer noopener"
           >
