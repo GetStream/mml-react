@@ -1,5 +1,6 @@
 export default {
   typescript: true,
-  dest: 'docs',
+  dest: '/docs',
+  base: '/mml-react',
   title: 'MML-React',
 };
