@@ -4,7 +4,6 @@ export type MMLContextType = {
   [key: string]: any;
   submitState: { loading: boolean; error: string; success: string };
   setValue: (name: string, value: any) => void;
-  changeValue: (name: string, value: any) => void;
 };
 
 export const MMLContext = createContext<MMLContextType | {}>({});

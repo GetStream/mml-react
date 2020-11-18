@@ -13,7 +13,7 @@ export type MMLProps = {
   /** The convert config allows you to overwrite the MML to react conversion */
   converters?: Record<string, ConvertorType>;
   /** The submit callback whenever a form is submitted, submit is expected to return a promise */
-  onSubmit?: Function;
+  onSubmit?: (data: Record<string, unknown>) => Promise<any>;
   /** The Loader component */
   Loader?: ComponentType<LoaderProps>;
   /** The error component */
