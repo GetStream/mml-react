@@ -20,8 +20,8 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs"
+    "docs": "docz dev",
+    "docs-build": "rm -rf docs && docz build"
   },
   "engines": {
     "node": ">=10"
@@ -49,15 +49,12 @@
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@size-limit/preset-small-lib": "^4.7.0",
-    "@storybook/addon-essentials": "^6.0.28",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.0.28",
-    "@storybook/addons": "^6.0.28",
-    "@storybook/react": "^6.0.28",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-test-renderer": "^16.9.3",
     "babel-loader": "^8.2.1",
+    "docz": "^2.3.1",
+    "gatsby-plugin-sass": "^2.5.1",
     "husky": "^4.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -8,9 +8,9 @@ export const truncate = (input: string, length: number, end = '...') => {
 };
 
 const matchMarkdownLinks = (message: string) => {
-  const regexMdLinks = /\[([^\[]+)\](\(.*\))/gm;
+  const regexMdLinks = /\[([^[]+)\](\(.*\))/gm;
   const matches = message.match(regexMdLinks);
-  const singleMatch = /\[([^\[]+)\]\((.*)\)/;
+  const singleMatch = /\[([^[]+)\]\((.*)\)/;
 
   const links = matches
     ? matches.map((match) => {

@@ -1,5 +1,6 @@
 import parseXml from '@rgrove/parse-xml';
 
+import { ConvertorType } from '../converters';
 import { MMLTag, tags } from './tags';
 import { Tree } from './tree';
 
@@ -54,13 +55,13 @@ function convertNodes(nodes: parseXml.NodeBase[]) {
  *
  * @returns {MMLTree} The MML tree
  */
-export function XMLtoMMLTree(document: parseXml.Document) {
+export function XMLtoMMLTree(document: parseXml.Document, customConvertors?: Record<string, ConvertorType>) {
   if (!document || !document.children || !document.children.length) throw new Error('bad input');
 
   const mmlNode = document.children[0] as parseXml.Element;
   if (mmlNode.name !== 'mml') throw new Error('missing mml tag');
 
-  return new Tree(mmlNode, convertNodes(mmlNode.children));
+  return new Tree(mmlNode, convertNodes(mmlNode.children), customConvertors);
 }
 
 /**
@@ -70,7 +71,7 @@ export function XMLtoMMLTree(document: parseXml.Document) {
  *
  *  @returns {Tree} An MML Tree
  */
-export function Parse(source: string) {
+export function Parse(source: string, customConvertors?: Record<string, ConvertorType>) {
   const XMLNodes = SourceToXML(source);
-  return XMLtoMMLTree(XMLNodes);
+  return XMLtoMMLTree(XMLNodes, customConvertors);
 }
