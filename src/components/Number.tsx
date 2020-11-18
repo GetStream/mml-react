@@ -11,15 +11,16 @@ export type NumberProps = {
  * Mobile friendly number input
  */
 export const Number: FC<NumberProps> = ({ name }) => {
-  const { [name]: count, changeValue } = useContext(MMLContext) as MMLContextType;
+  const ctx = useContext(MMLContext) as MMLContextType;
+  const count = (ctx[name] || 0) * 1;
 
   return (
     <div className="mml-number">
-      <span className="mml-number__btn mml-number__btn--dec" onClick={() => changeValue(name, -1)}>
+      <span className="mml-number__btn mml-number__btn--dec" onClick={() => ctx.setValue(name, count - 1)}>
         <Icon name="remove" />
       </span>
       <span className="mml-number__count">{count}</span>
-      <span className="mml-number__btn mml-number__btn--inc" onClick={() => changeValue(name, +1)}>
+      <span className="mml-number__btn mml-number__btn--inc" onClick={() => ctx.setValue(name, count + 1)}>
         <Icon name="add" />
       </span>
     </div>
