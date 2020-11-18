@@ -5614,7 +5614,9 @@ Array [
     </span>
     <span
       className="mml-number__count"
-    />
+    >
+      0
+    </span>
     <span
       className="mml-number__btn mml-number__btn--inc"
       onClick={[Function]}

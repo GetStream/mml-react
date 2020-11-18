@@ -19,7 +19,7 @@ export type ButtonProps = {
 /**
  * A simple Button
  */
-export const Button: FC<ButtonProps> = ({ text, name, value = '', url = '', variant }) => {
+export const Button: FC<ButtonProps> = ({ text, name, value, url = '', variant }) => {
   const { setValue } = useContext(MMLContext) as MMLContextType;
 
   return (
@@ -27,9 +27,11 @@ export const Button: FC<ButtonProps> = ({ text, name, value = '', url = '', vari
       className={`mml-btn ${variant === 'floating' ? ' mml--floating' : ''}`}
       type="submit"
       onClick={(event: SyntheticEvent) => {
-        event.preventDefault();
-        if (url) window.location.href = sanitizeUrl(url);
-        else setValue(name, value);
+        if (url) {
+          window.location.href = sanitizeUrl(url);
+          return event.preventDefault();
+        }
+        setValue(name, value);
       }}
     >
       {text}
