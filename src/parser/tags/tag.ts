@@ -10,6 +10,8 @@ class Col extends MMLTag {}
 
 class Image extends MMLTag {}
 
+class Loader extends MMLTag {}
+
 class MD extends MMLTag {}
 
 class Text extends MMLTag {}
@@ -52,6 +54,7 @@ export const tags: Record<string, typeof MMLTag> = {
   row: Row,
   icon: Icon,
   image: Image,
+  loader: Loader,
   md: MD,
   text: Text,
   number: Number,
