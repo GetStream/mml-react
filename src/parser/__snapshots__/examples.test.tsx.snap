@@ -1530,7 +1530,7 @@ Array [
   <Unknown
     text="Your massage appointment has been confirmed!"
   />,
-  <AddToCalendar
+  <Unknown
     end="2019-12-24T15:42:54.148Z"
     start="2019-12-24T14:42:54.148Z"
     title="Massage with Jessica"
@@ -1546,7 +1546,7 @@ Array [
     Your massage appointment has been confirmed!
   </p>,
   <div
-    className="mml-card mml-add-to-calendar"
+    className="mml-card mml-add-to-calendar "
   >
     <div
       className="mml-card-header "
@@ -1567,17 +1567,7 @@ Array [
     >
       <a
         className="mml-btn"
-        href="BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-URL:http://localhost/
-DTSTART:20191224T144254Z
-DTEND:20191224T154254Z
-SUMMARY:Massage with Jessica
-DESCRIPTION:
-LOCATION:
-END:VEVENT
-END:VCALENDAR"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20191224T144254Z/20191224T154254Z&text=Massage%20with%20Jessica"
         onClick={[Function]}
         rel="nofollow noreferrer noopener"
         target="_blank"
@@ -1624,17 +1614,7 @@ END:VCALENDAR"
       </a>
       <a
         className="mml-btn"
-        href="BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-URL:http://localhost/
-DTSTART:20191224T144254Z
-DTEND:20191224T154254Z
-SUMMARY:Massage with Jessica
-DESCRIPTION:
-LOCATION:
-END:VEVENT
-END:VCALENDAR"
+        href="https://outlook.live.com/owa/?rru=addevent&startdt=2019-12-24T14%3A42%3A54Z&enddt=2019-12-24T15%3A42%3A54Z&subject=Massage%20with%20Jessica&allday=false&uid=00000000-0000-0000-0000-000000000000&path=/calendar/view/Month"
         onClick={[Function]}
         rel="nofollow noreferrer noopener"
         target="_blank"
