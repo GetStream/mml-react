@@ -2,7 +2,7 @@ const ignoreImport = require('rollup-plugin-ignore-import');
 const scss = require('rollup-plugin-scss');
 const pkg = require('./package.json');
 
-const compileScss = scss({ output: pkg.style, failOnError: true });
+const compileScss = scss({ output: pkg.style, failOnError: true, watch: 'src/styles' });
 const ignoreScss = ignoreImport({ extensions: ['.scss', '.css'] });
 
 let firstBundle = true;
