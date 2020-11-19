@@ -1,7 +1,7 @@
 import React, { useState, FC, ReactNode, ComponentType, FormEvent } from 'react';
 
 import { MMLContext } from '../context';
-import { Loader as LoaderComponent, LoaderProps } from './Loader';
+import LoaderComponent, { LoaderProps } from './Loader';
 import { Error as ErrorComponent, ErrorProps } from './Error';
 import { Success as SuccessComponent, SuccessProps } from './Success';
 

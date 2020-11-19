@@ -3,7 +3,7 @@ import React, { useState, useMemo, FC, ComponentType } from 'react';
 import { Parse } from '../parser';
 import { ConvertorType } from '../converters';
 import { MMLContainer } from './MMLContainer';
-import { Loader as LoaderComponent, LoaderProps } from './Loader';
+import LoaderComponent, { LoaderProps } from './Loader';
 import { Error as ErrorComponent, ErrorProps } from './Error';
 import { Success as SuccessComponent, SuccessProps } from './Success';
 
