@@ -1,38 +1,44 @@
 import React, { FC } from 'react';
 
 export type ProgressProps = {
-  size?: number;
-  strokeWidth?: number;
+  /**
+   * The size of the progress spinner sets the diameter of the animated circle, it allows to override a specific progress size despite the default CSS value
+   * @default 'SCSS: $mml-progress-width: 1em'
+   */
+  size?: string | number;
+  /**
+   * The thickness of the circle, (it sets the `stroke-wdith` svg attribute)
+   * @default 3.6
+   */
+  thickness?: string | number;
+  /**
+   * The color of the progress circle, it allows to override a specific progress color despite the default CSS value
+   * @default 'SCSS: $mml-progress-color: #bbb'
+   */
   color?: string;
 };
 
-export const Progress: FC<ProgressProps> = ({ size = 36, strokeWidth = 2, color = '#ccc' }) => {
-  const fullSize = size + strokeWidth;
+const SIZE = 44;
+
+export const Progress: FC<ProgressProps> = ({ size, thickness = 3.6, color }) => {
+  thickness = typeof thickness === 'string' ? parseFloat(thickness) : thickness;
+  // interpret a digit only string or a number as a pixel value otherwise leave
+  // it as astring, it might be a value like `2em` or `120%`
+  size = (typeof size === 'string' && /^\d+$/.test(size)) || typeof size === 'number' ? size + 'px' : size;
 
   return (
-    <svg
-      width={fullSize}
-      height={fullSize}
-      viewBox={`0 0 ${fullSize} ${fullSize}`}
-      xmlns="http://www.w3.org/2000/svg"
-      stroke={color}
-    >
-      <g fill="none" fill-rule="evenodd">
-        <g transform="translate(1 1)" stroke-width={strokeWidth}>
-          <circle strokeOpacity=".5" cx="18" cy="18" r="18" />
-          <path d="M36 18c0-9.94-8.06-18-18-18">
-            <animateTransform
-              attributeName="transform"
-              type="rotate"
-              from="0 18 18"
-              to="360 18 18"
-              dur="1s"
-              repeatCount="indefinite"
-            />
-          </path>
-        </g>
-      </g>
-    </svg>
+    <span className="mml-progress" role="progressbar" style={{ width: size, height: size, color }}>
+      <svg className="mml-progress__svg" viewBox={`${SIZE / 2} ${SIZE / 2} ${SIZE} ${SIZE}`}>
+        <circle
+          className="mml-progress__circle"
+          cx={SIZE}
+          cy={SIZE}
+          r={(SIZE - thickness) / 2}
+          fill="none"
+          strokeWidth={thickness}
+        />
+      </svg>
+    </span>
   );
 };
 
