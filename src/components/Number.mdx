@@ -5,6 +5,8 @@ menu: Components
 
 import { Playground, Props } from 'docz';
 import { Number } from './Number.tsx';
+import { Text } from './Text.tsx';
+import { Button } from './Number.tsx';
 
 # Number
 
@@ -17,13 +19,17 @@ Easy input for numbers, mobile optimized. It automatically uses context[name] as
 ## MML string
 
 ```xml
-<mml>
-  <number name="answer"></number>
+<mml name="counts">
+  <text>How many donuts do you want for lunch?</text>
+  <number name="donuts" value="3" />
+  <button name="confirm" value="Confirm">Confirm</button>
 </mml>
 ```
 
 ## Basic usage
 
 <Playground>
-  <Number name="answer" />
+  <Text text="How many donuts do you want for lunch?"/>
+  <Number name="answer" value="3"/>
+  <Button name="confirm" value="Confirm" text="Confirm"/>
 </Playground>
