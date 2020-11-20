@@ -9,6 +9,11 @@ import { ButtonList } from './ButtonList';
 
 const isIE = (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) as boolean;
 
+const getCurrentURL = () => {
+  if (typeof window !== 'undefined') return window.location.href;
+  return '';
+};
+
 export type AddToCalendarEvent = {
   /**
    * The title for the calendar entry, if a string it must be parseable as `Date`
@@ -113,7 +118,7 @@ function buildUrl(event: AddToCalendarEvent, id: CalendarID) {
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'BEGIN:VEVENT',
-    'URL:' + document.URL,
+    'URL:' + getCurrentURL(),
     'DTSTART:' + startFormatted,
     'DTEND:' + endFormatted,
     'SUMMARY:' + title,
