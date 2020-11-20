@@ -127,11 +127,7 @@
   margin-left: if($num == 0, 0, percentage($num));
 }
 
-@mixin mml-grid-columns(
-  $columns: $mml-grid-columns,
-  $gutter: $mml-grid-gutter,
-  $breakpoints: $mml-grid-breakpoints
-) {
+@mixin mml-grid-columns($columns: $mml-grid-columns, $gutter: $mml-grid-gutter, $breakpoints: $mml-grid-breakpoints) {
   %grid-column {
     position: relative;
     width: 100%;
