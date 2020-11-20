@@ -1,4 +1,4 @@
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   @include mml-component('row') {
     background: $mml-row-bg;
     border: $mml-border;
@@ -15,7 +15,7 @@
   }
 }
 
-@include scr-theme-root('messaging.dark') {
+@include mml-theme-root('messaging.dark') {
   @include mml-component('row') {
     background: $mml-row--dark-bg;
     border-color: $mml--dark-border-color;

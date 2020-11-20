@@ -1,0 +1,164 @@
+//
+// MML component
+//
+// Automatically scope the class name
+//
+// -----------------------------------------------------------------------------
+@mixin mml-component($name, $variant: false) {
+  @if $variant {
+    .#{$mml-prefix}#{to-lower-case($name)}.#{$mml-prefix}-#{to-lower-case($variant)} {
+      @content;
+    }
+  } @else {
+    .#{$mml-prefix}#{to-lower-case($name)} {
+      @content;
+    }
+  }
+}
+
+//
+// MML theme
+//
+// Automatically scope to the class name of a specific stream-chat-react theme
+//
+// -----------------------------------------------------------------------------
+@mixin mml-theme($theme: '') {
+  .str-chat.#{$theme} & {
+    @content;
+  }
+}
+
+@mixin mml-theme-root($theme: '') {
+  .str-chat.#{$theme} {
+    @content;
+  }
+}
+
+//
+// Button base
+//
+// Apply a default button styling based on the `$mml-btn-` SCSS variables
+// globally set.
+//
+// -----------------------------------------------------------------------------
+@mixin mml-button-base() {
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  padding: $mml-btn-padding-y $mml-btn-padding-x;
+  border-style: $mml-border-style;
+  border-color: $mml-border-color;
+  border-width: $mml-border-width;
+  border-radius: 0;
+  font-family: $mml-btn-font-family;
+  font-weight: $mml-btn-font-weight;
+  @if $mml-btn-font-size != inherit {
+    font-size: $mml-btn-font-size;
+  }
+  @if $mml-btn-text-transform != none {
+    text-transform: $mml-btn-text-transform;
+  }
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: $mml-btn-focus-outline;
+  }
+}
+
+//
+// Icon font
+//
+// -----------------------------------------------------------------------------
+@mixin mml-icon($fontName: 'Material Icons') {
+  font-family: $fontName;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+//
+// Grid mixins
+//
+// -----------------------------------------------------------------------------
+@mixin mml-row($gutter: $mml-grid-gutter) {
+  display: flex;
+  flex-wrap: wrap;
+  @if $gutter {
+    margin-right: -$gutter / 2;
+    margin-left: -$gutter / 2;
+  }
+}
+
+@mixin mml-col-ready($gutter: $mml-grid-gutter) {
+  position: relative;
+  width: 100%;
+  @if $gutter {
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+  }
+}
+
+@mixin mml-col($size, $columns: $mml-grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+@mixin mml-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+@mixin mml-col-offset($size, $columns: $mml-grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin mml-grid-columns(
+  $columns: $mml-grid-columns,
+  $gutter: $mml-grid-gutter,
+  $breakpoints: $mml-grid-breakpoints
+) {
+  %grid-column {
+    position: relative;
+    width: 100%;
+    @if $gutter {
+      padding-right: $gutter / 2;
+      padding-left: $gutter / 2;
+    }
+  }
+
+  @for $i from 1 through $columns {
+    .#{$mml-prefix}col-#{$i} {
+      @extend %grid-column;
+      @include mml-col($i, $columns);
+    }
+  }
+
+  .#{$mml-prefix}col-auto {
+    @include mml-col-auto();
+  }
+
+  // `$columns - 1` because offsetting by the width of an entire row isn't possible
+  @for $i from 0 through ($columns - 1) {
+    @if not($i == 0) {
+      // Avoid emitting useless .offset-0
+      .#{$mml-prefix}offset-#{$i} {
+        @include mml-col-offset($i, $columns);
+      }
+    }
+  }
+}

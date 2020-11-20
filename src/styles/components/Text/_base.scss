@@ -10,7 +10,7 @@
     font-size: $mml-text-font-size;
   }
 
-  @include scr-theme('dark') {
+  @include mml-theme('dark') {
     color: $mml-text--dark-color;
   }
 }

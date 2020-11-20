@@ -1,0 +1,10 @@
+// space for some cross-theme base styling...
+
+// @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i');
+
+.mml-container {
+  * {
+    box-sizing: inherit;
+    font-family: $mml-font-base;
+  }
+}

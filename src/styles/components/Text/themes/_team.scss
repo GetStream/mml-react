@@ -1,10 +1,10 @@
-@include scr-theme-root('team') {
+@include mml-theme-root('team') {
   @include mml-component('text') {
     padding: 0 0 0 $mml-text-padding-x;
   }
 }
 
-@include scr-theme-root('team.light') {
+@include mml-theme-root('team.light') {
   @include mml-component('text') {
     border-left: $mml-border;
     color: $mml-theme-team-border-color;
@@ -18,7 +18,7 @@
   }
 }
 
-@include scr-theme-root('team.dark') {
+@include mml-theme-root('team.dark') {
   @include mml-component('text') {
     border-color: $mml-theme-team--dark-border-color;
   }

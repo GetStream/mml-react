@@ -1,4 +1,4 @@
-@include scr-theme-root('team') {
+@include mml-theme-root('team') {
   @include mml-component('carousel-item') {
     @include mml-component('image') {
       margin-bottom: $mml-theme-team-margin-y;

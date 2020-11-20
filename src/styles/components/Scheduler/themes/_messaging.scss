@@ -1,7 +1,7 @@
 @include mml-component('scheduler') {
   // scroller has fading edges
   @include mml-component('scroller') {
-    @include scr-theme('messaging') {
+    @include mml-theme('messaging') {
       -webkit-mask-image: -webkit-gradient(
         linear,
         left 90%,
@@ -45,7 +45,7 @@
       }
     }
 
-    @include scr-theme('messaging.dark') {
+    @include mml-theme('messaging.dark') {
       &:before {
         background-image: linear-gradient(
           to bottom,

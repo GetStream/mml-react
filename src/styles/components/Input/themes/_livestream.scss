@@ -1,4 +1,4 @@
-@include scr-theme-root('livestream') {
+@include mml-theme-root('livestream') {
   @include mml-component('input') {
     border-radius: $mml-theme-livestream-border-radius;
     margin-bottom: 3px;

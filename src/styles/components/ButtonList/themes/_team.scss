@@ -1,4 +1,4 @@
-@include scr-theme-root('team') {
+@include mml-theme-root('team') {
   @include mml-component('btnlist') {
     margin: $mml-theme-team-margin-y 0 0;
     border-left: $mml-border;
@@ -18,7 +18,7 @@
   }
 }
 
-@include scr-theme-root('team.dark') {
+@include mml-theme-root('team.dark') {
   @include mml-component('btnlist') {
     border-left-color: $mml-theme-team--dark-border-color;
   }

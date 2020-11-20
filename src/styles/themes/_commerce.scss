@@ -20,7 +20,7 @@
 @import '../components/Success/themes/commerce';
 @import '../components/Text/themes/commerce';
 
-@include scr-theme-root('commerce') {
+@include mml-theme-root('commerce') {
   .str-chat__attachment-mml {
     &:not(:last-child) {
       margin: 1px 0 3px;
