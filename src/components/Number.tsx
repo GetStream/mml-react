@@ -1,5 +1,5 @@
 import React, { useContext, FC } from 'react';
-import { MMLContext, MMLContextType } from '../context';
+import { MMLContext } from '../context';
 import { Icon } from './Icon';
 
 export type NumberProps = {
@@ -11,7 +11,7 @@ export type NumberProps = {
  * Mobile friendly number input
  */
 export const Number: FC<NumberProps> = ({ name }) => {
-  const ctx = useContext(MMLContext) as MMLContextType;
+  const ctx = useContext(MMLContext);
   const count = (ctx[name] || 0) * 1;
 
   return (

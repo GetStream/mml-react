@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { MMLContext, MMLContextType } from '../context';
+import { MMLContext } from '../context';
 
 export type InputProps = {
   /** The name of the input */
@@ -12,7 +12,7 @@ export type InputProps = {
  * Text input element. Usually you'll want to rely on regular messages
  */
 export const Input: FC<InputProps> = ({ name, placeholder }) => {
-  const { [name]: value, setValue } = React.useContext(MMLContext) as MMLContextType;
+  const { [name]: value, setValue } = React.useContext(MMLContext);
 
   return (
     <input
