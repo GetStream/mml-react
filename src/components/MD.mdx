@@ -1,0 +1,35 @@
+---
+route: /components/md
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { MD } from './MD.tsx';
+
+# MD
+
+Allows to render markdown content within an mml attachment.
+
+## Properties
+
+<Props of={MD} />
+
+## MML string
+
+```xml
+<mml>
+  <md>
+    hello **world** and #hi. Note how not all markdown functions are allowed. https://getstream.io/react-native-activity-feed/tutorial/ is nice
+  </md>
+</mml>
+```
+
+## Basic usage
+
+<Playground>
+  <MD
+    text={
+      'hello **world** and #hi. Note how not all markdown functions are allowed. https://getstream.io/react-native-activity-feed/tutorial/ is nice'
+    }
+  />
+</Playground>

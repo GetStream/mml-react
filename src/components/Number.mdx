@@ -1,0 +1,29 @@
+---
+route: /components/number
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Number } from './Number.tsx';
+
+# Number
+
+Easy input for numbers, mobile optimized. It automatically uses context[name] as the initial value
+
+## Properties
+
+<Props of={Number} />
+
+## MML string
+
+```xml
+<mml>
+  <number name="answer"></number>
+</mml>
+```
+
+## Basic usage
+
+<Playground>
+  <Number name="answer" />
+</Playground>

@@ -1,3 +1,7 @@
+---
+route: /components/loader
+---
+
 Loader component for MML
 
 ```js
