@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import DatePickerDate from './DatePickerDate';
-import DatePickerTime from './DatePickerTime';
+import React, { FC } from 'react';
+import { DatePickerDate } from './DatePickerDate';
+import { DatePickerTime } from './DatePickerTime';
 import {
   format as formatDate,
   roundToNearestMinutes,
@@ -12,12 +11,65 @@ import {
   setMinutes,
 } from 'date-fns';
 
+export type DatePickerProps = {
+  /**
+   * The selected date time
+   */
+  selected?: string;
+  /**
+   * Interval in days for time selection
+   * @default 1
+   */
+  dateInterval?: number;
+  /**
+   * Interval in minutes for time selection
+   * @default 30
+   */
+  timeInterval?: number;
+  /**
+   * Whether to show the time picker
+   * @default true
+   */
+  showTimeSelect?: boolean;
+  /**
+   * Datetime format, see [date-fns docs](https://date-fns.org/v2.16.1/docs/format)
+   * @default 'MMMM d, yyyy h:mm aa'
+   */
+  format?: string;
+  /**
+   * Date format, see [date-fns docs](https://date-fns.org/v2.16.1/docs/format)
+   * @default 'E LLL dd'
+   */
+  dateFormat?: string;
+  /**
+   * Time format, see [date-fns docs](https://date-fns.org/v2.16.1/docs/format)
+   * @default 'h:mm a'
+   */
+  timeFormat?: string;
+  /**
+   * Filter dates, it should return a boolean
+   */
+  filter?: (date: Date) => boolean;
+  /**
+   * Start date, it defaults from 3 days behind the given date
+   * @default
+   */
+  startDate?: Date;
+  /**
+   * Allows to select a date in the past
+   * @default false
+   */
+  allowPast?: boolean;
+  /**
+   * On change callback
+   */
+  onChange?: (date: Date) => any;
+};
+
 /**
- * Split datetime in date and time
- *
- * @param {Date} datetime
+ * Split datetime in parts in order to recompose a date
  */
-export function splitDatetime(datetime) {
+export function splitDatetime(datetime: Date) {
   const day = datetime.getDate();
   const month = datetime.getMonth();
   const year = datetime.getFullYear();
@@ -35,26 +87,19 @@ export function splitDatetime(datetime) {
   };
 }
 
-/**
- * DatePicker
- *
- * for datetime formats @see https://date-fns.org/v2.16.1/docs/format
- *
- * @param {typeof DatePicker.propTypes} props
- */
-export function DatePicker({
+export const DatePicker: FC<DatePickerProps> = ({
   selected,
-  dateInterval,
-  timeInterval,
-  format,
-  dateFormat,
-  timeFormat,
-  allowPast,
-  showTimeSelect,
+  dateInterval = 1,
+  timeInterval = 30,
+  format = 'MMMM d, yyyy h:mm aa',
+  dateFormat = 'E LLL dd',
+  timeFormat = 'h:mm a',
+  allowPast = false,
+  showTimeSelect = true,
   startDate,
-  filterDate,
+  filter,
   onChange,
-}) {
+}) => {
   let initialDate;
 
   if (selected) {
@@ -69,10 +114,8 @@ export function DatePicker({
 
   /**
    * Handle date change
-   *
-   * @param {Date} value
    */
-  function handleChangeDate(value) {
+  function handleChangeDate(value: Date) {
     const { day, month, year } = splitDatetime(value);
     let newDatetime = datetime;
     newDatetime = setDate(newDatetime, day);
@@ -83,11 +126,9 @@ export function DatePicker({
   }
 
   /**
-   * Handle date change
-   *
-   * @param {Date} value
+   * Handle time change
    */
-  function handleChangeTime(value) {
+  function handleChangeTime(value: Date) {
     const { hours, minutes } = splitDatetime(value);
     let newDatetime = datetime;
     newDatetime = setHours(newDatetime, hours);
@@ -97,15 +138,14 @@ export function DatePicker({
   }
 
   React.useEffect(() => {
-    if (onChange) onChange(datetime);
+    if (onChange && datetime) onChange(datetime);
   }, [datetime, onChange]);
 
   return (
     <div className="mml-datepicker">
       <input type="hidden" value={formatDate(datetime, format)} />
       <DatePickerDate
-        type="date"
-        filter={filterDate}
+        filter={filter}
         format={dateFormat}
         value={datetime}
         onChange={handleChangeDate}
@@ -115,8 +155,7 @@ export function DatePicker({
       />
       {showTimeSelect && (
         <DatePickerTime
-          type="time"
-          filter={filterDate}
+          filter={filter}
           format={timeFormat}
           value={datetime}
           onChange={handleChangeTime}
@@ -126,37 +165,4 @@ export function DatePicker({
       )}
     </div>
   );
-}
-
-DatePicker.defaultProps = {
-  dateInterval: 1,
-  timeInterval: 30,
-  format: 'MMMM d, yyyy h:mm aa',
-  dateFormat: 'E LLL dd',
-  timeFormat: 'h:mm a',
-  allowPast: false,
-  showTimeSelect: true,
-};
-
-DatePicker.propTypes = {
-  /** The selected date time */
-  selected: PropTypes.string,
-  /** Interval in days for time selection */
-  dateInterval: PropTypes.number,
-  /** Interval in minutes for time selection */
-  timeInterval: PropTypes.number,
-  /** Whether to show the time picker */
-  showTimeSelect: PropTypes.bool,
-  /** Date format @see https://date-fns.org/v2.16.1/docs/format */
-  dateFormat: PropTypes.string,
-  /** Time format @see https://date-fns.org/v2.16.1/docs/format */
-  timeFormat: PropTypes.string,
-  /** Filter dates, it should return a boolean */
-  filterDate: PropTypes.func,
-  /** Start date, it defaults from 3 days behind the given date */
-  startDate: PropTypes.instanceOf(Date),
-  /** Allows to select a date in the past */
-  allowPast: PropTypes.bool,
-  /** On change callback */
-  onChange: PropTypes.func,
 };
