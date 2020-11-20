@@ -6,12 +6,12 @@ import { Error as ErrorComponent, ErrorProps } from './Error';
 import { Success as SuccessComponent, SuccessProps } from './Success';
 
 export type MMLContainerProps = {
-  /** Render an error message if needed */
-  error: string;
   /** The child nodes */
   children: ReactNode;
   /** The initial state of the tree */
-  data: Record<string, unknown>;
+  data?: Record<string, unknown>;
+  /** Render an error message if needed */
+  error?: string;
   /** If the child nodes contain data input elements */
   hasData?: boolean;
   /** The submit callback whenever a form is submitted, submit is expected to return a promise */
@@ -27,7 +27,7 @@ export type MMLContainerProps = {
 export const MMLContainer: FC<MMLContainerProps> = ({
   children,
   onSubmit,
-  data,
+  data = {},
   hasData = false,
   error = '',
   Loader = LoaderComponent,
