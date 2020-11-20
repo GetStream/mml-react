@@ -1,4 +1,4 @@
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   &.str-chat .str-chat__list .str-chat__message-inner,
   &.str-chat .str-chat__list .str-chat__message-simple-inner {
     @include mml-component('carousel') {
@@ -9,7 +9,7 @@
   }
 }
 
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   @include mml-component('carousel-item') {
     // react-pure-carousel elements:
     // -------------------------------------------------------------------------

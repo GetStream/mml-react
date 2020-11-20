@@ -3,7 +3,7 @@ import { MMLContext, MMLContextType } from '../context';
 import { Icon } from './Icon';
 
 export type NumberProps = {
-  /** The name of the button */
+  /** The name of the number */
   name: string;
 };
 

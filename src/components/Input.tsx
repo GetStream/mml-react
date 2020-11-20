@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { MMLContext, MMLContextType } from '../context';
 
 export type InputProps = {
-  /** The name of the button */
+  /** The name of the input */
   name: string;
   /** The placeholder of the input field */
   placeholder?: string;

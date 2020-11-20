@@ -1,4 +1,4 @@
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   @include mml-component('card-header') {
     padding: $mml-card-header-padding-y $mml-card-header-padding-x;
     background: $mml-card-header-bg;
@@ -6,7 +6,7 @@
   }
 }
 
-@include scr-theme-root('messaging.dark') {
+@include mml-theme-root('messaging.dark') {
   @include mml-component('card-header') {
     border-color: $mml--dark-border-color;
     background: $mml-card-header--dark-bg;

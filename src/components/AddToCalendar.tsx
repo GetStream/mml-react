@@ -9,21 +9,39 @@ import { ButtonList } from './ButtonList';
 
 const isIE = (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) as boolean;
 
+const getCurrentURL = () => {
+  if (typeof window !== 'undefined') return window.location.href;
+  return '';
+};
+
 export type AddToCalendarEvent = {
-  /** The title for the calendar entry, if a string it must be parseable as Date */
+  /**
+   * The title for the calendar entry, if a string it must be parseable as `Date`
+   */
   start: string | Date;
-  /** The start time for the calendar entry, if a string it must be parseable as Date */
+  /**
+   * The start time for the calendar entry, if a string it must be parseable as `Date`
+   */
   end: string | Date;
-  /** The end time for the calendar entry */
+  /**
+   * The end time for the calendar entry
+   */
   title: string;
-  /** The optional location for the calendar entry */
+  /**
+   * The optional location for the calendar entry
+   */
   location?: string;
-  /** The optional description for the calendar entry */
+  /**
+   * The optional description for the calendar entry
+   */
   description?: string;
 };
 
 export type AddToCalendarProps = AddToCalendarEvent & {
-  /** Additional card class name */
+  /**
+   * Additional element class name
+   * @default ''
+   */
   className?: string;
 };
 
@@ -73,7 +91,7 @@ function createQueryString(params: Record<string, string | undefined> = {}) {
  * Resources:
  * - [SO question about Google](https://stackoverflow.com/q/22757908)
  * - [docs about outlook.com format](https://git.io/JkWp5)
- * - [addevent wrapper SAAS](https://www.addevent.com/)
+ * - [addevent wrapper SaaS](https://www.addevent.com/)
  */
 function buildUrl(event: AddToCalendarEvent, id: CalendarID) {
   const { start, end, title, location, description } = event;
@@ -100,7 +118,7 @@ function buildUrl(event: AddToCalendarEvent, id: CalendarID) {
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'BEGIN:VEVENT',
-    'URL:' + document.URL,
+    'URL:' + getCurrentURL(),
     'DTSTART:' + startFormatted,
     'DTEND:' + endFormatted,
     'SUMMARY:' + title,

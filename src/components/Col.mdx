@@ -1,0 +1,56 @@
+---
+route: /components/col
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Row } from './Row.tsx';
+import { Col } from './Col.tsx';
+import { Text } from './Text.tsx';
+import { MD } from './MD.tsx';
+
+# Col
+
+> This component is not exposed as `mml` string, it is used internally in other mml components and it can be imported to create your custom ones.
+
+It helps display content in a grid. Typically used with [`Row`](/components/row)
+
+## Properties
+
+<Props of={Col} />
+
+## MML string
+
+```xml
+<mml>
+  <row>
+    <col width="4"><md text="**Title**"/></col>
+    <col width="8"><md text="*Book title*"/></col>
+  </row>
+  <row>
+    <col width="4"><md text="**Year**"/></col>
+    <col width="8"><text>1988</text></col>
+  </row>
+</mml>
+```
+
+## Basic usage
+
+<Playground>
+  <Row>
+    <Col width="4">
+      <MD text="**Title**"/>
+    </Col>
+    <Col width="8">
+      <MD text="**Year**"/>
+    </Col>
+  </Row>
+  <Row>
+    <Col width="4">
+      <MD text="*Book title*"/>
+    </Col>
+    <Col width="8">
+      <Text text="1988"/>
+    </Col>
+  </Row>
+</Playground>

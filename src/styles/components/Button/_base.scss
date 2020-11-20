@@ -10,7 +10,7 @@
     background: $mml-btn-hover-bg;
   }
 
-  @include scr-theme('dark') {
+  @include mml-theme('dark') {
     color: $mml-btn--dark-color;
     &:hover {
       color: $mml-btn--dark-hover-color;

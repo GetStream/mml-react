@@ -1,19 +1,9 @@
-// Setup
-@import 'functions';
-@import 'variables';
-@import 'mixins';
-@import 'placeholders';
-
-@import 'base';
+// Common
+@import 'common/config';
+@import 'common/base';
 
 // Vendors
 @import 'vendors/pure-react-carousel';
-
-// Themes
-@import 'themes/commerce';
-@import 'themes/livestream';
-@import 'themes/messaging';
-@import 'themes/team';
 
 // Components
 @import 'components/AddToCalendar/base';

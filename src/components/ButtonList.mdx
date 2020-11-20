@@ -1,0 +1,45 @@
+---
+route: /components/button-list
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { ButtonList } from './ButtonList.tsx';
+import { Button } from './Button.tsx';
+
+# ButtonList
+
+Display a list of buttons, a tyical usecase is allowing the user to select an option among a list. It is usually used in pair with some [`Button`](/components/button)
+
+## Properties
+
+<Props of={ButtonList} />
+
+## MML string
+
+```xml
+<mml>
+  <button_list>
+    <button name="side" value="yes">Yes!</button>
+    <button name="side" value="no">No, thanks</button>
+  </button_list>
+</mml>
+```
+
+## Basic usage
+
+<Playground>
+  <ButtonList>
+    <Button text="Yes!" name="side" value="yes" />
+    <Button text="No, thanks" name="side" value="no" />
+  </ButtonList>
+</Playground>
+
+## With `floating` variant
+
+<Playground>
+  <ButtonList variant="floating">
+    <Button variant="floating" text="Yes!" name="side" value="yes" />
+    <Button variant="floating" text="No, thanks" name="side" value="no" />
+  </ButtonList>
+</Playground>

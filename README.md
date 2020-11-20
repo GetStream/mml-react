@@ -35,7 +35,7 @@
 - CSS for all components
 - consider renaming column tag, consider if we need a table tag..?
 
-## Design:
+### Design
 
 - Add to Calendar element is missing
 - Loading, Success and Error states
@@ -69,8 +69,8 @@ import { MML } from 'mml-react';
 Making basic changes to the components is quite easy.
 Here's an example of how to overwrite the button tag's React component:
 
-```
-import {converters} from 'mml-react'
+```js
+import { converters } from 'mml-react'
 const config = {...converters}
 config['button'] = (tag, children) => {
   return <MyCustomButton text={tag.getText()} {...tag.node.attributes} key={tag.key} />
@@ -81,7 +81,7 @@ config['button'] = (tag, children) => {
 This approach is generally only recommended for small changes.
 In most cases where you need more features than MML offers we recommend writing a custom attachment type.
 
-# Development & Contributions
+## Development & Contributions
 
 We are intentionally keeping the scope of MML limited.
 It should solve 80% of your needs for interactive messages.
@@ -108,7 +108,7 @@ The tree knows:
 - If there are data tags
 - The initial state for the data tags
 
-## Naming:
+## Naming
 
 - Tree: The tree of MML tags
 - Tag: Intermediate class used for validating MML tags
@@ -177,3 +177,71 @@ color_picker: tag => {
 ```
 
 And that's it
+
+## Components
+
+MML React components could be divided in four categories:
+
+### Naked Components
+
+> Very basic pieces of UI typically beyond a matter of styling
+
+- [`Row`](/components/row)
+- [`Col`](/components/col)
+
+### Container Components
+
+> Always host other components, can be themable
+
+- [`Card`](/components/card)
+- [`CardHeader`](/components/card-header)
+- [`CardBody`](/components/card-body)
+
+### Core Components
+
+> Basic components that can be composed and themed
+
+- [`Text`](/components/text): a block of text
+- [`Button`](/components/button):
+- [`Image`](/components/image): a simple responsive image
+- [`Input`](/components/input): an input field
+- [`MD`](/components/md): renders markdown
+- [`Icon`](/components/icon): simply displays an ico from material design icons
+- [Loader](/components/loader): signals a _loading_ temporary state with a circular spinner
+- [`Error`](/components/error): display an _error_ message
+- [`Success`](/components/success): display a _success_ message
+
+### Structured Components
+
+> More complex components composed of other components, certainly themable
+
+- [`AddToCalendar`](/components/add-to-calendar): wrapped in a [`Card`](/components/card)
+- [`Scheduler`](/components/scheduler): wrapped in a [`Card`](/components/card)
+- [`ButtonList`](/components/button-list): a list of [`Button`](/components/button)
+- [`Carousel`](/components/carousel): a series of [`CarouselItem`](/components/carousel-item) typically containing [`Image`](/components/image), [`Text`](/components/text) and [`Button`](/components/button)
+- [`Number`](/components/number): input spinner composed of two [`Button`](/components/button) and a counter
+
+## Styles customization
+
+MML react ships with a basic `index.css` which contains a default basic styles for all [MML Components](#components)
+
+### SCSS variables
+
+If your projects include a `sass` compilation step you might customize the overall look and feel of the component through `scss` variables, here are all the available ones with their default values:
+
+```scss
+$mml-card-bg: $mml-bg;
+$mml-card--dark-bg: $mml--dark-bg;
+$mml-card-header-font-size: 13px;
+$mml-card-header-padding-y: 13px;
+$mml-card-header-padding-x: 13px;
+$mml-card-header-opacity: 0.3;
+$mml-card-header-bg: mml-color(grey-800-full);
+$mml-card-header-color: mml-color(black);
+$mml-card-header--dark-opacity: 0.7;
+$mml-card-header--dark-bg: mml-color(grey-200);
+$mml-card-header--dark-color: mml-color(white);
+$mml-card-body-font-size: 14px;
+$mml-card-body-color: mml-color(black);
+$mml-card-body--dark-color: mml-color(white);
+```
