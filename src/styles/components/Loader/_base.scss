@@ -1,5 +1,8 @@
+@import '../Progress/base';
+
 @include mml-component('loader') {
   display: flex;
+  align-items: center;
   justify-content: center;
   padding: $mml-loader-spacer;
   font-size: $mml-loader-font-size;
