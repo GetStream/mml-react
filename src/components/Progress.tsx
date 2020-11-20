@@ -41,5 +41,3 @@ export const Progress: FC<ProgressProps> = ({ size, thickness = 3.6, color }) =>
     </span>
   );
 };
-
-export default React.memo(Progress);

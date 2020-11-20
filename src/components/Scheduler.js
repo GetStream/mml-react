@@ -5,7 +5,7 @@ import { Card } from './Card';
 import { CardHeader } from './CardHeader';
 import { CardBody } from './CardBody';
 import { Error } from './Error';
-import Loader from './Loader';
+import { Loader } from './Loader';
 
 export class Scheduler extends React.Component {
   // TODO: document props
