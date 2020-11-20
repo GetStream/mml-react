@@ -31,7 +31,7 @@
       color: $mml-datepicker__item-color-active;
       font-weight: bold;
 
-      @include scr-theme('dark') {
+      @include mml-theme('dark') {
         color: $mml-datepicker__item--dark-color-active;
       }
     }

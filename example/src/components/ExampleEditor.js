@@ -10,7 +10,7 @@ import { useQuery } from './history'
 import theme from '../theme'
 import { Container, Row, Col } from './Grid'
 import { Nav } from './Nav'
-import ChatThemeSwitch from './ChatThemeSwitch'
+import ThemeSwitch from './ThemeSwitch'
 import Attachment from './Attachment'
 import * as data from '../data'
 
@@ -64,6 +64,13 @@ const Chat = styled.div`
       display: none;
     }
   `}
+`
+
+const ChatThemeSwitch = styled(ThemeSwitch)`
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `
 
 // Themes:

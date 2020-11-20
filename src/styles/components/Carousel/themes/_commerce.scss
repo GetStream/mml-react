@@ -1,4 +1,4 @@
-@include scr-theme-root('commerce') {
+@include mml-theme-root('commerce') {
   &.str-chat .str-chat__list .str-chat__message-inner,
   &.str-chat .str-chat__list .str-chat__message-simple-inner {
     @include mml-component('carousel') {
@@ -7,7 +7,7 @@
   }
 }
 
-@include scr-theme-root('commerce') {
+@include mml-theme-root('commerce') {
   @include mml-component('carousel-item') {
     // react-pure-carousel elements:
     // -------------------------------------------------------------------------

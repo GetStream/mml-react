@@ -13,7 +13,7 @@
     margin-left: $mml-number__btn-margin-x;
     margin-right: $mml-number__btn-margin-x;
 
-    @include scr-theme('dark') {
+    @include mml-theme('dark') {
       color: $mml-number__count--dark-color;
     }
   }
@@ -38,7 +38,7 @@
       color: $mml-number__btn-hover-color;
     }
 
-    @include scr-theme('dark') {
+    @include mml-theme('dark') {
       background: $mml-number__btn--dark-bg;
       color: $mml-number__btn--dark-color;
 

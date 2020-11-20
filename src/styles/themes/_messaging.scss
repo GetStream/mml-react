@@ -21,7 +21,7 @@
 @import '../components/Success/themes/messaging';
 @import '../components/Text/themes/messaging';
 
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   .str-chat__attachment-mml {
     &:not(:last-child) {
       margin: 1px 0 3px;

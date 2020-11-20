@@ -1,4 +1,4 @@
-@include scr-theme-root('livestream') {
+@include mml-theme-root('livestream') {
   @include mml-component('btnlist') {
     @include mml-component('btn') {
       border-width: $mml-border-width;
@@ -7,7 +7,7 @@
   }
 }
 
-@include scr-theme-root('livestream.dark') {
+@include mml-theme-root('livestream.dark') {
   @include mml-component('btnlist') {
     @include mml-component('btn') {
     }

@@ -1,4 +1,4 @@
-@include scr-theme-root('livestream') {
+@include mml-theme-root('livestream') {
   &.str-chat .str-chat__list .str-chat__message-inner,
   &.str-chat .str-chat__list .str-chat__message-simple-inner {
     @include mml-component('carousel') {

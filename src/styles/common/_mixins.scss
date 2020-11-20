@@ -17,18 +17,18 @@
 }
 
 //
-// Stream chat react theme
+// MML theme
 //
 // Automatically scope to the class name of a specific stream-chat-react theme
 //
 // -----------------------------------------------------------------------------
-@mixin scr-theme($theme: '') {
+@mixin mml-theme($theme: '') {
   .str-chat.#{$theme} & {
     @content;
   }
 }
 
-@mixin scr-theme-root($theme: '') {
+@mixin mml-theme-root($theme: '') {
   .str-chat.#{$theme} {
     @content;
   }

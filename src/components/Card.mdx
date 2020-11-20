@@ -1,0 +1,30 @@
+---
+route: /components/card
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Card } from './Card.tsx';
+import { CardHeader } from './CardHeader.tsx';
+import { CardBody } from './CardBody.tsx';
+
+# Card
+
+> This component is not exposed as `mml` string, it is used internally in other mml components and it can be imported to create your custom ones.
+
+Helps display content in a card. Typically used with [`CardHeader`](/components/card-header) and [`CardBody`](/components/card-body).
+
+## Properties
+
+<Props of={Card} />
+
+## Basic usage
+
+<Playground>
+  <Card>
+    <CardHeader icon="book" text="Book title"/>
+    <CardBody>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </CardBody>
+  </Card>
+</Playground>

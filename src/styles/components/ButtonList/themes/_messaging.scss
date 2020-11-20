@@ -1,4 +1,4 @@
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   @include mml-component('btnlist') {
     border: $mml-border;
 
@@ -10,7 +10,7 @@
   }
 }
 
-@include scr-theme-root('messaging.dark') {
+@include mml-theme-root('messaging.dark') {
   @include mml-component('btnlist') {
     border-color: $mml--dark-border-color;
     background: $mml-btnlist--dark-bg;

@@ -25,7 +25,7 @@
     border-bottom-left-radius: $mml-border-radius-base;
   }
 
-  @include scr-theme('dark') {
+  @include mml-theme('dark') {
     & > *:last-child:not(:first-child) {
       border-bottom-right-radius: $mml-border-radius;
       border-bottom-left-radius: $mml-border-radius-base;
