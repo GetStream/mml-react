@@ -78,10 +78,10 @@ export const converters = {
     return (
       <Scheduler
         key={tag.key}
-        interval={tag.attributes.interval}
-        duration={tag.attributes.duration}
+        interval={parseInt(tag.attributes.interval, 10)}
+        duration={parseInt(tag.attributes.duration, 10)}
         selected={tag.attributes.selected}
-        full_day={tag.attributes.full_day}
+        full_day={tag.attributes.full_day === 'true'}
         ical_availability={tag.attributes.ical_availability}
       />
     );
