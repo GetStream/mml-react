@@ -3,14 +3,16 @@
   "version": "0.1.1",
   "description": "MML (Message Markup Language) for React implementation.",
   "author": "Getstream.io",
-  "license": "commercial",
+  "license": "ISC",
   "main": "dist/index.js",
   "module": "dist/mml-react.esm.js",
   "typings": "dist/index.d.ts",
-  "style": "dist/index.css",
   "files": [
     "dist",
-    "src"
+    "src",
+    "!src/gatsby-theme-docz",
+    "!*.mdx",
+    "!*.md"
   ],
   "scripts": {
     "start": "tsdx watch",
@@ -55,8 +57,9 @@
     "@types/react-dom": "^16.9.9",
     "@types/react-test-renderer": "^16.9.3",
     "babel-loader": "^8.2.1",
+    "babel-plugin-styled-components": "^1.11.1",
     "docz": "^2.3.1",
-    "gatsby-plugin-sass": "^2.5.1",
+    "gatsby-plugin-styled-components": "^3.5.0",
     "husky": "^4.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -66,6 +69,8 @@
     "rollup-plugin-scss": "^2.6.1",
     "size-limit": "^4.7.0",
     "stream-chat-react": "^3.2.2",
+    "styled-components": "^5.2.1",
+    "to-string-loader": "^1.1.6",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"
