@@ -140,6 +140,14 @@ $mml-input--dark-focus-color: mml-color(primary-faded) !default;
 $mml-loader-spacer: $mml-spacer !default;
 $mml-loader-font-size: 88% !default;
 
+// Progress:
+// -----------------------------------------------------------------------------
+$mml-progress-width: 1em !default;
+$mml-progress-color: #bbb !default;
+$mml-progress-animation-name: mml-animation-dash !default;
+$mml-progress-animation-time: 1.4s !default;
+$mml-progress-animation-ease: ease-in-out !default;
+
 // MD:
 // -----------------------------------------------------------------------------
 $mml-md-padding-y: 5px !default;
