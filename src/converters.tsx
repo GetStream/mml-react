@@ -8,7 +8,6 @@ import { ButtonList } from './components/ButtonList';
 import { AddToCalendar } from './components/AddToCalendar';
 import { Scheduler } from './components/Scheduler';
 import { Text } from './components/Text';
-import { Loader } from './components/Loader';
 import { MD } from './components/MD';
 import { Row } from './components/Row';
 import { Col } from './components/Col';
@@ -68,9 +67,6 @@ export const converters = {
   },
   image: (tag: MMLTag) => {
     return <Image key={tag.key} src={tag.attributes.src} {...tag.attributes} />;
-  },
-  loader: (tag: MMLTag) => {
-    return <Loader key={tag.key} {...tag.attributes} />;
   },
   md: (tag: MMLTag) => {
     return <MD key={tag.key} text={tag.getText()} {...tag.attributes} />;
