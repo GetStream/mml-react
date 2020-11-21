@@ -83,5 +83,16 @@
     "hooks": {
       "pre-commit": "tsdx lint"
     }
-  }
+  },
+  "size-limit": [
+    {
+      "path": "dist/mml-react.cjs.production.min.js",
+      "limit": "130 KB"
+    },
+    {
+      "path": "dist/styles/index.css",
+      "limit": "5 KB",
+      "webpack": false
+    }
+  ]
 }
