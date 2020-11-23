@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { MMLTag } from './parser/tags';
+import { MMLTag } from './parser/MMLTag';
 
 import { Input } from './components/Input';
 import { Button } from './components/Button';
