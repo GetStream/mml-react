@@ -30,12 +30,12 @@ Tree {
     MMLTag {
       "attributes": Object {},
       "children": undefined,
+      "name": "text",
       "node": Object {
         "text": "hi",
         "toJSON": [Function],
         "type": "text",
       },
-      "name": "text",
     },
   ],
   "converters": Object {
@@ -164,14 +164,15 @@ Tree {
         MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
             "toJSON": [Function],
             "type": "text",
           },
-          "name": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -185,7 +186,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "name": "text",
     },
     MMLTag {
       "attributes": Object {
@@ -196,14 +196,15 @@ Tree {
         MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Activate Card",
             "toJSON": [Function],
             "type": "text",
           },
-          "name": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "action",
@@ -220,7 +221,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "name": "button",
     },
   ],
   "converters": Object {
@@ -393,14 +393,15 @@ Tree {
             MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "a",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "name": "text",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -414,7 +415,6 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "name": "item",
         },
         MMLTag {
           "attributes": Object {},
@@ -422,14 +422,15 @@ Tree {
             MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "b",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "name": "text",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -443,9 +444,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "name": "item",
         },
       ],
+      "name": "carousel",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -480,7 +481,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "name": "carousel",
     },
   ],
   "converters": Object {
@@ -704,6 +704,7 @@ Tree {
         "value": "John",
       },
       "children": Array [],
+      "name": "input",
       "node": Object {
         "attributes": Object {
           "name": "name",
@@ -714,7 +715,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "name": "input",
     },
   ],
   "converters": Object {
