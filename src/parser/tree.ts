@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { Element as XmlElement } from '@rgrove/parse-xml';
 
-import { MMLTag } from './tags';
+import { MMLTag } from './MMLTag';
 import { converters as defaultConverters, ConvertorType } from '../converters';
 
 /**
@@ -21,64 +21,31 @@ export class Tree {
   }
 
   /**
-   * Recursively convert nodes to react
+   * convert all nodes to react and maintain the hierarchy
    */
   toReact(parent: Tree | MMLTag = this) {
     const reactNodes: ReactElement[] = [];
 
     (parent.children || []).forEach((child, i) => {
-      const converter = this.converters[child.tagName];
+      const converter = this.converters[child.name];
       if (!converter) {
         throw Error(
-          `Converter not found for tag ${child.tagName}, Available converters are ${Object.keys(this.converters)}`,
+          `Converter not found for tag ${child.name}, Available converters are ${Object.keys(this.converters)}`,
         );
       }
 
       const children = this.toReact(child);
-      child.key = `tag-${child.tagName}-position-${i}`;
+      child.key = `tag-${child.name}-position-${i}`;
       reactNodes.push(converter(child, children));
     });
 
     return reactNodes;
   }
 
-  hasData() {
-    let data = false;
-
-    function checkForData(nodes: MMLTag[]) {
-      nodes.forEach((node) => {
-        //@ts-expect-error
-        if (node.constructor.data) data = true; // FIXME: does not exist?
-        if (node.children) checkForData(node.children);
-      });
-    }
-    checkForData(this.children);
-    return data;
-  }
-
-  validateTree() {
-    const errors: string[] = [];
-    const err = this.validate();
-    if (err) errors.push(err);
-
-    (function runValidation(nodes: MMLTag[]) {
-      nodes.forEach((node) => {
-        const err = node.validate();
-        if (err) errors.push(...err);
-        if (node.children) runValidation(node.children);
-      });
-    })(this.children);
-
-    return errors;
-  }
-
-  validate() {
-    if (!this.children || this.children.length === 0) return 'mml tag is empty';
-    return '';
-  }
-
+  /**
+   * get initial state for all children
+   */
   initialState() {
-    // get initial state for all children
     let state: Record<string, any> = {};
     if (this.name) state.mml_name = this.name;
 
