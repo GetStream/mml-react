@@ -43,7 +43,7 @@ function transformIdxToValue(props: DatePickerSelectItemProps) {
  * Generate item component
  */
 export const DatePickerTimeItem: DatePickerSelectProps['Item'] = (item, selected, handleClick) => {
-  const { /* idx, */ interval, value, displayValue } = item;
+  const { interval, value, displayValue } = item;
 
   const isSelected = isWithinInterval(selected, {
     start: value,
@@ -59,9 +59,8 @@ export const DatePickerTimeItem: DatePickerSelectProps['Item'] = (item, selected
   return (
     <div
       className={className}
-      // index={idx}
-      // title={formatDate(value, 'HH:mm')}
       onClick={() => handleClick(item)}
+      // title={formatDate(value, 'HH:mm')}
     >
       {displayValue}
     </div>
@@ -72,7 +71,7 @@ export const DatePickerTimeItem: DatePickerSelectProps['Item'] = (item, selected
  * DatePicker time
  */
 export const DatePickerTime: FC<DatePickerTimeProps> = (props) => (
-  <div className="mml-datepicker__time">
+  <div className="mml-datepicker__select mml-datepicker__time">
     <DatePickerSelect {...props} Item={DatePickerTimeItem} getItemData={getItemData} />
   </div>
 );

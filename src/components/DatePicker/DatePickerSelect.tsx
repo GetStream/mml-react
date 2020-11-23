@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect, FC } from 'react';
-import { Virtuoso, TScrollContainer, VirtuosoProps } from 'react-virtuoso';
+import { Virtuoso, VirtuosoProps } from 'react-virtuoso';
 import { DatePickerProps } from './DatePicker';
 
 export type DatePickerSelectProps = DatePickerSelectReadyProps & {
@@ -40,18 +40,6 @@ export type DatePickerItemData = {
 /**
  * Custom scroll container to hide scrollbar with simple css
  */
-const MMLScroll: TScrollContainer = ({ reportScrollTop, scrollTo, children }) => {
-  const ref = React.useRef(null);
-
-  // @ts-ignore
-  scrollTo((scrollTop) => ref.current && ref.current.scrollTo(scrollTop));
-
-  return (
-    <div className="mml-scroller" ref={ref} onScroll={(e) => reportScrollTop(e.currentTarget.scrollTop)} tabIndex={0}>
-      <div className="mml-scroller__inner">{children}</div>
-    </div>
-  );
-};
 
 /**
  * DatePicker select
@@ -60,7 +48,7 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
   const { filter, onChange, value, getItemData, Item } = props;
   const [total, setTotal] = useState(0);
   const [selected, setSelected] = useState(value);
-  const items = useRef([]);
+  const items = useRef<DatePickerItemData[]>([]);
   const perPage = 40;
   let lastPageIdx = 0;
 
@@ -77,7 +65,6 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
       const newItem = getItemData({ ...props, idx: idx + perPage * lastPageIdx });
 
       if (!filter || (filter && filter(newItem.value))) {
-        // @ts-ignore
         if (items.current) items.current = [...items.current, newItem];
       }
     }
@@ -91,7 +78,6 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
 
   return (
     <Virtuoso
-      ScrollContainer={MMLScroll} // TODO: is this really needed? we can leverage css maybe
       overscan={200}
       totalCount={total}
       item={(index) => Item(items.current[index], selected, handleClick)}

@@ -1,11 +1,22 @@
 @include mml-component('datepicker') {
   flex: 1;
   display: flex;
-
+  
   // date and time columns
-  &__date,
-  &__time {
+  &__select {
     flex: 1;
+    
+    // target the virtuoso scroll container
+    > div {
+      overflow-y: scroll !important;
+      scrollbar-width: none;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+      
+      &::-webkit-scrollbar {
+        display:none
+      }
+    }
   }
 
   // date column

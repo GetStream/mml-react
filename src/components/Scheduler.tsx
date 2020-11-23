@@ -19,8 +19,18 @@ export type SchedulerProps = {
    * @default 30
    */
   duration: number;
+  /**
+   * ICal availability public URL
+   */
   ical_availability?: string;
+  /**
+   * Wether the event to schedule lasts a full day
+   */
   full_day?: boolean;
+  /**
+   * The duration of the event in minutes
+   * @default 30
+   */
   interval: number;
 };
 
@@ -47,13 +57,6 @@ export const Scheduler: FC<SchedulerProps> = ({ selected, duration, ical_availab
   const _duration = parseNumberProp(30, duration);
   const _interval = parseNumberProp(30, interval);
 
-  // const memoizedCallback = useCallback(
-  //   () => {
-  //     doSomething(a, b);
-  //   },
-  //   [a, b],
-  // );
-
   const setupIcalFilter = async (duration: number, icalURL?: string) => {
     let icalExpander: any = null;
 
@@ -61,18 +64,25 @@ export const Scheduler: FC<SchedulerProps> = ({ selected, duration, ical_availab
       setLoading(false);
     } else {
       setLoading(true);
-      const response = await fetch(icalURL, {
+
+      await fetch(icalURL, {
         method: 'GET',
         redirect: 'follow',
-      });
-      const bodyText = await response.text();
-      if (response.ok) {
-        const options = { ics: bodyText, maxIterations: 10 };
-        icalExpander = new IcalExpander(options);
-      } else {
-        setError('failed to load availability');
-      }
-      setLoading(false);
+      })
+        .then((response) => {
+          const bodyText = response.text();
+          if (response.ok) {
+            const options = { ics: bodyText, maxIterations: 10 };
+            icalExpander = new IcalExpander(options);
+          } else {
+            setError('availability could not be loaded');
+          }
+          setLoading(false);
+        })
+        .catch(() => {
+          setError('iCal url could not be loaded');
+          setLoading(false);
+        });
     }
     const filter: ICalFilter = (start?: Date) => {
       if (start && icalExpander) {
@@ -81,15 +91,14 @@ export const Scheduler: FC<SchedulerProps> = ({ selected, duration, ical_availab
 
         const booked = events && events.length >= 1;
         return !booked;
-      } else {
-        return true;
       }
+
+      return true;
     };
     setIcalFilter(() => filter);
   };
 
   useEffect(() => {
-    // runs in the background...
     setupIcalFilter(_duration, ical_availability);
   }, []);
 
@@ -97,7 +106,7 @@ export const Scheduler: FC<SchedulerProps> = ({ selected, duration, ical_availab
     <Card className="mml-scheduler">
       <CardHeader icon="date_range" text="Scheduler" />
       <CardBody>
-        {error && !loading && <Error error={`Failed to load availability, error: ${error}`} />}
+        {error && !loading && <Error error={`Failed, error: ${error}`} />}
         {!error && loading && <Loader loading={true} text="Loading availability"></Loader>}
         {!error && !loading && (
           <DatePicker
