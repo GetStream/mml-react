@@ -35,9 +35,15 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 </Playground>
 
 ## With ICal availability URL
-    
+
 <Playground>
   <Text text="When would you like to schedule your massage?" />
-  <Scheduler text="Send" duration="30" interval="30" selected="2020-11-16T10:30:00.000Z" ical_availability="https://www.calendarlabs.com/ical-calendar/ics/75/UK_Holidays.ics" />
+  <Scheduler
+    text="Send"
+    duration="30"
+    interval="30"
+    selected="2020-11-16T10:30:00.000Z"
+    ical_availability="https://www.calendarlabs.com/ical-calendar/ics/75/UK_Holidays.ics"
+  />
   <Button text="Reserve" name="action" value="reserve" />
 </Playground>
