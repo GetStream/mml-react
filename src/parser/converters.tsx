@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { MMLTag } from './parser/MMLTag';
+import { MMLTag } from './MMLTag';
 import {
   AddToCalendar,
   Button,
@@ -16,7 +16,7 @@ import {
   Text,
   Row,
   Number,
-} from './components';
+} from '../components';
 
 export type ConvertorType = (tag: MMLTag, children?: ReactElement[]) => ReactElement;
 

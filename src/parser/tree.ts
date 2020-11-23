@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { Element as XmlElement } from '@rgrove/parse-xml';
 
 import { MMLTag } from './MMLTag';
-import { converters as defaultConverters, ConvertorType } from '../converters';
+import { converters as defaultConverters, ConvertorType } from './converters';
 
 /**
  * Tree - The tree object for MML tags

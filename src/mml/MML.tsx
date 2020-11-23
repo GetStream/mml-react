@@ -1,11 +1,10 @@
 import React, { useState, useMemo, useCallback, FC, ComponentType, FormEvent } from 'react';
 
-import { Parse } from '../parser';
-import { ConvertorType } from '../converters';
 import { MMLContext } from '../context';
-import { Loader as LoaderComponent, LoaderProps } from './Loader';
-import { Error as ErrorComponent, ErrorProps } from './Error';
-import { Success as SuccessComponent, SuccessProps } from './Success';
+import { Parse, ConvertorType } from '../parser';
+import { Loader as LoaderComponent, LoaderProps } from '../components/Loader';
+import { Error as ErrorComponent, ErrorProps } from '../components/Error';
+import { Success as SuccessComponent, SuccessProps } from '../components/Success';
 
 export type MMLProps = {
   /** The MML string source to render */

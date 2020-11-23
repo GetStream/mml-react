@@ -1,6 +1,6 @@
 import parseXml from '@rgrove/parse-xml';
 
-import { ConvertorType } from '../converters';
+import { ConvertorType } from './converters';
 import { MMLTag } from './MMLTag';
 import { Tree } from './tree';
 
