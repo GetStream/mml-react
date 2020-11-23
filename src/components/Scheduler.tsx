@@ -100,7 +100,7 @@ export const Scheduler: FC<SchedulerProps> = ({ selected, duration, ical_availab
 
   useEffect(() => {
     setupIcalFilter(_duration, ical_availability);
-  }, []);
+  }, [_duration, ical_availability]);
 
   return (
     <Card className="mml-scheduler">
