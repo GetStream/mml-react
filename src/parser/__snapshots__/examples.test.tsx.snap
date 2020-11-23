@@ -267,7 +267,7 @@ Tree {
 
 exports[`examples Advanced Scheduling example should work 3`] = `
 Array [
-  <Text
+  <Unknown
     text="When would you like to schedule your massage?"
   />,
   <Unknown
@@ -276,7 +276,7 @@ Array [
     interval={30}
     selected="2020-11-16T10:30:00.000Z"
   />,
-  <Button
+  <Unknown
     name="action"
     text="Reserve"
     value="reserve"
@@ -772,25 +772,25 @@ Tree {
 
 exports[`examples ButtonFloating example should work 3`] = `
 Array [
-  <MD
+  <Unknown
     text="Just showing \`button_list\` \`floating\` **variant**:"
   />,
-  <ButtonList
+  <Unknown
     variant="floating"
   >
-    <Button
+    <Unknown
       name="side"
       text="Yes!"
       value="yes"
       variant="floating"
     />
-    <Button
+    <Unknown
       name="side"
       text="No, thanks"
       value="no"
       variant="floating"
     />
-  </ButtonList>,
+  </Unknown>,
 ]
 `;
 
@@ -1199,18 +1199,18 @@ Tree {
 
 exports[`examples Buttons example should work 3`] = `
 Array [
-  <MD
+  <Unknown
     text="Just showing \`button\` *variants*:"
   />,
-  <Button
+  <Unknown
     name="action"
     text="Regular button"
     value="Activate"
   />,
-  <MD
+  <Unknown
     text="And here is variant \`floating\`:"
   />,
-  <Button
+  <Unknown
     name="action"
     text="Floating button"
     value="Activate"
@@ -1448,10 +1448,10 @@ Tree {
 
 exports[`examples Date Confirmation example should work 3`] = `
 Array [
-  <Text
+  <Unknown
     text="Your massage appointment has been confirmed!"
   />,
-  <AddToCalendar
+  <Unknown
     end="2019-12-24T15:42:54.148Z"
     start="2019-12-24T14:42:54.148Z"
     title="Massage with Jessica"
@@ -3669,71 +3669,71 @@ Tree {
 
 exports[`examples E-commerce example should work 3`] = `
 Array [
-  <MD
+  <Unknown
     text="Here are some front bumpers! that will fit your **2018-2019 JL**!"
   />,
-  <Carousel>
-    <CarouselItem>
-      <Image
+  <Unknown>
+    <Unknown>
+      <Unknown
         src="https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Text
+      <Unknown
         text="Barricade Adventure HD Front Bumper"
       />
-      <MD
+      <Unknown
         text="**$404.99**"
       />
-      <Button
+      <Unknown
         text="View Product"
         url="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html"
       />
-    </CarouselItem>
-    <CarouselItem>
-      <Image
+    </Unknown>
+    <Unknown>
+      <Unknown
         src="https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Text
+      <Unknown
         text="Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar"
       />
-      <MD
+      <Unknown
         text="**$529.99**"
       />
-      <Button
+      <Unknown
         text="View Product"
         url="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html"
       />
-    </CarouselItem>
-    <CarouselItem>
-      <Image
+    </Unknown>
+    <Unknown>
+      <Unknown
         src="https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Text
+      <Unknown
         text="Barricade HD Front Bumper w/ 20 in. Light Bar"
       />
-      <MD
+      <Unknown
         text="**$549.99**"
       />
-      <Button
+      <Unknown
         text="View Product"
         url="https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html"
       />
-    </CarouselItem>
-    <CarouselItem>
-      <Image
+    </Unknown>
+    <Unknown>
+      <Unknown
         src="https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Text
+      <Unknown
         text="RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate"
       />
-      <MD
+      <Unknown
         text="**$729.99**"
       />
-      <Button
+      <Unknown
         text="View Product"
         url="https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html"
       />
-    </CarouselItem>
-  </Carousel>,
+    </Unknown>
+  </Unknown>,
 ]
 `;
 
@@ -4604,31 +4604,31 @@ Tree {
 
 exports[`examples Gigs example should work 3`] = `
 Array [
-  <Text
+  <Unknown
     text="Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?"
   />,
-  <ButtonList>
-    <Button
+  <Unknown>
+    <Unknown
       name="times"
       text="9:30"
       value="9:30"
     />
-    <Button
+    <Unknown
       name="times"
       text="10:00"
       value="10:00"
     />
-    <Button
+    <Unknown
       name="times"
       text="11:30"
       value="11:30"
     />
-    <Button
+    <Unknown
       name="times"
       text="Nope"
       value="nope"
     />
-  </ButtonList>,
+  </Unknown>,
 ]
 `;
 
@@ -5118,28 +5118,28 @@ Tree {
 
 exports[`examples Out of stock example should work 3`] = `
 Array [
-  <Text
+  <Unknown
     text="
   Sorry we're currently out of fries, what would you like as a side?
   "
   />,
-  <ButtonList>
-    <Button
+  <Unknown>
+    <Unknown
       name="side"
       text="Salad"
       value="salad"
     />
-    <Button
+    <Unknown
       name="side"
       text="Baked Potatoes"
       value="potatoes"
     />
-    <Button
+    <Unknown
       name="side"
       text="Fried Pickles"
       value="fried_pickles"
     />
-  </ButtonList>,
+  </Unknown>,
 ]
 `;
 
@@ -5489,17 +5489,17 @@ Tree {
 
 exports[`examples Simple Counts example should work 3`] = `
 Array [
-  <Text
+  <Unknown
     text="How many donuts do you want for lunch?"
   />,
-  <Image
+  <Unknown
     src="https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80"
   />,
-  <Number
+  <Unknown
     name="donuts"
     value="3"
   />,
-  <Button
+  <Unknown
     name="confirm"
     text="Confirm"
     value="Confirm"
@@ -5772,10 +5772,10 @@ Tree {
 
 exports[`examples Simple Support example should work 3`] = `
 Array [
-  <Text
+  <Unknown
     text="It looks like your credit card isn't activated yet, activate it now:"
   />,
-  <Button
+  <Unknown
     name="action"
     text="Activate Card"
     value="Activate"
@@ -6059,14 +6059,14 @@ Tree {
 
 exports[`examples Support Data Input example should work 3`] = `
 Array [
-  <MD
+  <Unknown
     text="Happy to setup your new credit card application, what's your **yearly** family income?"
   />,
-  <Input
+  <Unknown
     name="email"
     type="text"
   />,
-  <Button
+  <Unknown
     name="send"
     text="Submit"
     value="submit"
@@ -7149,63 +7149,63 @@ Tree {
 
 exports[`examples Support and Rich Data example should work 3`] = `
 Array [
-  <Text
+  <Unknown
     text="Did you authorize these last 3 transactions on your account?"
   />,
-  <Row>
-    <Col
+  <Unknown>
+    <Unknown
       width="4"
     >
-      <Text
+      <Unknown
         text="$15"
       />
-    </Col>
-    <Col
+    </Unknown>
+    <Unknown
       width="8"
     >
-      <Text
+      <Unknown
         text="Oren's Hummus"
       />
-    </Col>
-  </Row>,
-  <Row>
-    <Col
+    </Unknown>
+  </Unknown>,
+  <Unknown>
+    <Unknown
       width="4"
     >
-      <Text
+      <Unknown
         text="$1000"
       />
-    </Col>
-    <Col
+    </Unknown>
+    <Unknown
       width="8"
     >
-      <Text
+      <Unknown
         text="Apple monitor stand"
       />
-    </Col>
-  </Row>,
-  <Row>
-    <Col
+    </Unknown>
+  </Unknown>,
+  <Unknown>
+    <Unknown
       width="4"
     >
-      <Text
+      <Unknown
         text="$60"
       />
-    </Col>
-    <Col
+    </Unknown>
+    <Unknown
       width="8"
     >
-      <Text
+      <Unknown
         text="Epic Games Skins"
       />
-    </Col>
-  </Row>,
-  <Button
+    </Unknown>
+  </Unknown>,
+  <Unknown
     name="authorized"
     text="Yes"
     value="yes"
   />,
-  <Button
+  <Unknown
     name="authorized"
     text="No"
     value="yes"

@@ -8,7 +8,7 @@
     
     // target the virtuoso scroll container
     > div {
-      overflow-y: scroll !important;
+      overflow-y: scroll; // this might be need to be made important, to check on IE
       scrollbar-width: none;
       overflow: -moz-scrollbars-none;
       -ms-overflow-style: none;

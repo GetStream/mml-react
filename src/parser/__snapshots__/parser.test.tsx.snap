@@ -75,7 +75,7 @@ Tree {
 
 exports[`mml name and simple text field 3`] = `
 Array [
-  <Text
+  <Unknown
     text="hi"
   />,
 ]
@@ -302,10 +302,10 @@ Tree {
 
 exports[`mml with button 3`] = `
 Array [
-  <Text
+  <Unknown
     text="It looks like your credit card isn't activated yet, activate it now:"
   />,
-  <Button
+  <Unknown
     name="action"
     text="Activate Card"
     value="Activate"
@@ -547,18 +547,18 @@ Tree {
 
 exports[`simple carousel 3`] = `
 Array [
-  <Carousel>
-    <CarouselItem>
-      <Text
+  <Unknown>
+    <Unknown>
+      <Unknown
         text="a"
       />
-    </CarouselItem>
-    <CarouselItem>
-      <Text
+    </Unknown>
+    <Unknown>
+      <Unknown
         text="b"
       />
-    </CarouselItem>
-  </Carousel>,
+    </Unknown>
+  </Unknown>,
 ]
 `;
 
@@ -757,7 +757,7 @@ Tree {
 
 exports[`simple input 3`] = `
 Array [
-  <Input
+  <Unknown
     name="name"
     value="John"
   />,
