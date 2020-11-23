@@ -12,7 +12,7 @@ import { Tree } from './tree';
  * @returns {array} an Array of XML nodes
  */
 export function SourceToXML(source: string) {
-  let src = source;
+  let src = source.trim();
   // the wrapping MML tags are optional, for parsing simplicity we automatically add them if they are not already there
   if (!src.startsWith('<mml')) src = `<mml>${source}</mml>`;
 
