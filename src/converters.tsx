@@ -1,21 +1,22 @@
 import React, { ReactElement } from 'react';
 
 import { MMLTag } from './parser/MMLTag';
-
-import { Input } from './components/Input';
-import { Button } from './components/Button';
-import { ButtonList } from './components/ButtonList';
-import { AddToCalendar } from './components/AddToCalendar';
-import { Scheduler } from './components/Scheduler';
-import { Text } from './components/Text';
-import { MD } from './components/MD';
-import { Row } from './components/Row';
-import { Col } from './components/Col';
-import { Image } from './components/Image';
-import { Icon } from './components/Icon';
-import { Carousel } from './components/Carousel';
-import { CarouselItem } from './components/CarouselItem';
-import { Number } from './components/Number';
+import {
+  AddToCalendar,
+  Button,
+  ButtonList,
+  Carousel,
+  CarouselItem,
+  Col,
+  Icon,
+  Image,
+  Input,
+  MD,
+  Scheduler,
+  Text,
+  Row,
+  Number,
+} from './components';
 
 export type ConvertorType = (tag: MMLTag, children?: ReactElement[]) => ReactElement;
 
