@@ -27,15 +27,15 @@ Object {
 exports[`mml name and simple text field 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": undefined,
+      "name": "text",
       "node": Object {
         "text": "hi",
         "toJSON": [Function],
         "type": "text",
       },
-      "tagName": "text",
     },
   ],
   "converters": Object {
@@ -75,7 +75,7 @@ Tree {
 
 exports[`mml name and simple text field 3`] = `
 Array [
-  <Unknown
+  <Text
     text="hi"
   />,
 ]
@@ -158,20 +158,21 @@ Object {
 exports[`mml with button 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -185,25 +186,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "text",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "action",
         "value": "Activate",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Activate Card",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "action",
@@ -220,7 +221,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
   ],
   "converters": Object {
@@ -302,10 +302,10 @@ Tree {
 
 exports[`mml with button 3`] = `
 Array [
-  <Unknown
+  <Text
     text="It looks like your credit card isn't activated yet, activate it now:"
   />,
-  <Unknown
+  <Button
     name="action"
     text="Activate Card"
     value="Activate"
@@ -384,23 +384,24 @@ Object {
 exports[`simple carousel 2`] = `
 Tree {
   "children": Array [
-    Carousel {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Item {
+        MMLTag {
           "attributes": Object {},
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "a",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -414,22 +415,22 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "item",
         },
-        Item {
+        MMLTag {
           "attributes": Object {},
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "b",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -443,9 +444,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "item",
         },
       ],
+      "name": "carousel",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -480,7 +481,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "carousel",
     },
   ],
   "converters": Object {
@@ -547,18 +547,18 @@ Tree {
 
 exports[`simple carousel 3`] = `
 Array [
-  <Unknown>
-    <Unknown>
-      <Unknown
+  <Carousel>
+    <CarouselItem>
+      <Text
         text="a"
       />
-    </Unknown>
-    <Unknown>
-      <Unknown
+    </CarouselItem>
+    <CarouselItem>
+      <Text
         text="b"
       />
-    </Unknown>
-  </Unknown>,
+    </CarouselItem>
+  </Carousel>,
 ]
 `;
 
@@ -698,12 +698,13 @@ Object {
 exports[`simple input 2`] = `
 Tree {
   "children": Array [
-    Input {
+    MMLTag {
       "attributes": Object {
         "name": "name",
         "value": "John",
       },
       "children": Array [],
+      "name": "input",
       "node": Object {
         "attributes": Object {
           "name": "name",
@@ -714,7 +715,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "input",
     },
   ],
   "converters": Object {
@@ -757,7 +757,7 @@ Tree {
 
 exports[`simple input 3`] = `
 Array [
-  <Unknown
+  <Input
     name="name"
     value="John"
   />,

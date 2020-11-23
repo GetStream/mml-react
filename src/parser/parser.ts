@@ -1,7 +1,7 @@
 import parseXml from '@rgrove/parse-xml';
 
-import { ConvertorType } from '../converters';
-import { MMLTag, tags } from './tags';
+import { ConvertorType } from './converters';
+import { MMLTag } from './MMLTag';
 import { Tree } from './tree';
 
 /**
@@ -12,7 +12,7 @@ import { Tree } from './tree';
  * @returns {array} an Array of XML nodes
  */
 export function SourceToXML(source: string) {
-  let src = source;
+  let src = source.trim();
   // the wrapping MML tags are optional, for parsing simplicity we automatically add them if they are not already there
   if (!src.startsWith('<mml')) src = `<mml>${source}</mml>`;
 
@@ -31,19 +31,13 @@ function convertNodes(nodes: parseXml.NodeBase[]) {
     let children;
     if (element.children) children = convertNodes(element.children);
 
-    let tagName = element.name;
+    let { name } = element;
     if ((node as parseXml.Text).type === 'text') {
-      if ((node as parseXml.Text).text.trim().length) tagName = 'text';
+      if ((node as parseXml.Text).text.trim().length) name = 'text';
       else return acc; // skip empty text elements
     }
 
-    if (tags[tagName]) {
-      const Tag = tags[tagName];
-      acc.push(new Tag(tagName, node as parseXml.Element | parseXml.Text, children));
-    } else {
-      console.warn('unrecognized element', tagName, Object.keys(tags));
-    }
-
+    acc.push(new MMLTag(name, node as parseXml.Element | parseXml.Text, children));
     return acc;
   }, []);
 }

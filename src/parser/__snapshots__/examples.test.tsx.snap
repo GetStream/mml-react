@@ -85,20 +85,21 @@ Object {
 exports[`examples Advanced Scheduling example should work 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "When would you like to schedule your massage?",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -112,9 +113,8 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "text",
     },
-    Scheduler {
+    MMLTag {
       "attributes": Object {
         "duration": "30",
         "interval": "30",
@@ -122,6 +122,7 @@ Tree {
         "selected": "2020-11-16T10:30:00.000Z",
       },
       "children": Array [],
+      "name": "scheduler",
       "node": Object {
         "attributes": Object {
           "duration": "30",
@@ -134,25 +135,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "scheduler",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "action",
         "value": "reserve",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Reserve",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "action",
@@ -169,7 +170,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
   ],
   "converters": Object {
@@ -267,7 +267,7 @@ Tree {
 
 exports[`examples Advanced Scheduling example should work 3`] = `
 Array [
-  <Unknown
+  <Text
     text="When would you like to schedule your massage?"
   />,
   <Unknown
@@ -276,7 +276,7 @@ Array [
     interval={30}
     selected="2020-11-16T10:30:00.000Z"
   />,
-  <Unknown
+  <Button
     name="action"
     text="Reserve"
     value="reserve"
@@ -473,20 +473,21 @@ Object {
 exports[`examples ButtonFloating example should work 2`] = `
 Tree {
   "children": Array [
-    MD {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Just showing \`button_list\` \`floating\` **variant**:",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "md",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -500,31 +501,31 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "md",
     },
-    ButtonList {
+    MMLTag {
       "attributes": Object {
         "variant": "floating",
       },
       "children": Array [
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "side",
             "value": "yes",
             "variant": "floating",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Yes!",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "side",
@@ -542,26 +543,26 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "side",
             "value": "no",
             "variant": "floating",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "No, thanks",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "side",
@@ -579,9 +580,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
       ],
+      "name": "button_list",
       "node": Object {
         "attributes": Object {
           "variant": "floating",
@@ -644,7 +645,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button_list",
     },
   ],
   "converters": Object {
@@ -772,25 +772,25 @@ Tree {
 
 exports[`examples ButtonFloating example should work 3`] = `
 Array [
-  <Unknown
+  <MD
     text="Just showing \`button_list\` \`floating\` **variant**:"
   />,
-  <Unknown
+  <ButtonList
     variant="floating"
   >
-    <Unknown
+    <Button
       name="side"
       text="Yes!"
       value="yes"
       variant="floating"
     />
-    <Unknown
+    <Button
       name="side"
       text="No, thanks"
       value="no"
       variant="floating"
     />
-  </Unknown>,
+  </ButtonList>,
 ]
 `;
 
@@ -947,20 +947,21 @@ Object {
 exports[`examples Buttons example should work 2`] = `
 Tree {
   "children": Array [
-    MD {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Just showing \`button\` *variants*:",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "md",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -974,25 +975,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "md",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "action",
         "value": "Activate",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Regular button",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "action",
@@ -1009,22 +1010,22 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
-    MD {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "And here is variant \`floating\`:",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "md",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -1038,26 +1039,26 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "md",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "action",
         "value": "Activate",
         "variant": "floating",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Floating button",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "action",
@@ -1075,7 +1076,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
   ],
   "converters": Object {
@@ -1199,18 +1199,18 @@ Tree {
 
 exports[`examples Buttons example should work 3`] = `
 Array [
-  <Unknown
+  <MD
     text="Just showing \`button\` *variants*:"
   />,
-  <Unknown
+  <Button
     name="action"
     text="Regular button"
     value="Activate"
   />,
-  <Unknown
+  <MD
     text="And here is variant \`floating\`:"
   />,
-  <Unknown
+  <Button
     name="action"
     text="Floating button"
     value="Activate"
@@ -1326,20 +1326,21 @@ Object {
 exports[`examples Date Confirmation example should work 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Your massage appointment has been confirmed!",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -1353,15 +1354,15 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "text",
     },
-    AddToCalendar {
+    MMLTag {
       "attributes": Object {
         "end": "2019-12-24T15:42:54.148Z",
         "start": "2019-12-24T14:42:54.148Z",
         "title": "Massage with Jessica",
       },
       "children": Array [],
+      "name": "add_to_calendar",
       "node": Object {
         "attributes": Object {
           "end": "2019-12-24T15:42:54.148Z",
@@ -1373,7 +1374,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "add_to_calendar",
     },
   ],
   "converters": Object {
@@ -1448,10 +1448,10 @@ Tree {
 
 exports[`examples Date Confirmation example should work 3`] = `
 Array [
-  <Unknown
+  <Text
     text="Your massage appointment has been confirmed!"
   />,
-  <Unknown
+  <AddToCalendar
     end="2019-12-24T15:42:54.148Z"
     start="2019-12-24T14:42:54.148Z"
     title="Massage with Jessica"
@@ -1988,20 +1988,21 @@ Object {
 exports[`examples E-commerce example should work 2`] = `
 Tree {
   "children": Array [
-    MD {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "md",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -2015,19 +2016,19 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "md",
     },
-    Carousel {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Item {
+        MMLTag {
           "attributes": Object {},
           "children": Array [
-            Image {
+            MMLTag {
               "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
+              "name": "image",
               "node": Object {
                 "attributes": Object {
                   "src": "https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
@@ -2037,22 +2038,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "image",
             },
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "Barricade Adventure HD Front Bumper",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "text",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2066,22 +2067,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "text",
             },
-            MD {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "**$404.99**",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "md",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2095,24 +2096,24 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "md",
             },
-            Button {
+            MMLTag {
               "attributes": Object {
                 "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html",
               },
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "View Product",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "button",
               "node": Object {
                 "attributes": Object {
                   "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html",
@@ -2128,9 +2129,9 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "button",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -2219,16 +2220,16 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "item",
         },
-        Item {
+        MMLTag {
           "attributes": Object {},
           "children": Array [
-            Image {
+            MMLTag {
               "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
+              "name": "image",
               "node": Object {
                 "attributes": Object {
                   "src": "https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0",
@@ -2238,22 +2239,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "image",
             },
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "text",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2267,22 +2268,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "text",
             },
-            MD {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "**$529.99**",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "md",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2296,24 +2297,24 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "md",
             },
-            Button {
+            MMLTag {
               "attributes": Object {
                 "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html",
               },
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "View Product",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "button",
               "node": Object {
                 "attributes": Object {
                   "url": "https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html",
@@ -2329,9 +2330,9 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "button",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -2420,16 +2421,16 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "item",
         },
-        Item {
+        MMLTag {
           "attributes": Object {},
           "children": Array [
-            Image {
+            MMLTag {
               "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
+              "name": "image",
               "node": Object {
                 "attributes": Object {
                   "src": "https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0",
@@ -2439,22 +2440,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "image",
             },
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "text",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2468,22 +2469,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "text",
             },
-            MD {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "**$549.99**",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "md",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2497,24 +2498,24 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "md",
             },
-            Button {
+            MMLTag {
               "attributes": Object {
                 "url": "https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html",
               },
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "View Product",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "button",
               "node": Object {
                 "attributes": Object {
                   "url": "https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html",
@@ -2530,9 +2531,9 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "button",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -2621,16 +2622,16 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "item",
         },
-        Item {
+        MMLTag {
           "attributes": Object {},
           "children": Array [
-            Image {
+            MMLTag {
               "attributes": Object {
                 "src": "https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0",
               },
               "children": Array [],
+              "name": "image",
               "node": Object {
                 "attributes": Object {
                   "src": "https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0",
@@ -2640,22 +2641,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "image",
             },
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "text",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2669,22 +2670,22 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "text",
             },
-            MD {
+            MMLTag {
               "attributes": Object {},
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "**$729.99**",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "md",
               "node": Object {
                 "attributes": Object {},
                 "children": Array [
@@ -2698,24 +2699,24 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "md",
             },
-            Button {
+            MMLTag {
               "attributes": Object {
                 "url": "https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html",
               },
               "children": Array [
-                Text {
+                MMLTag {
                   "attributes": Object {},
                   "children": undefined,
+                  "name": "text",
                   "node": Object {
                     "text": "View Product",
                     "toJSON": [Function],
                     "type": "text",
                   },
-                  "tagName": "text",
                 },
               ],
+              "name": "button",
               "node": Object {
                 "attributes": Object {
                   "url": "https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html",
@@ -2731,9 +2732,9 @@ Tree {
                 "toJSON": [Function],
                 "type": "element",
               },
-              "tagName": "button",
             },
           ],
+          "name": "item",
           "node": Object {
             "attributes": Object {},
             "children": Array [
@@ -2822,9 +2823,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "item",
         },
       ],
+      "name": "carousel",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -3215,7 +3216,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "carousel",
     },
   ],
   "converters": Object {
@@ -3669,71 +3669,71 @@ Tree {
 
 exports[`examples E-commerce example should work 3`] = `
 Array [
-  <Unknown
+  <MD
     text="Here are some front bumpers! that will fit your **2018-2019 JL**!"
   />,
-  <Unknown>
-    <Unknown>
-      <Unknown
+  <Carousel>
+    <CarouselItem>
+      <Image
         src="https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Unknown
+      <Text
         text="Barricade Adventure HD Front Bumper"
       />
-      <Unknown
+      <MD
         text="**$404.99**"
       />
-      <Unknown
+      <Button
         text="View Product"
         url="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html"
       />
-    </Unknown>
-    <Unknown>
-      <Unknown
+    </CarouselItem>
+    <CarouselItem>
+      <Image
         src="https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Unknown
+      <Text
         text="Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar"
       />
-      <Unknown
+      <MD
         text="**$529.99**"
       />
-      <Unknown
+      <Button
         text="View Product"
         url="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html"
       />
-    </Unknown>
-    <Unknown>
-      <Unknown
+    </CarouselItem>
+    <CarouselItem>
+      <Image
         src="https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Unknown
+      <Text
         text="Barricade HD Front Bumper w/ 20 in. Light Bar"
       />
-      <Unknown
+      <MD
         text="**$549.99**"
       />
-      <Unknown
+      <Button
         text="View Product"
         url="https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html"
       />
-    </Unknown>
-    <Unknown>
-      <Unknown
+    </CarouselItem>
+    <CarouselItem>
+      <Image
         src="https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0"
       />
-      <Unknown
+      <Text
         text="RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate"
       />
-      <Unknown
+      <MD
         text="**$729.99**"
       />
-      <Unknown
+      <Button
         text="View Product"
         url="https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html"
       />
-    </Unknown>
-  </Unknown>,
+    </CarouselItem>
+  </Carousel>,
 ]
 `;
 
@@ -4161,20 +4161,21 @@ Object {
 exports[`examples Gigs example should work 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -4188,28 +4189,28 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "text",
     },
-    ButtonList {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "times",
             "value": "9:30",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "9:30",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "times",
@@ -4226,25 +4227,25 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "times",
             "value": "10:00",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "10:00",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "times",
@@ -4261,25 +4262,25 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "times",
             "value": "11:30",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "11:30",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "times",
@@ -4296,25 +4297,25 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "times",
             "value": "nope",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Nope",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "times",
@@ -4331,9 +4332,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
       ],
+      "name": "button_list",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -4436,7 +4437,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button_list",
     },
   ],
   "converters": Object {
@@ -4604,31 +4604,31 @@ Tree {
 
 exports[`examples Gigs example should work 3`] = `
 Array [
-  <Unknown
+  <Text
     text="Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?"
   />,
-  <Unknown>
-    <Unknown
+  <ButtonList>
+    <Button
       name="times"
       text="9:30"
       value="9:30"
     />
-    <Unknown
+    <Button
       name="times"
       text="10:00"
       value="10:00"
     />
-    <Unknown
+    <Button
       name="times"
       text="11:30"
       value="11:30"
     />
-    <Unknown
+    <Button
       name="times"
       text="Nope"
       value="nope"
     />
-  </Unknown>,
+  </ButtonList>,
 ]
 `;
 
@@ -4789,9 +4789,10 @@ Object {
 exports[`examples Out of stock example should work 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": undefined,
+      "name": "text",
       "node": Object {
         "text": "
   Sorry we're currently out of fries, what would you like as a side?
@@ -4799,28 +4800,28 @@ Tree {
         "toJSON": [Function],
         "type": "text",
       },
-      "tagName": "text",
     },
-    ButtonList {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "side",
             "value": "salad",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Salad",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "side",
@@ -4837,25 +4838,25 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "side",
             "value": "potatoes",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Baked Potatoes",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "side",
@@ -4872,25 +4873,25 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
-        Button {
+        MMLTag {
           "attributes": Object {
             "name": "side",
             "value": "fried_pickles",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Fried Pickles",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "button",
           "node": Object {
             "attributes": Object {
               "name": "side",
@@ -4907,9 +4908,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "button",
         },
       ],
+      "name": "button_list",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -4990,7 +4991,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button_list",
     },
   ],
   "converters": Object {
@@ -5118,28 +5118,28 @@ Tree {
 
 exports[`examples Out of stock example should work 3`] = `
 Array [
-  <Unknown
+  <Text
     text="
   Sorry we're currently out of fries, what would you like as a side?
   "
   />,
-  <Unknown>
-    <Unknown
+  <ButtonList>
+    <Button
       name="side"
       text="Salad"
       value="salad"
     />
-    <Unknown
+    <Button
       name="side"
       text="Baked Potatoes"
       value="potatoes"
     />
-    <Unknown
+    <Button
       name="side"
       text="Fried Pickles"
       value="fried_pickles"
     />
-  </Unknown>,
+  </ButtonList>,
 ]
 `;
 
@@ -5280,20 +5280,21 @@ Object {
 exports[`examples Simple Counts example should work 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "How many donuts do you want for lunch?",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -5307,13 +5308,13 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "text",
     },
-    Image {
+    MMLTag {
       "attributes": Object {
         "src": "https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80",
       },
       "children": Array [],
+      "name": "image",
       "node": Object {
         "attributes": Object {
           "src": "https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80",
@@ -5323,14 +5324,14 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "image",
     },
-    Number {
+    MMLTag {
       "attributes": Object {
         "name": "donuts",
         "value": "3",
       },
       "children": Array [],
+      "name": "number",
       "node": Object {
         "attributes": Object {
           "name": "donuts",
@@ -5341,25 +5342,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "number",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "confirm",
         "value": "Confirm",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Confirm",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "confirm",
@@ -5376,7 +5377,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
   ],
   "converters": Object {
@@ -5489,17 +5489,17 @@ Tree {
 
 exports[`examples Simple Counts example should work 3`] = `
 Array [
-  <Unknown
+  <Text
     text="How many donuts do you want for lunch?"
   />,
-  <Unknown
+  <Image
     src="https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80"
   />,
-  <Unknown
+  <Number
     name="donuts"
     value="3"
   />,
-  <Unknown
+  <Button
     name="confirm"
     text="Confirm"
     value="Confirm"
@@ -5628,20 +5628,21 @@ Object {
 exports[`examples Simple Support example should work 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -5655,25 +5656,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "text",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "action",
         "value": "Activate",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Activate Card",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "action",
@@ -5690,7 +5691,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
   ],
   "converters": Object {
@@ -5772,10 +5772,10 @@ Tree {
 
 exports[`examples Simple Support example should work 3`] = `
 Array [
-  <Unknown
+  <Text
     text="It looks like your credit card isn't activated yet, activate it now:"
   />,
-  <Unknown
+  <Button
     name="action"
     text="Activate Card"
     value="Activate"
@@ -5883,20 +5883,21 @@ Object {
 exports[`examples Support Data Input example should work 2`] = `
 Tree {
   "children": Array [
-    MD {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "md",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -5910,14 +5911,14 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "md",
     },
-    Input {
+    MMLTag {
       "attributes": Object {
         "name": "email",
         "type": "text",
       },
       "children": Array [],
+      "name": "input",
       "node": Object {
         "attributes": Object {
           "name": "email",
@@ -5928,25 +5929,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "input",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "send",
         "value": "submit",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Submit",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "send",
@@ -5963,7 +5964,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
   ],
   "converters": Object {
@@ -6059,14 +6059,14 @@ Tree {
 
 exports[`examples Support Data Input example should work 3`] = `
 Array [
-  <Unknown
+  <MD
     text="Happy to setup your new credit card application, what's your **yearly** family income?"
   />,
-  <Unknown
+  <Input
     name="email"
     type="text"
   />,
-  <Unknown
+  <Button
     name="send"
     text="Submit"
     value="submit"
@@ -6378,20 +6378,21 @@ Object {
 exports[`examples Support and Rich Data example should work 2`] = `
 Tree {
   "children": Array [
-    Text {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Did you authorize these last 3 transactions on your account?",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "text",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -6405,27 +6406,27 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "text",
     },
-    Row {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Col {
+        MMLTag {
           "attributes": Object {
             "width": "4",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "$15",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "col",
           "node": Object {
             "attributes": Object {
               "width": "4",
@@ -6441,24 +6442,24 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "col",
         },
-        Col {
+        MMLTag {
           "attributes": Object {
             "width": "8",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Oren's Hummus",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "col",
           "node": Object {
             "attributes": Object {
               "width": "8",
@@ -6474,9 +6475,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "col",
         },
       ],
+      "name": "row",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -6533,27 +6534,27 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "row",
     },
-    Row {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Col {
+        MMLTag {
           "attributes": Object {
             "width": "4",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "$1000",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "col",
           "node": Object {
             "attributes": Object {
               "width": "4",
@@ -6569,24 +6570,24 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "col",
         },
-        Col {
+        MMLTag {
           "attributes": Object {
             "width": "8",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Apple monitor stand",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "col",
           "node": Object {
             "attributes": Object {
               "width": "8",
@@ -6602,9 +6603,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "col",
         },
       ],
+      "name": "row",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -6661,27 +6662,27 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "row",
     },
-    Row {
+    MMLTag {
       "attributes": Object {},
       "children": Array [
-        Col {
+        MMLTag {
           "attributes": Object {
             "width": "4",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "$60",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "col",
           "node": Object {
             "attributes": Object {
               "width": "4",
@@ -6697,24 +6698,24 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "col",
         },
-        Col {
+        MMLTag {
           "attributes": Object {
             "width": "8",
           },
           "children": Array [
-            Text {
+            MMLTag {
               "attributes": Object {},
               "children": undefined,
+              "name": "text",
               "node": Object {
                 "text": "Epic Games Skins",
                 "toJSON": [Function],
                 "type": "text",
               },
-              "tagName": "text",
             },
           ],
+          "name": "col",
           "node": Object {
             "attributes": Object {
               "width": "8",
@@ -6730,9 +6731,9 @@ Tree {
             "toJSON": [Function],
             "type": "element",
           },
-          "tagName": "col",
         },
       ],
+      "name": "row",
       "node": Object {
         "attributes": Object {},
         "children": Array [
@@ -6789,25 +6790,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "row",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "authorized",
         "value": "yes",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "Yes",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "authorized",
@@ -6824,25 +6825,25 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
-    Button {
+    MMLTag {
       "attributes": Object {
         "name": "authorized",
         "value": "yes",
       },
       "children": Array [
-        Text {
+        MMLTag {
           "attributes": Object {},
           "children": undefined,
+          "name": "text",
           "node": Object {
             "text": "No",
             "toJSON": [Function],
             "type": "text",
           },
-          "tagName": "text",
         },
       ],
+      "name": "button",
       "node": Object {
         "attributes": Object {
           "name": "authorized",
@@ -6859,7 +6860,6 @@ Tree {
         "toJSON": [Function],
         "type": "element",
       },
-      "tagName": "button",
     },
   ],
   "converters": Object {
@@ -7149,63 +7149,63 @@ Tree {
 
 exports[`examples Support and Rich Data example should work 3`] = `
 Array [
-  <Unknown
+  <Text
     text="Did you authorize these last 3 transactions on your account?"
   />,
-  <Unknown>
-    <Unknown
+  <Row>
+    <Col
       width="4"
     >
-      <Unknown
+      <Text
         text="$15"
       />
-    </Unknown>
-    <Unknown
+    </Col>
+    <Col
       width="8"
     >
-      <Unknown
+      <Text
         text="Oren's Hummus"
       />
-    </Unknown>
-  </Unknown>,
-  <Unknown>
-    <Unknown
+    </Col>
+  </Row>,
+  <Row>
+    <Col
       width="4"
     >
-      <Unknown
+      <Text
         text="$1000"
       />
-    </Unknown>
-    <Unknown
+    </Col>
+    <Col
       width="8"
     >
-      <Unknown
+      <Text
         text="Apple monitor stand"
       />
-    </Unknown>
-  </Unknown>,
-  <Unknown>
-    <Unknown
+    </Col>
+  </Row>,
+  <Row>
+    <Col
       width="4"
     >
-      <Unknown
+      <Text
         text="$60"
       />
-    </Unknown>
-    <Unknown
+    </Col>
+    <Col
       width="8"
     >
-      <Unknown
+      <Text
         text="Epic Games Skins"
       />
-    </Unknown>
-  </Unknown>,
-  <Unknown
+    </Col>
+  </Row>,
+  <Button
     name="authorized"
     text="Yes"
     value="yes"
   />,
-  <Unknown
+  <Button
     name="authorized"
     text="No"
     value="yes"

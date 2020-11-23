@@ -1,8 +1,7 @@
 import './styles/index.scss';
 import './styles/team.scss';
 
-// TODO: remove unused exports
-// export * from './parser/examples';
-export * from './components/MML';
+export * from './mml';
+export * from './parser';
 export * from './context';
-export * from './converters';
+export * from './components';

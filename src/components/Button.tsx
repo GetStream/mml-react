@@ -31,7 +31,7 @@ export const Button: FC<ButtonProps> = ({ text, name, value, url = '', variant }
           window.location.href = sanitizeUrl(url);
           return event.preventDefault();
         }
-        setValue(name, value);
+        if (name) setValue(name, value);
       }}
     >
       {text}
