@@ -1,0 +1,16 @@
+---
+name: MMLContext
+route: /mml-context
+---
+
+MMLContext wraps the entire tree and exposes the following variables:
+
+- `setValue(name, value)`
+- the state for the forms available as `context[name]``
+- form submitState
+
+```ts
+[key: string]: any;
+setValue: (name: string, value: any) => void;
+submitState: { loading: boolean; error: string; success: string };
+```

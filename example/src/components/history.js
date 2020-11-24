@@ -7,9 +7,9 @@ function goToQuery(value) {
   window.history.pushState({ path: newurl }, '', newurl)
 }
 
-export function getQueryValue(key, query = window.location.search) {
-  const values = qs.parse(query)
-  return values[key]
+export function getQueryValue(key, query) {
+  const values = qs.parse(query);
+  return values[key];
 }
 
 export function getQueryString(key, value, query = window.location.search) {

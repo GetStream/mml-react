@@ -1,0 +1,61 @@
+---
+name: MML
+route: /mml
+---
+
+import { Playground, Props } from 'docz';
+import { MML } from './MML.tsx';
+
+# MML
+
+This component accepts a mml string and render it as react components.
+
+If there are any stateful tag, it will gather all the inital states and and expose them in [`MMLContext`](/mml-context).
+
+It also accepts custom convertor which allows you to exapand the default tags and add more compoennts.
+
+## Properties
+
+<Props of={MML} />
+
+## Basic usage without any state
+
+<Playground>
+  <MML source={`<mml name="text">hi</mml>`} />
+</Playground>
+
+## Basic usage with state
+
+<Playground>
+  <MML
+    source={`
+      <mml name="counts">
+        <number name="donuts" value="3" />
+      </mml>
+    `}
+  />
+</Playground>
+
+## Callback support
+
+if onSubmit callback return a promise, it will be awaited.
+
+<Playground>
+  <MML
+    onSubmit={(data) => console.info(data)}
+    source={`
+      <mml>
+        <input name="answer" value="42" />
+        <button>Confirm</button>
+      </mml>
+    `}
+  />
+</Playground>
+
+## Invalid MML string
+
+In case of an error, you can override default Error component
+
+<Playground>
+  <MML source="<invalid />" Error={({ error }) => <div>{error}</div>} />
+</Playground>

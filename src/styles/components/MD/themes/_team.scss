@@ -1,10 +1,10 @@
-@include scr-theme-root('team') {
+@include mml-theme-root('team') {
   @include mml-component('md') {
     padding: 0 0 0 $mml-text-padding-x;
   }
 }
 
-@include scr-theme-root('team.light') {
+@include mml-theme-root('team.light') {
   @include mml-component('md') {
     border-left: $mml-border;
     color: $mml-theme-team-border-color;

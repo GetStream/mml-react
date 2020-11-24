@@ -1,0 +1,214 @@
+// Generic variables:
+// -----------------------------------------------------------------------------
+$mml-prefix: 'mml-' !default;
+$mml-colors: (
+  primary: #006cff,
+  primary-faded: #bcd8ff,
+  white: white,
+  black: black,
+  grey-900: rgba(0, 0, 0, 0.08),
+  grey-900-full: #f0f0f0,
+  grey-800: rgba(0, 0, 0, 0.03),
+  grey-800-full: #f7f7f7,
+  grey-300: rgba(255, 255, 255, 0.1),
+  grey-200: rgba(255, 255, 255, 0.08),
+  grey-100-full: #34373a,
+  grey-100: rgba(255, 255, 255, 0.05),
+) !default;
+$mml-spacer: 10px !default;
+$mml-spacer-y: 2px !default;
+$mml-bg: transparent !default;
+$mml-bg--full: mml-color(white) !default;
+$mml--dark-bg: mml-color(grey-100) !default;
+$mml--dark-bg--full: mml-color(grey-100-full) !default;
+$mml-border-radius: 16px !default;
+$mml-border-radius-base: 2px !default;
+$mml-border-style: solid !default;
+$mml-border-width: 1px !default;
+$mml-border-color: mml-color(grey-900) !default;
+$mml-border: $mml-border-width $mml-border-style $mml-border-color !default;
+$mml--dark-border-color: mml-color(grey-100) !default;
+$mml-shadow: 0 3px 6px 0 rgba(#000000, 0.05), 0 1px 0 0 rgba(#000000, 0.1), 0 2px 4px 0 rgba(#000000, 0.03) !default;
+$mml-font-sans: inherit !default; // 'IBM Plex Sans', sans-serif;
+$mml-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
+$mml-font-base: $mml-font-sans !default;
+
+// Themes related variables:
+// -----------------------------------------------------------------------------
+$mml-str-chat__message--margin-right: 90px !default;
+$mml-theme-livestream-border-radius: 6px !default;
+$mml-theme-team-margin-y: 10px !default;
+$mml-theme-team-border-color: #404040 !default;
+$mml-theme-team--dark-border-color: rgba(0, 0, 0, 0.4) !default;
+
+// Button:
+// -----------------------------------------------------------------------------
+$mml-btn-font-family: $mml-font-sans !default;
+$mml-btn-font-weight: bold !default;
+$mml-btn-font-size: inherit !default;
+$mml-btn-text-transform: none !default;
+$mml-btn-padding-y: 11px !default;
+$mml-btn-padding-x: 15px !default;
+$mml-btn-bg: $mml-bg !default;
+$mml-btn-color: mml-color(primary) !default;
+$mml-btn-hover-bg: mml-color(primary) !default;
+$mml-btn-hover-color: mml-color(white) !default;
+$mml-btn-focus-outline: none !default;
+$mml-btn--dark-bg: mml-color(grey-100) !default;
+$mml-btn--dark-color: mml-color(primary-faded) !default;
+$mml-btn--dark-hover-bg: $mml-btn-hover-bg !default;
+$mml-btn--dark-hover-color: $mml-btn-hover-color !default;
+$mml-btn--floating-border-radius: $mml-border-radius !default;
+$mml-btn--floating-bg: $mml-bg !default;
+$mml-btn--floating-color: mml-color(black) !default;
+$mml-btn--floating-shadow: $mml-shadow !default;
+$mml-btn--floating-hover-bg: mml-color(grey-900) !default;
+
+// ButtonList:
+// -----------------------------------------------------------------------------
+$mml-btnlist-bg: $mml-bg !default;
+$mml-btnlist--dark-bg: $mml--dark-bg !default;
+
+// Card:
+// -----------------------------------------------------------------------------
+$mml-card-bg: $mml-bg !default;
+$mml-card--dark-bg: $mml--dark-bg !default;
+$mml-card-header-font-size: 13px !default;
+$mml-card-header-padding-y: 13px !default;
+$mml-card-header-padding-x: 13px !default;
+$mml-card-header-opacity: 0.3 !default;
+$mml-card-header-bg: mml-color(grey-800-full) !default;
+$mml-card-header-color: mml-color(black) !default;
+$mml-card-header--dark-opacity: 0.7 !default;
+$mml-card-header--dark-bg: mml-color(grey-200) !default;
+$mml-card-header--dark-color: mml-color(white) !default;
+$mml-card-body-font-size: 14px !default;
+$mml-card-body-color: mml-color(black) !default;
+$mml-card-body--dark-color: mml-color(white) !default;
+
+// Carousel:
+// -----------------------------------------------------------------------------
+$mml-carousel-margin-y: $mml-spacer !default;
+$mml-carousel__item-gutter-x: $mml-spacer !default;
+$mml-carousel__text-font-size: 12px !default;
+
+// Col (Grid):
+// -----------------------------------------------------------------------------
+$mml-grid-columns: 12 !default;
+$mml-grid-gutter: 0 !default;
+$mml-grid-breakpoints: (
+  xs: 0,
+) !default;
+
+// Datepicker:
+// -----------------------------------------------------------------------------
+$mml-datepicker__item-color-active: mml-color(primary) !default;
+$mml-datepicker__item--dark-color-active: mml-color(primary-faded) !default;
+
+// Error:
+// -----------------------------------------------------------------------------
+$mml-error-spacer: $mml-spacer !default;
+$mml-error-font-size: 88% !default;
+$mml-error-color: rgb(187, 81, 81) !default;
+
+// Icon:
+// -----------------------------------------------------------------------------
+$mml-icon-color: mml-color(black) !default;
+$mml-icon--dark-color: mml-color(white) !default;
+
+// Image:
+// -----------------------------------------------------------------------------
+$mml-image-spacer-y: 0 !default;
+$mml-image-spacer-x: 0 !default;
+
+// Input:
+// -----------------------------------------------------------------------------
+$mml-input-padding-y: $mml-btn-padding-y !default;
+$mml-input-padding-x: $mml-btn-padding-x !default;
+$mml-input-bg: $mml-bg !default;
+$mml-input-color: mml-color(black) !default;
+$mml-input-focus-color: mml-color(primary) !default;
+$mml-input-focus-outline: $mml-btn-focus-outline !default;
+$mml-input--dark-bg: $mml--dark-bg !default;
+$mml-input--dark-color: mml-color(white) !default;
+$mml-input--dark-focus-color: mml-color(primary-faded) !default;
+
+// Loader:
+// -----------------------------------------------------------------------------
+$mml-loader-spacer: $mml-spacer !default;
+$mml-loader-font-size: 88% !default;
+
+// Progress:
+// -----------------------------------------------------------------------------
+$mml-progress-width: 1em !default;
+$mml-progress-color: #bbb !default;
+$mml-progress-animation-name: mml-animation-dash !default;
+$mml-progress-animation-time: 1.4s !default;
+$mml-progress-animation-ease: ease-in-out !default;
+
+// MD:
+// -----------------------------------------------------------------------------
+$mml-md-padding-y: 5px !default;
+$mml-md-padding-x: 10px !default;
+$mml-md-bg: $mml-bg !default;
+$mml-md-color: mml-color(black) !default;
+$mml-md-font-size: inherit !default;
+$mml-md-background: mml-color(white) !default;
+$mml-md--dark-bg: $mml--dark-bg !default;
+$mml-md--dark-color: mml-color(white) !default;
+$mml__code-bg: mml-color(grey-900) !default;
+$mml__code-color: #e83e8c !default;
+$mml__code-padding: 2px 4px !default;
+$mml__code-font-size: 87.5% !default;
+$mml__code--dark-bg: mml-color(grey-200) !default;
+$mml__code--dark-color: lighten($mml__code-color, 10%) !default;
+
+// Number:
+// -----------------------------------------------------------------------------
+$mml-number-bg: $mml-bg !default;
+$mml-number--dark-bg: $mml--dark-bg !default;
+$mml-number__btn-width: 32px !default;
+$mml-number__btn-height: $mml-number__btn-width !default;
+$mml-number__btn-icon-size: $mml-number__btn-width / 1.75 !default;
+$mml-number__btn-border-radius: 100% !default;
+$mml-number__btn-margin-y: $mml-spacer-y * 2 !default;
+$mml-number__btn-margin-x: $mml-spacer !default;
+$mml-number__btn-bg: $mml-bg !default;
+$mml-number__btn-hover-bg: $mml-btn--floating-hover-bg !default;
+$mml-number__btn-color: mml-color(black) !default;
+$mml-number__btn-hover-color: mml-color(black) !default;
+$mml-number__btn--dark-bg: $mml--dark-bg !default;
+$mml-number__btn--dark-color: mml-color(white) !default;
+$mml-number__btn--dark-hover-bg: mml-color(grey-300) !default;
+$mml-number__btn--dark-hover-color: mml-color(white) !default;
+$mml-number__count-font-weight: bold !default;
+$mml-number__count-color: mml-color(black) !default;
+$mml-number__count--dark-color: mml-color(white) !default;
+
+// Row (Grid):
+// -----------------------------------------------------------------------------
+$mml-row-bg: $mml-bg !default;
+$mml-row--dark-bg: $mml--dark-bg !default;
+
+// Scheduler:
+// -----------------------------------------------------------------------------
+$mml-scheduler-bg--full: $mml-bg--full !default;
+$mml-scheduler--dark-bg--full: $mml--dark-bg--full !default;
+
+// Success:
+// -----------------------------------------------------------------------------
+$mml-success-spacer: $mml-spacer !default;
+$mml-success-font-size: 88% !default;
+$mml-success-color: mml-color(primary) !default;
+$mml-success--dark-color: mml-color(primary-faded) !default;
+
+// Text:
+// -----------------------------------------------------------------------------
+$mml-text-padding-y: 5px !default;
+$mml-text-padding-x: 10px !default;
+$mml-text-bg: $mml-bg !default;
+$mml-text-color: mml-color(black) !default;
+$mml-text-font-size: inherit !default;
+$mml-text-background: mml-color(white) !default;
+$mml-text--dark-bg: $mml--dark-bg !default;
+$mml-text--dark-color: mml-color(white) !default;

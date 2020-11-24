@@ -7,7 +7,7 @@
 @include mml-component('icon') {
   color: $mml-icon-color;
 
-  @include scr-theme('dark') {
+  @include mml-theme('dark') {
     color: $mml-icon--dark-color;
   }
 }

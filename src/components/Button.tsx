@@ -1,7 +1,7 @@
 import React, { useContext, FC, SyntheticEvent } from 'react';
 import { sanitizeUrl } from '@braintree/sanitize-url';
 
-import { MMLContext, MMLContextType } from '../context';
+import { MMLContext } from '../context';
 
 export type ButtonProps = {
   /** The text to display in the button */
@@ -20,7 +20,7 @@ export type ButtonProps = {
  * A simple Button
  */
 export const Button: FC<ButtonProps> = ({ text, name, value, url = '', variant }) => {
-  const { setValue } = useContext(MMLContext) as MMLContextType;
+  const { setValue } = useContext(MMLContext);
 
   return (
     <button
@@ -31,7 +31,7 @@ export const Button: FC<ButtonProps> = ({ text, name, value, url = '', variant }
           window.location.href = sanitizeUrl(url);
           return event.preventDefault();
         }
-        setValue(name, value);
+        if (name) setValue(name, value);
       }}
     >
       {text}

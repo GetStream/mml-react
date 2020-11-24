@@ -1,0 +1,21 @@
+---
+route: /components/error
+menu: Utility Components
+---
+
+import { Playground, Props } from 'docz';
+import { Error } from './Error.tsx';
+
+# Error
+
+This component is not exposed as `mml` string, it is used internally in other mml components and it can be imported to create your custom ones.
+
+## Properties
+
+<Props of={Error} />
+
+## Basic usage
+
+<Playground>
+  <Error error="Request failed, try again later" />
+</Playground>

@@ -14,13 +14,14 @@
 @import '../components/Loader/themes/messaging';
 @import '../components/MD/themes/messaging';
 @import '../components/Number/themes/messaging';
+@import '../components/Progress/themes/messaging';
 @import '../components/Row/themes/messaging';
 @import '../components/Scheduler/themes/messaging';
 @import '../components/Scroller/themes/messaging';
 @import '../components/Success/themes/messaging';
 @import '../components/Text/themes/messaging';
 
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   .str-chat__attachment-mml {
     &:not(:last-child) {
       margin: 1px 0 3px;

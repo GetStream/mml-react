@@ -6,4 +6,9 @@ export type MMLContextType = {
   setValue: (name: string, value: any) => void;
 };
 
-export const MMLContext = createContext<MMLContextType | {}>({});
+const defaultValue = {
+  submitState: { loading: false, error: '', success: '' },
+  setValue: (name: string, value: string) => console.info('setValue called with: ', name, value),
+};
+
+export const MMLContext = createContext<MMLContextType>(defaultValue);

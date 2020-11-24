@@ -1,0 +1,55 @@
+---
+route: /components/loader
+menu: Utility Components
+---
+
+import { Playground, Props } from 'docz';
+import { Loader } from './Loader.tsx';
+
+# Loader
+
+Loader simply indicates a loading/pending state, you can use it to manage users expectations during async behaviours or waiting times. Internally it uses the `<Progress />` component to show a circular progress indicator.
+
+## Properties
+
+<Props of={Loader} />
+
+## Basic usage
+
+<Playground>
+  <Loader loading={true} />
+</Playground>
+
+## With text
+
+<Playground>
+  <Loader loading={true} text="Please wait..." />
+</Playground>
+
+## Style customization
+
+The progress indicator can be configured either by `props` when you want to customize a _single instance_ of a `<loader>` or in `css`/`scss` when you want to customize the _overall look and feel_ of the component. For example if you want to change the progress size you can either have a css like:
+
+```css
+.mml-progress {
+  width: 18px;
+  height: 18px;
+}
+```
+
+### SCSS variables
+
+If your projects include a `sass` compilation step you might customize the overall look and feel of the component through `scss` variables, here are all the available ones with their default values:
+
+```scss
+// Loader:
+$mml-loader-spacer: $mml-spacer;
+$mml-loader-font-size: 88%;
+
+// Progress:
+$mml-progress-width: 1em;
+$mml-progress-color: #bbb;
+$mml-progress-animation-name: mml-animation-dash; // mml-animation-rotate is also available
+$mml-progress-animation-time: 1.4s;
+$mml-progress-animation-ease: ease-in-out;
+```

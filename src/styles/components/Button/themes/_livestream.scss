@@ -1,4 +1,4 @@
-@include scr-theme-root('livestream') {
+@include mml-theme-root('livestream') {
   @include mml-component('btn') {
     border-radius: $mml-theme-livestream-border-radius; // as .str-chat__message-livestream-actions
     border-color: transparent;
@@ -13,7 +13,7 @@
   }
 }
 
-@include scr-theme-root('livestream.light') {
+@include mml-theme-root('livestream.light') {
   @include mml-component('btn') {
     &:hover {
       background: rgba($mml-btn-hover-bg, 5%);

@@ -5,7 +5,7 @@
   color: $mml-success-color;
   font-size: $mml-success-font-size;
 
-  @include scr-theme('dark') {
+  @include mml-theme('dark') {
     color: $mml-success--dark-color;
   }
 }

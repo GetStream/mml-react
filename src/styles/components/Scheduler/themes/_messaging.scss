@@ -1,21 +1,9 @@
 @include mml-component('scheduler') {
   // scroller has fading edges
   @include mml-component('scroller') {
-    @include scr-theme('messaging') {
-      -webkit-mask-image: -webkit-gradient(
-        linear,
-        left 90%,
-        left bottom,
-        from(rgba(0, 0, 0, 1)),
-        to(rgba(0, 0, 0, 0))
-      );
-      mask-image: gradient(
-        linear,
-        left 90%,
-        left bottom,
-        from(rgba(0, 0, 0, 1)),
-        to(rgba(0, 0, 0, 0))
-      );
+    @include mml-theme('messaging') {
+      -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+      mask-image: gradient(linear, left 90%, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
 
       &:before,
       &:after {
@@ -29,36 +17,20 @@
       }
       &:before {
         top: 0;
-        background-image: linear-gradient(
-          to bottom,
-          $mml-scheduler-bg--full,
-          rgba(255, 255, 255, 0)
-        );
+        background-image: linear-gradient(to bottom, $mml-scheduler-bg--full, rgba(255, 255, 255, 0));
       }
       &:after {
         bottom: 0;
-        background-image: linear-gradient(
-          to top,
-          $mml-scheduler-bg--full,
-          rgba(255, 255, 255, 0)
-        );
+        background-image: linear-gradient(to top, $mml-scheduler-bg--full, rgba(255, 255, 255, 0));
       }
     }
 
-    @include scr-theme('messaging.dark') {
+    @include mml-theme('messaging.dark') {
       &:before {
-        background-image: linear-gradient(
-          to bottom,
-          $mml-scheduler--dark-bg--full,
-          rgba(255, 255, 255, 0)
-        );
+        background-image: linear-gradient(to bottom, $mml-scheduler--dark-bg--full, rgba(255, 255, 255, 0));
       }
       &:after {
-        background-image: linear-gradient(
-          to top,
-          $mml-scheduler--dark-bg--full,
-          rgba(255, 255, 255, 0)
-        );
+        background-image: linear-gradient(to top, $mml-scheduler--dark-bg--full, rgba(255, 255, 255, 0));
       }
     }
   }

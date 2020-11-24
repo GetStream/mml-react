@@ -14,13 +14,14 @@
 @import '../components/Loader/themes/commerce';
 @import '../components/MD/themes/commerce';
 @import '../components/Number/themes/commerce';
+@import '../components/Progress/themes/commerce';
 @import '../components/Row/themes/commerce';
 @import '../components/Scheduler/themes/commerce';
 @import '../components/Scroller/themes/commerce';
 @import '../components/Success/themes/commerce';
 @import '../components/Text/themes/commerce';
 
-@include scr-theme-root('commerce') {
+@include mml-theme-root('commerce') {
   .str-chat__attachment-mml {
     &:not(:last-child) {
       margin: 1px 0 3px;

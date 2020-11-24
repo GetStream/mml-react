@@ -15,7 +15,7 @@
       background: $mml-btn-hover-bg;
     }
 
-    @include scr-theme('dark') {
+    @include mml-theme('dark') {
       background: none;
       &:not(:hover) {
         background: none;

@@ -1,4 +1,4 @@
-@include scr-theme-root('messaging') {
+@include mml-theme-root('messaging') {
   @include mml-component('text') {
     padding: $mml-text-padding-y $mml-text-padding-x;
     border-radius: $mml-border-radius $mml-border-radius $mml-border-radius 0;
@@ -7,7 +7,7 @@
   }
 }
 
-@include scr-theme-root('messaging.dark') {
+@include mml-theme-root('messaging.dark') {
   @include mml-component('text') {
     background: $mml-text--dark-bg;
     border-color: $mml--dark-border-color;
