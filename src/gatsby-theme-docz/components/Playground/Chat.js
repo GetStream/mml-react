@@ -91,6 +91,7 @@ const ComposerInput = styled.input`
 
 const ComposerActionbar = styled.div`
   display: flex;
+  padding-right: ${CHAT_GUTTER_X}px;
 `;
 
 const ComposerBtn = styled.button`
