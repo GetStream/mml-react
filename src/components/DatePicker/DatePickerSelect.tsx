@@ -74,7 +74,7 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
 
   useEffect(() => {
     loadMore();
-  });
+  }, []); // eslint-disable-line
 
   return (
     <Virtuoso
