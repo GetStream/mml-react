@@ -14,9 +14,3 @@
     color: $mml-text--dark-color;
   }
 }
-
-// this overrides some stream-chat-react styling causing unnecessary vertical
-// distancing
-.str-chat__message-simple p.#{$mml-prefix}text {
-  white-space: normal;
-}

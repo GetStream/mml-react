@@ -1,3 +1,26 @@
+// Theme variables
+//
+// by default the values are fro teh default light theme
+// -----------------------------------------------------------------------------
+$mml-theme: (
+  primary-accent: #006cff,
+  app-canvas: #fff,
+  // outside mml container
+  text-high-emphasis: #0e1621,
+  text-mid-emphasis: #8a898e,
+  text-low-emphasis: #b2b1b5,
+  text-self: #fff,
+  // outside mml container
+  text-pressed: #fff,
+  card-bg: #f2f2f2,
+  card-alt-bg: #fff,
+  card-self-bg: #41affc,
+  // outside mml container
+  stroke: #e5e5e6,
+  stroke-low-emphasis: #f2f2f2,
+  shadow: 0px 2px 5px rgba(0, 0, 0, 0.15),
+) !default;
+
 // Generic variables:
 // -----------------------------------------------------------------------------
 $mml-prefix: 'mml-' !default;
@@ -33,13 +56,7 @@ $mml-font-sans: inherit !default; // 'IBM Plex Sans', sans-serif;
 $mml-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 $mml-font-base: $mml-font-sans !default;
 
-// Themes related variables:
-// -----------------------------------------------------------------------------
-$mml-str-chat__message--margin-right: 90px !default;
-$mml-theme-livestream-border-radius: 6px !default;
-$mml-theme-team-margin-y: 10px !default;
-$mml-theme-team-border-color: #404040 !default;
-$mml-theme-team--dark-border-color: rgba(0, 0, 0, 0.4) !default;
+$mml-font-size: 15px !default;
 
 // Button:
 // -----------------------------------------------------------------------------
@@ -48,12 +65,21 @@ $mml-btn-font-weight: bold !default;
 $mml-btn-font-size: inherit !default;
 $mml-btn-text-transform: none !default;
 $mml-btn-padding-y: 11px !default;
-$mml-btn-padding-x: 15px !default;
-$mml-btn-bg: $mml-bg !default;
-$mml-btn-color: mml-color(primary) !default;
-$mml-btn-hover-bg: mml-color(primary) !default;
-$mml-btn-hover-color: mml-color(white) !default;
+$mml-btn-padding-x: 16px !default;
+$mml-btn-border-width: 1px !default;
+$mml-btn-border-style: solid !default;
+$mml-btn-bg: mml-theme(card-bg) !default;
+$mml-btn-border-color: $mml-btn-bg !default;
+$mml-btn-color: mml-theme(primary-accent) !default;
+$mml-btn-hover-bg: $mml-btn-color !default;
+$mml-btn-hover-border-color: $mml-btn-hover-bg !default;
+$mml-btn-hover-color: mml-theme(text-pressed) !default;
+$mml-btn-disabled-bg: $mml-btn-bg !default;
+$mml-btn-disabled-border-color: $mml-btn-disabled-bg !default;
+$mml-btn-disabled-color: mml-theme(text-low-emphasis) !default;
 $mml-btn-focus-outline: none !default;
+
+// TODO:scss remove:
 $mml-btn--dark-bg: mml-color(grey-100) !default;
 $mml-btn--dark-color: mml-color(primary-faded) !default;
 $mml-btn--dark-hover-bg: $mml-btn-hover-bg !default;
@@ -61,29 +87,35 @@ $mml-btn--dark-hover-color: $mml-btn-hover-color !default;
 $mml-btn--floating-border-radius: $mml-border-radius !default;
 $mml-btn--floating-bg: $mml-bg !default;
 $mml-btn--floating-color: mml-color(black) !default;
-$mml-btn--floating-shadow: $mml-shadow !default;
+$mml-btn--floating-shadow: mml-theme(shadow) !default;
 $mml-btn--floating-hover-bg: mml-color(grey-900) !default;
 
 // ButtonList:
 // -----------------------------------------------------------------------------
-$mml-btnlist-bg: $mml-bg !default;
-$mml-btnlist--dark-bg: $mml--dark-bg !default;
+$mml-btnlist-bg: $mml-btn-bg !default;
+$mml-btnlist-max-width: 60% !default;
+
+// TODO:scss remove:
+$mml-str-btnlist--dark-bg: $mml--dark-bg !default;
 
 // Card:
 // -----------------------------------------------------------------------------
-$mml-card-bg: $mml-bg !default;
-$mml-card--dark-bg: $mml--dark-bg !default;
+$mml-card-bg: mml-theme(card-alt-bg) !default;
 $mml-card-header-font-size: 13px !default;
+$mml-card-header-font-weight: bold !default;
 $mml-card-header-padding-y: 13px !default;
 $mml-card-header-padding-x: 13px !default;
 $mml-card-header-opacity: 0.3 !default;
-$mml-card-header-bg: mml-color(grey-800-full) !default;
-$mml-card-header-color: mml-color(black) !default;
-$mml-card-header--dark-opacity: 0.7 !default;
-$mml-card-header--dark-bg: mml-color(grey-200) !default;
-$mml-card-header--dark-color: mml-color(white) !default;
+$mml-card-header-bg: mml-theme(card-bg) !default;
+$mml-card-header-color: mml-theme(text-mid-emphasis) !default;
 $mml-card-body-font-size: 14px !default;
-$mml-card-body-color: mml-color(black) !default;
+$mml-card-body-color: mml-theme(text-high-emphasis) !default;
+
+// TODO:scss remove:
+$mml-card--dark-bg: $mml--dark-bg !default;
+$mml-card-header--dark-color: mml-color(white) !default;
+$mml-card-header--dark-bg: mml-color(grey-200) !default;
+$mml-card-header--dark-opacity: 0.7 !default;
 $mml-card-body--dark-color: mml-color(white) !default;
 
 // Carousel:
@@ -113,7 +145,9 @@ $mml-error-color: rgb(187, 81, 81) !default;
 
 // Icon:
 // -----------------------------------------------------------------------------
-$mml-icon-color: mml-color(black) !default;
+$mml-icon-color: inherit !default;
+
+// TODO:scss remove:
 $mml-icon--dark-color: mml-color(white) !default;
 
 // Image:
@@ -188,27 +222,34 @@ $mml-number__count--dark-color: mml-color(white) !default;
 // Row (Grid):
 // -----------------------------------------------------------------------------
 $mml-row-bg: $mml-bg !default;
+
+// TODO:scss remove:
 $mml-row--dark-bg: $mml--dark-bg !default;
 
 // Scheduler:
 // -----------------------------------------------------------------------------
 $mml-scheduler-bg--full: $mml-bg--full !default;
+
+// TODO:scss remove:
 $mml-scheduler--dark-bg--full: $mml--dark-bg--full !default;
 
 // Success:
 // -----------------------------------------------------------------------------
 $mml-success-spacer: $mml-spacer !default;
 $mml-success-font-size: 88% !default;
-$mml-success-color: mml-color(primary) !default;
+$mml-success-color: mml-theme(primary-accent) !default;
+
+// TODO:scss remove:
 $mml-success--dark-color: mml-color(primary-faded) !default;
 
 // Text:
 // -----------------------------------------------------------------------------
-$mml-text-padding-y: 5px !default;
-$mml-text-padding-x: 10px !default;
-$mml-text-bg: $mml-bg !default;
-$mml-text-color: mml-color(black) !default;
+$mml-text-padding-y: 6px !default;
+$mml-text-padding-x: 12px !default;
+$mml-text-bg: mml-theme(card-bg) !default;
+$mml-text-color: mml-theme(text-high-emphasis) !default;
 $mml-text-font-size: inherit !default;
-$mml-text-background: mml-color(white) !default;
+
+// TODO:scss remove:
 $mml-text--dark-bg: $mml--dark-bg !default;
 $mml-text--dark-color: mml-color(white) !default;

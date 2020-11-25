@@ -4,30 +4,24 @@
   margin: 0;
   color: $mml-btn-color;
   background: $mml-btn-bg;
+  border-color: $mml-btn-border-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $mml-btn-hover-color;
     background: $mml-btn-hover-bg;
+    border-color: $mml-btn-hover-border-color;
   }
 
-  @include mml-theme('dark') {
-    color: $mml-btn--dark-color;
-    &:hover {
-      color: $mml-btn--dark-hover-color;
-    }
+  &[disabled] {
+    color: $mml-btn-disabled-color;
+    background: $mml-btn-disabled-bg;
+    border-color: $mml-btn-disabled-border-color;
   }
 }
 
 @include mml-component('btn', 'floating') {
   width: auto;
   border-radius: $mml-btn--floating-border-radius;
-  background: $mml-btn--floating-bg;
-  color: $mml-btn--floating-color;
-  border: 0;
   box-shadow: $mml-btn--floating-shadow;
-  font-weight: normal;
-
-  &:hover {
-    background: $mml-btn--floating-hover-bg;
-  }
 }

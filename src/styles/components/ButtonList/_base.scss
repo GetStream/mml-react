@@ -3,6 +3,7 @@
   flex-direction: column;
   overflow: hidden;
   background: $mml-btnlist-bg;
+  max-width: $mml-btnlist-max-width;
 
   @include mml-component('btn') {
     background: none;
@@ -10,16 +11,11 @@
     border-width: 0 0 $mml-border-width 0;
     border-radius: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $mml-btn-hover-color;
+      border-color: $mml-btn-hover-border-color;
       background: $mml-btn-hover-bg;
-    }
-
-    @include mml-theme('dark') {
-      background: none;
-      &:not(:hover) {
-        background: none;
-      }
     }
   }
 }
@@ -28,6 +24,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background: none;
 
   @include mml-component('btn') {
     border-radius: $mml-btn--floating-border-radius;

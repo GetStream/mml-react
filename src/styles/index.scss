@@ -22,3 +22,18 @@
 @import 'components/Scheduler/base';
 @import 'components/Success/base';
 @import 'components/Text/base';
+
+// make CSS variables available to JS
+:export {
+  @each $name, $value in $mml-theme {
+    #{mml-camelcase($name)}: #{$value};
+  }
+}
+
+// use CSS variables for easy customisation, fallback provided by
+// `postcss-custom-properties` during compilation step
+:root {
+  @each $name, $value in $mml-theme {
+    --mml-#{$name}: #{$value};
+  }
+}
