@@ -28,7 +28,7 @@ const Wrapper = ({ children }) => {
   return (
     <ThemeContext.Provider value={{ theme: themeData.vars }}>
       <ThemeProvider theme={themeData.vars}>
-        <style id={`theme-${theme}-${tone}`}>{themeData.css}</style>
+        {/* <style id={`theme-${theme}-${tone}`}>{themeData.css}</style> */}
         <ThemeBar>
           <ThemeSelect label="Choose MML theme:" options={THEMES} value={theme.value} onChange={changeTheme} />
           {THEMES_TONES.map((tone) => (
