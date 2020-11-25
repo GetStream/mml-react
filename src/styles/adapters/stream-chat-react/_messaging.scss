@@ -148,11 +148,11 @@
       }
       &:before {
         top: 0;
-        background-image: linear-gradient(to bottom, $mml-scheduler-bg--full, rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to bottom, $mml-str-scheduler-bg--full, rgba(255, 255, 255, 0));
       }
       &:after {
         bottom: 0;
-        background-image: linear-gradient(to top, $mml-scheduler-bg--full, rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to top, $mml-str-scheduler-bg--full, rgba(255, 255, 255, 0));
       }
     }
   }
@@ -176,59 +176,59 @@
   /// Component: btn
   /// __________________________________________________________________________
   @include mml-component('btn') {
-    background: $mml-btn--dark-bg;
-    border-color: $mml--dark-border-color;
+    background: $mml-str-btn--dark-bg;
+    border-color: $mml-str--dark-border-color;
 
     &:hover {
-      background: $mml-btn--dark-hover-bg;
+      background: $mml-str-btn--dark-hover-bg;
     }
   }
 
   /// Component: btnlist
   /// __________________________________________________________________________
   @include mml-component('btnlist') {
-    border-color: $mml--dark-border-color;
+    border-color: $mml-str--dark-border-color;
     background: $mml-str-btnlist--dark-bg;
 
     @include mml-component('btn') {
-      border-color: $mml--dark-border-color;
+      border-color: $mml-str--dark-border-color;
     }
   }
 
   /// Component: card
   /// __________________________________________________________________________
   @include mml-component('card') {
-    background: $mml-card--dark-bg;
-    border-color: $mml--dark-border-color;
+    background: $mml-str-card--dark-bg;
+    border-color: $mml-str--dark-border-color;
   }
 
   /// Component: card-header
   /// __________________________________________________________________________
   @include mml-component('card-header') {
-    border-color: $mml--dark-border-color;
-    background: $mml-card-header--dark-bg;
+    border-color: $mml-str--dark-border-color;
+    background: $mml-str-card-header--dark-bg;
   }
 
   /// Component: md
   /// __________________________________________________________________________
   @include mml-component('md') {
-    background: $mml-md--dark-bg;
-    color: $mml-md--dark-color;
-    border-color: $mml--dark-border-color;
+    background: $mml-str-md--dark-bg;
+    color: $mml-str-md--dark-color;
+    border-color: $mml-str--dark-border-color;
   }
 
   /// Component: number
   /// __________________________________________________________________________
   @include mml-component('number') {
-    border-color: $mml--dark-border-color;
-    background: $mml-number--dark-bg;
+    border-color: $mml-str--dark-border-color;
+    background: $mml-str-number--dark-bg;
   }
 
   /// Component: row
   /// __________________________________________________________________________
   @include mml-component('row') {
-    background: $mml-row--dark-bg;
-    border-color: $mml--dark-border-color;
+    background: $mml-str-row--dark-bg;
+    border-color: $mml-str--dark-border-color;
 
     @include mml-component('text') {
       border: 0;
@@ -242,10 +242,10 @@
     // datepicker has fading edges
     @include mml-component('datepicker__select') {
       &:before {
-        background-image: linear-gradient(to bottom, $mml-scheduler--dark-bg--full, rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to bottom, $mml-str-scheduler--dark-bg, rgba(255, 255, 255, 0));
       }
       &:after {
-        background-image: linear-gradient(to top, $mml-scheduler--dark-bg--full, rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to top, $mml-str-scheduler--dark-bg, rgba(255, 255, 255, 0));
       }
     }
   }
@@ -253,7 +253,7 @@
   /// Component: text
   /// __________________________________________________________________________
   @include mml-component('text') {
-    background: $mml-text--dark-bg;
-    border-color: $mml--dark-border-color;
+    background: $mml-str-text--dark-bg;
+    border-color: $mml-str--dark-border-color;
   }
 }

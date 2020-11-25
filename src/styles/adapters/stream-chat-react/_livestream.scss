@@ -17,10 +17,6 @@ $mml-theme-livestream-border-radius: 6px !default;
 
   @include mml-component('btn', 'floating') {
     border-radius: $mml-btn--floating-border-radius;
-
-    &:hover {
-      background: $mml-btn--floating-hover-bg;
-    }
   }
 
   /// Component: btnlist

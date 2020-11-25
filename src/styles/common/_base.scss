@@ -1,5 +1,6 @@
-// space for some cross-theme base styling...
+// space for some basic styling
 
+// most wrapper container
 .mml-container {
   font-family: $mml-font-base;
 
@@ -8,6 +9,7 @@
   }
 }
 
+// flexible inner container
 .mml-wrap {
   display: flex;
   flex-direction: column;

@@ -1,7 +1,3 @@
-@function mml-color($key: 'black') {
-  @return map-get($mml-colors, $key);
-}
-
 /// Get mml theme value
 @function mml-theme($key: 'primary-accent') {
   @return var(--mml-#{$key});
