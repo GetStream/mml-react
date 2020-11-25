@@ -49,6 +49,7 @@ const Messages = styled.div``;
 const Message = styled.div``;
 
 const Time = styled.div`
+  margin-top: 4px;
   padding-left: 12px;
   font-size: 11px;
   color: ${(props) => props.theme.textMidEmphasis};
@@ -122,16 +123,16 @@ export const Chat = ({ children }) => {
         {CONVERSATION.map((thread, idx) => {
           const user = USERS[thread.user] || USERS[0];
           return (
-            <Thread key={`thread${idx}`}>
+            <Thread key={`thread${idx}`} className="mml-container">
               <Author>{user.name}</Author>
-              <Messages>
+              <Messages className="mml-wrap">
                 {thread.messages.map((msg, msgIdx) => (
                   <Message key={`msg${idx}${msgIdx}`} className="mml-text">
                     {msg.text}
                   </Message>
                 ))}
-                <Time>{format(new Date(), 'h:m a')}</Time>
               </Messages>
+              <Time>{format(new Date(), 'h:m a')}</Time>
               <Avatar>{user.shortName}</Avatar>
             </Thread>
           );
