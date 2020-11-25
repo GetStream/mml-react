@@ -82,11 +82,11 @@ Array [
 `;
 
 exports[`mml name and simple text field 4`] = `
-<p
+<div
   className="mml-text"
 >
   hi
-</p>
+</div>
 `;
 
 exports[`mml with button 1`] = `
@@ -315,15 +315,17 @@ Array [
 
 exports[`mml with button 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     It looks like your credit card isn't activated yet, activate it now:
-  </p>,
+  </div>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Activate Card
   </button>,
@@ -623,11 +625,11 @@ exports[`simple carousel 4`] = `
                 }
               }
             >
-              <p
+              <div
                 className="mml-text"
               >
                 a
-              </p>
+              </div>
             </div>
           </li>
           <li
@@ -654,11 +656,11 @@ exports[`simple carousel 4`] = `
                 }
               }
             >
-              <p
+              <div
                 className="mml-text"
               >
                 b
-              </p>
+              </div>
             </div>
           </li>
         </ul>
@@ -767,6 +769,9 @@ Array [
 exports[`simple input 4`] = `
 <input
   className="mml-input"
+  name="name"
   onChange={[Function]}
+  placeholder=""
+  value="John"
 />
 `;

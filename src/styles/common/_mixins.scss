@@ -1,9 +1,9 @@
-//
-// MML component
-//
-// Automatically scope the class name
-//
-// -----------------------------------------------------------------------------
+///
+/// MML component
+///
+/// Automatically scope the class name
+///
+/// __________________________________________________________________________--
 @mixin mml-component($name, $variant: false) {
   @if $variant {
     .#{$mml-prefix}#{to-lower-case($name)}.#{$mml-prefix}-#{to-lower-case($variant)} {
@@ -16,31 +16,38 @@
   }
 }
 
-//
-// MML theme
-//
-// Automatically scope to the class name of a specific stream-chat-react theme
-//
-// -----------------------------------------------------------------------------
-@mixin mml-theme($theme: '') {
-  .str-chat.#{$theme} & {
+///
+/// MML me
+///
+/// Automatically scope the class name to a message marked as "mine", which it
+/// is by default shown on the right hand side
+///
+/// __________________________________________________________________________--
+@mixin mml-me($theme: '') {
+  #{$mml-selector-wrapper-message-self} & {
     @content;
   }
 }
 
-@mixin mml-theme-root($theme: '') {
+///
+/// MML theme
+///
+/// Automatically scope to the class name of a specific stream-chat-react theme
+///
+/// __________________________________________________________________________--
+@mixin mml-stream-chat-react($theme: '') {
   .str-chat.#{$theme} {
     @content;
   }
 }
 
-//
-// Button base
-//
-// Apply a default button styling based on the `$mml-btn-` SCSS variables
-// globally set.
-//
-// -----------------------------------------------------------------------------
+///
+/// Button base
+///
+/// Apply a default button styling based on the `$mml-btn-` SCSS variables
+/// globally set.
+///
+/// __________________________________________________________________________--
 @mixin mml-button-base() {
   display: inline-block;
   vertical-align: middle;
@@ -48,9 +55,9 @@
   text-decoration: none;
   -webkit-appearance: none;
   padding: $mml-btn-padding-y $mml-btn-padding-x;
-  border-style: $mml-border-style;
-  border-color: $mml-border-color;
-  border-width: $mml-border-width;
+  border-style: $mml-btn-border-style;
+  border-width: $mml-btn-border-width;
+  border-color: $mml-btn-border-color;
   border-radius: 0;
   font-family: $mml-btn-font-family;
   font-weight: $mml-btn-font-weight;
@@ -69,10 +76,10 @@
   }
 }
 
-//
-// Icon font
-//
-// -----------------------------------------------------------------------------
+///
+/// Icon font
+///
+/// __________________________________________________________________________--
 @mixin mml-icon($fontName: 'Material Icons') {
   font-family: $fontName;
   font-weight: normal;
@@ -89,10 +96,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
-//
-// Grid mixins
-//
-// -----------------------------------------------------------------------------
+///
+/// Grid mixins
+///
+/// __________________________________________________________________________--
 @mixin mml-row($gutter: $mml-grid-gutter) {
   display: flex;
   flex-wrap: wrap;

@@ -2,24 +2,32 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
+  border: $mml-border-width $mml-border-style $mml-btnlist-border-color;
   background: $mml-btnlist-bg;
 
+  @include mml-me() {
+    max-width: $mml-btnlist-max-width;
+    margin-left: auto;
+  }
+
   @include mml-component('btn') {
-    background: none;
+    width: 100%;
     margin: 0;
     border-width: 0 0 $mml-border-width 0;
     border-radius: 0;
+    border-color: $mml-btnlist-border-color;
+    background: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $mml-btn-hover-color;
+      border-color: $mml-btn-hover-border-color;
       background: $mml-btn-hover-bg;
     }
 
-    @include mml-theme('dark') {
-      background: none;
-      &:not(:hover) {
-        background: none;
-      }
+    &:last-child {
+      border-width: 0;
     }
   }
 }
@@ -28,6 +36,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background: none;
+  border: 0;
+  max-width: none;
 
   @include mml-component('btn') {
     border-radius: $mml-btn--floating-border-radius;

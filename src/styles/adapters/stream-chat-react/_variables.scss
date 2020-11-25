@@ -1,0 +1,44 @@
+$mml-str-colors: (
+  primary: #006cff,
+  primary-faded: #bcd8ff,
+  white: white,
+  black: black,
+  grey-900: rgba(0, 0, 0, 0.08),
+  grey-900-full: #f0f0f0,
+  grey-800: rgba(0, 0, 0, 0.03),
+  grey-800-full: #f7f7f7,
+  grey-300: rgba(255, 255, 255, 0.1),
+  grey-200: rgba(255, 255, 255, 0.08),
+  grey-100-full: #34373a,
+  grey-100: rgba(255, 255, 255, 0.05),
+) !default;
+
+@function mml-str-color($key: 'black') {
+  @return map-get($mml-str-colors, $key);
+}
+
+$mml-str-chat__message--margin-right: 90px !default;
+$mml-str--dark-border-color: mml-str-color(grey-100) !default;
+$mml-str-spacer: 10px !default;
+$mml-str-spacer-y: 2px !default;
+$mml-str-bg: transparent !default;
+$mml-str-bg--full: mml-str-color(white) !default;
+$mml-str--dark-bg: mml-str-color(grey-100) !default;
+$mml-str--dark-bg--full: mml-str-color(grey-100-full) !default;
+
+$mml-str-btn--dark-bg: mml-str-color(grey-100) !default;
+$mml-str-btn--dark-color: mml-str-color(primary-faded) !default;
+$mml-str-btn--dark-hover-bg: $mml-btn-hover-bg !default;
+$mml-str-btn--dark-hover-color: $mml-btn-hover-color !default;
+$mml-str-card-header--dark-color: mml-str-color(white) !default;
+$mml-str-card-header--dark-bg: mml-str-color(grey-200) !default;
+$mml-str-card-header--dark-opacity: 0.7 !default;
+$mml-str-btnlist--dark-bg: $mml-str--dark-bg !default;
+$mml-str-md--dark-bg: $mml-str--dark-bg !default;
+$mml-str-md--dark-color: mml-str-color(white) !default;
+$mml-str-number--dark-bg: $mml-str--dark-bg !default;
+$mml-str-row--dark-bg: $mml-str--dark-bg !default;
+$mml-str-scheduler-bg--full: mml-str-color(white) !default;
+$mml-str-scheduler--dark-bg: mml-str-color(gray-100-full) !default;
+$mml-str-text--dark-bg: $mml-str--dark-bg !default;
+$mml-str-text--dark-color: mml-str-color(white) !default;

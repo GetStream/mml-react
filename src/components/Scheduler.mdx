@@ -3,4 +3,47 @@ route: /components/scheduler
 menu: Components
 ---
 
+import { Playground, Props } from 'docz';
+import { Scheduler } from './Scheduler.tsx';
+import { Text } from './Text.tsx';
+import { Button } from './Button.tsx';
+
 # Scheduler
+
+Datetime picker with availability using [iCal](https://icalendar.org/).
+
+## Properties
+
+<Props of={Scheduler} />
+
+## MML string
+
+```xml
+<mml name="massage">
+  <text>When would you like to schedule your massage?</text>
+	<scheduler name="appointment" duration="30" interval="30" selected="2020-11-16T10:30:00.000Z"/>
+  <button name="action" value="reserve">Reserve</button>
+</mml>
+```
+
+## Basic usage
+
+<Playground>
+  <Text text="When would you like to schedule your massage?" />
+  <Scheduler name="scheduler" selected="2021-11-16T10:30:00.000Z" />
+  <Button text="Reserve" name="action" value="reserve" />
+</Playground>
+
+## With ICal availability URL
+
+<Playground>
+  <Text text="When would you like to schedule your massage?" />
+  <Scheduler
+    name="scheduler"
+    selected="2021-11-16T10:30:00.000Z"
+    icalAvailability="https://srv-store1.gofile.io/download/OSUFP4/netherlands.ics"
+    duration={30}
+    interval={30}
+  />
+  <Button text="Reserve" name="action" value="reserve" />
+</Playground>

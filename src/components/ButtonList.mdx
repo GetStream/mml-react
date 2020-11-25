@@ -5,7 +5,6 @@ menu: Components
 
 import { Playground, Props } from 'docz';
 import { ButtonList } from './ButtonList.tsx';
-import { Button } from './Button.tsx';
 
 # ButtonList
 
@@ -15,6 +14,37 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
 
 <Props of={ButtonList} />
 
+## Basic usage
+
+<Playground>
+  <mml>
+    <button_list>
+      <button name="side" value="yes">
+        Yes!
+      </button>
+      <button name="side" value="no">
+        No, thanks
+      </button>
+    </button_list>
+  </mml>
+</Playground>
+
+## With `floating` variant
+
+<Playground>
+  <mml>
+    <button_list variant="floating">
+      <button variant="floating" name="side" value="yes">
+        Yes!
+      </button>
+      <button variant="floating" name="side" value="no">
+        No, thanks
+      </button>
+    </button_list>
+  </mml>
+</Playground>
+
+<!--
 ## MML string
 
 ```xml
@@ -26,15 +56,12 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
 </mml>
 ```
 
-## Basic usage
-
 <Playground>
   <ButtonList>
     <Button text="Yes!" name="side" value="yes" />
     <Button text="No, thanks" name="side" value="no" />
   </ButtonList>
 </Playground>
-
 ## With `floating` variant
 
 <Playground>
@@ -43,3 +70,4 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
     <Button variant="floating" text="No, thanks" name="side" value="no" />
   </ButtonList>
 </Playground>
+ -->

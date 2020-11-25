@@ -271,8 +271,10 @@ Array [
     text="When would you like to schedule your massage?"
   />,
   <Scheduler
-    duration="30"
-    interval="30"
+    duration={30}
+    fullDay={false}
+    interval={30}
+    name="massage_appointment"
     selected="2020-11-16T10:30:00.000Z"
   />,
   <Button
@@ -285,11 +287,11 @@ Array [
 
 exports[`examples Advanced Scheduling example should work 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     When would you like to schedule your massage?
-  </p>,
+  </div>,
   <div
     className="mml-card mml-scheduler"
   >
@@ -315,112 +317,119 @@ Array [
         className="mml-datepicker"
       >
         <input
+          name="massage_appointment"
           type="hidden"
           value="November 16, 2020 10:30 AM"
         />
         <div
-          className="mml-datepicker__date"
+          className="mml-datepicker__select mml-datepicker__date"
         >
           <div
-            className="mml-scroller"
-            onScroll={[Function]}
+            style={
+              Object {
+                "WebkitOverflowScrolling": "touch",
+                "height": "100%",
+                "outline": "none",
+                "overflowY": "auto",
+                "position": "relative",
+              }
+            }
             tabIndex={0}
           >
             <div
-              className="mml-scroller__inner"
+              style={
+                Object {
+                  "height": "100%",
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
             >
               <div
                 style={
                   Object {
-                    "height": "100%",
-                    "position": "absolute",
-                    "top": 0,
-                    "width": "100%",
+                    "marginTop": "0px",
                   }
                 }
               >
-                <div
-                  style={
-                    Object {
-                      "marginTop": "0px",
-                    }
-                  }
-                >
-                  <footer>
-                    <div
-                      style={
-                        Object {
-                          "padding": "2rem",
-                        }
+                <footer>
+                  <div
+                    style={
+                      Object {
+                        "padding": "2rem",
                       }
-                    />
-                  </footer>
-                </div>
+                    }
+                  />
+                </footer>
               </div>
-              <div
-                style={
-                  Object {
-                    "height": "0px",
-                    "position": "absolute",
-                    "top": 0,
-                  }
+            </div>
+            <div
+              style={
+                Object {
+                  "height": "0px",
+                  "position": "absolute",
+                  "top": 0,
                 }
-              >
-                 
-              </div>
+              }
+            >
+               
             </div>
           </div>
         </div>
         <div
-          className="mml-datepicker__time"
+          className="mml-datepicker__select mml-datepicker__time"
         >
           <div
-            className="mml-scroller"
-            onScroll={[Function]}
+            style={
+              Object {
+                "WebkitOverflowScrolling": "touch",
+                "height": "100%",
+                "outline": "none",
+                "overflowY": "auto",
+                "position": "relative",
+              }
+            }
             tabIndex={0}
           >
             <div
-              className="mml-scroller__inner"
+              style={
+                Object {
+                  "height": "100%",
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
             >
               <div
                 style={
                   Object {
-                    "height": "100%",
-                    "position": "absolute",
-                    "top": 0,
-                    "width": "100%",
+                    "marginTop": "0px",
                   }
                 }
               >
-                <div
-                  style={
-                    Object {
-                      "marginTop": "0px",
-                    }
-                  }
-                >
-                  <footer>
-                    <div
-                      style={
-                        Object {
-                          "padding": "2rem",
-                        }
+                <footer>
+                  <div
+                    style={
+                      Object {
+                        "padding": "2rem",
                       }
-                    />
-                  </footer>
-                </div>
+                    }
+                  />
+                </footer>
               </div>
-              <div
-                style={
-                  Object {
-                    "height": "0px",
-                    "position": "absolute",
-                    "top": 0,
-                  }
+            </div>
+            <div
+              style={
+                Object {
+                  "height": "0px",
+                  "position": "absolute",
+                  "top": 0,
                 }
-              >
-                 
-              </div>
+              }
+            >
+               
             </div>
           </div>
         </div>
@@ -429,8 +438,10 @@ Array [
   </div>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="reserve"
   >
     Reserve
   </button>,
@@ -899,15 +910,19 @@ Array [
   >
     <button
       className="mml-btn  mml--floating"
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="yes"
     >
       Yes!
     </button>
     <button
       className="mml-btn  mml--floating"
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="no"
     >
       No, thanks
     </button>
@@ -1317,8 +1332,10 @@ Array [
   </div>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Regular button
   </button>,
@@ -1335,8 +1352,10 @@ Array [
   </div>,
   <button
     className="mml-btn  mml--floating"
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Floating button
   </button>,
@@ -1540,11 +1559,11 @@ Array [
 
 exports[`examples Date Confirmation example should work 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     Your massage appointment has been confirmed!
-  </p>,
+  </div>,
   <div
     className="mml-card mml-add-to-calendar "
   >
@@ -3895,11 +3914,11 @@ Array [
                   src="https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
                   title=""
                 />
-                <p
+                <div
                   className="mml-text"
                 >
                   Barricade Adventure HD Front Bumper
-                </p>
+                </div>
                 <div
                   className="mml-md"
                 >
@@ -3948,11 +3967,11 @@ Array [
                   src="https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0"
                   title=""
                 />
-                <p
+                <div
                   className="mml-text"
                 >
                   Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar
-                </p>
+                </div>
                 <div
                   className="mml-md"
                 >
@@ -4001,11 +4020,11 @@ Array [
                   src="https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
                   title=""
                 />
-                <p
+                <div
                   className="mml-text"
                 >
                   Barricade HD Front Bumper w/ 20 in. Light Bar
-                </p>
+                </div>
                 <div
                   className="mml-md"
                 >
@@ -4054,11 +4073,11 @@ Array [
                   src="https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0"
                   title=""
                 />
-                <p
+                <div
                   className="mml-text"
                 >
                   RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate
-                </p>
+                </div>
                 <div
                   className="mml-md"
                 >
@@ -4713,39 +4732,47 @@ Array [
 
 exports[`examples Gigs example should work 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?
-  </p>,
+  </div>,
   <div
     className="mml-btnlist "
   >
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="9:30"
     >
       9:30
     </button>
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="10:00"
     >
       10:00
     </button>
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="11:30"
     >
       11:30
     </button>
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="nope"
     >
       Nope
     </button>
@@ -5224,34 +5251,40 @@ Array [
 
 exports[`examples Out of stock example should work 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     
   Sorry we're currently out of fries, what would you like as a side?
   
-  </p>,
+  </div>,
   <div
     className="mml-btnlist "
   >
     <button
       className="mml-btn "
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="salad"
     >
       Salad
     </button>
     <button
       className="mml-btn "
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="potatoes"
     >
       Baked Potatoes
     </button>
     <button
       className="mml-btn "
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="fried_pickles"
     >
       Fried Pickles
     </button>
@@ -5588,11 +5621,11 @@ Array [
 
 exports[`examples Simple Counts example should work 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     How many donuts do you want for lunch?
-  </p>,
+  </div>,
   <img
     alt=""
     className="mml-image"
@@ -5602,6 +5635,11 @@ Array [
   <div
     className="mml-number"
   >
+    <input
+      name="donuts"
+      type="hidden"
+      value={3}
+    />
     <span
       className="mml-number__btn mml-number__btn--dec"
       onClick={[Function]}
@@ -5615,7 +5653,7 @@ Array [
     <span
       className="mml-number__count"
     >
-      0
+      3
     </span>
     <span
       className="mml-number__btn mml-number__btn--inc"
@@ -5630,8 +5668,10 @@ Array [
   </div>,
   <button
     className="mml-btn "
+    name="confirm"
     onClick={[Function]}
     type="submit"
+    value="Confirm"
   >
     Confirm
   </button>,
@@ -5864,15 +5904,17 @@ Array [
 
 exports[`examples Simple Support example should work 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     It looks like your credit card isn't activated yet, activate it now:
-  </p>,
+  </div>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Activate Card
   </button>,
@@ -6168,12 +6210,17 @@ Array [
   </div>,
   <input
     className="mml-input"
+    name="email"
     onChange={[Function]}
+    placeholder=""
+    value=""
   />,
   <button
     className="mml-btn "
+    name="send"
     onClick={[Function]}
     type="submit"
+    value="submit"
   >
     Submit
   </button>,
@@ -7294,31 +7341,31 @@ Array [
 
 exports[`examples Support and Rich Data example should work 4`] = `
 Array [
-  <p
+  <div
     className="mml-text"
   >
     Did you authorize these last 3 transactions on your account?
-  </p>,
+  </div>,
   <div
     className="mml-row"
   >
     <div
       className="mml-col-4 mml-align-left"
     >
-      <p
+      <div
         className="mml-text"
       >
         $15
-      </p>
+      </div>
     </div>
     <div
       className="mml-col-8 mml-align-left"
     >
-      <p
+      <div
         className="mml-text"
       >
         Oren's Hummus
-      </p>
+      </div>
     </div>
   </div>,
   <div
@@ -7327,20 +7374,20 @@ Array [
     <div
       className="mml-col-4 mml-align-left"
     >
-      <p
+      <div
         className="mml-text"
       >
         $1000
-      </p>
+      </div>
     </div>
     <div
       className="mml-col-8 mml-align-left"
     >
-      <p
+      <div
         className="mml-text"
       >
         Apple monitor stand
-      </p>
+      </div>
     </div>
   </div>,
   <div
@@ -7349,33 +7396,37 @@ Array [
     <div
       className="mml-col-4 mml-align-left"
     >
-      <p
+      <div
         className="mml-text"
       >
         $60
-      </p>
+      </div>
     </div>
     <div
       className="mml-col-8 mml-align-left"
     >
-      <p
+      <div
         className="mml-text"
       >
         Epic Games Skins
-      </p>
+      </div>
     </div>
   </div>,
   <button
     className="mml-btn "
+    name="authorized"
     onClick={[Function]}
     type="submit"
+    value="yes"
   >
     Yes
   </button>,
   <button
     className="mml-btn "
+    name="authorized"
     onClick={[Function]}
     type="submit"
+    value="yes"
   >
     No
   </button>,

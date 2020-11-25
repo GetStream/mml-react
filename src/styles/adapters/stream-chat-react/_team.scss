@@ -1,0 +1,191 @@
+@import 'variables';
+
+$mml-theme-team-border-color: #404040 !default;
+$mml-theme-team--dark-border-color: rgba(0, 0, 0, 0.4) !default;
+$mml-theme-team-margin-y: 10px !default;
+
+////////////////////////////////////////////////////////////////////////////////
+///
+/// stream-chat-react theme: team
+///
+////////////////////////////////////////////////////////////////////////////////
+@include mml-stream-chat-react('team') {
+  /// Component: add-to-calendar
+  /// __________________________________________________________________________
+  @include mml-component('add-to-calendar') {
+    @include mml-component('btnlist') {
+      margin-top: 0;
+    }
+  }
+
+  /// Component: btn
+  /// __________________________________________________________________________
+  @include mml-component('btn') {
+    margin: $mml-theme-team-margin-y 0;
+  }
+
+  /// Component: btnlist
+  /// __________________________________________________________________________
+  @include mml-component('btnlist') {
+    margin: $mml-theme-team-margin-y 0 0;
+    border-left: $mml-border;
+
+    @include mml-component('btn') {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @include mml-component('btn', 'floating') {
+      margin-bottom: 6px; // leave space to the floating shadows
+    }
+  }
+
+  /// Component: card-header
+  /// __________________________________________________________________________
+  @include mml-component('card-header') {
+    display: flex;
+    align-items: center;
+    padding: $mml-card-header-padding-y $mml-card-header-padding-x;
+    font-size: $mml-card-header-font-size;
+    @include mml-stream-chat-react('dark') {
+      color: $mml-str-card-header--dark-color;
+    }
+
+    @include mml-component('icon') {
+      opacity: $mml-card-header-opacity;
+
+      @include mml-stream-chat-react('dark') {
+        opacity: $mml-str-card-header--dark-opacity;
+      }
+    }
+
+    &__text {
+      font-weight: bold;
+      padding-left: $mml-card-header-padding-x;
+      opacity: $mml-card-header-opacity;
+
+      @include mml-stream-chat-react('dark') {
+        opacity: $mml-str-card-header--dark-opacity;
+      }
+    }
+  }
+
+  /// Component: carousel-item
+  /// __________________________________________________________________________
+  @include mml-component('carousel-item') {
+    @include mml-component('image') {
+      margin-bottom: $mml-theme-team-margin-y;
+    }
+
+    @include mml-component('btn') {
+      margin-top: $mml-theme-team-margin-y;
+    }
+  }
+
+  .str-chat__message-team:hover {
+    @include mml-component('carousel-item') {
+      @include mml-component('text') {
+        background: transparent;
+      }
+    }
+  }
+
+  /// Component: input
+  /// __________________________________________________________________________
+  @include mml-component('input') {
+    margin-top: $mml-theme-team-margin-y;
+  }
+
+  /// Component: md
+  /// __________________________________________________________________________
+  @include mml-component('md') {
+    padding: 0 0 0 $mml-text-padding-x;
+  }
+
+  /// Component: row
+  /// __________________________________________________________________________
+  @include mml-component('row') {
+    border-left: $mml-border;
+    color: $mml-theme-team-border-color;
+    background: $mml-text-bg;
+    margin-top: $mml-theme-team-margin-y;
+
+    + .#{$mml-prefix}row {
+      margin-top: 0;
+    }
+
+    @include mml-component('text') {
+      border: 0;
+    }
+  }
+
+  /// Component: scheduler
+  /// __________________________________________________________________________
+  @include mml-component('scheduler') {
+    margin-bottom: $mml-theme-team-margin-y;
+  }
+
+  /// Component: text
+  /// __________________________________________________________________________
+  @include mml-component('text') {
+    padding: 0 0 0 $mml-text-padding-x;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///
+/// stream-chat-react theme: team.dark
+///
+////////////////////////////////////////////////////////////////////////////////
+@include mml-stream-chat-react('team.dark') {
+  /// Component: btn
+  /// __________________________________________________________________________
+  @include mml-component('btn') {
+    border-color: $mml-theme-team--dark-border-color;
+  }
+
+  /// Component: btnlist
+  /// __________________________________________________________________________
+  @include mml-component('btnlist') {
+    border-left-color: $mml-theme-team--dark-border-color;
+  }
+
+  /// Component: text
+  /// __________________________________________________________________________
+  @include mml-component('text') {
+    border-color: $mml-theme-team--dark-border-color;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///
+/// stream-chat-react theme: team.light
+///
+////////////////////////////////////////////////////////////////////////////////
+@include mml-stream-chat-react('team.light') {
+  /// Component: md
+  /// __________________________________________________________________________
+  @include mml-component('md') {
+    border-left: $mml-border;
+    color: $mml-theme-team-border-color;
+    background: $mml-text-bg;
+  }
+
+  /// Component: text
+  /// __________________________________________________________________________
+  @include mml-component('text') {
+    border-left: $mml-border;
+    color: $mml-theme-team-border-color;
+    background: $mml-text-bg;
+  }
+
+  .str-chat__message-team:hover {
+    @include mml-component('text') {
+      background: mml-str-color(grey-800);
+    }
+  }
+}

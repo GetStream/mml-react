@@ -1,9 +1,41 @@
-@function mml-color($key: 'black') {
-  @return map-get($mml-colors, $key);
+/// Get mml theme value
+@function mml-theme($key: 'primary-accent') {
+  @return var(--mml-#{$key});
+  // @return map-get($mml-theme, $key);
 }
 
+/// Get mml component prefixed selector
 @function mml-component-sel($name) {
   @return #{$mml-prefix}#{to-lower-case($name)};
+}
+
+/// Camelize string
+/// @see https://gist.github.com/pascalduez/10011785
+@function mml-camelcase($string) {
+  $progress: $string;
+  $result: '';
+  $exclude: ' ', '-', '–', '—', '_', ',', ';', ':', '.';
+
+  @while str-length($progress) > 0 {
+    $char: str-slice($progress, 1, 1);
+
+    @if mml-contain($exclude, $char) {
+      $progress: mml-capitalize(str-slice($progress, 2, 2)) + str-slice($progress, 3);
+    } @else {
+      $result: $result + $char;
+      $progress: str-slice($progress, 2);
+    }
+  }
+
+  @return $result;
+}
+
+@function mml-capitalize($string) {
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+@function mml-contain($list, $value) {
+  @return not not index($list, $value);
 }
 
 // @function mml-str-replace($string, $search, $replace: "") {

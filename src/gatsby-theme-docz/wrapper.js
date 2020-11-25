@@ -1,31 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import ThemeSwitch from '../../../example/src/components/ThemeSwitch';
-import { useQuery } from '../../../example/src/components/history';
-
-// style imports as strings so that we can swap them based on the current theme
-// eslint-disable-next-line
-import index from '!!to-string-loader!css-loader!../../../dist/styles/index.css';
-// eslint-disable-next-line
-import team from '!!to-string-loader!css-loader!../../../dist/styles/team.css';
-
-const THEMES = [
-  {
-    name: 'Base',
-    value: 'index',
-    css: index,
-  },
-  {
-    name: 'Team',
-    value: 'team',
-    css: team,
-  },
-];
-
-const THEMES_MAP = THEMES.reduce((acc, key) => {
-  acc[key.value] = key;
-  return acc;
-}, {});
+import styled, { ThemeProvider } from 'styled-components';
+import { ThemeContext, THEMES, THEMES_TONES, THEMES_MAP, ThemeSelect, useQuery } from './theming';
 
 const ThemeBar = styled.div`
   z-index: 1000;
@@ -45,19 +20,32 @@ const ThemeBar = styled.div`
 
 const Wrapper = ({ children }) => {
   const [theme, setTheme] = useQuery('theme', THEMES[0].value);
-
-  function handleChangeTheme(event) {
-    setTheme(event.target.value);
-  }
+  const [tone, setTone] = useQuery('tone', THEMES_TONES[0].value);
+  const themeData = THEMES_MAP[theme][tone];
+  const changeTheme = (e) => setTheme(e.target.value);
+  const changeTone = (e) => setTone(e.target.value);
 
   return (
-    <div>
-      <style id={`theme-${theme}`}>{THEMES_MAP[theme].css}</style>
-      <ThemeBar>
-        <ThemeSwitch label="Choose MML theme:" options={THEMES} value={theme} onChange={handleChangeTheme} />
-      </ThemeBar>
-      {children}
-    </div>
+    <ThemeContext.Provider value={{ theme: themeData.vars }}>
+      <ThemeProvider theme={themeData.vars}>
+        {/* <style id={`theme-${theme}-${tone}`}>{themeData.css}</style> */}
+        <ThemeBar>
+          <ThemeSelect label="Choose MML theme:" options={THEMES} value={theme.value} onChange={changeTheme} />
+          {THEMES_TONES.map((tone) => (
+            <label key={tone.value}>
+              <input
+                type="radio"
+                name="tone"
+                value={tone.value}
+                onChange={changeTone} /*  checked={tone.value === tone} */
+              />
+              {tone.label}
+            </label>
+          ))}
+        </ThemeBar>
+        {children}
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
 };
 

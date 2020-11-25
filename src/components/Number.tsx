@@ -1,26 +1,28 @@
-import React, { useContext, FC } from 'react';
-import { MMLContext } from '../context';
+import React, { useState, FC } from 'react';
 import { Icon } from './Icon';
 
 export type NumberProps = {
   /** The name of the number */
   name: string;
+  /** The initial integer value */
+  value: string | number;
 };
 
 /**
  * Mobile friendly number input
  */
-export const Number: FC<NumberProps> = ({ name }) => {
-  const ctx = useContext(MMLContext);
-  const count = (ctx[name] || 0) * 1;
+export const Number: FC<NumberProps> = ({ name, value }) => {
+  const [state, setState] = useState(parseInt(`${value}`, 10) || 0);
 
   return (
     <div className="mml-number">
-      <span className="mml-number__btn mml-number__btn--dec" onClick={() => ctx.setValue(name, count - 1)}>
+      <input name={name} value={state} type="hidden" />
+
+      <span className="mml-number__btn mml-number__btn--dec" onClick={() => setState(state - 1)}>
         <Icon name="remove" />
       </span>
-      <span className="mml-number__count">{count}</span>
-      <span className="mml-number__btn mml-number__btn--inc" onClick={() => ctx.setValue(name, count + 1)}>
+      <span className="mml-number__count">{state}</span>
+      <span className="mml-number__btn mml-number__btn--inc" onClick={() => setState(state + 1)}>
         <Icon name="add" />
       </span>
     </div>

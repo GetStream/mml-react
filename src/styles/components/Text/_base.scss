@@ -2,21 +2,20 @@
   position: relative;
   flex: 1;
   display: block;
-  min-height: 32px;
-  padding: $mml-text-padding-y 0;
+  margin: ($mml-text-margin-y / 2) 0;
+  padding: $mml-text-padding-y $mml-text-padding-x;
+  border: $mml-border-width $mml-border-style $mml-text-border-color;
+  background: $mml-text-bg;
   color: $mml-text-color;
-  margin: 0;
   @if $mml-text-font-size != inherit {
     font-size: $mml-text-font-size;
   }
 
-  @include mml-theme('dark') {
-    color: $mml-text--dark-color;
+  + * {
+    margin-top: $mml-text-margin-y / 2;
   }
-}
 
-// this overrides some stream-chat-react styling causing unnecessary vertical
-// distancing
-.str-chat__message-simple p.#{$mml-prefix}text {
-  white-space: normal;
+  @include mml-me() {
+    background: $mml-text-bg--me;
+  }
 }

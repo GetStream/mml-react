@@ -1,12 +1,5 @@
 @include mml-component('carousel') {
   margin: $mml-carousel-margin-y 0;
-
-  // negative offset to push the carousel to the right edge:
-  // ---------------------------------------------------------------------------
-  .str-chat__list .str-chat__message-inner &,
-  .str-chat__list .str-chat__message-simple-inner & {
-    margin-right: -$mml-str-chat__message--margin-right;
-  }
 }
 
 @include mml-component('carousel-item') {

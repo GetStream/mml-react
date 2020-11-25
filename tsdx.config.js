@@ -3,8 +3,9 @@ const path = require('path');
 const ignoreImport = require('rollup-plugin-ignore-import');
 const scss = require('rollup-plugin-scss');
 const sass = require('node-sass');
-const autoprefixer = require('autoprefixer');
 const postcss = require('postcss');
+const postcssCustomProperties = require('postcss-custom-properties');
+const autoprefixer = require('autoprefixer');
 
 const compileScss = scss({
   /**
@@ -26,7 +27,7 @@ const compileScss = scss({
         data: source,
         includePaths: [path.join(__dirname, 'src/styles')],
       });
-      const result = postcss([autoprefixer]).process(compiled.css).css;
+      const result = postcss([postcssCustomProperties(), autoprefixer]).process(compiled.css).css;
       fs.writeFileSync(`${dest}/${name}.css`, result);
     });
   },
