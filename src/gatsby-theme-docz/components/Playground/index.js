@@ -43,7 +43,7 @@ const getResizableProps = (width, setWidth) => ({
 const transformCode = (code) => {
   if (code.startsWith('()') || code.startsWith('class')) return code;
   // add the same HTML structure as MML container
-  return `<React.Fragment><div className="mml-container mml-wrap"><form>${code}</form></div></React.Fragment>`;
+  return `<React.Fragment><div className="mml-container"><form className="mml-wrap">${code}</form></div></React.Fragment>`;
 };
 
 const transformMmlCode = (code) => {
