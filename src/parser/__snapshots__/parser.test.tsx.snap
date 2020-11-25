@@ -308,7 +308,6 @@ Array [
   <Button
     name="action"
     text="Activate Card"
-    type="submit"
     value="Activate"
   />,
 ]

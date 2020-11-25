@@ -280,7 +280,6 @@ Array [
   <Button
     name="action"
     text="Reserve"
-    type="submit"
     value="reserve"
   />,
 ]
@@ -872,14 +871,12 @@ Array [
     <Button
       name="side"
       text="Yes!"
-      type="submit"
       value="yes"
       variant="floating"
     />
     <Button
       name="side"
       text="No, thanks"
-      type="submit"
       value="no"
       variant="floating"
     />
@@ -1302,7 +1299,6 @@ Array [
   <Button
     name="action"
     text="Regular button"
-    type="submit"
     value="Activate"
   />,
   <MD
@@ -1311,7 +1307,6 @@ Array [
   <Button
     name="action"
     text="Floating button"
-    type="submit"
     value="Activate"
     variant="floating"
   />,
@@ -3788,7 +3783,6 @@ Array [
       />
       <Button
         text="View Product"
-        type="submit"
         url="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html"
       />
     </CarouselItem>
@@ -3804,7 +3798,6 @@ Array [
       />
       <Button
         text="View Product"
-        type="submit"
         url="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html"
       />
     </CarouselItem>
@@ -3820,7 +3813,6 @@ Array [
       />
       <Button
         text="View Product"
-        type="submit"
         url="https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html"
       />
     </CarouselItem>
@@ -3836,7 +3828,6 @@ Array [
       />
       <Button
         text="View Product"
-        type="submit"
         url="https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html"
       />
     </CarouselItem>
@@ -4718,25 +4709,21 @@ Array [
     <Button
       name="times"
       text="9:30"
-      type="submit"
       value="9:30"
     />
     <Button
       name="times"
       text="10:00"
-      type="submit"
       value="10:00"
     />
     <Button
       name="times"
       text="11:30"
-      type="submit"
       value="11:30"
     />
     <Button
       name="times"
       text="Nope"
-      type="submit"
       value="nope"
     />
   </ButtonList>,
@@ -5246,19 +5233,16 @@ Array [
     <Button
       name="side"
       text="Salad"
-      type="submit"
       value="salad"
     />
     <Button
       name="side"
       text="Baked Potatoes"
-      type="submit"
       value="potatoes"
     />
     <Button
       name="side"
       text="Fried Pickles"
-      type="submit"
       value="fried_pickles"
     />
   </ButtonList>,
@@ -5630,7 +5614,6 @@ Array [
   <Button
     name="confirm"
     text="Confirm"
-    type="submit"
     value="Confirm"
   />,
 ]
@@ -5914,7 +5897,6 @@ Array [
   <Button
     name="action"
     text="Activate Card"
-    type="submit"
     value="Activate"
   />,
 ]
@@ -6208,7 +6190,6 @@ Array [
   <Button
     name="send"
     text="Submit"
-    type="submit"
     value="submit"
   />,
 ]
@@ -7348,13 +7329,11 @@ Array [
   <Button
     name="authorized"
     text="Yes"
-    type="submit"
     value="yes"
   />,
   <Button
     name="authorized"
     text="No"
-    type="submit"
     value="yes"
   />,
 ]
