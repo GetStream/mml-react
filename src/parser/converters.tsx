@@ -26,58 +26,67 @@ export type ConvertorType = (tag: MMLTag, children?: ReactElement[]) => ReactEle
  */
 export const converters = {
   button: (tag: MMLTag) => {
-    return <Button key={tag.key} text={tag.getText()} name={tag.attributes.name} {...tag.attributes} />;
+    return (
+      <Button
+        {...tag.attributes}
+        key={tag.key}
+        text={tag.getText()}
+        name={tag.attributes.name}
+        value={tag.attributes.value}
+      />
+    );
   },
   button_list: (tag: MMLTag, children?: JSX.Element[]) => {
     return (
-      <ButtonList key={tag.key} {...tag.attributes}>
+      <ButtonList {...tag.attributes} key={tag.key}>
         {children}
       </ButtonList>
     );
   },
   input: (tag: MMLTag) => {
-    return <Input key={tag.key} name={tag.attributes.name} {...tag.attributes} />;
+    return <Input {...tag.attributes} key={tag.key} name={tag.attributes.name} value={tag.attributes.value} />;
   },
   add_to_calendar: (tag: MMLTag) => {
     return (
       <AddToCalendar
+        {...tag.attributes}
         key={tag.key}
         title={tag.attributes.title}
         start={tag.attributes.start}
         end={tag.attributes.end}
-        {...tag.attributes}
       />
     );
   },
   col: (tag: MMLTag, children?: JSX.Element[]) => {
     return (
-      <Col key={tag.key} {...tag.attributes}>
+      <Col {...tag.attributes} key={tag.key}>
         {children}
       </Col>
     );
   },
   row: (tag: MMLTag, children?: JSX.Element[]) => {
     return (
-      <Row key={tag.key} {...tag.attributes}>
+      <Row {...tag.attributes} key={tag.key}>
         {children}
       </Row>
     );
   },
   icon: (tag: MMLTag) => {
-    return <Icon key={tag.key} name={tag.attributes.name} {...tag.attributes} />;
+    return <Icon {...tag.attributes} key={tag.key} name={tag.attributes.name} />;
   },
   image: (tag: MMLTag) => {
-    return <Image key={tag.key} src={tag.attributes.src} {...tag.attributes} />;
+    return <Image {...tag.attributes} key={tag.key} src={tag.attributes.src} />;
   },
   md: (tag: MMLTag) => {
-    return <MD key={tag.key} text={tag.getText()} {...tag.attributes} />;
+    return <MD {...tag.attributes} key={tag.key} text={tag.getText()} />;
   },
   text: (tag: MMLTag) => {
-    return <Text key={tag.key} text={tag.getText()} {...tag.attributes} />;
+    return <Text {...tag.attributes} key={tag.key} text={tag.getText()} />;
   },
   scheduler: (tag: MMLTag) => {
     return (
       <Scheduler
+        {...tag.attributes}
         key={tag.key}
         name={tag.attributes.name}
         interval={parseInt(tag.attributes.interval, 10) || 30} // default to 30 minutes
@@ -89,12 +98,20 @@ export const converters = {
     );
   },
   carousel: (tag: MMLTag, children?: JSX.Element[]) => {
-    return <Carousel key={tag.key}>{children}</Carousel>;
+    return (
+      <Carousel {...tag.attributes} key={tag.key}>
+        {children}
+      </Carousel>
+    );
   },
   item: (tag: MMLTag, children?: JSX.Element[]) => {
-    return <CarouselItem key={tag.key}>{children}</CarouselItem>;
+    return (
+      <CarouselItem {...tag.attributes} key={tag.key}>
+        {children}
+      </CarouselItem>
+    );
   },
   number: (tag: MMLTag) => {
-    return <Number key={tag.key} name={tag.attributes.name} {...tag.attributes} />;
+    return <Number {...tag.attributes} key={tag.key} name={tag.attributes.name} value={tag.attributes.value} />;
   },
 };

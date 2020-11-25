@@ -322,8 +322,10 @@ Array [
   </p>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Activate Card
   </button>,
@@ -767,6 +769,9 @@ Array [
 exports[`simple input 4`] = `
 <input
   className="mml-input"
+  name="name"
   onChange={[Function]}
+  placeholder=""
+  value="John"
 />
 `;
