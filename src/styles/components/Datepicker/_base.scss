@@ -3,9 +3,20 @@
   display: flex;
 
   // date and time columns
-  &__date,
-  &__time {
+  &__select {
     flex: 1;
+
+    // target the virtuoso scroll container
+    > div {
+      overflow-y: scroll; // this might be need to be made important, to check on IE
+      scrollbar-width: none;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
   // date column
