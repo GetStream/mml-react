@@ -223,25 +223,67 @@ MML React components could be divided in four categories:
 
 ## Styles customization
 
-MML react ships with a basic `index.css` which contains a default basic styles for all [MML Components](#components)
+MML react ships with some good looking default styles but it can be completely customised to suit your visual identity.
 
-### SCSS variables
+### Themes
 
-If your projects include a `sass` compilation step you might customize the overall look and feel of the component through `scss` variables, here are all the available ones with their default values:
+MML ships with a default theme plus four variations. These differentiate from one another only in terms of colours providing different look and feels that suits common scenarios like Social messaging, Customer support, etc. Each theme is either available in the compiled and autoprefixed `dist/styles/{name}.css` file and in the `src/styles/{name}.scss` source file. You should always include only one of this files, either `css` or `scss`, as they all includes the basic styling your MML components need.
+
+If your projects include a `sass` compilation step you might tweak the theme variables and roll out your branded style. A theme is made of the following SCSS map:
 
 ```scss
-$mml-card-bg: $mml-bg;
-$mml-card--dark-bg: $mml--dark-bg;
-$mml-card-header-font-size: 13px;
-$mml-card-header-padding-y: 13px;
-$mml-card-header-padding-x: 13px;
-$mml-card-header-opacity: 0.3;
-$mml-card-header-bg: mml-color(grey-800-full);
-$mml-card-header-color: mml-color(black);
-$mml-card-header--dark-opacity: 0.7;
-$mml-card-header--dark-bg: mml-color(grey-200);
-$mml-card-header--dark-color: mml-color(white);
-$mml-card-body-font-size: 14px;
-$mml-card-body-color: mml-color(black);
-$mml-card-body--dark-color: mml-color(white);
+$mml-theme: (
+  primary-accent: #006cff,
+  app-canvas: #fff,
+  text-high-emphasis: #0e1621,
+  text-mid-emphasis: #8a898e,
+  text-low-emphasis: #b2b1b5,
+  text-self: #fff,
+  text-pressed: #fff,
+  card-bg: #f2f2f2,
+  card-alt-bg: #fff,
+  card-self-bg: #41affc,
+  stroke: #e5e5e6,
+  stroke-low-emphasis: #f2f2f2,
+  shadow: 0px 2px 5px rgba(0, 0, 0, 0.15),
+);
+```
+
+> If you are running `sass` within your project you might customize most aspects of mml styling other than the them through scss variables. Refer [to the source](src/styles/common/_variables.scss) to see what is available.
+
+Each of these variables is also avaialable as CSS variable that you can tweak dynamically, prefixed with `--mml`:
+
+```css
+:root {
+  --mml-primary-accent: #006cff;
+  --mml-app-canvas: #fff;
+}
+```
+
+This theme related data is also made avaiable to javascript through [`icss :export`](https://github.com/css-modules/icss#export) so that you can import them and reuse them to coherently style other parts of your chat outside of MML attachments (these are used in the MML docz app for instance).
+
+```js
+import { locals as mmlTheme } from 'mml-react/dist/styles/index.css';
+// or
+import { locals as mmlTheme } from 'mml-react/src/styles/index.scss';
+
+// variables for js are transformed into camelCase, e.g.:
+primaryAccent: '#006cff',
+appCanvas: '#fff',
+// ...etc.
+```
+
+### Differentiations between mine and other's messages
+
+Some components need to slightly change according to their position in the chat. To achieve this MML scope its `CSS` alterations in a configurable selector through the `SCSS` variable `$mml-selector-wrapper-message-self` whose default value is `.me` class selector. This selector needs to be placed on the container element that wraps your MML attachment. MML styling by default aligns `.me` messages on the right hand side.
+Internally to this library these SCSS tweaks are implemented through the `SCSS mixin mml-me`, e.g.:
+
+```scss
+@include mml-component('btn') {
+  text-align: left;
+
+  @include mml-me() {
+    text-align: right;
+  }
+}
 ```

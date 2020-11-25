@@ -1,13 +1,7 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
-.str-chat .material-icons {
-  font-family: 'Material Icons';
-}
-
 @include mml-component('icon') {
-  color: $mml-icon-color;
-
-  @include mml-theme('dark') {
-    color: $mml-icon--dark-color;
+  @if $mml-icon-color != inherit {
+    color: $mml-icon-color;
   }
 }

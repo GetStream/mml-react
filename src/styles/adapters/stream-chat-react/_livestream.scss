@@ -1,0 +1,99 @@
+@import 'variables';
+
+$mml-theme-livestream-border-radius: 6px !default;
+
+////////////////////////////////////////////////////////////////////////////////
+///
+/// stream-chat-react theme: livestream
+///
+////////////////////////////////////////////////////////////////////////////////
+@include mml-stream-chat-react('livestream') {
+  /// Component: btn
+  /// __________________________________________________________________________
+  @include mml-component('btn') {
+    border-radius: $mml-theme-livestream-border-radius; // as .str-chat__message-livestream-actions
+    border-color: transparent;
+  }
+
+  @include mml-component('btn', 'floating') {
+    border-radius: $mml-btn--floating-border-radius;
+
+    &:hover {
+      background: $mml-btn--floating-hover-bg;
+    }
+  }
+
+  /// Component: btnlist
+  /// __________________________________________________________________________
+  @include mml-component('btnlist') {
+    @include mml-component('btn') {
+      border-width: $mml-border-width;
+      border-radius: $mml-theme-livestream-border-radius;
+    }
+  }
+
+  /// Component: carousel
+  /// __________________________________________________________________________
+  &.str-chat .str-chat__list .str-chat__message-inner,
+  &.str-chat .str-chat__list .str-chat__message-simple-inner {
+    @include mml-component('carousel') {
+      margin-right: -(10px + $mml-str-chat__message--margin-right);
+    }
+  }
+
+  /// Component: image
+  /// __________________________________________________________________________
+  @include mml-component('image') {
+    border-radius: $mml-theme-livestream-border-radius;
+  }
+
+  /// Component: input
+  /// __________________________________________________________________________
+  @include mml-component('input') {
+    border-radius: $mml-theme-livestream-border-radius;
+    margin-bottom: 3px;
+  }
+
+  /// Component: scheduler
+  /// __________________________________________________________________________
+  @include mml-component('scheduler') {
+    margin-bottom: 6px;
+
+    @include mml-component('card-header') {
+      justify-content: center;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///
+/// stream-chat-react theme: livestream.dark
+///
+////////////////////////////////////////////////////////////////////////////////
+@include mml-stream-chat-react('livestream.dark') {
+  /// Component: btnlist
+  /// __________________________________________________________________________
+  @include mml-component('btnlist', 'floating') {
+    @include mml-component('btn') {
+      border-radius: $mml-btn--floating-border-radius;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///
+/// stream-chat-react theme: livestream.light
+///
+////////////////////////////////////////////////////////////////////////////////
+@include mml-stream-chat-react('livestream.light') {
+  /// Component: btn
+  /// __________________________________________________________________________
+  @include mml-component('btn') {
+    &:hover {
+      background: rgba($mml-btn-hover-bg, 5%);
+      border-color: rgba(0, 0, 0, 0.06);
+      color: $mml-btn-color;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+}

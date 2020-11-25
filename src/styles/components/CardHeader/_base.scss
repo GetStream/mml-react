@@ -3,25 +3,12 @@
   align-items: center;
   padding: $mml-card-header-padding-y 0;
   font-size: $mml-card-header-font-size;
-  @include mml-theme('dark') {
-    color: $mml-card-header--dark-color;
-  }
+  color: $mml-card-header-color;
 
-  @include mml-component('icon') {
-    opacity: $mml-card-header-opacity;
-
-    @include mml-theme('dark') {
-      opacity: $mml-card-header--dark-opacity;
-    }
-  }
+  // @include mml-component('icon') {}
 
   &__text {
-    font-weight: bold;
+    font-weight: $mml-card-header-font-weight;
     padding-left: $mml-card-header-padding-x;
-    opacity: $mml-card-header-opacity;
-
-    @include mml-theme('dark') {
-      opacity: $mml-card-header--dark-opacity;
-    }
   }
 }

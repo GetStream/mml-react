@@ -10,17 +10,17 @@
     border-width: 0 0 $mml-border-width 0;
     border-radius: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $mml-btn-hover-color;
+      border-color: $mml-btn-hover-border-color;
       background: $mml-btn-hover-bg;
     }
+  }
 
-    @include mml-theme('dark') {
-      background: none;
-      &:not(:hover) {
-        background: none;
-      }
-    }
+  @include mml-me() {
+    max-width: $mml-btnlist-max-width;
+    margin-left: auto;
   }
 }
 
@@ -28,6 +28,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background: none;
 
   @include mml-component('btn') {
     border-radius: $mml-btn--floating-border-radius;

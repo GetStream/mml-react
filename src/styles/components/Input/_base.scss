@@ -11,14 +11,4 @@
     outline: $mml-input-focus-outline;
     color: $mml-input-focus-color;
   }
-
-  @include mml-theme('dark') {
-    border-color: $mml--dark-border-color;
-    background: $mml-input--dark-bg;
-    color: $mml-input--dark-color;
-
-    &:focus {
-      color: $mml-input--dark-focus-color;
-    }
-  }
 }

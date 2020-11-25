@@ -1,40 +1,17 @@
-$mml-colors: (
-  primary: red,
-  primary-faded: #bcd8ff,
-  white: white,
-  black: black,
-  grey-900: rgba(0, 0, 0, 0.08),
-  grey-900-full: #f0f0f0,
-  grey-800: rgba(0, 0, 0, 0.03),
-  grey-800-full: #f7f7f7,
-  grey-300: rgba(255, 255, 255, 0.1),
-  grey-200: rgba(255, 255, 255, 0.08),
-  grey-100-full: #34373a,
-  grey-100: rgba(255, 255, 255, 0.05),
+$mml-theme: (
+  primary-accent: #4e1d9d,
+  app-canvas: #fff,
+  text-high-emphasis: #2e2c30,
+  text-mid-emphasis: #7c61a8,
+  text-low-emphasis: #9f8bbf,
+  text-self: #fff,
+  text-pressed: #fff,
+  card-bg: #fff,
+  card-alt-bg: #f9f5ff,
+  card-self-bg: #3e177e,
+  stroke: #eaeaea,
+  stroke-low-emphasis: #cccccc,
+  shadow: 0px 2px 5px rgba(0, 0, 0, 0.08),
 ) !default;
 
 @import 'index';
-
-@import 'components/AddToCalendar/themes/team';
-@import 'components/Button/themes/team';
-@import 'components/ButtonList/themes/team';
-@import 'components/Card/themes/team';
-@import 'components/CardBody/themes/team';
-@import 'components/CardHeader/themes/team';
-@import 'components/Carousel/themes/team';
-@import 'components/Col/themes/team';
-@import 'components/Datepicker/themes/team';
-@import 'components/Error/themes/team';
-@import 'components/Icon/themes/team';
-@import 'components/Image/themes/team';
-@import 'components/Input/themes/team';
-@import 'components/Loader/themes/team';
-@import 'components/MD/themes/team';
-@import 'components/Number/themes/team';
-@import 'components/Row/themes/team';
-@import 'components/Scheduler/themes/team';
-@import 'components/Success/themes/team';
-@import 'components/Text/themes/team';
-
-@include mml-theme-root('team') {
-}

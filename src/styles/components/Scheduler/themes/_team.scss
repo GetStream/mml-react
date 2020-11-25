@@ -1,5 +1,0 @@
-@include mml-theme-root('team') {
-  @include mml-component('scheduler') {
-    margin-bottom: $mml-theme-team-margin-y;
-  }
-}
