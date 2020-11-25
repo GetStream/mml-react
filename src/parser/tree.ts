@@ -41,21 +41,4 @@ export class Tree {
 
     return reactNodes;
   }
-
-  /**
-   * get initial state for all children
-   */
-  initialState() {
-    let state: Record<string, any> = {};
-    if (this.name) state.mml_name = this.name;
-
-    (function gatherState(nodes: MMLTag[]) {
-      nodes.forEach((node) => {
-        state = { ...state, ...node.initialState() };
-        if (node.children) gatherState(node.children);
-      });
-    })(this.children);
-
-    return state;
-  }
 }

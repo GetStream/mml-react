@@ -58,27 +58,10 @@ test('simple input', () => {
 
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
-  expect(tree.initialState()).toEqual({ name: 'John' });
   expect(tree.children.length).toBe(1);
   expect(tree.toReact()).toMatchSnapshot();
 
   expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
-});
-
-test('input tags should have data', () => {
-  const mml = '<input name="myinput" value="1" />';
-  const nodes = SourceToXML(mml);
-  const tree = XMLtoMMLTree(nodes);
-
-  expect(tree.initialState()).toEqual({ myinput: '1' });
-});
-
-test('text tags should not have data', () => {
-  const mml = '<text>hi</text>';
-  const nodes = SourceToXML(mml);
-  const tree = XMLtoMMLTree(nodes);
-
-  expect(tree.initialState()).toEqual({});
 });
 
 test('invalid MML', () => {
