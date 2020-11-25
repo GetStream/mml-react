@@ -136,7 +136,7 @@ export const Chat = ({ children }) => {
             </Thread>
           );
         })}
-        <Attachment>{children}</Attachment>
+        <Attachment className="me">{children}</Attachment>
       </Conversation>
       <Composer>
         <ComposerInput className="mml-input" placeholder="Say something" />
