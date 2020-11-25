@@ -23,6 +23,8 @@ const CONVERSATION = [
   },
 ];
 
+const CHAT_GUTTER_X = 9;
+
 const Wrapper = styled.div`
   width: 320px;
   // height: 515px;
@@ -36,7 +38,7 @@ const Conversation = styled.div``;
 
 const Thread = styled.div`
   position: relative;
-  padding-left: 46px;
+  padding: 0 ${CHAT_GUTTER_X}px 0 46px;
 `;
 
 const Author = styled.div`
@@ -73,7 +75,7 @@ const Avatar = styled.div`
 
 const Attachment = styled.div`
   margin-left: auto;
-  padding: 16px 9px 32px;
+  padding: 16px ${CHAT_GUTTER_X}px 32px;
 `;
 
 const Composer = styled.form`
