@@ -21,7 +21,7 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 ```xml
 <mml name="massage">
   <text>When would you like to schedule your massage?</text>
-	<scheduler name="massage_appointment" duration="30" interval="30" selected="2020-11-16T10:30:00.000Z"/>
+	<scheduler name="appointment" duration="30" interval="30" selected="2020-11-16T10:30:00.000Z"/>
   <button name="action" value="reserve">Reserve</button>
 </mml>
 ```
@@ -30,7 +30,7 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 
 <Playground>
   <Text text="When would you like to schedule your massage?" />
-  <Scheduler text="Send" duration="30" interval="30" selected="2020-11-16T10:30:00.000Z" />
+  <Scheduler name="scheduler" selected="2021-11-16T10:30:00.000Z" />
   <Button text="Reserve" name="action" value="reserve" />
 </Playground>
 
@@ -39,11 +39,11 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 <Playground>
   <Text text="When would you like to schedule your massage?" />
   <Scheduler
-    text="Send"
-    duration="30"
-    interval="30"
-    selected="2020-11-16T10:30:00.000Z"
-    ical_availability="https://www.calendarlabs.com/ical-calendar/ics/75/UK_Holidays.ics"
+    name="scheduler"
+    selected="2021-11-16T10:30:00.000Z"
+    icalAvailability="https://srv-store1.gofile.io/download/OSUFP4/netherlands.ics"
+    duration={30}
+    interval={30}
   />
   <Button text="Reserve" name="action" value="reserve" />
 </Playground>

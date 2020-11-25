@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { useEffect, useState, FC } from 'react';
 import { DatePickerDate } from './DatePickerDate';
 import { DatePickerTime } from './DatePickerTime';
 import {
@@ -110,7 +110,7 @@ export const DatePicker: FC<DatePickerProps> = ({
     });
   }
 
-  const [datetime, setDatetime] = React.useState(initialDate);
+  const [datetime, setDatetime] = useState(initialDate);
 
   /**
    * Handle date change
@@ -137,7 +137,7 @@ export const DatePicker: FC<DatePickerProps> = ({
     setDatetime(newDatetime);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (onChange && datetime) onChange(datetime);
   }, [datetime, onChange]);
 

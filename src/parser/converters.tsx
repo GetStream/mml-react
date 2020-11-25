@@ -79,11 +79,12 @@ export const converters = {
     return (
       <Scheduler
         key={tag.key}
-        interval={parseInt(tag.attributes.interval, 10)}
-        duration={parseInt(tag.attributes.duration, 10)}
+        name={tag.attributes.name}
+        interval={parseInt(tag.attributes.interval, 10) || 30} // default to 30 minutes
+        duration={parseInt(tag.attributes.duration, 10) || 30} // default to 30 minutes
         selected={tag.attributes.selected}
-        full_day={tag.attributes.full_day === 'true'}
-        ical_availability={tag.attributes.ical_availability}
+        fullDay={tag.attributes.full_day === 'true'}
+        icalAvailability={tag.attributes.ical_availability}
       />
     );
   },
