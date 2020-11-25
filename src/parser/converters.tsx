@@ -83,8 +83,8 @@ export const converters = {
         interval={parseInt(tag.attributes.interval, 10) || 30} // default to 30 minutes
         duration={parseInt(tag.attributes.duration, 10) || 30} // default to 30 minutes
         selected={tag.attributes.selected}
-        fullDay={tag.attributes.full_day === 'true'}
-        icalAvailability={tag.attributes.ical_availability}
+        fullDay={tag.attributes.fullDay === 'true'}
+        icalAvailability={tag.attributes.icalAvailability}
       />
     );
   },

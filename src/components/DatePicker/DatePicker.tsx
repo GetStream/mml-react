@@ -105,17 +105,11 @@ export const DatePicker: FC<DatePickerProps> = ({
   filter,
   onChange,
 }) => {
-  let initialDate;
-
-  if (selected) {
-    initialDate = new Date(selected);
-  } else {
-    initialDate = roundToNearestMinutes(new Date(), {
-      nearestTo: Math.min(30, Math.round(timeInterval)),
-    });
-  }
-
-  const [datetime, setDatetime] = useState(initialDate);
+  const [datetime, setDatetime] = useState(
+    selected
+      ? new Date(selected)
+      : roundToNearestMinutes(new Date(), { nearestTo: Math.min(30, Math.round(timeInterval)) }),
+  );
 
   /**
    * Handle date change

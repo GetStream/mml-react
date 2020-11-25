@@ -97,7 +97,7 @@ export const Scheduler: FC<SchedulerProps> = ({
             timeInterval={interval}
             showTimeSelect={!fullDay}
             filter={icalFilter}
-            // these props might be configurable from mml if we like
+            // TODO: these props might be configurable from mml if we like
             // format={format}
             // dateFormat="ddd MMM DD"
             // timeFormat="H:mm A"
