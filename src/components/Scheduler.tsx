@@ -11,7 +11,7 @@ import { Loader as LoaderComponent } from './Loader';
 
 export type SchedulerProps = {
   /**
-   * The name of the scheduler
+   * The scheduler name attached to hidden input
    */
   name: string;
   /**
@@ -42,7 +42,7 @@ export type SchedulerProps = {
 export type ICalFilter = (start?: Date) => boolean;
 
 export const Scheduler: FC<SchedulerProps> = ({
-  // name,
+  name,
   selected,
   icalAvailability,
   duration = 30,
@@ -92,6 +92,7 @@ export const Scheduler: FC<SchedulerProps> = ({
         {!error && loading && <LoaderComponent loading={true} text="Loading availability" />}
         {!error && !loading && (
           <DatePicker
+            name={name}
             selected={selected}
             timeInterval={interval}
             showTimeSelect={!fullDay}

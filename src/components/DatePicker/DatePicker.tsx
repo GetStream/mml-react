@@ -13,6 +13,10 @@ import {
 
 export type DatePickerProps = {
   /**
+   * The scheduler name attached to hidden input
+   */
+  name: string;
+  /**
    * The selected date time
    */
   selected?: string;
@@ -88,6 +92,7 @@ export function splitDatetime(datetime: Date) {
 }
 
 export const DatePicker: FC<DatePickerProps> = ({
+  name,
   selected,
   dateInterval = 1,
   timeInterval = 30,
@@ -143,7 +148,7 @@ export const DatePicker: FC<DatePickerProps> = ({
 
   return (
     <div className="mml-datepicker">
-      <input type="hidden" value={formatDate(datetime, format)} />
+      <input name={name} value={formatDate(datetime, format)} type="hidden" />
       <DatePickerDate
         filter={filter}
         format={dateFormat}
