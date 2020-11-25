@@ -225,10 +225,62 @@ MML React components could be divided in four categories:
 
 MML react ships with a basic `index.css` which contains a default basic styles for all [MML Components](#components)
 
+### Themes
+
+MML ships with a default theme plus four variations. These differentiate from one another only in terms of colours providing different look and feels that suits common scenarios like Social messaging, Customer support, etc. Each theme is either available in the compiled and autoprefixed `dist/styles/{name}.css` file and in the `src/styles/{name}.scss` source file. You should always include only one of this files, either `css` or `scss`, as they all includes the basic styling your MML components need.
+
+If your projects include a `sass` compilation step you might tweak the theme variables and roll out your branded style. A theme is made of the following SCSS map:
+
+```scss
+$mml-theme: (
+  primary-accent: #006cff,
+  app-canvas: #fff,
+  text-high-emphasis: #0e1621,
+  text-mid-emphasis: #8a898e,
+  text-low-emphasis: #b2b1b5,
+  text-self: #fff,
+  text-pressed: #fff,
+  card-bg: #f2f2f2,
+  card-alt-bg: #fff,
+  card-self-bg: #41affc,
+  stroke: #e5e5e6,
+  stroke-low-emphasis: #f2f2f2,
+  shadow: 0px 2px 5px rgba(0, 0, 0, 0.15),
+);
+```
+
+Each of these variables is also avaialable as CSS variable that you can tweak dynamically, prefixed with `--mml`:
+
+```css
+:root {
+  --mml-primary-accent: #006cff;
+  --mml-app-canvas: #fff;
+}
+```
+
+### CSS variables
+
+
+
 ### SCSS variables
 
 If your projects include a `sass` compilation step you might customize the overall look and feel of the component through `scss` variables, here are all the available ones with their default values:
 
 ```scss
 TODO: scss docs
+```
+
+#### Differentiations between mine and other's messages
+
+Some components need to slightly change according to their position in the chat. To achieve this MML scope its `CSS` alterations in a configurable selector through the `SCSS` variable `$mml-selector-wrapper-message-self` whose default value is `.me` class selector. This selector needs to be placed on the container element that wraps your MML attachment. MML styling by default aligns `.me` messages on the right hand side.
+Internally to this library these SCSS tweaks are implemented through the `SCSS mixin mml-me`, e.g.:
+
+```scss
+@include mml-component('btn') {
+  text-align: left;
+
+  @include mml-me() {
+    text-align: right;
+  }
+}
 ```

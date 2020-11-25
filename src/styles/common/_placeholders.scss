@@ -25,7 +25,7 @@
     border-bottom-left-radius: $mml-border-radius-base;
   }
 
-  @include mml-theme('dark') {
+  @include mml-stream-chat-react('dark') {
     & > *:last-child:not(:first-child) {
       border-bottom-right-radius: $mml-border-radius;
       border-bottom-left-radius: $mml-border-radius-base;

@@ -17,17 +17,24 @@
 }
 
 ///
+/// MML me
+///
+/// Automatically scope the class name to a message marked as "mine", which it
+/// is by default shown on the right hand side
+///
+/// __________________________________________________________________________--
+@mixin mml-me($theme: '') {
+  #{$mml-selector-wrapper-message-self} & {
+    @content;
+  }
+}
+
+///
 /// MML theme
 ///
 /// Automatically scope to the class name of a specific stream-chat-react theme
 ///
 /// __________________________________________________________________________--
-@mixin mml-theme($theme: '') {
-  .str-chat.#{$theme} & {
-    @content;
-  }
-}
-
 @mixin mml-stream-chat-react($theme: '') {
   .str-chat.#{$theme} {
     @content;
