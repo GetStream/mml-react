@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useCallback, FC, ComponentType, FormEvent } from 'react';
 
-import { MMLContext } from '../context';
 import { Parse, ConvertorType } from '../parser';
 import { Loader as LoaderComponent, LoaderProps } from '../components/Loader';
 import { Error as ErrorComponent, ErrorProps } from '../components/Error';
@@ -35,14 +34,8 @@ export const MML: FC<MMLProps> = ({
   Error = ErrorComponent,
   Success = SuccessComponent,
 }) => {
-  const [state, setState] = useState({});
   const [error, setError] = useState('');
   const [submitState, setSubmitState] = useState({ loading: false, error: '', success: '' });
-
-  // expose helpers for form elements to change the state
-  const setValue = useCallback((name: string, value: any) => {
-    setState((prevState) => ({ ...prevState, [name]: value }));
-  }, []);
 
   const handleSubmit = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
@@ -51,20 +44,22 @@ export const MML: FC<MMLProps> = ({
 
       try {
         setSubmitState({ loading: true, error: '', success: '' });
+        const state: Record<string, any> = {};
+        const fd = new FormData(event.currentTarget);
+        fd.forEach((value, key) => (state[key] = value));
+
         await onSubmit(state);
         setSubmitState({ loading: false, error: '', success: 'submitted' });
       } catch (e) {
         setSubmitState({ loading: false, error: 'something is broken', success: '' });
       }
     },
-    [state, onSubmit],
+    [onSubmit],
   );
 
   const children = useMemo(() => {
     try {
-      const tree = Parse(source, converters);
-      setState(tree.initialState()); // get initial state for all input elements in MML
-      return tree.toReact();
+      return Parse(source, converters).toReact();
     } catch (e) {
       console.warn('mml parsing error: ', source, e);
       setError("This chat message has invalid formatting and can't be shown");
@@ -77,14 +72,12 @@ export const MML: FC<MMLProps> = ({
       {error ? (
         <Error error={error} />
       ) : (
-        <MMLContext.Provider value={{ ...state, submitState, setValue }}>
-          <form onSubmit={handleSubmit}>
-            {children}
-            {submitState.loading && <Loader loading={submitState.loading} />}
-            {submitState.success && <Success success={submitState.success} />}
-            {submitState.error && <Error error={submitState.error} />}
-          </form>
-        </MMLContext.Provider>
+        <form onSubmit={handleSubmit}>
+          {children}
+          {submitState.loading && <Loader loading={submitState.loading} />}
+          {submitState.success && <Success success={submitState.success} />}
+          {submitState.error && <Error error={submitState.error} />}
+        </form>
       )}
     </div>
   );

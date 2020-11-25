@@ -438,8 +438,10 @@ Array [
   </div>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="reserve"
   >
     Reserve
   </button>,
@@ -908,15 +910,19 @@ Array [
   >
     <button
       className="mml-btn  mml--floating"
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="yes"
     >
       Yes!
     </button>
     <button
       className="mml-btn  mml--floating"
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="no"
     >
       No, thanks
     </button>
@@ -1326,8 +1332,10 @@ Array [
   </div>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Regular button
   </button>,
@@ -1344,8 +1352,10 @@ Array [
   </div>,
   <button
     className="mml-btn  mml--floating"
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Floating button
   </button>,
@@ -4732,29 +4742,37 @@ Array [
   >
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="9:30"
     >
       9:30
     </button>
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="10:00"
     >
       10:00
     </button>
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="11:30"
     >
       11:30
     </button>
     <button
       className="mml-btn "
+      name="times"
       onClick={[Function]}
       type="submit"
+      value="nope"
     >
       Nope
     </button>
@@ -5245,22 +5263,28 @@ Array [
   >
     <button
       className="mml-btn "
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="salad"
     >
       Salad
     </button>
     <button
       className="mml-btn "
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="potatoes"
     >
       Baked Potatoes
     </button>
     <button
       className="mml-btn "
+      name="side"
       onClick={[Function]}
       type="submit"
+      value="fried_pickles"
     >
       Fried Pickles
     </button>
@@ -5611,6 +5635,11 @@ Array [
   <div
     className="mml-number"
   >
+    <input
+      name="donuts"
+      type="hidden"
+      value={3}
+    />
     <span
       className="mml-number__btn mml-number__btn--dec"
       onClick={[Function]}
@@ -5624,7 +5653,7 @@ Array [
     <span
       className="mml-number__count"
     >
-      0
+      3
     </span>
     <span
       className="mml-number__btn mml-number__btn--inc"
@@ -5639,8 +5668,10 @@ Array [
   </div>,
   <button
     className="mml-btn "
+    name="confirm"
     onClick={[Function]}
     type="submit"
+    value="Confirm"
   >
     Confirm
   </button>,
@@ -5880,8 +5911,10 @@ Array [
   </p>,
   <button
     className="mml-btn "
+    name="action"
     onClick={[Function]}
     type="submit"
+    value="Activate"
   >
     Activate Card
   </button>,
@@ -6177,12 +6210,17 @@ Array [
   </div>,
   <input
     className="mml-input"
+    name="email"
     onChange={[Function]}
+    placeholder=""
+    value=""
   />,
   <button
     className="mml-btn "
+    name="send"
     onClick={[Function]}
     type="submit"
+    value="submit"
   >
     Submit
   </button>,
@@ -7376,15 +7414,19 @@ Array [
   </div>,
   <button
     className="mml-btn "
+    name="authorized"
     onClick={[Function]}
     type="submit"
+    value="yes"
   >
     Yes
   </button>,
   <button
     className="mml-btn "
+    name="authorized"
     onClick={[Function]}
     type="submit"
+    value="yes"
   >
     No
   </button>,
