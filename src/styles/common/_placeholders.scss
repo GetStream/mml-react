@@ -6,29 +6,25 @@
 // -----------------------------------------------------------------------------
 %mml-bordered-area {
   > *:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    border-bottom: 0;
+    border-radius: $mml-border-radius;
+    // border-bottom: 0;
   }
 
-  > *:first-child:not(:last-child):not(.mml--floating) {
-    border-top-left-radius: $mml-border-radius;
-    border-top-right-radius: $mml-border-radius;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom: 0;
-  }
+  // > *:first-child:not(:last-child):not(.mml--floating) {
+  //   border-top-left-radius: $mml-border-radius;
+  //   border-top-right-radius: $mml-border-radius;
+  //   border-bottom-left-radius: $mml-border-radius-base;
+  //   border-bottom-right-radius: $mml-border-radius-base;
+  //   border-bottom: 0;
+  // }
 
   > *:last-child:not(:first-child):not(.mml--floating) {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: $mml-border-radius;
     border-bottom-left-radius: $mml-border-radius-base;
-  }
+    border-bottom-right-radius: $mml-border-radius;
 
-  @include mml-stream-chat-react('dark') {
-    & > *:last-child:not(:first-child) {
-      border-bottom-right-radius: $mml-border-radius;
-      border-bottom-left-radius: $mml-border-radius-base;
+    @include mml-me() {
+      border-bottom-left-radius: $mml-border-radius;
+      border-bottom-right-radius: $mml-border-radius-base;
     }
   }
 

@@ -52,14 +52,14 @@ $mml-theme-team-margin-y: 10px !default;
     padding: $mml-card-header-padding-y $mml-card-header-padding-x;
     font-size: $mml-card-header-font-size;
     @include mml-stream-chat-react('dark') {
-      color: $mml-card-header--dark-color;
+      color: $mml-str-card-header--dark-color;
     }
 
     @include mml-component('icon') {
       opacity: $mml-card-header-opacity;
 
       @include mml-stream-chat-react('dark') {
-        opacity: $mml-card-header--dark-opacity;
+        opacity: $mml-str-card-header--dark-opacity;
       }
     }
 
@@ -69,7 +69,7 @@ $mml-theme-team-margin-y: 10px !default;
       opacity: $mml-card-header-opacity;
 
       @include mml-stream-chat-react('dark') {
-        opacity: $mml-card-header--dark-opacity;
+        opacity: $mml-str-card-header--dark-opacity;
       }
     }
   }
@@ -185,7 +185,7 @@ $mml-theme-team-margin-y: 10px !default;
 
   .str-chat__message-team:hover {
     @include mml-component('text') {
-      background: mml-color(grey-800);
+      background: mml-str-color(grey-800);
     }
   }
 }

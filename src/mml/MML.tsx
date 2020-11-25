@@ -68,11 +68,13 @@ export const MML: FC<MMLProps> = ({
   }, [source, converters]);
 
   return (
-    <div className={`mml-container mml-wrap ${className}`}>
+    <div className={`mml-container ${className}`}>
       {error ? (
-        <Error error={error} />
+        <div className="mml-wrap">
+          <Error error={error} />
+        </div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mml-wrap">
           {children}
           {submitState.loading && <Loader loading={submitState.loading} />}
           {submitState.success && <Success success={submitState.success} />}
