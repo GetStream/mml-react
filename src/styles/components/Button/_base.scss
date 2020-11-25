@@ -4,7 +4,12 @@
   margin: 0;
   color: $mml-btn-color;
   background: $mml-btn-bg;
-  border-color: $mml-btn-border-color;
+  // border-color: $mml-btn-border-color;
+
+  @include mml-me() {
+    max-width: $mml-btnlist-max-width;
+    margin-left: auto;
+  }
 
   &:hover,
   &:focus {
@@ -22,6 +27,8 @@
 
 @include mml-component('btn', 'floating') {
   width: auto;
+  max-width: none;
+  margin-right: auto;
   border-radius: $mml-btn--floating-border-radius;
   box-shadow: $mml-btn--floating-shadow;
 }

@@ -1,10 +1,15 @@
 // space for some cross-theme base styling...
 
-// @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i');
-
 .mml-container {
+  font-family: $mml-font-base;
+
   * {
     box-sizing: border-box;
-    font-family: $mml-font-base;
   }
+}
+
+.mml-wrap {
+  display: flex;
+  flex-direction: column;
+  @extend %mml-bordered-area;
 }

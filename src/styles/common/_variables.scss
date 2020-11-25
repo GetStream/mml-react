@@ -46,7 +46,7 @@ $mml-bg--full: mml-color(white) !default;
 $mml--dark-bg: mml-color(grey-100) !default;
 $mml--dark-bg--full: mml-color(grey-100-full) !default;
 $mml-border-radius: 16px !default;
-$mml-border-radius-base: 2px !default;
+$mml-border-radius-base: 0px !default;
 $mml-border-style: solid !default;
 $mml-border-width: 1px !default;
 $mml-border-color: mml-color(grey-900) !default;
@@ -65,6 +65,7 @@ $mml-btn-font-family: $mml-font-sans !default;
 $mml-btn-font-weight: bold !default;
 $mml-btn-font-size: inherit !default;
 $mml-btn-text-transform: none !default;
+$mml-btn-max-width: 60% !default;
 $mml-btn-padding-y: 11px !default;
 $mml-btn-padding-x: 16px !default;
 $mml-btn-border-width: 1px !default;
@@ -93,8 +94,9 @@ $mml-btn--floating-hover-bg: mml-color(grey-900) !default;
 
 // ButtonList:
 // -----------------------------------------------------------------------------
+$mml-btnlist-max-width: $mml-btn-max-width !default;
 $mml-btnlist-bg: $mml-btn-bg !default;
-$mml-btnlist-max-width: 60% !default;
+$mml-btnlist-border-color: mml-theme(stroke) !default;
 
 // TODO:scss remove:
 $mml-str-btnlist--dark-bg: $mml--dark-bg !default;
