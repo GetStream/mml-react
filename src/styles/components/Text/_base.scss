@@ -9,8 +9,4 @@
   @if $mml-text-font-size != inherit {
     font-size: $mml-text-font-size;
   }
-
-  @include mml-theme('dark') {
-    color: $mml-text--dark-color;
-  }
 }

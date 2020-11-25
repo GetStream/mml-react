@@ -9,21 +9,12 @@
     font-size: $mml-md-font-size;
   }
 
-  @include mml-theme('dark') {
-    color: $mml-md--dark-color;
-  }
-
   code {
     padding: $mml__code-padding;
     background: $mml__code-bg;
     color: $mml__code-color;
     font-size: $mml__code-font-size;
     font-family: $mml-font-monospace;
-
-    @include mml-theme('dark') {
-      background: $mml__code--dark-bg;
-      color: $mml__code--dark-color;
-    }
   }
 
   p {

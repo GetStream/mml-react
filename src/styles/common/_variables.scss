@@ -1,6 +1,6 @@
 // Theme variables
 //
-// by default the values are fro teh default light theme
+// by default the values are for the default light theme
 // -----------------------------------------------------------------------------
 $mml-theme: (
   primary-accent: #006cff,
@@ -24,6 +24,7 @@ $mml-theme: (
 // Generic variables:
 // -----------------------------------------------------------------------------
 $mml-prefix: 'mml-' !default;
+$mml-selector-wrapper-message-self: '.me' !default;
 $mml-colors: (
   primary: #006cff,
   primary-faded: #bcd8ff,

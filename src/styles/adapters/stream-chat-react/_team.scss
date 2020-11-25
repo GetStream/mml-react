@@ -51,14 +51,14 @@ $mml-theme-team-margin-y: 10px !default;
     align-items: center;
     padding: $mml-card-header-padding-y $mml-card-header-padding-x;
     font-size: $mml-card-header-font-size;
-    @include mml-theme('dark') {
+    @include mml-stream-chat-react('dark') {
       color: $mml-card-header--dark-color;
     }
 
     @include mml-component('icon') {
       opacity: $mml-card-header-opacity;
 
-      @include mml-theme('dark') {
+      @include mml-stream-chat-react('dark') {
         opacity: $mml-card-header--dark-opacity;
       }
     }
@@ -68,7 +68,7 @@ $mml-theme-team-margin-y: 10px !default;
       padding-left: $mml-card-header-padding-x;
       opacity: $mml-card-header-opacity;
 
-      @include mml-theme('dark') {
+      @include mml-stream-chat-react('dark') {
         opacity: $mml-card-header--dark-opacity;
       }
     }

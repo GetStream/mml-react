@@ -3,7 +3,6 @@
   flex-direction: column;
   overflow: hidden;
   background: $mml-btnlist-bg;
-  max-width: $mml-btnlist-max-width;
 
   @include mml-component('btn') {
     background: none;
@@ -17,6 +16,11 @@
       border-color: $mml-btn-hover-border-color;
       background: $mml-btn-hover-bg;
     }
+  }
+
+  @include mml-me() {
+    max-width: $mml-btnlist-max-width;
+    margin-left: auto;
   }
 }
 
