@@ -42,7 +42,7 @@ export type SchedulerProps = {
 export type ICalFilter = (start?: Date) => boolean;
 
 export const Scheduler: FC<SchedulerProps> = ({
-  name,
+  // name,
   selected,
   icalAvailability,
   duration = 30,
