@@ -33,6 +33,7 @@ export const converters = {
         text={tag.getText()}
         name={tag.attributes.name}
         value={tag.attributes.value}
+        type={(tag.attributes.type as 'submit' | 'button') || 'submit'}
       />
     );
   },
