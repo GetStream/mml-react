@@ -272,8 +272,9 @@ Array [
   />,
   <Scheduler
     duration={30}
-    full_day={false}
+    fullDay={false}
     interval={30}
+    name="massage_appointment"
     selected="2020-11-16T10:30:00.000Z"
   />,
   <Button
@@ -313,37 +314,124 @@ Array [
     >
       
       <div
-        className="mml-loader "
+        className="mml-datepicker"
       >
-        <span
-          className="mml-progress"
-          role="progressbar"
-          style={
-            Object {
-              "color": undefined,
-              "height": undefined,
-              "width": undefined,
-            }
-          }
-        >
-          <svg
-            className="mml-progress__svg"
-            viewBox="22 22 44 44"
-          >
-            <circle
-              className="mml-progress__circle"
-              cx={44}
-              cy={44}
-              fill="none"
-              r={20.2}
-              strokeWidth={3.6}
-            />
-          </svg>
-        </span>
+        <input
+          name="massage_appointment"
+          type="hidden"
+          value="November 16, 2020 10:30 AM"
+        />
         <div
-          className="mml-loader__text"
+          className="mml-datepicker__select mml-datepicker__date"
         >
-          Loading availability
+          <div
+            style={
+              Object {
+                "WebkitOverflowScrolling": "touch",
+                "height": "100%",
+                "outline": "none",
+                "overflowY": "auto",
+                "position": "relative",
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginTop": "0px",
+                  }
+                }
+              >
+                <footer>
+                  <div
+                    style={
+                      Object {
+                        "padding": "2rem",
+                      }
+                    }
+                  />
+                </footer>
+              </div>
+            </div>
+            <div
+              style={
+                Object {
+                  "height": "0px",
+                  "position": "absolute",
+                  "top": 0,
+                }
+              }
+            >
+               
+            </div>
+          </div>
+        </div>
+        <div
+          className="mml-datepicker__select mml-datepicker__time"
+        >
+          <div
+            style={
+              Object {
+                "WebkitOverflowScrolling": "touch",
+                "height": "100%",
+                "outline": "none",
+                "overflowY": "auto",
+                "position": "relative",
+              }
+            }
+            tabIndex={0}
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginTop": "0px",
+                  }
+                }
+              >
+                <footer>
+                  <div
+                    style={
+                      Object {
+                        "padding": "2rem",
+                      }
+                    }
+                  />
+                </footer>
+              </div>
+            </div>
+            <div
+              style={
+                Object {
+                  "height": "0px",
+                  "position": "absolute",
+                  "top": 0,
+                }
+              }
+            >
+               
+            </div>
+          </div>
         </div>
       </div>
     </div>
