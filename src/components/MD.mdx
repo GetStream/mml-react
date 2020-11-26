@@ -18,7 +18,7 @@ Allows to render markdown content within an mml attachment.
 
 ```xml
 <mml>
-  <md>hello **world** and #hi. Note how not all markdown functions are allowed. https://getstream.io/react-native-activity-feed/tutorial/ is nice</md>
+  <md>hello **world** and #hi. Note how not all markdown functions are allowed. [GetStream](https://getstream.io/react-native-activity-feed/tutorial/) is nice</md>
 </mml>
 ```
 
@@ -28,7 +28,41 @@ Allows to render markdown content within an mml attachment.
   <MML
     source={`
     <mml>
-      <md>hello **world** and #hi. Note how not all markdown functions are allowed. https://getstream.io/react-native-activity-feed/tutorial/ is nice</md>
+      <md>hello **world** and #hi. Note how not all markdown functions are allowed. [GetStream](https://getstream.io/react-native-activity-feed/tutorial/) is nice</md>
+    </mml>
+  `}
+  />
+</Playground>
+
+## With a lot of rich text
+
+*Note that `\n` are only here for this live playground example*.
+
+<Playground>
+  <MML
+    source={`
+    <mml>
+      <md>*Markdown*
+> A blockquote with some nice thinking and a [link to GetStream](https://getstream.io/react-native-activity-feed/tutorial/)
+\n
+**Code**\n
+Some \`inline code\` and some\n
+    &lt;code&gt;self-referential code&lt;/code&gt;
+\n
+**Unordered lists**
+- Create a list by starting a line with \`-\`
+- Sub-lists are made by indenting 2 spaces:
+  - Ac tristique libero volutpat at
+  - Facilisis in pretium nisl aliquet
+  - Nulla volutpat aliquam velit
+- Very easy!
+\n
+**Ordered lists**
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+1. You can use sequential numbers...
+      </md>
     </mml>
   `}
   />
