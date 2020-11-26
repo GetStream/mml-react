@@ -27,11 +27,45 @@ Buttons make common actions more obvious and help users more easily perform them
 ## Basic usage
 
 <Playground>
-  <Button text="Send" name="send" value="green" />
+  <MML
+    source={`
+    <button name="action" value="activate" href="https://getstream.io">
+      A link to GetStream
+    </button>
+  `}
+  />
 </Playground>
 
-## With different variants
+## With `floating` variant
 
 <Playground>
-  <Button text="Submit" name="submit" variant="floating" />
+  <MML
+    source={`
+    <button name="action" value="activate" variant="floating">
+      A floating button
+    </button>
+  `}
+  />
+</Playground>
+
+## With icon and text
+
+<Playground>
+  <MML
+    source={`
+    <button name="action" value="activate" icon="people">
+      Send to all
+    </button>
+  `}
+  />
+</Playground>
+
+## With only an icon
+
+<Playground>
+  <MML
+    source={`
+    <button name="action" value="activate" icon="shopping_cart"></button>
+  `}
+  />
 </Playground>
