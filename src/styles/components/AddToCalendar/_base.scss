@@ -3,4 +3,11 @@
 @import '../CardHeader/base';
 
 @include mml-component('add-to-calendar') {
+  max-width: $mml-addtocalendar-max-width;
+
+  // Context: me message
+  // ---------------------------------------------------------------------------
+  @include mml-me() {
+    margin-left: auto;
+  }
 }

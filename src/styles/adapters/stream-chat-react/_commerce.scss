@@ -90,11 +90,7 @@
   /// Component: md
   /// __________________________________________________________________________
   @include mml-component('md') {
-    min-height: 32px;
-    padding: $mml-md-padding-y $mml-md-padding-x;
     color: $mml-md-color;
-    background: $mml-md-bg;
-    border: $mml-border;
   }
 
   /// Component: number
@@ -104,14 +100,12 @@
     background: $mml-number-bg;
 
     // number btn control
-    &__btn {
-      &--dec {
-        margin-left: $mml-number__btn-margin-x;
-      }
+    &--dec {
+      margin-left: $mml-number__btn-margin-x;
+    }
 
-      &--inc {
-        margin-right: $mml-number__btn-margin-x;
-      }
+    &--inc {
+      margin-right: $mml-number__btn-margin-x;
     }
   }
 

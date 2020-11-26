@@ -6,10 +6,14 @@
   color: $mml-card-header-color;
   background: $mml-card-header-bg;
 
-  // @include mml-component('icon') {}
+  @include mml-component('icon') {
+    padding-left: $mml-card-header-padding-x;
+    // bring closer the text only if icon is there, it might not be
+    margin-right: -($mml-card-header-padding-x / 2);
+  }
 
   &__text {
-    padding-left: $mml-card-header-padding-x;
+    padding: 0 $mml-card-header-padding-x;
     font-weight: $mml-card-header-font-weight;
   }
 }

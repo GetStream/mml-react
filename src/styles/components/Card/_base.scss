@@ -1,8 +1,11 @@
 @include mml-component('card') {
+  width: 100%;
   overflow: hidden;
   background: $mml-card-bg;
 
   @include mml-component('btnlist') {
     font-size: $mml-card-body-font-size;
+    max-width: none;
+    border: 0;
   }
 }

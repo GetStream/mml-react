@@ -26,6 +26,7 @@ $mml-theme: (
 $mml-prefix: 'mml-' !default;
 $mml-selector-wrapper-message-self: '.me' !default;
 $mml-spacer: 10px !default;
+$mml-max-width: 60% !default;
 $mml-border-radius: 16px !default;
 $mml-border-radius-base: 0px !default;
 $mml-border-style: solid !default;
@@ -38,14 +39,18 @@ $mml-font-base: $mml-font-sans !default;
 $mml-font-size: 15px !default;
 $mml-icon-size: 20px !default;
 
+// AddToCalendar:
+// -----------------------------------------------------------------------------
+$mml-addtocalendar-max-width: $mml-max-width !default;
+
 // Button:
 // -----------------------------------------------------------------------------
 $mml-btn-font-family: $mml-font-sans !default;
 $mml-btn-font-weight: bold !default;
-$mml-btn-font-size: inherit !default;
+$mml-btn-font-size: 15px !default;
 $mml-btn-text-transform: none !default;
-$mml-btn-max-width: 60% !default;
-$mml-btn-padding-y: 6px !default;
+$mml-btn-max-width: $mml-max-width !default;
+$mml-btn-padding-y: 5px !default;
 $mml-btn-padding-x: 16px !default;
 $mml-btn-border-radius: $mml-border-radius !default;
 $mml-btn-border-width: $mml-border-width !default;
@@ -74,16 +79,18 @@ $mml-btnlist-max-width: $mml-btn-max-width !default;
 $mml-btnlist-bg: $mml-btn-bg !default;
 $mml-btnlist-border-width: $mml-btn-border-width !default;
 $mml-btnlist-border-color: mml-theme(stroke) !default;
-$mml-btnlist__btn-with-icon-color: mml-theme(text-high-emphasis) !default;
+$mml-btnlist__btn-padding-y: 11px !default;
+$mml-btnlist__btn-padding-x: $mml-btn-padding-x !default;
+$mml-btnlist__btn--with-icon-color: mml-theme(text-high-emphasis) !default;
+$mml-btnlist__btn--with-icon-font-weight: normal !default;
 
 // Card:
 // -----------------------------------------------------------------------------
 $mml-card-bg: mml-theme(card-alt-bg) !default;
 $mml-card-header-font-size: 13px !default;
 $mml-card-header-font-weight: bold !default;
-$mml-card-header-padding-y: 13px !default;
-$mml-card-header-padding-x: 13px !default;
-$mml-card-header-opacity: 0.3 !default;
+$mml-card-header-padding-y: 16px !default;
+$mml-card-header-padding-x: 16px !default;
 $mml-card-header-bg: mml-theme(card-bg) !default;
 $mml-card-header-color: mml-theme(text-mid-emphasis) !default;
 $mml-card-body-font-size: 14px !default;
@@ -147,15 +154,14 @@ $mml-progress-animation-ease: ease-in-out !default;
 // MD:
 // -----------------------------------------------------------------------------
 $mml-md-padding-y: 5px !default;
-$mml-md-padding-x: 10px !default;
-$mml-md-bg: transparent !default;
 $mml-md-color: mml-theme(text-high-emphasis) !default;
 $mml-md-font-size: inherit !default;
-$mml-md-background: mml-theme(card-bg) !default;
-$mml__code-bg: mml-theme(stroke) !default;
-$mml__code-color: #e83e8c !default;
-$mml__code-padding: 2px 4px !default;
-$mml__code-font-size: 87.5% !default;
+$mml-md__code-bg: mml-theme(stroke) !default;
+$mml-md__code-color: #e83e8c !default;
+$mml-md__code-padding: 2px 4px !default;
+$mml-md__code-font-size: 87.5% !default;
+$mml-md__blockquote-border-left: 3px solid mml-theme(card-bg) !default;
+$mml-md__link-color: mml-theme(primary-accent) !default;
 
 // Number:
 // -----------------------------------------------------------------------------
