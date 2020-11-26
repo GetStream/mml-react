@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useCallback, FC, ComponentType, FormEvent } from 'react';
+import React, { useState, useMemo, useCallback, useRef, FC, ComponentType, FormEvent } from 'react';
+import { TreeType } from '../parser/tree';
 
 import { Parse, ConvertorType } from '../parser';
 import { Loader as LoaderComponent, LoaderProps } from '../components/Loader';
@@ -36,6 +37,7 @@ export const MML: FC<MMLProps> = ({
 }) => {
   const [error, setError] = useState('');
   const [submitState, setSubmitState] = useState({ loading: false, error: '', success: '' });
+  const type = useRef<TreeType>(undefined);
 
   const handleSubmit = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
@@ -59,7 +61,9 @@ export const MML: FC<MMLProps> = ({
 
   const children = useMemo(() => {
     try {
-      return Parse(source, converters).toReact();
+      const tree = Parse(source, converters);
+      type.current = tree.type;
+      return tree.toReact();
     } catch (e) {
       console.warn('mml parsing error: ', source, e);
       setError("This chat message has invalid formatting and can't be shown");
@@ -67,14 +71,16 @@ export const MML: FC<MMLProps> = ({
     }
   }, [source, converters]);
 
+  const innerClassName = type.current === 'card' ? 'mml-card' : 'mml-wrap';
+
   return (
     <div className={`mml-container ${className}`}>
       {error ? (
-        <div className="mml-wrap">
+        <div className={innerClassName}>
           <Error error={error} />
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mml-wrap">
+        <form onSubmit={handleSubmit} className={innerClassName}>
           {children}
           {submitState.loading && <Loader loading={submitState.loading} />}
           {submitState.success && <Success success={submitState.success} />}

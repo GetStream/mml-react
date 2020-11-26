@@ -59,3 +59,17 @@ In case of an error, you can override default Error component
 <Playground>
   <MML source="<invalid />" Error={({ error }) => <div>{error}</div>} />
 </Playground>
+
+## With `card` type
+
+Shows the mml content inside a card like UI, see the [`Number` component usage](/components/number) as a further example.
+
+<Playground>
+  <MML source={`
+      <mml type="card">
+        <input name="answer" value="42" />
+        <button>Confirm</button>
+      </mml>
+    `}
+  />
+</Playground>

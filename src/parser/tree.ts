@@ -4,6 +4,8 @@ import { Element as XmlElement } from '@rgrove/parse-xml';
 import { MMLTag } from './MMLTag';
 import { converters as defaultConverters, ConvertorType } from './converters';
 
+export type TreeType = 'card' | undefined;
+
 /**
  * Tree - The tree object for MML tags
  */
@@ -12,12 +14,15 @@ export class Tree {
   children: MMLTag[];
   converters: Record<string, ConvertorType>;
   name?: string;
+  /** The type attribute of <mml> determine how its inner content is visually displayed */
+  type: TreeType;
 
   constructor(node: XmlElement, children: MMLTag[], customConvertors?: Record<string, ConvertorType>) {
     this.node = node;
     this.children = children;
     this.converters = { ...defaultConverters, ...customConvertors };
     this.name = node.attributes.name;
+    this.type = node.attributes.type === 'card' ? 'card' : undefined;
   }
 
   /**
