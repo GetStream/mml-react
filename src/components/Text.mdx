@@ -8,7 +8,7 @@ import { Text } from './Text.tsx';
 
 # Text
 
-Display a nicely formatted text.
+Display a simple piece of text.
 
 ## Properties
 
@@ -27,5 +27,13 @@ Display a nicely formatted text.
 ## Basic usage
 
 <Playground>
-  <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+  <MML
+    source={`
+    <mml>
+      <text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </text>
+    </mml>
+  `}
+  />
 </Playground>

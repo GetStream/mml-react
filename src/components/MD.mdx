@@ -27,9 +27,13 @@ Allows to render markdown content within an mml attachment.
 ## Basic usage
 
 <Playground>
-  <MD
-    text={
-      'hello **world** and #hi. Note how not all markdown functions are allowed. https://getstream.io/react-native-activity-feed/tutorial/ is nice'
-    }
+  <MML
+    source={`
+    <mml>
+      <md>
+        hello **world** and #hi. Note how not all markdown functions are allowed. https://getstream.io/react-native-activity-feed/tutorial/ is nice
+      </md>
+    </mml>
+  `}
   />
 </Playground>

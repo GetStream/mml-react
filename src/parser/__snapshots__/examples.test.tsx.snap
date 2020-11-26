@@ -34,9 +34,9 @@ Object {
         Object {
           "attributes": Object {
             "duration": "30",
-            "interval": "30",
             "name": "massage_appointment",
             "selected": "2020-11-16T10:30:00.000Z",
+            "timeInterval": "15",
           },
           "children": Array [],
           "name": "scheduler",
@@ -117,18 +117,18 @@ Tree {
     MMLTag {
       "attributes": Object {
         "duration": "30",
-        "interval": "30",
         "name": "massage_appointment",
         "selected": "2020-11-16T10:30:00.000Z",
+        "timeInterval": "15",
       },
       "children": Array [],
       "name": "scheduler",
       "node": Object {
         "attributes": Object {
           "duration": "30",
-          "interval": "30",
           "name": "massage_appointment",
           "selected": "2020-11-16T10:30:00.000Z",
+          "timeInterval": "15",
         },
         "children": Array [],
         "name": "scheduler",
@@ -220,9 +220,9 @@ Tree {
       Object {
         "attributes": Object {
           "duration": "30",
-          "interval": "30",
           "name": "massage_appointment",
           "selected": "2020-11-16T10:30:00.000Z",
+          "timeInterval": "15",
         },
         "children": Array [],
         "name": "scheduler",
@@ -272,11 +272,13 @@ Array [
     text="When would you like to schedule your massage?"
   />,
   <Scheduler
+    allowPast={false}
+    dateInterval={1}
     duration={30}
     fullDay={false}
-    interval={30}
     name="massage_appointment"
     selected="2020-11-16T10:30:00.000Z"
+    timeInterval={15}
   />,
   <Button
     name="action"
@@ -320,7 +322,7 @@ Array [
         <input
           name="massage_appointment"
           type="hidden"
-          value="November 16, 2020 10:30 AM"
+          value="2020-11-16T10:30:00.000Z"
         />
         <div
           className="mml-datepicker__select mml-datepicker__date"
@@ -438,7 +440,7 @@ Array [
     </div>
   </div>,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="action"
     onClick={[Function]}
     type="submit"
@@ -911,7 +913,7 @@ Array [
     className="mml-btnlist  mml--floating"
   >
     <button
-      className="mml-btn  mml--floating"
+      className="mml-btn  mml-btn--text mml--floating"
       name="side"
       onClick={[Function]}
       type="submit"
@@ -920,7 +922,7 @@ Array [
       Yes!
     </button>
     <button
-      className="mml-btn  mml--floating"
+      className="mml-btn  mml-btn--text mml--floating"
       name="side"
       onClick={[Function]}
       type="submit"
@@ -991,7 +993,85 @@ Object {
           "attributes": Object {},
           "children": Array [
             Object {
-              "text": "And here is variant \`floating\`:",
+              "text": "Button with \`icon\` and text:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "md",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "icon": "shopping_cart",
+            "name": "action",
+            "value": "Activate",
+          },
+          "children": Array [
+            Object {
+              "text": "With icon",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Icon only button:",
+              "toJSON": [Function],
+              "type": "text",
+            },
+          ],
+          "name": "md",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
+            "icon": "shopping_cart",
+            "name": "action",
+            "value": "Activate",
+          },
+          "children": Array [],
+          "name": "button",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+  ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {},
+          "children": Array [
+            Object {
+              "text": "Button \`floating\` variant:",
               "toJSON": [Function],
               "type": "text",
             },
@@ -1115,7 +1195,7 @@ Tree {
           "children": undefined,
           "name": "text",
           "node": Object {
-            "text": "And here is variant \`floating\`:",
+            "text": "Button with \`icon\` and text:",
             "toJSON": [Function],
             "type": "text",
           },
@@ -1126,7 +1206,122 @@ Tree {
         "attributes": Object {},
         "children": Array [
           Object {
-            "text": "And here is variant \`floating\`:",
+            "text": "Button with \`icon\` and text:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "md",
+        "toJSON": [Function],
+        "type": "element",
+      },
+    },
+    MMLTag {
+      "attributes": Object {
+        "icon": "shopping_cart",
+        "name": "action",
+        "value": "Activate",
+      },
+      "children": Array [
+        MMLTag {
+          "attributes": Object {},
+          "children": undefined,
+          "name": "text",
+          "node": Object {
+            "text": "With icon",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        },
+      ],
+      "name": "button",
+      "node": Object {
+        "attributes": Object {
+          "icon": "shopping_cart",
+          "name": "action",
+          "value": "Activate",
+        },
+        "children": Array [
+          Object {
+            "text": "With icon",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "button",
+        "toJSON": [Function],
+        "type": "element",
+      },
+    },
+    MMLTag {
+      "attributes": Object {},
+      "children": Array [
+        MMLTag {
+          "attributes": Object {},
+          "children": undefined,
+          "name": "text",
+          "node": Object {
+            "text": "Icon only button:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        },
+      ],
+      "name": "md",
+      "node": Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "text": "Icon only button:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "md",
+        "toJSON": [Function],
+        "type": "element",
+      },
+    },
+    MMLTag {
+      "attributes": Object {
+        "icon": "shopping_cart",
+        "name": "action",
+        "value": "Activate",
+      },
+      "children": Array [],
+      "name": "button",
+      "node": Object {
+        "attributes": Object {
+          "icon": "shopping_cart",
+          "name": "action",
+          "value": "Activate",
+        },
+        "children": Array [],
+        "name": "button",
+        "toJSON": [Function],
+        "type": "element",
+      },
+    },
+    MMLTag {
+      "attributes": Object {},
+      "children": Array [
+        MMLTag {
+          "attributes": Object {},
+          "children": undefined,
+          "name": "text",
+          "node": Object {
+            "text": "Button \`floating\` variant:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        },
+      ],
+      "name": "md",
+      "node": Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "text": "Button \`floating\` variant:",
             "toJSON": [Function],
             "type": "text",
           },
@@ -1247,7 +1442,85 @@ Tree {
         "attributes": Object {},
         "children": Array [
           Object {
-            "text": "And here is variant \`floating\`:",
+            "text": "Button with \`icon\` and text:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "md",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      Object {
+        "text": "
+  ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      Object {
+        "attributes": Object {
+          "icon": "shopping_cart",
+          "name": "action",
+          "value": "Activate",
+        },
+        "children": Array [
+          Object {
+            "text": "With icon",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "button",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      Object {
+        "text": "
+  ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "text": "Icon only button:",
+            "toJSON": [Function],
+            "type": "text",
+          },
+        ],
+        "name": "md",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      Object {
+        "text": "
+  ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      Object {
+        "attributes": Object {
+          "icon": "shopping_cart",
+          "name": "action",
+          "value": "Activate",
+        },
+        "children": Array [],
+        "name": "button",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      Object {
+        "text": "
+  ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      Object {
+        "attributes": Object {},
+        "children": Array [
+          Object {
+            "text": "Button \`floating\` variant:",
             "toJSON": [Function],
             "type": "text",
           },
@@ -1305,7 +1578,25 @@ Array [
     value="Activate"
   />,
   <MD
-    text="And here is variant \`floating\`:"
+    text="Button with \`icon\` and text:"
+  />,
+  <Button
+    icon="shopping_cart"
+    name="action"
+    text="With icon"
+    value="Activate"
+  />,
+  <MD
+    text="Icon only button:"
+  />,
+  <Button
+    icon="shopping_cart"
+    name="action"
+    text=""
+    value="Activate"
+  />,
+  <MD
+    text="Button \`floating\` variant:"
   />,
   <Button
     name="action"
@@ -1334,7 +1625,7 @@ Array [
     </p>
   </div>,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="action"
     onClick={[Function]}
     type="submit"
@@ -1346,15 +1637,61 @@ Array [
     className="mml-md"
   >
     <p>
-      And here is variant 
+      Button with 
       <code>
-        floating
+        icon
       </code>
-      :
+       and text:
     </p>
   </div>,
   <button
-    className="mml-btn  mml--floating"
+    className="mml-btn  mml-btn--with-icon"
+    name="action"
+    onClick={[Function]}
+    type="submit"
+    value="Activate"
+  >
+    <i
+      className="mml-icon material-icons"
+    >
+      shopping_cart
+    </i>
+    With icon
+  </button>,
+  <div
+    className="mml-md"
+  >
+    <p>
+      Icon only button:
+    </p>
+  </div>,
+  <button
+    className="mml-btn  mml-btn--icon"
+    name="action"
+    onClick={[Function]}
+    type="submit"
+    value="Activate"
+  >
+    <i
+      className="mml-icon material-icons"
+    >
+      shopping_cart
+    </i>
+    
+  </button>,
+  <div
+    className="mml-md"
+  >
+    <p>
+      Button 
+      <code>
+        floating
+      </code>
+       variant:
+    </p>
+  </div>,
+  <button
+    className="mml-btn  mml-btn--text mml--floating"
     name="action"
     onClick={[Function]}
     type="submit"
@@ -1637,7 +1974,7 @@ END:VCALENDAR"
       </a>
       <a
         className="mml-btn"
-        href="https://outlook.live.com/owa/?rru=addevent&startdt=2019-12-24T14%3A42%3A54Z&enddt=2019-12-24T15%3A42%3A54Z&subject=Massage%20with%20Jessica&allday=false&uid=00000000-0000-0000-0000-000000000000&path=/calendar/view/Month"
+        href="https://outlook.live.com/owa/?rru=addevent&startdt=2019-12-24T14%3A42%3A54Z&enddt=2019-12-24T15%3A42%3A54Z&subject=Massage%20with%20Jessica&allday=false&path=/calendar/view/Month"
         onClick={[Function]}
         rel="nofollow noreferrer noopener"
         target="_blank"
@@ -3934,9 +4271,9 @@ Array [
                   </p>
                 </div>
                 <button
-                  className="mml-btn "
+                  className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
@@ -3987,9 +4324,9 @@ Array [
                   </p>
                 </div>
                 <button
-                  className="mml-btn "
+                  className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
@@ -4040,9 +4377,9 @@ Array [
                   </p>
                 </div>
                 <button
-                  className="mml-btn "
+                  className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
@@ -4093,9 +4430,9 @@ Array [
                   </p>
                 </div>
                 <button
-                  className="mml-btn "
+                  className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
@@ -4747,7 +5084,7 @@ Array [
     className="mml-btnlist "
   >
     <button
-      className="mml-btn "
+      className="mml-btn  mml-btn--text"
       name="times"
       onClick={[Function]}
       type="submit"
@@ -4756,7 +5093,7 @@ Array [
       9:30
     </button>
     <button
-      className="mml-btn "
+      className="mml-btn  mml-btn--text"
       name="times"
       onClick={[Function]}
       type="submit"
@@ -4765,7 +5102,7 @@ Array [
       10:00
     </button>
     <button
-      className="mml-btn "
+      className="mml-btn  mml-btn--text"
       name="times"
       onClick={[Function]}
       type="submit"
@@ -4774,7 +5111,7 @@ Array [
       11:30
     </button>
     <button
-      className="mml-btn "
+      className="mml-btn  mml-btn--text"
       name="times"
       onClick={[Function]}
       type="submit"
@@ -5269,7 +5606,7 @@ Array [
     className="mml-btnlist "
   >
     <button
-      className="mml-btn "
+      className="mml-btn  mml-btn--text"
       name="side"
       onClick={[Function]}
       type="submit"
@@ -5278,7 +5615,7 @@ Array [
       Salad
     </button>
     <button
-      className="mml-btn "
+      className="mml-btn  mml-btn--text"
       name="side"
       onClick={[Function]}
       type="submit"
@@ -5287,7 +5624,7 @@ Array [
       Baked Potatoes
     </button>
     <button
-      className="mml-btn "
+      className="mml-btn  mml-btn--text"
       name="side"
       onClick={[Function]}
       type="submit"
@@ -5677,7 +6014,7 @@ Array [
     </span>
   </div>,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="confirm"
     onClick={[Function]}
     type="submit"
@@ -5921,7 +6258,7 @@ Array [
     It looks like your credit card isn't activated yet, activate it now:
   </div>,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="action"
     onClick={[Function]}
     type="submit"
@@ -6228,7 +6565,7 @@ Array [
     value=""
   />,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="send"
     onClick={[Function]}
     type="submit"
@@ -7426,7 +7763,7 @@ Array [
     </div>
   </div>,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="authorized"
     onClick={[Function]}
     type="submit"
@@ -7435,7 +7772,7 @@ Array [
     Yes
   </button>,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="authorized"
     onClick={[Function]}
     type="submit"

@@ -9,7 +9,11 @@ const examples = [
     mml: `<mml name="support">
   <md>Just showing \`button\` *variants*:</md>
   <button name="action" value="Activate">Regular button</button>
-  <md>And here is variant \`floating\`:</md>
+  <md>Button with \`icon\` and text:</md>
+  <button name="action" value="Activate" icon="shopping_cart">With icon</button>
+  <md>Icon only button:</md>
+  <button name="action" value="Activate" icon="shopping_cart"></button>
+  <md>Button \`floating\` variant:</md>
   <button variant="floating" name="action" value="Activate">Floating button</button>
 </mml>`,
   },
@@ -102,7 +106,7 @@ const examples = [
     description: 'Datetime picker with availability using ical',
     mml: `<mml>
 	<text>When would you like to schedule your massage?</text>
-	<scheduler name="massage_appointment" duration="30" interval="30" selected="2020-11-16T10:30:00.000Z"/>
+	<scheduler name="massage_appointment" duration="30" timeInterval="15" selected="2020-11-16T10:30:00.000Z"/>
   <button name="action" value="reserve">Reserve</button>
 </mml>`,
   },

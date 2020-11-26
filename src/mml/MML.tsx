@@ -35,6 +35,7 @@ export const MML: FC<MMLProps> = ({
   Error = ErrorComponent,
   Success = SuccessComponent,
 }) => {
+  const [mmlName, setMMLName] = useState('');
   const [error, setError] = useState('');
   const [submitState, setSubmitState] = useState({ loading: false, error: '', success: '' });
   const type = useRef<TreeType>(undefined);
@@ -42,27 +43,37 @@ export const MML: FC<MMLProps> = ({
   const handleSubmit = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      if (!onSubmit) return console.warn('missing submit handler');
+
+      const state: Record<string, any> = {};
+      new FormData(event.currentTarget).forEach((value, key) => (state[key] = value));
+
+      // include mml_name in the data
+      if (mmlName) state.mml_name = mmlName;
+
+      // include clicked button value in the callback
+      const button = document.activeElement as HTMLButtonElement;
+      if (button && button.type === 'submit' && button.name && button.value) {
+        state[button.name] = button.value;
+      }
+
+      if (!onSubmit) return console.warn('Forgot to pass onSubmit prop to <MML/>? payload:', state);
 
       try {
         setSubmitState({ loading: true, error: '', success: '' });
-        const state: Record<string, any> = {};
-        const fd = new FormData(event.currentTarget);
-        fd.forEach((value, key) => (state[key] = value));
-
         await onSubmit(state);
         setSubmitState({ loading: false, error: '', success: 'submitted' });
       } catch (e) {
         setSubmitState({ loading: false, error: 'something is broken', success: '' });
       }
     },
-    [onSubmit],
+    [onSubmit, mmlName],
   );
 
   const children = useMemo(() => {
     try {
       const tree = Parse(source, converters);
       type.current = tree.type;
+      if (tree.name) setMMLName(tree.name);
       return tree.toReact();
     } catch (e) {
       console.warn('mml parsing error: ', source, e);
