@@ -12,7 +12,7 @@ export type ButtonProps = {
   name?: string;
   /** The value of the button */
   value?: string;
-  /** The url to open */
+  /** If the button should open a link use this prop */
   url?: string;
   /** Button style variant */
   variant?: 'floating';
@@ -21,10 +21,9 @@ export type ButtonProps = {
 };
 
 /**
- * A simple Button
+ * Button can be used to open a URL, submit the form or trigger a select when clicked
  */
 export const Button: FC<ButtonProps> = ({ className = '', text, name, value, url = '', variant, icon }) => {
-  // TODO: fix submit handler for Button list
   if (icon) {
     className += text ? ' mml-btn--with-icon' : ' mml-btn--icon';
   } else {
@@ -37,13 +36,13 @@ export const Button: FC<ButtonProps> = ({ className = '', text, name, value, url
   return (
     <button
       className={`mml-btn ${className}`}
-      type="submit"
+      type={url ? 'button' : 'submit'}
       name={name}
       value={value}
       onClick={(event: SyntheticEvent) => {
         if (url) {
+          event.preventDefault();
           window.location.href = sanitizeUrl(url);
-          return event.preventDefault();
         }
       }}
     >

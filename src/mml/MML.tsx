@@ -48,6 +48,12 @@ export const MML: FC<MMLProps> = ({
         const fd = new FormData(event.currentTarget);
         fd.forEach((value, key) => (state[key] = value));
 
+        // include clicked button value in the callback
+        const button = document.activeElement as HTMLButtonElement;
+        if (button && button.type === 'submit' && button.name && button.value) {
+          state[button.name] = button.value;
+        }
+
         await onSubmit(state);
         setSubmitState({ loading: false, error: '', success: 'submitted' });
       } catch (e) {

@@ -4266,7 +4266,7 @@ Array [
                 <button
                   className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
@@ -4319,7 +4319,7 @@ Array [
                 <button
                   className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
@@ -4372,7 +4372,7 @@ Array [
                 <button
                   className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
@@ -4425,7 +4425,7 @@ Array [
                 <button
                   className="mml-btn  mml-btn--text"
                   onClick={[Function]}
-                  type="submit"
+                  type="button"
                 >
                   View Product
                 </button>
