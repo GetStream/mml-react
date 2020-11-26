@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import formatDate from 'date-fns/format';
-import { isWithinInterval, addMinutes } from 'date-fns';
+import dayjs, { Dayjs } from 'dayjs';
+import isBetween from 'dayjs/plugin/isBetween';
+
 import { DatePickerProps } from './DatePicker';
 import {
   DatePickerSelect,
@@ -9,35 +10,28 @@ import {
   DatePickerSelectItemProps,
 } from './DatePickerSelect';
 
+dayjs.extend(isBetween);
+
 export type DatePickerTimeProps = DatePickerSelectReadyProps & {
   format: NonNullable<DatePickerProps['timeFormat']>;
   interval: NonNullable<DatePickerProps['timeInterval']>;
-  value: Date;
+  value: Dayjs;
 };
 
 /**
  * Get item data
  */
 const getItemData = (props: DatePickerSelectItemProps) => {
-  const { idx, format, interval } = props;
-  const value = transformIdxToValue(props);
+  const { idx, value, format, interval } = props;
+  const newValue = dayjs(value).add(idx * interval, 'minute');
 
   return {
     idx,
     interval,
-    value,
-    displayValue: formatDate(value, format),
+    value: newValue,
+    displayValue: dayjs(newValue).format(format),
   };
 };
-
-/**
- * Transform given idx in date
- */
-function transformIdxToValue(props: DatePickerSelectItemProps) {
-  const { idx, value, interval } = props;
-  let newValue = addMinutes(value, idx * interval);
-  return newValue;
-}
 
 /**
  * Generate item component
@@ -45,22 +39,14 @@ function transformIdxToValue(props: DatePickerSelectItemProps) {
 export const DatePickerTimeItem: DatePickerSelectProps['Item'] = (item, selected, handleClick) => {
   const { interval, value, displayValue } = item;
 
-  const isSelected = isWithinInterval(selected, {
-    start: value,
-    end: addMinutes(value, interval - 1),
-  });
-
-  let className = `mml-datepicker__item mml-datepicker__item--time`;
-
-  if (isSelected) {
-    className += ' mml-datepicker__item--selected';
-  }
+  const isSelected = dayjs(selected).isBetween(value, dayjs(value).add(interval - 1, 'minute'), 'minute', '[]');
 
   return (
     <div
-      className={className}
+      className={`mml-datepicker__item mml-datepicker__item--time ${
+        isSelected ? 'mml-datepicker__item--selected' : ''
+      }`}
       onClick={() => handleClick(item)}
-      // title={formatDate(value, 'HH:mm')}
     >
       {displayValue}
     </div>

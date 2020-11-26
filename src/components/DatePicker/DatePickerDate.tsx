@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import formatDate from 'date-fns/format';
-import { isSameDay, addDays } from 'date-fns';
+import dayjs, { Dayjs } from 'dayjs';
+
 import { DatePickerProps } from './DatePicker';
 import {
   DatePickerSelect,
@@ -13,57 +13,35 @@ export type DatePickerDateProps = DatePickerSelectReadyProps & {
   startDate: DatePickerProps['startDate'];
   format: NonNullable<DatePickerProps['dateFormat']>;
   interval: NonNullable<DatePickerProps['dateInterval']>;
-  value: Date;
+  value: Dayjs;
 };
 
 /**
  * Get item data
  */
 const getItemData = (props: DatePickerSelectItemProps) => {
-  const { idx, format, interval } = props;
-  const value = transformIdxToValue(props);
+  const { idx, value, format, interval } = props;
+  const newValue = dayjs(value).add(idx * interval, 'day');
 
   return {
     idx,
     interval,
-    value,
-    displayValue: formatDate(value, format),
+    value: newValue,
+    displayValue: dayjs(newValue).format(format),
   };
 };
-
-/**
- * Transform given idx in date
- */
-function transformIdxToValue(props: DatePickerSelectItemProps) {
-  const { idx, value, interval } = props;
-  let newValue = addDays(value, idx * interval);
-  return newValue;
-}
 
 /**
  * Generate item component
  */
 const DatePickerDateItem: DatePickerSelectProps['Item'] = (item, selected, handleClick) => {
   const { value, displayValue, interval } = item;
-  let isSelected;
-
-  if (interval === 1) {
-    isSelected = isSameDay(selected, value);
-  } else if (interval > 1) {
-    isSelected = isSameDay(selected, addDays(value, interval));
-  }
-
-  let className = `mml-datepicker__item mml-datepicker__item--day`;
-
-  if (isSelected) {
-    className += ' mml-datepicker__item--selected';
-  }
+  const isSelected = dayjs(selected).isSame(interval === 1 ? dayjs(value) : dayjs(value).add(interval, 'day'), 'day');
 
   return (
     <div
-      className={className}
+      className={`mml-datepicker__item mml-datepicker__item--day ${isSelected ? 'mml-datepicker__item--selected' : ''}`}
       onClick={() => handleClick(item)}
-      // title={formatDate(value, 'dd/MM/yyyy')}
     >
       {displayValue}
     </div>

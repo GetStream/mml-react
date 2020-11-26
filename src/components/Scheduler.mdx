@@ -36,7 +36,7 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
       <scheduler 
         name="appointment" 
         duration="30" 
-        interval="30"
+        timeInterval="15"
         selected="2020-11-16T10:30:00.000Z"
       />
       <button name="action" value="reserve">Reserve</button>
@@ -59,6 +59,8 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 
 ## With ICal availability URL
 
+Notice Dec 25 and Dec 26 are removed from the dates
+
 <Playground>
   <MML
     source={`
@@ -67,8 +69,8 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
       <scheduler
         name="appointment"
         duration="30"
-        interval="30"
-        selected="2020-11-16T10:30:00.000Z"
+        timeInterval="40"
+        selected="2020-12-24T10:30:00.000Z"
         icalAvailability="https://srv-store1.gofile.io/download/OSUFP4/netherlands.ics"
       />
       <button name="action" value="reserve">Reserve</button>
