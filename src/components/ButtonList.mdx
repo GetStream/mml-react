@@ -14,7 +14,6 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
 
 <Props of={ButtonList} />
 
-
 ## MML string
 
 ```xml
@@ -33,7 +32,8 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
 ## Basic usage
 
 <Playground>
-  <MML source={`
+  <MML
+    source={`
     <button_list>
       <button name="side" value="yes">
         Yes!
@@ -42,13 +42,15 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
         No, thanks
       </button>
     </button_list>
-  `} />
+  `}
+  />
 </Playground>
 
 ## With `floating` variant
 
 <Playground>
-  <MML source={`
+  <MML
+    source={`
     <button_list variant="floating">
       <button variant="floating" name="side" value="yes">
         Yes!
@@ -57,5 +59,6 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
         No, thanks
       </button>
     </button_list>
-  `} />
+  `}
+  />
 </Playground>
