@@ -2,10 +2,18 @@
 
 @include mml-component('icon') {
   font-family: 'Material Icons';
-  @if $mml-icon-size != 24px { // as the default from material icons
+  line-height: $mml-icon-size;
+
+  @if $mml-icon-size != 24px {
+    // as the default from material icons
     font-size: $mml-icon-size;
   }
   @if $mml-icon-color != inherit {
     color: $mml-icon-color;
+  }
+
+  &__svg {
+    width: 1em;
+    height: 1em;
   }
 }

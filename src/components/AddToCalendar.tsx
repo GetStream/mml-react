@@ -1,4 +1,4 @@
-import React, { FC, SyntheticEvent } from 'react';
+import React, { FC, ReactElement, SyntheticEvent } from 'react';
 import dayjs from 'dayjs';
 import isMobile from 'is-mobile';
 import { v4 as uuid } from 'uuid';
@@ -6,6 +6,7 @@ import { v4 as uuid } from 'uuid';
 import { Card } from './Card';
 import { CardHeader } from './CardHeader';
 import { ButtonList } from './ButtonList';
+import { IconGoogle, IconMicrosoft, IconApple } from './Icon';
 
 const isIE = (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) as boolean;
 
@@ -50,15 +51,15 @@ export type AddToCalendarProps = AddToCalendarEvent & {
 // type AddToCalendarService = {
 //   id: string;
 //   label: string;
-//   icon?: string;
+//   Icon?: FC;
 // };
 type CalendarID = 'google' | 'apple' | 'outlook' | 'outlookcom';
 
-const CALENDAR_SERVICES: Array<{ id: CalendarID; label: string; icon: string }> = [
-  { id: 'google', label: 'Google', icon: 'add' },
-  { id: 'apple', label: 'Apple Calendar', icon: 'add' },
-  { id: 'outlook', label: 'Outlook', icon: 'add' },
-  { id: 'outlookcom', label: 'Outlook.com', icon: 'add' },
+const CALENDAR_SERVICES: Array<{ id: CalendarID; label: string; Icon: ReactElement }> = [
+  { id: 'google', label: 'Google', Icon: IconGoogle },
+  { id: 'apple', label: 'Apple Calendar', Icon: IconApple },
+  { id: 'outlook', label: 'Outlook', Icon: IconMicrosoft },
+  { id: 'outlookcom', label: 'Outlook.com', Icon: IconMicrosoft },
 ];
 
 /**
@@ -175,17 +176,16 @@ export const AddToCalendar: FC<AddToCalendarProps> = ({
     <Card className={`mml-add-to-calendar ${className}`}>
       <CardHeader icon="date_range" text="Add to My Calendar" />
       <ButtonList>
-        {CALENDAR_SERVICES.map((service) => (
+        {CALENDAR_SERVICES.map(({ id, label, Icon }) => (
           <a
-            key={service.id}
-            className="mml-btn"
+            key={id}
+            className={`mml-btn ${Icon && 'mml-btn--with-icon'}`}
             onClick={handleLinkClick}
-            href={buildUrl(event, service.id)}
+            href={buildUrl(event, id)}
             target="_blank"
             rel="nofollow noreferrer noopener"
           >
-            {/* <Icon name={service.icon} /> */}
-            {service.label}
+            {Icon} {label}
           </a>
         ))}
       </ButtonList>
