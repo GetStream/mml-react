@@ -11,6 +11,8 @@ import { Text } from './Text.tsx';
 
 It allows to define an event that a user can quickly add to her/his own calendar, we support Google, Apple and Outlook calendars.
 
+Internally this component uses [`Card`](/components/card), [`CardHeader`](/components/card-header) and [`ButtonList`](/components/button-list), therefore styles are inherited from those.
+
 ## Properties
 
 <Props of={AddToCalendar} />
@@ -20,7 +22,13 @@ It allows to define an event that a user can quickly add to her/his own calendar
 ```xml
 <mml>
   <text>The party is going to happen!</text>
-  <add_to_calendar title="Christmas party" start="2020-12-24T18:00:00.148Z" end="2020-12-26T15:00:00.148Z" description="The gift is your presence" location="Boulder, CO" />
+  <add_to_calendar
+    title="Christmas party"
+    start="2020-12-24T18:00:00.148Z"
+    end="2020-12-26T15:00:00.148Z"
+    description="The gift is your presence"
+    location="Boulder, CO"
+  />
 </mml>
 ```
 
@@ -29,37 +37,16 @@ It allows to define an event that a user can quickly add to her/his own calendar
 ### Basic
 
 <Playground>
-  <Text text="Your massage appointment has been confirmed!" />
-  <AddToCalendar
-    title="Massage with Julia"
-    start={new Date(2021, 1, 1, 10, 0, 0, 0)}
-    end={new Date(2021, 1, 1, 11, 0, 0, 0)}
-    location="Boulder, CO"
-    description="Please arrive 15 minutes early"
+  <MML
+    source={`
+    <text>The party is going to happen!</text>
+    <add_to_calendar 
+      title="Christmas party" 
+      start="2020-12-24T18:00:00.148Z" 
+      end="2020-12-26T15:00:00.148Z" 
+      description="The gift is your presence" 
+      location="Boulder, CO"
+    />
+  `}
   />
 </Playground>
-
-## With date strings
-
-<Playground>
-  <Text text="Your massage appointment has been confirmed!" />
-  <AddToCalendar
-    title="Massage with Julia"
-    start="01/02/2021 10:00:00"
-    end="01/02/2021 11:00:00"
-    location="Boulder, CO"
-    description="Please arrive 15 minutes early"
-  />
-</Playground>
-
-## Style customization
-
-Internally this component uses `Card`, `CardHeader` and [`ButtonList`](/components/button-list), therefore styles are inherited from those.
-
-### SCSS variables
-
-If your projects include a `sass` compilation step you might customize the overall look and feel of the component through `scss` variables, here are all the available ones with their default values:
-
-```scss
-
-```

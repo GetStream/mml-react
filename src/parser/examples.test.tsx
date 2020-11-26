@@ -9,7 +9,11 @@ const examples = [
     mml: `<mml name="support">
   <md>Just showing \`button\` *variants*:</md>
   <button name="action" value="Activate">Regular button</button>
-  <md>And here is variant \`floating\`:</md>
+  <md>Button with \`icon\` and text:</md>
+  <button name="action" value="Activate" icon="shopping_cart">With icon</button>
+  <md>Icon only button:</md>
+  <button name="action" value="Activate" icon="shopping_cart"></button>
+  <md>Button \`floating\` variant:</md>
   <button variant="floating" name="action" value="Activate">Floating button</button>
 </mml>`,
   },
