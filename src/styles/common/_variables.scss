@@ -89,7 +89,6 @@ $mml-btnlist__btn--with-icon-font-weight: normal !default;
 // Card:
 // -----------------------------------------------------------------------------
 $mml-card-max-width: $mml-max-width !default;
-$mml-card-bg: mml-theme(card-alt-bg) !default;
 $mml-card-border-color: mml-theme(stroke-low-emphasis) !default;
 $mml-card-border-width: $mml-border-width !default;
 $mml-card-border-style: $mml-border-style !default;
@@ -105,6 +104,7 @@ $mml-card-body-padding-y: $mml-spacer !default;
 $mml-card-body-padding-x: $mml-card-body-padding-y !default;
 $mml-card-body-font-size: 14px !default;
 $mml-card-body-color: mml-theme(text-high-emphasis) !default;
+$mml-card-body-bg: mml-theme(card-alt-bg) !default;
 $mml-card__btn-padding-y: $mml-btnlist__btn-padding-y !default;
 $mml-card__btn-padding-x: $mml-btnlist__btn-padding-x !default;
 $mml-card__btn-padding: $mml-card__btn-padding-y $mml-card__btn-padding-x !default;

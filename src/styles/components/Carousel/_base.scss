@@ -9,7 +9,11 @@
   .carousel__inner-slide {
     display: flex;
     flex-direction: column;
-    background: $mml-card-bg;
+
+    // everything in the the middle of a card is considered to be card-body
+    > *:not(:first-child):not(:last-child) {
+      background: $mml-card-body-bg;
+    }
 
     // components that as immediate children behave like card-body
     > #{mml-component(md)},
