@@ -75,17 +75,15 @@ export const MML: FC<MMLProps> = ({
     [onSubmit, tree],
   );
 
-  const innerClassName = tree?.type === 'card' ? 'mml-card' : 'mml-wrap';
-
   return (
     <div className={`mml-container ${className}`}>
       {error ? (
-        <div className={innerClassName}>
+        <div className="mml-wrap">
           <Error error={error} />
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className={innerClassName}>
-          {tree?.reactElements}
+        <form onSubmit={handleSubmit} className="mml-wrap">
+          {tree?.type ? <div className="mml-card">{tree?.reactElements}</div> : tree?.reactElements}
           {submitState.loading && <Loader loading={submitState.loading} />}
           {submitState.success && <Success success={submitState.success} />}
           {submitState.error && <Error error={submitState.error} />}
