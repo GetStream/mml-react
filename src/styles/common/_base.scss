@@ -19,7 +19,7 @@
 
   // positioning, some components have a max-width, this auto margin will
   // correctly align them on the sides of the chat container
-  > * {
+  > *:not(#{mml-component('carousel')}) {
     @include mml-other() {
       margin-right: auto;
     }

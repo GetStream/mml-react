@@ -43,8 +43,12 @@
   // sort of table with row and columns and inside each cell want to place some
   // md that will probably be just a simple string to obtain a sort of <th> / <td>
   // differentiation
-  p:not(:first-child):not(:last-child) {
-    margin: 0 0 1em;
+  p {
+    margin: 0;
+  
+    &:not(:first-child):not(:last-child) {
+      margin: 0 0 1em;
+    }
   }
 
   a {

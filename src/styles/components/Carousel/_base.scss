@@ -9,6 +9,7 @@
   .carousel__inner-slide {
     display: flex;
     flex-direction: column;
+    background: $mml-card-bg;
 
     // components that as immediate children behave like card-body
     > #{mml-component(md)},
