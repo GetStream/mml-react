@@ -1,6 +1,7 @@
 import React, { useState, useEffect, FC } from 'react';
 // @ts-ignore
 import IcalExpander from 'ical-expander';
+import dayjs, { Dayjs } from 'dayjs';
 
 import { DatePicker } from './DatePicker';
 import { Card } from './Card';
@@ -17,72 +18,98 @@ export type SchedulerProps = {
   /**
    * The selected date, it must be a valid parseable date string
    */
-  selected: string;
+  selected?: string;
   /**
-   * The duration of the event in minutes
+   * Interval in days for day selection
+   * @default 1
+   */
+  dateInterval?: number;
+  /**
+   * Interval in minutes for time selection
+   * @default 30
+   */
+  timeInterval?: number;
+  /**
+   * Date format, see [dayjs docs](https://day.js.org/docs/en/display/format)
+   * @default 'ddd MMM DD'
+   */
+  dateFormat?: string;
+  /**
+   * Time format, see [dayjs docs](https://day.js.org/docs/en/display/format)
+   * @default 'hh:mm A'
+   */
+  timeFormat?: string;
+  /**
+   * Start date to show in the list
+   * @default 3 days behind the given date
+   */
+  startDate?: Date;
+  /**
+   * The duration of the event in minutes, used to check availability with ical
    * @default 30
    */
   duration?: number;
   /**
-   * The interval of the event in minutes
-   * @default 30
+   * ICal availability public URL
    */
-  interval?: number;
+  icalAvailability?: string;
   /**
-   * Whether the event to schedule lasts a full day
+   * Show only the date picker(without time picker) if events lasts a whole day
    * @default false
    */
   fullDay?: boolean;
   /**
-   * ICal availability public URL
+   * Allows to select a date in the past
+   * @default false
    */
-  icalAvailability?: string;
+  allowPast?: boolean;
 };
 
-export type ICalFilter = (start?: Date) => boolean;
+export type ICalFilter = (start?: Dayjs) => boolean;
+
+const setupIcalFilter = async (icalURL: string, duration: number) => {
+  const response = await fetch(icalURL, { method: 'GET', redirect: 'follow', credentials: 'same-origin' });
+  const body = await response.text();
+  if (!response.ok) throw new Error(body);
+
+  const icalExpander = new IcalExpander({ ics: body, maxIterations: 10 });
+
+  return () => (start?: Dayjs) => {
+    if (!start) return true;
+    const { events } = icalExpander.between(start.toDate(), start.add(duration, 'minute').toDate());
+    return !events.length;
+  };
+};
 
 export const Scheduler: FC<SchedulerProps> = ({
   name,
   selected,
   icalAvailability,
   duration = 30,
-  interval = 30,
+  dateInterval = 1,
+  timeInterval = 30,
+  dateFormat = 'ddd MMM DD',
+  timeFormat = 'hh:mm A',
+  allowPast = false,
   fullDay = false,
+  startDate,
 }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [icalFilter, setIcalFilter] = useState<ICalFilter>(() => () => true);
 
-  const setupIcalFilter = async (icalURL: string, duration: number) => {
-    setLoading(true);
-
-    let icalExpander: any = null;
-    try {
-      const response = await fetch(icalURL, { method: 'GET', redirect: 'follow', credentials: 'same-origin' });
-      const body = await response.text();
-
-      if (response.ok) icalExpander = new IcalExpander({ ics: body, maxIterations: 10 });
-      else throw new Error(body);
-    } catch (err) {
-      console.warn('loading ical failed', { icalURL, err });
-      setError('iCal availability could not be loaded');
-    }
-
-    const filter: ICalFilter = (start?: Date) => {
-      if (!start || !icalExpander) return true;
-
-      const stop = new Date(start.getTime() + duration * 60000);
-      const { events } = icalExpander.between(start, stop);
-      return !events.length;
-    };
-
-    setIcalFilter(() => filter);
-    setLoading(false);
-  };
-
   useEffect(() => {
-    if (icalAvailability) setupIcalFilter(icalAvailability, duration);
-  }, [duration, icalAvailability]);
+    if (!icalAvailability) return;
+
+    setLoading(true);
+    setupIcalFilter(icalAvailability, duration)
+      .then(setIcalFilter)
+      .catch((err) => {
+        console.warn('loading ical failed', { icalAvailability, err });
+        setError('iCal availability could not be loaded');
+      })
+      .finally(() => setLoading(false));
+  }, [icalAvailability, duration]);
 
   return (
     <Card className="mml-scheduler">
@@ -93,15 +120,15 @@ export const Scheduler: FC<SchedulerProps> = ({
         {!error && !loading && (
           <DatePicker
             name={name}
-            selected={selected}
-            timeInterval={interval}
-            showTimeSelect={!fullDay}
-            filter={icalFilter}
-            // TODO: these props might be configurable from mml if we like
-            // format={format}
-            // dateFormat="ddd MMM DD"
-            // timeFormat="H:mm A"
-            // onChange={onChange}
+            selected={selected ? dayjs(selected) : dayjs().startOf('hour')}
+            dateInterval={dateInterval}
+            timeInterval={timeInterval}
+            dateFormat={dateFormat}
+            timeFormat={timeFormat}
+            allowPast={allowPast}
+            fullDay={fullDay}
+            startDate={startDate}
+            icalFilter={icalFilter}
           />
         )}
       </CardBody>

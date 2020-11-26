@@ -319,7 +319,7 @@ Array [
         <input
           name="massage_appointment"
           type="hidden"
-          value="November 16, 2020 10:30 AM"
+          value="2020-11-16T10:30:00.000Z"
         />
         <div
           className="mml-datepicker__select mml-datepicker__date"

@@ -68,7 +68,7 @@ const CALENDAR_SERVICES: Array<{ id: CalendarID; label: string; icon: string }> 
  * to the dayjs way
  */
 function formatTime(date: string | Date, id: CalendarID) {
-  return dayjs(date).format(id === 'outlookcom' ? 'YYYY-MM-DDTHH:mm:ssZ' : 'YYYYMMDDTHHmmssZ') + 'Z';
+  return dayjs(date).format(id === 'outlookcom' ? 'YYYY-MM-DDTHH:mm:ss' : 'YYYYMMDDTHHmmss') + 'Z';
 }
 
 /**
