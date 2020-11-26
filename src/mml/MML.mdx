@@ -29,7 +29,7 @@ It also accepts custom convertor which allows you to exapand the default tags an
 <Playground>
   <MML
     source={`
-      <mml name="donut_form">
+      <mml name="donut_form" type="card">
         <text>How many donuts?</text>
         <number name="donuts" value="3" />
         <button>Confirm</button>
@@ -46,7 +46,7 @@ If onSubmit callback return a promise, it will be awaited.
   <MML
     onSubmit={(data) => console.info(data)}
     source={`
-      <mml>
+      <mml type="card">
         <input name="answer" value="42" />
         <button>Confirm</button>
       </mml>
