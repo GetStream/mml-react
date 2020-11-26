@@ -321,7 +321,7 @@ Array [
     It looks like your credit card isn't activated yet, activate it now:
   </div>,
   <button
-    className="mml-btn "
+    className="mml-btn  mml-btn--text"
     name="action"
     onClick={[Function]}
     type="submit"
