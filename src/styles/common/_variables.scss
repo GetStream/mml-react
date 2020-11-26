@@ -98,6 +98,7 @@ $mml-card-header-font-size: 13px !default;
 $mml-card-header-font-weight: bold !default;
 $mml-card-header-padding-y: 16px !default;
 $mml-card-header-padding-x: 16px !default;
+$mml-card-header-border-radius: $mml-border-radius !default;
 $mml-card-header-bg: mml-theme(card-bg) !default;
 $mml-card-header-color: mml-theme(text-mid-emphasis) !default;
 $mml-card-body-font-size: 14px !default;
@@ -119,7 +120,7 @@ $mml-grid-breakpoints: (
 
 // Datepicker:
 // -----------------------------------------------------------------------------
-$mml-datepicker__item-color-active: mml-them(primary-accent) !default;
+$mml-datepicker__item-color-active: mml-theme(primary-accent) !default;
 
 // Error:
 // -----------------------------------------------------------------------------
@@ -196,7 +197,7 @@ $mml-success-color: mml-theme(primary-accent) !default;
 // -----------------------------------------------------------------------------
 $mml-text-padding-y: 4px !default;
 $mml-text-padding-x: 12px !default;
-$mml-text-margin-y: 4px !default;
+$mml-text-spacer-y: 4px !default;
 $mml-text-bg: mml-theme(card-bg) !default;
 $mml-text-bg--me: mml-theme(card-bg-alt) !default;
 $mml-text-border-color: mml-theme(stroke-low-emphasis) !default;

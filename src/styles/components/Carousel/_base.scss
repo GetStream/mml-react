@@ -11,9 +11,29 @@
     display: flex;
     flex-direction: column;
 
+    // components that as immediate children behave like card-body
+    > #{mml-component(md)},
+    > #{mml-component(text)} {
+      border-width: 0 $mml-card-border-width;
+      border-style: $mml-card-border-style;
+      border-color: $mml-card-border-color;
+    }
+
+    @include mml-component('md') {
+      flex: 10;
+      font-size: $mml-carousel__text-font-size;
+    }
+
     @include mml-component('text') {
       flex: 10;
       font-size: $mml-carousel__text-font-size;
+    }
+
+    // > *:last-child {
+    @include mml-component('btn') {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border: $mml-card-border;
     }
   }
 }

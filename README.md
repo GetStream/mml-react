@@ -140,7 +140,7 @@ Some components need to slightly change according to their position in the chat.
 Internally to this library these SCSS tweaks are implemented through the `SCSS mixins mml-me and mml-other`, e.g.:
 
 ```scss
-@include mml-component('btn') {
+@include mml-component('text') {
   @include mml-other() {
     text-align: left;
   }

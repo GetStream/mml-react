@@ -1,8 +1,23 @@
 @include mml-component('md') {
+  // apply some little spacing through padding, not margins, so that when we
+  // apply borders to text from  outside, for instance within a carousel-item
+  // slide it looks good
   padding: $mml-md-padding-y 0;
   color: $mml-md-color;
   @if $mml-md-font-size != inherit {
     font-size: $mml-md-font-size;
+  }
+
+  // Context: other message
+  // ---------------------------------------------------------------------------
+  @include mml-other() {
+    text-align: left;
+  }
+
+  // Context: me message
+  // ---------------------------------------------------------------------------
+  @include mml-me() {
+    text-align: right;
   }
 
   blockquote {

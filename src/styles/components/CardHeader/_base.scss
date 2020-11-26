@@ -5,6 +5,8 @@
   font-size: $mml-card-header-font-size;
   color: $mml-card-header-color;
   background: $mml-card-header-bg;
+  border-top-left-radius: $mml-card-header-border-radius;
+  border-top-right-radius: $mml-card-header-border-radius;
 
   @include mml-component('icon') {
     padding-left: $mml-card-header-padding-x;

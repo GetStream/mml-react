@@ -50,8 +50,9 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 <Playground>
   <MML
     source={`
-      <mml>
+      <mml type="card">
         <scheduler name="appointment" fullDay="true" />
+        <button name="action" value="reserve" icon="add_alarm">Book</button>
       </mml>
     `}
   />
