@@ -5,20 +5,11 @@
 //
 // -----------------------------------------------------------------------------
 %mml-bordered-area {
-  > *:not(:first-child):not(:last-child) {
+  > *:not(.mml--floating) {
     border-radius: $mml-border-radius;
-    // border-bottom: 0;
   }
 
-  // > *:first-child:not(:last-child):not(.mml--floating) {
-  //   border-top-left-radius: $mml-border-radius;
-  //   border-top-right-radius: $mml-border-radius;
-  //   border-bottom-left-radius: $mml-border-radius-base;
-  //   border-bottom-right-radius: $mml-border-radius-base;
-  //   border-bottom: 0;
-  // }
-
-  > *:last-child:not(:first-child):not(.mml--floating) {
+  > *:last-child:not(.mml--floating) {
     border-bottom-left-radius: $mml-border-radius-base;
     border-bottom-right-radius: $mml-border-radius;
 

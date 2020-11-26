@@ -49,8 +49,9 @@
 ///
 /// __________________________________________________________________________--
 @mixin mml-button-base() {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   user-select: none;
   text-decoration: none;
   -webkit-appearance: none;
@@ -58,7 +59,9 @@
   border-style: $mml-btn-border-style;
   border-width: $mml-btn-border-width;
   border-color: $mml-btn-border-color;
-  border-radius: 0;
+  border-radius: $mml-btn-border-radius;
+  color: $mml-btn-color;
+  background: $mml-btn-bg;
   font-family: $mml-btn-font-family;
   font-weight: $mml-btn-font-weight;
   @if $mml-btn-font-size != inherit {
@@ -71,6 +74,19 @@
     cursor: pointer;
   }
 
+  &:hover,
+  &:focus {
+    color: $mml-btn-hover-color;
+    background: $mml-btn-hover-bg;
+    border-color: $mml-btn-hover-border-color;
+  }
+
+  &[disabled] {
+    color: $mml-btn-disabled-color;
+    background: $mml-btn-disabled-bg;
+    border-color: $mml-btn-disabled-border-color;
+  }
+
   &:focus {
     outline: $mml-btn-focus-outline;
   }
@@ -78,13 +94,13 @@
 
 ///
 /// Icon font
-///
+/// 
 /// __________________________________________________________________________--
 @mixin mml-icon($fontName: 'Material Icons') {
   font-family: $fontName;
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: $mml-icon-size;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;

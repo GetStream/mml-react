@@ -1,34 +1,43 @@
 @include mml-component('btn') {
   @include mml-button-base();
-  width: 100%;
+  max-width: $mml-btn-max-width;
   margin: 0;
-  color: $mml-btn-color;
-  background: $mml-btn-bg;
-  // border-color: $mml-btn-border-color;
 
+  // Context: me message
+  // ---------------------------------------------------------------------------
   @include mml-me() {
-    max-width: $mml-btnlist-max-width;
     margin-left: auto;
   }
 
-  &:hover,
-  &:focus {
-    color: $mml-btn-hover-color;
-    background: $mml-btn-hover-bg;
-    border-color: $mml-btn-hover-border-color;
+  // Modifier: with icon
+  // ---------------------------------------------------------------------------
+  &--with-icon {
+    @include mml-component('icon') {
+      margin-right: $mml-btn--icon-distance-x;
+    }
   }
 
-  &[disabled] {
-    color: $mml-btn-disabled-color;
-    background: $mml-btn-disabled-bg;
-    border-color: $mml-btn-disabled-border-color;
+  // Modifier: only icon
+  // ---------------------------------------------------------------------------
+  &--icon {
+    width: auto;
+    padding: $mml-btn--icon-padding;
+    border-radius: $mml-btn--icon-border-radius;
+
+    // only applies if we can't inherit
+    @if $mml-btn--icon-size != $mml-icon-size {
+      @include mml-component('icon') {
+        font-size: $mml-btn--icon-size;
+      }
+    }
   }
 }
 
+// Variant: floating
+// -----------------------------------------------------------------------------
 @include mml-component('btn', 'floating') {
   width: auto;
   max-width: none;
   margin-right: auto;
-  border-radius: $mml-btn--floating-border-radius;
   box-shadow: $mml-btn--floating-shadow;
 }

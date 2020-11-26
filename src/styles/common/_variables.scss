@@ -4,18 +4,18 @@
 // -----------------------------------------------------------------------------
 $mml-theme: (
   primary-accent: #006cff,
+  // might be used outside mml container
   app-canvas: #fff,
-  // outside mml container
   text-high-emphasis: #0e1621,
   text-mid-emphasis: #8a898e,
   text-low-emphasis: #b2b1b5,
+  // might be used outside mml container
   text-self: #fff,
-  // outside mml container
   text-pressed: #fff,
   card-bg: #f2f2f2,
   card-alt-bg: #fff,
+  // might be used outside mml container
   card-self-bg: #41affc,
-  // outside mml container
   stroke: #e5e5e6,
   stroke-low-emphasis: #f2f2f2,
   shadow: 0px 2px 5px rgba(0, 0, 0, 0.15),
@@ -36,6 +36,7 @@ $mml-font-sans: inherit !default;
 $mml-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 $mml-font-base: $mml-font-sans !default;
 $mml-font-size: 15px !default;
+$mml-icon-size: 20px !default;
 
 // Button:
 // -----------------------------------------------------------------------------
@@ -44,9 +45,10 @@ $mml-btn-font-weight: bold !default;
 $mml-btn-font-size: inherit !default;
 $mml-btn-text-transform: none !default;
 $mml-btn-max-width: 60% !default;
-$mml-btn-padding-y: 11px !default;
+$mml-btn-padding-y: 6px !default;
 $mml-btn-padding-x: 16px !default;
-$mml-btn-border-width: 1px !default;
+$mml-btn-border-radius: $mml-border-radius !default;
+$mml-btn-border-width: $mml-border-width !default;
 $mml-btn-border-style: solid !default;
 $mml-btn-bg: mml-theme(card-bg) !default;
 $mml-btn-border-color: $mml-btn-bg !default;
@@ -58,14 +60,21 @@ $mml-btn-disabled-bg: $mml-btn-bg !default;
 $mml-btn-disabled-border-color: $mml-btn-disabled-bg !default;
 $mml-btn-disabled-color: mml-theme(text-low-emphasis) !default;
 $mml-btn-focus-outline: none !default;
-$mml-btn--floating-border-radius: $mml-border-radius !default;
 $mml-btn--floating-shadow: mml-theme(shadow) !default;
+$mml-btn--icon-padding-y: 5px !default;
+$mml-btn--icon-padding-x: 5px !default;
+$mml-btn--icon-padding: $mml-btn--icon-padding-y $mml-btn--icon-padding-x !default;
+$mml-btn--icon-border-radius: 100% !default;
+$mml-btn--icon-size: $mml-icon-size !default;
+$mml-btn--icon-distance-x: 0.4em !default;
 
 // ButtonList:
 // -----------------------------------------------------------------------------
 $mml-btnlist-max-width: $mml-btn-max-width !default;
 $mml-btnlist-bg: $mml-btn-bg !default;
+$mml-btnlist-border-width: $mml-btn-border-width !default;
 $mml-btnlist-border-color: mml-theme(stroke) !default;
+$mml-btnlist__btn-with-icon-color: mml-theme(text-high-emphasis) !default;
 
 // Card:
 // -----------------------------------------------------------------------------

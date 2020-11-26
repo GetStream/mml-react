@@ -1,5 +1,6 @@
 @include mml-component('card') {
   overflow: hidden;
+  background: $mml-card-bg;
 
   @include mml-component('btnlist') {
     font-size: $mml-card-body-font-size;

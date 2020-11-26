@@ -4,11 +4,12 @@
   padding: $mml-card-header-padding-y 0;
   font-size: $mml-card-header-font-size;
   color: $mml-card-header-color;
+  background: $mml-card-header-bg;
 
   // @include mml-component('icon') {}
 
   &__text {
-    font-weight: $mml-card-header-font-weight;
     padding-left: $mml-card-header-padding-x;
+    font-weight: $mml-card-header-font-weight;
   }
 }

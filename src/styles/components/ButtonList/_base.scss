@@ -3,35 +3,42 @@
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  border: $mml-border-width $mml-border-style $mml-btnlist-border-color;
+  max-width: $mml-btnlist-max-width;
+  border: $mml-btnlist-border-width $mml-border-style $mml-btnlist-border-color;
   background: $mml-btnlist-bg;
-
-  @include mml-me() {
-    max-width: $mml-btnlist-max-width;
-    margin-left: auto;
-  }
 
   @include mml-component('btn') {
     width: 100%;
+    max-width: none;
     margin: 0;
-    border-width: 0 0 $mml-border-width 0;
+    // reset all btn padding coherently (we might have a mml-btn--icon that use a different padding by default)
+    padding: $mml-btn-padding-y $mml-btn-padding-x;
+    // just apply a bottom border to inner buttons
+    border-width: 0 0 $mml-btnlist-border-width 0;
     border-radius: 0;
     border-color: $mml-btnlist-border-color;
+    // inherit background from parent because border radius is applied there
     background: none;
-
-    &:hover,
-    &:focus {
-      color: $mml-btn-hover-color;
-      border-color: $mml-btn-hover-border-color;
-      background: $mml-btn-hover-bg;
-    }
 
     &:last-child {
       border-width: 0;
     }
+
+    &--with-icon {
+      justify-content: flex-start;
+      color: $mml-btnlist__btn-with-icon-color;
+    }
+  }
+
+  // Context: me message
+  // ---------------------------------------------------------------------------
+  @include mml-me() {
+    margin-left: auto;
   }
 }
 
+// Variant: floating
+// -----------------------------------------------------------------------------
 @include mml-component('btnlist', 'floating') {
   flex-direction: row;
   flex-wrap: wrap;
@@ -41,7 +48,14 @@
   max-width: none;
 
   @include mml-component('btn') {
-    border-radius: $mml-btn--floating-border-radius;
+    width: auto;
     margin: $mml-spacer / 2;
+    // restore all the border in floating button list child buttons
+    border-width: $mml-btnlist-border-width;
+    border-radius: $mml-btn-border-radius;
+
+    &:last-child {
+      border-width: $mml-btnlist-border-width;
+    }
   }
 }
