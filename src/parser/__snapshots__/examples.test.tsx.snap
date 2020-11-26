@@ -1970,7 +1970,7 @@ END:VCALENDAR"
       </a>
       <a
         className="mml-btn"
-        href="https://outlook.live.com/owa/?rru=addevent&startdt=2019-12-24T14%3A42%3A54Z&enddt=2019-12-24T15%3A42%3A54Z&subject=Massage%20with%20Jessica&allday=false&uid=00000000-0000-0000-0000-000000000000&path=/calendar/view/Month"
+        href="https://outlook.live.com/owa/?rru=addevent&startdt=2019-12-24T14%3A42%3A54Z&enddt=2019-12-24T15%3A42%3A54Z&subject=Massage%20with%20Jessica&allday=false&path=/calendar/view/Month"
         onClick={[Function]}
         rel="nofollow noreferrer noopener"
         target="_blank"

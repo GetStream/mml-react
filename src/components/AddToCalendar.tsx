@@ -1,7 +1,6 @@
 import React, { FC, SyntheticEvent } from 'react';
 import dayjs from 'dayjs';
 import isMobile from 'is-mobile';
-import { v4 as uuid } from 'uuid';
 
 import { Card } from './Card';
 import { CardHeader } from './CardHeader';
@@ -110,7 +109,6 @@ function buildUrl(event: AddToCalendarEvent, id: CalendarID) {
       location,
       body: description,
       allday: 'false', // TODO: calculate it?
-      uid: uuid(),
     })}&path=/calendar/view/Month`;
 
   let url = [
