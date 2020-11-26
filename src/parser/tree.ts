@@ -4,6 +4,7 @@ import { Element as XmlElement } from '@rgrove/parse-xml';
 import { MMLTag } from './MMLTag';
 import { converters as defaultConverters, ConvertorType } from './converters';
 
+/** The type attribute of <mml> determine how its inner content is visually displayed */
 export type RootType = 'card';
 
 /**
@@ -15,7 +16,6 @@ export class Tree {
   children: MMLTag[];
   reactElements: ReactElement[];
   name?: string;
-  /** The type attribute of <mml> determine how its inner content is visually displayed */
   type?: RootType;
 
   constructor(node: XmlElement, children: MMLTag[], customConvertors?: Record<string, ConvertorType>) {
