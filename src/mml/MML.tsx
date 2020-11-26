@@ -40,20 +40,20 @@ export const MML: FC<MMLProps> = ({
   const handleSubmit = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      if (!onSubmit) return console.warn('missing submit handler');
+
+      const state: Record<string, any> = {};
+      new FormData(event.currentTarget).forEach((value, key) => (state[key] = value));
+
+      // include clicked button value in the callback
+      const button = document.activeElement as HTMLButtonElement;
+      if (button && button.type === 'submit' && button.name && button.value) {
+        state[button.name] = button.value;
+      }
+
+      if (!onSubmit) return console.warn('Forgot to pass onSubmit prop to <MML/>? payload:', state);
 
       try {
         setSubmitState({ loading: true, error: '', success: '' });
-        const state: Record<string, any> = {};
-        const fd = new FormData(event.currentTarget);
-        fd.forEach((value, key) => (state[key] = value));
-
-        // include clicked button value in the callback
-        const button = document.activeElement as HTMLButtonElement;
-        if (button && button.type === 'submit' && button.name && button.value) {
-          state[button.name] = button.value;
-        }
-
         await onSubmit(state);
         setSubmitState({ loading: false, error: '', success: 'submitted' });
       } catch (e) {
