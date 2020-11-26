@@ -34,6 +34,7 @@ export const MML: FC<MMLProps> = ({
   Error = ErrorComponent,
   Success = SuccessComponent,
 }) => {
+  const [mmlName, setMMLName] = useState('');
   const [error, setError] = useState('');
   const [submitState, setSubmitState] = useState({ loading: false, error: '', success: '' });
 
@@ -43,6 +44,9 @@ export const MML: FC<MMLProps> = ({
 
       const state: Record<string, any> = {};
       new FormData(event.currentTarget).forEach((value, key) => (state[key] = value));
+
+      // include mml_name in the data
+      if (mmlName) state.mml_name = mmlName;
 
       // include clicked button value in the callback
       const button = document.activeElement as HTMLButtonElement;
@@ -60,12 +64,14 @@ export const MML: FC<MMLProps> = ({
         setSubmitState({ loading: false, error: 'something is broken', success: '' });
       }
     },
-    [onSubmit],
+    [onSubmit, mmlName],
   );
 
   const children = useMemo(() => {
     try {
-      return Parse(source, converters).toReact();
+      const tree = Parse(source, converters);
+      if (tree.name) setMMLName(tree.name);
+      return tree.toReact();
     } catch (e) {
       console.warn('mml parsing error: ', source, e);
       setError("This chat message has invalid formatting and can't be shown");
