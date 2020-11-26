@@ -106,6 +106,16 @@
 }
 
 ///
+/// Card body borders encapsulation
+///
+/// __________________________________________________________________________--
+@mixin mml-card-body-borders($fontName: 'Material Icons') {
+  border-width: 0 $mml-card-border-width;
+  border-style: $mml-card-border-style;
+  border-color: $mml-card-border-color;
+}
+
+///
 /// Icon font
 ///
 /// __________________________________________________________________________--

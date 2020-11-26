@@ -80,7 +80,7 @@ $mml-btnlist-min-width: 155px !default;
 $mml-btnlist-max-width: $mml-btn-max-width !default;
 $mml-btnlist-bg: $mml-btn-bg !default;
 $mml-btnlist-border-width: $mml-btn-border-width !default;
-$mml-btnlist-border-color: mml-theme(stroke) !default;
+$mml-btnlist-border-color: $mml-border-color !default;
 $mml-btnlist__btn-padding-y: 11px !default;
 $mml-btnlist__btn-padding-x: $mml-btn-padding-x !default;
 $mml-btnlist__btn--with-icon-color: mml-theme(text-high-emphasis) !default;
@@ -89,7 +89,7 @@ $mml-btnlist__btn--with-icon-font-weight: normal !default;
 // Card:
 // -----------------------------------------------------------------------------
 $mml-card-max-width: $mml-max-width !default;
-$mml-card-border-color: mml-theme(stroke-low-emphasis) !default;
+$mml-card-border-color: $mml-border-color !default;
 $mml-card-border-width: $mml-border-width !default;
 $mml-card-border-style: $mml-border-style !default;
 $mml-card-border: $mml-card-border-width $mml-card-border-style $mml-card-border-color !default;

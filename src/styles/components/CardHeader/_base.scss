@@ -7,6 +7,7 @@
   background: $mml-card-header-bg;
   border-top-left-radius: $mml-card-header-border-radius;
   border-top-right-radius: $mml-card-header-border-radius;
+  border-bottom: $mml-card-border;
 
   @include mml-component('icon') {
     padding-left: $mml-card-header-padding-x;
