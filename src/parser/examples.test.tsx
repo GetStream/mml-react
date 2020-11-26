@@ -51,7 +51,7 @@ const examples = [
   {
     name: 'Simple Counts',
     description: 'Counts with a mobile friendly input',
-    mml: `<mml name="counts">
+    mml: `<mml name="counts" type="card">
   <text>How many donuts do you want for lunch?</text>
   <image src="https://images.unsplash.com/photo-1527904324834-3bda86da6771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80" />
   <number name="donuts" value="3" />
@@ -161,9 +161,9 @@ describe('examples', () => {
 
       const tree = XMLtoMMLTree(nodes);
       expect(tree).toMatchSnapshot();
-      expect(tree.toReact()).toMatchSnapshot();
+      expect(tree.reactElements).toMatchSnapshot();
 
-      expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
+      expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
     });
   });
 });
