@@ -70,6 +70,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -297,6 +298,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -330,6 +332,96 @@ Array [
     Activate Card
   </button>,
 ]
+`;
+
+exports[`mml with type 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "type": "card",
+      },
+      "children": Array [
+        Object {
+          "text": "hi",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
+`;
+
+exports[`mml with type 2`] = `
+Tree {
+  "children": Array [
+    MMLTag {
+      "attributes": Object {},
+      "children": undefined,
+      "name": "text",
+      "node": Object {
+        "text": "hi",
+        "toJSON": [Function],
+        "type": "text",
+      },
+    },
+  ],
+  "converters": Object {
+    "add_to_calendar": [Function],
+    "button": [Function],
+    "button_list": [Function],
+    "carousel": [Function],
+    "col": [Function],
+    "icon": [Function],
+    "image": [Function],
+    "input": [Function],
+    "item": [Function],
+    "md": [Function],
+    "number": [Function],
+    "row": [Function],
+    "scheduler": [Function],
+    "text": [Function],
+  },
+  "name": undefined,
+  "node": Object {
+    "attributes": Object {
+      "type": "card",
+    },
+    "children": Array [
+      Object {
+        "text": "hi",
+        "toJSON": [Function],
+        "type": "text",
+      },
+    ],
+    "name": "mml",
+    "toJSON": [Function],
+    "type": "element",
+  },
+  "type": "card",
+}
+`;
+
+exports[`mml with type 3`] = `
+Array [
+  <Text
+    text="hi"
+  />,
+]
+`;
+
+exports[`mml with type 4`] = `
+<div
+  className="mml-text"
+>
+  hi
+</div>
 `;
 
 exports[`simple carousel 1`] = `
@@ -544,6 +636,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -754,6 +847,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
