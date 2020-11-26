@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import format from 'date-fns/format';
+import dayjs from 'dayjs';
 
 const USERS = [
   {
@@ -154,7 +154,7 @@ export const Chat = ({ interactive, children }) => {
                   </Message>
                 ))}
               </Messages>
-              <Time>{format(new Date(), 'h:m a')}</Time>
+              <Time>{dayjs().format('H:m a')}</Time>
               <Avatar>{user.shortName}</Avatar>
             </Thread>
           );
