@@ -29,7 +29,7 @@ Buttons make common actions more obvious and help users more easily perform them
 <Playground>
   <MML
     source={`
-    <button name="action" value="activate" href="https://getstream.io">
+    <button name="action" value="activate" url="https://getstream.io">
       A link to GetStream
     </button>
   `}
@@ -41,9 +41,11 @@ Buttons make common actions more obvious and help users more easily perform them
 <Playground>
   <MML
     source={`
-    <button name="action" value="activate" variant="floating">
-      A floating button
-    </button>
+    <mml>
+      <button name="action" value="activate" variant="floating">
+        A floating button
+      </button>
+    </mml>
   `}
   />
 </Playground>
@@ -53,9 +55,11 @@ Buttons make common actions more obvious and help users more easily perform them
 <Playground>
   <MML
     source={`
-    <button name="action" value="activate" icon="people">
-      Send to all
-    </button>
+    <mml>
+      <button name="action" value="activate" icon="people">
+        Send to all
+      </button>
+    </mml>
   `}
   />
 </Playground>
@@ -65,7 +69,9 @@ Buttons make common actions more obvious and help users more easily perform them
 <Playground>
   <MML
     source={`
-    <button name="action" value="activate" icon="shopping_cart"></button>
+    <mml>
+      <button name="action" value="activate" icon="shopping_cart"></button>
+    </mml>
   `}
   />
 </Playground>

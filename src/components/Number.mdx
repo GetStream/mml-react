@@ -17,7 +17,7 @@ Easy input for numbers, mobile optimized. It automatically uses context[name] as
 ## MML string
 
 ```xml
-<mml name="counts">
+<mml>
   <text>How many donuts do you want for lunch?</text>
   <number name="donuts" value="3" />
   <button name="confirm" value="Confirm">Confirm</button>
@@ -29,9 +29,11 @@ Easy input for numbers, mobile optimized. It automatically uses context[name] as
 <Playground>
   <MML
     source={`
-    <text>How many donuts do you want for lunch?</text>
-    <number name="donuts" value="3" />
-    <button name="confirm" value="Confirm">Confirm</button>
+    <mml>
+      <text>How many donuts do you want for lunch?</text>
+      <number name="donuts" value="3" />
+      <button name="confirm" value="Confirm">Confirm</button>
+    </mml>
   `}
   />
 </Playground>
