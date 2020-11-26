@@ -262,6 +262,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -859,6 +860,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -1561,6 +1563,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -1878,6 +1881,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -4159,6 +4163,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -5094,6 +5099,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -5616,6 +5622,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -5695,6 +5702,7 @@ Object {
     Object {
       "attributes": Object {
         "name": "counts",
+        "type": "card",
       },
       "children": Array [
         Object {
@@ -5908,6 +5916,7 @@ Tree {
   "node": Object {
     "attributes": Object {
       "name": "counts",
+      "type": "card",
     },
     "children": Array [
       Object {
@@ -5993,6 +6002,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": "card",
 }
 `;
 
@@ -6283,6 +6293,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -6572,6 +6583,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 
@@ -7667,6 +7679,7 @@ Tree {
     "toJSON": [Function],
     "type": "element",
   },
+  "type": undefined,
 }
 `;
 

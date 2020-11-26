@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useCallback, FC, ComponentType, FormEvent } from 'react';
+import React, { useState, useMemo, useCallback, useRef, FC, ComponentType, FormEvent } from 'react';
+import { TreeType } from '../parser/tree';
 
 import { Parse, ConvertorType } from '../parser';
 import { Loader as LoaderComponent, LoaderProps } from '../components/Loader';
@@ -37,6 +38,7 @@ export const MML: FC<MMLProps> = ({
   const [mmlName, setMMLName] = useState('');
   const [error, setError] = useState('');
   const [submitState, setSubmitState] = useState({ loading: false, error: '', success: '' });
+  const type = useRef<TreeType>(undefined);
 
   const handleSubmit = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
@@ -70,6 +72,7 @@ export const MML: FC<MMLProps> = ({
   const children = useMemo(() => {
     try {
       const tree = Parse(source, converters);
+      type.current = tree.type;
       if (tree.name) setMMLName(tree.name);
       return tree.toReact();
     } catch (e) {
@@ -79,14 +82,16 @@ export const MML: FC<MMLProps> = ({
     }
   }, [source, converters]);
 
+  const innerClassName = type.current === 'card' ? 'mml-card' : 'mml-wrap';
+
   return (
     <div className={`mml-container ${className}`}>
       {error ? (
-        <div className="mml-wrap">
+        <div className={innerClassName}>
           <Error error={error} />
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mml-wrap">
+        <form onSubmit={handleSubmit} className={innerClassName}>
           {children}
           {submitState.loading && <Loader loading={submitState.loading} />}
           {submitState.success && <Success success={submitState.success} />}

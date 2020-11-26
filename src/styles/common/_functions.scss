@@ -6,7 +6,7 @@
 
 /// Get mml component prefixed selector
 @function mml-component-sel($name) {
-  @return #{$mml-prefix}#{to-lower-case($name)};
+  @return '.'#{$mml-prefix}#{to-lower-case($name)};
 }
 
 /// Camelize string

@@ -37,7 +37,6 @@
 // -----------------------------------------------------------------------------
 @include mml-component('btn', 'floating') {
   width: auto;
-  max-width: none;
   margin-right: auto;
   box-shadow: $mml-btn--floating-shadow;
 }

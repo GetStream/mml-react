@@ -3,7 +3,7 @@
 @import '../CardHeader/base';
 
 @include mml-component('add-to-calendar') {
-  max-width: $mml-addtocalendar-max-width;
+  // max-width: $mml-addtocalendar-max-width;
 
   // Context: me message
   // ---------------------------------------------------------------------------

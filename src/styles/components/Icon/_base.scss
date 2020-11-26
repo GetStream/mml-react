@@ -3,7 +3,6 @@
 @include mml-component('icon') {
   font-family: 'Material Icons';
   line-height: $mml-icon-size;
-
   @if $mml-icon-size != 24px {
     // as the default from material icons
     font-size: $mml-icon-size;
