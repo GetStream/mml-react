@@ -1,5 +1,5 @@
 import React, { FC, SyntheticEvent } from 'react';
-import format from 'date-fns/format';
+import dayjs from 'dayjs';
 import isMobile from 'is-mobile';
 import { v4 as uuid } from 'uuid';
 
@@ -65,11 +65,10 @@ const CALENDAR_SERVICES: Array<{ id: CalendarID; label: string; icon: string }> 
  * Format time
  *
  * Adapted from the `moment` way of [react-add-to-calendar](https://git.io/JkWol)
- * to the [date-fns way](https://stackoverflow.com/a/52840292)
+ * to the dayjs way
  */
 function formatTime(date: string | Date, id: CalendarID) {
-  const dateFormat = id === 'outlookcom' ? 'yyyy-MM-dd___HH:mm:ss' : 'yyyyMMdd___HHmmss';
-  return format(date instanceof Date ? date : new Date(date), dateFormat).replace('___', 'T') + 'Z';
+  return dayjs(date).format(id === 'outlookcom' ? 'YYYY-MM-DDTHH:mm:ss' : 'YYYYMMDDTHHmmss') + 'Z';
 }
 
 /**

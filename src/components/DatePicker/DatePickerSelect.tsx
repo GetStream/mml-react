@@ -1,11 +1,12 @@
 import React, { useState, useRef, useCallback, useEffect, FC } from 'react';
 import { Virtuoso, VirtuosoProps } from 'react-virtuoso';
+import { Dayjs } from 'dayjs';
 import { DatePickerProps } from './DatePicker';
 
 export type DatePickerSelectProps = DatePickerSelectReadyProps & {
   Item: (
     item: DatePickerItemData,
-    selected: Date,
+    selected: Dayjs,
     handleClick: (item: DatePickerItemData) => void,
   ) => ReturnType<VirtuosoProps['item']>;
   getItemData: (props: DatePickerSelectItemProps) => DatePickerItemData;
@@ -14,10 +15,11 @@ export type DatePickerSelectProps = DatePickerSelectReadyProps & {
 /**
  * Basic shape of DatePickerSelect extended by wrapper components as DatePickerDate and DatePickerTime
  */
-export type DatePickerSelectReadyProps = Pick<DatePickerProps, 'filter' | 'onChange' | 'allowPast'> & {
-  value: Date;
+export type DatePickerSelectReadyProps = Pick<DatePickerProps, 'icalFilter' | 'allowPast'> & {
+  value: Dayjs;
   format: string;
   interval: number;
+  onChange: (value: Dayjs) => void;
 };
 
 /**
@@ -33,7 +35,7 @@ export type DatePickerSelectItemProps = DatePickerSelectReadyProps & {
 export type DatePickerItemData = {
   idx: number;
   interval: number;
-  value: Date;
+  value: Dayjs;
   displayValue: string;
 };
 
@@ -45,7 +47,7 @@ export type DatePickerItemData = {
  * DatePicker select
  */
 export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
-  const { filter, onChange, value, getItemData, Item } = props;
+  const { icalFilter, value, getItemData, Item } = props;
   const [total, setTotal] = useState(0);
   const [selected, setSelected] = useState(value);
   const items = useRef<DatePickerItemData[]>([]);
@@ -57,20 +59,19 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
    */
   function handleClick(item: DatePickerItemData) {
     setSelected(item.value);
-    if (onChange) onChange(item.value);
   }
 
   const loadMore = useCallback(() => {
     for (let idx = total; idx < total + total + perPage; idx++) {
       const newItem = getItemData({ ...props, idx: idx + perPage * lastPageIdx });
 
-      if (!filter || (filter && filter(newItem.value))) {
+      if (!icalFilter || (icalFilter && icalFilter(newItem.value))) {
         if (items.current) items.current = [...items.current, newItem];
       }
     }
     lastPageIdx++;
     setTotal(items.current.length);
-  }, [filter, getItemData, lastPageIdx, props, total]);
+  }, [icalFilter, getItemData, lastPageIdx, props, total]);
 
   useEffect(() => {
     loadMore();
