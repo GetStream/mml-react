@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 
 import { Card } from './Card';
 import { CardHeader } from './CardHeader';
+import { CardBody } from './CardBody';
 import { ButtonList } from './ButtonList';
 import { IconGoogle, IconMicrosoft, IconApple } from './Icon';
 
@@ -175,20 +176,22 @@ export const AddToCalendar: FC<AddToCalendarProps> = ({
   return (
     <Card className={`mml-add-to-calendar ${className}`}>
       <CardHeader icon="date_range" text="Add to My Calendar" />
-      <ButtonList>
-        {CALENDAR_SERVICES.map(({ id, label, Icon }) => (
-          <a
-            key={id}
-            className={`mml-btn ${Icon && 'mml-btn--with-icon'}`}
-            onClick={handleLinkClick}
-            href={buildUrl(event, id)}
-            target="_blank"
-            rel="nofollow noreferrer noopener"
-          >
-            {Icon} {label}
-          </a>
-        ))}
-      </ButtonList>
+      <CardBody>
+        <ButtonList>
+          {CALENDAR_SERVICES.map(({ id, label, Icon }) => (
+            <a
+              key={id}
+              className={`mml-btn ${Icon && 'mml-btn--with-icon'}`}
+              onClick={handleLinkClick}
+              href={buildUrl(event, id)}
+              target="_blank"
+              rel="nofollow noreferrer noopener"
+            >
+              {Icon} {label}
+            </a>
+          ))}
+        </ButtonList>
+      </CardBody>
     </Card>
   );
 };
