@@ -10,10 +10,26 @@ test('mml name and simple text field', () => {
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
   expect(tree.name).toEqual('john');
-  expect(tree.children.length).toBe(1);
-  expect(tree.toReact()).toMatchSnapshot();
+  expect(tree.type).toBeUndefined();
 
-  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
+  expect(tree.children.length).toBe(1);
+  expect(tree.reactElements).toMatchSnapshot();
+
+  expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
+});
+
+test('mml with type', () => {
+  const mml = '<mml type="card">hi</mml>';
+  const nodes = SourceToXML(mml);
+  expect(nodes).toMatchSnapshot();
+
+  const tree = XMLtoMMLTree(nodes);
+  expect(tree).toMatchSnapshot();
+  expect(tree.type).toEqual('card');
+  expect(tree.children.length).toBe(1);
+  expect(tree.reactElements).toMatchSnapshot();
+
+  expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
 });
 
 test('mml with type', () => {
@@ -43,9 +59,9 @@ test('mml with button', () => {
   expect(tree).toMatchSnapshot();
   expect(tree.name).toEqual('support');
   expect(tree.children.length).toBe(2);
-  expect(tree.toReact()).toMatchSnapshot();
+  expect(tree.reactElements).toMatchSnapshot();
 
-  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
+  expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
 });
 
 test('simple carousel', () => {
@@ -59,9 +75,9 @@ test('simple carousel', () => {
   expect(tree.children.length).toBe(1);
   //@ts-ignore
   expect(tree.children[0].children.length).toBe(2);
-  expect(tree.toReact()).toMatchSnapshot();
+  expect(tree.reactElements).toMatchSnapshot();
 
-  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
+  expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
 });
 
 test('simple input', () => {
@@ -73,9 +89,9 @@ test('simple input', () => {
   const tree = XMLtoMMLTree(nodes);
   expect(tree).toMatchSnapshot();
   expect(tree.children.length).toBe(1);
-  expect(tree.toReact()).toMatchSnapshot();
+  expect(tree.reactElements).toMatchSnapshot();
 
-  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
+  expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
 });
 
 test('invalid MML', () => {

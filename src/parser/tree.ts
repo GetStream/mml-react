@@ -4,25 +4,28 @@ import { Element as XmlElement } from '@rgrove/parse-xml';
 import { MMLTag } from './MMLTag';
 import { converters as defaultConverters, ConvertorType } from './converters';
 
-export type TreeType = 'card' | undefined;
+/** The type attribute of <mml> determine how its inner content is visually displayed */
+export type RootType = 'card';
 
 /**
  * Tree - The tree object for MML tags
  */
 export class Tree {
+  converters: Record<string, ConvertorType>;
   node: XmlElement;
   children: MMLTag[];
-  converters: Record<string, ConvertorType>;
+  reactElements: ReactElement[];
   name?: string;
-  /** The type attribute of <mml> determine how its inner content is visually displayed */
-  type: TreeType;
+  type?: RootType;
 
   constructor(node: XmlElement, children: MMLTag[], customConvertors?: Record<string, ConvertorType>) {
+    this.converters = { ...defaultConverters, ...customConvertors };
     this.node = node;
     this.children = children;
-    this.converters = { ...defaultConverters, ...customConvertors };
+    this.reactElements = this.toReact();
+
     this.name = node.attributes.name;
-    this.type = node.attributes.type === 'card' ? 'card' : undefined;
+    this.type = node.attributes.type as RootType;
   }
 
   /**

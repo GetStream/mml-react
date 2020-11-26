@@ -161,9 +161,9 @@ describe('examples', () => {
 
       const tree = XMLtoMMLTree(nodes);
       expect(tree).toMatchSnapshot();
-      expect(tree.toReact()).toMatchSnapshot();
+      expect(tree.reactElements).toMatchSnapshot();
 
-      expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
+      expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
     });
   });
 });
