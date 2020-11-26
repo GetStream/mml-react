@@ -18,19 +18,21 @@ It also accepts custom convertor which allows you to exapand the default tags an
 
 <Props of={MML} />
 
-## Basic usage without any state
+## Basic usage
 
 <Playground>
-  <MML source={`<mml name="text">hi</mml>`} />
+  <MML source="<mml>hi</mml>" />
 </Playground>
 
-## Basic usage with state
+## Basic usage with stateful components
 
 <Playground>
   <MML
     source={`
-      <mml name="counts">
+      <mml name="donut_form">
+        <text>How many donuts?</text>
         <number name="donuts" value="3" />
+        <button>Confirm</button>
       </mml>
     `}
   />
@@ -38,7 +40,7 @@ It also accepts custom convertor which allows you to exapand the default tags an
 
 ## Callback support
 
-if onSubmit callback return a promise, it will be awaited.
+If onSubmit callback return a promise, it will be awaited.
 
 <Playground>
   <MML
@@ -52,10 +54,46 @@ if onSubmit callback return a promise, it will be awaited.
   />
 </Playground>
 
+## Different use cases
+
+<Playground>
+  <MML
+    source={`
+      <mml>
+        <text>Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?</text>
+        <button_list>
+          <button name="time" value="9:30">9:30</button>
+          <button name="time" value="10:00">10:00</button>
+          <button name="time" value="11:30">11:30</button>
+          <button name="cancel" value="cancel">Cancel</button>
+        </button_list>
+      </mml>
+    `}
+  />
+</Playground>
+
+###
+
+<Playground>
+  <MML
+    source={`
+      <mml>
+        <text>Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?</text>
+        <button_list>
+          <button name="time" value="9:30">9:30</button>
+          <button name="time" value="10:00">10:00</button>
+          <button name="time" value="11:30">11:30</button>
+          <button name="cancel" value="cancel">Cancel</button>
+        </button_list>
+      </mml>
+    `}
+  />
+</Playground>
+
 ## Invalid MML string
 
 In case of an error, you can override default Error component
 
 <Playground>
-  <MML source="<invalid />" Error={({ error }) => <div>{error}</div>} />
+  <MML source="<mml><invalid /></mml>" Error={({ error }) => <div style={{color:"red"}}>{error}</div>} />
 </Playground>
