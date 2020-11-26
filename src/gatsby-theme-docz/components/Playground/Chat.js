@@ -63,7 +63,16 @@ const Author = styled.div`
 
 const Messages = styled.div``;
 
-const Message = styled.div``;
+const Message = styled.div`
+  position: relative;
+  flex: 1;
+  display: block;
+  margin: 2px 0;
+  padding: 4px 12px;
+  border: 1px solid ${(props) => props.theme.strokeLowEmphasis};
+  background: ${(props) => props.theme.cardBg};
+  color: ${(props) => props.theme.textHighEmphasis};
+`;
 
 const Time = styled.div`
   margin-top: 4px;
@@ -149,9 +158,7 @@ export const Chat = ({ interactive, children }) => {
               <Author>{user.name}</Author>
               <Messages className="mml-wrap">
                 {thread.messages.map((msg, msgIdx) => (
-                  <Message key={`msg${idx}${msgIdx}`} className="mml-text">
-                    {msg.text}
-                  </Message>
+                  <Message key={`msg${idx}${msgIdx}`}>{msg.text}</Message>
                 ))}
               </Messages>
               <Time>{dayjs().format('H:m a')}</Time>
