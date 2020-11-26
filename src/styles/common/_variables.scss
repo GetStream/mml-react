@@ -26,7 +26,7 @@ $mml-theme: (
 $mml-prefix: 'mml-' !default;
 $mml-selector-wrapper-message-self: '.me' !default;
 $mml-spacer: 10px !default;
-$mml-max-width: 60% !default;
+$mml-max-width: 200px !default;
 $mml-border-radius: 16px !default;
 $mml-border-radius-base: 0px !default;
 $mml-border-style: solid !default;
@@ -75,6 +75,7 @@ $mml-btn--icon-distance-x: 0.4em !default;
 
 // ButtonList:
 // -----------------------------------------------------------------------------
+$mml-btnlist-min-width: 155px !default;
 $mml-btnlist-max-width: $mml-btn-max-width !default;
 $mml-btnlist-bg: $mml-btn-bg !default;
 $mml-btnlist-border-width: $mml-btn-border-width !default;
@@ -86,6 +87,7 @@ $mml-btnlist__btn--with-icon-font-weight: normal !default;
 
 // Card:
 // -----------------------------------------------------------------------------
+$mml-card-max-width: $mml-max-width !default;
 $mml-card-bg: mml-theme(card-alt-bg) !default;
 $mml-card-header-font-size: 13px !default;
 $mml-card-header-font-weight: bold !default;
@@ -166,16 +168,8 @@ $mml-md__link-color: mml-theme(primary-accent) !default;
 // Number:
 // -----------------------------------------------------------------------------
 $mml-number-bg: mml-theme(card-bg-alt) !default;
-$mml-number__btn-width: 32px !default;
-$mml-number__btn-height: $mml-number__btn-width !default;
-$mml-number__btn-icon-size: $mml-number__btn-width / 1.75 !default;
-$mml-number__btn-border-radius: 100% !default;
-$mml-number__btn-margin-y: 4px !default;
-$mml-number__btn-margin-x: $mml-spacer !default;
-$mml-number__btn-bg: $mml-btn-bg !default;
-$mml-number__btn-hover-bg: $mml-btn-hover-bg !default;
-$mml-number__btn-color: $mml-btn-color !default;
-$mml-number__btn-hover-color: $mml-btn-hover-color !default;
+$mml-number__btn-margin-y: 8px !default;
+$mml-number__btn-margin-x: $mml-number__btn-margin-y !default;
 $mml-number__count-font-weight: bold !default;
 $mml-number__count-color: mml-theme(text-high-emphasis) !default;
 

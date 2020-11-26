@@ -1,4 +1,5 @@
 @include mml-component('card') {
+  max-width: $mml-card-max-width;
   width: 100%;
   overflow: hidden;
   background: $mml-card-bg;
@@ -8,18 +9,23 @@
     max-width: none;
     border: 0;
   }
-  
-  > #{mml-component-sel('btn')} {
+
+  > #{mml-component('btn')} {
     min-width: 100%;
 
     &:last-child {
       border-radius: $mml-border-radius-base;
       border-bottom-right-radius: $mml-border-radius;
-      
+
       @include mml-me() {
         border-bottom-left-radius: $mml-border-radius;
         border-bottom-right-radius: $mml-border-radius-base;
       }
     }
   }
+}
+
+// card style related to its wrapping responsability on the `<mml>` tag when
+// applied there as a class
+@include mml-component('card') {
 }

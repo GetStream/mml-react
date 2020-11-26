@@ -1,7 +1,8 @@
 // space for some basic styling
 
-// most wrapper container
-.mml-container {
+// most wrapper container (always present on `<mml>` outer element)
+// -----------------------------------------------------------------------------
+@include mml-component('container') {
   font-family: $mml-font-base;
 
   * {
@@ -9,9 +10,33 @@
   }
 }
 
-// flexible inner container
-.mml-wrap {
+// flexible inner container, it is present by default but when
+// `<mml type="card">` is used this class is not there
+// -----------------------------------------------------------------------------
+@include mml-component('wrap') {
   display: flex;
   flex-direction: column;
-  @extend %mml-bordered-area;
+
+  > * {
+    border-radius: $mml-border-radius;
+    margin-right: auto;
+    // margin-left: unset;
+
+    // Context: me message
+    // -------------------------------------------------------------------------
+    @include mml-me() {
+      margin-left: auto;
+      margin-right: unset;
+    }
+  }
+
+  > *:last-child:not(#{mml-component('btn--icon')}) {
+    border-bottom-left-radius: $mml-border-radius-base;
+    border-bottom-right-radius: $mml-border-radius;
+
+    @include mml-me() {
+      border-bottom-left-radius: $mml-border-radius;
+      border-bottom-right-radius: $mml-border-radius-base;
+    }
+  }
 }
