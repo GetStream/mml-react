@@ -39,14 +39,16 @@ Internally this component uses [`Card`](/components/card), [`CardHeader`](/compo
 <Playground>
   <MML
     source={`
-    <text>The party is going to happen!</text>
-    <add_to_calendar 
-      title="Christmas party" 
-      start="2020-12-24T18:00:00.148Z" 
-      end="2020-12-26T15:00:00.148Z" 
-      description="The gift is your presence" 
-      location="Boulder, CO"
-    />
+    <mml>
+      <text>The party is going to happen!</text>
+      <add_to_calendar 
+        title="Christmas party" 
+        start="2020-12-24T18:00:00.148Z" 
+        end="2020-12-26T15:00:00.148Z" 
+        description="The gift is your presence" 
+        location="Boulder, CO"
+      />
+    </mml>
   `}
   />
 </Playground>
