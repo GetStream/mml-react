@@ -50,7 +50,7 @@
     "prop-types": "^15.7.2",
     "pure-react-carousel": "^1.27.6",
     "react-markdown": "^5.0.3",
-    "react-virtuoso": "^0.20.1",
+    "react-virtuoso": "^0.20.3",
     "uuid": "^8.3.1"
   },
   "devDependencies": {
@@ -75,8 +75,8 @@
     "typescript": "^4.1.2"
   },
   "resolutions": {
-    "**/@typescript-eslint/eslint-plugin": "^4.8.1",
-    "**/@typescript-eslint/parser": "^4.8.1"
+    "**/@typescript-eslint/eslint-plugin": "^4.8.2",
+    "**/@typescript-eslint/parser": "^4.8.2"
   },
   "husky": {
     "hooks": {
