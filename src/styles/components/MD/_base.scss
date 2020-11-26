@@ -24,7 +24,11 @@
     font-family: $mml-font-monospace;
   }
 
-  p {
+  // all <p> except those that are alone, for instance if the user creates a
+  // sort of table with row and columns and inside each cell want to place some
+  // md that will probably be just a simple string to obtain a sort of <th> / <td>
+  // differentiation
+  p:not(:first-child):not(:last-child) {
     margin: 0 0 1em;
   }
 

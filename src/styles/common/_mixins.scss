@@ -20,11 +20,24 @@
 /// MML me
 ///
 /// Automatically scope the class name to a message marked as "mine", which it
-/// is by default shown on the right hand
+/// is by default shown on the right hand side
 ///
 /// __________________________________________________________________________--
 @mixin mml-me($theme: '') {
   #{$mml-selector-wrapper-message-self} & {
+    @content;
+  }
+}
+
+///
+/// MML other
+///
+/// Automatically scope the class name to a message marked as "others", which it
+/// is by default shown on the left hand side
+///
+/// __________________________________________________________________________--
+@mixin mml-other($theme: '') {
+  #{$mml-selector-wrapper-message-other} & {
     @content;
   }
 }

@@ -136,12 +136,14 @@ appCanvas: '#fff',
 
 ### Differentiations between mine and other's messages
 
-Some components need to slightly change according to their position in the chat. To achieve this MML scope its `CSS` alterations in a configurable selector through the `SCSS` variable `$mml-selector-wrapper-message-self` whose default value is `.me` class selector. This selector needs to be placed on the container element that wraps your MML attachment. MML styling by default aligns `.me` messages on the right hand side.
-Internally to this library these SCSS tweaks are implemented through the `SCSS mixin mml-me`, e.g.:
+Some components need to slightly change according to their position in the chat. To achieve this MML scope its `CSS` alterations in a configurable selector through the `SCSS` variables `$mml-selector-wrapper-message-self` and  `$mml-selector-wrapper-message-other` whose default values are respectively `.me` and `.other` class selectors. These selectors need to be placed on the container element that wraps your MML attachment. MML styling by default aligns `.other` messages on the left hand side and `.me` messages on the right hand side.
+Internally to this library these SCSS tweaks are implemented through the `SCSS mixins mml-me and mml-other`, e.g.:
 
 ```scss
 @include mml-component('btn') {
-  text-align: left;
+  @include mml-other() {
+    text-align: left;
+  }
 
   @include mml-me() {
     text-align: right;

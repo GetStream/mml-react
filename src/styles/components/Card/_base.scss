@@ -10,10 +10,19 @@
     border: 0;
   }
 
+  // everything in the the middle of a card is considered to be card-body
+  > *:not(:first-child):not(:last-child) {
+    border-width: 0 $mml-card-border-width;
+    border-style: $mml-card-border-style;
+    border-color: $mml-card-border-color;
+  }
+
   > #{mml-component('btn')} {
     min-width: 100%;
+    border: $mml-card-border;
 
     &:last-child {
+      padding: $mml-btnlist__btn-padding-y $mml-btnlist__btn-padding-x;
       border-radius: $mml-border-radius-base;
       border-bottom-right-radius: $mml-border-radius;
 
@@ -23,9 +32,4 @@
       }
     }
   }
-}
-
-// card style related to its wrapping responsability on the `<mml>` tag when
-// applied there as a class
-@include mml-component('card') {
 }

@@ -25,6 +25,7 @@ $mml-theme: (
 // -----------------------------------------------------------------------------
 $mml-prefix: 'mml-' !default;
 $mml-selector-wrapper-message-self: '.me' !default;
+$mml-selector-wrapper-message-other: '.other' !default;
 $mml-spacer: 10px !default;
 $mml-max-width: 200px !default;
 $mml-border-radius: 16px !default;
@@ -89,6 +90,10 @@ $mml-btnlist__btn--with-icon-font-weight: normal !default;
 // -----------------------------------------------------------------------------
 $mml-card-max-width: $mml-max-width !default;
 $mml-card-bg: mml-theme(card-alt-bg) !default;
+$mml-card-border-color: mml-theme(stroke-low-emphasis) !default;
+$mml-card-border-width: $mml-border-width !default;
+$mml-card-border-style: $mml-border-style !default;
+$mml-card-border: $mml-card-border-width $mml-card-border-style $mml-card-border-color !default;
 $mml-card-header-font-size: 13px !default;
 $mml-card-header-font-weight: bold !default;
 $mml-card-header-padding-y: 16px !default;
