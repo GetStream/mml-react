@@ -147,10 +147,8 @@
   /// Component: text
   /// __________________________________________________________________________
   @include mml-component('text') {
-    padding: $mml-text-padding-y $mml-text-padding-x;
     border-radius: $mml-border-radius $mml-border-radius $mml-border-radius 0;
     border: $mml-border;
-    background: $mml-text-bg;
   }
 }
 

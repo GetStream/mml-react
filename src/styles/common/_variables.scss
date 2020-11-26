@@ -26,7 +26,7 @@ $mml-theme: (
 $mml-prefix: 'mml-' !default;
 $mml-selector-wrapper-message-self: '.me' !default;
 $mml-selector-wrapper-message-other: '.other' !default;
-$mml-spacer: 10px !default;
+$mml-spacer: 8px !default;
 $mml-max-width: 200px !default;
 $mml-border-radius: 16px !default;
 $mml-border-radius-base: 0px !default;
@@ -101,14 +101,20 @@ $mml-card-header-padding-x: 16px !default;
 $mml-card-header-border-radius: $mml-border-radius !default;
 $mml-card-header-bg: mml-theme(card-bg) !default;
 $mml-card-header-color: mml-theme(text-mid-emphasis) !default;
+$mml-card-body-padding-y: 4px !default;
+$mml-card-body-padding-x: 8px !default;
 $mml-card-body-font-size: 14px !default;
 $mml-card-body-color: mml-theme(text-high-emphasis) !default;
+$mml-card__btn-padding-y: $mml-btnlist__btn-padding-y !default;
+$mml-card__btn-padding-x: $mml-btnlist__btn-padding-x !default;
+$mml-card__btn-padding: $mml-card__btn-padding-y $mml-card__btn-padding-x !default;
 
 // Carousel:
 // -----------------------------------------------------------------------------
 $mml-carousel-margin-y: $mml-spacer !default;
 $mml-carousel__item-gutter-x: $mml-spacer !default;
-$mml-carousel__text-font-size: 12px !default;
+$mml-carousel__text-font-size: 11px !default;
+$mml-carousel__text-font-color: mml-theme(text-low-emphasis) !default;
 
 // Col (Grid):
 // -----------------------------------------------------------------------------
@@ -175,7 +181,7 @@ $mml-md__link-color: mml-theme(primary-accent) !default;
 // Number:
 // -----------------------------------------------------------------------------
 $mml-number-bg: mml-theme(card-bg-alt) !default;
-$mml-number__btn-margin-y: 8px !default;
+$mml-number__btn-margin-y: $mml-card-body-padding-x !default;
 $mml-number__btn-margin-x: $mml-number__btn-margin-y !default;
 $mml-number__count-font-weight: bold !default;
 $mml-number__count-color: mml-theme(text-high-emphasis) !default;
@@ -196,8 +202,6 @@ $mml-success-color: mml-theme(primary-accent) !default;
 
 // Text:
 // -----------------------------------------------------------------------------
-$mml-text-padding-y: 4px !default;
-$mml-text-padding-x: 12px !default;
 $mml-text-spacer-y: 4px !default;
 $mml-text-bg: mml-theme(card-bg) !default;
 $mml-text-bg--me: mml-theme(card-bg-alt) !default;

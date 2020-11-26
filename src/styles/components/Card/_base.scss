@@ -4,6 +4,7 @@
   overflow: hidden;
   background: $mml-card-bg;
 
+  // this composition happens for instance in the AddToCalendar component
   @include mml-component('btnlist') {
     font-size: $mml-card-body-font-size;
     max-width: none;
@@ -23,7 +24,7 @@
     border: $mml-card-border;
 
     &:last-child {
-      padding: $mml-btnlist__btn-padding-y $mml-btnlist__btn-padding-x;
+      padding: $mml-card__btn-padding;
       border-radius: $mml-border-radius-base;
       border-bottom-right-radius: $mml-border-radius;
 

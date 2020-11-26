@@ -100,12 +100,6 @@ $mml-theme-team-margin-y: 10px !default;
     margin-top: $mml-theme-team-margin-y;
   }
 
-  /// Component: md
-  /// __________________________________________________________________________
-  @include mml-component('md') {
-    padding: 0 0 0 $mml-text-padding-x;
-  }
-
   /// Component: row
   /// __________________________________________________________________________
   @include mml-component('row') {
@@ -127,12 +121,6 @@ $mml-theme-team-margin-y: 10px !default;
   /// __________________________________________________________________________
   @include mml-component('scheduler') {
     margin-bottom: $mml-theme-team-margin-y;
-  }
-
-  /// Component: text
-  /// __________________________________________________________________________
-  @include mml-component('text') {
-    padding: 0 0 0 $mml-text-padding-x;
   }
 }
 
