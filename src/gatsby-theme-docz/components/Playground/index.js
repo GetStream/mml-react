@@ -42,8 +42,7 @@ const getResizableProps = (width, setWidth) => ({
 
 const transformCode = (code) => {
   if (code.startsWith('()') || code.startsWith('class')) return code;
-  // add the same HTML structure as MML container
-  return `<React.Fragment><div className="mml-container"><form className="mml-wrap">${code}</form></div></React.Fragment>`;
+  return `<React.Fragment>${code}</React.Fragment>`;
 };
 
 const transformMmlCode = (code) => {
@@ -56,8 +55,12 @@ export const Playground = ({ code, scope, language, useScoping = false, ...props
   } = useConfig();
   let codeTransformer = transformCode;
 
+  // always add MML component in scope so we do not need to import it everytime
+  // in the mdx example files
+  scope.MML = MML;
+
+  // support the playground to just contain a plain mml string
   if (code.trim().startsWith('<mml')) {
-    scope.MML = MML;
     language = 'xml';
     codeTransformer = transformMmlCode;
   }
