@@ -25,21 +25,36 @@ const CONVERSATION = [
 
 const CHAT_GUTTER_X = 9;
 
-const Wrapper = styled.div`
-  width: 320px;
-  // height: 515px;
-  margin: 0 auto;
-  font-size: 15px; // $mml-font-size
-  padding: 16px 0;
-  background: ${(props) => props.theme.appCanvas};
-`;
-
-const Conversation = styled.div``;
-
 const Thread = styled.div`
   position: relative;
   padding: 0 ${CHAT_GUTTER_X}px 0 46px;
 `;
+
+const Composer = styled.form`
+  border-top: 1px solid ${(props) => props.theme.stroke};
+`;
+
+const Wrapper = styled.div`
+  width: 320px;
+  margin: 0 auto;
+  font-size: 15px; // $mml-font-size
+  padding: 16px 0;
+  background: ${(props) => props.theme.appCanvas};
+
+  ${Thread},
+  ${Composer} {
+    ${(props) =>
+      props.interactive
+        ? ''
+        : `
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.2;
+    `}
+  }
+`;
+
+const Conversation = styled.div``;
 
 const Author = styled.div`
   color: ${(props) => props.theme.textMidEmphasis};
@@ -78,14 +93,12 @@ const Attachment = styled.div`
   padding: 16px ${CHAT_GUTTER_X}px 32px;
 `;
 
-const Composer = styled.form`
-  border-top: 1px solid ${(props) => props.theme.stroke};
-`;
-
 const ComposerInput = styled.input`
   &.mml-input {
     border: 0;
     font-size: 15px;
+    box-sizing: border-box;
+    background: transparent;
   }
 `;
 
@@ -119,9 +132,15 @@ const ComposerSubmit = styled.button`
   }
 `;
 
-export const Chat = ({ children }) => {
+/**
+ * Dummy chat component
+ *
+ * @param {object} props
+ * @param {boolean} [props.interactive] When false everything but the Attachment is not clickable and faded out
+ */
+export const Chat = ({ interactive, children }) => {
   return (
-    <Wrapper>
+    <Wrapper interactive={interactive}>
       <Conversation>
         {CONVERSATION.map((thread, idx) => {
           const user = USERS[thread.user] || USERS[0];
@@ -143,7 +162,7 @@ export const Chat = ({ children }) => {
         <Attachment className="me">{children}</Attachment>
       </Conversation>
       <Composer>
-        <ComposerInput className="mml-input" placeholder="Say something" />
+        <ComposerInput className="mml-input" placeholder="Say something" disabled />
         <ComposerActionbar>
           <ComposerBtn className="mml-btn" disabled>
             <i className="mml-icon material-icons">attach_file</i>

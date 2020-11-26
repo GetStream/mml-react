@@ -83,7 +83,7 @@ export const Playground = ({ code, scope, language, useScoping = false, ...props
             showingCode={showingCode}
           >
             {showLivePreview && (
-              <Chat>
+              <Chat interactive={false}>
                 <LivePreview data-testid="live-preview" />
               </Chat>
             )}
