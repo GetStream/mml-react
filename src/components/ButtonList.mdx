@@ -14,10 +14,26 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
 
 <Props of={ButtonList} />
 
+
+## MML string
+
+```xml
+<mml>
+  <button_list>
+    <button name="side" value="yes">
+      Yes!
+    </button>
+    <button name="side" value="no">
+      No, thanks
+    </button>
+  </button_list>
+</mml>
+```
+
 ## Basic usage
 
 <Playground>
-  <mml>
+  <MML source={`
     <button_list>
       <button name="side" value="yes">
         Yes!
@@ -26,13 +42,13 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
         No, thanks
       </button>
     </button_list>
-  </mml>
+  `} />
 </Playground>
 
 ## With `floating` variant
 
 <Playground>
-  <mml>
+  <MML source={`
     <button_list variant="floating">
       <button variant="floating" name="side" value="yes">
         Yes!
@@ -41,33 +57,5 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
         No, thanks
       </button>
     </button_list>
-  </mml>
+  `} />
 </Playground>
-
-<!--
-## MML string
-
-```xml
-<mml>
-  <button_list>
-    <button name="side" value="yes">Yes!</button>
-    <button name="side" value="no">No, thanks</button>
-  </button_list>
-</mml>
-```
-
-<Playground>
-  <ButtonList>
-    <Button text="Yes!" name="side" value="yes" />
-    <Button text="No, thanks" name="side" value="no" />
-  </ButtonList>
-</Playground>
-## With `floating` variant
-
-<Playground>
-  <ButtonList variant="floating">
-    <Button variant="floating" text="Yes!" name="side" value="yes" />
-    <Button variant="floating" text="No, thanks" name="side" value="no" />
-  </ButtonList>
-</Playground>
- -->
