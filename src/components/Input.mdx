@@ -18,12 +18,18 @@ Text input element
 
 ```xml
 <mml>
-  <input name="answer"  value="42"></input>
+  <input name="answer" value="42"></input>
+  <button name="action" value="submit">Submit</button>
 </mml>
 ```
 
 ## Basic usage
 
 <Playground>
-  <Input name="answer" value="42" />
+  <MML
+    source={`
+    <input name="answer" value="42"></input>
+    <button name="action" value="submit">Submit</button>
+  `}
+  />
 </Playground>

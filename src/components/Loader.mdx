@@ -10,6 +10,8 @@ import { Loader } from './Loader.tsx';
 
 Loader simply indicates a loading/pending state, you can use it to manage users expectations during async behaviours or waiting times. Internally it uses the `<Progress />` component to show a circular progress indicator.
 
+> This component is not exposed as `mml` string, it is used internally in other mml components and it can be imported to create your custom ones.
+
 ## Properties
 
 <Props of={Loader} />
@@ -27,17 +29,6 @@ Loader simply indicates a loading/pending state, you can use it to manage users 
 </Playground>
 
 ## Style customization
-
-The progress indicator can be configured either by `props` when you want to customize a _single instance_ of a `<loader>` or in `css`/`scss` when you want to customize the _overall look and feel_ of the component. For example if you want to change the progress size you can either have a css like:
-
-```css
-.mml-progress {
-  width: 18px;
-  height: 18px;
-}
-```
-
-### SCSS variables
 
 If your projects include a `sass` compilation step you might customize the overall look and feel of the component through `scss` variables, here are all the available ones with their default values:
 

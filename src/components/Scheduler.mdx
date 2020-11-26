@@ -29,21 +29,34 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 ## Basic usage
 
 <Playground>
-  <Text text="When would you like to schedule your massage?" />
-  <Scheduler name="scheduler" selected="2021-11-16T10:30:00.000Z" />
-  <Button text="Reserve" name="action" value="reserve" />
+  <MML
+    source={`
+    <text>When would you like to schedule your massage?</text>
+    <scheduler 
+      name="appointment" 
+      duration="30" 
+      interval="30"
+      selected="2020-11-16T10:30:00.000Z"
+    />
+    <button name="action" value="reserve">Reserve</button>
+  `}
+  />
 </Playground>
 
 ## With ICal availability URL
 
 <Playground>
-  <Text text="When would you like to schedule your massage?" />
-  <Scheduler
-    name="scheduler"
-    selected="2021-11-16T10:30:00.000Z"
-    icalAvailability="https://srv-store1.gofile.io/download/OSUFP4/netherlands.ics"
-    duration={30}
-    interval={30}
+  <MML
+    source={`
+    <text>When would you like to schedule your massage?</text>
+    <scheduler
+      name="appointment"
+      duration="30"
+      interval="30"
+      selected="2020-11-16T10:30:00.000Z"
+      icalAvailability="https://srv-store1.gofile.io/download/OSUFP4/netherlands.ics"
+    />
+    <button name="action" value="reserve">Reserve</button>
+  `}
   />
-  <Button text="Reserve" name="action" value="reserve" />
 </Playground>
