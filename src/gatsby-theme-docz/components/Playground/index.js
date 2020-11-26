@@ -42,8 +42,13 @@ const getResizableProps = (width, setWidth) => ({
 
 const transformCode = (code) => {
   if (code.startsWith('()') || code.startsWith('class')) return code;
-  // add the same HTML structure as MML container
-  return `<React.Fragment><div className="mml-container"><form className="mml-wrap">${code}</form></div></React.Fragment>`;
+
+  // when not using <MML> wrapper in the playground ensure we have the same HTML
+  // structure as MML container, this happens in examples of Utility coomponents
+  if (!code.startsWith('<MML')) {
+    return `<React.Fragment><div className="mml-container"><form className="mml-wrap">${code}</form></div></React.Fragment>`;
+  }
+  return `<React.Fragment>${code}</React.Fragment>`;
 };
 
 const transformMmlCode = (code) => {
