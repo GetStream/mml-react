@@ -34,9 +34,9 @@ Object {
         Object {
           "attributes": Object {
             "duration": "30",
-            "interval": "30",
             "name": "massage_appointment",
             "selected": "2020-11-16T10:30:00.000Z",
+            "timeInterval": "15",
           },
           "children": Array [],
           "name": "scheduler",
@@ -117,18 +117,18 @@ Tree {
     MMLTag {
       "attributes": Object {
         "duration": "30",
-        "interval": "30",
         "name": "massage_appointment",
         "selected": "2020-11-16T10:30:00.000Z",
+        "timeInterval": "15",
       },
       "children": Array [],
       "name": "scheduler",
       "node": Object {
         "attributes": Object {
           "duration": "30",
-          "interval": "30",
           "name": "massage_appointment",
           "selected": "2020-11-16T10:30:00.000Z",
+          "timeInterval": "15",
         },
         "children": Array [],
         "name": "scheduler",
@@ -220,9 +220,9 @@ Tree {
       Object {
         "attributes": Object {
           "duration": "30",
-          "interval": "30",
           "name": "massage_appointment",
           "selected": "2020-11-16T10:30:00.000Z",
+          "timeInterval": "15",
         },
         "children": Array [],
         "name": "scheduler",
@@ -271,11 +271,13 @@ Array [
     text="When would you like to schedule your massage?"
   />,
   <Scheduler
+    allowPast={false}
+    dateInterval={1}
     duration={30}
     fullDay={false}
-    interval={30}
     name="massage_appointment"
     selected="2020-11-16T10:30:00.000Z"
+    timeInterval={15}
   />,
   <Button
     name="action"

@@ -89,10 +89,12 @@ export const converters = {
         {...tag.attributes}
         key={tag.key}
         name={tag.attributes.name}
-        interval={parseInt(tag.attributes.interval, 10) || 30} // default to 30 minutes
+        dateInterval={parseInt(tag.attributes.dateInterval, 10) || 1} // default to 1 day
+        timeInterval={parseInt(tag.attributes.timeInterval, 10) || 30} // default to 30 minutes
         duration={parseInt(tag.attributes.duration, 10) || 30} // default to 30 minutes
         selected={tag.attributes.selected}
         fullDay={tag.attributes.fullDay === 'true'}
+        allowPast={tag.attributes.allowPast === 'true'}
         icalAvailability={tag.attributes.icalAvailability}
       />
     );
