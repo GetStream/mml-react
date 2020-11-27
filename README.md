@@ -110,7 +110,7 @@ $mml-theme: (
 );
 ```
 
-> If you are running `sass` within your project you might customize most aspects of mml styling other than the them through scss variables. Refer [to the source](src/styles/common/_variables.scss) to see what is available.
+> If you are running `sass` within your project you might customize most aspects of mml styling other than the them through scss variables. Refer [to the source](https://github.com/GetStream/mml-react/blob/master/src/styles/common/_variables.scss) to see what is available.
 
 Each of these variables is also avaialable as CSS variable that you can tweak dynamically, prefixed with `--mml`:
 
