@@ -10,7 +10,7 @@
 // YARN
 yarn add mml-react
 
-//NPM
+// NPM
 npm install mml-react --save
 
 ```
@@ -136,7 +136,7 @@ appCanvas: '#fff',
 
 ### Differentiations between mine and other's messages
 
-Some components need to slightly change according to their position in the chat. To achieve this MML scope its `CSS` alterations in a configurable selector through the `SCSS` variables `$mml-selector-wrapper-message-self` and  `$mml-selector-wrapper-message-other` whose default values are respectively `.me` and `.other` class selectors. These selectors need to be placed on the container element that wraps your MML attachment. MML styling by default aligns `.other` messages on the left hand side and `.me` messages on the right hand side.
+Some components need to slightly change according to their position in the chat. To achieve this MML scope its `CSS` alterations in a configurable selector through the `SCSS` variables `$mml-selector-wrapper-message-self` and `$mml-selector-wrapper-message-other` whose default values are respectively `.me` and `.other` class selectors. These selectors need to be placed on the container element that wraps your MML attachment. MML styling by default aligns `.other` messages on the left hand side and `.me` messages on the right hand side.
 Internally to this library these SCSS tweaks are implemented through the `SCSS mixins mml-me and mml-other`, e.g.:
 
 ```scss
@@ -161,10 +161,9 @@ MML attachments always have two wrapping elements with the following two classes
 ```
 
 The class `.mml-container` is responsible for some very basic styling that other components inherit, like `border-box` and `font-family`.
-The class `.mml-wrap` instead takes care of contextual styling, like `border-radius` and `margin`s, that are most likely dependent on the differentiation between *me* and *other* messages [seen above](#differentiations-between-mine-and-others-messages).
+The class `.mml-wrap` instead takes care of contextual styling, like `border-radius` and `margin`s, that are most likely dependent on the differentiation between _me_ and _other_ messages [seen above](#differentiations-between-mine-and-others-messages).
 
 Inside `mml-wrap` you could have as immediate children either the components as they are or the components automatically wrapped in a `<div class="mml-card">...</div>` when `<mml type="card">` is used (see the [`MML` docs](/mml#with-card-type)). Note that the `mml-card` class (and its `Card` React component) is also used internally in various components like [`Scheduler`](/components/scheduler) and [`AddToCalendar`](/components/add-to-calendar).
-
 
 ## Development & Contributions
 
@@ -175,6 +174,7 @@ Inside `mml-wrap` you could have as immediate children either the components as 
 - `yarn lint` to run linting
 - `yarn format` to prettify things
 - `yarn test` to run tests
+- `npm version patch|minor|major` to make a release
 
 ## Understanding the Parser
 
