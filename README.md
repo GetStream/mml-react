@@ -63,11 +63,11 @@ MML React components could be divided in four categories:
 > Basic components that can be composed and themed
 
 - [`Text`](/components/text): a block of text
-- [`Button`](/components/button):
+- [`Button`](/components/button): a simple button
 - [`Image`](/components/image): a simple responsive image
 - [`Input`](/components/input): an input field
 - [`MD`](/components/md): renders markdown
-- [`Icon`](/components/icon): simply displays an ico from material design icons
+- [`Icon`](/components/icon): simply displays an icon from material design icons
 - [`Loader`](/components/loader): signals a _loading_ temporary state with a circular spinner
 - [`Error`](/components/error): display an _error_ message
 - [`Success`](/components/success): display a _success_ message
@@ -150,6 +150,21 @@ Internally to this library these SCSS tweaks are implemented through the `SCSS m
   }
 }
 ```
+
+### HTML structure
+
+MML attachments always have two wrapping elements with the following two classes:
+
+```scss
+.mml-container
+  .mml-wrap
+```
+
+The class `.mml-container` is responsible for some very basic styling that other components inherit, like `border-box` and `font-family`.
+The class `.mml-wrap` instead takes care of contextual styling, like `border-radius` and `margin`s, that are most likely dependent on the differentiation between *me* and *other* messages [seen above](#differentiations-between-mine-and-others-messages).
+
+Inside `mml-wrap` you could have as immediate children either the components as they are or the components automatically wrapped in a `<div class="mml-card">...</div>` when `<mml type="card">` is used (see the [`MML` docs](/mml#with-card-type)). Note that the `mml-card` class (and its `Card` React component) is also used internally in various components like [`Scheduler`](/components/scheduler) and [`AddToCalendar`](/components/add-to-calendar).
+
 
 ## Development & Contributions
 
