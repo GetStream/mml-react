@@ -64,3 +64,36 @@ Display a list of buttons, a tyical usecase is allowing the user to select an op
   `}
   />
 </Playground>
+
+<MML
+  source={`
+  <mml>
+    <text>How many days do you need?</text>
+    <button_list variant="floating">
+      <button variant="floating" name="side" value="1">1</button>
+      <button variant="floating" name="side" value="2">2</button>
+      <button variant="floating" name="side" value="3">3</button>
+      <button variant="floating" name="side" value="4">4</button>
+      <button variant="floating" name="side" value="5+">5+</button>
+    </button_list>
+  </mml>
+`}
+/>
+
+
+<MML
+  source={`
+  <mml>
+    <text>How do you feel about it?</text>
+    <button_list variant="floating">
+      <button variant="floating" name="feeling" value="1" icons="sentiment_dissatisfied" />
+      <button variant="floating" name="feeling" value="2" icons="sentiment_satisfied" />
+      <button variant="floating" name="feeling" value="3" icons="sentiment_very_dissatisfied" />
+      <button variant="floating" name="feeling" value="4" icons="sentiment_very_satisfied" />
+    </button_list>
+  </mml>
+`}
+/>
+
+
+
