@@ -1,4 +1,6 @@
 @include mml-component('card-body') {
-  font-size: $mml-card-body-font-size;
+  @include mml-card-body-borders();
+  background: $mml-card-body-bg;
   color: $mml-card-body-color;
+  font-size: $mml-card-body-font-size;
 }

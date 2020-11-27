@@ -91,7 +91,6 @@
   /// __________________________________________________________________________
   @include mml-component('number') {
     border: $mml-border;
-    background: $mml-number-bg;
 
     // number btn control
     &--dec {

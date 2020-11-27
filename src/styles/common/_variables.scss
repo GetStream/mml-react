@@ -83,6 +83,8 @@ $mml-btnlist-border-width: $mml-btn-border-width !default;
 $mml-btnlist-border-color: $mml-border-color !default;
 $mml-btnlist__btn-padding-y: 11px !default;
 $mml-btnlist__btn-padding-x: $mml-btn-padding-x !default;
+$mml-btnlist__btn-margin-y: $mml-spacer !default;
+$mml-btnlist__btn-margin-x: $mml-spacer !default;
 $mml-btnlist__btn--with-icon-color: mml-theme(text-high-emphasis) !default;
 $mml-btnlist__btn--with-icon-font-weight: normal !default;
 
@@ -114,7 +116,7 @@ $mml-card__btn-padding: $mml-card__btn-padding-y $mml-card__btn-padding-x !defau
 $mml-carousel-margin-y: $mml-spacer !default;
 $mml-carousel__item-gutter-x: $mml-spacer !default;
 $mml-carousel__text-font-size: 11px !default;
-$mml-carousel__text-font-color: mml-theme(text-low-emphasis) !default;
+$mml-carousel__text-font-color: mml-theme(text-mid-emphasis) !default;
 
 // Col (Grid):
 // -----------------------------------------------------------------------------
@@ -146,7 +148,7 @@ $mml-image-spacer-x: 0 !default;
 
 // Input:
 // -----------------------------------------------------------------------------
-$mml-input-padding-y: $mml-btn-padding-y !default;
+$mml-input-padding-y: $mml-spacer !default;
 $mml-input-padding-x: $mml-btn-padding-x !default;
 $mml-input-bg: mml-theme(card-bg) !default;
 $mml-input-color: mml-theme(text-mid-emphasis) !default;
@@ -180,7 +182,6 @@ $mml-md__link-color: mml-theme(primary-accent) !default;
 
 // Number:
 // -----------------------------------------------------------------------------
-$mml-number-bg: mml-theme(card-bg-alt) !default;
 $mml-number__btn-margin-y: $mml-card-body-padding-x !default;
 $mml-number__btn-margin-x: $mml-number__btn-margin-y !default;
 $mml-number__count-font-weight: bold !default;

@@ -14,13 +14,13 @@
 
   // Context: other message
   // ---------------------------------------------------------------------------
-  @include mml-other() {
-    text-align: left;
-  }
+  // @include mml-other() {
+  //   text-align: left;
+  // }
 
   // Context: me message
   // ---------------------------------------------------------------------------
-  @include mml-me() {
-    text-align: right;
-  }
+  // @include mml-me() {
+  //   text-align: right;
+  // }
 }
