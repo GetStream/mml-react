@@ -26,11 +26,13 @@
     &:last-child {
       padding: $mml-card__btn-padding;
       border-radius: $mml-border-radius-base;
-      border-bottom-right-radius: $mml-border-radius;
+      
+      @include mml-other() {
+        border-bottom-right-radius: $mml-border-radius;
+      }
 
       @include mml-me() {
         border-bottom-left-radius: $mml-border-radius;
-        border-bottom-right-radius: $mml-border-radius-base;
       }
     }
   }

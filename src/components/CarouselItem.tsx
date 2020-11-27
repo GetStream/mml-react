@@ -13,7 +13,7 @@ export type CarouselItemProps = {
 export const CarouselItem: FC<CarouselItemProps> = ({ children }) => {
   //TODO: index should come from parser as prop
   return (
-    <Slide index={0} className="mml-carousel-item mml-wrap">
+    <Slide index={0} className="mml-carousel-item">
       {children}
     </Slide>
   );
