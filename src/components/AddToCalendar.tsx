@@ -179,7 +179,7 @@ export const AddToCalendar: FC<AddToCalendarProps> = ({
           {CALENDAR_SERVICES.map(({ id, label, Icon }) => (
             <a
               key={id}
-              className={`mml-btn ${Icon && 'mml-btn--with-icon'}`}
+              className={`mml-btn ${Icon ? 'mml-btn--with-icon' : ''}`}
               onClick={handleLinkClick}
               href={buildUrl(event, id)}
               target="_blank"
