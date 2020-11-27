@@ -41,7 +41,7 @@
     &:last-child {
       padding: $mml-card__btn-padding;
       border-radius: $mml-border-radius-base;
-      
+
       @include mml-other() {
         border-bottom-right-radius: $mml-border-radius;
       }
