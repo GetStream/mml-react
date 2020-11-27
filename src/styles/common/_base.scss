@@ -1,6 +1,6 @@
 // space for some basic styling
 
-// most wrapper container (always present on `<mml>` outer element)
+// most outer container (always present on `<mml>` outer element)
 // -----------------------------------------------------------------------------
 @include mml-component('container') {
   font-family: $mml-font-base;
@@ -10,8 +10,7 @@
   }
 }
 
-// flexible inner container, it is present by default but when
-// `<mml type="card">` is used this class is not there
+// inner container, it is alwyas present in the HTML structure
 // -----------------------------------------------------------------------------
 @include mml-component('wrap') {
   display: flex;
