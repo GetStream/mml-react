@@ -1,6 +1,7 @@
 @include mml-component('number') {
   flex: 1;
   display: flex;
+  background: $mml-number-bg;
 
   // number count value
   &__count {
@@ -8,52 +9,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 $mml-number__btn-margin-x;
     color: $mml-number__count-color;
     font-weight: $mml-number__count-font-weight;
-    margin-left: $mml-number__btn-margin-x;
-    margin-right: $mml-number__btn-margin-x;
   }
 
   // number btn control
-  &__btn {
-    @include mml-button-base();
-    position: relative;
-    width: $mml-number__btn-width;
-    height: $mml-number__btn-height;
-    margin: $mml-number__btn-margin-y 0;
-    border-radius: $mml-number__btn-border-radius;
-    color: $mml-number__btn-color;
-    background: $mml-number__btn-bg;
-    // as .mml-btn.mml--floating:
-    border: 0;
-    box-shadow: $mml-btn--floating-shadow;
-    font-weight: normal;
-
-    &:hover {
-      background: $mml-number__btn-hover-bg;
-      color: $mml-number__btn-hover-color;
-    }
-
-    &:before {
-      content: '';
-      display: block;
-      padding-top: 100%;
-    }
-
-    // &--dec {}
-
-    // &--inc {}
-
-    .mml-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      font-size: $mml-number__btn-icon-size;
-    }
+  @include mml-component('btn') {
+    margin: $mml-number__btn-margin-y $mml-number__btn-margin-x;
   }
 }

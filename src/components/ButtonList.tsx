@@ -12,5 +12,9 @@ export type ButtonListProps = {
  * A list of buttons
  */
 export const ButtonList: FC<ButtonListProps> = ({ children, variant = '' }) => {
-  return <div className={`mml-btnlist ${variant === 'floating' ? ' mml--floating' : ''}`}>{children}</div>;
+  return (
+    <div className={`mml-btnlist ${variant === 'floating' ? ' mml-btnlist--floating' : 'mml-btnlist--grounded'}`}>
+      {children}
+    </div>
+  );
 };

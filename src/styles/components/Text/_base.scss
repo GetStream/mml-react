@@ -1,21 +1,26 @@
 @include mml-component('text') {
-  position: relative;
-  flex: 1;
-  display: block;
-  margin: ($mml-text-margin-y / 2) 0;
-  padding: $mml-text-padding-y $mml-text-padding-x;
-  border: $mml-border-width $mml-border-style $mml-text-border-color;
-  background: $mml-text-bg;
+  // use padding instead of margin so that when we apply borders to text from
+  // outside, for instance within a carousel-item slide it looks good
+  padding: ($mml-text-spacer-y / 2) 0;
   color: $mml-text-color;
   @if $mml-text-font-size != inherit {
     font-size: $mml-text-font-size;
   }
 
+  // padding not margins, as above
   + * {
-    margin-top: $mml-text-margin-y / 2;
+    padding-top: $mml-text-spacer-y / 2;
   }
 
+  // Context: other message
+  // ---------------------------------------------------------------------------
+  @include mml-other() {
+    text-align: left;
+  }
+
+  // Context: me message
+  // ---------------------------------------------------------------------------
   @include mml-me() {
-    background: $mml-text-bg--me;
+    text-align: right;
   }
 }

@@ -1,47 +1,65 @@
 @include mml-component('btnlist') {
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 100%;
-  border: $mml-border-width $mml-border-style $mml-btnlist-border-color;
-  background: $mml-btnlist-bg;
 
-  @include mml-me() {
-    max-width: $mml-btnlist-max-width;
-    margin-left: auto;
-  }
-
-  @include mml-component('btn') {
+  // Modifier: grounded (default)
+  // ---------------------------------------------------------------------------
+  &--grounded {
+    flex-direction: column;
+    overflow: hidden;
     width: 100%;
-    margin: 0;
-    border-width: 0 0 $mml-border-width 0;
-    border-radius: 0;
-    border-color: $mml-btnlist-border-color;
-    background: none;
+    min-width: $mml-btnlist-min-width;
+    max-width: $mml-btnlist-max-width;
+    border: $mml-btnlist-border-width $mml-border-style $mml-btnlist-border-color;
+    background: $mml-btnlist-bg;
 
-    &:hover,
-    &:focus {
-      color: $mml-btn-hover-color;
-      border-color: $mml-btn-hover-border-color;
-      background: $mml-btn-hover-bg;
-    }
+    @include mml-component('btn') {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      // reset all btn padding coherently (we might have a mml-btn--icon that use
+      // a different padding by default)
+      padding: $mml-btnlist__btn-padding-y $mml-btnlist__btn-padding-x;
+      // just apply a bottom border to inner buttons
+      border-width: 0 0 $mml-btnlist-border-width 0;
+      border-radius: 0;
+      border-color: $mml-btnlist-border-color;
 
-    &:last-child {
-      border-width: 0;
+      // inherit background from parent because border radius is applied there
+      &:not(:hover):not(:focus) {
+        background: none;
+      }
+
+      &:last-child {
+        border-width: 0;
+      }
+
+      &--with-icon {
+        justify-content: flex-start;
+        @if $mml-btnlist__btn--with-icon-font-weight != $mml-btn-font-weight {
+          font-weight: $mml-btnlist__btn--with-icon-font-weight;
+        }
+
+        &:not(:hover):not(:focus) {
+          // only apply rules if we can't inherit them
+          @if $mml-btnlist__btn--with-icon-color != $mml-btn-color {
+            color: $mml-btnlist__btn--with-icon-color;
+          }
+        }
+      }
     }
   }
-}
 
-@include mml-component('btnlist', 'floating') {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: none;
-  border: 0;
-  max-width: none;
+  // Modifier: floating (through props)
+  // ---------------------------------------------------------------------------
+  &--floating {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
 
-  @include mml-component('btn') {
-    border-radius: $mml-btn--floating-border-radius;
-    margin: $mml-spacer / 2;
+    @include mml-component('btn') {
+      margin: $mml-spacer / 2;
+    }
   }
 }

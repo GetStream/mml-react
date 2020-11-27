@@ -6,14 +6,35 @@
   padding-right: $mml-carousel__item-gutter-x;
 
   // react-pure-carousel elements:
-  // ---------------------------------------------------------------------------
   .carousel__inner-slide {
     display: flex;
     flex-direction: column;
 
-    @include mml-component('text') {
+    // everything in the the middle of a card is considered to be card-body
+    > *:not(:first-child):not(:last-child) {
+      background: $mml-card-body-bg;
+    }
+
+    // components that as immediate children behave like card-body
+    > #{mml-component(md)},
+    > #{mml-component(text)} {
       flex: 10;
+      @include mml-card-body-borders();
+      text-align: left;
+      padding: $mml-card-body-padding-y $mml-card-body-padding-x;
+    }
+
+    > #{mml-component(text)} {
       font-size: $mml-carousel__text-font-size;
+      color: $mml-carousel__text-font-color;
+    }
+
+    // > *:last-child {
+    @include mml-component('btn') {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border: $mml-card-border;
+      padding: $mml-card__btn-padding;
     }
   }
 }

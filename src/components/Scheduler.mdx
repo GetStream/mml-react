@@ -31,7 +31,7 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 <Playground>
   <MML
     source={`
-    <mml>
+    <mml type="card">
       <text>When would you like to schedule your massage?</text>
       <scheduler 
         name="appointment" 
@@ -50,8 +50,9 @@ Datetime picker with availability using [iCal](https://icalendar.org/).
 <Playground>
   <MML
     source={`
-      <mml>
+      <mml type="card">
         <scheduler name="appointment" fullDay="true" />
+        <button name="action" value="reserve" icon="add_alarm">Book</button>
       </mml>
     `}
   />
@@ -64,7 +65,7 @@ Notice Dec 25 and Dec 26 are removed from the dates
 <Playground>
   <MML
     source={`
-    <mml>
+    <mml type="card">
       <text>When would you like to schedule your massage?</text>
       <scheduler
         name="appointment"

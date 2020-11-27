@@ -29,9 +29,7 @@ export const Button: FC<ButtonProps> = ({ className = '', text, name, value, url
   } else {
     className += ' mml-btn--text';
   }
-  if (variant === 'floating') {
-    className += ' mml--floating';
-  }
+  className += variant === 'floating' ? ' mml-btn--floating' : ' mml-btn--grounded';
 
   return (
     <button

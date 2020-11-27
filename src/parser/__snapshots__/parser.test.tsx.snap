@@ -343,7 +343,7 @@ Array [
     It looks like your credit card isn't activated yet, activate it now:
   </div>,
   <button
-    className="mml-btn  mml-btn--text"
+    className="mml-btn  mml-btn--text mml-btn--grounded"
     name="action"
     onClick={[Function]}
     type="submit"
@@ -443,6 +443,102 @@ Array [
 `;
 
 exports[`mml with type 4`] = `
+<div
+  className="mml-text"
+>
+  hi
+</div>
+`;
+
+exports[`mml with type 5`] = `
+Object {
+  "children": Array [
+    Object {
+      "attributes": Object {
+        "type": "card",
+      },
+      "children": Array [
+        Object {
+          "text": "hi",
+          "toJSON": [Function],
+          "type": "text",
+        },
+      ],
+      "name": "mml",
+      "toJSON": [Function],
+      "type": "element",
+    },
+  ],
+  "toJSON": [Function],
+  "type": "document",
+}
+`;
+
+exports[`mml with type 6`] = `
+Tree {
+  "children": Array [
+    MMLTag {
+      "attributes": Object {},
+      "children": undefined,
+      "key": "tag-text-position-0",
+      "name": "text",
+      "node": Object {
+        "text": "hi",
+        "toJSON": [Function],
+        "type": "text",
+      },
+    },
+  ],
+  "converters": Object {
+    "add_to_calendar": [Function],
+    "button": [Function],
+    "button_list": [Function],
+    "carousel": [Function],
+    "col": [Function],
+    "icon": [Function],
+    "image": [Function],
+    "input": [Function],
+    "item": [Function],
+    "md": [Function],
+    "number": [Function],
+    "row": [Function],
+    "scheduler": [Function],
+    "text": [Function],
+  },
+  "name": undefined,
+  "node": Object {
+    "attributes": Object {
+      "type": "card",
+    },
+    "children": Array [
+      Object {
+        "text": "hi",
+        "toJSON": [Function],
+        "type": "text",
+      },
+    ],
+    "name": "mml",
+    "toJSON": [Function],
+    "type": "element",
+  },
+  "reactElements": Array [
+    <Text
+      text="hi"
+    />,
+  ],
+  "type": "card",
+}
+`;
+
+exports[`mml with type 7`] = `
+Array [
+  <Text
+    text="hi"
+  />,
+]
+`;
+
+exports[`mml with type 8`] = `
 <div
   className="mml-text"
 >
@@ -741,7 +837,7 @@ exports[`simple carousel 4`] = `
         >
           <li
             aria-selected={true}
-            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
             onBlur={[Function]}
             onFocus={[Function]}
             role="option"
@@ -772,7 +868,7 @@ exports[`simple carousel 4`] = `
           </li>
           <li
             aria-selected={true}
-            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
             onBlur={[Function]}
             onFocus={[Function]}
             role="option"

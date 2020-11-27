@@ -25,10 +25,6 @@
     }
   }
 
-  .mml-wrap {
-    @extend %mml-bordered-area;
-  }
-
   /// Component: btnlist
   /// __________________________________________________________________________
   @include mml-component('btnlist') {
@@ -45,7 +41,6 @@
   /// __________________________________________________________________________
   @include mml-component('card') {
     border: $mml-border;
-    background: $mml-card-bg;
 
     &:not(:last-child) {
       border-bottom: 0;
@@ -72,8 +67,6 @@
   @include mml-component('carousel-item') {
     // react-pure-carousel elements:
     .carousel__inner-slide {
-      @extend %mml-bordered-area;
-
       > *:first-child {
         border-top-left-radius: $mml-border-radius !important;
       }
@@ -86,11 +79,7 @@
   /// Component: md
   /// __________________________________________________________________________
   @include mml-component('md') {
-    min-height: 32px;
-    padding: $mml-md-padding-y $mml-md-padding-x;
     color: $mml-md-color;
-    background: $mml-md-bg;
-    border: $mml-border;
   }
 
   /// Component: number
@@ -100,14 +89,12 @@
     background: $mml-number-bg;
 
     // number btn control
-    &__btn {
-      &--dec {
-        margin-left: $mml-number__btn-margin-x;
-      }
+    &--dec {
+      margin-left: $mml-number__btn-margin-x;
+    }
 
-      &--inc {
-        margin-right: $mml-number__btn-margin-x;
-      }
+    &--inc {
+      margin-right: $mml-number__btn-margin-x;
     }
   }
 
@@ -160,10 +147,8 @@
   /// Component: text
   /// __________________________________________________________________________
   @include mml-component('text') {
-    padding: $mml-text-padding-y $mml-text-padding-x;
     border-radius: $mml-border-radius $mml-border-radius $mml-border-radius 0;
     border: $mml-border;
-    background: $mml-text-bg;
   }
 }
 

@@ -35,7 +35,7 @@
 
   // each option item
   &__item {
-    padding: 4px 5px;
+    padding: $mml-datepicker__item-padding;
     cursor: pointer;
 
     &--selected {

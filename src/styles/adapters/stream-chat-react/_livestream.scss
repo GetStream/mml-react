@@ -15,10 +15,6 @@ $mml-theme-livestream-border-radius: 6px !default;
     border-color: transparent;
   }
 
-  @include mml-component('btn', 'floating') {
-    border-radius: $mml-btn--floating-border-radius;
-  }
-
   /// Component: btnlist
   /// __________________________________________________________________________
   @include mml-component('btnlist') {
@@ -67,13 +63,6 @@ $mml-theme-livestream-border-radius: 6px !default;
 ///
 ////////////////////////////////////////////////////////////////////////////////
 @include mml-stream-chat-react('livestream.dark') {
-  /// Component: btnlist
-  /// __________________________________________________________________________
-  @include mml-component('btnlist', 'floating') {
-    @include mml-component('btn') {
-      border-radius: $mml-btn--floating-border-radius;
-    }
-  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////

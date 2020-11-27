@@ -20,11 +20,24 @@
 /// MML me
 ///
 /// Automatically scope the class name to a message marked as "mine", which it
-/// is by default shown on the right hand
+/// is by default shown on the right hand side
 ///
 /// __________________________________________________________________________--
 @mixin mml-me($theme: '') {
   #{$mml-selector-wrapper-message-self} & {
+    @content;
+  }
+}
+
+///
+/// MML other
+///
+/// Automatically scope the class name to a message marked as "others", which it
+/// is by default shown on the left hand side
+///
+/// __________________________________________________________________________--
+@mixin mml-other($theme: '') {
+  #{$mml-selector-wrapper-message-other} & {
     @content;
   }
 }
@@ -49,8 +62,9 @@
 ///
 /// __________________________________________________________________________--
 @mixin mml-button-base() {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   user-select: none;
   text-decoration: none;
   -webkit-appearance: none;
@@ -58,7 +72,9 @@
   border-style: $mml-btn-border-style;
   border-width: $mml-btn-border-width;
   border-color: $mml-btn-border-color;
-  border-radius: 0;
+  border-radius: $mml-btn-border-radius;
+  color: $mml-btn-color;
+  background: $mml-btn-bg;
   font-family: $mml-btn-font-family;
   font-weight: $mml-btn-font-weight;
   @if $mml-btn-font-size != inherit {
@@ -71,9 +87,42 @@
     cursor: pointer;
   }
 
+  &:hover,
+  &:focus {
+    color: $mml-btn-hover-color;
+    background: $mml-btn-hover-bg;
+    border-color: $mml-btn-hover-border-color;
+  }
+
+  &[disabled] {
+    color: $mml-btn-disabled-color;
+    background: $mml-btn-disabled-bg;
+    border-color: $mml-btn-disabled-border-color;
+  }
+
   &:focus {
     outline: $mml-btn-focus-outline;
   }
+}
+
+///
+/// Card header borders encapsulation
+///
+/// __________________________________________________________________________--
+@mixin mml-card-header-borders() {
+  border: $mml-card-border;
+  border-top-left-radius: $mml-card-header-border-radius;
+  border-top-right-radius: $mml-card-header-border-radius;
+}
+
+///
+/// Card body borders encapsulation
+///
+/// __________________________________________________________________________--
+@mixin mml-card-body-borders() {
+  border-width: 0 $mml-card-border-width;
+  border-style: $mml-card-border-style;
+  border-color: $mml-card-border-color;
 }
 
 ///
@@ -84,7 +133,7 @@
   font-family: $fontName;
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: $mml-icon-size;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;

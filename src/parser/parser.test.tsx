@@ -32,6 +32,20 @@ test('mml with type', () => {
   expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
 });
 
+test('mml with type', () => {
+  const mml = '<mml type="card">hi</mml>';
+  const nodes = SourceToXML(mml);
+  expect(nodes).toMatchSnapshot();
+
+  const tree = XMLtoMMLTree(nodes);
+  expect(tree).toMatchSnapshot();
+  expect(tree.type).toEqual('card');
+  expect(tree.children.length).toBe(1);
+  expect(tree.toReact()).toMatchSnapshot();
+
+  expect(renderer.create(<>{tree.toReact()}</>).toJSON()).toMatchSnapshot();
+});
+
 test('mml with button', () => {
   const mml = `<mml name="support">
                   <text>It looks like your credit card isn't activated yet, activate it now:</text>
