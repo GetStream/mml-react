@@ -55,11 +55,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: -#{$mml-btnlist__btn-margin-x};
+    margin-left: -#{$mml-btnlist__btn-margin-x};
 
     @include mml-component('btn') {
-      margin: $mml-spacer / 2;
+      margin: $mml-btnlist__btn-margin-y $mml-btnlist__btn-margin-x;
     }
   }
 }

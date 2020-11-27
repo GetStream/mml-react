@@ -6,7 +6,6 @@
 @include mml-component('scheduler') {
   @include mml-component('datepicker') {
     height: $mml-scheduler-datepicker-height;
-    @include mml-card-body-borders();
     background: $mml-card-body-bg;
   }
 
