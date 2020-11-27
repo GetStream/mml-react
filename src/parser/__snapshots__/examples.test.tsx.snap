@@ -4507,7 +4507,7 @@ Array [
           >
             <li
               aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
               onBlur={[Function]}
               onFocus={[Function]}
               role="option"
@@ -4560,7 +4560,7 @@ Array [
             </li>
             <li
               aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
               onBlur={[Function]}
               onFocus={[Function]}
               role="option"
@@ -4613,7 +4613,7 @@ Array [
             </li>
             <li
               aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
               onBlur={[Function]}
               onFocus={[Function]}
               role="option"
@@ -4666,7 +4666,7 @@ Array [
             </li>
             <li
               aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item mml-wrap"
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
               onBlur={[Function]}
               onFocus={[Function]}
               role="option"
