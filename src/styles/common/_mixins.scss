@@ -106,10 +106,10 @@
 }
 
 ///
-/// Card head borders encapsulation
+/// Card header borders encapsulation
 ///
 /// __________________________________________________________________________--
-@mixin mml-card-head-borders() {
+@mixin mml-card-header-borders() {
   border: $mml-card-border;
   border-top-left-radius: $mml-card-header-border-radius;
   border-top-right-radius: $mml-card-header-border-radius;

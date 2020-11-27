@@ -8,7 +8,7 @@
   // the following is inherited from the flexible selectors in the Card
   // component where we target its immediate children and interpret them as
   // either card-header or card-body:
-  // @include mml-card-head-borders();
+  // @include mml-card-header-borders();
 
   @include mml-component('icon') {
     padding-left: $mml-card-header-padding-x;

@@ -17,7 +17,7 @@
 
   // the first element of a card is considered to be a card-header
   > *:first-child:not(:last-child):not(#{mml-component('image')}) {
-    @include mml-card-head-borders();
+    @include mml-card-header-borders();
   }
 
   // everything in the the middle of a card is considered to be card-body
