@@ -21,11 +21,14 @@
     "test": "tsdx test",
     "lint": "tsdx lint src",
     "format": "prettier -w src/**/*.{ts,tsx,scss,mdx}",
-    "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "docs": "docz dev",
-    "docs-build": "rm -rf docs && docz build"
+    "docs-build": "rm -rf docs && docz build",
+    "prepare": "yarn build",
+    "preversion": "yarn lint && yarn test && yarn build",
+    "version": "yarn docs-build && git add -A docs",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "engines": {
     "node": ">=10"
