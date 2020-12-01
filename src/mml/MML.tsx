@@ -12,6 +12,16 @@ export type MMLProps = {
   converters?: Record<string, ConvertorType>;
   /** The submit callback whenever a form is submitted, submit is expected to return a promise */
   onSubmit?: (data: Record<string, any>) => Promise<any> | any;
+  /** Select a theme from built in available themes, it will be added as a className to the container(root) div */
+  theme?:
+    | 'messaging-light'
+    | 'messaging-dark'
+    | 'team-light'
+    | 'team-dark'
+    | 'commerce-light'
+    | 'commerce-dark'
+    | 'livestream-light'
+    | 'livestream-dark';
   /** Custom classname, appended to wrapper classname */
   className?: string;
   /** The Loader component */
@@ -29,6 +39,7 @@ export const MML: FC<MMLProps> = ({
   source,
   onSubmit,
   converters,
+  theme = 'messaging-light',
   className = '',
   Loader = LoaderComponent,
   Error = ErrorComponent,
@@ -76,7 +87,7 @@ export const MML: FC<MMLProps> = ({
   );
 
   return (
-    <div className={`mml-container ${className}`}>
+    <div className={`mml-container ${theme} ${className}`}>
       {error ? (
         <div className="mml-wrap">
           <Error error={error} />
