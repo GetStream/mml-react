@@ -78,7 +78,7 @@
   "size-limit": [
     {
       "path": "dist/mml-react.cjs.production.min.js",
-      "limit": "130 KB",
+      "limit": "110 KB",
       "import": "{ createComponent }"
     },
     {
