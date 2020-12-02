@@ -53,6 +53,9 @@
   .mml-container.#{$theme-slug} {
 
     @include mml-component('btn') {
+      border-color: mml-theme-var(stroke-low-emphasis);
+      background: mml-theme-var(card-bg);
+
       &--floating {
         box-shadow: mml-theme-var(shadow, $theme-vars);
       }
