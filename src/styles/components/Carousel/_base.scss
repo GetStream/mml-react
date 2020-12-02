@@ -20,15 +20,15 @@
     > #{mml-component(text)} {
       @include mml-card-body-borders();
       text-align: left;
-      padding: $mml-card-body-padding-y $mml-card-body-padding-x 0;
+      padding: 0 $mml-card-body-padding-x $mml-card-body-padding-y;
 
-      &:last-child {
-        flex: 1;
-        padding-bottom: $mml-card-body-padding-y;
+      &:first-child {
+        padding-top: $mml-card-body-padding-y;
       }
     }
-
+    
     > #{mml-component(text)} {
+      flex: 1;
       font-size: $mml-carousel__text-font-size;
       color: $mml-carousel__text-font-color;
     }
