@@ -2,7 +2,7 @@
   // apply some little spacing through padding, not margins, so that when we
   // apply borders to text from  outside, for instance within a carousel-item
   // slide it looks good
-  padding: $mml-md-padding-y 0;
+  padding: ($mml-md-spacer-y / 2) 0;
   color: $mml-md-color;
   @if $mml-md-font-size != inherit {
     font-size: $mml-md-font-size;
