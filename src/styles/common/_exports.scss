@@ -7,8 +7,10 @@
 
 // use CSS variables for easy customisation, fallback provided by
 // `postcss-custom-properties` during compilation step
-:root {
-  @each $name, $value in $mml-theme {
-    --mml-#{$name}: #{$value};
+@if $mml-use-css-vars {
+  :root {
+    @each $name, $value in $mml-theme {
+      --mml-#{$name}: #{$value};
+    }
   }
 }

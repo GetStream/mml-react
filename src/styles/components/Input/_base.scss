@@ -3,13 +3,15 @@
   width: 100%;
   padding: $mml-input-padding-y $mml-input-padding-x;
   -webkit-appearance: none;
-  border: $mml-border;
-  background: $mml-input-bg;
-  color: $mml-input-color;
+  border-style: $mml-border-style;
+  border-width: $mml-border-width;
+  @include mml-themed(border-color, $mml-border-color);
+  @include mml-themed(background, $mml-input-bg);
+  @include mml-themed(color, $mml-input-color);
 
   &:focus {
     outline: $mml-input-focus-outline;
-    color: $mml-input-focus-color;
+    @include mml-themed(color, $mml-input-focus-color);
   }
 
   // remove double border when the button is directly below the input, as often

@@ -1,12 +1,4 @@
+$mml-themes-with-classname: true;
+
 @import 'common/config';
 @import 'components/index';
-
-@include mml-theme('base-dark', $mml-theme-base-dark);
-@include mml-theme('commerce', $mml-theme-commerce);
-@include mml-theme('commerce-dark', $mml-theme-commerce-dark);
-@include mml-theme('livestream', $mml-theme-livestream);
-@include mml-theme('livestream-dark', $mml-theme-livestream-dark);
-@include mml-theme('messaging', $mml-theme-messaging);
-@include mml-theme('messaging-dark', $mml-theme-messaging-dark);
-@include mml-theme('team', $mml-theme-team);
-@include mml-theme('team-dark', $mml-theme-team-dark);

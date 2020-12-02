@@ -9,10 +9,10 @@
   padding: $mml-btn-padding-y $mml-btn-padding-x;
   border-style: $mml-btn-border-style;
   border-width: $mml-btn-border-width;
-  border-color: $mml-btn-border-color;
   border-radius: $mml-btn-border-radius;
-  color: $mml-btn-color;
-  background: $mml-btn-bg;
+  @include mml-themed(border-color, $mml-btn-border-color);
+  @include mml-themed(color, $mml-btn-color);
+  @include mml-themed(background, $mml-btn-bg);
   font-family: $mml-btn-font-family;
   font-weight: $mml-btn-font-weight;
   @if $mml-btn-font-size != inherit {
@@ -27,15 +27,15 @@
 
   &:hover,
   &:focus {
-    color: $mml-btn-hover-color;
-    background: $mml-btn-hover-bg;
-    border-color: $mml-btn-hover-border-color;
+    @include mml-themed(border-color, $mml-btn-hover-border-color);
+    @include mml-themed(color, $mml-btn-hover-color);
+    @include mml-themed(background, $mml-btn-hover-bg);
   }
 
   &[disabled] {
-    color: $mml-btn-disabled-color;
-    background: $mml-btn-disabled-bg;
-    border-color: $mml-btn-disabled-border-color;
+    @include mml-themed(border-color, $mml-btn-disabled-border-color);
+    @include mml-themed(color, $mml-btn-disabled-color);
+    @include mml-themed(background, $mml-btn-disabled-bg);
   }
 
   &:focus {
@@ -54,10 +54,14 @@
   // Modifier: floating (through props)
   // ---------------------------------------------------------------------------
   &--floating {
-    box-shadow: $mml-btn--floating-shadow;
+    @include mml-themed(box-shadow, $mml-btn--floating-shadow);
 
     &:focus {
-      box-shadow: none;
+      @if ($mml-themes-with-classname) {
+        box-shadow: none !important;
+      } @else {
+        box-shadow: none;
+      }
     }
   }
 

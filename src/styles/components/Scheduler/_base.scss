@@ -6,7 +6,7 @@
 @include mml-component('scheduler') {
   @include mml-component('datepicker') {
     height: $mml-scheduler-datepicker-height;
-    background: $mml-card-body-bg;
+    @include mml-themed(background, $mml-card-body-bg);
   }
 
   @include mml-component('datepicker__select') {
@@ -25,11 +25,11 @@
     }
     &:before {
       top: 0;
-      background-image: linear-gradient(to bottom, $mml-card-body-bg, rgba(255, 255, 255, 0));
+      @include mml-themed(background-image, $mml-card-body-bg, linear-gradient(to bottom, __var__, rgba(255, 255, 255, 0)));
     }
     &:after {
       bottom: 0;
-      background-image: linear-gradient(to top, $mml-card-body-bg, rgba(255, 255, 255, 0));
+      @include mml-themed(background-image, $mml-card-body-bg, linear-gradient(to top, __var__, rgba(255, 255, 255, 0)));
     }
   }
 }

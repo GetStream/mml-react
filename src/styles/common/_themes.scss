@@ -163,3 +163,16 @@ $mml-theme-team-dark: (
   stroke-low-emphasis: #201c27,
   shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
 ) !default;
+
+$mml-themes: (
+  // 'base': $mml-theme-base, // this is the default
+  'base-dark': $mml-theme-base-dark,
+  'commerce': $mml-theme-commerce,
+  'commerce-dark': $mml-theme-commerce-dark,
+  'livestream': $mml-theme-livestream,
+  'livestream-dark': $mml-theme-livestream-dark,
+  'messaging': $mml-theme-messaging,
+  'messaging-dark': $mml-theme-messaging-dark,
+  'team': $mml-theme-team,
+  'team-dark': $mml-theme-team-dark,
+) !default;

@@ -9,8 +9,10 @@
     width: 100%;
     min-width: $mml-btnlist-min-width;
     max-width: $mml-btnlist-max-width;
-    border: $mml-btnlist-border-width $mml-border-style $mml-btnlist-border-color;
-    background: $mml-btnlist-bg;
+    border-style: $mml-border-style;
+    border-width: $mml-btnlist-border-width;
+    @include mml-themed(border-color, $mml-btnlist-border-color);
+    @include mml-themed(background, $mml-btnlist-bg);
 
     @include mml-component('btn') {
       width: 100%;
@@ -22,7 +24,7 @@
       // just apply a bottom border to inner buttons
       border-width: 0 0 $mml-btnlist-border-width 0;
       border-radius: 0;
-      border-color: $mml-btnlist-border-color;
+      @include mml-themed(border-color, $mml-btnlist-border-color);
 
       // inherit background from parent because border radius is applied there
       &:not(:hover):not(:focus) {
@@ -42,7 +44,7 @@
         // only apply rules if we can't inherit them
         @if $mml-btnlist__btn--with-icon-color != $mml-btn-color {
           &:not(:hover):not(:focus) {
-            color: $mml-btnlist__btn--with-icon-color;
+            @include mml-themed(color, $mml-btnlist__btn--with-icon-color);
           }
         }
       }

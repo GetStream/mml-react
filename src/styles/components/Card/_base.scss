@@ -17,7 +17,7 @@
 
   // everything in the the middle of a card is considered to be card-body
   > *:not(:first-child):not(:last-child) {
-    background: $mml-card-body-bg;
+    @include mml-themed(background, $mml-card-body-bg);
   }
 
   // a number will probably be used as immediate children of a <mml type="card">
@@ -30,7 +30,9 @@
   // like buttons in a btnlist
   > #{mml-component('btn')} {
     min-width: 100%;
-    border: $mml-card-border;
+    border-style: $mml-card-border-style;
+    border-width: $mml-card-border-width;
+    @include mml-themed(border-color, $mml-card-border-color);
 
     // the last button will get different contextual borders
     &:last-child {

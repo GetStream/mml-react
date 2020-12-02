@@ -43,24 +43,37 @@
 }
 
 ///
-/// MML theme
+/// MML themed
 ///
-/// Outputs the common code tweaks that a theme needs to apply when used through
-/// a className scope on the `<mml>` element
+/// Applies a value from the theme object to the given CSS property. When 
+/// $use-themes-class-names is true it will create the same rule applied through
+/// a className scope. This helps to keep themed base styling isolated in each
+/// component and avoid too much code duplication.
 ///
-/// __________________________________________________________________________--
-@mixin mml-theme($theme-classname: '', $theme-vars: $mml-theme) {
-  .mml-container.#{$theme-classname} {
+/// ____________________________________________________________________________
+@mixin mml-themed($property, $themeKey, $fullValue: false) {
+  @if $fullValue {
+    #{$property}: mml-interpolated-var($fullValue, map-get($mml-theme, $themeKey));
+  } @else {
+    #{$property}: map-get($mml-theme, $themeKey);
+  }
 
-    @include mml-component('btn') {
-      border-color: map-get($theme-vars, stroke-low-emphasis);
-      background: map-get($theme-vars, card-bg);
-
-      &--floating {
-        box-shadow: map-get($theme-vars, shadow);
+  @if ($mml-use-css-vars and not $fullValue) {
+    #{$property}: var(--mml-#{$themeKey});
+  }
+  
+  @if ($mml-themes-with-classname) {
+    @each $className, $theme in $mml-themes {
+      // hopefully we don't need to prefix with `.mml-container` here otherwise
+      // selector might become quite long...
+      .#{$className} & {
+        @if $fullValue {
+          #{$property}: mml-interpolated-var($fullValue, map-get($theme, $themeKey));
+        } @else {
+          #{$property}: map-get($theme, $themeKey);
+        }
       }
     }
-    
   }
 }
 
@@ -69,9 +82,11 @@
 ///
 /// __________________________________________________________________________--
 @mixin mml-card-header-borders() {
-  border: $mml-card-border;
   border-top-left-radius: $mml-card-header-border-radius;
   border-top-right-radius: $mml-card-header-border-radius;
+  border-style: $mml-card-border-style;
+  border-width: $mml-card-border-width;
+  @include mml-themed(border-color, $mml-card-border-color);
 }
 
 ///
@@ -81,7 +96,7 @@
 @mixin mml-card-body-borders() {
   border-width: 0 $mml-card-border-width;
   border-style: $mml-card-border-style;
-  border-color: $mml-card-border-color;
+  @include mml-themed(border-color, $mml-card-border-color);
 }
 
 ///

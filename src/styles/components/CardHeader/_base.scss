@@ -3,8 +3,8 @@
   align-items: center;
   padding: $mml-card-header-padding-y 0;
   font-size: $mml-card-header-font-size;
-  color: $mml-card-header-color;
-  background: $mml-card-header-bg;
+  @include mml-themed(background, $mml-card-header-bg);
+  @include mml-themed(color, $mml-card-header-color);
   @include mml-card-header-borders();
 
   @include mml-component('icon') {
