@@ -7,5 +7,14 @@
 
   > #{mml-component('card-body')}:last-child {
     border-bottom: $mml-card-border;
+    overflow: hidden;
+
+    @include mml-other() {
+      border-bottom-left-radius: $mml-border-radius-base;
+    }
+
+    @include mml-me() {
+      border-bottom-right-radius: $mml-border-radius-base;
+    }
   }
 }
