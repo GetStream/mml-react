@@ -23,7 +23,7 @@
 /// is by default shown on the right hand side
 ///
 /// __________________________________________________________________________--
-@mixin mml-me($theme: '') {
+@mixin mml-me() {
   #{$mml-selector-wrapper-message-self} & {
     @content;
   }
@@ -36,7 +36,7 @@
 /// is by default shown on the left hand side
 ///
 /// __________________________________________________________________________--
-@mixin mml-other($theme: '') {
+@mixin mml-other() {
   #{$mml-selector-wrapper-message-other} & {
     @content;
   }
@@ -49,7 +49,7 @@
 /// a className scope on the `<mml>` element
 ///
 /// __________________________________________________________________________--
-@mixin mml-theme($theme-slug: '', $theme-vars: ()) {
+@mixin mml-theme($theme-slug: '', $theme-vars: $mml-theme) {
   .mml-container.#{$theme-slug} {
 
     @include mml-component('btn') {
