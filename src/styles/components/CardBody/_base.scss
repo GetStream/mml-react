@@ -3,4 +3,13 @@
   background: $mml-card-body-bg;
   color: $mml-card-body-color;
   font-size: $mml-card-body-font-size;
+
+  > #{mml-component(md)},
+  > #{mml-component(text)} {
+    padding: 0 $mml-card-body-padding-x $mml-card-body-padding-y;
+
+    &:first-of-type {
+      padding-top: $mml-card-body-padding-y;
+    }
+  }
 }
