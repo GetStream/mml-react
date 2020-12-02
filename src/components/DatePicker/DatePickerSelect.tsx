@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect, FC } from 'react';
-import { Virtuoso, VirtuosoHandle } from 'react-virtuoso';
+import { Virtuoso, VirtuosoMethods } from 'react-virtuoso';
 import { Dayjs } from 'dayjs';
 import { DatePickerProps } from './DatePicker';
 
@@ -60,14 +60,15 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
   );
 
   const [items, setItems] = useState<DatePickerItemData[]>(generateItems(ITEMS_PER_PAGE * 2, -ITEMS_PER_PAGE));
-  const [firstItemIndex, setFirstItemIndex] = useState(INITIAL_INDEX);
+  const initialIndexOffset = useRef(INITIAL_INDEX);
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
-  const virtuoso = useRef<VirtuosoHandle>(null);
+  const virtuoso = useRef<VirtuosoMethods>(null);
 
   const handleClick = useCallback(
     (item: DatePickerItemData) => {
       onChange(item.value);
 
+      const firstItemIndex = initialIndexOffset.current || 0;
       let nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
       const missingTopItems = nextFirstItemIdx - item.idx + VERTICAL_COMPENSATION;
 
@@ -75,12 +76,13 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
       // some date options so that it will remain vertically centered in the middle
       if (missingTopItems >= 0) {
         nextFirstItemIdx -= missingTopItems;
-        setFirstItemIndex(() => firstItemIndex - missingTopItems);
+        initialIndexOffset.current -= firstItemIndex - missingTopItems;
         setItems((items) => [...generateItems(missingTopItems, nextFirstItemIdx), ...items]);
+        if (virtuoso.current) virtuoso.current.adjustForPrependedItems(missingTopItems);
       }
       setSelectedIdx(item.idx);
     },
-    [setItems, generateItems, firstItemIndex, onChange],
+    [setItems, generateItems, initialIndexOffset, onChange],
   );
 
   const appendItems = useCallback(
@@ -92,11 +94,15 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
 
   // @see https://git.io/JIUuo
   const prependItems = useCallback(() => {
+    const firstItemIndex = initialIndexOffset.current || 0;
     const nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
-    setFirstItemIndex(() => firstItemIndex - ITEMS_PER_PAGE);
+    if (initialIndexOffset) {
+      initialIndexOffset.current -= ITEMS_PER_PAGE;
+    }
     setItems((items) => [...generateItems(ITEMS_PER_PAGE, nextFirstItemIdx), ...items]);
+    if (virtuoso.current) virtuoso.current.adjustForPrependedItems(ITEMS_PER_PAGE);
     return false;
-  }, [setItems, generateItems, firstItemIndex]);
+  }, [setItems, generateItems, initialIndexOffset]);
 
   // on mount check if there is a selected value and save its idx in state
   useEffect(() => {
@@ -116,17 +122,17 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
     <Virtuoso
       ref={virtuoso}
       overscan={200}
-      firstItemIndex={firstItemIndex}
+      totalCount={items.length}
       initialTopMostItemIndex={INITIAL_INDEX - VERTICAL_COMPENSATION}
-      data={items}
-      itemContent={(_, item) => (
+      item={(index) => (
         <div
           className={
-            itemClassName + ` mml-datepicker__item ${item.idx === selectedIdx ? 'mml-datepicker__item--selected' : ''}`
+            itemClassName +
+            ` mml-datepicker__item ${items[index].idx === selectedIdx ? 'mml-datepicker__item--selected' : ''}`
           }
-          onClick={() => handleClick(item)}
+          onClick={() => handleClick(items[index])}
         >
-          {item.displayValue}
+          {items[index].displayValue}
         </div>
       )}
       endReached={appendItems}
