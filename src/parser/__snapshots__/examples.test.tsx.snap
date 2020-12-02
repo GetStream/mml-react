@@ -27,24 +27,6 @@ Object {
         },
         Object {
           "text": "
-	",
-          "toJSON": [Function],
-          "type": "text",
-        },
-        Object {
-          "attributes": Object {
-            "duration": "30",
-            "name": "massage_appointment",
-            "selected": "2020-11-16T10:30:00.000Z",
-            "timeInterval": "15",
-          },
-          "children": Array [],
-          "name": "scheduler",
-          "toJSON": [Function],
-          "type": "element",
-        },
-        Object {
-          "text": "
   ",
           "toJSON": [Function],
           "type": "text",
@@ -118,29 +100,6 @@ Tree {
     },
     MMLTag {
       "attributes": Object {
-        "duration": "30",
-        "name": "massage_appointment",
-        "selected": "2020-11-16T10:30:00.000Z",
-        "timeInterval": "15",
-      },
-      "children": Array [],
-      "key": "tag-scheduler-position-1",
-      "name": "scheduler",
-      "node": Object {
-        "attributes": Object {
-          "duration": "30",
-          "name": "massage_appointment",
-          "selected": "2020-11-16T10:30:00.000Z",
-          "timeInterval": "15",
-        },
-        "children": Array [],
-        "name": "scheduler",
-        "toJSON": [Function],
-        "type": "element",
-      },
-    },
-    MMLTag {
-      "attributes": Object {
         "name": "action",
         "value": "reserve",
       },
@@ -157,7 +116,7 @@ Tree {
           },
         },
       ],
-      "key": "tag-button-position-2",
+      "key": "tag-button-position-1",
       "name": "button",
       "node": Object {
         "attributes": Object {
@@ -218,24 +177,6 @@ Tree {
       },
       Object {
         "text": "
-	",
-        "toJSON": [Function],
-        "type": "text",
-      },
-      Object {
-        "attributes": Object {
-          "duration": "30",
-          "name": "massage_appointment",
-          "selected": "2020-11-16T10:30:00.000Z",
-          "timeInterval": "15",
-        },
-        "children": Array [],
-        "name": "scheduler",
-        "toJSON": [Function],
-        "type": "element",
-      },
-      Object {
-        "text": "
   ",
         "toJSON": [Function],
         "type": "text",
@@ -271,15 +212,6 @@ Tree {
     <Text
       text="When would you like to schedule your massage?"
     />,
-    <Scheduler
-      allowPast={false}
-      dateInterval={1}
-      duration={30}
-      fullDay={false}
-      name="massage_appointment"
-      selected="2020-11-16T10:30:00.000Z"
-      timeInterval={15}
-    />,
     <Button
       name="action"
       text="Reserve"
@@ -295,15 +227,6 @@ Array [
   <Text
     text="When would you like to schedule your massage?"
   />,
-  <Scheduler
-    allowPast={false}
-    dateInterval={1}
-    duration={30}
-    fullDay={false}
-    name="massage_appointment"
-    selected="2020-11-16T10:30:00.000Z"
-    timeInterval={15}
-  />,
   <Button
     name="action"
     text="Reserve"
@@ -318,150 +241,6 @@ Array [
     className="mml-text"
   >
     When would you like to schedule your massage?
-  </div>,
-  <div
-    className="mml-card mml-scheduler"
-  >
-    <div
-      className="mml-card-header "
-    >
-      <i
-        className="mml-icon material-icons"
-      >
-        date_range
-      </i>
-      <span
-        className="mml-card-header__text"
-      >
-        Scheduler
-      </span>
-    </div>
-    <div
-      className="mml-card-body "
-    >
-      
-      <div
-        className="mml-datepicker"
-      >
-        <input
-          name="massage_appointment"
-          type="hidden"
-          value="2020-11-16T10:30:00.000Z"
-        />
-        <div
-          className="mml-datepicker__select mml-datepicker__date"
-        >
-          <div
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "height": "100%",
-                "outline": "none",
-                "overflowY": "auto",
-                "position": "relative",
-              }
-            }
-            tabIndex={0}
-          >
-            <div
-              style={
-                Object {
-                  "height": "100%",
-                  "position": "absolute",
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginTop": "0px",
-                  }
-                }
-              >
-                <footer>
-                  <div
-                    style={
-                      Object {
-                        "padding": "2rem",
-                      }
-                    }
-                  />
-                </footer>
-              </div>
-            </div>
-            <div
-              style={
-                Object {
-                  "height": "0px",
-                  "position": "absolute",
-                  "top": 0,
-                }
-              }
-            >
-               
-            </div>
-          </div>
-        </div>
-        <div
-          className="mml-datepicker__select mml-datepicker__time"
-        >
-          <div
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "height": "100%",
-                "outline": "none",
-                "overflowY": "auto",
-                "position": "relative",
-              }
-            }
-            tabIndex={0}
-          >
-            <div
-              style={
-                Object {
-                  "height": "100%",
-                  "position": "absolute",
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginTop": "0px",
-                  }
-                }
-              >
-                <footer>
-                  <div
-                    style={
-                      Object {
-                        "padding": "2rem",
-                      }
-                    }
-                  />
-                </footer>
-              </div>
-            </div>
-            <div
-              style={
-                Object {
-                  "height": "0px",
-                  "position": "absolute",
-                  "top": 0,
-                }
-              }
-            >
-               
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>,
   <button
     className="mml-btn  mml-btn--text mml-btn--grounded"
