@@ -63,12 +63,11 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
   const [items, setItems] = useState<DatePickerItemData[]>(generateItems(ITEMS_PER_PAGE * 2, -ITEMS_PER_PAGE));
   const [firstItemIndex, setFirstItemIndex] = useState(INITIAL_INDEX);
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const virtuoso = useRef<VirtuosoHandle>(null);
 
   // handle item click
   const handleClick = useCallback(
-    (item: DatePickerItemData, index: number) => {
+    (item: DatePickerItemData) => {
       onChange(item.value);
 
       let nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
@@ -81,18 +80,7 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
         setFirstItemIndex(() => firstItemIndex - missingTopItems);
         setItems((items) => [...generateItems(missingTopItems, nextFirstItemIdx), ...items]);
       }
-
-      // scroll to selected date index
-      // if (virtuoso.current) {
-      //   virtuoso.current.scrollToIndex({
-      //     index: index - INITIAL_INDEX,
-      //     align: 'center',
-      //     behavior: 'smooth',
-      //   });
-      // }
-
       setSelectedIdx(item.idx);
-      setSelectedIndex(index);
       console.log('handleClick: nextFirstItemIdx', nextFirstItemIdx);
     },
     [setItems, generateItems, firstItemIndex, onChange],
@@ -136,18 +124,6 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
     console.log('effect: onmount initialSelectedIdx', initialSelectedIdx);
   }, []); // eslint-disable-line
 
-  // autoscroll selected item to center
-  useEffect(() => {
-    if (virtuoso.current && selectedIndex !== null) {
-      virtuoso.current.scrollToIndex({
-        index: selectedIndex - INITIAL_INDEX,
-        align: 'center',
-        behavior: 'smooth',
-      });
-    }
-    console.log('effect: autoscroll selected item to center', selectedIndex);
-  }, [firstItemIndex, items, selectedIndex]);
-
   console.log('render: items', items);
   return (
     <Virtuoso
@@ -156,12 +132,12 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
       firstItemIndex={firstItemIndex}
       initialTopMostItemIndex={INITIAL_INDEX - VERTICAL_COMPENSATION}
       data={items}
-      itemContent={(index, item) => (
+      itemContent={(_, item) => (
         <div
           className={
             itemClassName + ` mml-datepicker__item ${item.idx === selectedIdx ? 'mml-datepicker__item--selected' : ''}`
           }
-          onClick={() => handleClick(item, index)}
+          onClick={() => handleClick(item)}
         >
           {item.displayValue}
         </div>
