@@ -39,9 +39,9 @@
           font-weight: $mml-btnlist__btn--with-icon-font-weight;
         }
 
-        &:not(:hover):not(:focus) {
-          // only apply rules if we can't inherit them
-          @if $mml-btnlist__btn--with-icon-color != $mml-btn-color {
+        // only apply rules if we can't inherit them
+        @if $mml-btnlist__btn--with-icon-color != $mml-btn-color {
+          &:not(:hover):not(:focus) {
             color: $mml-btnlist__btn--with-icon-color;
           }
         }
