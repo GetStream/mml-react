@@ -62,18 +62,6 @@
 }
 
 ///
-/// MML stream chat react
-///
-/// Automatically scope to the class name of a specific stream-chat-react theme
-///
-/// __________________________________________________________________________--
-@mixin mml-stream-chat-react($theme: '') {
-  .str-chat.#{$theme} {
-    @content;
-  }
-}
-
-///
 /// Card header borders encapsulation
 ///
 /// __________________________________________________________________________--
