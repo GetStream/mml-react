@@ -15,13 +15,19 @@
       background: $mml-card-body-bg;
     }
 
-    // components that as immediate children behave like card-body
+    // components that are immediate children behave like card-body
     > #{mml-component(md)},
     > #{mml-component(text)} {
-      flex: 10;
       @include mml-card-body-borders();
-      text-align: left;
-      padding: $mml-card-body-padding-y $mml-card-body-padding-x;
+      padding: 0 $mml-card-body-padding-x $mml-card-body-padding-y;
+
+      &:first-of-type {
+        padding-top: $mml-card-body-padding-y;
+      }
+
+      &:last-of-type {
+        flex: 1;
+      }
     }
 
     > #{mml-component(text)} {
