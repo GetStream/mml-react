@@ -1,5 +1,48 @@
 @include mml-component('btn') {
-  @include mml-button-base();
+  // very basic styles:
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  padding: $mml-btn-padding-y $mml-btn-padding-x;
+  border-style: $mml-btn-border-style;
+  border-width: $mml-btn-border-width;
+  border-color: $mml-btn-border-color;
+  border-radius: $mml-btn-border-radius;
+  color: $mml-btn-color;
+  background: $mml-btn-bg;
+  font-family: $mml-btn-font-family;
+  font-weight: $mml-btn-font-weight;
+  @if $mml-btn-font-size != inherit {
+    font-size: $mml-btn-font-size;
+  }
+  @if $mml-btn-text-transform != none {
+    text-transform: $mml-btn-text-transform;
+  }
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    color: $mml-btn-hover-color;
+    background: $mml-btn-hover-bg;
+    border-color: $mml-btn-hover-border-color;
+  }
+
+  &[disabled] {
+    color: $mml-btn-disabled-color;
+    background: $mml-btn-disabled-bg;
+    border-color: $mml-btn-disabled-border-color;
+  }
+
+  &:focus {
+    outline: $mml-btn-focus-outline;
+  }
+  
+  // less basic styles:
   max-width: $mml-btn-max-width;
   margin: 0;
 
