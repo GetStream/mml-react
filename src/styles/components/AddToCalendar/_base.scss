@@ -6,6 +6,17 @@
   max-width: $mml-addtocalendar-max-width;
 
   > #{mml-component('card-body')}:last-child {
-    border-bottom: $mml-card-border;
+    overflow: hidden;
+    border-bottom-style: $mml-card-border-style;
+    border-bottom-width: $mml-card-border-width;
+    @include mml-themed(border-bottom-color, $mml-card-border-color);
+
+    @include mml-other() {
+      border-bottom-left-radius: $mml-border-radius-base;
+    }
+
+    @include mml-me() {
+      border-bottom-right-radius: $mml-border-radius-base;
+    }
   }
 }

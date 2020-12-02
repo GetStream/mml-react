@@ -1,5 +1,3 @@
-// space for some basic styling
-
 // most outer container (always present on `<mml>` outer element)
 // -----------------------------------------------------------------------------
 @include mml-component('container') {
@@ -35,7 +33,7 @@
 
   // the last immediate children of `mml-wrap` element have the final
   // border radius tweaked according to the position me (left/right) in the chat
-  > *:last-child {
+  > *:last-child:not(#{mml-component('btn')}) {
     @include mml-other() {
       border-bottom-left-radius: $mml-border-radius-base;
     }

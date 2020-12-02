@@ -1,17 +1,6 @@
-$mml-theme: (
-  primary-accent: #005fff,
-  app-canvas: #fff,
-  text-high-emphasis: #202a3c,
-  text-mid-emphasis: #6c7a93,
-  text-low-emphasis: #b6bece,
-  text-self: #2c2c30,
-  text-pressed: #fff,
-  card-bg: #fff,
-  card-alt-bg: #f5f9ff,
-  card-self-bg: #b3cfff,
-  stroke: #eaeaea,
-  stroke-low-emphasis: #d9e1e6,
-  shadow: 0px 2px 5px rgba(0, 0, 0, 0.08),
-) !default;
+@import 'common/config';
 
-@import 'index';
+$mml-theme: $mml-theme-commerce !default;
+
+@import 'components/index';
+@import 'common/exports';

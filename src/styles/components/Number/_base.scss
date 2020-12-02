@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: center;
     margin: 0 $mml-number__btn-margin-x;
-    color: $mml-number__count-color;
     font-weight: $mml-number__count-font-weight;
+    @include mml-themed(color, $mml-number__count-color);
   }
 
   // number btn control

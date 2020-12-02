@@ -1,44 +1,26 @@
 // Theme variables
-//
-// by default the values are for the default light theme
 // -----------------------------------------------------------------------------
-$mml-theme: (
-  primary-accent: #006cff,
-  // might be used outside mml container
-  app-canvas: #fff,
-  text-high-emphasis: #0e1621,
-  text-mid-emphasis: #8a898e,
-  text-low-emphasis: #b2b1b5,
-  // might be used outside mml container
-  text-self: #fff,
-  text-pressed: #fff,
-  card-bg: #f2f2f2,
-  card-alt-bg: #fff,
-  // might be used outside mml container
-  card-self-bg: #41affc,
-  stroke: #e5e5e6,
-  stroke-low-emphasis: #f2f2f2,
-  shadow: 0px 2px 5px rgba(0, 0, 0, 0.15),
-) !default;
+$mml-theme: $mml-theme-base !default;
 
 // Generic variables:
 // -----------------------------------------------------------------------------
+$mml-use-themes-classnames: false !default;
+$mml-use-css-vars: false !default;
 $mml-prefix: 'mml-' !default;
 $mml-selector-wrapper-message-self: '.me' !default;
 $mml-selector-wrapper-message-other: '.other' !default;
 $mml-spacer: 8px !default;
 $mml-max-width: 200px !default;
 $mml-border-radius: 16px !default;
-$mml-border-radius-base: 0px !default;
+$mml-border-radius-base: 0 !default;
 $mml-border-style: solid !default;
 $mml-border-width: 1px !default;
-$mml-border-color: mml-theme(stroke) !default;
-$mml-border: $mml-border-width $mml-border-style $mml-border-color !default;
+$mml-border-color: mml-theme-val(stroke) !default;
 $mml-font-sans: inherit !default;
 $mml-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 $mml-font-base: $mml-font-sans !default;
 $mml-font-size: 15px !default;
-$mml-icon-size: 20px !default;
+$mml-icon-size: 16px !default;
 
 // AddToCalendar:
 // -----------------------------------------------------------------------------
@@ -56,17 +38,17 @@ $mml-btn-padding-x: 16px !default;
 $mml-btn-border-radius: $mml-border-radius !default;
 $mml-btn-border-width: $mml-border-width !default;
 $mml-btn-border-style: solid !default;
-$mml-btn-bg: mml-theme(card-bg) !default;
-$mml-btn-border-color: $mml-btn-bg !default;
-$mml-btn-color: mml-theme(primary-accent) !default;
+$mml-btn-bg: mml-theme-val(card-bg) !default;
+$mml-btn-border-color: mml-theme-val(stroke-low-emphasis) !default;
+$mml-btn-color: mml-theme-val(primary-accent) !default;
 $mml-btn-hover-bg: $mml-btn-color !default;
 $mml-btn-hover-border-color: $mml-btn-hover-bg !default;
-$mml-btn-hover-color: mml-theme(text-pressed) !default;
+$mml-btn-hover-color: mml-theme-val(text-pressed) !default;
 $mml-btn-disabled-bg: $mml-btn-bg !default;
 $mml-btn-disabled-border-color: $mml-btn-disabled-bg !default;
-$mml-btn-disabled-color: mml-theme(text-low-emphasis) !default;
+$mml-btn-disabled-color: mml-theme-val(text-low-emphasis) !default;
 $mml-btn-focus-outline: none !default;
-$mml-btn--floating-shadow: mml-theme(shadow) !default;
+$mml-btn--floating-shadow: mml-theme-val(shadow) !default;
 $mml-btn--icon-padding-y: 5px !default;
 $mml-btn--icon-padding-x: 5px !default;
 $mml-btn--icon-padding: $mml-btn--icon-padding-y $mml-btn--icon-padding-x !default;
@@ -85,7 +67,7 @@ $mml-btnlist__btn-padding-y: 11px !default;
 $mml-btnlist__btn-padding-x: $mml-btn-padding-x !default;
 $mml-btnlist__btn-margin-y: $mml-spacer !default;
 $mml-btnlist__btn-margin-x: $mml-spacer !default;
-$mml-btnlist__btn--with-icon-color: mml-theme(text-high-emphasis) !default;
+$mml-btnlist__btn--with-icon-color: mml-theme-val(text-high-emphasis) !default;
 $mml-btnlist__btn--with-icon-font-weight: normal !default;
 
 // Card:
@@ -100,13 +82,13 @@ $mml-card-header-font-weight: bold !default;
 $mml-card-header-padding-y: 16px !default;
 $mml-card-header-padding-x: 16px !default;
 $mml-card-header-border-radius: $mml-border-radius !default;
-$mml-card-header-bg: mml-theme(card-bg) !default;
-$mml-card-header-color: mml-theme(text-mid-emphasis) !default;
+$mml-card-header-bg: mml-theme-val(card-bg) !default;
+$mml-card-header-color: mml-theme-val(text-mid-emphasis) !default;
 $mml-card-body-padding-y: $mml-spacer !default;
 $mml-card-body-padding-x: $mml-card-body-padding-y !default;
 $mml-card-body-font-size: 14px !default;
-$mml-card-body-color: mml-theme(text-high-emphasis) !default;
-$mml-card-body-bg: mml-theme(card-alt-bg) !default;
+$mml-card-body-color: mml-theme-val(text-high-emphasis) !default;
+$mml-card-body-bg: mml-theme-val(card-alt-bg) !default;
 $mml-card__btn-padding-y: $mml-btnlist__btn-padding-y !default;
 $mml-card__btn-padding-x: $mml-btnlist__btn-padding-x !default;
 $mml-card__btn-padding: $mml-card__btn-padding-y $mml-card__btn-padding-x !default;
@@ -116,7 +98,7 @@ $mml-card__btn-padding: $mml-card__btn-padding-y $mml-card__btn-padding-x !defau
 $mml-carousel-margin-y: $mml-spacer !default;
 $mml-carousel__item-gutter-x: $mml-spacer !default;
 $mml-carousel__text-font-size: 11px !default;
-$mml-carousel__text-font-color: mml-theme(text-mid-emphasis) !default;
+$mml-carousel__text-font-color: mml-theme-val(text-mid-emphasis) !default;
 
 // Col (Grid):
 // -----------------------------------------------------------------------------
@@ -129,7 +111,7 @@ $mml-grid-breakpoints: (
 // Datepicker:
 // -----------------------------------------------------------------------------
 $mml-datepicker__item-padding: 4px 5px !default;
-$mml-datepicker__item-color-active: mml-theme(primary-accent) !default;
+$mml-datepicker__item-color-active: mml-theme-val(primary-accent) !default;
 
 // Error:
 // -----------------------------------------------------------------------------
@@ -143,6 +125,7 @@ $mml-icon-color: inherit !default;
 
 // Image:
 // -----------------------------------------------------------------------------
+$mml-image-max-width: $mml-max-width !default;
 $mml-image-spacer-y: 0 !default;
 $mml-image-spacer-x: 0 !default;
 
@@ -150,9 +133,9 @@ $mml-image-spacer-x: 0 !default;
 // -----------------------------------------------------------------------------
 $mml-input-padding-y: $mml-btnlist__btn-padding-y !default;
 $mml-input-padding-x: $mml-btn-padding-x !default;
-$mml-input-bg: mml-theme(card-bg-alt) !default;
-$mml-input-color: mml-theme(text-mid-emphasis) !default;
-$mml-input-focus-color: mml-theme(text-high-emphasis) !default;
+$mml-input-bg: mml-theme-val(card-bg-alt) !default;
+$mml-input-color: mml-theme-val(text-mid-emphasis) !default;
+$mml-input-focus-color: mml-theme-val(text-high-emphasis) !default;
 $mml-input-focus-outline: $mml-btn-focus-outline !default;
 
 // Loader:
@@ -170,22 +153,23 @@ $mml-progress-animation-ease: ease-in-out !default;
 
 // MD:
 // -----------------------------------------------------------------------------
-$mml-md-padding-y: 5px !default;
-$mml-md-color: mml-theme(text-high-emphasis) !default;
+$mml-md-spacer-y: 4px !default;
+$mml-md-color: mml-theme-val(text-high-emphasis) !default;
 $mml-md-font-size: inherit !default;
-$mml-md__code-bg: mml-theme(stroke) !default;
+$mml-md__code-bg: mml-theme-val(stroke) !default;
 $mml-md__code-color: #e83e8c !default;
 $mml-md__code-padding: 2px 4px !default;
 $mml-md__code-font-size: 87.5% !default;
-$mml-md__blockquote-border-left: 3px solid mml-theme(card-bg) !default;
-$mml-md__link-color: mml-theme(primary-accent) !default;
+$mml-md__blockquote-border-color: mml-theme-val(card-bg) !default;
+$mml-md__blockquote-border-width: 0 3px 0 0 !default;
+$mml-md__link-color: mml-theme-val(primary-accent) !default;
 
 // Number:
 // -----------------------------------------------------------------------------
 $mml-number__btn-margin-y: $mml-card-body-padding-x !default;
 $mml-number__btn-margin-x: $mml-number__btn-margin-y !default;
 $mml-number__count-font-weight: bold !default;
-$mml-number__count-color: mml-theme(text-high-emphasis) !default;
+$mml-number__count-color: mml-theme-val(text-high-emphasis) !default;
 
 // Row (Grid):
 // -----------------------------------------------------------------------------
@@ -199,13 +183,12 @@ $mml-scheduler-datepicker-height: 217px !default;
 // -----------------------------------------------------------------------------
 $mml-success-spacer: $mml-spacer !default;
 $mml-success-font-size: 88% !default;
-$mml-success-color: mml-theme(primary-accent) !default;
+$mml-success-color: mml-theme-val(primary-accent) !default;
 
 // Text:
 // -----------------------------------------------------------------------------
-$mml-text-spacer-y: 4px !default;
-$mml-text-bg: mml-theme(card-bg) !default;
-$mml-text-bg--me: mml-theme(card-bg-alt) !default;
-$mml-text-border-color: mml-theme(stroke-low-emphasis) !default;
-$mml-text-color: mml-theme(text-high-emphasis) !default;
+$mml-text-spacer-y: $mml-md-spacer-y !default;
+$mml-text-bg: mml-theme-val(card-bg) !default;
+$mml-text-bg--me: mml-theme-val(card-bg-alt) !default;
+$mml-text-color: mml-theme-val(text-high-emphasis) !default;
 $mml-text-font-size: inherit !default;
