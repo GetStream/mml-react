@@ -101,13 +101,12 @@ const examples = [
 </button_list>
 </mml>`,
   },
-  // TODO: put back it here below (new virtuoso is breaking tests):
-  // <scheduler name="massage_appointment" duration="30" timeInterval="15" selected="2020-11-16T10:30:00.000Z"/>
   {
     name: 'Advanced Scheduling',
     description: 'Datetime picker with availability using ical',
     mml: `<mml>
-	<text>When would you like to schedule your massage?</text>
+  <text>When would you like to schedule your massage?</text>
+  <scheduler name="massage_appointment" duration="30" timeInterval="15" selected="2020-11-16T10:30:00.000Z"/>
   <button name="action" value="reserve">Reserve</button>
 </mml>`,
   },
