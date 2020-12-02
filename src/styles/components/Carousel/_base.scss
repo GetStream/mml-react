@@ -18,10 +18,14 @@
     // components that as immediate children behave like card-body
     > #{mml-component(md)},
     > #{mml-component(text)} {
-      flex: 10;
       @include mml-card-body-borders();
       text-align: left;
-      padding: $mml-card-body-padding-y $mml-card-body-padding-x;
+      padding: $mml-card-body-padding-y $mml-card-body-padding-x 0;
+
+      &:last-child {
+        flex: 1;
+        padding-bottom: $mml-card-body-padding-y;
+      }
     }
 
     > #{mml-component(text)} {
