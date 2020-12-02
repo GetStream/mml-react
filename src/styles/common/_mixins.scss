@@ -3,7 +3,7 @@
 ///
 /// Automatically scope the class name
 ///
-/// __________________________________________________________________________--
+/// ____________________________________________________________________________
 @mixin mml-component($name, $variant: false) {
   @if $variant {
     .#{$mml-prefix}#{to-lower-case($name)}.#{$mml-prefix}-#{to-lower-case($variant)} {
@@ -22,7 +22,7 @@
 /// Automatically scope the class name to a message marked as "mine", which it
 /// is by default shown on the right hand side
 ///
-/// __________________________________________________________________________--
+/// ____________________________________________________________________________
 @mixin mml-me() {
   #{$mml-selector-wrapper-message-self} & {
     @content;
@@ -35,7 +35,7 @@
 /// Automatically scope the class name to a message marked as "others", which it
 /// is by default shown on the left hand side
 ///
-/// __________________________________________________________________________--
+/// ____________________________________________________________________________
 @mixin mml-other() {
   #{$mml-selector-wrapper-message-other} & {
     @content;
@@ -80,7 +80,7 @@
 ///
 /// Card header borders encapsulation
 ///
-/// __________________________________________________________________________--
+/// ____________________________________________________________________________
 @mixin mml-card-header-borders() {
   border-top-left-radius: $mml-card-header-border-radius;
   border-top-right-radius: $mml-card-header-border-radius;
@@ -92,7 +92,7 @@
 ///
 /// Card body borders encapsulation
 ///
-/// __________________________________________________________________________--
+/// ____________________________________________________________________________
 @mixin mml-card-body-borders() {
   border-width: 0 $mml-card-border-width;
   border-style: $mml-card-border-style;
@@ -102,7 +102,7 @@
 ///
 /// Grid mixins
 ///
-/// __________________________________________________________________________--
+/// ____________________________________________________________________________
 @mixin mml-row($gutter: $mml-grid-gutter) {
   display: flex;
   flex-wrap: wrap;
