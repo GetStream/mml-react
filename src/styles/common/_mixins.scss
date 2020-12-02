@@ -49,12 +49,12 @@
 /// a className scope on the `<mml>` element
 ///
 /// __________________________________________________________________________--
-@mixin mml-theme($theme-slug: '', $theme-vars: $mml-theme) {
-  .mml-container.#{$theme-slug} {
+@mixin mml-theme($theme-classname: '', $theme-vars: $mml-theme) {
+  .mml-container.#{$theme-classname} {
 
     @include mml-component('btn') {
-      border-color: mml-theme-var(stroke-low-emphasis);
-      background: mml-theme-var(card-bg);
+      border-color: mml-theme-var(stroke-low-emphasis, $theme-vars);
+      background: mml-theme-var(card-bg, $theme-vars);
 
       &--floating {
         box-shadow: mml-theme-var(shadow, $theme-vars);

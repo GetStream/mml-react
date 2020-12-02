@@ -5,7 +5,7 @@
 }
 
 /// Get mml theme value from given theme map
-@function mml-theme-var($key: 'primary-accent', $map) {
+@function mml-theme-var($key, $map) {
   @return map-get($map, $key);
 }
 
