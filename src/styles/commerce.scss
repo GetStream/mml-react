@@ -1,5 +1,6 @@
-@import 'common/themes';
+@import 'common/config';
 
 $mml-theme: $mml-theme-commerce !default;
 
-@import 'index';
+@import 'components/index';
+@import 'common/exports';
