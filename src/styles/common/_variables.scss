@@ -148,9 +148,9 @@ $mml-image-spacer-x: 0 !default;
 
 // Input:
 // -----------------------------------------------------------------------------
-$mml-input-padding-y: $mml-spacer !default;
+$mml-input-padding-y: $mml-btnlist__btn-padding-y !default;
 $mml-input-padding-x: $mml-btn-padding-x !default;
-$mml-input-bg: mml-theme(card-bg) !default;
+$mml-input-bg: mml-theme(card-bg-alt) !default;
 $mml-input-color: mml-theme(text-mid-emphasis) !default;
 $mml-input-focus-color: mml-theme(text-high-emphasis) !default;
 $mml-input-focus-outline: $mml-btn-focus-outline !default;

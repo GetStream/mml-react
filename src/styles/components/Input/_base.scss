@@ -12,6 +12,11 @@
     color: $mml-input-focus-color;
   }
 
+  // remove double border when the input has a label
+  #{mml-component('card-header')} + & {
+    border-top: 0;
+  }
+
   // remove double border when the button is directly below the input, as often
   // is the case with a <mml type="card">
   #{mml-component('card')} & + #{mml-component('btn')} {
