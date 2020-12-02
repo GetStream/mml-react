@@ -22,9 +22,12 @@
       text-align: left;
       padding: $mml-card-body-padding-y $mml-card-body-padding-x 0;
 
-      &:last-child {
+      &:first-of-type {
+        padding-top: $mml-card-body-padding-y;
+      }
+
+      &:last-of-type {
         flex: 1;
-        padding-bottom: $mml-card-body-padding-y;
       }
     }
 
