@@ -1,14 +1,11 @@
 import React, { useState, useRef, useCallback, useEffect, FC } from 'react';
-import { Virtuoso, VirtuosoProps } from 'react-virtuoso';
+import { Virtuoso, VirtuosoHandle } from 'react-virtuoso';
 import { Dayjs } from 'dayjs';
 import { DatePickerProps } from './DatePicker';
 
 export type DatePickerSelectProps = DatePickerSelectReadyProps & {
-  Item: (
-    item: DatePickerItemData,
-    selected: Dayjs,
-    handleClick: (item: DatePickerItemData) => void,
-  ) => ReturnType<VirtuosoProps['item']>;
+  itemClassName?: string;
+  // Item: (item: DatePickerItemData, selectedIdx: null | number, handleClick: () => void) => ReactNode;
   getItemData: (props: DatePickerSelectItemProps) => DatePickerItemData;
 };
 
@@ -25,8 +22,11 @@ export type DatePickerSelectReadyProps = Pick<DatePickerProps, 'icalFilter' | 'a
 /**
  * Inside Virtuoso select items need an idx to indicate their position
  */
-export type DatePickerSelectItemProps = DatePickerSelectReadyProps & {
+export type DatePickerSelectItemProps = {
+  interval: number;
+  format: string;
   idx: number;
+  value: Dayjs;
 };
 
 /**
@@ -34,58 +34,140 @@ export type DatePickerSelectItemProps = DatePickerSelectReadyProps & {
  */
 export type DatePickerItemData = {
   idx: number;
-  interval: number;
   value: Dayjs;
+  isSelected: (currentValue: Dayjs) => boolean;
   displayValue: string;
 };
 
-/**
- * Custom scroll container to hide scrollbar with simple css
- */
+const ITEMS_PER_PAGE = 40;
+const VERTICAL_COMPENSATION = 3;
+const INITIAL_INDEX = ITEMS_PER_PAGE;
 
 /**
  * DatePicker select
  */
 export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
-  const { icalFilter, value, getItemData, Item } = props;
-  const [total, setTotal] = useState(0);
-  const [selected, setSelected] = useState(value);
-  const items = useRef<DatePickerItemData[]>([]);
-  const perPage = 40;
-  let lastPageIdx = 0;
+  const { onChange, icalFilter, getItemData, itemClassName, interval, format, value } = props;
 
-  /**
-   * Handle item click
-   */
-  function handleClick(item: DatePickerItemData) {
-    setSelected(item.value);
-  }
+  // Generate date items
+  const generateItems = useCallback(
+    (quantity: number, firstIndex: number) => {
+      return Array(quantity)
+        .fill(true)
+        .map((_, idx) => getItemData({ interval, format, value, idx: firstIndex + idx }))
+        .filter((newItem) => !icalFilter || (icalFilter && icalFilter(newItem.value)));
+    },
+    [interval, format, value, icalFilter, getItemData],
+  );
 
-  const loadMore = useCallback(() => {
-    for (let idx = total; idx < total + total + perPage; idx++) {
-      const newItem = getItemData({ ...props, idx: idx + perPage * lastPageIdx });
+  const [items, setItems] = useState<DatePickerItemData[]>(generateItems(ITEMS_PER_PAGE * 2, -ITEMS_PER_PAGE));
+  const [firstItemIndex, setFirstItemIndex] = useState(INITIAL_INDEX);
+  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const virtuoso = useRef<VirtuosoHandle>(null);
 
-      if (!icalFilter || (icalFilter && icalFilter(newItem.value))) {
-        if (items.current) items.current = [...items.current, newItem];
+  // handle item click
+  const handleClick = useCallback(
+    (item: DatePickerItemData, index: number) => {
+      onChange(item.value);
+
+      let nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
+      const missingTopItems = nextFirstItemIdx - item.idx + VERTICAL_COMPENSATION;
+
+      // prepend date items, when the selected date's index is too low we prepend
+      // some date options so that it will remain vertically centered in the middle
+      if (missingTopItems >= 0) {
+        nextFirstItemIdx -= missingTopItems;
+        setFirstItemIndex(() => firstItemIndex - missingTopItems);
+        setItems((items) => [...generateItems(missingTopItems, nextFirstItemIdx), ...items]);
+      }
+
+      // scroll to selected date index
+      // if (virtuoso.current) {
+      //   virtuoso.current.scrollToIndex({
+      //     index: index - INITIAL_INDEX,
+      //     align: 'center',
+      //     behavior: 'smooth',
+      //   });
+      // }
+
+      setSelectedIdx(item.idx);
+      setSelectedIndex(index);
+      console.log('handleClick: nextFirstItemIdx', nextFirstItemIdx);
+    },
+    [setItems, generateItems, firstItemIndex, onChange],
+  );
+
+  // Load/generate date items in a batch and append it
+  const appendItems = useCallback(
+    (lastItemIndex) => {
+      setItems((items) => {
+        console.log('useCallback: appendItems', lastItemIndex, items);
+        return [...items, ...generateItems(ITEMS_PER_PAGE, lastItemIndex)];
+      });
+    },
+    [setItems, generateItems],
+  );
+
+  // Load/generate date items in a batch and prepend it, @see https://git.io/JIUuo
+  const prependItems = useCallback(() => {
+    const nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
+    setFirstItemIndex(() => firstItemIndex - ITEMS_PER_PAGE);
+    setItems((items) => {
+      console.log('useCallback: prependItems nextFirstItemIdx', nextFirstItemIdx, items);
+      return [...generateItems(ITEMS_PER_PAGE, nextFirstItemIdx), ...items];
+    });
+    // console.log("useCallback: prependItems nextFirstItemIdx", nextFirstItemIdx, firstItemIndex - ITEMS_PER_PAGE);
+    return false;
+  }, [setItems, generateItems, firstItemIndex]);
+
+  // on mount we need to check if there is a selected value and save its idx in state
+  useEffect(() => {
+    let initialSelectedIdx = null;
+    if (value) {
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].isSelected(value)) {
+          initialSelectedIdx = items[i].idx;
+          break;
+        }
       }
     }
-    lastPageIdx++;
-    setTotal(items.current.length);
-  }, [icalFilter, getItemData, lastPageIdx, props, total]);
-
-  useEffect(() => {
-    loadMore();
+    setSelectedIdx(initialSelectedIdx);
+    console.log('effect: onmount initialSelectedIdx', initialSelectedIdx);
   }, []); // eslint-disable-line
 
+  // autoscroll selected item to center
+  useEffect(() => {
+    if (virtuoso.current && selectedIndex !== null) {
+      virtuoso.current.scrollToIndex({
+        index: selectedIndex - INITIAL_INDEX,
+        align: 'center',
+        behavior: 'smooth',
+      });
+    }
+    console.log('effect: autoscroll selected item to center', selectedIndex);
+  }, [firstItemIndex, items, selectedIndex]);
+
+  console.log('render: items', items);
   return (
     <Virtuoso
+      ref={virtuoso}
       overscan={200}
-      totalCount={total}
-      item={(index) => Item(items.current[index], selected, handleClick)}
-      endReached={() => loadMore()}
-      footer={() => {
-        return <div style={{ padding: '2rem' }}></div>;
-      }}
+      firstItemIndex={firstItemIndex}
+      initialTopMostItemIndex={INITIAL_INDEX - VERTICAL_COMPENSATION}
+      data={items}
+      itemContent={(index, item) => (
+        <div
+          className={
+            itemClassName + ` mml-datepicker__item ${item.idx === selectedIdx ? 'mml-datepicker__item--selected' : ''}`
+          }
+          onClick={() => handleClick(item, index)}
+        >
+          {item.displayValue}
+        </div>
+      )}
+      endReached={appendItems}
+      startReached={prependItems}
     />
   );
 };
