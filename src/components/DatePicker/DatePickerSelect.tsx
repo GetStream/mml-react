@@ -50,10 +50,10 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
 
   // Generate date items
   const generateItems = useCallback(
-    (quantity: number, firstIndex: number) => {
+    (quantity: number, firstIdx: number) => {
       return Array(quantity)
         .fill(true)
-        .map((_, idx) => getItemData({ interval, format, value, idx: firstIndex + idx }))
+        .map((_, idx) => getItemData({ interval, format, value, idx: firstIdx + idx }))
         .filter((newItem) => !icalFilter || (icalFilter && icalFilter(newItem.value)));
     },
     [interval, format, value, icalFilter, getItemData],
@@ -98,18 +98,18 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
     return false;
   }, [setItems, generateItems, firstItemIndex]);
 
-  // to check if there is a selected value and save its idx in state
+  // on mount check if there is a selected value and save its idx in state
   useEffect(() => {
-    let initialSelectedIdx = null;
     if (value) {
+      let initialSelectedIdx = null;
       for (let i = 0; i < items.length; i++) {
         if (items[i].isSelected(value)) {
           initialSelectedIdx = items[i].idx;
           break;
         }
       }
+      setSelectedIdx(initialSelectedIdx);
     }
-    setSelectedIdx(initialSelectedIdx);
   }, []); // eslint-disable-line
 
   return (
