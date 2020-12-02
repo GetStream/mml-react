@@ -5,7 +5,6 @@ import { DatePickerProps } from './DatePicker';
 
 export type DatePickerSelectProps = DatePickerSelectReadyProps & {
   itemClassName?: string;
-  // Item: (item: DatePickerItemData, selectedIdx: null | number, handleClick: () => void) => ReactNode;
   getItemData: (props: DatePickerSelectItemProps) => DatePickerItemData;
 };
 
@@ -13,19 +12,19 @@ export type DatePickerSelectProps = DatePickerSelectReadyProps & {
  * Basic shape of DatePickerSelect extended by wrapper components as DatePickerDate and DatePickerTime
  */
 export type DatePickerSelectReadyProps = Pick<DatePickerProps, 'icalFilter' | 'allowPast'> & {
-  value: Dayjs;
   format: string;
   interval: number;
   onChange: (value: Dayjs) => void;
+  value: Dayjs;
 };
 
 /**
  * Inside Virtuoso select items need an idx to indicate their position
  */
 export type DatePickerSelectItemProps = {
-  interval: number;
   format: string;
   idx: number;
+  interval: number;
   value: Dayjs;
 };
 
@@ -33,10 +32,10 @@ export type DatePickerSelectItemProps = {
  * The data needed by each datepicker select item
  */
 export type DatePickerItemData = {
-  idx: number;
-  value: Dayjs;
-  isSelected: (currentValue: Dayjs) => boolean;
   displayValue: string;
+  idx: number;
+  isSelected: (currentValue: Dayjs) => boolean;
+  value: Dayjs;
 };
 
 const ITEMS_PER_PAGE = 40;
@@ -65,7 +64,6 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const virtuoso = useRef<VirtuosoHandle>(null);
 
-  // handle item click
   const handleClick = useCallback(
     (item: DatePickerItemData) => {
       onChange(item.value);
@@ -81,35 +79,26 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
         setItems((items) => [...generateItems(missingTopItems, nextFirstItemIdx), ...items]);
       }
       setSelectedIdx(item.idx);
-      console.log('handleClick: nextFirstItemIdx', nextFirstItemIdx);
     },
     [setItems, generateItems, firstItemIndex, onChange],
   );
 
-  // Load/generate date items in a batch and append it
   const appendItems = useCallback(
     (lastItemIndex) => {
-      setItems((items) => {
-        console.log('useCallback: appendItems', lastItemIndex, items);
-        return [...items, ...generateItems(ITEMS_PER_PAGE, lastItemIndex)];
-      });
+      setItems((items) => [...items, ...generateItems(ITEMS_PER_PAGE, lastItemIndex)]);
     },
     [setItems, generateItems],
   );
 
-  // Load/generate date items in a batch and prepend it, @see https://git.io/JIUuo
+  // @see https://git.io/JIUuo
   const prependItems = useCallback(() => {
     const nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
     setFirstItemIndex(() => firstItemIndex - ITEMS_PER_PAGE);
-    setItems((items) => {
-      console.log('useCallback: prependItems nextFirstItemIdx', nextFirstItemIdx, items);
-      return [...generateItems(ITEMS_PER_PAGE, nextFirstItemIdx), ...items];
-    });
-    // console.log("useCallback: prependItems nextFirstItemIdx", nextFirstItemIdx, firstItemIndex - ITEMS_PER_PAGE);
+    setItems((items) => [...generateItems(ITEMS_PER_PAGE, nextFirstItemIdx), ...items]);
     return false;
   }, [setItems, generateItems, firstItemIndex]);
 
-  // on mount we need to check if there is a selected value and save its idx in state
+  // to check if there is a selected value and save its idx in state
   useEffect(() => {
     let initialSelectedIdx = null;
     if (value) {
@@ -121,10 +110,8 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
       }
     }
     setSelectedIdx(initialSelectedIdx);
-    console.log('effect: onmount initialSelectedIdx', initialSelectedIdx);
   }, []); // eslint-disable-line
 
-  console.log('render: items', items);
   return (
     <Virtuoso
       ref={virtuoso}

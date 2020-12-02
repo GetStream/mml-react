@@ -19,7 +19,6 @@ const getItemData: DatePickerSelectProps['getItemData'] = (props) => {
     idx >= 0
       ? dayjs(value).add(idx * (interval * 24), 'hour')
       : dayjs(value).subtract(idx * (interval * 24) * -1, 'hour');
-  // const newValue = dayjs(value).add(idx * (interval * 24), 'hour');
 
   return {
     idx,
