@@ -57,7 +57,7 @@
     @include mml-themed(box-shadow, $mml-btn--floating-shadow);
 
     &:focus {
-      @if ($mml-themes-with-classname) {
+      @if ($mml-use-themes-classnames) {
         box-shadow: none !important;
       } @else {
         box-shadow: none;

@@ -1,10 +1,10 @@
 // Theme variables
 // -----------------------------------------------------------------------------
 $mml-theme: $mml-theme-base !default;
-$mml-themes-with-classname: false !default;
 
 // Generic variables:
 // -----------------------------------------------------------------------------
+$mml-use-themes-classnames: false !default;
 $mml-use-css-vars: false !default;
 $mml-prefix: 'mml-' !default;
 $mml-selector-wrapper-message-self: '.me' !default;

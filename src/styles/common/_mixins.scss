@@ -46,7 +46,7 @@
 /// MML themed
 ///
 /// Applies a value from the theme object to the given CSS property. When 
-/// $use-themes-class-names is true it will create the same rule applied through
+/// $mml-use-themes-classnames is true it will create the same rule applied through
 /// a className scope. This helps to keep themed base styling isolated in each
 /// component and avoid too much code duplication.
 ///
@@ -62,7 +62,7 @@
     #{$property}: var(--mml-#{$themeKey});
   }
   
-  @if ($mml-themes-with-classname) {
+  @if ($mml-use-themes-classnames) {
     @each $className, $theme in $mml-themes {
       // hopefully we don't need to prefix with `.mml-container` here otherwise
       // selector might become quite long...
