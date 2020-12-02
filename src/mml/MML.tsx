@@ -40,7 +40,7 @@ export const MML: FC<MMLProps> = ({
   source,
   onSubmit,
   converters,
-  theme = 'messaging-light',
+  theme = '',
   className = '',
   Loader = LoaderComponent,
   Error = ErrorComponent,
