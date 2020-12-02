@@ -53,11 +53,11 @@
   .mml-container.#{$theme-classname} {
 
     @include mml-component('btn') {
-      border-color: mml-theme-var(stroke-low-emphasis, $theme-vars);
-      background: mml-theme-var(card-bg, $theme-vars);
+      border-color: map-get($theme-vars, stroke-low-emphasis);
+      background: map-get($theme-vars, card-bg);
 
       &--floating {
-        box-shadow: mml-theme-var(shadow, $theme-vars);
+        box-shadow: map-get($theme-vars, shadow);
       }
     }
     
