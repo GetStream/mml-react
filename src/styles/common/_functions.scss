@@ -4,6 +4,11 @@
   // @return map-get($mml-theme, $key);
 }
 
+/// Get mml theme value from given theme map
+@function mml-theme-var($key: 'primary-accent', $map) {
+  @return map-get($map, $key);
+}
+
 /// Get mml component prefixed selector
 @function mml-component($name) {
   @return #{unquote('.' + $mml-prefix)}#{to-lower-case($name)};

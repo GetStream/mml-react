@@ -45,6 +45,25 @@
 ///
 /// MML theme
 ///
+/// Outputs the common code tweaks that a theme needs to apply when used through
+/// a className scope on the `<mml>` element
+///
+/// __________________________________________________________________________--
+@mixin mml-theme($theme-slug: '', $theme-vars: ()) {
+  .mml-container.#{$theme-slug} {
+
+    @include mml-component('btn') {
+      &--floating {
+        box-shadow: mml-theme-var(shadow, $theme-vars);
+      }
+    }
+    
+  }
+}
+
+///
+/// MML stream chat react
+///
 /// Automatically scope to the class name of a specific stream-chat-react theme
 ///
 /// __________________________________________________________________________--

@@ -2,24 +2,7 @@
 //
 // by default the values are for the default light theme
 // -----------------------------------------------------------------------------
-$mml-theme: (
-  primary-accent: #006cff,
-  // might be used outside mml container
-  app-canvas: #fff,
-  text-high-emphasis: #0e1621,
-  text-mid-emphasis: #8a898e,
-  text-low-emphasis: #b2b1b5,
-  // might be used outside mml container
-  text-self: #fff,
-  text-pressed: #fff,
-  card-bg: #f2f2f2,
-  card-alt-bg: #fff,
-  // might be used outside mml container
-  card-self-bg: #41affc,
-  stroke: #e5e5e6,
-  stroke-low-emphasis: #f2f2f2,
-  shadow: 0px 2px 5px rgba(0, 0, 0, 0.15),
-) !default;
+$mml-theme: $mml-theme-base !default;
 
 // Generic variables:
 // -----------------------------------------------------------------------------
