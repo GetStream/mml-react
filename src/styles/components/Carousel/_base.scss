@@ -22,13 +22,16 @@
       text-align: left;
       padding: 0 $mml-card-body-padding-x $mml-card-body-padding-y;
 
-      &:first-child {
+      &:first-of-type {
         padding-top: $mml-card-body-padding-y;
+      }
+
+      &:last-of-type {
+        flex: 1;
       }
     }
     
     > #{mml-component(text)} {
-      flex: 1;
       font-size: $mml-carousel__text-font-size;
       color: $mml-carousel__text-font-color;
     }
