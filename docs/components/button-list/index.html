@@ -1,0 +1,932 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/mml-react/styles.2543ff947a193d7f33b1.css" id="gatsby-global-css">@import url(https://fonts.googleapis.com/css?family=Inconsolata&display=swap);@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap);</style><meta name="generator" content="Gatsby 2.27.3"/><title data-rh="true">Button list | MML React</title><meta data-rh="true" name="description" content="MML (Message Markup Language) for React implementation."/><meta data-rh="true" property="og:title" content="Button list"/><meta data-rh="true" property="og:description" content="MML (Message Markup Language) for React implementation."/><meta data-rh="true" property="og:type" content="website"/><meta data-rh="true" name="twitter:card" content="summary"/><meta data-rh="true" name="twitter:title" content="Button list"/><meta data-rh="true" name="twitter:description" content="MML (Message Markup Language) for React implementation."/><style data-styled="" data-styled-version="5.2.1">.eyJZRw{padding-right:10px;font-size:13px;}/*!sc*/
+data-styled.g1[id="sc-1kvbu3y-0"]{content:"eyJZRw,"}/*!sc*/
+.izvFmK{height:50px;display:block;padding:0 10px;border:1px solid transparent;background:transparent;font-size:13px;}/*!sc*/
+.izvFmK:focus{outline:none;border-top:1px solid #006cff;}/*!sc*/
+data-styled.g2[id="sc-1kvbu3y-1"]{content:"izvFmK,"}/*!sc*/
+.kETtnJ{z-index:1000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;box-sizing:border-box;position:fixed;top:0;right:0;height:81px;padding:0 15px;border-style:solid;border-color:#ddd;border-width:0 0 1px 0;background:#f3f3f3;}/*!sc*/
+data-styled.g3[id="sc-1ps9lij-0"]{content:"kETtnJ,"}/*!sc*/
+.bqkDCu{position:relative;padding:0 9px 0 46px;}/*!sc*/
+data-styled.g4[id="sc-7qmifc-0"]{content:"bqkDCu,"}/*!sc*/
+.FRXdO{border-top:1px solid #e5e5e6;}/*!sc*/
+data-styled.g5[id="sc-7qmifc-1"]{content:"FRXdO,"}/*!sc*/
+.laAbke{width:320px;margin:0 auto;font-size:15px;padding:16px 0;background:#fff;}/*!sc*/
+.laAbke .sc-7qmifc-0,.laAbke .sc-7qmifc-1{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;opacity:0.2;}/*!sc*/
+data-styled.g6[id="sc-7qmifc-2"]{content:"laAbke,"}/*!sc*/
+.guSGAF{color:#8a898e;font-size:13px;}/*!sc*/
+data-styled.g8[id="sc-7qmifc-4"]{content:"guSGAF,"}/*!sc*/
+.dmcQix{position:relative;-webkit-flex:1;-ms-flex:1;flex:1;display:block;margin:2px 0;padding:4px 12px;border:1px solid #f2f2f2;background:#f2f2f2;color:#0e1621;}/*!sc*/
+data-styled.g10[id="sc-7qmifc-6"]{content:"dmcQix,"}/*!sc*/
+.klWCgS{margin-top:4px;padding-left:12px;font-size:11px;color:#8a898e;}/*!sc*/
+data-styled.g11[id="sc-7qmifc-7"]{content:"klWCgS,"}/*!sc*/
+.hTebDO{position:absolute;bottom:0;left:8px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:32px;height:32px;border-radius:100%;background:#b2b1b5;font-weight:bold;font-size:12px;color:white;}/*!sc*/
+data-styled.g12[id="sc-7qmifc-8"]{content:"hTebDO,"}/*!sc*/
+.bSgCqD{margin-left:auto;padding:16px 9px 32px;}/*!sc*/
+data-styled.g13[id="sc-7qmifc-9"]{content:"bSgCqD,"}/*!sc*/
+.hAlNVj.mml-input{border:0;font-size:15px;box-sizing:border-box;background:transparent;}/*!sc*/
+data-styled.g14[id="sc-7qmifc-10"]{content:"hAlNVj,"}/*!sc*/
+.kWRTvq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-right:9px;}/*!sc*/
+data-styled.g15[id="sc-7qmifc-11"]{content:"kWRTvq,"}/*!sc*/
+.cnDwFB.mml-btn{width:32px;min-width:32px;height:32px;padding:0;margin-left:16px;border-radius:100%;}/*!sc*/
+.cnDwFB .material-icons{font-size:18px;}/*!sc*/
+data-styled.g16[id="sc-7qmifc-12"]{content:"cnDwFB,"}/*!sc*/
+.fKjCfI.mml-btn{width:auto;padding-top:4px;padding-bottom:4px;margin-left:auto;border-radius:16px;}/*!sc*/
+data-styled.g17[id="sc-7qmifc-13"]{content:"fKjCfI,"}/*!sc*/
+</style><link as="script" rel="preload" href="/mml-react/webpack-runtime-6073e22de6036da5c8da.js"/><link as="script" rel="preload" href="/mml-react/styles-b50c3723c16fe64e1a35.js"/><link as="script" rel="preload" href="/mml-react/framework-6fbd02491ac305dbd6c8.js"/><link as="script" rel="preload" href="/mml-react/19a7f4cc-95dd4d670fad4885ffcb.js"/><link as="script" rel="preload" href="/mml-react/app-0c20c1705c6b44f75c7f.js"/><link as="script" rel="preload" href="/mml-react/bac1b955-b711947e81fae9e9bc2c.js"/><link as="script" rel="preload" href="/mml-react/9d3c51887320b6a39beaab4314f5fd8de5682180-85e5d2ffd9dd710c5887.js"/><link as="script" rel="preload" href="/mml-react/component---src-components-button-list-mdx-e8814e9de48cf571dade.js"/><link as="fetch" rel="preload" href="/mml-react/page-data/components/button-list/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mml-react/page-data/sq/d/1635659820.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/mml-react/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1ouyflx">.css-1ouyflx{font-family:'Source Sans Pro',sans-serif;font-size:20px;font-weight:400;line-height:1.5;color:var(--theme-ui-colors-text,#2D3747);background-color:var(--theme-ui-colors-background,#FFFFFF);}</style><div class="css-1ouyflx"><style id="theme-index-light">@import url(https://fonts.googleapis.com/icon?family=Material+Icons);.mml-container {
+  font-family: inherit; }
+  .mml-container * {
+    box-sizing: border-box; }
+
+.mml-wrap {
+  display: flex;
+  flex-direction: column; }
+  .other .mml-wrap &gt; *:not(.mml-carousel):not(.mml-btnlist--floating) {
+    margin-right: auto; }
+  .me .mml-wrap &gt; *:not(.mml-carousel):not(.mml-btnlist--floating) {
+    margin-left: auto; }
+  .mml-wrap &gt; * {
+    border-radius: 16px; }
+  .other .mml-wrap &gt; *:last-child {
+    border-bottom-left-radius: 0px; }
+  .me .mml-wrap &gt; *:last-child {
+    border-bottom-right-radius: 0px; }
+
+.buttonBack___1mlaL,
+.buttonFirst___2rhFr,
+.buttonLast___2yuh0,
+.buttonNext___2mOCa,
+.buttonNext___3Lm3s,
+.dot___3c3SI {
+  cursor: pointer; }
+
+.image___xtQGH {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.spinner___27VUp {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  -webkit-animation-name: spin___S3UuE;
+          animation-name: spin___S3UuE;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border: 4px solid #a9a9a9;
+  border-top-color: #000;
+  border-radius: 30px; }
+
+@-webkit-keyframes spin___S3UuE {
+  0% {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(1turn); } }
+
+@keyframes spin___S3UuE {
+  0% {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(1turn); } }
+
+.container___2O72F {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+
+.overlay___IV4qY {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  cursor: zoom-in;
+  transition: opacity 0.3s, transform 0.3s; }
+
+.hover___MYy31,
+.loading___1pvNI,
+.zoom___3kqYk {
+  opacity: 1; }
+
+.imageLoadingSpinnerContainer___3UIPD {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4; }
+
+.slide___3-Nqo {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 0;
+  margin: 0;
+  list-style-type: none; }
+
+.slide___3-Nqo:focus {
+  outline: none !important; }
+
+.slideHorizontal___1NzNV {
+  float: left; }
+
+[dir=&#x27;rtl&#x27;] .slideHorizontal___1NzNV {
+  direction: rtl;
+  transform: scaleX(-1); }
+
+.slideInner___2mfX9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.focusRing___1airF {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  pointer-events: none;
+  outline-width: 5px;
+  outline-style: solid;
+  outline-color: Highlight; }
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .focusRing___1airF {
+    outline-style: auto;
+    outline-color: -webkit-focus-ring-color; } }
+
+.horizontalSlider___281Ls {
+  position: relative;
+  overflow: hidden; }
+
+[dir=&#x27;rtl&#x27;] .horizontalSlider___281Ls {
+  direction: ltr;
+  transform: scaleX(-1); }
+
+.horizontalSliderTray___1L-0W {
+  overflow: hidden;
+  width: 100%; }
+
+.verticalSlider___34ZFD {
+  position: relative;
+  overflow: hidden; }
+
+.verticalSliderTray___267D8 {
+  overflow: hidden; }
+
+.verticalTray___12Key {
+  float: left; }
+
+.verticalSlideTrayWrap___2nO7o {
+  overflow: hidden; }
+
+.sliderTray___-vHFQ {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.sliderAnimation___300FY {
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: transform; }
+
+.masterSpinnerContainer___1Z6hB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4; }
+.mml-card {
+  max-width: 200px;
+  width: 100%; }
+  .mml-card .mml-btnlist {
+    font-size: 14px;
+    max-width: none;
+    border: 0; }
+  .mml-card &gt; *:not(:first-child):not(:last-child) {
+    background: #fff;
+    background: var(--mml-card-alt-bg); }
+  .mml-card &gt; .mml-number {
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #e5e5e6;
+    border-color: var(--mml-stroke); }
+  .mml-card &gt; .mml-btn {
+    min-width: 100%;
+    border: 1px solid #e5e5e6;
+    border: 1px solid var(--mml-stroke); }
+    .mml-card &gt; .mml-btn:last-child {
+      padding: 11px 16px;
+      border-radius: 0px; }
+      .other .mml-card &gt; .mml-btn:last-child {
+        border-bottom-right-radius: 16px; }
+      .me .mml-card &gt; .mml-btn:last-child {
+        border-bottom-left-radius: 16px; }
+
+.mml-card-body {
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #e5e5e6;
+  border-color: var(--mml-stroke);
+  background: #fff;
+  background: var(--mml-card-alt-bg);
+  color: #0e1621;
+  color: var(--mml-text-high-emphasis);
+  font-size: 14px; }
+
+.mml-card-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  font-size: 13px;
+  color: #8a898e;
+  color: var(--mml-text-mid-emphasis);
+  background: #f2f2f2;
+  background: var(--mml-card-bg);
+  border: 1px solid #e5e5e6;
+  border: 1px solid var(--mml-stroke);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px; }
+  .mml-card-header .mml-icon {
+    padding-left: 16px;
+    margin-right: -8px; }
+  .mml-card-header__text {
+    padding: 0 16px;
+    font-weight: bold; }
+
+.mml-add-to-calendar {
+  max-width: 200px; }
+  .mml-add-to-calendar &gt; .mml-card-body:last-child {
+    border-bottom: 1px solid #e5e5e6;
+    border-bottom: 1px solid var(--mml-stroke); }
+
+.mml-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  padding: 5px 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f2f2f2;
+  border-color: var(--mml-card-bg);
+  border-radius: 16px;
+  color: #006cff;
+  color: var(--mml-primary-accent);
+  background: #f2f2f2;
+  background: var(--mml-card-bg);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 15px;
+  max-width: 200px;
+  margin: 0; }
+  .mml-btn:not([disabled]) {
+    cursor: pointer; }
+  .mml-btn:hover, .mml-btn:focus {
+    color: #fff;
+    color: var(--mml-text-pressed);
+    background: #006cff;
+    background: var(--mml-primary-accent);
+    border-color: #006cff;
+    border-color: var(--mml-primary-accent); }
+  .mml-btn[disabled] {
+    color: #b2b1b5;
+    color: var(--mml-text-low-emphasis);
+    background: #f2f2f2;
+    background: var(--mml-card-bg);
+    border-color: #f2f2f2;
+    border-color: var(--mml-card-bg); }
+  .mml-btn:focus {
+    outline: none; }
+  .mml-btn--floating {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--mml-shadow); }
+  .mml-btn--with-icon .mml-icon {
+    margin-right: 0.4em; }
+  .mml-btn--icon {
+    padding: 5px 5px;
+    border-radius: 100%; }
+
+.mml-btnlist {
+  display: flex; }
+  .mml-btnlist--grounded {
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    min-width: 155px;
+    max-width: 200px;
+    border: 1px solid #e5e5e6;
+    border: 1px solid var(--mml-stroke);
+    background: #f2f2f2;
+    background: var(--mml-card-bg); }
+    .mml-btnlist--grounded .mml-btn {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 11px 16px;
+      border-width: 0 0 1px 0;
+      border-radius: 0;
+      border-color: #e5e5e6;
+      border-color: var(--mml-stroke); }
+      .mml-btnlist--grounded .mml-btn:not(:hover):not(:focus) {
+        background: none; }
+      .mml-btnlist--grounded .mml-btn:last-child {
+        border-width: 0; }
+      .mml-btnlist--grounded .mml-btn--with-icon {
+        justify-content: flex-start;
+        font-weight: normal; }
+        .mml-btnlist--grounded .mml-btn--with-icon:not(:hover):not(:focus) {
+          color: #0e1621;
+          color: var(--mml-text-high-emphasis); }
+  .mml-btnlist--floating {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -8px;
+    margin-left: -8px; }
+    .mml-btnlist--floating .mml-btn {
+      margin: 8px 8px; }
+
+.mml-carousel {
+  margin: 8px 0; }
+
+.mml-carousel-item {
+  padding-right: 8px; }
+  .mml-carousel-item .carousel__inner-slide {
+    display: flex;
+    flex-direction: column; }
+    .mml-carousel-item .carousel__inner-slide &gt; *:not(:first-child):not(:last-child) {
+      background: #fff;
+      background: var(--mml-card-alt-bg); }
+    .mml-carousel-item .carousel__inner-slide &gt; .mml-md,
+    .mml-carousel-item .carousel__inner-slide &gt; .mml-text {
+      flex: 10;
+      border-width: 0 1px;
+      border-style: solid;
+      border-color: #e5e5e6;
+      border-color: var(--mml-stroke);
+      text-align: left;
+      padding: 8px 8px; }
+    .mml-carousel-item .carousel__inner-slide &gt; .mml-text {
+      font-size: 11px;
+      color: #8a898e;
+      color: var(--mml-text-mid-emphasis); }
+    .mml-carousel-item .carousel__inner-slide .mml-btn {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border: 1px solid #e5e5e6;
+      border: 1px solid var(--mml-stroke);
+      padding: 11px 16px; }
+
+.mml-col-align-center {
+  justify-content: center; }
+
+.mml-col-align-right {
+  justify-content: flex-end; }
+
+.mml-col-1, .mml-col-2, .mml-col-3, .mml-col-4, .mml-col-5, .mml-col-6, .mml-col-7, .mml-col-8, .mml-col-9, .mml-col-10, .mml-col-11, .mml-col-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0; }
+
+.mml-col-1 {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%; }
+
+.mml-col-2 {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%; }
+
+.mml-col-3 {
+  flex: 0 0 25%;
+  max-width: 25%; }
+
+.mml-col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%; }
+
+.mml-col-5 {
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%; }
+
+.mml-col-6 {
+  flex: 0 0 50%;
+  max-width: 50%; }
+
+.mml-col-7 {
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%; }
+
+.mml-col-8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%; }
+
+.mml-col-9 {
+  flex: 0 0 75%;
+  max-width: 75%; }
+
+.mml-col-10 {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%; }
+
+.mml-col-11 {
+  flex: 0 0 91.66667%;
+  max-width: 91.66667%; }
+
+.mml-col-12 {
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+.mml-col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%; }
+
+.mml-offset-1 {
+  margin-left: 8.33333%; }
+
+.mml-offset-2 {
+  margin-left: 16.66667%; }
+
+.mml-offset-3 {
+  margin-left: 25%; }
+
+.mml-offset-4 {
+  margin-left: 33.33333%; }
+
+.mml-offset-5 {
+  margin-left: 41.66667%; }
+
+.mml-offset-6 {
+  margin-left: 50%; }
+
+.mml-offset-7 {
+  margin-left: 58.33333%; }
+
+.mml-offset-8 {
+  margin-left: 66.66667%; }
+
+.mml-offset-9 {
+  margin-left: 75%; }
+
+.mml-offset-10 {
+  margin-left: 83.33333%; }
+
+.mml-offset-11 {
+  margin-left: 91.66667%; }
+
+.mml-error {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  color: #bb5151;
+  font-size: 88%; }
+
+.mml-icon {
+  font-family: &#x27;Material Icons&#x27;;
+  line-height: 20px;
+  font-size: 20px; }
+  .mml-icon__svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor; }
+
+.mml-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0; }
+
+.mml-input {
+  position: relative;
+  width: 100%;
+  padding: 8px 16px;
+  -webkit-appearance: none;
+  border: 1px solid #e5e5e6;
+  border: 1px solid var(--mml-stroke);
+  background: #f2f2f2;
+  background: var(--mml-card-bg);
+  color: #8a898e;
+  color: var(--mml-text-mid-emphasis); }
+  .mml-input:focus {
+    outline: none;
+    color: #0e1621;
+    color: var(--mml-text-high-emphasis); }
+  .mml-card .mml-input + .mml-btn {
+    border-top: 0; }
+
+.mml-progress {
+  width: 1em;
+  color: #bbb;
+  -webkit-animation: mml-animation-dash 1.4s ease-in-out infinite;
+          animation: mml-animation-dash 1.4s ease-in-out infinite;
+  stroke-dasharray: 80px, 200px;
+  stroke-dashoffset: 0px; }
+  .mml-progress__svg {
+    display: block; }
+  .mml-progress__circle {
+    stroke: currentColor; }
+
+@-webkit-keyframes mml-animation-dash {
+  0% {
+    stroke-dasharray: 1px, 200px;
+    stroke-dashoffset: 0px; }
+  50% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -15px; }
+  100% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -125px; } }
+
+@keyframes mml-animation-dash {
+  0% {
+    stroke-dasharray: 1px, 200px;
+    stroke-dashoffset: 0px; }
+  50% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -15px; }
+  100% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -125px; } }
+
+@-webkit-keyframes mml-animation-rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes mml-animation-rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.mml-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-size: 88%; }
+  .mml-loader__text {
+    padding-left: 8px; }
+
+.mml-md {
+  padding: 5px 0;
+  color: #0e1621;
+  color: var(--mml-text-high-emphasis); }
+  .mml-md blockquote {
+    padding: 0 1em;
+    margin: 1em 0;
+    border-left: 3px solid #f2f2f2;
+    border-left: 3px solid var(--mml-card-bg); }
+  .mml-md pre {
+    padding: 2px 4px;
+    margin: 0 0 1em;
+    white-space: normal;
+    background: #e5e5e6;
+    background: var(--mml-stroke); }
+  .mml-md code {
+    color: #e83e8c;
+    font-size: 87.5%;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace; }
+  .mml-md p {
+    margin: 0; }
+    .mml-md p:not(:first-child):not(:last-child) {
+      margin: 0 0 1em; }
+  .mml-md a {
+    color: #006cff;
+    color: var(--mml-primary-accent); }
+
+.mml-number {
+  flex: 1;
+  display: flex; }
+  .mml-number__count {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    color: #0e1621;
+    color: var(--mml-text-high-emphasis);
+    font-weight: bold; }
+  .mml-number .mml-btn {
+    margin: 8px 8px; }
+
+.mml-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0;
+  margin-left: 0;
+  min-width: 100%; }
+
+.mml-card {
+  max-width: 200px;
+  width: 100%; }
+  .mml-card .mml-btnlist {
+    font-size: 14px;
+    max-width: none;
+    border: 0; }
+  .mml-card &gt; *:not(:first-child):not(:last-child) {
+    background: #fff;
+    background: var(--mml-card-alt-bg); }
+  .mml-card &gt; .mml-number {
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #e5e5e6;
+    border-color: var(--mml-stroke); }
+  .mml-card &gt; .mml-btn {
+    min-width: 100%;
+    border: 1px solid #e5e5e6;
+    border: 1px solid var(--mml-stroke); }
+    .mml-card &gt; .mml-btn:last-child {
+      padding: 11px 16px;
+      border-radius: 0px; }
+      .other .mml-card &gt; .mml-btn:last-child {
+        border-bottom-right-radius: 16px; }
+      .me .mml-card &gt; .mml-btn:last-child {
+        border-bottom-left-radius: 16px; }
+
+.mml-card-body {
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #e5e5e6;
+  border-color: var(--mml-stroke);
+  background: #fff;
+  background: var(--mml-card-alt-bg);
+  color: #0e1621;
+  color: var(--mml-text-high-emphasis);
+  font-size: 14px; }
+
+.mml-card-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  font-size: 13px;
+  color: #8a898e;
+  color: var(--mml-text-mid-emphasis);
+  background: #f2f2f2;
+  background: var(--mml-card-bg);
+  border: 1px solid #e5e5e6;
+  border: 1px solid var(--mml-stroke);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px; }
+  .mml-card-header .mml-icon {
+    padding-left: 16px;
+    margin-right: -8px; }
+  .mml-card-header__text {
+    padding: 0 16px;
+    font-weight: bold; }
+
+.mml-datepicker {
+  flex: 1;
+  display: flex; }
+  .mml-datepicker__select {
+    flex: 1; }
+    .mml-datepicker__select &gt; div {
+      overflow-y: scroll;
+      scrollbar-width: none;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none; }
+      .mml-datepicker__select &gt; div::-webkit-scrollbar {
+        display: none; }
+  .mml-datepicker__date .mml-datepicker__item {
+    text-align: right; }
+  .mml-datepicker__item {
+    padding: 4px 5px;
+    cursor: pointer; }
+    .mml-datepicker__item--selected {
+      color: #006cff;
+      color: var(--mml-primary-accent);
+      font-weight: bold; }
+
+.mml-scheduler .mml-datepicker {
+  height: 217px;
+  background: #fff;
+  background: var(--mml-card-alt-bg); }
+
+.mml-scheduler .mml-datepicker__select {
+  position: relative; }
+  .mml-scheduler .mml-datepicker__select:before, .mml-scheduler .mml-datepicker__select:after {
+    content: &#x27;&#x27;;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10%;
+    min-height: 60px; }
+  .mml-scheduler .mml-datepicker__select:before {
+    top: 0;
+    background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(to bottom, var(--mml-card-alt-bg), rgba(255, 255, 255, 0)); }
+  .mml-scheduler .mml-datepicker__select:after {
+    bottom: 0;
+    background-image: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(to top, var(--mml-card-alt-bg), rgba(255, 255, 255, 0)); }
+
+.mml-success {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  color: #006cff;
+  color: var(--mml-primary-accent);
+  font-size: 88%; }
+
+.mml-text {
+  padding: 2px 0;
+  color: #0e1621;
+  color: var(--mml-text-high-emphasis); }
+  .mml-text + * {
+    padding-top: 2px; }
+
+:root {
+  --mml-primary-accent: #006cff;
+  --mml-app-canvas: #fff;
+  --mml-text-high-emphasis: #0e1621;
+  --mml-text-mid-emphasis: #8a898e;
+  --mml-text-low-emphasis: #b2b1b5;
+  --mml-text-self: #fff;
+  --mml-text-pressed: #fff;
+  --mml-card-bg: #f2f2f2;
+  --mml-card-alt-bg: #fff;
+  --mml-card-self-bg: #41affc;
+  --mml-stroke: #e5e5e6;
+  --mml-stroke-low-emphasis: #f2f2f2;
+  --mml-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); }
+</style><div class="sc-1ps9lij-0 kETtnJ"><label class="sc-1kvbu3y-0 eyJZRw">Choose MML theme:</label><select class="sc-1kvbu3y-1 izvFmK"><option value="index">Base</option><option value="messaging">Social Messenger</option><option value="livestream">Livestream</option><option value="commerce">Customer Support</option><option value="team">Team</option></select><label><input type="radio" name="tone" value="light"/>Light</label><label><input type="radio" name="tone" value="dark"/>Dark</label></div><style data-emotion-css="jrjj6h">.css-jrjj6h > div{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;}</style><style data-emotion-css="1ubpee3">.css-1ubpee3{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.css-1ubpee3 > div{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;}</style><style data-emotion-css="hbri28">.css-hbri28{box-sizing:border-box;min-width:0;min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.css-hbri28 > div{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;}</style><div data-testid="layout" class="css-hbri28"><style data-emotion-css="1xva7m0">body{margin:0;padding:0;}.icon-link{display:none;}.with-overlay{overflow:hidden;}</style><style data-emotion-css="zf0iqh">.css-zf0iqh{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;min-height:100vh;}</style><style data-emotion-css="1tjxv7i">.css-1tjxv7i{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;min-height:100vh;}</style><style data-emotion-css="238csb">.css-238csb{box-sizing:border-box;min-width:0;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;min-height:100vh;}</style><main class="css-238csb"><style data-emotion-css="18wmtq">.css-18wmtq{background-color:var(--theme-ui-colors-header-bg,#F5F6F7);position:relative;z-index:1;border-bottom:1px solid var(--theme-ui-colors-border,#CED4DE);}</style><div data-testid="header" class="css-18wmtq"><style data-emotion-css="zankq9">.css-zankq9{display:none;position:absolute;top:calc(100% + 15px);left:30px;}@media screen and (max-width:57.5em){.css-zankq9{display:block;}}</style><style data-emotion-css="1s0wdqz">.css-1s0wdqz{box-sizing:border-box;min-width:0;display:none;position:absolute;top:calc(100% + 15px);left:30px;}@media screen and (max-width:57.5em){.css-1s0wdqz{display:block;}}</style><div class="css-1s0wdqz"><style data-emotion-css="4019lz">.css-4019lz{padding:0;outline:none;background:transparent;border:none;color:var(--theme-ui-colors-header-text,#2D3747);opacity:0.5;cursor:pointer;}.css-4019lz:hover{cursor:pointer;}</style><button class="css-4019lz"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button></div><style data-emotion-css="z6jak6">.css-z6jak6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;padding-left:32px;padding-right:32px;position:relative;height:80px;}</style><div class="css-z6jak6"><style data-emotion-css="xenp3v">.css-xenp3v{-webkit-letter-spacing:-0.02em;-moz-letter-spacing:-0.02em;-ms-letter-spacing:-0.02em;letter-spacing:-0.02em;font-weight:600;font-size:24px;}</style><style data-emotion-css="1abzlu">.css-1abzlu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-letter-spacing:-0.02em;-moz-letter-spacing:-0.02em;-ms-letter-spacing:-0.02em;letter-spacing:-0.02em;font-weight:600;font-size:24px;}</style><style data-emotion-css="ug0363">.css-ug0363{box-sizing:border-box;min-width:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-letter-spacing:-0.02em;-moz-letter-spacing:-0.02em;-ms-letter-spacing:-0.02em;letter-spacing:-0.02em;font-weight:600;font-size:24px;}</style><div data-testid="logo" class="css-ug0363"><style data-emotion-css="gyijir">.css-gyijir{font-weight:600;color:var(--theme-ui-colors-header-text,#2D3747);-webkit-text-decoration:none;text-decoration:none;}.css-gyijir:hover{color:var(--theme-ui-colors-primary,#0B5FFF);}</style><a class="css-gyijir" href="/mml-react/">MML React</a></div><style data-emotion-css="k008qs">.css-k008qs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}</style><style data-emotion-css="80zs6q">.css-80zs6q{box-sizing:border-box;min-width:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}</style><div class="css-80zs6q"></div></div></div><style data-emotion-css="1nfi0ai">.css-1nfi0ai{padding-top:0;padding-bottom:0;-webkit-flex:1;-ms-flex:1;flex:1;display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh;}@media screen and (max-width:57.5em){.css-1nfi0ai{display:block;}}</style><div class="css-1nfi0ai"><style data-emotion-css="1tn7q1x">.css-1tn7q1x{z-index:999;position:fixed;top:81px;right:0;bottom:0;left:0;background:rgba(0,0,0,0.6);-webkit-transition:all .2s ease-out;transition:all .2s ease-out;visibility:hidden;opacity:0;}</style><style data-emotion-css="h4snl3">.css-h4snl3{box-sizing:border-box;min-width:0;z-index:999;position:fixed;top:81px;right:0;bottom:0;left:0;background:rgba(0,0,0,0.6);-webkit-transition:all .2s ease-out;transition:all .2s ease-out;visibility:hidden;opacity:0;}</style><div class="css-h4snl3"></div><style data-emotion-css="1ethd5x">.css-1ethd5x{padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:-webkit-sticky;position:sticky;top:0;z-index:1;min-width:0;max-height:100vh;border-right:1px solid var(--theme-ui-colors-border,#CED4DE);overflow:auto;-webkit-overflow-scrolling:touch;background-color:var(--theme-ui-colors-sidebar-bg,#FFFFFF);}@media screen and (max-width:57.5em){.css-1ethd5x{z-index:9999;display:block;position:fixed;top:81px;left:0;bottom:0;width:256px;padding-left:32px;padding-right:32px;background-color:var(--theme-ui-colors-background,#FFFFFF);-webkit-transition:-webkit-transform .2s ease-out;-webkit-transition:transform .2s ease-out;transition:transform .2s ease-out;-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%);}}</style><style data-emotion-css="1li9yso">.css-1li9yso{box-sizing:border-box;min-width:0;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:-webkit-sticky;position:sticky;top:0;z-index:1;min-width:0;max-height:100vh;border-right:1px solid var(--theme-ui-colors-border,#CED4DE);overflow:auto;-webkit-overflow-scrolling:touch;background-color:var(--theme-ui-colors-sidebar-bg,#FFFFFF);}@media screen and (max-width:57.5em){.css-1li9yso{z-index:9999;display:block;position:fixed;top:81px;left:0;bottom:0;width:256px;padding-left:32px;padding-right:32px;background-color:var(--theme-ui-colors-background,#FFFFFF);-webkit-transition:-webkit-transform .2s ease-out;-webkit-transition:transform .2s ease-out;transition:transform .2s ease-out;-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%);}}</style><div data-testid="sidebar" class="css-1li9yso"><style data-emotion-css="lcm9hh">.css-lcm9hh{margin-bottom:16px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><div data-testid="nav-search" class="css-lcm9hh"><style data-emotion-css="1mo6uhh">.css-1mo6uhh{color:var(--theme-ui-colors-border,#CED4DE);margin-right:8px;}</style><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="css-1mo6uhh"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><style data-emotion-css="1bbueiu">.css-1bbueiu{outline:none;background:none;border:none;color:var(--theme-ui-colors-text,#2D3747);font-size:14px;}</style><input placeholder="Type to search..." value="" class="css-1bbueiu"/></div><style data-emotion-css="1ebprri">.css-1ebprri{margin-top:16px;margin-bottom:16px;}</style><div data-testid="nav-group" class="css-1ebprri"><style data-emotion-css="1c8kbwa">.css-1c8kbwa{margin-bottom:4px;font-size:16px;font-weight:500;color:var(--theme-ui-colors-sidebar-navGroup,#2D3747);cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><div class="css-1c8kbwa">Components<style data-emotion-css="1scp5x8">.css-1scp5x8{margin-left:4px;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-align-self:baseline;-ms-flex-item-align:baseline;align-self:baseline;-webkit-transform:rotateX(180deg);-ms-transform:rotateX(180deg);transform:rotateX(180deg);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .3s ease-in-out;-webkit-transition:transform .3s ease-in-out;transition:transform .3s ease-in-out;}</style><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="css-1scp5x8"><polyline points="6 9 12 15 18 9"></polyline></svg></div><style data-emotion-css="1isemmb">.css-1isemmb{margin-left:8px;}</style><div data-testid="nav-group-links" class="css-1isemmb"><style data-emotion-css="1rqvyud">.css-1rqvyud{margin-top:8px;margin-bottom:8px;display:block;color:var(--theme-ui-colors-sidebar-navGroup,#2D3747);-webkit-text-decoration:none;text-decoration:none;font-size:16px;}.css-1rqvyud.active{color:var(--theme-ui-colors-sidebar-navLinkActive,#0B5FFF);}</style><a class="css-1rqvyud" href="/mml-react/components/add-to-calendar">Add to calendar</a><a class="css-1rqvyud" href="/mml-react/components/button">Button</a><a aria-current="page" class="css-1rqvyud active" href="/mml-react/components/button-list">Button list</a><style data-emotion-css="1ooej63">.css-1ooej63{margin-top:8px;margin-bottom:8px;display:block;color:var(--theme-ui-colors-sidebar-tocLink,#67788a);-webkit-text-decoration:none;text-decoration:none;font-size:14px;margin-left:16px;position:relative;}.css-1ooej63.active{color:var(--theme-ui-colors-sidebar-tocLinkActive,#1D2330);}.css-1ooej63.active::before{content:"";position:absolute;display:block;top:2px;left:-8px;height:1rem;background-color:var(--theme-ui-colors-primary,#0B5FFF);-webkit-transition:width 200ms ease 0s;transition:width 200ms ease 0s;width:2px;border-radius:1px;}</style><a class=" css-1ooej63" href="/mml-react/components/button-list#properties">Properties</a><a class=" css-1ooej63" href="/mml-react/components/button-list#mml-string">MML string</a><a class=" css-1ooej63" href="/mml-react/components/button-list#basic-usage">Basic usage</a><a class=" css-1ooej63" href="/mml-react/components/button-list#with-floating-variant">With  floating  variant</a><a class=" css-1ooej63" href="/mml-react/components/button-list#with-icon-only-buttons">With icon only buttons</a><a class="css-1rqvyud" href="/mml-react/components/carousel">Carousel</a><a class="css-1rqvyud" href="/mml-react/components/carousel-item">Carousel item</a><a class="css-1rqvyud" href="/mml-react/components/col">Col</a><a class="css-1rqvyud" href="/mml-react/components/icon">Icon</a><a class="css-1rqvyud" href="/mml-react/components/image">Image</a><a class="css-1rqvyud" href="/mml-react/components/input">Input</a><a class="css-1rqvyud" href="/mml-react/components/md">Md</a><a class="css-1rqvyud" href="/mml-react/components/number">Number</a><a class="css-1rqvyud" href="/mml-react/components/row">Row</a><a class="css-1rqvyud" href="/mml-react/components/scheduler">Scheduler</a><a class="css-1rqvyud" href="/mml-react/components/text">Text</a></div></div><a class="css-1rqvyud" href="/mml-react/mml">MML</a><a class="css-1rqvyud" href="/mml-react/readme">Readme</a><div data-testid="nav-group" class="css-1ebprri"><div class="css-1c8kbwa">Utility Components<style data-emotion-css="cu2sly">.css-cu2sly{margin-left:4px;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-align-self:baseline;-ms-flex-item-align:baseline;align-self:baseline;-webkit-transform:rotateX(0deg);-ms-transform:rotateX(0deg);transform:rotateX(0deg);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .3s ease-in-out;-webkit-transition:transform .3s ease-in-out;transition:transform .3s ease-in-out;}</style><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="css-cu2sly"><polyline points="6 9 12 15 18 9"></polyline></svg></div><div data-testid="nav-group-links" class="css-1isemmb"></div></div></div><style data-emotion-css="1w3d2mg">.css-1w3d2mg{background-color:var(--theme-ui-colors-background,#FFFFFF);position:relative;max-width:1280px;padding-top:48px;padding-bottom:48px;padding-left:32px;padding-right:32px;padding:32px;}@media screen and (max-width:57.5em){.css-1w3d2mg{padding-top:48px;padding-bottom:32px;padding-left:32px;padding-right:32px;}}</style><style data-emotion-css="kjtkh5">.css-kjtkh5{width:100%;min-width:0;max-width:1280px;margin-left:auto;margin-right:auto;padding:32px;background-color:var(--theme-ui-colors-background,#FFFFFF);position:relative;max-width:1280px;padding-top:48px;padding-bottom:48px;padding-left:32px;padding-right:32px;padding:32px;}@media screen and (max-width:57.5em){.css-kjtkh5{padding-top:48px;padding-bottom:32px;padding-left:32px;padding-right:32px;}}</style><style data-emotion-css="1307vk3">.css-1307vk3{box-sizing:border-box;min-width:0;width:100%;min-width:0;max-width:1280px;margin-left:auto;margin-right:auto;padding:32px;background-color:var(--theme-ui-colors-background,#FFFFFF);position:relative;max-width:1280px;padding-top:48px;padding-bottom:48px;padding-left:32px;padding-right:32px;padding:32px;}@media screen and (max-width:57.5em){.css-1307vk3{padding-top:48px;padding-bottom:32px;padding-left:32px;padding-right:32px;}}</style><div data-testid="main-container" class="css-1307vk3"><style data-emotion-css="1vci3bl">.css-1vci3bl{padding:0;margin:0;margin-bottom:16px;font-size:48px;font-family:'Source Sans Pro',sans-serif;line-height:1.125;font-weight:700;}</style><h1 id="buttonlist" class="css-1vci3bl">ButtonList</h1><style data-emotion-css="1ftn47p">.css-1ftn47p{padding:0;margin:0;margin-bottom:16px;}</style><p class="css-1ftn47p">Display a list of buttons, a tyical usecase is allowing the user to select an option among a list. It is usually used in pair with some <style data-emotion-css="1iv9jyz">.css-1iv9jyz{color:var(--theme-ui-colors-primary,#0B5FFF);-webkit-text-decoration:none;text-decoration:none;}.css-1iv9jyz:hover{color:secondary;-webkit-text-decoration:underline;text-decoration:underline;}</style><a href="/mml-react/components/button" class="css-1iv9jyz"><style data-emotion-css="ueqitl">.css-ueqitl{font-family:Inconsolata;}</style><code class="css-ueqitl">Button</code></a></p><h2 id="properties"><style data-emotion-css="1r0pe6c">.css-1r0pe6c{color:inherit;-webkit-text-decoration:none;text-decoration:none;}.css-1r0pe6c:hover{-webkit-text-decoration:underline;text-decoration:underline;}</style><a href="#properties" class="css-1r0pe6c">Properties</a></h2><style data-emotion-css="1sgzo20">.css-1sgzo20{margin-top:16px;margin-bottom:32px;border:1px solid var(--theme-ui-colors-border,#CED4DE);border-radius:4px;overflow:hidden;background-color:var(--theme-ui-colors-props-bg,#FCFBFA);color:var(--theme-ui-colors-props-text,#2D3747);font-size:20px;}</style><div data-testid="props" class="css-1sgzo20"><style data-emotion-css="1r75nr">.css-1r75nr{padding-top:8px;}.css-1r75nr + .css-1r75nr{border-top:1px solid var(--theme-ui-colors-border,#CED4DE);}</style><div data-testid="prop" class="css-1r75nr"><style data-emotion-css="4fkzcu">.css-4fkzcu{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (min-width:920px){.css-4fkzcu{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}</style><div class="css-4fkzcu"><style data-emotion-css="1ftd3os">.css-1ftd3os{min-width:0;padding-bottom:8px;padding-left:16px;padding-right:16px;color:var(--theme-ui-colors-props-highlight,#0B5FFF);}.css-1ftd3os ~ .css-1ftd3os{background-color:red;}</style><div data-testid="prop-name" class="css-1ftd3os">children</div><style data-emotion-css="yo2zo6">.css-yo2zo6{min-width:0;padding-bottom:8px;padding-left:16px;padding-right:16px;color:var(--theme-ui-colors-props-text,#2D3747);}.css-yo2zo6 ~ .css-yo2zo6{background-color:red;}</style><div data-testid="prop-type" class="css-yo2zo6">ReactElement&lt;ButtonProps, string | ((props: any) =&gt; ReactElement&lt;any, string | ... | (new (props: any) =&gt; Component&lt;any, any, any&gt;)&gt; | null) | (new (props: any) =&gt; Component&lt;any, any, any&gt;)&gt; | ... 15 more ... | undefined</div><style data-emotion-css="1774bts">.css-1774bts{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding-left:16px;padding-right:16px;-webkit-flex:1;-ms-flex:1;flex:1;}@media (max-width:920px){.css-1774bts{position:absolute;top:0;right:0;}}</style><div class="css-1774bts"><style data-emotion-css="fd04g0">.css-fd04g0{padding:0;outline:none;background:transparent;border:none;margin-top:0;margin-left:16px;color:var(--theme-ui-colors-props-defaultValue,#67788a);}.css-fd04g0:hover{cursor:pointer;}</style><button data-testid="prop-toggle-description" class="css-fd04g0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></div></div></div><div data-testid="prop" class="css-1r75nr"><div class="css-4fkzcu"><div data-testid="prop-name" class="css-1ftd3os">variant</div><div data-testid="prop-type" class="css-yo2zo6">&quot;floating&quot; | undefined</div><style data-emotion-css="lwh5ha">.css-lwh5ha{min-width:0;padding-bottom:8px;padding-left:16px;padding-right:16px;color:var(--theme-ui-colors-props-defaultValue,#67788a);}.css-lwh5ha ~ .css-lwh5ha{background-color:red;}</style><div data-testid="prop-default-value" class="css-lwh5ha"><em></em></div><div class="css-1774bts"><button data-testid="prop-toggle-description" class="css-fd04g0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></div></div></div></div><h2 id="mml-string"><a href="#mml-string" class="css-1r0pe6c">MML string</a></h2><div><style data-emotion-css="1h0sj8d">.css-1h0sj8d{padding:16px;margin:0;margin-bottom:32px;font-size:85%;margin-top:32px;text-align:left;font-family:Inconsolata;border-radius:4px;}.css-1h0sj8d dark{[object Object];}.css-1h0sj8d light{[object Object];}</style><pre class="language-xml prism-code language-xml css-1h0sj8d" style="font-family:Inconsolata;color:#393A34;background-color:#f6f8fa;overflow-x:auto" data-testid="code"><div class="token-line" style="font-family:Inconsolata;color:#393A34"><style data-emotion-css="1baulvz">.css-1baulvz{display:inline-block;}</style><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;</span><span class="token tag css-1baulvz" style="color:#00009f">mml</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span><span class="token plain css-1baulvz"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">  </span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;</span><span class="token tag css-1baulvz" style="color:#00009f">button_list</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span><span class="token plain css-1baulvz"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">    </span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;</span><span class="token tag css-1baulvz" style="color:#00009f">button</span><span class="token tag css-1baulvz" style="color:#00009f"> </span><span class="token tag attr-name css-1baulvz" style="color:#00a4db">name</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">=</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag attr-value css-1baulvz" style="color:#e3116c">side</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag css-1baulvz" style="color:#00009f"> </span><span class="token tag attr-name css-1baulvz" style="color:#00a4db">value</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">=</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag attr-value css-1baulvz" style="color:#e3116c">yes</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span><span class="token plain css-1baulvz"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">      Yes!</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">    </span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;/</span><span class="token tag css-1baulvz" style="color:#00009f">button</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span><span class="token plain css-1baulvz"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">    </span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;</span><span class="token tag css-1baulvz" style="color:#00009f">button</span><span class="token tag css-1baulvz" style="color:#00009f"> </span><span class="token tag attr-name css-1baulvz" style="color:#00a4db">name</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">=</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag attr-value css-1baulvz" style="color:#e3116c">side</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag css-1baulvz" style="color:#00009f"> </span><span class="token tag attr-name css-1baulvz" style="color:#00a4db">value</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">=</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag attr-value css-1baulvz" style="color:#e3116c">no</span><span class="token tag attr-value punctuation css-1baulvz" style="color:#393A34">&quot;</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span><span class="token plain css-1baulvz"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">      No, thanks</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">    </span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;/</span><span class="token tag css-1baulvz" style="color:#00009f">button</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span><span class="token plain css-1baulvz"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz">  </span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;/</span><span class="token tag css-1baulvz" style="color:#00009f">button_list</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span><span class="token plain css-1baulvz"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token plain css-1baulvz"></span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&lt;/</span><span class="token tag css-1baulvz" style="color:#00009f">mml</span><span class="token tag punctuation css-1baulvz" style="color:#393A34">&gt;</span></div></pre></div><h2 id="basic-usage"><a href="#basic-usage" class="css-1r0pe6c">Basic usage</a></h2><div style="position:relative;user-select:auto;margin:0;margin-right:auto;width:100%;height:auto;max-width:100%;min-width:260px;box-sizing:border-box;flex-shrink:0" data-testid="playground"><style data-emotion-css="79elbk">.css-79elbk{position:relative;}</style><div class="css-79elbk"><style data-emotion-css="nxr1xe">.css-nxr1xe{height:auto;display:block;min-height:100%;width:calc(100% - 2px);background-color:var(--theme-ui-colors-playground-bg,#FFFFFF);border:1px solid var(--theme-ui-colors-playground-border,#CED4DE);border-radius:4px 4px 0 0;}</style><div class="css-nxr1xe"><div class="sc-7qmifc-2 laAbke"><div class="sc-7qmifc-3 hhwHfd"><div class="sc-7qmifc-0 bqkDCu mml-container other"><div class="sc-7qmifc-4 guSGAF">MrLahey | Service</div><div class="sc-7qmifc-5 jFVQEz mml-wrap"><div class="sc-7qmifc-6 dmcQix">Hi Ricky. I am Mr. Lahey’s messaging assistant</div><div class="sc-7qmifc-6 dmcQix">So, what can I help you with?</div></div><div class="sc-7qmifc-7 klWCgS">18:19 pm</div><div class="sc-7qmifc-8 hTebDO">ML</div></div><div class="sc-7qmifc-9 bSgCqD me"><div data-testid="live-preview"><div class="mml-container "><form class="mml-wrap"><div class="mml-btnlist mml-btnlist--grounded"><button class="mml-btn  mml-btn--text mml-btn--grounded" type="submit" name="side" value="yes">
+      Yes!
+    </button><button class="mml-btn  mml-btn--text mml-btn--grounded" type="submit" name="side" value="no">
+      No, thanks
+    </button></div></form></div></div></div></div><form class="sc-7qmifc-1 FRXdO"><input class="sc-7qmifc-10 hAlNVj mml-input" placeholder="Say something" disabled=""/><div class="sc-7qmifc-11 kWRTvq"><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">attach_file</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">today</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">place</i></button><button class="sc-7qmifc-13 fKjCfI mml-btn" disabled="" type="submit">Send</button></div></form></div></div><style data-emotion-css="4qwwu">.css-4qwwu{z-index:9;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;bottom:-20px;right:32px;}</style><div class="css-4qwwu"><style data-emotion-css="1ounbqd">.css-1ounbqd{padding:8px;outline:none;background:transparent;border:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:4px;padding-bottom:4px;background-color:var(--theme-ui-colors-border,#CED4DE);color:var(--theme-ui-colors-muted,#67788a);border-radius:0 0 3px 3px;}.css-1ounbqd:hover{cursor:pointer;}.css-1ounbqd ~ .css-1ounbqd{margin-left:4px;}</style><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></button><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></button></div></div><style data-emotion-css="ycvwe1">.css-ycvwe1{height:auto;display:block;min-height:100%;width:calc(100% - 2px);background-color:var(--theme-ui-colors-playground-bg,#FFFFFF);border:1px solid var(--theme-ui-colors-playground-border,#CED4DE);border-top:0;border-radius:0 0 4px 4px;}</style><div class="css-ycvwe1"><style data-emotion-css="d45ar4">.css-d45ar4{padding:8px;background:#f6f8fa;border-top:0;font-family:Inconsolata;font-size:18px;}.css-d45ar4 * > textarea:focus{outline:none;}</style><div class="css-d45ar4"><div data-testid="live-editor" style="position:relative;text-align:left;box-sizing:border-box;padding:0;overflow:hidden;white-space:pre;font-family:Inconsolata;color:#393A34;background-color:#f6f8fa"><textarea style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:absolute;top:0;left:0;height:100%;width:100%;resize:none;color:inherit;overflow:hidden;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-fill-color:transparent;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px" class="npm__react-simple-code-editor__textarea" autoCapitalize="off" autoComplete="off" autoCorrect="off" spellcheck="false" data-gramm="false">&lt;MML
+  source={`
+  &lt;button_list&gt;
+    &lt;button name=&quot;side&quot; value=&quot;yes&quot;&gt;
+      Yes!
+    &lt;/button&gt;
+    &lt;button name=&quot;side&quot; value=&quot;no&quot;&gt;
+      No, thanks
+    &lt;/button&gt;
+  &lt;/button_list&gt;
+`}
+/&gt;</textarea><pre aria-hidden="true" style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:relative;pointer-events:none;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">MML</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f">  </span><span class="token tag attr-name" style="color:#00a4db">source</span><span class="token tag script language-javascript script-punctuation punctuation" style="color:#393A34">=</span><span class="token tag script language-javascript punctuation" style="color:#393A34">{</span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;button_list&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;button name=&quot;side&quot; value=&quot;yes&quot;&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      Yes!</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;button name=&quot;side&quot; value=&quot;no&quot;&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      No, thanks</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;/button_list&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript punctuation" style="color:#393A34">}</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f"></span><span class="token tag punctuation" style="color:#393A34">/&gt;</span></div></pre><style type="text/css">
+/**
+ * Reset the text fill color so that placeholder is visible
+ */
+.npm__react-simple-code-editor__textarea:empty {
+  -webkit-text-fill-color: inherit !important;
+}
+
+/**
+ * Hack to apply on some CSS on IE10 and IE11
+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /**
+    * IE doesn't support '-webkit-text-fill-color'
+    * So we use 'color: transparent' to make the text transparent on IE
+    * Unlike other browsers, it doesn't affect caret color in IE
+    */
+  .npm__react-simple-code-editor__textarea {
+    color: transparent !important;
+  }
+
+  .npm__react-simple-code-editor__textarea::selection {
+    background-color: #accef7 !important;
+    color: transparent !important;
+  }
+}
+</style></div></div></div><style data-emotion-css="hkbkh9">.css-hkbkh9{margin:0;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;background-color:#FF4757;font-size:14px;color:var(--theme-ui-colors-white,#FFFFFF);white-space:pre-wrap;}</style><div><div class="" style="position:absolute;user-select:none;width:10px;height:100%;top:0px;right:-5px;cursor:col-resize"></div></div></div><h2 id="with-floating-variant"><a href="#with-floating-variant" class="css-1r0pe6c">With <code class="css-ueqitl">floating</code> variant</a></h2><div style="position:relative;user-select:auto;margin:0;margin-right:auto;width:100%;height:auto;max-width:100%;min-width:260px;box-sizing:border-box;flex-shrink:0" data-testid="playground"><div class="css-79elbk"><div class="css-nxr1xe"><div class="sc-7qmifc-2 laAbke"><div class="sc-7qmifc-3 hhwHfd"><div class="sc-7qmifc-0 bqkDCu mml-container other"><div class="sc-7qmifc-4 guSGAF">MrLahey | Service</div><div class="sc-7qmifc-5 jFVQEz mml-wrap"><div class="sc-7qmifc-6 dmcQix">Hi Ricky. I am Mr. Lahey’s messaging assistant</div><div class="sc-7qmifc-6 dmcQix">So, what can I help you with?</div></div><div class="sc-7qmifc-7 klWCgS">18:19 pm</div><div class="sc-7qmifc-8 hTebDO">ML</div></div><div class="sc-7qmifc-9 bSgCqD me"><div data-testid="live-preview"><div class="mml-container "><form class="mml-wrap"><div class="mml-btnlist  mml-btnlist--floating"><button class="mml-btn  mml-btn--text mml-btn--floating" type="submit" name="side" value="yes">
+        Yes!
+      </button><button class="mml-btn  mml-btn--text mml-btn--floating" type="submit" name="side" value="no">
+        No, thanks
+      </button></div></form></div></div></div></div><form class="sc-7qmifc-1 FRXdO"><input class="sc-7qmifc-10 hAlNVj mml-input" placeholder="Say something" disabled=""/><div class="sc-7qmifc-11 kWRTvq"><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">attach_file</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">today</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">place</i></button><button class="sc-7qmifc-13 fKjCfI mml-btn" disabled="" type="submit">Send</button></div></form></div></div><div class="css-4qwwu"><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></button><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></button></div></div><div class="css-ycvwe1"><div class="css-d45ar4"><div data-testid="live-editor" style="position:relative;text-align:left;box-sizing:border-box;padding:0;overflow:hidden;white-space:pre;font-family:Inconsolata;color:#393A34;background-color:#f6f8fa"><textarea style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:absolute;top:0;left:0;height:100%;width:100%;resize:none;color:inherit;overflow:hidden;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-fill-color:transparent;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px" class="npm__react-simple-code-editor__textarea" autoCapitalize="off" autoComplete="off" autoCorrect="off" spellcheck="false" data-gramm="false">&lt;MML
+  source={`
+  &lt;mml&gt;
+    &lt;button_list variant=&quot;floating&quot;&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;yes&quot;&gt;
+        Yes!
+      &lt;/button&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;no&quot;&gt;
+        No, thanks
+      &lt;/button&gt;
+    &lt;/button_list&gt;
+  &lt;/mml&gt;
+`}
+/&gt;</textarea><pre aria-hidden="true" style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:relative;pointer-events:none;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">MML</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f">  </span><span class="token tag attr-name" style="color:#00a4db">source</span><span class="token tag script language-javascript script-punctuation punctuation" style="color:#393A34">=</span><span class="token tag script language-javascript punctuation" style="color:#393A34">{</span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;mml&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;button_list variant=&quot;floating&quot;&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;yes&quot;&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">        Yes!</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;no&quot;&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">        No, thanks</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;/button_list&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;/mml&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript punctuation" style="color:#393A34">}</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f"></span><span class="token tag punctuation" style="color:#393A34">/&gt;</span></div></pre><style type="text/css">
+/**
+ * Reset the text fill color so that placeholder is visible
+ */
+.npm__react-simple-code-editor__textarea:empty {
+  -webkit-text-fill-color: inherit !important;
+}
+
+/**
+ * Hack to apply on some CSS on IE10 and IE11
+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /**
+    * IE doesn't support '-webkit-text-fill-color'
+    * So we use 'color: transparent' to make the text transparent on IE
+    * Unlike other browsers, it doesn't affect caret color in IE
+    */
+  .npm__react-simple-code-editor__textarea {
+    color: transparent !important;
+  }
+
+  .npm__react-simple-code-editor__textarea::selection {
+    background-color: #accef7 !important;
+    color: transparent !important;
+  }
+}
+</style></div></div></div><div><div class="" style="position:absolute;user-select:none;width:10px;height:100%;top:0px;right:-5px;cursor:col-resize"></div></div></div><div style="position:relative;user-select:auto;margin:0;margin-right:auto;width:100%;height:auto;max-width:100%;min-width:260px;box-sizing:border-box;flex-shrink:0" data-testid="playground"><div class="css-79elbk"><div class="css-nxr1xe"><div class="sc-7qmifc-2 laAbke"><div class="sc-7qmifc-3 hhwHfd"><div class="sc-7qmifc-0 bqkDCu mml-container other"><div class="sc-7qmifc-4 guSGAF">MrLahey | Service</div><div class="sc-7qmifc-5 jFVQEz mml-wrap"><div class="sc-7qmifc-6 dmcQix">Hi Ricky. I am Mr. Lahey’s messaging assistant</div><div class="sc-7qmifc-6 dmcQix">So, what can I help you with?</div></div><div class="sc-7qmifc-7 klWCgS">18:19 pm</div><div class="sc-7qmifc-8 hTebDO">ML</div></div><div class="sc-7qmifc-9 bSgCqD me"><div data-testid="live-preview"><div class="mml-container "><form class="mml-wrap"><div class="mml-text">How many days do you need?</div><div class="mml-btnlist  mml-btnlist--floating"><button class="mml-btn  mml-btn--text mml-btn--floating" type="submit" name="side" value="1">1</button><button class="mml-btn  mml-btn--text mml-btn--floating" type="submit" name="side" value="2">2</button><button class="mml-btn  mml-btn--text mml-btn--floating" type="submit" name="side" value="3">3</button><button class="mml-btn  mml-btn--text mml-btn--floating" type="submit" name="side" value="4">4</button><button class="mml-btn  mml-btn--text mml-btn--floating" type="submit" name="side" value="5+">5+</button></div></form></div></div></div></div><form class="sc-7qmifc-1 FRXdO"><input class="sc-7qmifc-10 hAlNVj mml-input" placeholder="Say something" disabled=""/><div class="sc-7qmifc-11 kWRTvq"><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">attach_file</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">today</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">place</i></button><button class="sc-7qmifc-13 fKjCfI mml-btn" disabled="" type="submit">Send</button></div></form></div></div><div class="css-4qwwu"><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></button><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></button></div></div><div class="css-ycvwe1"><div class="css-d45ar4"><div data-testid="live-editor" style="position:relative;text-align:left;box-sizing:border-box;padding:0;overflow:hidden;white-space:pre;font-family:Inconsolata;color:#393A34;background-color:#f6f8fa"><textarea style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:absolute;top:0;left:0;height:100%;width:100%;resize:none;color:inherit;overflow:hidden;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-fill-color:transparent;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px" class="npm__react-simple-code-editor__textarea" autoCapitalize="off" autoComplete="off" autoCorrect="off" spellcheck="false" data-gramm="false">&lt;MML
+  source={`
+  &lt;mml&gt;
+    &lt;text&gt;How many days do you need?&lt;/text&gt;
+    &lt;button_list variant=&quot;floating&quot;&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;1&quot;&gt;1&lt;/button&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;2&quot;&gt;2&lt;/button&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;3&quot;&gt;3&lt;/button&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;4&quot;&gt;4&lt;/button&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;5+&quot;&gt;5+&lt;/button&gt;
+    &lt;/button_list&gt;
+  &lt;/mml&gt;
+`}
+/&gt;</textarea><pre aria-hidden="true" style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:relative;pointer-events:none;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">MML</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f">  </span><span class="token tag attr-name" style="color:#00a4db">source</span><span class="token tag script language-javascript script-punctuation punctuation" style="color:#393A34">=</span><span class="token tag script language-javascript punctuation" style="color:#393A34">{</span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;mml&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;text&gt;How many days do you need?&lt;/text&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;button_list variant=&quot;floating&quot;&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;1&quot;&gt;1&lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;2&quot;&gt;2&lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;3&quot;&gt;3&lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;4&quot;&gt;4&lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;side&quot; value=&quot;5+&quot;&gt;5+&lt;/button&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;/button_list&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;/mml&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript punctuation" style="color:#393A34">}</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f"></span><span class="token tag punctuation" style="color:#393A34">/&gt;</span></div></pre><style type="text/css">
+/**
+ * Reset the text fill color so that placeholder is visible
+ */
+.npm__react-simple-code-editor__textarea:empty {
+  -webkit-text-fill-color: inherit !important;
+}
+
+/**
+ * Hack to apply on some CSS on IE10 and IE11
+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /**
+    * IE doesn't support '-webkit-text-fill-color'
+    * So we use 'color: transparent' to make the text transparent on IE
+    * Unlike other browsers, it doesn't affect caret color in IE
+    */
+  .npm__react-simple-code-editor__textarea {
+    color: transparent !important;
+  }
+
+  .npm__react-simple-code-editor__textarea::selection {
+    background-color: #accef7 !important;
+    color: transparent !important;
+  }
+}
+</style></div></div></div><div><div class="" style="position:absolute;user-select:none;width:10px;height:100%;top:0px;right:-5px;cursor:col-resize"></div></div></div><h2 id="with-icon-only-buttons"><a href="#with-icon-only-buttons" class="css-1r0pe6c">With icon only buttons</a></h2><div style="position:relative;user-select:auto;margin:0;margin-right:auto;width:100%;height:auto;max-width:100%;min-width:260px;box-sizing:border-box;flex-shrink:0" data-testid="playground"><div class="css-79elbk"><div class="css-nxr1xe"><div class="sc-7qmifc-2 laAbke"><div class="sc-7qmifc-3 hhwHfd"><div class="sc-7qmifc-0 bqkDCu mml-container other"><div class="sc-7qmifc-4 guSGAF">MrLahey | Service</div><div class="sc-7qmifc-5 jFVQEz mml-wrap"><div class="sc-7qmifc-6 dmcQix">Hi Ricky. I am Mr. Lahey’s messaging assistant</div><div class="sc-7qmifc-6 dmcQix">So, what can I help you with?</div></div><div class="sc-7qmifc-7 klWCgS">18:19 pm</div><div class="sc-7qmifc-8 hTebDO">ML</div></div><div class="sc-7qmifc-9 bSgCqD me"><div data-testid="live-preview"><div class="mml-container "><form class="mml-wrap"><div class="mml-text">How do you feel about it?</div><div class="mml-btnlist  mml-btnlist--floating"><button class="mml-btn  mml-btn--icon mml-btn--floating" type="submit" name="feeling" value="1"><i class="mml-icon material-icons">sentiment_dissatisfied</i></button><button class="mml-btn  mml-btn--icon mml-btn--floating" type="submit" name="feeling" value="2"><i class="mml-icon material-icons">sentiment_satisfied</i></button><button class="mml-btn  mml-btn--icon mml-btn--floating" type="submit" name="feeling" value="3"><i class="mml-icon material-icons">sentiment_very_dissatisfied</i></button><button class="mml-btn  mml-btn--icon mml-btn--floating" type="submit" name="feeling" value="4"><i class="mml-icon material-icons">sentiment_very_satisfied</i></button></div></form></div></div></div></div><form class="sc-7qmifc-1 FRXdO"><input class="sc-7qmifc-10 hAlNVj mml-input" placeholder="Say something" disabled=""/><div class="sc-7qmifc-11 kWRTvq"><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">attach_file</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">today</i></button><button class="sc-7qmifc-12 cnDwFB mml-btn" disabled=""><i class="mml-icon material-icons">place</i></button><button class="sc-7qmifc-13 fKjCfI mml-btn" disabled="" type="submit">Send</button></div></form></div></div><div class="css-4qwwu"><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></button><button class="css-1ounbqd"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></button></div></div><div class="css-ycvwe1"><div class="css-d45ar4"><div data-testid="live-editor" style="position:relative;text-align:left;box-sizing:border-box;padding:0;overflow:hidden;white-space:pre;font-family:Inconsolata;color:#393A34;background-color:#f6f8fa"><textarea style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:absolute;top:0;left:0;height:100%;width:100%;resize:none;color:inherit;overflow:hidden;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-fill-color:transparent;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px" class="npm__react-simple-code-editor__textarea" autoCapitalize="off" autoComplete="off" autoCorrect="off" spellcheck="false" data-gramm="false">&lt;MML
+  source={`
+  &lt;mml&gt;
+    &lt;text&gt;How do you feel about it?&lt;/text&gt;
+    &lt;button_list variant=&quot;floating&quot;&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;1&quot; icon=&quot;sentiment_dissatisfied&quot; /&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;2&quot; icon=&quot;sentiment_satisfied&quot; /&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;3&quot; icon=&quot;sentiment_very_dissatisfied&quot; /&gt;
+      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;4&quot; icon=&quot;sentiment_very_satisfied&quot; /&gt;
+    &lt;/button_list&gt;
+  &lt;/mml&gt;
+`}
+/&gt;</textarea><pre aria-hidden="true" style="margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-break:keep-all;overflow-wrap:break-word;position:relative;pointer-events:none;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">MML</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f">  </span><span class="token tag attr-name" style="color:#00a4db">source</span><span class="token tag script language-javascript script-punctuation punctuation" style="color:#393A34">=</span><span class="token tag script language-javascript punctuation" style="color:#393A34">{</span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;mml&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;text&gt;How do you feel about it?&lt;/text&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;button_list variant=&quot;floating&quot;&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;1&quot; icon=&quot;sentiment_dissatisfied&quot; /&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;2&quot; icon=&quot;sentiment_satisfied&quot; /&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;3&quot; icon=&quot;sentiment_very_dissatisfied&quot; /&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">      &lt;button variant=&quot;floating&quot; name=&quot;feeling&quot; value=&quot;4&quot; icon=&quot;sentiment_very_satisfied&quot; /&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">    &lt;/button_list&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c">  &lt;/mml&gt;</span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag script language-javascript template-string string" style="color:#e3116c"></span><span class="token tag script language-javascript template-string template-punctuation string" style="color:#e3116c">`</span><span class="token tag script language-javascript punctuation" style="color:#393A34">}</span><span class="token tag" style="color:#00009f"></span></div><div class="token-line" style="font-family:Inconsolata;color:#393A34"><span class="token tag" style="color:#00009f"></span><span class="token tag punctuation" style="color:#393A34">/&gt;</span></div></pre><style type="text/css">
+/**
+ * Reset the text fill color so that placeholder is visible
+ */
+.npm__react-simple-code-editor__textarea:empty {
+  -webkit-text-fill-color: inherit !important;
+}
+
+/**
+ * Hack to apply on some CSS on IE10 and IE11
+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /**
+    * IE doesn't support '-webkit-text-fill-color'
+    * So we use 'color: transparent' to make the text transparent on IE
+    * Unlike other browsers, it doesn't affect caret color in IE
+    */
+  .npm__react-simple-code-editor__textarea {
+    color: transparent !important;
+  }
+
+  .npm__react-simple-code-editor__textarea::selection {
+    background-color: #accef7 !important;
+    color: transparent !important;
+  }
+}
+</style></div></div></div><div><div class="" style="position:absolute;user-select:none;width:10px;height:100%;top:0px;right:-5px;cursor:col-resize"></div></div></div></div></div></main></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/components/button-list";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-59aa75b0bc994c77c9d2.js"],"app":["/app-0c20c1705c6b44f75c7f.js"],"component---readme-md":["/component---readme-md-dc0797f83538f39f52c6.js"],"component---src-components-add-to-calendar-mdx":["/component---src-components-add-to-calendar-mdx-89773e37b3346a1cd99f.js"],"component---src-components-button-list-mdx":["/component---src-components-button-list-mdx-e8814e9de48cf571dade.js"],"component---src-components-button-mdx":["/component---src-components-button-mdx-6c7f82fbe18bc6ab3d18.js"],"component---src-components-card-body-mdx":["/component---src-components-card-body-mdx-8cb1ec19c6feaaa7e47a.js"],"component---src-components-card-header-mdx":["/component---src-components-card-header-mdx-3d58dd63d4adb5fc129c.js"],"component---src-components-card-mdx":["/component---src-components-card-mdx-466d204c64019dfaeb2d.js"],"component---src-components-carousel-item-mdx":["/component---src-components-carousel-item-mdx-bdf45f4dc28b5d3b6ece.js"],"component---src-components-carousel-mdx":["/component---src-components-carousel-mdx-5f33fce38294a0352627.js"],"component---src-components-col-mdx":["/component---src-components-col-mdx-3376256d38772defb4dd.js"],"component---src-components-error-mdx":["/component---src-components-error-mdx-e8ccdda4898d9b583b02.js"],"component---src-components-icon-mdx":["/component---src-components-icon-mdx-04cfc85af6618295184f.js"],"component---src-components-image-mdx":["/component---src-components-image-mdx-0bf9fa173a07279ad696.js"],"component---src-components-input-mdx":["/component---src-components-input-mdx-15636db4f52309644592.js"],"component---src-components-loader-mdx":["/component---src-components-loader-mdx-dce4ac223c4e579f47ef.js"],"component---src-components-md-mdx":["/component---src-components-md-mdx-ca8fa03ba24cc64eda6a.js"],"component---src-components-number-mdx":["/component---src-components-number-mdx-c77dc0f302a3f0883a36.js"],"component---src-components-row-mdx":["/component---src-components-row-mdx-23b000b0b1e0142c8eca.js"],"component---src-components-scheduler-mdx":["/component---src-components-scheduler-mdx-9f4593c714a5fc242481.js"],"component---src-components-success-mdx":["/component---src-components-success-mdx-5009938d473ca875870b.js"],"component---src-components-text-mdx":["/component---src-components-text-mdx-73c13d04075762762c63.js"],"component---src-mml-mml-mdx":["/component---src-mml-mml-mdx-33641dc3ad4675079b22.js"],"component---src-pages-404-js":["/component---src-pages-404-js-21f02991803a4c3b7b63.js"]};/*]]>*/</script><script src="/mml-react/polyfill-59aa75b0bc994c77c9d2.js" nomodule=""></script><script src="/mml-react/component---src-components-button-list-mdx-e8814e9de48cf571dade.js" async=""></script><script src="/mml-react/9d3c51887320b6a39beaab4314f5fd8de5682180-85e5d2ffd9dd710c5887.js" async=""></script><script src="/mml-react/bac1b955-b711947e81fae9e9bc2c.js" async=""></script><script src="/mml-react/app-0c20c1705c6b44f75c7f.js" async=""></script><script src="/mml-react/19a7f4cc-95dd4d670fad4885ffcb.js" async=""></script><script src="/mml-react/framework-6fbd02491ac305dbd6c8.js" async=""></script><script src="/mml-react/styles-b50c3723c16fe64e1a35.js" async=""></script><script src="/mml-react/webpack-runtime-6073e22de6036da5c8da.js" async=""></script></body></html>
