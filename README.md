@@ -112,7 +112,7 @@ $mml-theme: (
 
 > If you are running `sass` within your project you might customize most aspects of mml styling other than the them through scss variables. Refer [to the source](https://github.com/GetStream/mml-react/blob/master/src/styles/common/_variables.scss) to see what is available.
 
-Each of these variables is also avaialable as CSS variable that you can tweak dynamically, prefixed with `--mml`:
+By setting `$mml-use-css-vars: true` you can make each of these variables available as CSS variable that you can tweak dynamically client side, they are all prefixed with `--mml`:
 
 ```css
 :root {
@@ -121,7 +121,7 @@ Each of these variables is also avaialable as CSS variable that you can tweak dy
 }
 ```
 
-This theme related data is also made avaiable to javascript through [`icss :export`](https://github.com/css-modules/icss#export) so that you can import them and reuse them to coherently style other parts of your chat outside of MML attachments (these are used in the MML docz app for instance).
+The theme related data is also made available to javascript through [`icss :export`](https://github.com/css-modules/icss#export) so that you can import them and reuse them to coherently style other parts of your chat outside of MML attachments (these are used in the MML docz app for instance).
 
 ```js
 import { locals as mmlTheme } from 'mml-react/dist/styles/index.css';

@@ -40,7 +40,7 @@
     user-select: none;
 
     &--selected {
-      color: $mml-datepicker__item-color-active;
+      @include mml-themed(color, $mml-datepicker__item-color-active);
       font-weight: bold;
     }
   }

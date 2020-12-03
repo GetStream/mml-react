@@ -4,8 +4,8 @@ const ignoreImport = require('rollup-plugin-ignore-import');
 const scss = require('rollup-plugin-scss');
 const sass = require('node-sass');
 const postcss = require('postcss');
-const postcssCustomProperties = require('postcss-custom-properties');
 const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 const compileScss = scss({
   /**
@@ -23,12 +23,19 @@ const compileScss = scss({
     Object.keys(styleNodes).forEach((filepath) => {
       const name = path.basename(filepath, '.scss');
       const source = styleNodes[filepath];
+      const destPath = `${dest}/${name}.css`;
       const compiled = sass.renderSync({
         data: source,
         includePaths: [path.join(__dirname, 'src/styles')],
       });
-      const result = postcss([postcssCustomProperties(), autoprefixer]).process(compiled.css).css;
-      fs.writeFileSync(`${dest}/${name}.css`, result);
+
+      postcss([autoprefixer])
+        .use(cssnano())
+        .process(compiled.css, { from: source, to: destPath })
+        .then((result) => {
+          fs.writeFileSync(destPath, result.css);
+          // we might write css maps here if we like with result.map
+        });
     });
   },
   failOnError: true,

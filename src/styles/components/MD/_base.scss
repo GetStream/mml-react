@@ -3,7 +3,7 @@
   // apply borders to text from  outside, for instance within a carousel-item
   // slide it looks good
   padding: ($mml-md-spacer-y / 2) 0;
-  color: $mml-md-color;
+  @include mml-themed(color, $mml-md-color);
   @if $mml-md-font-size != inherit {
     font-size: $mml-md-font-size;
   }
@@ -23,14 +23,16 @@
   blockquote {
     padding: 0 1em;
     margin: 1em 0;
-    border-left: $mml-md__blockquote-border-left;
+    border-style: solid;
+    border-width: $mml-md__blockquote-border-width;
+    @include mml-themed(border-color, $mml-md__blockquote-border-color);
   }
 
   pre {
     padding: $mml-md__code-padding;
     margin: 0 0 1em;
     white-space: normal;
-    background: $mml-md__code-bg;
+    @include mml-themed(background, $mml-md__code-bg);
   }
 
   code {
@@ -52,6 +54,6 @@
   }
 
   a {
-    color: $mml-md__link-color;
+    @include mml-themed(color, $mml-md__link-color);
   }
 }

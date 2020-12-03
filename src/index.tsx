@@ -1,3 +1,4 @@
+import './styles/bundle.scss';
 import './styles/index.scss';
 import './styles/index-dark.scss';
 import './styles/commerce.scss';

@@ -14,6 +14,7 @@ export type MMLProps = {
   onSubmit?: (data: Record<string, any>) => Promise<any> | any;
   /** Select a theme from built in available themes, it will be added as a className to the container(root) div */
   theme?:
+    | 'base-dark'
     | 'messaging-light'
     | 'messaging-dark'
     | 'team-light'
@@ -39,7 +40,7 @@ export const MML: FC<MMLProps> = ({
   source,
   onSubmit,
   converters,
-  theme = 'messaging-light',
+  theme = '',
   className = '',
   Loader = LoaderComponent,
   Error = ErrorComponent,

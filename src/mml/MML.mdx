@@ -47,8 +47,8 @@ If onSubmit callback return a promise, it will be awaited.
     onSubmit={(data) => console.info(data)}
     source={`
       <mml type="card">
-        <input name="answer" value="42" />
-        <button>Confirm</button>
+        <input name="answer" label="Enter your phone number" placeholder="e.g. 999-999-9999"></input>
+        <button name="action" value="submit">Submit</button>
       </mml>
     `}
   />
@@ -106,8 +106,8 @@ Shows the mml content inside a card like UI, see the [`Number` component usage](
   <MML
     source={`
       <mml type="card">
-        <input name="answer" value="42" />
-        <button>Confirm</button>
+        <input name="answer" label="Enter your phone number" placeholder="e.g. 999-999-9999"></input>
+        <button name="action" value="submit">Submit</button>
       </mml>
     `}
   />
