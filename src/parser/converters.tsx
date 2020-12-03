@@ -94,7 +94,6 @@ export const converters = {
         duration={parseInt(tag.attributes.duration, 10) || 30} // default to 30 minutes
         selected={tag.attributes.selected}
         fullDay={tag.attributes.fullDay === 'true'}
-        allowPast={tag.attributes.allowPast === 'true'}
         icalAvailability={tag.attributes.icalAvailability}
       />
     );

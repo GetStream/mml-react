@@ -40,11 +40,6 @@ export type SchedulerProps = {
    */
   timeFormat?: string;
   /**
-   * Start date to show in the list
-   * @default 3 days behind the given date
-   */
-  startDate?: Date;
-  /**
    * The duration of the event in minutes, used to check availability with ical
    * @default 30
    */
@@ -58,11 +53,6 @@ export type SchedulerProps = {
    * @default false
    */
   fullDay?: boolean;
-  /**
-   * Allows to select a date in the past
-   * @default false
-   */
-  allowPast?: boolean;
 };
 
 export type ICalFilter = (start?: Dayjs) => boolean;
@@ -90,9 +80,7 @@ export const Scheduler: FC<SchedulerProps> = ({
   timeInterval = 30,
   dateFormat = 'ddd MMM DD',
   timeFormat = 'hh:mm A',
-  allowPast = false,
   fullDay = false,
-  startDate,
 }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -125,9 +113,7 @@ export const Scheduler: FC<SchedulerProps> = ({
             timeInterval={timeInterval}
             dateFormat={dateFormat}
             timeFormat={timeFormat}
-            allowPast={allowPast}
             fullDay={fullDay}
-            startDate={startDate}
             icalFilter={icalFilter}
           />
         )}

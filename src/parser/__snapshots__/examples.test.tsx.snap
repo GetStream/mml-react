@@ -272,7 +272,6 @@ Tree {
       text="When would you like to schedule your massage?"
     />,
     <Scheduler
-      allowPast={false}
       dateInterval={1}
       duration={30}
       fullDay={false}
@@ -296,7 +295,6 @@ Array [
     text="When would you like to schedule your massage?"
   />,
   <Scheduler
-    allowPast={false}
     dateInterval={1}
     duration={30}
     fullDay={false}

@@ -5,7 +5,6 @@ import { DatePickerProps } from './DatePicker';
 import { DatePickerSelect, DatePickerSelectReadyProps, DatePickerSelectProps } from './DatePickerSelect';
 
 export type DatePickerDateProps = DatePickerSelectReadyProps & {
-  startDate: DatePickerProps['startDate'];
   format: NonNullable<DatePickerProps['dateFormat']>;
   interval: NonNullable<DatePickerProps['dateInterval']>;
 };

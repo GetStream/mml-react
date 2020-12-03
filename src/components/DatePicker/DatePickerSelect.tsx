@@ -11,7 +11,7 @@ export type DatePickerSelectProps = DatePickerSelectReadyProps & {
 /**
  * Basic shape of DatePickerSelect extended by wrapper components as DatePickerDate and DatePickerTime
  */
-export type DatePickerSelectReadyProps = Pick<DatePickerProps, 'icalFilter' | 'allowPast'> & {
+export type DatePickerSelectReadyProps = Pick<DatePickerProps, 'icalFilter'> & {
   format: string;
   interval: number;
   onChange: (value: Dayjs) => void;

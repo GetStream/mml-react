@@ -15,16 +15,12 @@ export type DatePickerProps = {
   timeInterval: number;
   /** Show only the date picker(without time picker) */
   fullDay: boolean;
-  /** Allows to select a date in the past */
-  allowPast: boolean;
   /** Date format, see [dayjs docs](https://day.js.org/docs/en/display/format) */
   dateFormat: string;
   /** Time format, see [dayjs docs](https://day.js.org/docs/en/display/format) */
   timeFormat: string;
   /** Filter dates, it should return a boolean */
   icalFilter: (date: Dayjs) => boolean;
-  /** Start date to show in the list */
-  startDate?: Date;
 };
 
 export const DatePicker: FC<DatePickerProps> = ({
@@ -34,9 +30,7 @@ export const DatePicker: FC<DatePickerProps> = ({
   timeInterval,
   dateFormat,
   timeFormat,
-  allowPast,
   fullDay,
-  startDate,
   icalFilter,
 }) => {
   const [date, setDate] = useState(selected);
@@ -64,8 +58,6 @@ export const DatePicker: FC<DatePickerProps> = ({
         value={date}
         onChange={handleChangeDate}
         interval={dateInterval}
-        allowPast={allowPast}
-        startDate={startDate}
       />
 
       {!fullDay && (
@@ -75,7 +67,6 @@ export const DatePicker: FC<DatePickerProps> = ({
           value={date}
           onChange={handleChangeTime}
           interval={timeInterval}
-          allowPast={allowPast}
         />
       )}
     </div>
