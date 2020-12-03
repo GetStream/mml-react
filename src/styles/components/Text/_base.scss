@@ -17,16 +17,4 @@
   + #{mml-component('image')} {
     margin-top: $mml-text-spacer-y;
   }
-
-  // Context: other message
-  // ---------------------------------------------------------------------------
-  // @include mml-other() {
-  //   text-align: left;
-  // }
-
-  // Context: me message
-  // ---------------------------------------------------------------------------
-  // @include mml-me() {
-  //   text-align: right;
-  // }
 }

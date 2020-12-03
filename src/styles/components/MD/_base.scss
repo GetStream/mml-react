@@ -8,18 +8,6 @@
     font-size: $mml-md-font-size;
   }
 
-  // Context: other message
-  // ---------------------------------------------------------------------------
-  // @include mml-other() {
-  //   text-align: left;
-  // }
-
-  // Context: me message
-  // ---------------------------------------------------------------------------
-  // @include mml-me() {
-  //   text-align: right;
-  // }
-
   blockquote {
     padding: 0 1em;
     margin: 1em 0;
