@@ -8,8 +8,14 @@
   }
 
   // padding not margins, as above
-  + * {
+  + #{mml-component('text')},
+  + #{mml-component('md')} {
     padding-top: $mml-text-spacer-y / 2;
+  }
+
+  + #{mml-component('btnlist')},
+  + #{mml-component('image')} {
+    margin-top: $mml-text-spacer-y;
   }
 
   // Context: other message
