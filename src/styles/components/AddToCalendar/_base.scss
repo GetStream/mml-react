@@ -3,8 +3,6 @@
 @import '../CardHeader/base';
 
 @include mml-component('add-to-calendar') {
-  max-width: $mml-addtocalendar-max-width;
-
   > #{mml-component('card-body')}:last-child {
     overflow: hidden;
     border-bottom-style: $mml-card-border-style;

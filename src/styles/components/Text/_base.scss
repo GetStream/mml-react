@@ -8,19 +8,13 @@
   }
 
   // padding not margins, as above
-  + * {
+  + #{mml-component('text')},
+  + #{mml-component('md')} {
     padding-top: $mml-text-spacer-y / 2;
   }
 
-  // Context: other message
-  // ---------------------------------------------------------------------------
-  // @include mml-other() {
-  //   text-align: left;
-  // }
-
-  // Context: me message
-  // ---------------------------------------------------------------------------
-  // @include mml-me() {
-  //   text-align: right;
-  // }
+  + #{mml-component('btnlist')},
+  + #{mml-component('image')} {
+    margin-top: $mml-text-spacer-y;
+  }
 }

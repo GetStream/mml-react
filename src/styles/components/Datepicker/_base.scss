@@ -26,12 +26,9 @@
     }
   }
 
-  // time column
-  &__time {
-    @include mml-component('datepicker__item') {
-      // text-align: left;
-    }
-  }
+  // time column, no special styles:
+  // &__time {
+  // }
 
   // each option item
   &__item {
