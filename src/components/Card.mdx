@@ -5,8 +5,11 @@ menu: Utility Components
 
 import { Playground, Props } from 'docz';
 import { Card } from './Card.tsx';
-import { CardHeader } from './CardHeader.tsx';
 import { CardBody } from './CardBody.tsx';
+import { Image } from './Image.tsx';
+import { Text } from './Text.tsx';
+import { MD } from './MD.tsx';
+import { Button } from './Button.tsx';
 
 # Card
 
@@ -22,10 +25,11 @@ Helps display content in a card. Typically used with [`CardHeader`](/components/
 
 <Playground>
   <Card>
-    <CardHeader icon="book" text="Book title" />
     <CardBody>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
+      <Image src="https://getstream.github.io/mml-react/public/door.jpg" />
+      <MD text="**Door**" />
+      <Text text="Locks, hinges, screens, stuck..." />
     </CardBody>
+    <Button text="Select" />
   </Card>
 </Playground>
