@@ -44,7 +44,7 @@ export const DatePicker: FC<DatePickerProps> = ({
   const handleChangeDate = (value: Dayjs) => {
     setDate((prevDate) =>
       prevDate
-        .set('day', value.get('day'))
+        .set('date', value.get('date'))
         .set('month', value.get('month'))
         .set('year', value.get('year')),
     );

@@ -54,6 +54,7 @@
   // Modifier: floating (through props)
   // ---------------------------------------------------------------------------
   &--floating {
+<<<<<<< HEAD
     @include mml-themed(box-shadow, $mml-btn--floating-shadow);
 
     &:focus {
@@ -62,6 +63,12 @@
       } @else {
         box-shadow: none;
       }
+=======
+    box-shadow: $mml-btn--floating-shadow;
+
+    &:focus {
+      box-shadow: none;
+>>>>>>> 675ed376db02b75905b0c75799e709f6e053a028
     }
   }
 

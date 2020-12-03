@@ -1,14 +1,10 @@
 import React, { useState, useRef, useCallback, useEffect, FC } from 'react';
-import { Virtuoso, VirtuosoProps } from 'react-virtuoso';
+import { Virtuoso, VirtuosoMethods } from 'react-virtuoso';
 import { Dayjs } from 'dayjs';
 import { DatePickerProps } from './DatePicker';
 
 export type DatePickerSelectProps = DatePickerSelectReadyProps & {
-  Item: (
-    item: DatePickerItemData,
-    selected: Dayjs,
-    handleClick: (item: DatePickerItemData) => void,
-  ) => ReturnType<VirtuosoProps['item']>;
+  itemClassName?: string;
   getItemData: (props: DatePickerSelectItemProps) => DatePickerItemData;
 };
 
@@ -16,76 +12,131 @@ export type DatePickerSelectProps = DatePickerSelectReadyProps & {
  * Basic shape of DatePickerSelect extended by wrapper components as DatePickerDate and DatePickerTime
  */
 export type DatePickerSelectReadyProps = Pick<DatePickerProps, 'icalFilter' | 'allowPast'> & {
-  value: Dayjs;
   format: string;
   interval: number;
   onChange: (value: Dayjs) => void;
+  value: Dayjs;
 };
 
 /**
  * Inside Virtuoso select items need an idx to indicate their position
  */
-export type DatePickerSelectItemProps = DatePickerSelectReadyProps & {
+export type DatePickerSelectItemProps = {
+  format: string;
   idx: number;
+  interval: number;
+  value: Dayjs;
 };
 
 /**
  * The data needed by each datepicker select item
  */
 export type DatePickerItemData = {
-  idx: number;
-  interval: number;
-  value: Dayjs;
   displayValue: string;
+  idx: number;
+  isSelected: (currentValue: Dayjs) => boolean;
+  value: Dayjs;
 };
 
-/**
- * Custom scroll container to hide scrollbar with simple css
- */
+const ITEMS_PER_PAGE = 40;
+const VERTICAL_COMPENSATION = 3;
+const INITIAL_INDEX = ITEMS_PER_PAGE;
 
 /**
  * DatePicker select
  */
 export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
-  const { icalFilter, value, getItemData, Item } = props;
-  const [total, setTotal] = useState(0);
-  const [selected, setSelected] = useState(value);
-  const items = useRef<DatePickerItemData[]>([]);
-  const perPage = 40;
-  let lastPageIdx = 0;
+  const { onChange, icalFilter, getItemData, itemClassName, interval, format, value } = props;
 
-  /**
-   * Handle item click
-   */
-  function handleClick(item: DatePickerItemData) {
-    setSelected(item.value);
-  }
+  // Generate date items
+  const generateItems = useCallback(
+    (quantity: number, firstIdx: number) => {
+      return Array(quantity)
+        .fill(true)
+        .map((_, idx) => getItemData({ interval, format, value, idx: firstIdx + idx }))
+        .filter((newItem) => !icalFilter || (icalFilter && icalFilter(newItem.value)));
+    },
+    [interval, format, value, icalFilter, getItemData],
+  );
 
-  const loadMore = useCallback(() => {
-    for (let idx = total; idx < total + total + perPage; idx++) {
-      const newItem = getItemData({ ...props, idx: idx + perPage * lastPageIdx });
+  const [items, setItems] = useState<DatePickerItemData[]>(generateItems(ITEMS_PER_PAGE * 2, -ITEMS_PER_PAGE));
+  const initialIndexOffset = useRef(INITIAL_INDEX);
+  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const virtuoso = useRef<VirtuosoMethods>(null);
 
-      if (!icalFilter || (icalFilter && icalFilter(newItem.value))) {
-        if (items.current) items.current = [...items.current, newItem];
+  const handleClick = useCallback(
+    (item: DatePickerItemData) => {
+      onChange(item.value);
+
+      const firstItemIndex = initialIndexOffset.current || 0;
+      let nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
+      const missingTopItems = nextFirstItemIdx - item.idx + VERTICAL_COMPENSATION;
+
+      // prepend date items, when the selected date's index is too low we prepend
+      // some date options so that it will remain vertically centered in the middle
+      if (missingTopItems >= 0) {
+        nextFirstItemIdx -= missingTopItems;
+        initialIndexOffset.current -= firstItemIndex - missingTopItems;
+        setItems((items) => [...generateItems(missingTopItems, nextFirstItemIdx), ...items]);
+        if (virtuoso.current) virtuoso.current.adjustForPrependedItems(missingTopItems);
       }
-    }
-    lastPageIdx++;
-    setTotal(items.current.length);
-  }, [icalFilter, getItemData, lastPageIdx, props, total]);
+      setSelectedIdx(item.idx);
+    },
+    [setItems, generateItems, initialIndexOffset, onChange],
+  );
 
+  const appendItems = useCallback(
+    (lastItemIndex) => {
+      setItems((items) => [...items, ...generateItems(ITEMS_PER_PAGE, lastItemIndex)]);
+    },
+    [setItems, generateItems],
+  );
+
+  // @see https://git.io/JIUuo
+  const prependItems = useCallback(() => {
+    const firstItemIndex = initialIndexOffset.current || 0;
+    const nextFirstItemIdx = firstItemIndex - INITIAL_INDEX - ITEMS_PER_PAGE;
+    if (initialIndexOffset) {
+      initialIndexOffset.current -= ITEMS_PER_PAGE;
+    }
+    setItems((items) => [...generateItems(ITEMS_PER_PAGE, nextFirstItemIdx), ...items]);
+    if (virtuoso.current) virtuoso.current.adjustForPrependedItems(ITEMS_PER_PAGE);
+    return false;
+  }, [setItems, generateItems, initialIndexOffset]);
+
+  // on mount check if there is a selected value and save its idx in state
   useEffect(() => {
-    loadMore();
+    if (value) {
+      let initialSelectedIdx = null;
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].isSelected(value)) {
+          initialSelectedIdx = items[i].idx;
+          break;
+        }
+      }
+      setSelectedIdx(initialSelectedIdx);
+    }
   }, []); // eslint-disable-line
 
   return (
     <Virtuoso
+      ref={virtuoso}
       overscan={200}
-      totalCount={total}
-      item={(index) => Item(items.current[index], selected, handleClick)}
-      endReached={() => loadMore()}
-      footer={() => {
-        return <div style={{ padding: '2rem' }}></div>;
-      }}
+      totalCount={items.length}
+      initialTopMostItemIndex={INITIAL_INDEX - VERTICAL_COMPENSATION}
+      item={(index) => (
+        <div
+          className={
+            itemClassName +
+            ` mml-datepicker__item ${items[index].idx === selectedIdx ? 'mml-datepicker__item--selected' : ''}`
+          }
+          onClick={() => handleClick(items[index])}
+        >
+          {items[index].displayValue}
+        </div>
+      )}
+      endReached={appendItems}
+      startReached={prependItems}
     />
   );
 };
