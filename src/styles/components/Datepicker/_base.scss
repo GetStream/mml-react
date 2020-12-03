@@ -37,6 +37,7 @@
   &__item {
     padding: $mml-datepicker__item-padding;
     cursor: pointer;
+    user-select: none;
 
     &--selected {
       color: $mml-datepicker__item-color-active;

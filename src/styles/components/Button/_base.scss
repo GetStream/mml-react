@@ -12,6 +12,10 @@
   // ---------------------------------------------------------------------------
   &--floating {
     box-shadow: $mml-btn--floating-shadow;
+
+    &:focus {
+      box-shadow: none;
+    }
   }
 
   // Modifier: with icon

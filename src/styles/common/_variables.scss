@@ -38,7 +38,7 @@ $mml-font-sans: inherit !default;
 $mml-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 $mml-font-base: $mml-font-sans !default;
 $mml-font-size: 15px !default;
-$mml-icon-size: 20px !default;
+$mml-icon-size: 16px !default;
 
 // AddToCalendar:
 // -----------------------------------------------------------------------------
@@ -57,7 +57,7 @@ $mml-btn-border-radius: $mml-border-radius !default;
 $mml-btn-border-width: $mml-border-width !default;
 $mml-btn-border-style: solid !default;
 $mml-btn-bg: mml-theme(card-bg) !default;
-$mml-btn-border-color: $mml-btn-bg !default;
+$mml-btn-border-color: mml-theme(stroke-low-emphasis) !default;
 $mml-btn-color: mml-theme(primary-accent) !default;
 $mml-btn-hover-bg: $mml-btn-color !default;
 $mml-btn-hover-border-color: $mml-btn-hover-bg !default;
@@ -143,6 +143,7 @@ $mml-icon-color: inherit !default;
 
 // Image:
 // -----------------------------------------------------------------------------
+$mml-image-max-width: $mml-max-width !default;
 $mml-image-spacer-y: 0 !default;
 $mml-image-spacer-x: 0 !default;
 
@@ -170,7 +171,7 @@ $mml-progress-animation-ease: ease-in-out !default;
 
 // MD:
 // -----------------------------------------------------------------------------
-$mml-md-padding-y: 5px !default;
+$mml-md-spacer-y: 4px !default;
 $mml-md-color: mml-theme(text-high-emphasis) !default;
 $mml-md-font-size: inherit !default;
 $mml-md__code-bg: mml-theme(stroke) !default;
@@ -203,9 +204,8 @@ $mml-success-color: mml-theme(primary-accent) !default;
 
 // Text:
 // -----------------------------------------------------------------------------
-$mml-text-spacer-y: 4px !default;
+$mml-text-spacer-y: $mml-md-spacer-y !default;
 $mml-text-bg: mml-theme(card-bg) !default;
 $mml-text-bg--me: mml-theme(card-bg-alt) !default;
-$mml-text-border-color: mml-theme(stroke-low-emphasis) !default;
 $mml-text-color: mml-theme(text-high-emphasis) !default;
 $mml-text-font-size: inherit !default;
