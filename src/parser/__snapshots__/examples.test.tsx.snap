@@ -8,7 +8,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-	",
+  ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -27,7 +27,7 @@ Object {
         },
         Object {
           "text": "
-	",
+  ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -199,7 +199,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-	",
+  ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -218,7 +218,7 @@ Tree {
       },
       Object {
         "text": "
-	",
+  ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -379,17 +379,7 @@ Array [
                     "marginTop": "0px",
                   }
                 }
-              >
-                <footer>
-                  <div
-                    style={
-                      Object {
-                        "padding": "2rem",
-                      }
-                    }
-                  />
-                </footer>
-              </div>
+              />
             </div>
             <div
               style={
@@ -435,17 +425,7 @@ Array [
                     "marginTop": "0px",
                   }
                 }
-              >
-                <footer>
-                  <div
-                    style={
-                      Object {
-                        "padding": "2rem",
-                      }
-                    }
-                  />
-                </footer>
-              </div>
+              />
             </div>
             <div
               style={
