@@ -14,10 +14,20 @@
 @include mml-component('wrap') {
   display: flex;
   flex-direction: column;
+  max-width: $mml-max-width;
+  @include mml-other() {
+    margin-right: auto;
+  }
 
-  // positioning, some components have a max-width, this auto margin will
-  // correctly align them on the sides of the chat container
-  > *:not(#{mml-component('carousel')}):not(#{mml-component('btnlist--floating')}) {
+  @include mml-me() {
+    margin-left: auto;
+  }
+  
+  > * {
+    // all components get rounded borders by default
+    border-radius: $mml-border-radius;
+    
+    // inner components should not expand by default
     @include mml-other() {
       margin-right: auto;
     }
@@ -25,22 +35,17 @@
     @include mml-me() {
       margin-left: auto;
     }
-  }
 
-  // all immediate children of the `mml-wrap` element have rounded borders
-  > * {
-    border-radius: $mml-border-radius;
-  }
-
-  // the last immediate children of `mml-wrap` element have the final
-  // border radius tweaked according to the position me (left/right) in the chat
-  > *:last-child:not(#{mml-component('btn')}) {
-    @include mml-other() {
-      border-bottom-left-radius: $mml-border-radius-base;
-    }
-
-    @include mml-me() {
-      border-bottom-right-radius: $mml-border-radius-base;
+    // the last immediate children of `mml-wrap` element have the final border
+    // radius tweaked according to the position other/me (left/right) in the chat
+    &:last-child:not(#{mml-component('btn')}) {
+      @include mml-other() {
+        border-bottom-left-radius: $mml-border-radius-base;
+      }
+  
+      @include mml-me() {
+        border-bottom-right-radius: $mml-border-radius-base;
+      }
     }
   }
 }

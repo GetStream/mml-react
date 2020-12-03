@@ -10,7 +10,8 @@ $mml-prefix: 'mml-' !default;
 $mml-selector-wrapper-message-self: '.me' !default;
 $mml-selector-wrapper-message-other: '.other' !default;
 $mml-spacer: 8px !default;
-$mml-max-width: 200px !default;
+$mml-max-width: 66.66% !default;
+$mml-max-width-compensation: -50% !default;
 $mml-border-radius: 16px !default;
 $mml-border-radius-base: 0 !default;
 $mml-border-style: solid !default;
@@ -25,7 +26,6 @@ $mml-icon-size: 16px !default;
 
 // AddToCalendar:
 // -----------------------------------------------------------------------------
-$mml-addtocalendar-max-width: $mml-max-width !default;
 
 // Button:
 // -----------------------------------------------------------------------------
@@ -33,7 +33,6 @@ $mml-btn-font-family: $mml-font-sans !default;
 $mml-btn-font-weight: bold !default;
 $mml-btn-font-size: 15px !default;
 $mml-btn-text-transform: none !default;
-$mml-btn-max-width: $mml-max-width !default;
 $mml-btn-padding-y: 6px !default;
 $mml-btn-padding-x: 16px !default;
 $mml-btn-border-radius: $mml-border-radius !default;
@@ -60,7 +59,6 @@ $mml-btn--icon-distance-x: 0.4em !default;
 // ButtonList:
 // -----------------------------------------------------------------------------
 $mml-btnlist-min-width: 155px !default;
-$mml-btnlist-max-width: $mml-btn-max-width !default;
 $mml-btnlist-bg: $mml-btn-bg !default;
 $mml-btnlist-border-width: $mml-btn-border-width !default;
 $mml-btnlist-border-color: $mml-border-color !default;
@@ -73,7 +71,6 @@ $mml-btnlist__btn--with-icon-font-weight: normal !default;
 
 // Card:
 // -----------------------------------------------------------------------------
-$mml-card-max-width: $mml-max-width !default;
 $mml-card-border-color: $mml-border-color !default;
 $mml-card-border-width: $mml-border-width !default;
 $mml-card-border-style: $mml-border-style !default;
@@ -126,7 +123,6 @@ $mml-icon-color: inherit !default;
 
 // Image:
 // -----------------------------------------------------------------------------
-$mml-image-max-width: $mml-max-width !default;
 $mml-image-spacer-y: 0 !default;
 $mml-image-spacer-x: 0 !default;
 

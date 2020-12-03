@@ -5,13 +5,11 @@
 // for the flexibility necessary to host and position various components inside
 // an `<mml type="card">`.
 @include mml-component('card') {
-  max-width: $mml-card-max-width;
   width: 100%;
 
   // this composition happens for instance in the AddToCalendar component
   @include mml-component('btnlist') {
     font-size: $mml-card-body-font-size;
-    max-width: none;
     border: 0;
   }
 

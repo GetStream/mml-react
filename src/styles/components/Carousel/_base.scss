@@ -2,6 +2,15 @@
 
 @include mml-component('carousel') {
   margin: $mml-carousel-margin-y 0;
+
+  // make it fullwidth
+  @include mml-me() {
+    margin-left: $mml-max-width-compensation;
+  }
+
+  @include mml-other() {
+    margin-right: $mml-max-width-compensation;
+  }
 }
 
 @include mml-component('carousel-item') {
