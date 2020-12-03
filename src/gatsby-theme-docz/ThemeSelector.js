@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 /* eslint-disable */
-import index from '!css-loader!../../../dist/styles/index.css';
-import index_dark from '!css-loader!../../../dist/styles/index-dark.css';
+import base from '!css-loader!../../../dist/styles/base.css';
+import base_dark from '!css-loader!../../../dist/styles/base-dark.css';
 import messaging from '!css-loader!../../../dist/styles/messaging.css';
 import messaging_dark from '!css-loader!../../../dist/styles/messaging-dark.css';
 import livestream from '!css-loader!../../../dist/styles/livestream.css';
@@ -15,15 +15,15 @@ import team_dark from '!css-loader!../../../dist/styles/team-dark.css';
 /* eslint-enable */
 
 const Themes = {
-  'index-light': {
+  'base-light': {
     name: 'Base Light',
-    vars: index.locals,
-    css: index.toString(),
+    vars: base.locals,
+    css: base.toString(),
   },
-  'index-dark': {
+  'base-dark': {
     name: 'Base Dark',
-    vars: index_dark.locals,
-    css: index_dark.toString(),
+    vars: base_dark.locals,
+    css: base_dark.toString(),
   },
   'messaging-light': {
     name: 'Social Messenger Light',
@@ -120,7 +120,7 @@ export const SelectOptions = ({ label, options, value, onChange }) => {
 };
 
 const ThemeSelector = ({ children }) => {
-  const [theme, setTheme] = useState('index-light');
+  const [theme, setTheme] = useState('base-light');
 
   return (
     <ThemeProvider theme={Themes[theme].vars}>

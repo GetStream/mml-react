@@ -1,6 +1,6 @@
-import './styles/bundle.scss';
 import './styles/index.scss';
-import './styles/index-dark.scss';
+import './styles/base.scss';
+import './styles/base-dark.scss';
 import './styles/commerce.scss';
 import './styles/commerce-dark.scss';
 import './styles/livestream.scss';
