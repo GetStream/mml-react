@@ -12,11 +12,11 @@
     @include mml-themed(border-bottom-color, $mml-card-border-color);
 
     @include mml-other() {
-      border-bottom-left-radius: $mml-border-radius-base;
+      border-bottom-right-radius: $mml-border-radius;
     }
 
     @include mml-me() {
-      border-bottom-right-radius: $mml-border-radius-base;
+      border-bottom-left-radius: $mml-border-radius;
     }
   }
 }
