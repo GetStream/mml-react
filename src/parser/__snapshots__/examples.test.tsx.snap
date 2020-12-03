@@ -8,7 +8,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -27,7 +27,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -45,7 +45,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -67,7 +67,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -199,7 +199,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -218,7 +218,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -236,7 +236,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -258,7 +258,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -465,7 +465,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -484,7 +484,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -495,7 +495,7 @@ Object {
           "children": Array [
             Object {
               "text": "
-    ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -518,7 +518,7 @@ Object {
             },
             Object {
               "text": "
-    ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -541,7 +541,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+        ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -552,7 +552,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -694,7 +694,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -717,7 +717,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -740,7 +740,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -775,7 +775,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -794,7 +794,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -805,7 +805,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -828,7 +828,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -851,7 +851,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -862,7 +862,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -976,7 +976,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -995,7 +995,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1017,7 +1017,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1036,7 +1036,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1059,7 +1059,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1078,7 +1078,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1095,7 +1095,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1114,7 +1114,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1137,7 +1137,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1440,7 +1440,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1459,7 +1459,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1481,7 +1481,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1500,7 +1500,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1523,7 +1523,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1542,7 +1542,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1559,7 +1559,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1578,7 +1578,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1601,7 +1601,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1794,7 +1794,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1813,7 +1813,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1830,7 +1830,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -1923,7 +1923,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1942,7 +1942,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -1959,7 +1959,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -2151,7 +2151,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-    ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -2170,7 +2170,7 @@ Object {
         },
         Object {
           "text": "
-    ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -2179,7 +2179,7 @@ Object {
           "children": Array [
             Object {
               "text": "
-        ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -2262,7 +2262,7 @@ Object {
                 },
                 Object {
                   "text": "
-        ",
+          ",
                   "toJSON": [Function],
                   "type": "text",
                 },
@@ -2273,7 +2273,7 @@ Object {
             },
             Object {
               "text": "
-        ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -2356,7 +2356,7 @@ Object {
                 },
                 Object {
                   "text": "
-        ",
+          ",
                   "toJSON": [Function],
                   "type": "text",
                 },
@@ -2367,7 +2367,7 @@ Object {
             },
             Object {
               "text": "
-        ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -2450,7 +2450,7 @@ Object {
                 },
                 Object {
                   "text": "
-        ",
+          ",
                   "toJSON": [Function],
                   "type": "text",
                 },
@@ -2461,7 +2461,7 @@ Object {
             },
             Object {
               "text": "
-        ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -2544,7 +2544,7 @@ Object {
                 },
                 Object {
                   "text": "
-        ",
+          ",
                   "toJSON": [Function],
                   "type": "text",
                 },
@@ -2555,7 +2555,7 @@ Object {
             },
             Object {
               "text": "
-    ",
+        ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -2566,7 +2566,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -2817,7 +2817,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3026,7 +3026,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3235,7 +3235,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3444,7 +3444,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3462,7 +3462,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -3545,7 +3545,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3556,7 +3556,7 @@ Tree {
           },
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -3639,7 +3639,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3650,7 +3650,7 @@ Tree {
           },
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -3733,7 +3733,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3744,7 +3744,7 @@ Tree {
           },
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -3827,7 +3827,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3838,7 +3838,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -3871,7 +3871,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-    ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -3890,7 +3890,7 @@ Tree {
       },
       Object {
         "text": "
-    ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -3899,7 +3899,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -3982,7 +3982,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -3993,7 +3993,7 @@ Tree {
           },
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -4076,7 +4076,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -4087,7 +4087,7 @@ Tree {
           },
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -4170,7 +4170,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -4181,7 +4181,7 @@ Tree {
           },
           Object {
             "text": "
-        ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -4264,7 +4264,7 @@ Tree {
               },
               Object {
                 "text": "
-        ",
+          ",
                 "toJSON": [Function],
                 "type": "text",
               },
@@ -4275,7 +4275,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -4286,7 +4286,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -4715,7 +4715,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -4734,7 +4734,7 @@ Object {
         },
         Object {
           "text": "
-",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -4743,7 +4743,7 @@ Object {
           "children": Array [
             Object {
               "text": "
-  ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -4765,7 +4765,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -4787,7 +4787,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -4809,7 +4809,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -4831,7 +4831,7 @@ Object {
             },
             Object {
               "text": "
-",
+        ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -4842,7 +4842,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -5050,7 +5050,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5072,7 +5072,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5094,7 +5094,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5116,7 +5116,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5138,7 +5138,7 @@ Tree {
           },
           Object {
             "text": "
-",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5173,7 +5173,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -5192,7 +5192,7 @@ Tree {
       },
       Object {
         "text": "
-",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -5201,7 +5201,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5223,7 +5223,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5245,7 +5245,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5267,7 +5267,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5289,7 +5289,7 @@ Tree {
           },
           Object {
             "text": "
-",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5300,7 +5300,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -5430,8 +5430,8 @@ Object {
       "children": Array [
         Object {
           "text": "
-  Sorry we're currently out of fries, what would you like as a side?
-  ",
+        Sorry we're currently out of fries, what would you like as a side?
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -5440,7 +5440,7 @@ Object {
           "children": Array [
             Object {
               "text": "
-    ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -5462,7 +5462,7 @@ Object {
             },
             Object {
               "text": "
-    ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -5484,7 +5484,7 @@ Object {
             },
             Object {
               "text": "
-    ",
+          ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -5506,7 +5506,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+        ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -5517,7 +5517,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -5542,8 +5542,8 @@ Tree {
       "name": "text",
       "node": Object {
         "text": "
-  Sorry we're currently out of fries, what would you like as a side?
-  ",
+        Sorry we're currently out of fries, what would you like as a side?
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -5670,7 +5670,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5692,7 +5692,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5714,7 +5714,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5736,7 +5736,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5771,8 +5771,8 @@ Tree {
     "children": Array [
       Object {
         "text": "
-  Sorry we're currently out of fries, what would you like as a side?
-  ",
+        Sorry we're currently out of fries, what would you like as a side?
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -5781,7 +5781,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5803,7 +5803,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5825,7 +5825,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+          ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5847,7 +5847,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -5858,7 +5858,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -5870,8 +5870,8 @@ Tree {
   "reactElements": Array [
     <Text
       text="
-  Sorry we're currently out of fries, what would you like as a side?
-  "
+        Sorry we're currently out of fries, what would you like as a side?
+        "
     />,
     <ButtonList>
       <Button
@@ -5899,8 +5899,8 @@ exports[`examples Out of stock example should work 3`] = `
 Array [
   <Text
     text="
-  Sorry we're currently out of fries, what would you like as a side?
-  "
+        Sorry we're currently out of fries, what would you like as a side?
+        "
   />,
   <ButtonList>
     <Button
@@ -5928,8 +5928,8 @@ Array [
     className="mml-text"
   >
     
-  Sorry we're currently out of fries, what would you like as a side?
-  
+        Sorry we're currently out of fries, what would you like as a side?
+        
   </div>,
   <div
     className="mml-btnlist mml-btnlist--grounded"
@@ -5976,7 +5976,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -5995,7 +5995,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6010,7 +6010,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6026,7 +6026,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6048,7 +6048,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6196,7 +6196,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6215,7 +6215,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6230,7 +6230,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6246,7 +6246,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6268,7 +6268,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6387,7 +6387,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6406,7 +6406,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6428,7 +6428,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6539,7 +6539,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6558,7 +6558,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6580,7 +6580,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6643,7 +6643,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-	",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6662,7 +6662,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6678,7 +6678,7 @@ Object {
         },
         Object {
           "text": "
-	",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6700,7 +6700,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6828,7 +6828,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-	",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6847,7 +6847,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6863,7 +6863,7 @@ Tree {
       },
       Object {
         "text": "
-	",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6885,7 +6885,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -6971,7 +6971,7 @@ Object {
       "children": Array [
         Object {
           "text": "
-",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6990,7 +6990,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -6999,7 +6999,7 @@ Object {
           "children": Array [
             Object {
               "text": "
-    ",
+            ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7020,7 +7020,7 @@ Object {
             },
             Object {
               "text": "
-    ",
+            ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7041,7 +7041,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+        ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7052,7 +7052,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -7061,7 +7061,7 @@ Object {
           "children": Array [
             Object {
               "text": "
-    ",
+            ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7082,7 +7082,7 @@ Object {
             },
             Object {
               "text": "
-    ",
+            ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7103,7 +7103,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+        ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7114,7 +7114,7 @@ Object {
         },
         Object {
           "text": "
-  ",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -7123,7 +7123,7 @@ Object {
           "children": Array [
             Object {
               "text": "
-    ",
+            ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7144,7 +7144,7 @@ Object {
             },
             Object {
               "text": "
-    ",
+            ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7165,7 +7165,7 @@ Object {
             },
             Object {
               "text": "
-  ",
+        ",
               "toJSON": [Function],
               "type": "text",
             },
@@ -7176,7 +7176,7 @@ Object {
         },
         Object {
           "text": "
-",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -7198,7 +7198,7 @@ Object {
         },
         Object {
           "text": "
-",
+        ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -7220,7 +7220,7 @@ Object {
         },
         Object {
           "text": "
-",
+      ",
           "toJSON": [Function],
           "type": "text",
         },
@@ -7350,7 +7350,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7371,7 +7371,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7392,7 +7392,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7483,7 +7483,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7504,7 +7504,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7525,7 +7525,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7616,7 +7616,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7637,7 +7637,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7658,7 +7658,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7767,7 +7767,7 @@ Tree {
     "children": Array [
       Object {
         "text": "
-",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -7786,7 +7786,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -7795,7 +7795,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7816,7 +7816,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7837,7 +7837,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7848,7 +7848,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -7857,7 +7857,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7878,7 +7878,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7899,7 +7899,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7910,7 +7910,7 @@ Tree {
       },
       Object {
         "text": "
-  ",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -7919,7 +7919,7 @@ Tree {
         "children": Array [
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7940,7 +7940,7 @@ Tree {
           },
           Object {
             "text": "
-    ",
+            ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7961,7 +7961,7 @@ Tree {
           },
           Object {
             "text": "
-  ",
+        ",
             "toJSON": [Function],
             "type": "text",
           },
@@ -7972,7 +7972,7 @@ Tree {
       },
       Object {
         "text": "
-",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -7994,7 +7994,7 @@ Tree {
       },
       Object {
         "text": "
-",
+        ",
         "toJSON": [Function],
         "type": "text",
       },
@@ -8016,7 +8016,7 @@ Tree {
       },
       Object {
         "text": "
-",
+      ",
         "toJSON": [Function],
         "type": "text",
       },
