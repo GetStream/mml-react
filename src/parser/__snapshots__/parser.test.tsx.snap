@@ -1011,6 +1011,7 @@ Array [
 exports[`simple input 4`] = `
 <input
   className="mml-input"
+  id="mml-name"
   name="name"
   onChange={[Function]}
   placeholder=""
