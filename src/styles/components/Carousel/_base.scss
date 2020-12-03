@@ -25,6 +25,9 @@
 
       &:first-of-type {
         padding-top: $mml-card-body-padding-y;
+        // slightly reduce the bottom padding keeping into account that text here
+        // has some vertical space cause by its line-height
+        padding-bottom: $mml-card-body-padding-y * 0.75;
       }
 
       &:last-of-type {
