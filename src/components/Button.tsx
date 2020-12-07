@@ -31,18 +31,21 @@ export const Button: FC<ButtonProps> = ({ className = '', text, name, value, url
   }
   className += variant === 'floating' ? ' mml-btn--floating' : ' mml-btn--grounded';
 
+  if (url)
+    return (
+      <a className={`mml-btn ${className}`} href={sanitizeUrl(url)} target="_blank" rel="nofollow noreferrer noopener">
+        {icon && <Icon name={icon} />}
+        {text}
+      </a>
+    );
+
   return (
     <button
       className={`mml-btn ${className}`}
-      type={url ? 'button' : 'submit'}
+      type="submit"
       name={name}
       value={value}
       onClick={(event: SyntheticEvent) => {
-        if (url) {
-          event.preventDefault();
-          window.location.href = sanitizeUrl(url);
-          return;
-        }
         const input = document.createElement('input');
         input.type = 'hidden';
         input.name = name || '';
