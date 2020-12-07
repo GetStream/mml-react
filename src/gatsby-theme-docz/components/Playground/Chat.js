@@ -24,10 +24,11 @@ const CONVERSATION = [
 ];
 
 const CHAT_GUTTER_X = 9;
+const THREAD_GUTTER_X = 46;
 
 const Thread = styled.div`
   position: relative;
-  padding: 0 ${CHAT_GUTTER_X}px 0 46px;
+  padding: 0 ${CHAT_GUTTER_X}px 0 ${THREAD_GUTTER_X}px;
 `;
 
 const Composer = styled.form`
@@ -61,7 +62,11 @@ const Author = styled.div`
   font-size: 13px;
 `;
 
-const Messages = styled.div``;
+const Messages = styled.div`
+  &.mml-wrap {
+    max-width: calc(66.66% + ${THREAD_GUTTER_X}px); // @see $mml-max-width
+  }
+`;
 
 const Message = styled.div`
   position: relative;

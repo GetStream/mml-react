@@ -2,6 +2,15 @@
 
 @include mml-component('carousel') {
   margin: $mml-carousel-margin-y 0;
+
+  // make it fullwidth
+  @include mml-align-right() {
+    margin-left: $mml-max-width-compensation;
+  }
+
+  @include mml-align-left() {
+    margin-right: $mml-max-width-compensation;
+  }
 }
 
 @include mml-component('carousel-item') {
@@ -25,6 +34,9 @@
 
       &:first-of-type {
         padding-top: $mml-card-body-padding-y;
+        // slightly reduce the bottom padding keeping into account that text here
+        // has some vertical space cause by its line-height
+        padding-bottom: $mml-card-body-padding-y * 0.75;
       }
 
       &:last-of-type {

@@ -5,8 +5,7 @@
   }
 }
 
-// use CSS variables for easy customisation, fallback provided by
-// `postcss-custom-properties` during compilation step
+// use CSS variables for easy customisation
 @if $mml-use-css-vars {
   :root {
     @each $name, $value in $mml-theme {
