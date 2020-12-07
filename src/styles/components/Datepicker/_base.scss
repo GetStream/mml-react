@@ -3,6 +3,7 @@
   display: flex;
 
   // date and time columns
+  // ---------------------------------------------------------------------------
   &__select {
     flex: 1;
 
@@ -20,20 +21,17 @@
   }
 
   // date column
-  &__date {
-    @include mml-component('datepicker__item') {
-      text-align: right;
-    }
-  }
+  // ---------------------------------------------------------------------------
+  // &__date {
+  // }
 
   // time column
-  &__time {
-    @include mml-component('datepicker__item') {
-      // text-align: left;
-    }
-  }
+  // ---------------------------------------------------------------------------
+  // &__time {
+  // }
 
   // each option item
+  // ---------------------------------------------------------------------------
   &__item {
     padding: $mml-datepicker__item-padding;
     cursor: pointer;
@@ -42,6 +40,22 @@
     &--selected {
       @include mml-themed(color, $mml-datepicker__item-color-active);
       font-weight: bold;
+    }
+  }
+
+  // Modifier: double columned (default)
+  // ---------------------------------------------------------------------------
+  &--double {
+    @include mml-component('datepicker__date') {
+      text-align: right;
+    }
+  }
+
+  // Modifier: single columned (default)
+  // ---------------------------------------------------------------------------
+  &--single {
+    @include mml-component('datepicker__select') {
+      text-align: center;
     }
   }
 }
