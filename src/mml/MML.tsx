@@ -63,16 +63,10 @@ export const MML: FC<MMLProps> = ({
       event.preventDefault();
 
       const state: Record<string, any> = {};
-      new FormData(event.currentTarget).forEach((value, key) => (state[key] = value));
-
-      // include mml_name in the data
-      if (tree?.name) state.mml_name = tree.name;
-
-      // include clicked button value in the callback
-      const button = document.activeElement as HTMLButtonElement;
-      if (button && button.type === 'submit' && button.name && button.value) {
-        state[button.name] = button.value;
-      }
+      if (tree?.name) state.mml_name = tree.name; // include mml_name in the data
+      new FormData(event.currentTarget).forEach((value, key) => {
+        state[key] = value;
+      });
 
       if (!onSubmit) return console.warn('Forgot to pass onSubmit prop to <MML/>? payload:', state);
 

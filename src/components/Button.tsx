@@ -41,7 +41,13 @@ export const Button: FC<ButtonProps> = ({ className = '', text, name, value, url
         if (url) {
           event.preventDefault();
           window.location.href = sanitizeUrl(url);
+          return;
         }
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name || '';
+        input.value = value || '';
+        event.currentTarget?.closest('form')?.appendChild(input);
       }}
     >
       {icon && <Icon name={icon} />}
