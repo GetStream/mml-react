@@ -81,7 +81,7 @@ export const MML: FC<MMLProps> = ({
         await onSubmit(state);
         setSubmitState({ loading: false, error: '', success: 'submitted' });
       } catch (e) {
-        setSubmitState({ loading: false, error: 'something is broken', success: '' });
+        setSubmitState({ loading: false, error: 'Failed to send the request. Please try again.', success: '' });
       }
     },
     [onSubmit, tree],
