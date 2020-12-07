@@ -17,27 +17,25 @@
 }
 
 ///
-/// MML me
+/// MML align right
 ///
-/// Automatically scope the class name to a message marked as "mine", which it
-/// is by default shown on the right hand side
+/// Automatically scope the class name which is shown by default on the right hand side
 ///
 /// ____________________________________________________________________________
-@mixin mml-me() {
-  #{$mml-selector-wrapper-message-self} & {
+@mixin mml-align-right() {
+  #{$mml-selector-wrapper-align-right} & {
     @content;
   }
 }
 
 ///
-/// MML other
+/// MML align left
 ///
-/// Automatically scope the class name to a message marked as "others", which it
-/// is by default shown on the left hand side
+/// Automatically scope the class name which is shown by default on the left hand side
 ///
 /// ____________________________________________________________________________
-@mixin mml-other() {
-  #{$mml-selector-wrapper-message-other} & {
+@mixin mml-align-left() {
+  #{$mml-selector-wrapper-align-left} & {
     @content;
   }
 }
