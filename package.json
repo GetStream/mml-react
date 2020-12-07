@@ -1,6 +1,6 @@
 {
   "name": "mml-react",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "MML (Message Markup Language) for React implementation.",
   "author": "Getstream.io",
   "main": "dist/index.js",
