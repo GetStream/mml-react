@@ -57,12 +57,12 @@
     justify-content: center;
 
     // make it fullwidth
-    @include mml-me() {
+    @include mml-align-right() {
       margin-left: calc(#{$mml-max-width-compensation} - #{$mml-btnlist__btn-margin-x});
       margin-right: -#{$mml-btnlist__btn-margin-x};
     }
 
-    @include mml-other() {
+    @include mml-align-left() {
       margin-left: -#{$mml-btnlist__btn-margin-x};
       margin-right: calc(#{$mml-max-width-compensation} - #{$mml-btnlist__btn-margin-x});
     }

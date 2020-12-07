@@ -4,13 +4,13 @@ import styled, { ThemeProvider } from 'styled-components';
 /* eslint-disable */
 import base from '!css-loader!../../../dist/styles/base.css';
 import base_dark from '!css-loader!../../../dist/styles/base-dark.css';
-import messaging from '!css-loader!../../../dist/styles/messaging.css';
+import messaging_light from '!css-loader!../../../dist/styles/messaging-light.css';
 import messaging_dark from '!css-loader!../../../dist/styles/messaging-dark.css';
-import livestream from '!css-loader!../../../dist/styles/livestream.css';
+import livestream_light from '!css-loader!../../../dist/styles/livestream-light.css';
 import livestream_dark from '!css-loader!../../../dist/styles/livestream-dark.css';
-import commerce from '!css-loader!../../../dist/styles/commerce.css';
+import commerce_light from '!css-loader!../../../dist/styles/commerce-light.css';
 import commerce_dark from '!css-loader!../../../dist/styles/commerce-dark.css';
-import team from '!css-loader!../../../dist/styles/team.css';
+import team_light from '!css-loader!../../../dist/styles/team-light.css';
 import team_dark from '!css-loader!../../../dist/styles/team-dark.css';
 /* eslint-enable */
 
@@ -27,8 +27,8 @@ const Themes = {
   },
   'messaging-light': {
     name: 'Social Messenger Light',
-    vars: messaging.locals,
-    css: messaging.toString(),
+    vars: messaging_light.locals,
+    css: messaging_light.toString(),
   },
   'messaging-dark': {
     name: 'Social Messenger Dark',
@@ -37,8 +37,8 @@ const Themes = {
   },
   'livestream-light': {
     name: 'Livestream Light',
-    vars: livestream.locals,
-    css: livestream.toString(),
+    vars: livestream_light.locals,
+    css: livestream_light.toString(),
   },
   'livestream-dark': {
     name: 'Livestream Dark',
@@ -47,8 +47,8 @@ const Themes = {
   },
   'commerce-light': {
     name: 'Customer Support Light',
-    vars: commerce.locals,
-    css: commerce.toString(),
+    vars: commerce_light.locals,
+    css: commerce_light.toString(),
   },
   'commerce-dark': {
     name: 'Customer Support Dark',
@@ -57,8 +57,8 @@ const Themes = {
   },
   'team-light': {
     name: 'Team Light',
-    vars: team.locals,
-    css: team.toString(),
+    vars: team_light.locals,
+    css: team_light.toString(),
   },
   'team-dark': {
     name: 'Team Dark',

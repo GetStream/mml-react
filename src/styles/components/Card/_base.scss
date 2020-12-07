@@ -37,11 +37,11 @@
       padding: $mml-card__btn-padding;
       border-radius: $mml-border-radius-base;
 
-      @include mml-other() {
+      @include mml-align-left() {
         border-bottom-right-radius: $mml-border-radius;
       }
 
-      @include mml-me() {
+      @include mml-align-right() {
         border-bottom-left-radius: $mml-border-radius;
       }
     }
