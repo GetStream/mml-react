@@ -22,7 +22,8 @@ export type MMLProps = {
     | 'commerce-light'
     | 'commerce-dark'
     | 'livestream-light'
-    | 'livestream-dark';
+    | 'livestream-dark'
+    | string;
   /** Custom classname, appended to wrapper classname */
   className?: string;
   /** The Loader component */

@@ -36,7 +36,7 @@ $mml-theme-base-dark: (
   shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
 ) !default;
 
-$mml-theme-commerce: (
+$mml-theme-commerce-light: (
   primary-accent: #005fff,
   app-canvas: #fff,
   text-high-emphasis: #202a3c,
@@ -68,7 +68,7 @@ $mml-theme-commerce-dark: (
   shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
 ) !default;
 
-$mml-theme-livestream: (
+$mml-theme-livestream-light: (
   primary-accent: #19a0ff,
   app-canvas: #fff,
   text-high-emphasis: #2c2c30,
@@ -100,7 +100,7 @@ $mml-theme-livestream-dark: (
   shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
 ) !default;
 
-$mml-theme-messaging: (
+$mml-theme-messaging-light: (
   primary-accent: #0283ff,
   app-canvas: #fcfcfc,
   text-high-emphasis: #0e1621,
@@ -132,7 +132,7 @@ $mml-theme-messaging-dark: (
   shadow: 0px 4px 4px rgba(0, 0, 0, 0.1),
 ) !default;
 
-$mml-theme-team: (
+$mml-theme-team-light: (
   primary-accent: #4e1d9d,
   app-canvas: #fff,
   text-high-emphasis: #2e2c30,
@@ -167,12 +167,12 @@ $mml-theme-team-dark: (
 $mml-themes: (
   // 'base': $mml-theme-base, // this is the default
   'base-dark': $mml-theme-base-dark,
-  'commerce': $mml-theme-commerce,
+  'commerce-light': $mml-theme-commerce-light,
   'commerce-dark': $mml-theme-commerce-dark,
-  'livestream': $mml-theme-livestream,
+  'livestream-light': $mml-theme-livestream-light,
   'livestream-dark': $mml-theme-livestream-dark,
-  'messaging': $mml-theme-messaging,
+  'messaging-light': $mml-theme-messaging-light,
   'messaging-dark': $mml-theme-messaging-dark,
-  'team': $mml-theme-team,
-  'team-dark': $mml-theme-team-dark
+  'team-light': $mml-theme-team-light,
+  'team-dark': $mml-theme-team-dark,
 ) !default;
