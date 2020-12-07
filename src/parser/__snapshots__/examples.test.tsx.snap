@@ -339,7 +339,7 @@ Array [
     >
       
       <div
-        className="mml-datepicker"
+        className="mml-datepicker mml-datepicker--double"
       >
         <input
           name="massage_appointment"
