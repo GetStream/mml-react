@@ -83,13 +83,13 @@ export const MML: FC<MMLProps> = ({
   );
 
   return (
-    <div className={`mml-container ${theme} ${className}`}>
+    <div className={`mml-container ${theme} ${className}`} data-testid="mml-container">
       {error ? (
         <div className="mml-wrap">
           <Error error={error} />
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mml-wrap">
+        <form onSubmit={handleSubmit} className="mml-wrap" data-testid="mml-form">
           {tree?.type ? <div className="mml-card">{tree?.reactElements}</div> : tree?.reactElements}
           {submitState.loading && <Loader loading={submitState.loading} />}
           {submitState.success && <Success success={submitState.success} />}
