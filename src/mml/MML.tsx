@@ -22,7 +22,8 @@ export type MMLProps = {
     | 'commerce-light'
     | 'commerce-dark'
     | 'livestream-light'
-    | 'livestream-dark';
+    | 'livestream-dark'
+    | string;
   /** Custom classname, appended to wrapper classname */
   className?: string;
   /** The Loader component */
@@ -63,16 +64,10 @@ export const MML: FC<MMLProps> = ({
       event.preventDefault();
 
       const state: Record<string, any> = {};
-      new FormData(event.currentTarget).forEach((value, key) => (state[key] = value));
-
-      // include mml_name in the data
-      if (tree?.name) state.mml_name = tree.name;
-
-      // include clicked button value in the callback
-      const button = document.activeElement as HTMLButtonElement;
-      if (button && button.type === 'submit' && button.name && button.value) {
-        state[button.name] = button.value;
-      }
+      if (tree?.name) state.mml_name = tree.name; // include mml_name in the data
+      new FormData(event.currentTarget).forEach((value, key) => {
+        state[key] = value;
+      });
 
       if (!onSubmit) return console.warn('Forgot to pass onSubmit prop to <MML/>? payload:', state);
 
@@ -81,20 +76,20 @@ export const MML: FC<MMLProps> = ({
         await onSubmit(state);
         setSubmitState({ loading: false, error: '', success: 'submitted' });
       } catch (e) {
-        setSubmitState({ loading: false, error: 'something is broken', success: '' });
+        setSubmitState({ loading: false, error: 'Failed to send the request. Please try again.', success: '' });
       }
     },
     [onSubmit, tree],
   );
 
   return (
-    <div className={`mml-container ${theme} ${className}`}>
+    <div className={`mml-container ${theme} ${className}`} data-testid="mml-container">
       {error ? (
         <div className="mml-wrap">
           <Error error={error} />
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mml-wrap">
+        <form onSubmit={handleSubmit} className="mml-wrap" data-testid="mml-form">
           {tree?.type ? <div className="mml-card">{tree?.reactElements}</div> : tree?.reactElements}
           {submitState.loading && <Loader loading={submitState.loading} />}
           {submitState.success && <Success success={submitState.success} />}

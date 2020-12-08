@@ -24,10 +24,11 @@ const CONVERSATION = [
 ];
 
 const CHAT_GUTTER_X = 9;
+const THREAD_GUTTER_X = 46;
 
 const Thread = styled.div`
   position: relative;
-  padding: 0 ${CHAT_GUTTER_X}px 0 46px;
+  padding: 0 ${CHAT_GUTTER_X}px 0 ${THREAD_GUTTER_X}px;
 `;
 
 const Composer = styled.form`
@@ -61,7 +62,11 @@ const Author = styled.div`
   font-size: 13px;
 `;
 
-const Messages = styled.div``;
+const Messages = styled.div`
+  &.mml-wrap {
+    max-width: calc(66.66% + ${THREAD_GUTTER_X}px); // @see $mml-max-width
+  }
+`;
 
 const Message = styled.div`
   position: relative;
@@ -154,7 +159,7 @@ export const Chat = ({ interactive, children }) => {
         {CONVERSATION.map((thread, idx) => {
           const user = USERS[thread.user] || USERS[0];
           return (
-            <Thread key={`thread${idx}`} className="mml-container other">
+            <Thread key={`thread${idx}`} className="mml-container mml-align-left">
               <Author>{user.name}</Author>
               <Messages className="mml-wrap">
                 {thread.messages.map((msg, msgIdx) => (
@@ -166,7 +171,7 @@ export const Chat = ({ interactive, children }) => {
             </Thread>
           );
         })}
-        <Attachment className="me">{children}</Attachment>
+        <Attachment className="mml-align-right">{children}</Attachment>
       </Conversation>
       <Composer>
         <ComposerInput className="mml-input" placeholder="Say something" disabled />

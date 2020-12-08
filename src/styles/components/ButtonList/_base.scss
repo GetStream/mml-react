@@ -7,8 +7,6 @@
     flex-direction: column;
     overflow: hidden;
     width: 100%;
-    min-width: $mml-btnlist-min-width;
-    max-width: $mml-btnlist-max-width;
     border-style: $mml-border-style;
     border-width: $mml-btnlist-border-width;
     @include mml-themed(border-color, $mml-btnlist-border-color);
@@ -16,7 +14,6 @@
 
     @include mml-component('btn') {
       width: 100%;
-      max-width: none;
       margin: 0;
       // reset all btn padding coherently (we might have a mml-btn--icon that use
       // a different padding by default)
@@ -57,8 +54,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-right: -#{$mml-btnlist__btn-margin-x};
-    margin-left: -#{$mml-btnlist__btn-margin-x};
+
+    // make it fullwidth
+    @include mml-align-right() {
+      margin-left: calc(#{$mml-max-width-compensation} - #{$mml-btnlist__btn-margin-x});
+      margin-right: -#{$mml-btnlist__btn-margin-x};
+    }
+
+    @include mml-align-left() {
+      margin-left: -#{$mml-btnlist__btn-margin-x};
+      margin-right: calc(#{$mml-max-width-compensation} - #{$mml-btnlist__btn-margin-x});
+    }
 
     @include mml-component('btn') {
       margin: $mml-btnlist__btn-margin-y $mml-btnlist__btn-margin-x;

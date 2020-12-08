@@ -49,7 +49,7 @@ export const DatePicker: FC<DatePickerProps> = ({
   };
 
   return (
-    <div className="mml-datepicker">
+    <div className={`mml-datepicker mml-datepicker--${fullDay ? 'single' : 'double'}`}>
       <input name={name} value={date.toISOString()} type="hidden" />
 
       <DatePickerDate

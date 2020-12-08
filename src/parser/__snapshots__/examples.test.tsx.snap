@@ -339,7 +339,7 @@ Array [
     >
       
       <div
-        className="mml-datepicker"
+        className="mml-datepicker mml-datepicker--double"
       >
         <input
           name="massage_appointment"
@@ -4527,13 +4527,14 @@ Array [
                     </strong>
                   </p>
                 </div>
-                <button
+                <a
                   className="mml-btn  mml-btn--text mml-btn--grounded"
-                  onClick={[Function]}
-                  type="button"
+                  href="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
                 >
                   View Product
-                </button>
+                </a>
               </div>
             </li>
             <li
@@ -4580,13 +4581,14 @@ Array [
                     </strong>
                   </p>
                 </div>
-                <button
+                <a
                   className="mml-btn  mml-btn--text mml-btn--grounded"
-                  onClick={[Function]}
-                  type="button"
+                  href="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
                 >
                   View Product
-                </button>
+                </a>
               </div>
             </li>
             <li
@@ -4633,13 +4635,14 @@ Array [
                     </strong>
                   </p>
                 </div>
-                <button
+                <a
                   className="mml-btn  mml-btn--text mml-btn--grounded"
-                  onClick={[Function]}
-                  type="button"
+                  href="https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
                 >
                   View Product
-                </button>
+                </a>
               </div>
             </li>
             <li
@@ -4686,13 +4689,14 @@ Array [
                     </strong>
                   </p>
                 </div>
-                <button
+                <a
                   className="mml-btn  mml-btn--text mml-btn--grounded"
-                  onClick={[Function]}
-                  type="button"
+                  href="https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html"
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
                 >
                   View Product
-                </button>
+                </a>
               </div>
             </li>
           </ul>
