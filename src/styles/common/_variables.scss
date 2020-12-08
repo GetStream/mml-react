@@ -92,7 +92,7 @@ $mml-card__btn-padding: $mml-card__btn-padding-y $mml-card__btn-padding-x !defau
 
 // Carousel:
 // -----------------------------------------------------------------------------
-$mml-carousel-margin-y: $mml-spacer !default;
+$mml-carousel-spacer-y: $mml-spacer !default;
 $mml-carousel__item-gutter-x: $mml-spacer !default;
 $mml-carousel__text-font-size: 11px !default;
 $mml-carousel__text-font-color: mml-theme-val(text-mid-emphasis) !default;
@@ -100,7 +100,7 @@ $mml-carousel__text-font-color: mml-theme-val(text-mid-emphasis) !default;
 // Col (Grid):
 // -----------------------------------------------------------------------------
 $mml-grid-columns: 12 !default;
-$mml-grid-gutter: 0 !default;
+$mml-grid-gutter: $mml-spacer !default;
 $mml-grid-breakpoints: (
   xs: 0,
 ) !default;
