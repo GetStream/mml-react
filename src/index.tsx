@@ -9,7 +9,6 @@ import './styles/messaging-light.scss';
 import './styles/messaging-dark.scss';
 import './styles/team-light.scss';
 import './styles/team-dark.scss';
-import './styles/stream-chat-react.scss';
 
 export * from './mml';
 export * from './parser';
