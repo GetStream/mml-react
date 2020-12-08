@@ -103,7 +103,7 @@ $mml-carousel__text-font-color: mml-theme-val(text-mid-emphasis) !default;
 // Col (Grid):
 // -----------------------------------------------------------------------------
 $mml-grid-columns: 12 !default;
-$mml-grid-gutter: 8px !default;
+$mml-grid-gutter: $mml-spacer !default;
 $mml-grid-breakpoints: (
   xs: 0,
 ) !default;
