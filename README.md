@@ -68,7 +68,7 @@ MML React components could be divided in four categories:
 - [`Input`](/components/input): an input field
 - [`MD`](/components/md): renders markdown
 - [`Icon`](/components/icon): simply displays an icon from material design icons
-- [`Loader`](/components/loader): signals a _loading_ temporary state with a circular spinner
+- [`Loading`](/components/loading): signals a _loading_ temporary state with a circular spinner
 - [`Error`](/components/error): display an _error_ message
 - [`Success`](/components/success): display a _success_ message
 

@@ -134,10 +134,10 @@ $mml-input-color: mml-theme-val(text-mid-emphasis) !default;
 $mml-input-focus-color: mml-theme-val(text-high-emphasis) !default;
 $mml-input-focus-outline: $mml-btn-focus-outline !default;
 
-// Loader:
+// Loading:
 // -----------------------------------------------------------------------------
-$mml-loader-spacer: $mml-spacer !default;
-$mml-loader-font-size: 88% !default;
+$mml-loading-spacer: $mml-spacer !default;
+$mml-loading-font-size: 88% !default;
 
 // Progress:
 // -----------------------------------------------------------------------------

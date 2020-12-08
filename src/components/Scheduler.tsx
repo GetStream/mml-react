@@ -8,7 +8,7 @@ import { Card } from './Card';
 import { CardHeader } from './CardHeader';
 import { CardBody } from './CardBody';
 import { Error as ErrorComponent } from './Error';
-import { Loader as LoaderComponent } from './Loader';
+import { Loading as LoadingComponent } from './Loading';
 
 export type SchedulerProps = {
   /**
@@ -104,7 +104,7 @@ export const Scheduler: FC<SchedulerProps> = ({
       <CardHeader icon="date_range" text="Scheduler" />
       <CardBody>
         {error && !loading && <ErrorComponent error={`Failed, error: ${error}`} />}
-        {!error && loading && <LoaderComponent loading={true} text="Loading availability" />}
+        {!error && loading && <LoadingComponent loading={true} text="Loading availability" />}
         {!error && !loading && (
           <DatePicker
             name={name}

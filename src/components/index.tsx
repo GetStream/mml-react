@@ -11,7 +11,7 @@ export * from './Error';
 export * from './Icon';
 export * from './Image';
 export * from './Input';
-export * from './Loader';
+export * from './Loading';
 export * from './MD';
 export * from './Number';
 export * from './Row';

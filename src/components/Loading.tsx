@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Progress, ProgressProps } from './Progress';
 
-export type LoaderProps = {
+export type LoadingProps = {
   /**
    * Flag that indicates whether the component should show
    * @default false
@@ -19,15 +19,15 @@ export type LoaderProps = {
 } & ProgressProps;
 
 /**
- * Loader indicator
+ * Loading indicator
  */
-export const Loader: FC<LoaderProps> = ({ className = '', loading = false, text, size, thickness, color }) => {
+export const Loading: FC<LoadingProps> = ({ className = '', loading = false, text, size, thickness, color }) => {
   if (!loading) return null;
 
   return (
-    <div className={`mml-loader ${className}`}>
+    <div className={`mml-loading ${className}`}>
       <Progress {...{ size, thickness, color }} />
-      {text && <div className="mml-loader__text">{text}</div>}
+      {text && <div className="mml-loading__text">{text}</div>}
     </div>
   );
 };

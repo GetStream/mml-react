@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useCallback, FC, ComponentType, FormEvent } from 'react';
 
 import { Parse, ConvertorType } from '../parser';
-import { Loader as LoaderComponent, LoaderProps } from '../components/Loader';
+import { Loading as LoadingComponent, LoadingProps } from '../components/Loading';
 import { Error as ErrorComponent, ErrorProps } from '../components/Error';
 import { Success as SuccessComponent, SuccessProps } from '../components/Success';
 
@@ -26,12 +26,12 @@ export type MMLProps = {
     | string;
   /** Custom classname, appended to wrapper classname */
   className?: string;
-  /** The Loader component */
-  Loader?: ComponentType<LoaderProps>;
-  /** The error component */
-  Error?: ComponentType<ErrorProps>;
-  /** The success message component */
-  Success?: ComponentType<SuccessProps>;
+  /** The Loading component, accepts null to render nothing */
+  Loading?: ComponentType<LoadingProps> | null;
+  /** The error component, accepts null to render nothing */
+  Error?: ComponentType<ErrorProps> | null;
+  /** The success message component, accepts null to render nothing */
+  Success?: ComponentType<SuccessProps> | null;
 };
 
 /**
@@ -43,7 +43,7 @@ export const MML: FC<MMLProps> = ({
   converters,
   theme = '',
   className = '',
-  Loader = LoaderComponent,
+  Loading = LoadingComponent,
   Error = ErrorComponent,
   Success = SuccessComponent,
 }) => {
@@ -85,15 +85,13 @@ export const MML: FC<MMLProps> = ({
   return (
     <div className={`mml-container ${theme} ${className}`} data-testid="mml-container">
       {error ? (
-        <div className="mml-wrap">
-          <Error error={error} />
-        </div>
+        <div className="mml-wrap">{Error && <Error error={error} />}</div>
       ) : (
         <form onSubmit={handleSubmit} className="mml-wrap" data-testid="mml-form">
           {tree?.type ? <div className="mml-card">{tree?.reactElements}</div> : tree?.reactElements}
-          {submitState.loading && <Loader loading={submitState.loading} />}
-          {submitState.success && <Success success={submitState.success} />}
-          {submitState.error && <Error error={submitState.error} />}
+          {submitState.loading && Loading && <Loading loading={submitState.loading} />}
+          {submitState.success && Success && <Success success={submitState.success} />}
+          {submitState.error && Error && <Error error={submitState.error} />}
         </form>
       )}
     </div>

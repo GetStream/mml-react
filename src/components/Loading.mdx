@@ -1,31 +1,31 @@
 ---
-route: /components/loader
+route: /components/loading
 menu: Utility Components
 ---
 
 import { Playground, Props } from 'docz';
-import { Loader } from './Loader.tsx';
+import { Loading } from './Loading.tsx';
 
-# Loader
+# Loading
 
-Loader simply indicates a loading/pending state, you can use it to manage users expectations during async behaviours or waiting times. Internally it uses the `<Progress />` component to show a circular progress indicator.
+Loading simply indicates a loading/pending state, you can use it to manage users expectations during async behaviours or waiting times. Internally it uses the `<Progress />` component to show a circular progress indicator.
 
 > This component is not exposed as `mml` string, it is used internally in other mml components and it can be imported to create your custom ones.
 
 ## Properties
 
-<Props of={Loader} />
+<Props of={Loading} />
 
 ## Basic usage
 
 <Playground>
-  <Loader loading={true} />
+  <Loading loading={true} />
 </Playground>
 
 ## With text
 
 <Playground>
-  <Loader loading={true} text="Please wait..." />
+  <Loading loading={true} text="Please wait..." />
 </Playground>
 
 ## Style customization
@@ -33,9 +33,9 @@ Loader simply indicates a loading/pending state, you can use it to manage users 
 If your projects include a `sass` compilation step you might customize the overall look and feel of the component through `scss` variables, here are all the available ones with their default values:
 
 ```scss
-// Loader:
-$mml-loader-spacer: $mml-spacer;
-$mml-loader-font-size: 88%;
+// Loading:
+$mml-loading-spacer: $mml-spacer;
+$mml-loading-font-size: 88%;
 
 // Progress:
 $mml-progress-width: 1em;
