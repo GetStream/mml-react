@@ -1,11 +1,12 @@
 {
   "name": "mml-react",
   "version": "0.2.7",
-  "description": "MML (Message Markup Language) for React implementation.",
+  "description": "MML (Message Markup Language) for React.",
   "author": "Getstream.io",
   "main": "dist/index.js",
   "module": "dist/mml-react.esm.js",
   "typings": "dist/index.d.ts",
+  "style": "dist/styles/index.css",
   "license": "SEE LICENSE IN LICENSE",
   "files": [
     "dist",
