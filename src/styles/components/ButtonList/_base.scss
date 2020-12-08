@@ -7,7 +7,7 @@
     flex-direction: column;
     overflow: hidden;
     width: 100%;
-    min-width: $mml-btnlist-min-width;
+    max-width: $mml-btnlist-max-width;
     border-style: $mml-border-style;
     border-width: $mml-btnlist-border-width;
     @include mml-themed(border-color, $mml-btnlist-border-color);

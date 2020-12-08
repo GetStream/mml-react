@@ -1,6 +1,7 @@
 @include mml-component('card-header') {
   display: flex;
   align-items: center;
+  min-width: 100%;
   padding: $mml-card-header-padding-y 0;
   font-size: $mml-card-header-font-size;
   @include mml-themed(background, $mml-card-header-bg);
