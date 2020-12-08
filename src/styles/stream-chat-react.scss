@@ -69,11 +69,16 @@
     }
   }
 
-  &__li {
-    &--middle {
-    }
+  // contextual borders applied by className? 
+  // &__li {
+    
+  //   &--top {
+  //   }
 
-    &--bottom {
-    }
-  }
+  //   &--middle {
+  //   }
+
+  //   &--bottom {
+  //   }
+  // }
 }
