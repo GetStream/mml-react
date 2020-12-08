@@ -1,7 +1,7 @@
 @import '../../vendors/pure-react-carousel';
 
 @include mml-component('carousel') {
-  margin: $mml-carousel-margin-y 0;
+  padding: $mml-carousel-spacer-y 0;
 }
 
 @include mml-component('carousel-item') {
