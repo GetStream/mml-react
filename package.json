@@ -10,7 +10,7 @@
   "files": [
     "dist",
     "src",
-    "license",
+    "LICENSE",
     "!src/gatsby-theme-docz",
     "!*.mdx",
     "!*.md"
