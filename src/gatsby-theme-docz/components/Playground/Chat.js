@@ -159,7 +159,7 @@ export const Chat = ({ interactive, children }) => {
         {CONVERSATION.map((thread, idx) => {
           const user = USERS[thread.user] || USERS[0];
           return (
-            <Thread key={`thread${idx}`} className="mml-container other">
+            <Thread key={`thread${idx}`} className="mml-container mml-align-left">
               <Author>{user.name}</Author>
               <Messages className="mml-wrap">
                 {thread.messages.map((msg, msgIdx) => (
@@ -171,7 +171,7 @@ export const Chat = ({ interactive, children }) => {
             </Thread>
           );
         })}
-        <Attachment className="me">{children}</Attachment>
+        <Attachment className="mml-align-right">{children}</Attachment>
       </Conversation>
       <Composer>
         <ComposerInput className="mml-input" placeholder="Say something" disabled />
