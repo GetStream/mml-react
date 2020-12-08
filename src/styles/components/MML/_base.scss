@@ -3,6 +3,7 @@
 @include mml-component('container') {
   font-family: $mml-font-base;
   line-height: $mml-line-height;
+  font-size: $mml-font-size;
 
   * {
     box-sizing: border-box;
