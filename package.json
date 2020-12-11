@@ -46,7 +46,6 @@
     "dayjs": "^1.9.7",
     "ical-expander": "^3.1.0",
     "linkifyjs": "^2.1.9",
-    "pure-react-carousel": "^1.27.6",
     "react-markdown": "^5.0.3",
     "react-virtuoso": "^0.20.3"
   },

@@ -100,7 +100,7 @@ export const converters = {
   },
   carousel: (tag: MMLTag, children?: JSX.Element[]) => {
     return (
-      <Carousel {...tag.attributes} key={tag.key}>
+      <Carousel slideWidth={tag.attributes.slideWidth} {...tag.attributes} key={tag.key}>
         {children}
       </Carousel>
     );

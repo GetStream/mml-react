@@ -93,6 +93,7 @@ $mml-card__btn-padding: $mml-card__btn-padding-y $mml-card__btn-padding-x !defau
 // Carousel:
 // -----------------------------------------------------------------------------
 $mml-carousel-spacer-y: $mml-spacer !default;
+$mml-carousel__item-min-width: 120px !default;
 $mml-carousel__item-gutter-x: $mml-spacer !default;
 $mml-carousel__text-font-size: 11px !default;
 $mml-carousel__text-font-color: mml-theme-val(text-mid-emphasis) !default;

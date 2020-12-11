@@ -4448,258 +4448,161 @@ Array [
     </p>
   </div>,
   <div
-    className="mml-carousel"
+    className="mml-carousel "
   >
     <div
-      className="carousel mml"
+      className="mml-carousel__track"
     >
       <div
-        aria-live="polite"
-        className="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal"
-        onKeyDown={[Function]}
-        role="listbox"
-        style={Object {}}
-        tabIndex={0}
+        className="mml-carousel__slides"
       >
         <div
-          className="carousel__slider-tray-wrapper carousel__slider-tray-wrap--horizontal"
-          style={Object {}}
-        >
-          <ul
-            className="sliderTray___-vHFQ sliderAnimation___300FY carousel__slider-tray carousel__slider-tray--horizontal"
-            onClickCapture={[Function]}
-            onMouseDown={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            style={
-              Object {
-                "alignItems": "stretch",
-                "display": "flex",
-                "flexDirection": "row",
-                "transform": "translateX(0%) translateX(0px)",
-                "width": "160%",
-              }
+          className="mml-carousel-item mml-carousel__slide"
+          style={
+            Object {
+              "minWidth": undefined,
             }
+          }
+        >
+          <img
+            alt=""
+            className="mml-image"
+            src="https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
+            title=""
+          />
+          <div
+            className="mml-text"
           >
-            <li
-              aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                Object {
-                  "height": "unset",
-                  "paddingBottom": "unset",
-                  "position": "unset",
-                  "width": "25%",
-                }
-              }
-              tabIndex={0}
-            >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={
-                  Object {
-                    "position": "unset",
-                  }
-                }
-              >
-                <img
-                  alt=""
-                  className="mml-image"
-                  src="https://turn5.scene7.com/is/image/Turn5/J107329-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
-                  title=""
-                />
-                <div
-                  className="mml-text"
-                >
-                  Barricade Adventure HD Front Bumper
-                </div>
-                <div
-                  className="mml-md"
-                >
-                  <p>
-                    <strong>
-                      $404.99
-                    </strong>
-                  </p>
-                </div>
-                <a
-                  className="mml-btn  mml-btn--text mml-btn--grounded"
-                  href="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  View Product
-                </a>
-              </div>
-            </li>
-            <li
-              aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                Object {
-                  "height": "unset",
-                  "paddingBottom": "unset",
-                  "position": "unset",
-                  "width": "25%",
-                }
-              }
-              tabIndex={0}
-            >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={
-                  Object {
-                    "position": "unset",
-                  }
-                }
-              >
-                <img
-                  alt=""
-                  className="mml-image"
-                  src="https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0"
-                  title=""
-                />
-                <div
-                  className="mml-text"
-                >
-                  Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar
-                </div>
-                <div
-                  className="mml-md"
-                >
-                  <p>
-                    <strong>
-                      $529.99
-                    </strong>
-                  </p>
-                </div>
-                <a
-                  className="mml-btn  mml-btn--text mml-btn--grounded"
-                  href="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  View Product
-                </a>
-              </div>
-            </li>
-            <li
-              aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                Object {
-                  "height": "unset",
-                  "paddingBottom": "unset",
-                  "position": "unset",
-                  "width": "25%",
-                }
-              }
-              tabIndex={0}
-            >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={
-                  Object {
-                    "position": "unset",
-                  }
-                }
-              >
-                <img
-                  alt=""
-                  className="mml-image"
-                  src="https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
-                  title=""
-                />
-                <div
-                  className="mml-text"
-                >
-                  Barricade HD Front Bumper w/ 20 in. Light Bar
-                </div>
-                <div
-                  className="mml-md"
-                >
-                  <p>
-                    <strong>
-                      $549.99
-                    </strong>
-                  </p>
-                </div>
-                <a
-                  className="mml-btn  mml-btn--text mml-btn--grounded"
-                  href="https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  View Product
-                </a>
-              </div>
-            </li>
-            <li
-              aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                Object {
-                  "height": "unset",
-                  "paddingBottom": "unset",
-                  "position": "unset",
-                  "width": "25%",
-                }
-              }
-              tabIndex={0}
-            >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={
-                  Object {
-                    "position": "unset",
-                  }
-                }
-              >
-                <img
-                  alt=""
-                  className="mml-image"
-                  src="https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0"
-                  title=""
-                />
-                <div
-                  className="mml-text"
-                >
-                  RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate
-                </div>
-                <div
-                  className="mml-md"
-                >
-                  <p>
-                    <strong>
-                      $729.99
-                    </strong>
-                  </p>
-                </div>
-                <a
-                  className="mml-btn  mml-btn--text mml-btn--grounded"
-                  href="https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html"
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                >
-                  View Product
-                </a>
-              </div>
-            </li>
-          </ul>
+            Barricade Adventure HD Front Bumper
+          </div>
+          <div
+            className="mml-md"
+          >
+            <p>
+              <strong>
+                $404.99
+              </strong>
+            </p>
+          </div>
+          <a
+            className="mml-btn  mml-btn--text mml-btn--grounded"
+            href="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-2018-jl.html"
+            rel="nofollow noreferrer noopener"
+            target="_blank"
+          >
+            View Product
+          </a>
+        </div>
+        <div
+          className="mml-carousel-item mml-carousel__slide"
+          style={
+            Object {
+              "minWidth": undefined,
+            }
+          }
+        >
+          <img
+            alt=""
+            className="mml-image"
+            src="https://turn5.scene7.com/is/image/Turn5/J116651?wid=250&hei=187&op_usm=0.8,1,10,0"
+            title=""
+          />
+          <div
+            className="mml-text"
+          >
+            Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar
+          </div>
+          <div
+            className="mml-md"
+          >
+            <p>
+              <strong>
+                $529.99
+              </strong>
+            </p>
+          </div>
+          <a
+            className="mml-btn  mml-btn--text mml-btn--grounded"
+            href="https://www.extremeterrain.com/barricade-adventure-hd-front-bumper-w-led-fog-lights-20-led-light-bar-0718-wrangl.html"
+            rel="nofollow noreferrer noopener"
+            target="_blank"
+          >
+            View Product
+          </a>
+        </div>
+        <div
+          className="mml-carousel-item mml-carousel__slide"
+          style={
+            Object {
+              "minWidth": undefined,
+            }
+          }
+        >
+          <img
+            alt=""
+            className="mml-image"
+            src="https://turn5.scene7.com/is/image/Turn5/J127063-JL?wid=250&hei=187&op_usm=0.8,1,10,0"
+            title=""
+          />
+          <div
+            className="mml-text"
+          >
+            Barricade HD Front Bumper w/ 20 in. Light Bar
+          </div>
+          <div
+            className="mml-md"
+          >
+            <p>
+              <strong>
+                $549.99
+              </strong>
+            </p>
+          </div>
+          <a
+            className="mml-btn  mml-btn--text mml-btn--grounded"
+            href="https://www.extremeterrain.com/barricade-hd-front-bumper-w-20-light-bar-2018-jl.html"
+            rel="nofollow noreferrer noopener"
+            target="_blank"
+          >
+            View Product
+          </a>
+        </div>
+        <div
+          className="mml-carousel-item mml-carousel__slide"
+          style={
+            Object {
+              "minWidth": undefined,
+            }
+          }
+        >
+          <img
+            alt=""
+            className="mml-image"
+            src="https://turn5.scene7.com/is/image/Turn5/J116311?wid=250&hei=187&op_usm=0.8,1,10,0"
+            title=""
+          />
+          <div
+            className="mml-text"
+          >
+            RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate
+          </div>
+          <div
+            className="mml-md"
+          >
+            <p>
+              <strong>
+                $729.99
+              </strong>
+            </p>
+          </div>
+          <a
+            className="mml-btn  mml-btn--text mml-btn--grounded"
+            href="https://www.extremeterrain.com/redrock-4x4-avenger-full-width-front-bumper-w-o-winch-mount-0718-jk.html"
+            rel="nofollow noreferrer noopener"
+            target="_blank"
+          >
+            View Product
+          </a>
         </div>
       </div>
     </div>
