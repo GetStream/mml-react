@@ -71,3 +71,34 @@ It displays a sliding carousel
   `}
   />
 </Playground>
+
+## With custom slides width
+
+<Playground>
+  <MML
+    source={`
+    <mml>
+      <carousel slideWidth="60%">
+        <item width="200px">
+            <image src="https://getstream.github.io/mml-react/public/door.jpg" />
+            <md>**Door**</md>
+            <text>Locks, hinges, screens, stuck...</text>
+            <button name="action" value="door">Select</button>
+        </item>
+        <item>
+            <image src="https://getstream.github.io/mml-react/public/window.jpg" />
+            <md>**Window**</md>
+            <text>Glass, slide, locks, broken, damage...</text>
+            <button name="action" value="window">Select</button>
+        </item>
+        <item>
+            <image src="https://getstream.github.io/mml-react/public/sliding-door.jpg" />
+            <md>**Sliding door**</md>
+            <text>Locks, hinges, screens, stuck...</text>
+            <button name="action" value="sliding-door">Select</button>
+        </item>
+      </carousel>
+    </mml>
+  `}
+  />
+</Playground>
