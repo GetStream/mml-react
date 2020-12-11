@@ -8,7 +8,7 @@ export type CarouselItemProps = {
   children?: ReactNode;
   /**
    * Determines the slide width, it can be set to either a percentage, e.g. `width="40%"` or to a pixel based value `width="200px"`.
-   * It defaults to the `slideWidth` prop set on at the `<carousel>` level
+   * It defaults to the `slideWidth` prop set at the `<carousel>` level
    *
    * @default ''
    */

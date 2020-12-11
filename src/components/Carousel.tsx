@@ -4,10 +4,10 @@ export type CarouselProps = {
   /**
    * The only children of the Carousel are the carousel item.
    */
-  children: ReactElement; // typeof CarouselItem[]
+  children: ReactElement;
   /**
    * Base slide width set on the `Carousel` component level, it can be overriden for each CarouselItem by setting
-   * a `width` attribute on the ``<item>` component.
+   * a `width` attribute on the `<item>` component.
    *
    * It can be set to either a percentage, e.g. `slideWidth="40%"` or to a pixel based value `slideWidth="200px"`.
    *
