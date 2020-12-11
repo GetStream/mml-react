@@ -10,6 +10,8 @@ export type CarouselProps = {
    * a `width` attribute on the ``<item>` component.
    *
    * It can be set to either a percentage, e.g. `slideWidth="40%"` or to a pixel based value `slideWidth="200px"`.
+   *
+   * @default '120px'
    */
   slideWidth?: string;
   /**
@@ -23,7 +25,7 @@ export type CarouselProps = {
  *
  * Super simple scroll based carousel slightly inspired by [react-scroll-snap-slider](https://github.com/lifarl/react-scroll-snap-slider)
  */
-export const Carousel: FC<CarouselProps> = ({ children, slideWidth, className = '' }) => {
+export const Carousel: FC<CarouselProps> = ({ children, slideWidth = '120px', className = '' }) => {
   return (
     <div className={`mml-carousel ${className}`}>
       <div className="mml-carousel__track">

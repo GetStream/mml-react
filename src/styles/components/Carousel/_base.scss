@@ -40,7 +40,6 @@
     display: flex;
     flex-direction: column;
     margin-right: $mml-carousel__item-gutter-x;
-    min-width: $mml-carousel__item-min-width;
 
     &:first-child {
       @include mml-align-right() {

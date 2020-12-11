@@ -7,12 +7,10 @@ export type CarouselItemProps = {
    */
   children?: ReactNode;
   /**
-   * Determines the slide width, by default it uses a minWidth set by SCSS variable `$mml-carousel__item-min-width`.
-   * Despite the set width slides automatically expands independently from each other if their content is larger.
+   * Determines the slide width, it can be set to either a percentage, e.g. `width="40%"` or to a pixel based value `width="200px"`.
+   * It defaults to the `slideWidth` prop set on at the `<carousel>` level
    *
-   * It can be set to either a percentage, e.g. `width="40%"` or to a pixel based value `width="200px"`.
-   *
-   * @default 'SCSS: $mml-carousel__item-min-width: 120px'
+   * @default ''
    */
   width?: string;
   /**
@@ -24,10 +22,10 @@ export type CarouselItemProps = {
 /**
  * A carousel item
  */
-export const CarouselItem: FC<CarouselItemProps> = ({ children, slideWidth, width, className = '' }) => {
-  const minWidth = width || slideWidth;
+export const CarouselItem: FC<CarouselItemProps> = ({ children, slideWidth, width = '', className = '' }) => {
+  const finalWidth = width || slideWidth;
   return (
-    <div className={`mml-carousel-item ${className}`} style={{ minWidth }}>
+    <div className={`mml-carousel-item ${className}`} style={{ flex: `0 0 ${finalWidth}`, minWidth: finalWidth }}>
       {children}
     </div>
   );
