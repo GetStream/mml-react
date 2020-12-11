@@ -5,6 +5,7 @@ export default {
   base: '/mml-react',
   title: 'MML React',
   repository: 'https://github.com/GetStream/mml-react/',
+  ignore: ['PULL_REQUEST_TEMPLATE.md'],
   themeConfig: {
     showDarkModeSwitch: false,
     lineHeights: {
