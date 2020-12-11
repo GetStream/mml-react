@@ -1,10 +1,10 @@
-import React, { FC, ReactNode, Children, cloneElement } from 'react';
+import React, { FC, ReactElement, Children, cloneElement } from 'react';
 
 export type CarouselProps = {
   /**
    * The only children of the Carousel are the carousel item.
    */
-  children: ReactNode; // typeof CarouselItem[]
+  children: ReactElement; // typeof CarouselItem[]
   /**
    * Base slide width set on the `Carousel` component level, it can be overriden for each CarouselItem by setting
    * a `width` attribute on the ``<item>` component.
@@ -30,8 +30,7 @@ export const Carousel: FC<CarouselProps> = ({ children, slideWidth = '120px', cl
     <div className={`mml-carousel ${className}`}>
       <div className="mml-carousel__track">
         <div className="mml-carousel__slides">
-          {Children.map(children, (child) =>
-            // @ts-ignore
+          {Children.map(children, (child: ReactElement) =>
             cloneElement(child, { className: 'mml-carousel__slide', slideWidth }),
           )}
         </div>
