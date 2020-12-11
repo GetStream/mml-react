@@ -4460,7 +4460,8 @@ Array [
           className="mml-carousel-item mml-carousel__slide"
           style={
             Object {
-              "minWidth": undefined,
+              "flex": "0 0 120px",
+              "minWidth": "120px",
             }
           }
         >
@@ -4497,7 +4498,8 @@ Array [
           className="mml-carousel-item mml-carousel__slide"
           style={
             Object {
-              "minWidth": undefined,
+              "flex": "0 0 120px",
+              "minWidth": "120px",
             }
           }
         >
@@ -4534,7 +4536,8 @@ Array [
           className="mml-carousel-item mml-carousel__slide"
           style={
             Object {
-              "minWidth": undefined,
+              "flex": "0 0 120px",
+              "minWidth": "120px",
             }
           }
         >
@@ -4571,7 +4574,8 @@ Array [
           className="mml-carousel-item mml-carousel__slide"
           style={
             Object {
-              "minWidth": undefined,
+              "flex": "0 0 120px",
+              "minWidth": "120px",
             }
           }
         >

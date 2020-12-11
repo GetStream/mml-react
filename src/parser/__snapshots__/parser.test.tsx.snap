@@ -812,7 +812,8 @@ exports[`simple carousel 4`] = `
         className="mml-carousel-item mml-carousel__slide"
         style={
           Object {
-            "minWidth": undefined,
+            "flex": "0 0 120px",
+            "minWidth": "120px",
           }
         }
       >
@@ -826,7 +827,8 @@ exports[`simple carousel 4`] = `
         className="mml-carousel-item mml-carousel__slide"
         style={
           Object {
-            "minWidth": undefined,
+            "flex": "0 0 120px",
+            "minWidth": "120px",
           }
         }
       >
