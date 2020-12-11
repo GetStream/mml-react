@@ -6,6 +6,7 @@ export default {
   title: 'MML React',
   repository: 'https://github.com/GetStream/mml-react/',
   ignore: ['PULL_REQUEST_TEMPLATE.md'],
+  menu: [{ name: 'Readme' }, { name: 'MML' }, { name: 'Components' }, { name: 'Utility Components' }],
   themeConfig: {
     showDarkModeSwitch: false,
     lineHeights: {
