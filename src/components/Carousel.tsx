@@ -1,51 +1,41 @@
-import React, { FC, ReactElement } from 'react';
-import { CarouselProvider, Slider } from 'pure-react-carousel';
+import React, { FC, ReactElement, Children, cloneElement } from 'react';
 import { CarouselItemProps } from './CarouselItem';
 
 export type CarouselProps = {
-  /** Infinite loop */
-  infinite?: boolean;
-  /** Amount of slides per view */
-  perView?: number;
-  /** Amount of slides per move */
-  perMove?: number;
-  /** Auto calculate slides' height */
-  autoHeight?: boolean;
-  /** Ideal slide width */
-  slideWidth?: number;
-  /** Ideal slide height */
-  slideHeight?: number;
-  /** A list of carousel items */
+  /**
+   * The only children of the Carousel are the carousel item.
+   */
   children?: ReactElement<CarouselItemProps>[] | ReactElement<CarouselItemProps>;
+  /**
+   * Base slide width set on the `Carousel` component level, it can be overriden for each CarouselItem by setting
+   * a `width` attribute on the `<item>` component.
+   *
+   * It can be set to either a percentage, e.g. `slideWidth="40%"` or to a pixel based value `slideWidth="200px"`.
+   *
+   * @default '120px'
+   */
+  slideWidth?: string;
+  /**
+   * Additional carousel class name
+   */
+  className?: string;
 };
 
 /**
- * A carousel is a nice mobile friendly way of letting a user select
- * something
+ * A carousel is a nice mobile friendly way of letting a user select something
+ *
+ * Super simple scroll based carousel slightly inspired by [react-scroll-snap-slider](https://github.com/lifarl/react-scroll-snap-slider)
  */
-export const Carousel: FC<CarouselProps> = ({
-  infinite = true,
-  perView = 2.5,
-  perMove = 1,
-  autoHeight = true,
-  slideWidth = 100,
-  slideHeight = 125,
-  children,
-}) => {
+export const Carousel: FC<CarouselProps> = ({ children, slideWidth = '120px', className = '' }) => {
   return (
-    <div className="mml-carousel">
-      <CarouselProvider
-        className="mml"
-        infinite={infinite}
-        visibleSlides={perView}
-        step={perMove}
-        isIntrinsicHeight={autoHeight}
-        naturalSlideWidth={slideWidth}
-        naturalSlideHeight={slideHeight}
-        totalSlides={React.Children.count(children)}
-      >
-        <Slider>{children}</Slider>
-      </CarouselProvider>
+    <div className={`mml-carousel ${className}`}>
+      <div className="mml-carousel__track">
+        <div className="mml-carousel__slides">
+          {Children.map(children as ReactElement, (child) =>
+            cloneElement(child, { className: 'mml-carousel__slide', slideWidth }),
+          )}
+        </div>
+      </div>
     </div>
   );
 };

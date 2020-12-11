@@ -800,104 +800,43 @@ Array [
 
 exports[`simple carousel 4`] = `
 <div
-  className="mml-carousel"
+  className="mml-carousel "
 >
   <div
-    className="carousel mml"
+    className="mml-carousel__track"
   >
     <div
-      aria-live="polite"
-      className="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal"
-      onKeyDown={[Function]}
-      role="listbox"
-      style={Object {}}
-      tabIndex={0}
+      className="mml-carousel__slides"
     >
       <div
-        className="carousel__slider-tray-wrapper carousel__slider-tray-wrap--horizontal"
-        style={Object {}}
-      >
-        <ul
-          className="sliderTray___-vHFQ sliderAnimation___300FY carousel__slider-tray carousel__slider-tray--horizontal"
-          onClickCapture={[Function]}
-          onMouseDown={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          style={
-            Object {
-              "alignItems": "stretch",
-              "display": "flex",
-              "flexDirection": "row",
-              "transform": "translateX(0%) translateX(0px)",
-              "width": "80%",
-            }
+        className="mml-carousel-item mml-carousel__slide"
+        style={
+          Object {
+            "flex": "0 0 120px",
+            "minWidth": "120px",
           }
+        }
+      >
+        <div
+          className="mml-text"
         >
-          <li
-            aria-selected={true}
-            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
-            onBlur={[Function]}
-            onFocus={[Function]}
-            role="option"
-            style={
-              Object {
-                "height": "unset",
-                "paddingBottom": "unset",
-                "position": "unset",
-                "width": "50%",
-              }
-            }
-            tabIndex={0}
-          >
-            <div
-              className="slideInner___2mfX9 carousel__inner-slide"
-              style={
-                Object {
-                  "position": "unset",
-                }
-              }
-            >
-              <div
-                className="mml-text"
-              >
-                a
-              </div>
-            </div>
-          </li>
-          <li
-            aria-selected={true}
-            className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible mml-carousel-item"
-            onBlur={[Function]}
-            onFocus={[Function]}
-            role="option"
-            style={
-              Object {
-                "height": "unset",
-                "paddingBottom": "unset",
-                "position": "unset",
-                "width": "50%",
-              }
-            }
-            tabIndex={0}
-          >
-            <div
-              className="slideInner___2mfX9 carousel__inner-slide"
-              style={
-                Object {
-                  "position": "unset",
-                }
-              }
-            >
-              <div
-                className="mml-text"
-              >
-                b
-              </div>
-            </div>
-          </li>
-        </ul>
+          a
+        </div>
+      </div>
+      <div
+        className="mml-carousel-item mml-carousel__slide"
+        style={
+          Object {
+            "flex": "0 0 120px",
+            "minWidth": "120px",
+          }
+        }
+      >
+        <div
+          className="mml-text"
+        >
+          b
+        </div>
       </div>
     </div>
   </div>
