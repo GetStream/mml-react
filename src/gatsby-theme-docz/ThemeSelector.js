@@ -99,7 +99,8 @@ const ThemeBar = styled.div`
   border-style: solid;
   border-color: #ddd;
   border-width: 0 0 1px 0;
-  background: #f3f3f3;
+  background: rgb(245, 246, 247);
+  border-radius: 3px;
 `;
 
 export const SelectOptions = ({ label, options, value, onChange }) => {
