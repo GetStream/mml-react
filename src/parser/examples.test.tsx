@@ -92,6 +92,7 @@ const examples = [
       <mml>
         <md>Happy to setup your new credit card application, what's your **yearly** family income?</md>
         <input type="text" name="email" />
+        <input type="hidden" name="secret" value="secret" />
         <button name="send" value="submit">Submit</button>
       </mml>`,
   },

@@ -7,6 +7,8 @@ export type InputProps = {
   label?: string;
   /** Initial value of the input */
   value?: string;
+  /** The input type */
+  type?: string;
   /** The placeholder of the input field */
   placeholder?: string;
 };
@@ -14,7 +16,7 @@ export type InputProps = {
 /**
  * Text input element. Usually you'll want to rely on regular messages
  */
-export const Input: FC<InputProps> = ({ name, label, value = '', placeholder = '' }) => {
+export const Input: FC<InputProps> = ({ name, label, value = '', type = 'text', placeholder = '' }) => {
   const [state, setState] = useState(value);
   const id = `mml-${name}`;
 
@@ -30,6 +32,7 @@ export const Input: FC<InputProps> = ({ name, label, value = '', placeholder = '
         className="mml-input"
         name={name}
         value={state}
+        type={type}
         placeholder={placeholder}
         onChange={(event) => setState(event.target.value)}
       />
