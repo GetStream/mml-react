@@ -6593,6 +6593,23 @@ Object {
         },
         Object {
           "attributes": Object {
+            "name": "secret",
+            "type": "hidden",
+            "value": "secret",
+          },
+          "children": Array [],
+          "name": "input",
+          "toJSON": [Function],
+          "type": "element",
+        },
+        Object {
+          "text": "
+        ",
+          "toJSON": [Function],
+          "type": "text",
+        },
+        Object {
+          "attributes": Object {
             "name": "send",
             "value": "submit",
           },
@@ -6679,6 +6696,27 @@ Tree {
     },
     MMLTag {
       "attributes": Object {
+        "name": "secret",
+        "type": "hidden",
+        "value": "secret",
+      },
+      "children": Array [],
+      "key": "tag-input-position-2",
+      "name": "input",
+      "node": Object {
+        "attributes": Object {
+          "name": "secret",
+          "type": "hidden",
+          "value": "secret",
+        },
+        "children": Array [],
+        "name": "input",
+        "toJSON": [Function],
+        "type": "element",
+      },
+    },
+    MMLTag {
+      "attributes": Object {
         "name": "send",
         "value": "submit",
       },
@@ -6695,7 +6733,7 @@ Tree {
           },
         },
       ],
-      "key": "tag-button-position-2",
+      "key": "tag-button-position-3",
       "name": "button",
       "node": Object {
         "attributes": Object {
@@ -6778,6 +6816,23 @@ Tree {
       },
       Object {
         "attributes": Object {
+          "name": "secret",
+          "type": "hidden",
+          "value": "secret",
+        },
+        "children": Array [],
+        "name": "input",
+        "toJSON": [Function],
+        "type": "element",
+      },
+      Object {
+        "text": "
+        ",
+        "toJSON": [Function],
+        "type": "text",
+      },
+      Object {
+        "attributes": Object {
           "name": "send",
           "value": "submit",
         },
@@ -6811,6 +6866,11 @@ Tree {
       name="email"
       type="text"
     />,
+    <Input
+      name="secret"
+      type="hidden"
+      value="secret"
+    />,
     <Button
       name="send"
       text="Submit"
@@ -6829,6 +6889,11 @@ Array [
   <Input
     name="email"
     type="text"
+  />,
+  <Input
+    name="secret"
+    type="hidden"
+    value="secret"
   />,
   <Button
     name="send"
@@ -6857,7 +6922,17 @@ Array [
     name="email"
     onChange={[Function]}
     placeholder=""
+    type="text"
     value=""
+  />,
+  <input
+    className="mml-input"
+    id="mml-secret"
+    name="secret"
+    onChange={[Function]}
+    placeholder=""
+    type="hidden"
+    value="secret"
   />,
   <button
     className="mml-btn  mml-btn--text mml-btn--grounded"

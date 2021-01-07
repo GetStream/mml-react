@@ -954,6 +954,7 @@ exports[`simple input 4`] = `
   name="name"
   onChange={[Function]}
   placeholder=""
+  type="text"
   value="John"
 />
 `;
