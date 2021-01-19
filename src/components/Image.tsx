@@ -7,8 +7,10 @@ export type ImageProps = {
   alt?: string;
   /** The title tag for the image */
   title?: string;
+  /** Additional class name */
+  className?: string;
 };
 
-export const Image: FC<ImageProps> = ({ src, alt = '', title = '' }) => {
-  return <img className="mml-image" src={src} alt={alt} title={title} />;
+export const Image: FC<ImageProps> = ({ src, alt = '', title = '', className = '' }) => {
+  return <img className={`mml-image ${className}`.trim()} src={src} alt={alt} title={title} />;
 };
