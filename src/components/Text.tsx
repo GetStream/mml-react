@@ -1,10 +1,15 @@
 import React, { FC } from 'react';
 
-export type TextProps = { text: string };
+export type TextProps = {
+  /** Text to render */
+  text: string;
+  /** Additional class name */
+  className?: string;
+};
 
 /**
  * Simple paragraph text element
  */
-export const Text: FC<TextProps> = ({ text }) => {
-  return <div className="mml-text">{text}</div>;
+export const Text: FC<TextProps> = ({ text, className = '' }) => {
+  return <div className={`mml-text ${className}`.trim()}>{text}</div>;
 };
