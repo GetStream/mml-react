@@ -10,16 +10,14 @@ Object {
       "children": Array [
         Object {
           "text": "hi",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -34,7 +32,6 @@ Tree {
       "name": "text",
       "node": Object {
         "text": "hi",
-        "toJSON": [Function],
         "type": "text",
       },
     },
@@ -63,12 +60,11 @@ Tree {
     "children": Array [
       Object {
         "text": "hi",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -107,7 +103,6 @@ Object {
         Object {
           "text": "
                   ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -115,18 +110,15 @@ Object {
           "children": Array [
             Object {
               "text": "It looks like your credit card isn't activated yet, activate it now:",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "text",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
                   ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -137,27 +129,23 @@ Object {
           "children": Array [
             Object {
               "text": "Activate Card",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
                ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -175,7 +163,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -187,12 +174,10 @@ Tree {
         "children": Array [
           Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -209,7 +194,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Activate Card",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -224,12 +208,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Activate Card",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -259,7 +241,6 @@ Tree {
       Object {
         "text": "
                   ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -267,18 +248,15 @@ Tree {
         "children": Array [
           Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
                   ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -289,23 +267,20 @@ Tree {
         "children": Array [
           Object {
             "text": "Activate Card",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
                ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -364,16 +339,14 @@ Object {
       "children": Array [
         Object {
           "text": "hi",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -388,7 +361,6 @@ Tree {
       "name": "text",
       "node": Object {
         "text": "hi",
-        "toJSON": [Function],
         "type": "text",
       },
     },
@@ -417,12 +389,11 @@ Tree {
     "children": Array [
       Object {
         "text": "hi",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -460,16 +431,14 @@ Object {
       "children": Array [
         Object {
           "text": "hi",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -484,7 +453,6 @@ Tree {
       "name": "text",
       "node": Object {
         "text": "hi",
-        "toJSON": [Function],
         "type": "text",
       },
     },
@@ -513,12 +481,11 @@ Tree {
     "children": Array [
       Object {
         "text": "hi",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -560,12 +527,10 @@ Object {
               "children": Array [
                 Object {
                   "text": "a",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "item",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
@@ -573,26 +538,22 @@ Object {
               "children": Array [
                 Object {
                   "text": "b",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "item",
-              "toJSON": [Function],
               "type": "element",
             },
           ],
           "name": "carousel",
-          "toJSON": [Function],
           "type": "element",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -613,7 +574,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "a",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -625,12 +585,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "a",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -644,7 +602,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "b",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -656,12 +613,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "b",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -676,12 +631,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "a",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
@@ -689,17 +642,14 @@ Tree {
             "children": Array [
               Object {
                 "text": "b",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         ],
         "name": "carousel",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -732,12 +682,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "a",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
@@ -745,22 +693,19 @@ Tree {
             "children": Array [
               Object {
                 "text": "b",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         ],
         "name": "carousel",
-        "toJSON": [Function],
         "type": "element",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -856,16 +801,14 @@ Object {
           },
           "children": Array [],
           "name": "input",
-          "toJSON": [Function],
           "type": "element",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -888,7 +831,6 @@ Tree {
         },
         "children": Array [],
         "name": "input",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -920,12 +862,11 @@ Tree {
         },
         "children": Array [],
         "name": "input",
-        "toJSON": [Function],
         "type": "element",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
