@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect, FC } from 'react';
-import { Virtuoso, VirtuosoMethods } from 'react-virtuoso';
+import { Virtuoso } from 'react-virtuoso';
 import { Dayjs } from 'dayjs';
 import { DatePickerProps } from './DatePicker';
 
@@ -41,6 +41,7 @@ export type DatePickerItemData = {
 const ITEMS_PER_PAGE = 40;
 const VERTICAL_COMPENSATION = 3;
 const INITIAL_INDEX = ITEMS_PER_PAGE;
+const VIRTUOSO_START_INDEX = 10000;
 
 /**
  * DatePicker select
@@ -60,9 +61,10 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
   );
 
   const [items, setItems] = useState<DatePickerItemData[]>(generateItems(ITEMS_PER_PAGE * 2, -ITEMS_PER_PAGE));
+  const [firstItemIndex, setFirstItemIndex] = useState(VIRTUOSO_START_INDEX);
+
   const initialIndexOffset = useRef(INITIAL_INDEX);
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
-  const virtuoso = useRef<VirtuosoMethods>(null);
 
   const handleClick = useCallback(
     (item: DatePickerItemData) => {
@@ -78,7 +80,6 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
         nextFirstItemIdx -= missingTopItems;
         initialIndexOffset.current -= firstItemIndex - missingTopItems;
         setItems((items) => [...generateItems(missingTopItems, nextFirstItemIdx), ...items]);
-        if (virtuoso.current) virtuoso.current.adjustForPrependedItems(missingTopItems);
       }
       setSelectedIdx(item.idx);
     },
@@ -100,7 +101,7 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
       initialIndexOffset.current -= ITEMS_PER_PAGE;
     }
     setItems((items) => [...generateItems(ITEMS_PER_PAGE, nextFirstItemIdx), ...items]);
-    if (virtuoso.current) virtuoso.current.adjustForPrependedItems(ITEMS_PER_PAGE);
+    setFirstItemIndex(firstItemIndex - ITEMS_PER_PAGE);
     return false;
   }, [setItems, generateItems, initialIndexOffset]);
 
@@ -120,19 +121,16 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
 
   return (
     <Virtuoso
-      ref={virtuoso}
-      overscan={200}
-      totalCount={items.length}
-      initialTopMostItemIndex={INITIAL_INDEX - VERTICAL_COMPENSATION}
-      item={(index) => (
+      data={items}
+      firstItemIndex={firstItemIndex}
+      itemContent={(_, item) => (
         <div
           className={
-            itemClassName +
-            ` mml-datepicker__item ${items[index].idx === selectedIdx ? 'mml-datepicker__item--selected' : ''}`
+            itemClassName + ` mml-datepicker__item ${item.idx === selectedIdx ? 'mml-datepicker__item--selected' : ''}`
           }
-          onClick={() => handleClick(items[index])}
+          onClick={() => handleClick(item)}
         >
-          {items[index].displayValue}
+          {item.displayValue}
         </div>
       )}
       endReached={appendItems}
