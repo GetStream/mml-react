@@ -1,4 +1,8 @@
-import { Element as XmlElement, Text as XmlText } from '@rgrove/parse-xml';
+import { XmlElement, XmlText } from '@rgrove/parse-xml';
+
+function isXmlElement(node: XmlElement | XmlText): node is XmlElement {
+  return !!(node as XmlElement).children;
+}
 
 /**
  * MMLTag - Xml tag converted to this MMLTag
@@ -19,7 +23,7 @@ export class MMLTag {
 
   getText() {
     if (this.node.type === 'text') return this.node.text;
-    else if (this.node.children && this.node.children.length) return (this.node.children[0] as XmlText).text;
+    else if (isXmlElement(this.node) && this.node.children.length) return (this.node.children[0] as XmlText).text;
     return '';
   }
 

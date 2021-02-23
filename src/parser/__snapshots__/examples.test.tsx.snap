@@ -9,7 +9,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -17,18 +16,15 @@ Object {
           "children": Array [
             Object {
               "text": "When would you like to schedule your massage?",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "text",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -40,13 +36,11 @@ Object {
           },
           "children": Array [],
           "name": "scheduler",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -57,27 +51,23 @@ Object {
           "children": Array [
             Object {
               "text": "Reserve",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -95,7 +85,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "When would you like to schedule your massage?",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -107,12 +96,10 @@ Tree {
         "children": Array [
           Object {
             "text": "When would you like to schedule your massage?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -135,7 +122,6 @@ Tree {
         },
         "children": Array [],
         "name": "scheduler",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -152,7 +138,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Reserve",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -167,12 +152,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Reserve",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -200,7 +183,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -208,18 +190,15 @@ Tree {
         "children": Array [
           Object {
             "text": "When would you like to schedule your massage?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -231,13 +210,11 @@ Tree {
         },
         "children": Array [],
         "name": "scheduler",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -248,23 +225,20 @@ Tree {
         "children": Array [
           Object {
             "text": "Reserve",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -464,7 +438,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -472,18 +445,15 @@ Object {
           "children": Array [
             Object {
               "text": "Just showing \`button_list\` \`floating\` **variant**:",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "md",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -494,7 +464,6 @@ Object {
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -506,18 +475,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "Yes!",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -529,38 +495,32 @@ Object {
               "children": Array [
                 Object {
                   "text": "No, thanks",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
         ",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button_list",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -578,7 +538,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Just showing \`button_list\` \`floating\` **variant**:",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -590,12 +549,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Just showing \`button_list\` \`floating\` **variant**:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -618,7 +575,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Yes!",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -634,12 +590,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Yes!",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -657,7 +611,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "No, thanks",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -673,12 +626,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "No, thanks",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -693,7 +644,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -705,18 +655,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "Yes!",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -728,23 +675,19 @@ Tree {
             "children": Array [
               Object {
                 "text": "No, thanks",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button_list",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -774,7 +717,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -782,18 +724,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Just showing \`button_list\` \`floating\` **variant**:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -804,7 +743,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -816,18 +754,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "Yes!",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -839,34 +774,29 @@ Tree {
             "children": Array [
               Object {
                 "text": "No, thanks",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button_list",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -975,7 +905,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -983,18 +912,15 @@ Object {
           "children": Array [
             Object {
               "text": "Just showing \`button\` *variants*:",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "md",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1005,18 +931,15 @@ Object {
           "children": Array [
             Object {
               "text": "Regular button",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1024,18 +947,15 @@ Object {
           "children": Array [
             Object {
               "text": "Button with \`icon\` and text:",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "md",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1047,18 +967,15 @@ Object {
           "children": Array [
             Object {
               "text": "With icon",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1066,18 +983,15 @@ Object {
           "children": Array [
             Object {
               "text": "Icon only button:",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "md",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1088,13 +1002,11 @@ Object {
           },
           "children": Array [],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1102,18 +1014,15 @@ Object {
           "children": Array [
             Object {
               "text": "Button \`floating\` variant:",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "md",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1125,27 +1034,23 @@ Object {
           "children": Array [
             Object {
               "text": "Floating button",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -1163,7 +1068,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Just showing \`button\` *variants*:",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1175,12 +1079,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Just showing \`button\` *variants*:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1197,7 +1099,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Regular button",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1212,12 +1113,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Regular button",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1231,7 +1130,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Button with \`icon\` and text:",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1243,12 +1141,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Button with \`icon\` and text:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1266,7 +1162,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "With icon",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1282,12 +1177,10 @@ Tree {
         "children": Array [
           Object {
             "text": "With icon",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1301,7 +1194,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Icon only button:",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1313,12 +1205,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Icon only button:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1339,7 +1229,6 @@ Tree {
         },
         "children": Array [],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1353,7 +1242,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Button \`floating\` variant:",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1365,12 +1253,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Button \`floating\` variant:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1388,7 +1274,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Floating button",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1404,12 +1289,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Floating button",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1439,7 +1322,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1447,18 +1329,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Just showing \`button\` *variants*:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1469,18 +1348,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Regular button",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1488,18 +1364,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Button with \`icon\` and text:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1511,18 +1384,15 @@ Tree {
         "children": Array [
           Object {
             "text": "With icon",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1530,18 +1400,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Icon only button:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1552,13 +1419,11 @@ Tree {
         },
         "children": Array [],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1566,18 +1431,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Button \`floating\` variant:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1589,23 +1451,20 @@ Tree {
         "children": Array [
           Object {
             "text": "Floating button",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -1793,7 +1652,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1801,18 +1659,15 @@ Object {
           "children": Array [
             Object {
               "text": "Your massage appointment has been confirmed!",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "text",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -1823,22 +1678,19 @@ Object {
           },
           "children": Array [],
           "name": "add_to_calendar",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -1856,7 +1708,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Your massage appointment has been confirmed!",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -1868,12 +1719,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Your massage appointment has been confirmed!",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1894,7 +1743,6 @@ Tree {
         },
         "children": Array [],
         "name": "add_to_calendar",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -1922,7 +1770,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1930,18 +1777,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Your massage appointment has been confirmed!",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -1952,18 +1796,16 @@ Tree {
         },
         "children": Array [],
         "name": "add_to_calendar",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -2150,7 +1992,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -2158,18 +1999,15 @@ Object {
           "children": Array [
             Object {
               "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "md",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -2178,7 +2016,6 @@ Object {
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -2187,7 +2024,6 @@ Object {
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2196,13 +2032,11 @@ Object {
                   },
                   "children": Array [],
                   "name": "image",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2210,18 +2044,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "Barricade Adventure HD Front Bumper",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "text",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2229,18 +2060,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "**$404.99**",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "md",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2250,29 +2078,24 @@ Object {
                   "children": Array [
                     Object {
                       "text": "View Product",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "button",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
           ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "item",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -2281,7 +2104,6 @@ Object {
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2290,13 +2112,11 @@ Object {
                   },
                   "children": Array [],
                   "name": "image",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2304,18 +2124,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "text",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2323,18 +2140,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "**$529.99**",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "md",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2344,29 +2158,24 @@ Object {
                   "children": Array [
                     Object {
                       "text": "View Product",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "button",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
           ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "item",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -2375,7 +2184,6 @@ Object {
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2384,13 +2192,11 @@ Object {
                   },
                   "children": Array [],
                   "name": "image",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2398,18 +2204,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "text",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2417,18 +2220,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "**$549.99**",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "md",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2438,29 +2238,24 @@ Object {
                   "children": Array [
                     Object {
                       "text": "View Product",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "button",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
           ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "item",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -2469,7 +2264,6 @@ Object {
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2478,13 +2272,11 @@ Object {
                   },
                   "children": Array [],
                   "name": "image",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2492,18 +2284,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "text",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2511,18 +2300,15 @@ Object {
                   "children": Array [
                     Object {
                       "text": "**$729.99**",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "md",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
             ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
                 Object {
@@ -2532,49 +2318,41 @@ Object {
                   "children": Array [
                     Object {
                       "text": "View Product",
-                      "toJSON": [Function],
                       "type": "text",
                     },
                   ],
                   "name": "button",
-                  "toJSON": [Function],
                   "type": "element",
                 },
                 Object {
                   "text": "
           ",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "item",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
         ",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "carousel",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -2592,7 +2370,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -2604,12 +2381,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -2632,7 +2407,6 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2646,7 +2420,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "Barricade Adventure HD Front Bumper",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -2658,12 +2431,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2677,7 +2448,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "**$404.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -2689,12 +2459,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$404.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2710,7 +2478,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -2724,12 +2491,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2742,7 +2507,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -2751,13 +2515,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -2765,18 +2527,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -2784,18 +2543,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$404.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -2805,23 +2561,19 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -2841,7 +2593,6 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2855,7 +2606,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -2867,12 +2617,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2886,7 +2634,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "**$529.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -2898,12 +2645,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$529.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2919,7 +2664,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -2933,12 +2677,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -2951,7 +2693,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -2960,13 +2701,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -2974,18 +2713,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -2993,18 +2729,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$529.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3014,23 +2747,19 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -3050,7 +2779,6 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3064,7 +2792,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -3076,12 +2803,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3095,7 +2820,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "**$549.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -3107,12 +2831,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$549.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3128,7 +2850,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -3142,12 +2863,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3160,7 +2879,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3169,13 +2887,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3183,18 +2899,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3202,18 +2915,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$549.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3223,23 +2933,19 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -3259,7 +2965,6 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3273,7 +2978,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -3285,12 +2989,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3304,7 +3006,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "**$729.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -3316,12 +3017,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$729.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3337,7 +3036,6 @@ Tree {
                   "name": "text",
                   "node": Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 },
@@ -3351,12 +3049,10 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
             },
@@ -3369,7 +3065,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3378,13 +3073,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3392,18 +3085,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3411,18 +3101,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$729.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3432,23 +3119,19 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -3461,7 +3144,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -3470,7 +3152,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3479,13 +3160,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3493,18 +3172,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3512,18 +3188,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$404.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3533,29 +3206,24 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -3564,7 +3232,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3573,13 +3240,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3587,18 +3252,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3606,18 +3268,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$529.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3627,29 +3286,24 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -3658,7 +3312,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3667,13 +3320,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3681,18 +3332,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3700,18 +3348,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$549.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3721,29 +3366,24 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -3752,7 +3392,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3761,13 +3400,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3775,18 +3412,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3794,18 +3428,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$729.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3815,34 +3446,28 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "carousel",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -3870,7 +3495,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -3878,18 +3502,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Here are some front bumpers! that will fit your **2018-2019 JL**!",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -3898,7 +3519,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -3907,7 +3527,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3916,13 +3535,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3930,18 +3547,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3949,18 +3563,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$404.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -3970,29 +3581,24 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -4001,7 +3607,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4010,13 +3615,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4024,18 +3627,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade Adventure HD Front Bumper w/ LED Fog Lights & 20 in. LED Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4043,18 +3643,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$529.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4064,29 +3661,24 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -4095,7 +3687,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4104,13 +3695,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4118,18 +3707,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "Barricade HD Front Bumper w/ 20 in. Light Bar",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4137,18 +3723,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$549.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4158,29 +3741,24 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -4189,7 +3767,6 @@ Tree {
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4198,13 +3775,11 @@ Tree {
                 },
                 "children": Array [],
                 "name": "image",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4212,18 +3787,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "RedRock 4x4 Avenger Full Width Front Bumper w/o Winch Plate",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "text",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4231,18 +3803,15 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "**$729.99**",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "md",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
             ",
-                "toJSON": [Function],
                 "type": "text",
               },
               Object {
@@ -4252,45 +3821,38 @@ Tree {
                 "children": Array [
                   Object {
                     "text": "View Product",
-                    "toJSON": [Function],
                     "type": "text",
                   },
                 ],
                 "name": "button",
-                "toJSON": [Function],
                 "type": "element",
               },
               Object {
                 "text": "
           ",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "item",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "carousel",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -4625,7 +4187,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -4633,18 +4194,15 @@ Object {
           "children": Array [
             Object {
               "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "text",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -4653,7 +4211,6 @@ Object {
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -4664,18 +4221,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "9:30",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -4686,18 +4240,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "10:00",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -4708,18 +4259,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "11:30",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -4730,38 +4278,32 @@ Object {
               "children": Array [
                 Object {
                   "text": "Nope",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
         ",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button_list",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -4779,7 +4321,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -4791,12 +4332,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -4816,7 +4355,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "9:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -4831,12 +4369,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "9:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -4853,7 +4389,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "10:00",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -4868,12 +4403,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "10:00",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -4890,7 +4423,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "11:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -4905,12 +4437,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "11:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -4927,7 +4457,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Nope",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -4942,12 +4471,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Nope",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -4960,7 +4487,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -4971,18 +4497,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "9:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -4993,18 +4516,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "10:00",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5015,18 +4535,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "11:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5037,23 +4554,19 @@ Tree {
             "children": Array [
               Object {
                 "text": "Nope",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button_list",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -5083,7 +4596,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -5091,18 +4603,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Hi Jack, I'm painting John's house, looks like they also need some plumbing work, do any of these times work for you on Saturday?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -5111,7 +4620,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5122,18 +4630,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "9:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5144,18 +4649,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "10:00",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5166,18 +4668,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "11:30",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5188,34 +4687,29 @@ Tree {
             "children": Array [
               Object {
                 "text": "Nope",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button_list",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -5341,7 +4835,6 @@ Object {
           "text": "
         Sorry we're currently out of fries, what would you like as a side?
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -5350,7 +4843,6 @@ Object {
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -5361,18 +4853,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "Salad",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -5383,18 +4872,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "Baked Potatoes",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
           ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -5405,38 +4891,32 @@ Object {
               "children": Array [
                 Object {
                   "text": "Fried Pickles",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "button",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
         ",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button_list",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -5453,7 +4933,6 @@ Tree {
         "text": "
         Sorry we're currently out of fries, what would you like as a side?
         ",
-        "toJSON": [Function],
         "type": "text",
       },
     },
@@ -5473,7 +4952,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Salad",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -5488,12 +4966,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Salad",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -5510,7 +4986,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Baked Potatoes",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -5525,12 +5000,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Baked Potatoes",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -5547,7 +5020,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Fried Pickles",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -5562,12 +5034,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Fried Pickles",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -5580,7 +5050,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5591,18 +5060,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "Salad",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5613,18 +5079,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "Baked Potatoes",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5635,23 +5098,19 @@ Tree {
             "children": Array [
               Object {
                 "text": "Fried Pickles",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button_list",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -5682,7 +5141,6 @@ Tree {
         "text": "
         Sorry we're currently out of fries, what would you like as a side?
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -5691,7 +5149,6 @@ Tree {
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5702,18 +5159,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "Salad",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5724,18 +5178,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "Baked Potatoes",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
           ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -5746,34 +5197,29 @@ Tree {
             "children": Array [
               Object {
                 "text": "Fried Pickles",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "button",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button_list",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -5886,7 +5332,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -5894,18 +5339,15 @@ Object {
           "children": Array [
             Object {
               "text": "How many donuts do you want for lunch?",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "text",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -5914,13 +5356,11 @@ Object {
           },
           "children": Array [],
           "name": "image",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -5930,13 +5370,11 @@ Object {
           },
           "children": Array [],
           "name": "number",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -5947,27 +5385,23 @@ Object {
           "children": Array [
             Object {
               "text": "Confirm",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -5985,7 +5419,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "How many donuts do you want for lunch?",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -5997,12 +5430,10 @@ Tree {
         "children": Array [
           Object {
             "text": "How many donuts do you want for lunch?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6019,7 +5450,6 @@ Tree {
         },
         "children": Array [],
         "name": "image",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6038,7 +5468,6 @@ Tree {
         },
         "children": Array [],
         "name": "number",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6055,7 +5484,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Confirm",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -6070,12 +5498,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Confirm",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6106,7 +5532,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6114,18 +5539,15 @@ Tree {
         "children": Array [
           Object {
             "text": "How many donuts do you want for lunch?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6134,13 +5556,11 @@ Tree {
         },
         "children": Array [],
         "name": "image",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6150,13 +5570,11 @@ Tree {
         },
         "children": Array [],
         "name": "number",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6167,23 +5585,20 @@ Tree {
         "children": Array [
           Object {
             "text": "Confirm",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -6297,7 +5712,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6305,18 +5719,15 @@ Object {
           "children": Array [
             Object {
               "text": "It looks like your credit card isn't activated yet, activate it now:",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "text",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6327,27 +5738,23 @@ Object {
           "children": Array [
             Object {
               "text": "Activate Card",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -6365,7 +5772,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -6377,12 +5783,10 @@ Tree {
         "children": Array [
           Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6399,7 +5803,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Activate Card",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -6414,12 +5817,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Activate Card",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6449,7 +5850,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6457,18 +5857,15 @@ Tree {
         "children": Array [
           Object {
             "text": "It looks like your credit card isn't activated yet, activate it now:",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6479,23 +5876,20 @@ Tree {
         "children": Array [
           Object {
             "text": "Activate Card",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -6553,7 +5947,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6561,18 +5954,15 @@ Object {
           "children": Array [
             Object {
               "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "md",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6582,13 +5972,11 @@ Object {
           },
           "children": Array [],
           "name": "input",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6599,13 +5987,11 @@ Object {
           },
           "children": Array [],
           "name": "input",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6616,27 +6002,23 @@ Object {
           "children": Array [
             Object {
               "text": "Submit",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -6654,7 +6036,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -6666,12 +6047,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6690,7 +6069,6 @@ Tree {
         },
         "children": Array [],
         "name": "input",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6711,7 +6089,6 @@ Tree {
         },
         "children": Array [],
         "name": "input",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6728,7 +6105,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Submit",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -6743,12 +6119,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Submit",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -6776,7 +6150,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6784,18 +6157,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Happy to setup your new credit card application, what's your **yearly** family income?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "md",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6805,13 +6175,11 @@ Tree {
         },
         "children": Array [],
         "name": "input",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6822,13 +6190,11 @@ Tree {
         },
         "children": Array [],
         "name": "input",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -6839,23 +6205,20 @@ Tree {
         "children": Array [
           Object {
             "text": "Submit",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [
@@ -6957,7 +6320,6 @@ Object {
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6965,18 +6327,15 @@ Object {
           "children": Array [
             Object {
               "text": "Did you authorize these last 3 transactions on your account?",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "text",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -6985,7 +6344,6 @@ Object {
             Object {
               "text": "
             ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -6995,18 +6353,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "$15",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "col",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
             ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -7016,29 +6371,24 @@ Object {
               "children": Array [
                 Object {
                   "text": "Oren's Hummus",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "col",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
         ",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "row",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -7047,7 +6397,6 @@ Object {
             Object {
               "text": "
             ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -7057,18 +6406,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "$1000",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "col",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
             ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -7078,29 +6424,24 @@ Object {
               "children": Array [
                 Object {
                   "text": "Apple monitor stand",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "col",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
         ",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "row",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -7109,7 +6450,6 @@ Object {
             Object {
               "text": "
             ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -7119,18 +6459,15 @@ Object {
               "children": Array [
                 Object {
                   "text": "$60",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "col",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
             ",
-              "toJSON": [Function],
               "type": "text",
             },
             Object {
@@ -7140,29 +6477,24 @@ Object {
               "children": Array [
                 Object {
                   "text": "Epic Games Skins",
-                  "toJSON": [Function],
                   "type": "text",
                 },
               ],
               "name": "col",
-              "toJSON": [Function],
               "type": "element",
             },
             Object {
               "text": "
         ",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "row",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -7173,18 +6505,15 @@ Object {
           "children": Array [
             Object {
               "text": "Yes",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
         ",
-          "toJSON": [Function],
           "type": "text",
         },
         Object {
@@ -7195,27 +6524,23 @@ Object {
           "children": Array [
             Object {
               "text": "No",
-              "toJSON": [Function],
               "type": "text",
             },
           ],
           "name": "button",
-          "toJSON": [Function],
           "type": "element",
         },
         Object {
           "text": "
       ",
-          "toJSON": [Function],
           "type": "text",
         },
       ],
+      "isRootNode": true,
       "name": "mml",
-      "toJSON": [Function],
       "type": "element",
     },
   ],
-  "toJSON": [Function],
   "type": "document",
 }
 `;
@@ -7233,7 +6558,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Did you authorize these last 3 transactions on your account?",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -7245,12 +6569,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Did you authorize these last 3 transactions on your account?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -7269,7 +6591,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "$15",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -7283,12 +6604,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "$15",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -7304,7 +6623,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Oren's Hummus",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -7318,12 +6636,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Oren's Hummus",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -7336,7 +6652,6 @@ Tree {
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7346,18 +6661,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "$15",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7367,23 +6679,19 @@ Tree {
             "children": Array [
               Object {
                 "text": "Oren's Hummus",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "row",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -7402,7 +6710,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "$1000",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -7416,12 +6723,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "$1000",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -7437,7 +6742,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Apple monitor stand",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -7451,12 +6755,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Apple monitor stand",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -7469,7 +6771,6 @@ Tree {
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7479,18 +6780,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "$1000",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7500,23 +6798,19 @@ Tree {
             "children": Array [
               Object {
                 "text": "Apple monitor stand",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "row",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -7535,7 +6829,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "$60",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -7549,12 +6842,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "$60",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -7570,7 +6861,6 @@ Tree {
               "name": "text",
               "node": Object {
                 "text": "Epic Games Skins",
-                "toJSON": [Function],
                 "type": "text",
               },
             },
@@ -7584,12 +6874,10 @@ Tree {
             "children": Array [
               Object {
                 "text": "Epic Games Skins",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
         },
@@ -7602,7 +6890,6 @@ Tree {
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7612,18 +6899,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "$60",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7633,23 +6917,19 @@ Tree {
             "children": Array [
               Object {
                 "text": "Epic Games Skins",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "row",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -7666,7 +6946,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "Yes",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -7681,12 +6960,10 @@ Tree {
         "children": Array [
           Object {
             "text": "Yes",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -7703,7 +6980,6 @@ Tree {
           "name": "text",
           "node": Object {
             "text": "No",
-            "toJSON": [Function],
             "type": "text",
           },
         },
@@ -7718,12 +6994,10 @@ Tree {
         "children": Array [
           Object {
             "text": "No",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
     },
@@ -7753,7 +7027,6 @@ Tree {
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -7761,18 +7034,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Did you authorize these last 3 transactions on your account?",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "text",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -7781,7 +7051,6 @@ Tree {
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7791,18 +7060,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "$15",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7812,29 +7078,24 @@ Tree {
             "children": Array [
               Object {
                 "text": "Oren's Hummus",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "row",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -7843,7 +7104,6 @@ Tree {
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7853,18 +7113,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "$1000",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7874,29 +7131,24 @@ Tree {
             "children": Array [
               Object {
                 "text": "Apple monitor stand",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "row",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -7905,7 +7157,6 @@ Tree {
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7915,18 +7166,15 @@ Tree {
             "children": Array [
               Object {
                 "text": "$60",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
             ",
-            "toJSON": [Function],
             "type": "text",
           },
           Object {
@@ -7936,29 +7184,24 @@ Tree {
             "children": Array [
               Object {
                 "text": "Epic Games Skins",
-                "toJSON": [Function],
                 "type": "text",
               },
             ],
             "name": "col",
-            "toJSON": [Function],
             "type": "element",
           },
           Object {
             "text": "
         ",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "row",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -7969,18 +7212,15 @@ Tree {
         "children": Array [
           Object {
             "text": "Yes",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
         ",
-        "toJSON": [Function],
         "type": "text",
       },
       Object {
@@ -7991,23 +7231,20 @@ Tree {
         "children": Array [
           Object {
             "text": "No",
-            "toJSON": [Function],
             "type": "text",
           },
         ],
         "name": "button",
-        "toJSON": [Function],
         "type": "element",
       },
       Object {
         "text": "
       ",
-        "toJSON": [Function],
         "type": "text",
       },
     ],
+    "isRootNode": true,
     "name": "mml",
-    "toJSON": [Function],
     "type": "element",
   },
   "reactElements": Array [

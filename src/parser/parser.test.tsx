@@ -96,5 +96,5 @@ test('simple input', () => {
 
 test('invalid MML', () => {
   const mml = '<input name="test" value=1 />';
-  expect(() => SourceToXML(mml)).toThrowError('Missing end tag for element mml (line 1, column 1)');
+  expect(() => SourceToXML(mml)).toThrowError(/Attribute value expected/);
 });
