@@ -175,7 +175,17 @@ describe('examples', () => {
       expect(tree).toMatchSnapshot();
       expect(tree.reactElements).toMatchSnapshot();
 
-      expect(renderer.create(<>{tree.reactElements}</>).toJSON()).toMatchSnapshot();
+      expect(
+        renderer
+          .create(<>{tree.reactElements}</>, {
+            // let virtuoso render in jest env
+            createNodeMock: (element: React.ReactElement) => {
+              if (element.type === 'div') return { addEventListener() {} };
+              return null;
+            },
+          })
+          .toJSON(),
+      ).toMatchSnapshot();
     });
   });
 });

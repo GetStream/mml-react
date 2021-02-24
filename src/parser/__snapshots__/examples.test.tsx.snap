@@ -348,7 +348,11 @@ Array [
               <div
                 style={
                   Object {
-                    "marginTop": "0px",
+                    "boxSizing": "border-box",
+                    "height": 0,
+                    "marginTop": 0,
+                    "paddingBottom": 0,
+                    "paddingTop": 0,
                   }
                 }
               />
@@ -356,13 +360,16 @@ Array [
             <div
               style={
                 Object {
-                  "height": "0px",
-                  "position": "absolute",
+                  "marginTop": "0px",
+                  "position": "-webkit-sticky",
                   "top": 0,
+                  "width": "100%",
                 }
               }
             >
-               
+              <div
+                style={Object {}}
+              />
             </div>
           </div>
         </div>
@@ -394,7 +401,11 @@ Array [
               <div
                 style={
                   Object {
-                    "marginTop": "0px",
+                    "boxSizing": "border-box",
+                    "height": 0,
+                    "marginTop": 0,
+                    "paddingBottom": 0,
+                    "paddingTop": 0,
                   }
                 }
               />
@@ -402,13 +413,16 @@ Array [
             <div
               style={
                 Object {
-                  "height": "0px",
-                  "position": "absolute",
+                  "marginTop": "0px",
+                  "position": "-webkit-sticky",
                   "top": 0,
+                  "width": "100%",
                 }
               }
             >
-               
+              <div
+                style={Object {}}
+              />
             </div>
           </div>
         </div>
