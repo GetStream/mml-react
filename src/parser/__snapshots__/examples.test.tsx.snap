@@ -346,29 +346,15 @@ Array [
               }
             >
               <div
+                data-test-id="virtuoso-item-list"
                 style={
                   Object {
                     "boxSizing": "border-box",
-                    "height": 0,
                     "marginTop": 0,
                     "paddingBottom": 0,
                     "paddingTop": 0,
                   }
                 }
-              />
-            </div>
-            <div
-              style={
-                Object {
-                  "marginTop": "0px",
-                  "position": "-webkit-sticky",
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={Object {}}
               />
             </div>
           </div>
@@ -399,29 +385,15 @@ Array [
               }
             >
               <div
+                data-test-id="virtuoso-item-list"
                 style={
                   Object {
                     "boxSizing": "border-box",
-                    "height": 0,
                     "marginTop": 0,
                     "paddingBottom": 0,
                     "paddingTop": 0,
                   }
                 }
-              />
-            </div>
-            <div
-              style={
-                Object {
-                  "marginTop": "0px",
-                  "position": "-webkit-sticky",
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={Object {}}
               />
             </div>
           </div>
