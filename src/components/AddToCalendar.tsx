@@ -54,6 +54,7 @@ function isMobile() {
   return false;
 }
 
+// @ts-expect-error TODO: replace deprecated method
 const isIE = (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) as boolean;
 
 const getCurrentURL = () => {
@@ -200,6 +201,7 @@ export const AddToCalendar: FC<AddToCalendarProps> = ({
       const blob = new Blob([url], { type: 'text/calendar;charset=utf-8' });
 
       if (isIE) {
+        // @ts-expect-error TODO: replace deprecated method
         window.navigator.msSaveOrOpenBlob(blob, filename);
       } else {
         // many browsers do not properly support downloading data URIs
