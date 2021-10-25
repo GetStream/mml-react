@@ -36,7 +36,7 @@ export class Tree {
 
     (parent.children || []).forEach((child, i) => {
       const converter = this.converters[child.name];
-      if (!converter) {
+      if (!converter || !Object.hasOwnProperty.call(this.converters, child.name)) {
         throw Error(
           `Converter not found for tag ${child.name}, Available converters are ${Object.keys(this.converters)}`,
         );
