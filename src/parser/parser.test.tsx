@@ -98,3 +98,9 @@ test('invalid MML', () => {
   const mml = '<input name="test" value=1 />';
   expect(() => SourceToXML(mml)).toThrowError(/Attribute value expected/);
 });
+
+test('forbid access to object prototype props in mml', () => {
+  const mml = '<constructor />';
+  const nodes = SourceToXML(mml);
+  expect(() => XMLtoMMLTree(nodes)).toThrowError(/Converter not found for tag constructor.+/);
+});
