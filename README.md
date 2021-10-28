@@ -54,33 +54,33 @@ MML React components could be divided in four categories:
 
 > Always host other components, can be themable
 
-- [`Card`](/components/card)
-- [`CardHeader`](/components/card-header)
-- [`CardBody`](/components/card-body)
+- [`Card`](src/components/Card.mdx)
+- [`CardHeader`](src/components/CardHeader.mdx)
+- [`CardBody`](src/components/CardBody.mdx)
 
 ### Core Components
 
 > Basic components that can be composed and themed
 
-- [`Text`](/components/text): a block of text
-- [`Button`](/components/button): a simple button
-- [`Image`](/components/image): a simple responsive image
-- [`Input`](/components/input): an input field
-- [`MD`](/components/md): renders markdown
-- [`Icon`](/components/icon): simply displays an icon from material design icons
-- [`Loading`](/components/loading): signals a _loading_ temporary state with a circular spinner
-- [`Error`](/components/error): display an _error_ message
-- [`Success`](/components/success): display a _success_ message
+- [`Text`](src/components/Text.mdx): a block of text
+- [`Button`](src/components/Button.mdx): a simple button
+- [`Image`](src/components/Image.mdx): a simple responsive image
+- [`Input`](src/components/Input.mdx): an input field
+- [`MD`](src/components/MD.mdx): renders markdown
+- [`Icon`](src/components/Icon.mdx): simply displays an icon from material design icons
+- [`Loading`](src/components/Loading.mdx): signals a _loading_ temporary state with a circular spinner
+- [`Error`](src/components/Error.mdx): display an _error_ message
+- [`Success`](src/components/Success.mdx): display a _success_ message
 
 ### Structured Components
 
 > More complex components composed of other components, certainly themable
 
-- [`AddToCalendar`](/components/add-to-calendar): wrapped in a [`Card`](/components/card)
-- [`Scheduler`](/components/scheduler): wrapped in a [`Card`](/components/card)
-- [`ButtonList`](/components/button-list): a list of [`Button`](/components/button)
-- [`Carousel`](/components/carousel): a series of [`CarouselItem`](/components/carousel-item) typically containing [`Image`](/components/image), [`Text`](/components/text) and [`Button`](/components/button)
-- [`Number`](/components/number): input spinner composed of two [`Button`](/components/button) and a counter
+- [`AddToCalendar`](src/components/AddToCalendar.mdx): wrapped in a [`Card`](src/components/Card.mdx)
+- [`Scheduler`](src/components/Scheduler.mdx): wrapped in a [`Card`](src/components/Card.mdx)
+- [`ButtonList`](src/components/ButtonList.mdx): a list of [`Button`](src/components/Button.mdx)
+- [`Carousel`](src/components/Carousel.mdx): a series of [`CarouselItem`](src/components/CarouselItem.mdx) typically containing [`Image`](src/components/Image.mdx), [`Text`](src/components/Text.mdx) and [`Button`](src/components/Button.mdx)
+- [`Number`](src/components/Number.mdx): input spinner composed of two [`Button`](src/components/Button.mdx) and a counter
 
 ## Styles customization
 
@@ -162,7 +162,7 @@ MML attachments always have two wrapping elements with the following two classes
 The class `.mml-container` is responsible for some very basic styling that other components inherit, like `border-box` and `font-family`.
 The class `.mml-wrap` instead takes care of contextual styling, like `border-radius` and `margin`s, that are most likely dependent on the differentiation between _me_ and _other_ messages [seen above](#differentiations-between-mine-and-others-messages).
 
-Inside `mml-wrap` you could have as immediate children either the components as they are or the components automatically wrapped in a `<div class="mml-card">...</div>` when `<mml type="card">` is used (see the [`MML` docs](/mml#with-card-type)). Note that the `mml-card` class (and its `Card` React component) is also used internally in various components like [`Scheduler`](/components/scheduler) and [`AddToCalendar`](/components/add-to-calendar).
+Inside `mml-wrap` you could have as immediate children either the components as they are or the components automatically wrapped in a `<div class="mml-card">...</div>` when `<mml type="card">` is used (see the [`MML` docs](src/mml/MML.mdx#with-card-type)). Note that the `mml-card` class (and its `Card` React component) is also used internally in various components like [`Scheduler`](src/components/Scheduler.mdx) and [`AddToCalendar`](src/components/AddToCalendar.mdx).
 
 ## Development & Contributions
 
