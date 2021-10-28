@@ -47,8 +47,8 @@ MML React components could be divided in four categories:
 
 > Very basic pieces of UI typically beyond a matter of styling
 
-- [`Row`](/components/row)
-- [`Col`](/components/col)
+- [`Row`](/components/Row.mdx)
+- [`Col`](/components/Col.mdx)
 
 ### Container Components
 
