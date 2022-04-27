@@ -1,3 +1,5 @@
+## [0.4.5](https://github.com/GetStream/mml-react/compare/v0.4.4...v0.4.5) (2022-04-27)
+
 # Changelog
 
 ## [0.4.4](https://github.com/GetStream/mml-react/releases/tag/v0.4.4) 2022-04-25
