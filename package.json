@@ -35,9 +35,7 @@
     "docs": "docz dev",
     "docs-build": "rm -rf docs && docz build",
     "prepare": "yarn build",
-    "preversion": "yarn install && yarn lint && yarn test",
-    "version": "yarn docs-build && git add -A docs",
-    "postversion": "git push && git push --tags && npm publish",
+    "preversion": "yarn install",
     "semantic-release": "semantic-release"
   },
   "engines": {
