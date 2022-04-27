@@ -311,7 +311,7 @@ Array [
     <div
       className="mml-card-body "
     >
-      
+
       <div
         className="mml-datepicker mml-datepicker--double"
       >
@@ -324,6 +324,8 @@ Array [
           className="mml-datepicker__select mml-datepicker__date"
         >
           <div
+            data-test-id="virtuoso-scroller"
+            data-virtuoso-scroller={true}
             style={
               Object {
                 "WebkitOverflowScrolling": "touch",
@@ -336,6 +338,7 @@ Array [
             tabIndex={0}
           >
             <div
+              data-viewport-type="element"
               style={
                 Object {
                   "height": "100%",
@@ -363,6 +366,8 @@ Array [
           className="mml-datepicker__select mml-datepicker__time"
         >
           <div
+            data-test-id="virtuoso-scroller"
+            data-virtuoso-scroller={true}
             style={
               Object {
                 "WebkitOverflowScrolling": "touch",
@@ -375,6 +380,7 @@ Array [
             tabIndex={0}
           >
             <div
+              data-viewport-type="element"
               style={
                 Object {
                   "height": "100%",
@@ -840,15 +846,15 @@ Array [
     className="mml-md"
   >
     <p>
-      Just showing 
+      Just showing
       <code>
         button_list
       </code>
-       
+
       <code>
         floating
       </code>
-       
+
       <strong>
         variant
       </strong>
@@ -1540,11 +1546,11 @@ Array [
     className="mml-md"
   >
     <p>
-      Just showing 
+      Just showing
       <code>
         button
       </code>
-       
+
       <em>
         variants
       </em>
@@ -1564,7 +1570,7 @@ Array [
     className="mml-md"
   >
     <p>
-      Button with 
+      Button with
       <code>
         icon
       </code>
@@ -1604,13 +1610,13 @@ Array [
     >
       shopping_cart
     </i>
-    
+
   </button>,
   <div
     className="mml-md"
   >
     <p>
-      Button 
+      Button
       <code>
         floating
       </code>
@@ -1871,7 +1877,7 @@ Array [
               />
             </svg>
           </i>
-           
+
           Google
         </a>
         <a
@@ -1904,7 +1910,7 @@ END:VCALENDAR"
               />
             </svg>
           </i>
-           
+
           Apple Calendar
         </a>
         <a
@@ -1937,7 +1943,7 @@ END:VCALENDAR"
               />
             </svg>
           </i>
-           
+
           Outlook
         </a>
         <a
@@ -1960,7 +1966,7 @@ END:VCALENDAR"
               />
             </svg>
           </i>
-           
+
           Outlook.com
         </a>
       </div>
@@ -3988,7 +3994,7 @@ Array [
     className="mml-md"
   >
     <p>
-      Here are some front bumpers! that will fit your 
+      Here are some front bumpers! that will fit your
       <strong>
         2018-2019 JL
       </strong>
@@ -5268,9 +5274,9 @@ Array [
   <div
     className="mml-text"
   >
-    
+
         Sorry we're currently out of fries, what would you like as a side?
-        
+
   </div>,
   <div
     className="mml-btnlist mml-btnlist--grounded"
@@ -6258,7 +6264,7 @@ Array [
     className="mml-md"
   >
     <p>
-      Happy to setup your new credit card application, what's your 
+      Happy to setup your new credit card application, what's your
       <strong>
         yearly
       </strong>
