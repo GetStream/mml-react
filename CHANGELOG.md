@@ -2,6 +2,11 @@
 
 # Changelog
 
+## [0.4.5](https://github.com/GetStream/mml-react/releases/tag/v0.4.4) 2022-04-27
+
+### Chore
+* bump url-parse from 1.5.1 to 1.5.10 (#67)
+
 ## [0.4.4](https://github.com/GetStream/mml-react/releases/tag/v0.4.4) 2022-04-25
 
 ### Chore

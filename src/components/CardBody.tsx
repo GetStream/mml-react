@@ -1,11 +1,10 @@
-import React, { FC, ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 export type CardBodyProps = {
-  children?: ReactNode;
   /** Additional card class name */
   className?: string;
 };
 
-export const CardBody: FC<CardBodyProps> = ({ className = '', children }) => {
+export const CardBody = ({ className = '', children }: PropsWithChildren<CardBodyProps>) => {
   return <div className={`mml-card-body ${className}`}>{children}</div>;
 };
