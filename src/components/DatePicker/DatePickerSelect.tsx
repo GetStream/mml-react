@@ -87,7 +87,7 @@ export const DatePickerSelect: FC<DatePickerSelectProps> = (props) => {
   );
 
   const appendItems = useCallback(
-    (lastItemIndex) => {
+    (lastItemIndex: number) => {
       setItems((items) => [...items, ...generateItems(ITEMS_PER_PAGE, lastItemIndex)]);
     },
     [setItems, generateItems],
