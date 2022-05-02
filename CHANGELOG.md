@@ -6,7 +6,17 @@
 
 # Changelog
 
-## [0.4.5](https://github.com/GetStream/mml-react/releases/tag/v0.4.4) 2022-04-27
+## [0.4.7](https://github.com/GetStream/mml-react/releases/tag/v0.4.7) 2022-05-02
+
+### Chore
+* fix peer dependencies by adding react v18 (#72)
+
+## [0.4.6](https://github.com/GetStream/mml-react/releases/tag/v0.4.6) 2022-05-02
+
+### Chore
+* upgrade to React v18 (#69)
+
+## [0.4.5](https://github.com/GetStream/mml-react/releases/tag/v0.4.5) 2022-04-27
 
 ### Chore
 * bump url-parse from 1.5.1 to 1.5.10 (#67)
