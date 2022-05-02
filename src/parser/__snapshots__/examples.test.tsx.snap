@@ -311,7 +311,6 @@ Array [
     <div
       className="mml-card-body "
     >
-      
       <div
         className="mml-datepicker mml-datepicker--double"
       >
@@ -324,6 +323,8 @@ Array [
           className="mml-datepicker__select mml-datepicker__date"
         >
           <div
+            data-test-id="virtuoso-scroller"
+            data-virtuoso-scroller={true}
             style={
               Object {
                 "WebkitOverflowScrolling": "touch",
@@ -336,6 +337,7 @@ Array [
             tabIndex={0}
           >
             <div
+              data-viewport-type="element"
               style={
                 Object {
                   "height": "100%",
@@ -363,6 +365,8 @@ Array [
           className="mml-datepicker__select mml-datepicker__time"
         >
           <div
+            data-test-id="virtuoso-scroller"
+            data-virtuoso-scroller={true}
             style={
               Object {
                 "WebkitOverflowScrolling": "touch",
@@ -375,6 +379,7 @@ Array [
             tabIndex={0}
           >
             <div
+              data-viewport-type="element"
               style={
                 Object {
                   "height": "100%",
@@ -1604,7 +1609,6 @@ Array [
     >
       shopping_cart
     </i>
-    
   </button>,
   <div
     className="mml-md"

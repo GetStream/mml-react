@@ -1,11 +1,10 @@
-import React, { FC, ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 export type CardProps = {
-  children?: ReactNode;
   /** Additional card class name */
   className?: string;
 };
 
-export const Card: FC<CardProps> = ({ className = '', children }) => {
+export const Card = ({ className = '', children }: PropsWithChildren<CardProps>) => {
   return <div className={`mml-card ${className}`}>{children}</div>;
 };
