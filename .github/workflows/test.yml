@@ -1,6 +1,10 @@
 name: test
 on: [push]
 
+permissions:
+  actions: write
+  contents: read
+
 jobs:
   build:
     name: Build, lint, and test on Node ${{ matrix.node-version }}
